@@ -1,6 +1,8 @@
 # Experiment Workflow
 
-Use this workflow to design, run, audit, or repair experiments for an academic article. "Experiment" includes empirical studies, simulations, computational analyses, models, laboratory or field work, observational analysis, qualitative coding, theoretical derivation with verification, and structured literature synthesis.
+Use this workflow to design, run, reproduce, repair, and document the evidence-generating work needed to write an academic article. "Experiment" includes empirical studies, simulations, computational analyses, models, laboratory or field work, observational analysis, qualitative coding, theoretical derivation with verification, and structured literature synthesis.
+
+When the user requests a paper and the necessary analysis is feasible in the available environment, execute it. Do not stop at an experiment plan or list of recommended analyses.
 
 ## Contents
 
@@ -87,6 +89,9 @@ Do not expand the matrix mechanically. Include experiments that materially test 
 - Keep exploratory outputs separate from final outputs.
 - Do not overwrite final outputs without preserving the old version or documenting why it was superseded.
 - If installation or environment setup fails, record the failure, fix, and final environment.
+- Continue from setup through execution, diagnostics, reruns, result freezing, and manuscript-ready outputs.
+- Treat an experiment matrix as a work queue. Mark an item complete only after its output and provenance exist.
+- If a planned method fails, diagnose and repair it where feasible; otherwise run the strongest valid alternative and document the changed claim boundary.
 
 ## Result Derivation
 
@@ -97,6 +102,7 @@ Do not expand the matrix mechanically. Include experiments that materially test 
 - Report missing runs, failed runs, and excluded runs with reasons.
 - Use consistent rounding rules and units.
 - Verify that confidence intervals, error bars, statistical tests, and labels match the data.
+- Produce a manuscript-ready result bundle containing machine-readable results, publication-quality tables or figures, metric definitions, and a short evidence interpretation for each research question.
 
 ## Analysis and Interpretation
 

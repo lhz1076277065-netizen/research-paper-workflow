@@ -1,63 +1,85 @@
 ---
 name: research-paper-workflow
-description: Discipline-neutral workflow for high-standard SCI-style academic research articles. Use when Codex needs to plan, audit, execute, repair, or validate scholarly paper work involving research questions, evidence standards, data sufficiency, experimental design, result traceability, manuscript writing, submission readiness, revision responses, or a not-ready decision.
+description: Use when Codex must create, write, complete, substantially revise, or finalize a full evidence-based scholarly article from research materials, data, code, analyses, experiments, literature, or an incomplete draft, including tasks that require producing the manuscript and supporting submission artifacts rather than only reviewing them.
 ---
 
 # Research Paper Workflow
 
-Use this skill to move an academic article from research intent to an evidence-bound manuscript. Keep the workflow discipline-neutral. Do not introduce field-specific thresholds, journal rules, datasets, tools, or claims unless the user supplies them or they are verified from project materials.
+## Core Mandate
 
-## Operating Rules
+Produce the paper. The primary deliverable is a complete, editable, evidence-bound manuscript, not an audit report, outline, checklist, or readiness opinion.
 
-- Inspect available materials first: manuscript files, data, code, logs, notebooks, protocols, results, figures, tables, supplements, references, submission files, licenses, and prior reviewer or editor messages.
-- Build a claim-evidence ledger before judging readiness. Each major claim needs a source, method, data basis, analysis or experiment, result artifact, uncertainty or limitation, and manuscript location.
-- Treat unrun experiments, missing data, inaccessible files, broken scripts, undocumented preprocessing, and unverifiable outputs as gaps, not as completed work.
-- Never fabricate experiments, data, citations, benchmark results, statistics, authorship information, permissions, ethics approvals, availability statements, or submission readiness.
-- Use "ready", "submission-ready", "publishable", or equivalent conclusions only when all applicable hard gates pass. Otherwise state "not ready" and provide concrete repair steps.
-- Keep writing proportional to evidence. Downgrade the title, abstract, contribution list, and conclusions when the evidence supports a narrower claim.
-- Preserve negative results and failed attempts when they affect validity, scope, reproducibility, or claims.
+Inspect first, then execute the work required to build the evidence and write the article. Do not stop after planning, gap analysis, literature mapping, experiment design, or manuscript review when the requested work can be completed with available tools and materials.
 
-## Workflow
+Keep the workflow discipline-neutral. Apply verified field or venue requirements only when supplied by the user or obtained from authoritative sources.
 
-1. **Define the research contract**
-   - State the problem, research questions, hypotheses or objectives, target contribution type, intended audience, and non-goals.
-   - Convert each proposed contribution into a testable claim.
+## Non-Negotiable Rules
 
-2. **Audit evidence and gaps**
-   - Create the claim-evidence ledger.
-   - Read `references/research-quality-gates.md` for data, evidence, validity, reliability, ethics, and reproducibility gates.
-   - Classify each claim as supported, partially supported, unsupported, contradicted, or unverifiable.
+- Write every manuscript section requested by the user and create the actual manuscript file in the requested or most practical editable format.
+- Use real, traceable sources, data, methods, analyses, experiments, results, figures, tables, and citations.
+- Never fabricate evidence, data, experiments, statistical outputs, citations, authorship, approvals, permissions, or availability.
+- Execute feasible literature retrieval, data processing, analysis, computation, experiment, figure generation, and reference verification instead of merely recommending them.
+- If an essential activity requires unavailable physical work, private data, credentials, ethics approval, author judgment, or other irreducible external action, complete everything else and mark only the affected claim or passage as unresolved.
+- Keep claims proportional to completed evidence. Narrow the title, abstract, contribution statements, and conclusions when needed.
+- Preserve negative findings and failures when they affect validity, scope, reproducibility, or interpretation.
+- Treat final acceptance as quality control after manuscript production, not as the main product.
 
-3. **Plan or verify experiments**
-   - Read `references/experiment-workflow.md` when designing, running, rerunning, or auditing empirical, computational, theoretical, simulation, laboratory, field, clinical, observational, qualitative, or review-based evidence.
-   - Require baselines, controls, uncertainty, robustness, error analysis, and traceable result generation where applicable.
+## Required Workflow
 
-4. **Write or repair the manuscript**
-   - Read `references/manuscript-workflow.md` before drafting, revising, shortening, expanding, or aligning the manuscript.
-   - Ensure the title, abstract, introduction, methods, results, discussion, conclusion, declarations, figures, tables, and supplements all match the verified evidence.
+1. **Define the paper contract**
+   - Establish the research problem, questions or objectives, contribution type, audience, article structure, target length, output format, and supplied venue constraints.
+   - Convert proposed contributions into testable claims and define the evidence each claim requires.
+   - Choose a defensible narrower scope when the requested scope cannot be supported.
 
-5. **Perform final acceptance**
-   - Read `references/final-acceptance-checklist.md` before declaring readiness or preparing submission files.
-   - Produce a final decision with passed gates, failed gates, remaining risks, and exact next actions.
+2. **Inventory and organize the project**
+   - Inspect manuscripts, notes, data, code, logs, protocols, results, figures, tables, supplements, references, licenses, and prior editorial material.
+   - Create a claim-evidence ledger and an artifact inventory.
+   - Identify missing evidence, broken pipelines, unsupported claims, and missing manuscript components.
+
+3. **Build the evidence**
+   - Read `references/research-quality-gates.md`.
+   - Read `references/experiment-workflow.md` whenever evidence must be designed, generated, reproduced, repaired, compared, or analyzed.
+   - Retrieve and verify literature, prepare data, implement or run methods, execute analyses or experiments, evaluate baselines and controls, quantify uncertainty, inspect failures, and freeze final outputs where feasible.
+   - Record commands, versions, parameters, seeds, provenance, exclusions, and output paths.
+
+4. **Produce the manuscript**
+   - Read `references/manuscript-workflow.md` before drafting or substantially revising the paper.
+   - Build a results-led detailed outline, then write the full title, abstract, keywords, main text, declarations, captions, references, and supplementary cross-references.
+   - Write concrete scholarly prose from verified evidence. Do not leave section-level placeholders when source material is sufficient.
+   - Generate tables and figures from frozen results and insert or call them out in sequence.
+   - Create or update the editable manuscript file and any separate figure, table, supplement, data, code, or response files required by the task.
+
+5. **Revise as an author**
+   - Check argument continuity, methods reproducibility, result completeness, discussion depth, claim boundaries, citation support, terminology, notation, units, and cross-file consistency.
+   - Repair weaknesses directly in the manuscript and supporting artifacts.
+   - Repeat analysis or regenerate outputs when a writing inconsistency reveals an evidence problem.
+
+6. **Validate the finished package**
+   - Read `references/final-acceptance-checklist.md`.
+   - Open and inspect every final file. Recompute or trace core results, verify citations and callouts, and visually inspect the rendered manuscript.
+   - Fix all feasible defects before reporting status.
+   - State `ready`, `ready only after minor fixes`, or `not ready` only after the completed manuscript has undergone final acceptance.
 
 ## Claim-Evidence Ledger
 
-Use a compact table with these columns when auditing or planning:
+Maintain:
 
-`Claim | Evidence source | Data/material basis | Method or experiment | Result artifact | Uncertainty or limitation | Manuscript location | Status | Required fix`
+`Claim | Evidence source | Data/material basis | Method or experiment | Result artifact | Uncertainty or limitation | Manuscript location | Status | Required action`
 
-Statuses:
+Use `supported`, `partial`, `unsupported`, `contradicted`, or `unverifiable`. The ledger controls claim wording but does not replace manuscript writing.
 
-- `supported`: evidence is real, traceable, sufficient, and accurately represented.
-- `partial`: evidence exists but scope, uncertainty, controls, or reporting are incomplete.
-- `unsupported`: no adequate evidence exists.
-- `contradicted`: available evidence conflicts with the claim.
-- `unverifiable`: files, logs, data, scripts, or provenance are missing or inaccessible.
+## Deliverables
 
-## Output Standard
+Unless the user explicitly narrows the task, deliver:
 
-- Start with the decision state: `ready`, `not ready`, or `ready only after minor fixes`.
-- Report the highest-risk blockers first.
-- Separate evidence-backed findings from assumptions.
-- Give executable next steps, including what to run, inspect, rewrite, collect, or disclose.
-- When writing manuscript text, avoid hype, unsupported novelty language, and claims that exceed the verified result boundary.
+- a complete editable manuscript file, such as `.docx`, `.tex`, or a project-native source file;
+- final title, abstract, keywords, main sections, declarations, captions, and references;
+- generated figures, tables, and supplements required to support the paper;
+- reproducibility or provenance artifacts needed to trace the reported results;
+- a concise completion note listing files, validation performed, unresolved external dependencies, and final acceptance state.
+
+Do not return only a plan, review, claim ledger, checklist, or list of suggested edits when manuscript production was requested.
+
+## Completion Rule
+
+Continue through evidence generation, writing, artifact creation, revision, and validation within the available environment. Stop only when the requested manuscript and supporting artifacts have been produced and checked, or when a genuinely external dependency prevents the remaining work. In the latter case, deliver the most complete defensible manuscript possible and identify the exact blocked passages, claims, and required external actions.

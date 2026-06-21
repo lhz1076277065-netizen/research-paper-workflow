@@ -1,6 +1,6 @@
 # Research Paper Workflow Skill
 
-A discipline-neutral Codex skill for high-standard academic research article workflows. It helps audit and guide research questions, evidence standards, data sufficiency, experiment design, result traceability, manuscript writing, submission readiness, and not-ready decisions.
+A discipline-neutral Codex skill that directs an agent to create a complete, evidence-based scholarly paper. It moves from available research materials through evidence generation, experiments or analyses, full manuscript writing, artifact production, revision, and final validation.
 
 ## Install
 
@@ -23,16 +23,22 @@ Restart Codex after installation.
 Invoke the skill with:
 
 ```text
-Use $research-paper-workflow to audit this academic manuscript from evidence to submission readiness.
+Use $research-paper-workflow to use these project materials to write and validate a complete scholarly manuscript.
 ```
 
-## What It Enforces
+The primary output is the actual editable manuscript and its supporting artifacts, not only a review, plan, or readiness report.
 
-- Inspect real project materials before judging readiness.
+## What It Does
+
+- Inspect and organize real project materials.
+- Retrieve literature and execute feasible analyses or experiments needed by the claims.
+- Write the complete title, abstract, main text, declarations, captions, and references.
+- Generate and connect figures, tables, supplements, and reproducibility artifacts.
+- Revise the manuscript directly until the evidence, argument, and files are consistent.
 - Build a claim-evidence ledger for all major claims.
 - Require traceable evidence, data sufficiency rationale, experimental validity, uncertainty, limitations, and reproducibility.
-- Prevent unsupported "ready", "submission-ready", or "publishable" conclusions.
-- Keep paper claims aligned with completed and verified work.
+- Prevent fabricated evidence and unsupported claims.
+- Run final acceptance only after the manuscript has been produced.
 
 ## Repository Layout
 

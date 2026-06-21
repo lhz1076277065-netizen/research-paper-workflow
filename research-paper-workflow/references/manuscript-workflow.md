@@ -1,6 +1,6 @@
 # Manuscript Workflow
 
-Use this workflow to draft, repair, compress, expand, or audit a scholarly manuscript. The manuscript must follow the evidence, not the desired claim.
+Use this workflow to produce, complete, repair, compress, expand, or revise a scholarly manuscript. The manuscript must follow the evidence, not the desired claim. The required outcome is finished manuscript text and an editable manuscript file, not comments about what an author should write.
 
 ## Contents
 
@@ -17,6 +17,18 @@ Use this workflow to draft, repair, compress, expand, or audit a scholarly manus
 - Declarations and transparency statements
 - Revision and response writing
 - Style rules
+
+## Production Sequence
+
+1. Freeze the research questions, primary claims, final result artifacts, and claim boundaries.
+2. Build a detailed section outline that assigns evidence, citations, figures, and tables to each subsection.
+3. Draft Methods and Results from traceable artifacts before finalizing the Introduction, Discussion, Abstract, and Title.
+4. Write every required section in full. Replace advice such as "discuss this limitation" with the actual limitation text.
+5. Insert sequential figure and table callouts, captions, equations, references, and supplementary links.
+6. Create or update the editable manuscript file and render it for visual inspection.
+7. Run a consistency pass across title, abstract, methods, results, discussion, conclusion, figures, tables, supplements, and declarations.
+
+Do not stop after producing an outline, sample section, revision memo, or list of edits unless the user explicitly requested only that output.
 
 ## Claim Alignment
 
@@ -90,6 +102,8 @@ Distinguish prespecified analyses from exploratory analyses.
 - Compare against baselines or controls before claiming improvement.
 - Avoid explaining implications before the reader sees the evidence.
 - Do not duplicate every table value in prose; state the result pattern and important numbers.
+- Draft each result subsection from its frozen result artifact, naming the comparison, sample or case basis, metric, uncertainty, and relevant figure or table.
+- If a required result is missing, generate it where feasible before continuing; otherwise narrow the corresponding question and state the limitation.
 
 ## Discussion
 
@@ -164,3 +178,5 @@ AI-use statements should be minimal and accurate. Do not state that AI designed,
 - Keep terminology consistent.
 - Avoid unsupported claims of novelty, universality, robustness, safety, reliability, or superiority.
 - Keep methods and results concrete; keep speculation in the discussion.
+- Write direct publication-ready prose. Do not address the author, narrate the writing process, or leave editorial instructions inside the manuscript.
+- Maintain coherent transitions and paragraph-level argument structure rather than assembling disconnected evidence summaries.

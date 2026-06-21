@@ -1,6 +1,6 @@
 # Final Acceptance Checklist
 
-Use this checklist before declaring a manuscript ready, preparing a submission package, responding to an editorial technical check, or making a final not-ready decision.
+Use this checklist after producing the manuscript and before declaring it ready, preparing a submission package, responding to an editorial technical check, or making a final not-ready decision. Apply fixes directly wherever feasible; do not substitute the checklist for a finished paper.
 
 ## Contents
 
@@ -23,6 +23,8 @@ Choose exactly one final state:
 - `not ready`: any core scientific claim is unsupported, unverifiable, contradicted, unreproducible, ethically unresolved, or overstated.
 
 Never choose `ready` because the user wants to submit quickly. Readiness follows evidence.
+
+Before choosing a state, confirm that the requested editable manuscript exists, contains all required sections, opens correctly, and has been rendered and inspected. If no manuscript was produced, the workflow is incomplete rather than merely `not ready`.
 
 ## Manuscript Integrity
 
@@ -120,4 +122,4 @@ Then provide:
 - residual risks
 - exact next action
 
-If `not ready`, do not provide submission language that implies readiness. Provide a repair plan instead.
+Keep this report secondary to the delivered manuscript and supporting files. If `not ready`, do not imply submission readiness; repair all feasible defects first, then identify only the unresolved evidence or external-action blockers.
