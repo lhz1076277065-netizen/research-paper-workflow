@@ -1,6 +1,6 @@
 ---
 name: research-paper-workflow
-description: Use when Codex must create, write, complete, substantially revise, or finalize a full evidence-based scholarly article from research materials, data, code, analyses, experiments, literature, or an incomplete draft, including tasks that require producing the manuscript and supporting submission artifacts rather than only reviewing them.
+description: Use when Codex must create, write, complete, substantially revise, or finalize a full evidence-based scholarly article from research materials, data, code, analyses, experiments, literature, or an incomplete draft, including tasks that require producing the manuscript, removing formulaic AI-style or non-academic language, and preparing supporting submission artifacts rather than only reviewing them.
 ---
 
 # Research Paper Workflow
@@ -22,6 +22,7 @@ Keep the workflow discipline-neutral. Apply verified field or venue requirements
 - If an essential activity requires unavailable physical work, private data, credentials, ethics approval, author judgment, or other irreducible external action, complete everything else and mark only the affected claim or passage as unresolved.
 - Keep claims proportional to completed evidence. Narrow the title, abstract, contribution statements, and conclusions when needed.
 - Preserve negative findings and failures when they affect validity, scope, reproducibility, or interpretation.
+- Remove conversational, promotional, formulaic, process-narrating, placeholder, reader-directed, and other non-academic language from the manuscript before delivery.
 - Treat final acceptance as quality control after manuscript production, not as the main product.
 
 ## Required Workflow
@@ -54,7 +55,14 @@ Keep the workflow discipline-neutral. Apply verified field or venue requirements
    - Repair weaknesses directly in the manuscript and supporting artifacts.
    - Repeat analysis or regenerate outputs when a writing inconsistency reveals an evidence problem.
 
-6. **Validate the finished package**
+6. **Run the manuscript language audit**
+   - Read `references/manuscript-language-audit.md` and apply its complete rewrite protocol.
+   - Run `scripts/audit_manuscript_language.py` against every final manuscript source file supported by the scanner.
+   - Inspect every finding in context, rewrite the underlying sentence or paragraph, and rerun the scanner until no unresolved high- or medium-severity findings remain.
+   - Perform the required manual semantic pass because pattern matching cannot determine authorship or detect every form of non-academic prose.
+   - Preserve truthful, venue-required AI-use disclosure; remove AI-assistant conversation and drafting residue from the scholarly text.
+
+7. **Validate the finished package**
    - Read `references/final-acceptance-checklist.md`.
    - Open and inspect every final file. Recompute or trace core results, verify citations and callouts, and visually inspect the rendered manuscript.
    - Fix all feasible defects before reporting status.
@@ -76,10 +84,11 @@ Unless the user explicitly narrows the task, deliver:
 - final title, abstract, keywords, main sections, declarations, captions, and references;
 - generated figures, tables, and supplements required to support the paper;
 - reproducibility or provenance artifacts needed to trace the reported results;
+- a clean language-audit result or a documented, narrowly scoped rationale for any retained scanner false positive;
 - a concise completion note listing files, validation performed, unresolved external dependencies, and final acceptance state.
 
 Do not return only a plan, review, claim ledger, checklist, or list of suggested edits when manuscript production was requested.
 
 ## Completion Rule
 
-Continue through evidence generation, writing, artifact creation, revision, and validation within the available environment. Stop only when the requested manuscript and supporting artifacts have been produced and checked, or when a genuinely external dependency prevents the remaining work. In the latter case, deliver the most complete defensible manuscript possible and identify the exact blocked passages, claims, and required external actions.
+Continue through evidence generation, writing, artifact creation, revision, language purification, and validation within the available environment. Stop only when the requested manuscript and supporting artifacts have been produced and checked, the language audit passes, and the manual semantic pass finds no non-academic drafting residue, or when a genuinely external dependency prevents the remaining work. In the latter case, deliver the most complete defensible manuscript possible and identify the exact blocked passages, claims, and required external actions.

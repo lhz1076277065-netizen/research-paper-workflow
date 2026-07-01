@@ -16,6 +16,7 @@ Use this workflow to produce, complete, repair, compress, expand, or revise a sc
 - Citations and references
 - Declarations and transparency statements
 - Revision and response writing
+- Language purification
 - Style rules
 
 ## Production Sequence
@@ -27,6 +28,7 @@ Use this workflow to produce, complete, repair, compress, expand, or revise a sc
 5. Insert sequential figure and table callouts, captions, equations, references, and supplementary links.
 6. Create or update the editable manuscript file and render it for visual inspection.
 7. Run a consistency pass across title, abstract, methods, results, discussion, conclusion, figures, tables, supplements, and declarations.
+8. Run the language-audit protocol, rewrite every substantive finding, and repeat until the automated and manual gates pass.
 
 Do not stop after producing an outline, sample section, revision memo, or list of edits unless the user explicitly requested only that output.
 
@@ -180,3 +182,14 @@ AI-use statements should be minimal and accurate. Do not state that AI designed,
 - Keep methods and results concrete; keep speculation in the discussion.
 - Write direct publication-ready prose. Do not address the author, narrate the writing process, or leave editorial instructions inside the manuscript.
 - Maintain coherent transitions and paragraph-level argument structure rather than assembling disconnected evidence summaries.
+
+## Language Purification
+
+- Read `manuscript-language-audit.md` before the final prose revision.
+- Remove AI-assistant residue, generic filler, stock transitions, inflated promotional wording, conversational explanation, reader instructions, drafting notes, and unsupported evaluative adjectives.
+- Contextually rewrite every AI-style or formulaic match according to the paragraph's scholarly function and evidence.
+- Replace flagged wording by rewriting the complete sentence or paragraph around its scholarly function; do not perform synonym substitution that preserves the same vague logic.
+- Preserve technical terms and justified claims when they are precise and evidenced. Do not weaken valid disciplinary language merely because a word is common in generated text.
+- Retain a truthful AI-use disclosure when required, but keep it in the designated declaration rather than the scientific argument.
+- Run the bundled language scanner after revision and manually inspect paragraph purpose, claim precision, evidence linkage, tone, redundancy, and transitions.
+- Do not finalize the manuscript while any high- or medium-severity finding remains unresolved.

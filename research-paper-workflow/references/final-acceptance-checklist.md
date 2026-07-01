@@ -10,6 +10,7 @@ Use this checklist after producing the manuscript and before declaring it ready,
 - Data, code, and materials
 - Figures, tables, and supplements
 - References
+- Language integrity
 - Declarations
 - Submission package
 - Final output format
@@ -79,6 +80,17 @@ Before choosing a state, confirm that the requested editable manuscript exists, 
 - Literature claims are supported by appropriate sources.
 - Novelty claims are backed by a documented search or are softened.
 
+## Language Integrity
+
+- The bundled language scanner has been run against every supported final manuscript source file.
+- Zero unresolved high- or medium-severity findings remain.
+- Any retained scanner match is a documented false positive reviewed in its full sentence and paragraph context.
+- No AI-assistant conversation, response preamble, drafting instruction, placeholder, revision note, or reader-directed coaching remains.
+- No generic AI-style filler, ornamental transition, exaggerated promotion, vague praise, casual explanation, or unsupported certainty remains.
+- Every paragraph performs a scholarly function and connects claims to evidence, methods, interpretation, limitation, or prior work.
+- A manual semantic review has checked issues beyond pattern matching, including repetition, empty abstraction, unnatural parallelism, abrupt transitions, and verbose restatement.
+- Required AI-use disclosure remains truthful, minimal, and confined to the appropriate declaration.
+
 ## Declarations
 
 Verify presence and accuracy of:
@@ -103,6 +115,7 @@ Verify presence and accuracy of:
 - Metadata title, abstract, authors, affiliations, keywords, highlights, and declarations match the manuscript.
 - Generated PDF is visually checked for line breaks, missing symbols, broken equations, unreadable figures, and incorrect order.
 - No placeholder text remains.
+- No unresolved language-audit finding or non-academic drafting residue remains.
 - No private paths, credentials, personal notes, hidden comments, or tracked changes remain unless intentionally included.
 
 ## Final Output Format
