@@ -1,0 +1,6 @@
+knowledge_id,element_type,knowledge_element,current_understanding,authoritative_source,competing_view,relevance,uncertainty,manuscript_location,status
+K1,theory,Evidence traceability,Claims must map to inspected evidence.,R2,Alternative reporting structures exist.,Frames the study,Low,Introduction,verified
+K2,terminology,Error measure,Median absolute error summarizes absolute deviations.,R1,Mean error emphasizes extremes.,Defines outcome,Low,Methods,verified
+K3,standards,Reproducible reporting,Commands and versions must be recorded.,R2,No competing standard identified.,Controls reporting,Low,Methods,verified
+K4,mechanism,Error reduction,The procedure changes the evaluated prediction error.,R1,Sampling variation may explain part of the change.,Supports interpretation,Medium,Discussion,verified
+K5,failure_mode,Distribution shift,Performance may degrade outside the held-out range.,R1,No alternative.,Limits generalization,Medium,Limitations,verified

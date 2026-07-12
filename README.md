@@ -2,6 +2,8 @@
 
 A discipline-neutral Codex skill that directs an agent to create a complete, evidence-based scholarly paper. It moves from specialist knowledge acquisition and recent high-impact literature through current data, method-matched advanced analysis, publication-grade figures, full manuscript writing, language purification, and final validation.
 
+Version 2 adds machine-readable project templates, nine article-type profiles, citation and result consistency checks, figure and DOCX inspection, bilingual language auditing, a unified readiness validator, and GitHub Actions verification.
+
 ## Install
 
 Install from this GitHub repository with the Codex skill installer:
@@ -28,6 +30,13 @@ Use $research-paper-workflow to produce a complete paper with current data, top 
 
 The primary output is the actual editable manuscript and its supporting artifacts, not only a review, plan, or readiness report.
 
+Initialize and validate a research project:
+
+```powershell
+python research-paper-workflow\scripts\init_research_project.py --profile empirical-general --dest my-paper
+python research-paper-workflow\scripts\validate_research_package.py my-paper --profile auto --report my-paper\validation\report.json
+```
+
 ## What It Does
 
 - Inspect and organize real project materials.
@@ -46,6 +55,7 @@ The primary output is the actual editable manuscript and its supporting artifact
 - Require traceable evidence, data sufficiency rationale, experimental validity, uncertainty, limitations, and reproducibility.
 - Prevent fabricated evidence and unsupported claims.
 - Run final acceptance only after the manuscript has been produced.
+- Reject readiness automatically when evidence, data, citations, results, figures, DOCX integrity, language, profile requirements, or reproducibility artifacts fail.
 
 ## Repository Layout
 
@@ -55,6 +65,8 @@ research-paper-workflow/
   agents/
     openai.yaml
   references/
+    artifact-contracts.md
+    article-type-routing.md
     research-quality-gates.md
     experiment-workflow.md
     literature-evidence-workflow.md
@@ -66,6 +78,13 @@ research-paper-workflow/
     final-acceptance-checklist.md
   scripts/
     audit_manuscript_language.py
+    init_research_project.py
+    refresh_literature_metadata.py
+    validate_research_package.py
+    research_validation/
+  assets/
+    templates/
+    profiles/
 ```
 
 ## License

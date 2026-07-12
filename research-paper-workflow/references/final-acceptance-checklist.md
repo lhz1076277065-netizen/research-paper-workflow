@@ -23,12 +23,19 @@ Use this checklist after producing the manuscript and before declaring it ready,
 Choose exactly one final state:
 
 - `ready`: all applicable hard gates pass and only ordinary submission risk remains.
-- `ready only after minor fixes`: scientific evidence is adequate, but limited formatting, wording, file, or metadata fixes remain.
-- `not ready`: any core scientific claim is unsupported, unverifiable, contradicted, unreproducible, based on stale or materially incomplete data, under-researched, methodologically mismatched, domain-invalid, ethically unresolved, or overstated.
+- `not ready`: any automated or manual gate fails, any fix remains, or any core scientific claim is unsupported, unverifiable, contradicted, unreproducible, based on stale or materially incomplete data, under-researched, methodologically mismatched, domain-invalid, ethically unresolved, or overstated.
 
 Never choose `ready` because the user wants to submit quickly. Readiness follows evidence.
 
 Before choosing a state, confirm that the requested editable manuscript exists, contains all required sections, opens correctly, and has been rendered and inspected. If no manuscript was produced, the workflow is incomplete rather than merely `not ready`.
+
+Run the unified package validator before choosing a state:
+
+```bash
+python scripts/validate_research_package.py PROJECT_ROOT --profile auto --report validation/report.json
+```
+
+An exit code other than `0` requires `not ready`; no wording such as "ready after fixes" is permitted. Manual visual and semantic review must also pass before `ready`.
 
 ## Manuscript Integrity
 
@@ -152,12 +159,13 @@ Verify presence and accuracy of:
 - No placeholder text remains.
 - No unresolved language-audit finding or non-academic drafting residue remains.
 - No private paths, credentials, personal notes, hidden comments, or tracked changes remain unless intentionally included.
+- `validation/report.json` corresponds to the final artifact versions and reports no failed gate.
 
 ## Final Output Format
 
 Report final acceptance as:
 
-`Decision: ready | ready only after minor fixes | not ready`
+`Decision: ready | not ready`
 
 Then provide:
 

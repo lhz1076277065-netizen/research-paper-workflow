@@ -1,0 +1,2 @@
+figure_id,file,caption,callout,source_result_ids,source_file,generation_command,intended_width_mm,minimum_dpi,vector_required,status
+F1,figures/figure1.svg,Distribution of the prespecified error measure across held-out cases.,Figure 1,RES1,figures/figure1_source.svg,python make_figure.py --figure F1,85,300,true,final

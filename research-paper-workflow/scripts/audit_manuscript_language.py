@@ -41,7 +41,7 @@ class Finding:
     guidance: str
 
 
-RULES = (
+EN_RULES = (
     Rule("assistant_identity", "high", "assistant-residue", r"\bas an (?:ai|artificial intelligence) (?:language )?model\b", "Remove assistant identity language."),
     Rule("assistant_capability", "high", "assistant-residue", r"\bI (?:cannot|can't|do not have access|don't have access|am unable to)\b", "Replace capability commentary with manuscript content or remove it."),
     Rule("response_preamble", "high", "assistant-residue", r"(?:^|[.!?]\s+)(?:certainly|sure)[,!]?\s+(?:here|below)\b|\bhere (?:is|are) (?:the|a) (?:revised|final|requested|complete)\b", "Delete response preambles and retain only manuscript prose."),
@@ -72,6 +72,29 @@ RULES = (
     Rule("evaluative_predicate", "medium", "unsupported-evaluation", r"\b(?:is|are|was|were|remained|proved) (?:robust|accurate|effective|efficient|reliable|successful|superior)\b", "Confirm that the metric, comparator, uncertainty, and conditions immediately support this evaluation."),
     Rule("informal_contraction", "low", "conversational", r"\b(?:can't|won't|isn't|aren't|doesn't|don't|didn't|it's|we're|they're|there's)\b", "Use formal wording unless the text is a quotation."),
 )
+
+ZH_RULES = (
+    Rule("zh_assistant_identity", "high", "assistant-residue", r"作为(?:一个|一名)?(?:AI|人工智能)(?:语言)?模型", "删除 AI 助手身份话术。"),
+    Rule("zh_assistant_capability", "high", "assistant-residue", r"(?:我无法|我不能|我没有权限|我无法访问)", "删除能力说明，改为论文事实或明确的数据限制。"),
+    Rule("zh_response_preamble", "high", "assistant-residue", r"(?:以下是|下面是)(?:为您)?(?:修改|润色|生成|整理|撰写)(?:后)?的", "删除回复前言，只保留论文正文。"),
+    Rule("zh_offer_help", "high", "assistant-residue", r"(?:如有需要|如果您需要|希望对您有所帮助|欢迎继续提问)", "删除面向用户的帮助或邀约。"),
+    Rule("zh_editing_instruction", "high", "drafting-residue", r"(?:请|建议)(?:作者)?(?:补充|添加|插入|修改|核实|引用|讨论)|(?:此处|这里)(?:需要|应当)?(?:插入|添加|补充)", "直接完成修改，不在稿件中保留编辑指令。"),
+    Rule("zh_placeholder", "high", "drafting-residue", r"(?:待补充|待完善|待核实|待引用|占位符)|[【\[](?:补充|插入|添加|作者|单位|日期|题目|关键词|引用)[^】\]]*[】\]]", "补全或删除占位内容。"),
+    Rule("zh_reader_direction", "medium", "reader-directed", r"(?:读者可以|大家可以|我们可以)(?:清楚地|明显地)?(?:看到|看出|发现|注意到)", "直接陈述观察结果及证据。"),
+    Rule("zh_obviousness", "medium", "unsupported-evaluation", r"(?:众所周知|不难发现|显而易见|毋庸置疑|毫无疑问)", "以可核验依据替代常识或确定性断言。"),
+    Rule("zh_note_formula", "medium", "empty-metadiscourse", r"(?:值得注意的是|需要指出的是|应当指出的是|必须强调的是)", "直接陈述命题及其学术意义。"),
+    Rule("zh_section_announcement", "medium", "empty-metadiscourse", r"(?:本文|本节|下文)(?:首先|随后|接下来)?(?:会|将要|将)?(?:深入|全面)?(?:讨论|介绍|阐述|分析|探讨|说明)", "以具体研究内容或结果替代章节预告。"),
+    Rule("zh_simplifier", "medium", "conversational", r"(?:简单来说|通俗地说|说白了|换句话说|当然|基本上)", "使用精确的学术陈述。"),
+    Rule("zh_clarity_formula", "medium", "empty-metadiscourse", r"(?:为了便于理解|为了更清楚地说明|为清晰起见)", "删除说明性前缀并改写为清晰正文。"),
+    Rule("zh_formulaic_development", "medium", "formulaic-language", r"随着.{0,24}(?:快速|迅速|不断|蓬勃)发展", "说明具体变化、时间和证据，避免宽泛开场。"),
+    Rule("zh_formulaic_exploration", "medium", "formulaic-language", r"(?:深入探讨|全面系统地分析|多维度地揭示)", "写明具体分析对象、方法和结果。"),
+    Rule("zh_promotional", "medium", "promotional", r"(?:开创性|颠覆性|革命性|里程碑式|前所未有|极具创新性|具有划时代意义)", "用量化比较、适用条件和证据替代宣传性判断。"),
+    Rule("zh_vague_importance", "medium", "unsupported-evaluation", r"(?:具有|有着)(?:十分|非常|极其|重大)?重要(?:的)?(?:意义|价值|作用)", "明确理论、方法或实践影响及支持证据。"),
+    Rule("zh_vague_success", "medium", "unsupported-evaluation", r"(?:大大|极大地|明显地)(?:提高|提升|改善|增强)|(?:非常|高度)(?:准确|可靠|稳健|有效|高效)", "报告指标、比较对象、不确定性和条件。"),
+)
+
+# Backward-compatible export for callers that imported RULES.
+RULES = EN_RULES
 
 
 class TextExtractor(HTMLParser):
@@ -141,11 +164,25 @@ def excerpt(text: str, start: int, end: int, width: int = 180) -> str:
     return ("..." if left else "") + value + ("..." if right < len(text) else "")
 
 
-def audit_file(path: Path, allow_patterns: list[re.Pattern[str]]) -> list[Finding]:
+def select_rules(language: str, text: str) -> tuple[Rule, ...]:
+    if language == "en":
+        return EN_RULES
+    if language == "zh":
+        return ZH_RULES
+    if language == "both":
+        return EN_RULES + ZH_RULES
+    chinese = len(re.findall(r"[\u3400-\u9fff]", text))
+    english = len(re.findall(r"\b[A-Za-z]{3,}\b", text))
+    if chinese >= 2 and english >= 3:
+        return EN_RULES + ZH_RULES
+    return ZH_RULES if chinese >= 2 else EN_RULES
+
+
+def audit_file(path: Path, allow_patterns: list[re.Pattern[str]], language: str = "auto") -> list[Finding]:
     units = read_docx(path) if path.suffix.lower() == ".docx" else read_text_file(path)
     findings: list[Finding] = []
     for location, text in units:
-        for rule in RULES:
+        for rule in select_rules(language, text):
             for match in re.finditer(rule.pattern, text, flags=re.IGNORECASE | re.MULTILINE):
                 if any(pattern.search(match.group(0)) for pattern in allow_patterns):
                     continue
@@ -168,6 +205,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--fail-on", choices=("high", "medium", "low", "none"), default="medium", help="Lowest severity that returns exit code 1")
     parser.add_argument("--allow", action="append", default=[], metavar="REGEX", help="Reviewed exact-match regex to suppress; repeat as needed")
     parser.add_argument("--exclude", action="append", default=[], metavar="REGEX", help="Path regex to exclude; repeat as needed")
+    parser.add_argument("--language", choices=("auto", "en", "zh", "both"), default="auto", help="Language rules to apply")
     parser.add_argument("--json", action="store_true", help="Emit JSON instead of text")
     return parser.parse_args()
 
@@ -183,7 +221,7 @@ def main() -> int:
         errors: list[dict[str, str]] = []
         for path in files:
             try:
-                findings.extend(audit_file(path, allow_patterns))
+                findings.extend(audit_file(path, allow_patterns, args.language))
             except (OSError, ValueError, KeyError, zipfile.BadZipFile, ElementTree.ParseError) as error:
                 errors.append({"file": str(path), "error": str(error)})
     except (OSError, ValueError, re.error) as error:
@@ -196,6 +234,7 @@ def main() -> int:
     if args.json:
         print(json.dumps({
             "files_scanned": len(files),
+            "language": args.language,
             "counts": counts,
             "findings": [asdict(item) for item in findings],
             "errors": errors,

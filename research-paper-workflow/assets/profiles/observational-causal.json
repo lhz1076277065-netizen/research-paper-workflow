@@ -1,0 +1,13 @@
+{
+  "id": "observational-causal",
+  "description": "Observational study with causal or policy-relevant estimands.",
+  "required_ledgers": ["claim_evidence_ledger.csv", "literature_matrix.csv", "data_manifest.csv", "results_ledger.csv", "experiment_manifest.csv", "figure_manifest.csv", "domain_knowledge_map.csv", "analysis_diagnostics.csv"],
+  "required_experiment_classes": ["main", "negative_control", "sensitivity", "robustness", "external_validation"],
+  "required_domain_elements": ["theory", "terminology", "standards", "causal_mechanism", "confounders", "failure_mode"],
+  "required_analysis_diagnostics": ["identification", "confounding", "positivity", "sensitivity", "uncertainty"],
+  "require_data": true,
+  "require_figures": true,
+  "require_sem": false,
+  "require_external_validation": true,
+  "recent_q1q2_target": 0.7
+}

@@ -1,0 +1,2 @@
+result_id,label,value,unit,uncertainty_type,lower,upper,sample_n,display_decimals,tolerance,source_artifact,manuscript_targets,status
+RES1,Median absolute error,0.12,unitless,bootstrap 95% CI,0.10,0.14,100,2,0.001,results/result.csv,manuscript/paper.md,final

@@ -1,0 +1,2 @@
+dataset_id,source,version,release_date,coverage_start,coverage_end,access_date,cutoff_date,latest_available_date,update_checked_at,update_frequency,license,population,variables,units,raw_location,processed_location,checksum,coverage_status,bias_status,freshness_justification,status
+D1,Authoritative Test Source,1.0,2026-06-01,2025-01-01,2026-05-31,2026-07-01,2026-05-31,2026-05-31,2026-07-01,annual,CC-BY,Defined test population,error,unitless,data/raw.csv,data/processed.csv,fd5ae656dc24b57ce384d5b5b9692279381c68ec02c55c6eec19c8a5321bc834,complete,assessed,,frozen

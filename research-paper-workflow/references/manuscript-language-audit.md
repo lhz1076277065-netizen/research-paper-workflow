@@ -113,10 +113,10 @@ After rewriting, compare the original and revised claims. The revision must impr
 Run the bundled scanner using its absolute path resolved from this skill directory:
 
 ```bash
-python scripts/audit_manuscript_language.py MANUSCRIPT --fail-on medium
+python "<installed-skill-directory>/scripts/audit_manuscript_language.py" MANUSCRIPT --fail-on medium --language auto
 ```
 
-Supported inputs: `.md`, `.markdown`, `.txt`, `.rst`, `.tex`, `.html`, `.htm`, and `.docx`. Directories are scanned recursively. Use `--json` for a machine-readable report and `--allow REGEX` only for a reviewed, exact matched phrase that is a false positive.
+Supported inputs: `.md`, `.markdown`, `.txt`, `.rst`, `.tex`, `.html`, `.htm`, and `.docx`. English and Chinese rules are available through `--language auto|en|zh|both`. Directories are scanned recursively. Use `--json` for a machine-readable report and `--allow REGEX` only for a reviewed, exact matched phrase that is a false positive.
 
 The default `medium` threshold fails when either high- or medium-severity findings remain. A clean exit does not replace manual review.
 

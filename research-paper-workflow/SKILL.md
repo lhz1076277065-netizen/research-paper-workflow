@@ -24,6 +24,7 @@ Keep the workflow discipline-neutral. Apply verified field or venue requirements
 - Choose analysis software from the research design. Use SmartPLS or AMOS only when PLS-SEM or covariance-based SEM is methodologically appropriate and fully report the measurement and structural evidence.
 - Generate publication-grade figures from frozen outputs; never use raw statistical-software screenshots as final scientific figures.
 - Build a domain knowledge map from authoritative specialist sources before finalizing hypotheses, methods or interpretation.
+- Use the machine-readable artifact contracts and article-type profile; do not replace required ledgers with narrative assurances.
 - If an essential activity requires unavailable physical work, private data, credentials, ethics approval, author judgment, or other irreducible external action, complete everything else and mark only the affected claim or passage as unresolved.
 - Keep claims proportional to completed evidence. Narrow the title, abstract, contribution statements, and conclusions when needed.
 - Preserve negative findings and failures when they affect validity, scope, reproducibility, or interpretation.
@@ -37,6 +38,8 @@ Keep the workflow discipline-neutral. Apply verified field or venue requirements
    - Convert proposed contributions into testable claims and define the evidence each claim requires.
    - Choose a defensible narrower scope when the requested scope cannot be supported.
    - Read `references/domain-knowledge-integration.md`; create the domain knowledge map, terminology ledger, applicable standards list and mechanism alternatives.
+   - Read `references/article-type-routing.md` and `references/artifact-contracts.md`.
+   - If `research_manifest.json` is absent, run `scripts/init_research_project.py` with the methodologically correct profile, then map all existing artifacts into the generated ledgers.
 
 2. **Inventory and organize the project**
    - Inspect manuscripts, notes, data, code, logs, protocols, results, figures, tables, supplements, references, licenses, and prior editorial material.
@@ -78,9 +81,10 @@ Keep the workflow discipline-neutral. Apply verified field or venue requirements
 
 8. **Validate the finished package**
    - Read `references/final-acceptance-checklist.md`.
+   - Run `scripts/validate_research_package.py` against the project root and preserve its JSON report.
    - Open and inspect every final file. Recompute or trace core results, verify citations and callouts, and visually inspect the rendered manuscript.
    - Fix all feasible defects before reporting status.
-   - State `ready`, `ready only after minor fixes`, or `not ready` only after the completed manuscript has undergone final acceptance.
+   - State `ready` only when the validator exits `0` and manual visual and semantic inspection also pass. Any validator error requires `not ready` and repair.
 
 ## Claim-Evidence Ledger
 
@@ -101,6 +105,7 @@ Unless the user explicitly narrows the task, deliver:
 - a data manifest, currency check, coverage matrix and frozen release identifier;
 - a domain knowledge map, terminology ledger and standards record;
 - complete analysis diagnostics and publication-grade figure source files;
+- the completed `research_manifest.json`, machine-readable ledgers and `validation/report.json`;
 - reproducibility or provenance artifacts needed to trace the reported results;
 - a clean language-audit result or a documented, narrowly scoped rationale for any retained scanner false positive;
 - a concise completion note listing files, validation performed, unresolved external dependencies, and final acceptance state.
@@ -109,4 +114,4 @@ Do not return only a plan, review, claim ledger, checklist, or list of suggested
 
 ## Completion Rule
 
-Continue through domain learning, literature retrieval, data updating, evidence generation, advanced analysis, figure production, writing, revision, language purification, and validation within the available environment. Stop only when the requested manuscript and supporting artifacts have been produced and checked, all applicable quality gates pass, and the manual semantic pass finds no non-academic drafting residue, or when a genuinely external dependency prevents the remaining work. In the latter case, deliver the most complete defensible manuscript possible and identify the exact blocked passages, claims, and required external actions.
+Continue through initialization, domain learning, literature retrieval, data updating, evidence generation, advanced analysis, figure production, writing, revision, language purification, and validation within the available environment. Stop only when the requested manuscript and supporting artifacts have been produced and checked, the unified validator exits `0`, all manual gates pass, and no non-academic drafting residue remains, or when a genuinely external dependency prevents the remaining work. In the latter case, deliver the most complete defensible manuscript possible and identify the exact blocked passages, claims, and required external actions.

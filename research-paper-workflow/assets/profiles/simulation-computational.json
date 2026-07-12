@@ -1,0 +1,13 @@
+{
+  "id": "simulation-computational",
+  "description": "Numerical simulation, computational experiment or solver study.",
+  "required_ledgers": ["claim_evidence_ledger.csv", "literature_matrix.csv", "data_manifest.csv", "results_ledger.csv", "experiment_manifest.csv", "figure_manifest.csv", "domain_knowledge_map.csv", "analysis_diagnostics.csv"],
+  "required_experiment_classes": ["main", "benchmark", "convergence", "sensitivity", "robustness"],
+  "required_domain_elements": ["theory", "governing_principles", "terminology", "standards", "boundary_conditions", "failure_mode"],
+  "required_analysis_diagnostics": ["convergence", "verification", "validation", "sensitivity", "uncertainty"],
+  "require_data": true,
+  "require_figures": true,
+  "require_sem": false,
+  "require_external_validation": false,
+  "recent_q1q2_target": 0.7
+}

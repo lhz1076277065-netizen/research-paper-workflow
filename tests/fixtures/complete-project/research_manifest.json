@@ -1,0 +1,18 @@
+{
+  "schema_version": "2.0",
+  "project_id": "complete-project",
+  "title": "Evidence-Constrained Evaluation",
+  "article_type": "empirical-general",
+  "manuscript_files": ["manuscript/paper.md"],
+  "references_file": "evidence/references.ris",
+  "citation_metadata_cache": "evidence/citation_metadata.json",
+  "recent_q1q2_exception": {
+    "approved": false,
+    "reason": "",
+    "evidence_file": ""
+  },
+  "sem_model_files": [],
+  "analysis_diagnostics_file": "analysis_diagnostics.csv",
+  "created_at": "2026-07-01",
+  "updated_at": "2026-07-12"
+}

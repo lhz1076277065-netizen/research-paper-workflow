@@ -1,0 +1,13 @@
+{
+  "id": "empirical-general",
+  "description": "General empirical study with inferential or comparative analysis.",
+  "required_ledgers": ["claim_evidence_ledger.csv", "literature_matrix.csv", "data_manifest.csv", "results_ledger.csv", "experiment_manifest.csv", "figure_manifest.csv", "domain_knowledge_map.csv"],
+  "required_experiment_classes": ["main", "baseline", "robustness"],
+  "required_domain_elements": ["theory", "terminology", "standards", "mechanism", "failure_mode"],
+  "required_analysis_diagnostics": ["assumptions", "uncertainty", "robustness"],
+  "require_data": true,
+  "require_figures": true,
+  "require_sem": false,
+  "require_external_validation": false,
+  "recent_q1q2_target": 0.7
+}

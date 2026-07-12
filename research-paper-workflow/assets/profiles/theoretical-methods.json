@@ -1,0 +1,13 @@
+{
+  "id": "theoretical-methods",
+  "description": "Theoretical, conceptual or methods article without a required empirical dataset.",
+  "required_ledgers": ["claim_evidence_ledger.csv", "literature_matrix.csv", "experiment_manifest.csv", "domain_knowledge_map.csv", "analysis_diagnostics.csv"],
+  "required_experiment_classes": ["derivation", "known_case", "counterexample"],
+  "required_domain_elements": ["theory", "terminology", "standards", "assumptions", "boundary_conditions", "failure_mode"],
+  "required_analysis_diagnostics": ["assumptions", "internal_consistency", "known_case", "limitations"],
+  "require_data": false,
+  "require_figures": false,
+  "require_sem": false,
+  "require_external_validation": false,
+  "recent_q1q2_target": 0.7
+}

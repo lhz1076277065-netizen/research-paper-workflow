@@ -1,0 +1,13 @@
+{
+  "id": "qualitative",
+  "description": "Qualitative, interpretive or mixed evidence study.",
+  "required_ledgers": ["claim_evidence_ledger.csv", "literature_matrix.csv", "data_manifest.csv", "experiment_manifest.csv", "figure_manifest.csv", "domain_knowledge_map.csv", "analysis_diagnostics.csv"],
+  "required_experiment_classes": ["sampling", "coding", "triangulation", "negative_case"],
+  "required_domain_elements": ["theory", "terminology", "standards", "context", "reflexivity", "failure_mode"],
+  "required_analysis_diagnostics": ["saturation", "coding_stability", "triangulation", "reflexivity"],
+  "require_data": true,
+  "require_figures": false,
+  "require_sem": false,
+  "require_external_validation": false,
+  "recent_q1q2_target": 0.7
+}

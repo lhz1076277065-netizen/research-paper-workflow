@@ -1,0 +1,4 @@
+experiment_id,experiment_class,research_question,input_data,method,baseline_control,metrics,seeds_repeats,command,environment,output_artifact,acceptance_criterion,status,failure_reason
+E1,main,RQ1,D1,Prespecified evaluation,Baseline procedure,Median absolute error,5 repeats,python run.py --mode main,Python 3.11; environment.lock,outputs/main.log,Result artifact generated,complete,
+E2,baseline,RQ1,D1,Baseline evaluation,Null comparator,Median absolute error,5 repeats,python run.py --mode baseline,Python 3.11; environment.lock,outputs/baseline.log,Baseline artifact generated,complete,
+E3,robustness,RQ1,D1,Perturbation analysis,Main analysis,Median absolute error,5 repeats,python run.py --mode robustness,Python 3.11; environment.lock,outputs/robustness.log,Direction preserved,complete,

@@ -1,0 +1,4 @@
+diagnostic_id,category,metric,value,unit,threshold_or_comparator,method,source_artifact,status,interpretation
+A1,assumptions,Residual inspection,acceptable,,Prespecified criteria,Diagnostic analysis,outputs/diagnostics.json,pass,No material violation detected
+A2,uncertainty,Bootstrap interval,0.10 to 0.14,unitless,95% interval,Bootstrap,outputs/diagnostics.json,pass,Estimate uncertainty reported
+A3,robustness,Perturbation direction,preserved,,Main estimate,Repeated perturbation,outputs/diagnostics.json,pass,Direction remained consistent
