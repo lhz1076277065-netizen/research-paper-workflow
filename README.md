@@ -1,6 +1,6 @@
 # Research Paper Workflow Skill
 
-A discipline-neutral Codex skill that directs an agent to create a complete, evidence-based scholarly paper. It moves from available research materials through evidence generation, experiments or analyses, full manuscript writing, language purification, artifact production, revision, and final validation.
+A discipline-neutral Codex skill that directs an agent to create a complete, evidence-based scholarly paper. It moves from specialist knowledge acquisition and recent high-impact literature through current data, method-matched advanced analysis, publication-grade figures, full manuscript writing, language purification, and final validation.
 
 ## Install
 
@@ -23,7 +23,7 @@ Restart Codex after installation.
 Invoke the skill with:
 
 ```text
-Use $research-paper-workflow to write and validate a complete scholarly manuscript, including the final language audit.
+Use $research-paper-workflow to produce a complete paper with current data, top literature, advanced analysis, publication-grade figures, and final audit.
 ```
 
 The primary output is the actual editable manuscript and its supporting artifacts, not only a review, plan, or readiness report.
@@ -32,6 +32,11 @@ The primary output is the actual editable manuscript and its supporting artifact
 
 - Inspect and organize real project materials.
 - Retrieve literature and execute feasible analyses or experiments needed by the claims.
+- Prioritize directly relevant literature from the rolling five-year window and verify WoS Core Collection and JCR Q1/Q2 status.
+- Audit data freshness, source coverage, integration quality, bias and frozen-release provenance.
+- Build a domain knowledge map from standards, authoritative reviews, primary studies and official technical sources.
+- Use SmartPLS or AMOS when the study genuinely requires PLS-SEM or CB-SEM, with complete measurement and structural-model diagnostics.
+- Produce publication-grade vector or high-resolution figures instead of raw software screenshots.
 - Write the complete title, abstract, main text, declarations, captions, and references.
 - Generate and connect figures, tables, supplements, and reproducibility artifacts.
 - Revise the manuscript directly until the evidence, argument, and files are consistent.
@@ -52,6 +57,10 @@ research-paper-workflow/
   references/
     research-quality-gates.md
     experiment-workflow.md
+    literature-evidence-workflow.md
+    data-currency-and-coverage.md
+    domain-knowledge-integration.md
+    advanced-analysis-and-figures.md
     manuscript-workflow.md
     manuscript-language-audit.md
     final-acceptance-checklist.md

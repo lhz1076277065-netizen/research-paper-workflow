@@ -6,8 +6,11 @@ Use these gates to decide whether a research article has enough evidence to supp
 
 - Evidence integrity
 - Data sufficiency and academic quantity requirements
+- Data currency, coverage and integration
 - Literature review standard
+- Domain knowledge standard
 - Method validity
+- Analysis and figure quality
 - Experimental validity
 - Statistical and uncertainty standard
 - Generalization and external validity
@@ -36,6 +39,16 @@ Do not use fixed sample-size numbers as universal academic standards. Establish 
 - For review articles, justify literature coverage with transparent search strategy, databases or sources, date range, screening rules, inclusion/exclusion criteria, deduplication, and quality appraisal.
 - If a project lacks a defensible quantity or coverage rationale, mark related claims as `partial` or `unsupported`.
 
+## Data Currency, Coverage and Integration
+
+- Apply `data-currency-and-coverage.md` to every empirical, computational or evidence-synthesis dataset.
+- Record authoritative source, version, release date, access date, coverage period and manuscript cutoff date.
+- Check for newer releases and corrections before final analysis and again before acceptance when the source is dynamic.
+- Demonstrate coverage across all dimensions required by the claims; more rows do not compensate for missing periods, populations, regions, subgroups, extremes or boundary conditions.
+- Preserve provenance through multi-source integration and quantify source-specific differences, overlap, leakage and bias.
+- Trace all results to one frozen data release.
+- If currency or coverage is inadequate, update the data or narrow the claims; do not label the data current or comprehensive.
+
 ## Literature Review Standard
 
 - Cover the problem background, current state of knowledge, competing methods, relevant benchmarks, methodological limitations, and unresolved gap.
@@ -44,6 +57,20 @@ Do not use fixed sample-size numbers as universal academic standards. Establish 
 - Avoid citation padding. Each citation should support a specific claim or methodological choice.
 - Claims of novelty, first use, superiority, or broad impact require a documented search trail and careful wording.
 - If literature coverage is narrow, outdated, or biased toward favorable work, do not claim comprehensive novelty.
+- Apply `literature-evidence-workflow.md` and preserve the reproducible search log, screening record and claim-level evidence matrix.
+- For fast-moving claims, prioritize the rolling five-year window and verify Web of Science Core Collection indexing plus JCR category, year and Q1/Q2 quartile.
+- Target at least 70% of nonfoundational journal references from the rolling five-year window and verified JCR Q1/Q2 journals when sufficient eligible literature exists; document evidence-based exceptions.
+- Do not infer article quality from journal quartile alone. Evaluate claim relevance, design quality, citation influence normalized for age and field, replication and contradictory evidence.
+- Treat the bibliography as sparse if core claims, closest comparators, original methods, data sources, standards or contradictory evidence lack direct references, regardless of total count.
+
+## Domain Knowledge Standard
+
+- Apply `domain-knowledge-integration.md` before fixing hypotheses, methods and interpretation.
+- Build a domain knowledge map covering entities, constructs, mechanisms, competing theories, standards, units, thresholds, accepted methods, benchmarks and failure modes.
+- Use authoritative specialist sources rather than generic summaries for scientific decisions.
+- Maintain a terminology and ontology ledger across data, code and manuscript.
+- Check every major interpretation against domain mechanisms, alternative explanations and boundary conditions.
+- If domain knowledge remains insufficient for a core claim, obtain an authoritative cross-check or narrow the claim.
 
 ## Method Validity
 
@@ -52,6 +79,18 @@ Do not use fixed sample-size numbers as universal academic standards. Establish 
 - State what was fixed before analysis and what was exploratory.
 - Document preprocessing, transformations, normalization, filtering, annotation, calibration, and quality control.
 - Check for data leakage, circular reasoning, inappropriate comparators, unavailable ground truth, confounding, batch effects, and measurement artifacts.
+- Apply `advanced-analysis-and-figures.md` before selecting software.
+- Use SmartPLS only when a justified PLS-SEM or supported SEM workflow matches the constructs and objective; use AMOS or an equivalent CB-SEM tool only when common-factor modeling, CFA or theory-confirming SEM is appropriate.
+- Do not use SEM, additional algorithms or complex software merely to make the analysis appear advanced.
+- Report complete diagnostics, uncertainty, robustness and alternative-model evidence for the chosen method family.
+
+## Analysis and Figure Quality
+
+- Generate final tables and figures from frozen outputs with reproducible code or documented exports.
+- Do not use raw SmartPLS, AMOS, spreadsheet, notebook or statistics-GUI screenshots as final figures.
+- Use vector graphics for diagrams and line art and suitable high-resolution raster for image data.
+- Show uncertainty, distribution, units, sample size and missingness where they affect interpretation.
+- Verify accessibility, final-size legibility, consistent notation and exact agreement with manuscript values.
 
 ## Experimental Validity
 

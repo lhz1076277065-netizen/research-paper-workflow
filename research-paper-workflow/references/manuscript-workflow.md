@@ -22,13 +22,14 @@ Use this workflow to produce, complete, repair, compress, expand, or revise a sc
 ## Production Sequence
 
 1. Freeze the research questions, primary claims, final result artifacts, and claim boundaries.
-2. Build a detailed section outline that assigns evidence, citations, figures, and tables to each subsection.
-3. Draft Methods and Results from traceable artifacts before finalizing the Introduction, Discussion, Abstract, and Title.
-4. Write every required section in full. Replace advice such as "discuss this limitation" with the actual limitation text.
-5. Insert sequential figure and table callouts, captions, equations, references, and supplementary links.
-6. Create or update the editable manuscript file and render it for visual inspection.
-7. Run a consistency pass across title, abstract, methods, results, discussion, conclusion, figures, tables, supplements, and declarations.
-8. Run the language-audit protocol, rewrite every substantive finding, and repeat until the automated and manual gates pass.
+2. Freeze the domain knowledge map, literature evidence matrix, data release, analysis diagnostics and final figure sources.
+3. Build a detailed section outline that assigns evidence, citations, figures, and tables to each subsection.
+4. Draft Methods and Results from traceable artifacts before finalizing the Introduction, Discussion, Abstract, and Title.
+5. Write every required section in full. Replace advice such as "discuss this limitation" with the actual limitation text.
+6. Insert sequential figure and table callouts, captions, equations, references, and supplementary links.
+7. Create or update the editable manuscript file and render it for visual inspection.
+8. Run a consistency pass across title, abstract, methods, results, discussion, conclusion, figures, tables, supplements, and declarations.
+9. Run the language-audit protocol, rewrite every substantive finding, and repeat until the automated and manual gates pass.
 
 Do not stop after producing an outline, sample section, revision memo, or list of edits unless the user explicitly requested only that output.
 
@@ -76,6 +77,10 @@ Avoid a broad textbook opening unless it is necessary for the audience.
 - Cite primary sources for factual or methodological claims.
 - Use recent literature where the area moves quickly, while retaining necessary foundational sources.
 - Do not imply comprehensive coverage unless the search strategy supports it.
+- Base the review on the literature evidence matrix rather than memory or opportunistic searching.
+- Emphasize directly relevant work from the rolling five-year window and verified WoS/JCR Q1/Q2 sources, while retaining necessary foundational and standards references.
+- Synthesize mechanisms, methods, evidence strength, contradictions and gaps; do not create a sequence of paper summaries.
+- State the final search date and describe database coverage when the review supports a novelty claim.
 
 ## Methods
 
@@ -91,6 +96,8 @@ Write enough detail for reproduction or independent audit:
 - metrics, statistical tests, uncertainty quantification, and correction procedures
 - validation splits, repeats, seeds, independent tests, and robustness checks
 - ethics, permission, license, and privacy handling where applicable
+- data source version, release, access date, coverage period, cutoff date and frozen release identifier
+- analysis software, version, method-selection rationale, native project file and complete diagnostic protocol
 
 Distinguish prespecified analyses from exploratory analyses.
 
@@ -138,6 +145,10 @@ Do not use the discussion to add unsupported claims that were not tested.
 - Figures should expose variability when it matters.
 - Do not use decorative figures that do not support a claim.
 - Ensure values in figures, tables, abstract, results, and supplements match the same frozen outputs.
+- Do not use raw SmartPLS, AMOS, spreadsheet or statistics-software screenshots.
+- Use publication-grade vector graphics for model diagrams and line art; use suitable high-resolution raster only when scientifically appropriate.
+- For SEM, report complete measurement and structural diagnostics in tables or supplements rather than crowding the path diagram.
+- Preserve editable figure sources and verify readability at final publication size.
 
 ## Citations and References
 

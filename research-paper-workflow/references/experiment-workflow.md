@@ -9,7 +9,9 @@ When the user requests a paper and the necessary analysis is feasible in the ava
 - Research contract
 - Evidence inventory
 - Data and material protocol
+- Data currency and coverage
 - Experimental matrix
+- Analysis and figure production
 - Execution discipline
 - Result derivation
 - Analysis and interpretation
@@ -58,6 +60,15 @@ Required categories when applicable:
 - Check that training, tuning, validation, and final testing materials are separated when required.
 - Verify that licensing and consent allow the intended analysis and sharing.
 
+## Data Currency and Coverage
+
+- Apply `data-currency-and-coverage.md` before finalizing the experiment matrix.
+- Record source versions, release dates, access dates, update frequency, observation window and cutoff date.
+- Check for new releases or corrections before execution and before manuscript acceptance.
+- Build a coverage matrix over all claim-relevant dimensions and identify absent or sparse conditions.
+- Use independent sources for triangulation or external validation where required.
+- Freeze one versioned data release and bind every experiment to its identifier.
+
 ## Experimental Matrix
 
 Build a table before execution:
@@ -80,6 +91,14 @@ Include these classes when relevant:
 
 Do not expand the matrix mechanically. Include experiments that materially test the claims.
 
+## Analysis and Figure Production
+
+- Apply `advanced-analysis-and-figures.md` and document why the method family fits the estimand, constructs and data.
+- If using SmartPLS or AMOS, include measurement-model, structural-model, uncertainty, fit or prediction, invariance and robustness tasks as applicable.
+- Preserve native project files and machine-readable exports in addition to publication figures.
+- Generate figures from frozen outputs, not by redrawing values manually.
+- Treat every figure as an evidence artifact with a linked research question, source result and verification status.
+
 ## Execution Discipline
 
 - Run experiments from versioned scripts, notebooks with cleared execution order, workflow files, or documented commands.
@@ -90,6 +109,7 @@ Do not expand the matrix mechanically. Include experiments that materially test 
 - Do not overwrite final outputs without preserving the old version or documenting why it was superseded.
 - If installation or environment setup fails, record the failure, fix, and final environment.
 - Continue from setup through execution, diagnostics, reruns, result freezing, and manuscript-ready outputs.
+- Rerun affected analyses when newer data, corrected data or revised domain definitions materially change the input.
 - Treat an experiment matrix as a work queue. Mark an item complete only after its output and provenance exist.
 - If a planned method fails, diagnose and repair it where feasible; otherwise run the strongest valid alternative and document the changed claim boundary.
 
@@ -103,6 +123,7 @@ Do not expand the matrix mechanically. Include experiments that materially test 
 - Use consistent rounding rules and units.
 - Verify that confidence intervals, error bars, statistical tests, and labels match the data.
 - Produce a manuscript-ready result bundle containing machine-readable results, publication-quality tables or figures, metric definitions, and a short evidence interpretation for each research question.
+- Export SEM diagrams and other analytical figures as clean vector or high-resolution artifacts; do not use raw GUI screenshots.
 
 ## Analysis and Interpretation
 
