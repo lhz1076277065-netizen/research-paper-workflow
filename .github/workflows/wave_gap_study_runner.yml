@@ -31,8 +31,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install 'numpy>=1.26,<3' 'pandas>=2.1,<3' 'scipy>=1.11,<2' 'scikit-learn>=1.4,<2' 'matplotlib>=3.8,<4' 'requests>=2.31,<3' 'joblib>=1.3,<2'
       - name: Execute study
+        id: execute
+        continue-on-error: true
         run: python experiments/wave_gap_study.py --output-dir wave_study_output
+      - name: Finalize provenance and checksums
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p wave_study_output/provenance wave_study_output/code
+          cp experiments/wave_gap_study.py wave_study_output/code/wave_gap_study.py
+          python --version > wave_study_output/provenance/python_version.txt
+          pip freeze > wave_study_output/provenance/pip_freeze.txt
+          printf 'analysis_sha256=1626b4a1544e036f31e90f69f19004eae640b462c8dfc942a975bf7232fe74c1\nexecute_outcome=%s\n' '${{ steps.execute.outcome }}' > wave_study_output/provenance/workflow_status.txt
+          (cd wave_study_output && find . -type f ! -name SHA256SUMS.txt -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt)
       - name: Upload reproducibility artifact
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: wave-gap-study-output
