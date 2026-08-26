@@ -2,10 +2,9 @@ name: wave-gap-reconstruction-study-runner
 
 on:
   push:
-    branches: [wave-imputation-study-20260826]
+    branches: [main]
     paths:
-      - 'experiments/wave_gap_study.py.gz.b64'
-      - 'experiments/run_trigger.txt'
+      - 'experiments/wave_study_main_trigger.txt'
 
 permissions:
   contents: read
@@ -16,6 +15,8 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: wave-imputation-study-20260826
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
