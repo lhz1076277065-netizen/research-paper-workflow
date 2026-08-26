@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: wave-imputation-study-20260826
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - name: Restore and verify analysis script
@@ -33,7 +33,7 @@ jobs:
       - name: Execute study
         run: python experiments/wave_gap_study.py --output-dir wave_study_output
       - name: Upload reproducibility artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: wave-gap-study-output
           path: wave_study_output
