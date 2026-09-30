@@ -6,13 +6,22 @@ The complete source lives in [academic-research-skills/](academic-research-skill
 
 ## Install
 
+### 一句话让 AI Agent 安装
+
+> 请按照 https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0-rc.3 中的部署教程，将全部19项通用学术Skill安装到本机Codex，核验安装包SHA256、备份同名旧版，并在安装后报告实际路径、版本和检查结果。
+
+[完整中文教程](installation/README.zh-CN.md) · [macOS 一键安装包](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.2.0-rc.3/academic-research-skills-v3.2.0-rc.3-one-click.zip) · [后续发行要求](installation/RELEASE_CHECKLIST.zh-CN.md)
+
+一键包 SHA256：`5516895ff257c17f08222fedf84151c0eee16601d93ce91efe94619240050959`。安装器隔离检查不代表当前会话已加载全部19项。
+
+
 Use the existing Codex installer to install one capability from this repository:
 
 ```bash
-python "$CODEX_HOME/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --ref v3.2.0-rc.3 --path academic-research-skills/skills/research-paper-workflow
+python "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --ref v3.2.0-rc.3 --path academic-research-skills/skills/research-paper-workflow --dest "$HOME/.agents/skills"
 ```
 
-Replace the path's final name with the capability you need, for example `journal-intelligence` or `scientific-visualization`. Installing all nineteen is optional. Restart Codex to refresh its native Skill catalog. Other Agents may load a selected folder or use the library's documented export tools; file loading is distinct from native automatic routing.
+Replace the path's final name with the capability you need, for example `journal-intelligence` or `scientific-visualization`. Installing all nineteen is optional. Codex detects local Skill changes; restart it if new Skills do not appear. Other Agents may load a selected folder or use the library's documented export tools; file loading is distinct from native automatic routing.
 
 The previous installation path `research-paper-workflow/` retains its rc.1 compatibility copy and old v2 helpers, nine legacy validator profiles and project experiments for existing consumers. For this update use `academic-research-skills/skills/research-paper-workflow`; [LEGACY_HELPERS.md](research-paper-workflow/LEGACY_HELPERS.md) explains the preserved helpers. Avoid installing both copies of the same orchestrator name.
 
