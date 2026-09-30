@@ -1,0 +1,63 @@
+{
+  "skill": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc2-20260930T101654Z/suite/snapshots/release/scientific-visualization/SKILL.md",
+  "skill_sha256": "43cc7851b889f6051f5ff308fc1c171492b6fde32dee61ca46e8b993e1b5e707",
+  "upstream": [
+    {
+      "repository": "Haojae/scipilot-figure-skill",
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "path": "scripts/setup_style.py",
+      "sha256": "d58ef81684577bb605a92733dd2ca48ade03b4f819b3d255fd62f319be7fea82",
+      "local_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc2-20260930T101654Z/professional/Haojae/scipilot-figure-skill/scripts/setup_style.py",
+      "mode": "verified_cache_reuse",
+      "head_checked_live": true
+    },
+    {
+      "repository": "Haojae/scipilot-figure-skill",
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "path": "scripts/export_figure.py",
+      "sha256": "40ce3bcd31dfc4b33e38a1cb180c75dc730ee6fa046f04934c79f285c6f890c1",
+      "local_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc2-20260930T101654Z/professional/Haojae/scipilot-figure-skill/scripts/export_figure.py",
+      "mode": "verified_cache_reuse",
+      "head_checked_live": true
+    },
+    {
+      "repository": "Haojae/scipilot-figure-skill",
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "path": "scripts/visual_qa.py",
+      "sha256": "67675709e523c76e2748d50749de7bc6332f07df865379b26d024321fb40120f",
+      "local_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc2-20260930T101654Z/professional/Haojae/scipilot-figure-skill/scripts/visual_qa.py",
+      "mode": "verified_cache_reuse",
+      "head_checked_live": true
+    },
+    {
+      "repository": "Haojae/scipilot-figure-skill",
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "path": "scripts/layout_tools.py",
+      "sha256": "68e1d25774148fe78f5d87035d651f5e3707382502505cb11f62f9ec7ae88e49",
+      "local_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc2-20260930T101654Z/professional/Haojae/scipilot-figure-skill/scripts/layout_tools.py",
+      "mode": "verified_cache_reuse",
+      "head_checked_live": true
+    },
+    {
+      "repository": "Haojae/scipilot-figure-skill",
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "path": "scripts/check_figure.py",
+      "sha256": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06",
+      "local_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc2-20260930T101654Z/professional/Haojae/scipilot-figure-skill/scripts/check_figure.py",
+      "mode": "verified_cache_reuse",
+      "head_checked_live": true
+    }
+  ],
+  "material": [
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc2-20260930T101654Z/work/academic-research-skills/evaluations/fixtures/rc2/figure.md",
+      "sha256": "5db07acc8ff8740c1a50bcd757b12413c9f0a235ce5d7430432a266b6c081a3f"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc2-20260930T101654Z/work/academic-research-skills/evaluations/fixtures/rc2/figure-results.csv",
+      "sha256": "e2d5923ff6b2d1a95321ece8956a892ad4416d051c8c763c9ea31881a306374c"
+    }
+  ],
+  "mode": "adapted_in_host",
+  "model_dispatch": "none"
+}

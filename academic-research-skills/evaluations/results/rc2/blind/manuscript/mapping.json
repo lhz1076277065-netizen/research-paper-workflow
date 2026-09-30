@@ -1,0 +1,28 @@
+{
+  "mapping": {
+    "M1": "release",
+    "M2": "without-skill",
+    "M3": "comparison"
+  },
+  "files": [
+    {
+      "anonymous_path": "M1.md",
+      "original_path": "trials/long-revision.release.0/manuscript.md",
+      "sha256": "39b6a0a58df3ef009be76e30a2380511a4cdbce1f3df4a76ab9cc4a7fda2708c",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "M2.md",
+      "original_path": "trials/long-revision.without-skill.0/manuscript.md",
+      "sha256": "7b6914dba9128aaa6f2d33247678c2f31eed9a9e31b43b3cbf20a2e312f5c7bd",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "M3.md",
+      "original_path": "trials/long-revision.comparison.0/manuscript.md",
+      "sha256": "ce4f35c9e57b0a359c78fe1c61efce06fa2b170607cd5f2e1b0a137400a9eb66",
+      "content_normalized": false
+    }
+  ],
+  "scope": "Root-only until blind review completed; reviewers receive packet only."
+}

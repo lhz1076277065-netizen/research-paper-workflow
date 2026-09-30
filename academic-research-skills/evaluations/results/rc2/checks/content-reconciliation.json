@@ -1,0 +1,64 @@
+{
+  "scope": "Root reconciliation of actual anonymous reviews with frozen materials and exact arithmetic; no overall numeric score, post-review output editing or independent external expert certification.",
+  "critical_errors_found_in_reviewed_outputs": [],
+  "figure": {
+    "mapping": {
+      "F1": "without-skill",
+      "F2": "release",
+      "F3": "comparison"
+    },
+    "local_candidate_gains": [
+      "exact paired interval endpoints",
+      "shared effect-size scale",
+      "in-figure interval method and object"
+    ],
+    "tradeoff": "rc.1 has clearer first-read winners/counterexamples/cross-zero guidance",
+    "overall_winner": null
+  },
+  "manuscript": {
+    "mapping": {
+      "M1": "release",
+      "M2": "without-skill",
+      "M3": "comparison"
+    },
+    "core_correctness": "comparable",
+    "local_argument": "rc.1 clearer composition magnitude/sign bridge",
+    "overall_winner": null
+  },
+  "research": {
+    "mapping": {
+      "J1": "comparison",
+      "J2": "release",
+      "J3": "without-skill"
+    },
+    "design_sharp_bounds": [
+      "69/100",
+      "307/420"
+    ],
+    "calibrated_B": "7/10",
+    "all_six_design_core_correct": true,
+    "sample_allocation_optimality": "unknown",
+    "reading_minor_candidate_omission": "B2/B3 internal timing wording not explicitly flagged",
+    "overall_winner": null
+  },
+  "old_regression": {
+    "gain_identity": "2 E[C(X-T)] - E[C^2]",
+    "counterexample_scope": "unrestricted latent model class, not every additional constraint",
+    "actual_empirical_experiment": false
+  },
+  "deployment_probe": {
+    "actual_skill_loaded": false,
+    "rc2_entries_registered_in_visible_catalog": false,
+    "rc2_auto_discovery_established": false
+  },
+  "actual_tasks": 20,
+  "actual_blind_reviews": 3,
+  "universal_gain_established": false,
+  "reader_metric_scope": "Instrumented reader-emitted text only, not delivered model context, all tool calls or billing. Unique_resource_bytes count whole distinct files; resource_display_chars count selected decoded text emitted by the reader including repeats. Native tool transport may truncate that output; final delivery and all other outputs are not instrumented. Initial entry file characters are separate; raw task/material injection is not counted by these read events.",
+  "per_trial_tokens_peak_cost": null,
+  "source_reviews": {
+    "figure": "38f449e6a6179f58cf06c78ccde8badf069cddea4a49c2975b1fc1b077e43716",
+    "manuscript": "7e87dd2eabf828fa976be9aa66ab063185b8fd991f6c297ef5cd304709d5d31f",
+    "research": "6f23774d04b32d39c011604989f635491087b6500be655d2cfd76c7ffa66a0fd"
+  }
+}

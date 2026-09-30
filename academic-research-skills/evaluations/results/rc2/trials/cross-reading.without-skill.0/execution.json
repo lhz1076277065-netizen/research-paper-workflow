@@ -1,0 +1,42 @@
+{
+  "run_id": "cross-reading.without-skill.0",
+  "parent_run_id": "iteration-rc2-20260930T101654Z",
+  "role": "user_task",
+  "agent": "rc2_trial08",
+  "evaluation_kind": "unseen_material",
+  "condition": "without-skill",
+  "replicate": 0,
+  "status": "native_agent_completed",
+  "completion_source": "native final response received by root; artifact existence separately verified",
+  "native_dispatch": {
+    "timestamp": "2026-09-30T10:57:31.617Z",
+    "call_id": "call_bKe4v1Yg6vzeWkm5AVDyI9dR",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_override": null
+  },
+  "actual_elapsed_seconds": null,
+  "completion_observed_at": "2026-09-30T12:28:17.486782+00:00",
+  "request_sha256": "9ad14f0ed7e341383f9816d5709271eb9ca5432e6cdd6cc0766016c7d68b09f5",
+  "frozen_resource_check": "passed",
+  "resource_metrics": {
+    "coverage": "instrumented_reads_only",
+    "initial_entry_chars": 0,
+    "read_events": 0,
+    "unique_resources": 0,
+    "unique_resource_bytes": 0,
+    "resource_display_chars": 0,
+    "exact_repeated_displays": 0,
+    "input_tokens": null,
+    "cached_input_tokens": null,
+    "output_tokens": null,
+    "peak_context_tokens": null,
+    "cost": null
+  },
+  "output_files": {
+    "answer.md": "ac99587c0c38faf68cae0cbc24848cab17c5df16ef5c073ecf31bbebdd90cca7",
+    "operation.md": "ffc27c57a27bb163e4847660ac70bd336caa5ae275baba821d1db2008d27dfdd"
+  },
+  "quality_evaluated_by_exit_code": false,
+  "cli_adapter_executed": false
+}

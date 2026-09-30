@@ -2,7 +2,7 @@
 name: research-design
 description: "当需要选择方法、比较方案、规划能区分解释的验证或制作方案稿时使用；由问题和材料决定设计，不编造未来结果。"
 metadata:
-  version: "3.2.0-rc.1"
+  version: "3.2.0-rc.2"
 ---
 
 # 问题导向的研究设计

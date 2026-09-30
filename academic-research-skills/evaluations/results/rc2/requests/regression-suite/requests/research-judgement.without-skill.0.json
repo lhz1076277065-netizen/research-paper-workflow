@@ -1,0 +1,20 @@
+{
+  "case_id": "research-judgement",
+  "condition": "without-skill",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "development",
+  "skill_snapshot": null,
+  "user_prompt": "Improve this weak research plan using the supplied study profiles. Deliver a justified comparison of plausible research routes and choose the next discriminating work. Keep the scientific objective and distinguish an idea from established knowledge. Do not conduct a new empirical study. Write judgement.md and a short operation note.",
+  "material": "\n\n## fixtures/heldout/research-brief.md\n# Fixed development-evaluation material: NOT real literature or empirical research\n\nThe user wants a defensible study of when apparent improvements in a generic estimation system are reliable. No field-specific dataset or new manuscript is requested. The following summaries R1–R4 are fabricated study profiles for reasoning evaluation; they have no real authors, DOI, journal or publication priority.\n\nR1: An established correction rule substantially improves average error when reference measurements are collected independently of the target outcome. It does not evaluate references acquired through the same selection process as targets.\nR2: A larger estimator improves average error on a random split of the same records. Its inputs contain a proxy recorded after the target measurement. It reports neither removal of that proxy nor evaluation under changed acquisition conditions.\nR3: A simple calibration procedure remains stable under an independent acquisition change, but only for one narrow range of measurement precision. Behavior outside that precision range is not established.\nR4: A carefully executed replication finds the advertised average gain disappears when the reference process becomes dependent on target selection. This distinguishes two acquisition mechanisms but does not establish how to diagnose dependence without observing the target truth.\n\nWeak draft plan: \"Use a bigger model on a new benchmark; if average error is lower, call this a novel generally robust method. Run many configurations and report the best result.\"\n\nAvailable resources: symbolic reasoning, an inexpensive manufactured measurement simulator, and the supplied study profiles. There are no actual observations, ethics issues, field results or computational restrictions. Pilot work is feasible, but the full scientific question must remain the reliability of apparent improvements. Work now consists of improving the problem and deciding what evidence would distinguish plausible answers, not producing new empirical findings.\n",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills/evaluations/fixtures/heldout/research-brief.md",
+      "sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c"
+    }
+  ],
+  "skill_entry": null,
+  "skill_entry_sha256": null,
+  "initial_skill_text": "",
+  "adapter_contract": "Supply the prompt/material and the condition entry only; expose equal tools and permissions. Record additional resource reads and tool calls if the host can. Do not pass other-arm answers."
+}

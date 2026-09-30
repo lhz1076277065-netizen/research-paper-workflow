@@ -1,0 +1,84 @@
+{
+  "schema": "host-evaluation-2",
+  "status": "prepared_not_run",
+  "evaluation_kind": "unseen_material",
+  "jobs": [
+    {
+      "id": "paired-main-figure.without-skill.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/paired-main-figure.without-skill.0.json",
+      "request_sha256": "08585b18f270d9e9c85a6b3d407c8a0e402f9b6ec3040b1400d61ee1f24d7f32"
+    },
+    {
+      "id": "simple-edit.without-skill.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/simple-edit.without-skill.0.json",
+      "request_sha256": "8fa514c212cf2393bee1021ba3cecf52efab27e48e3784fc9e625e3daaac31e2"
+    },
+    {
+      "id": "simple-edit.comparison.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/simple-edit.comparison.0.json",
+      "request_sha256": "235f931be20ae247fb58dfccd25e01e50b6b967bca1f022ddf01fa816199bfbc"
+    },
+    {
+      "id": "long-revision.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/long-revision.release.0.json",
+      "request_sha256": "c855af043f4862f7410f4ad43c488901a7d04ebfcc6b8d5c62f641cfa774e86e"
+    },
+    {
+      "id": "cross-reading.comparison.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/cross-reading.comparison.0.json",
+      "request_sha256": "88099e5240451f64b71e21c228d91f443e2b4cb6fcc5acd9c8dfd9f0f9589c8b"
+    },
+    {
+      "id": "paired-main-figure.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/paired-main-figure.release.0.json",
+      "request_sha256": "5e318ed487b066d56d026dc62365fad64fcedcfc1d6c34e5cbad7d3424aae3fb"
+    },
+    {
+      "id": "simple-edit.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/simple-edit.release.0.json",
+      "request_sha256": "549e9d50e0ae8445a3694efbc21a723c261661ff464de1a39f23dd4c30676661"
+    },
+    {
+      "id": "cross-reading.without-skill.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/cross-reading.without-skill.0.json",
+      "request_sha256": "9ad14f0ed7e341383f9816d5709271eb9ca5432e6cdd6cc0766016c7d68b09f5"
+    },
+    {
+      "id": "long-revision.comparison.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/long-revision.comparison.0.json",
+      "request_sha256": "e7415d91af6d08873f4180a23105b8c615434b48ce34969503f9bd0ba71bd847"
+    },
+    {
+      "id": "constrained-design.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/constrained-design.release.0.json",
+      "request_sha256": "4104d36097ca5bafd0404efce88a5101760e395a0d21d985e0678d795ddc7a1c"
+    },
+    {
+      "id": "constrained-design.without-skill.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/constrained-design.without-skill.0.json",
+      "request_sha256": "8c93f354321f59c86484effe49302c760869f89de783eb8d54557d04822e99a0"
+    },
+    {
+      "id": "cross-reading.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/cross-reading.release.0.json",
+      "request_sha256": "f4361b8a5c199c34cf1037955e1bf2ddb2a1a34fc7d61002aaccc033afd2c1f7"
+    },
+    {
+      "id": "long-revision.without-skill.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/long-revision.without-skill.0.json",
+      "request_sha256": "9d31c9413ffc5fbde3a99080f6ce0cefe5f0259d56c388a7865e7dea914eeda1"
+    },
+    {
+      "id": "constrained-design.comparison.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/constrained-design.comparison.0.json",
+      "request_sha256": "4c200c8d8cf2c54db4cf5f176be918033af2ffed675e38953caceacd22187b88"
+    },
+    {
+      "id": "paired-main-figure.comparison.0",
+      "request": "LOCAL_EVIDENCE_ROOT/suite/requests/paired-main-figure.comparison.0.json",
+      "request_sha256": "43a1071ed25fe578c82e1c5858c2e4217605ec8193b0e420eb8fe56d3a18103e"
+    }
+  ],
+  "controls": "Keep actual model/version, tools, permissions, budgets and sampling equal. Repeated fresh contexts; shared-context reading is not independent A/B.",
+  "scoring": "Blindly inspect real answers and traces for task completion, correctness, unsupported claims, useful novelty, questions and context/tool cost. No automatic scientific quality claim."
+}

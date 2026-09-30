@@ -1,0 +1,170 @@
+{
+  "selected_modules": [
+    {
+      "identity": "suite/identities/release.manuscript-writing.json",
+      "manifest_sha256": "a4f14e583b4096b16dbba3bd83c8d6b9f84f6f6cdae11f819c0fd2a1fd5e3f42",
+      "module": "manuscript-writing",
+      "resources": 51,
+      "current_source_equals_frozen_snapshot": true
+    },
+    {
+      "identity": "suite/identities/release.paper-deep-reading.json",
+      "manifest_sha256": "8150b44548ef6f50614f7b2b1ba8e4c6002b4e1b13bc0d7560ce98e3f0b2e546",
+      "module": "paper-deep-reading",
+      "resources": 52,
+      "current_source_equals_frozen_snapshot": true
+    },
+    {
+      "identity": "suite/identities/release.research-design.json",
+      "manifest_sha256": "f40c487940d47f27e93afc2fafd8ac8d2a17d86929b8ad693161cdb62348ad2b",
+      "module": "research-design",
+      "resources": 50,
+      "current_source_equals_frozen_snapshot": true
+    },
+    {
+      "identity": "suite/identities/release.scientific-visualization.json",
+      "manifest_sha256": "e2333a16bafa9a4f21e074b944a84e2c598790495b6789eff913965930a8e237",
+      "module": "scientific-visualization",
+      "resources": 52,
+      "current_source_equals_frozen_snapshot": true
+    },
+    {
+      "identity": "regression-suite/identities/release.topic-novelty.json",
+      "manifest_sha256": "a7ca9af7199d10dde08191d2a56723671cd25d8315a6c6eb709b8fc4e7d93cb9",
+      "module": "topic-novelty",
+      "resources": 49,
+      "current_source_equals_frozen_snapshot": true
+    }
+  ],
+  "selected_frozen_resources_unchanged": true,
+  "all_six_new_materials_unchanged": true,
+  "old_rc1_archives": {
+    "academic-research-skills-v3.2.0-rc.1.zip": "87759a886da3bdcc95f80a74eb44320a301f68dc7725f4c0299d0430bf5f4713",
+    "academic-research-skills-v3.2.0-rc.1-source.zip": "4f4b853ef1df8cb5348e30f99a62dfecfe4eff588076d40b3685c42bc65725ba"
+  },
+  "old_rc1_archives_unchanged": true,
+  "entries": {
+    "entries": [
+      {
+        "name": "analysis-execution",
+        "characters": 617,
+        "sha256": "99df11428fb1ac8979ae550f7adceb2b045fe4efc91cb9cd2694b8002e0a1ef5"
+      },
+      {
+        "name": "citation-audit",
+        "characters": 592,
+        "sha256": "f28addea7b07de93c4310970e963d9753516f7b05147fbd048a85add4b865e9d"
+      },
+      {
+        "name": "data-discovery",
+        "characters": 604,
+        "sha256": "c65d7ef3ffcd02a78a7f93759571a2d217f8527ffec13b1dc95906292cdef44c"
+      },
+      {
+        "name": "data-preparation",
+        "characters": 609,
+        "sha256": "7a00cb1486212f97890a1ec7c02e132e3f29fef2d3931c19cf09a58592aa5fae"
+      },
+      {
+        "name": "ethics-protocol",
+        "characters": 592,
+        "sha256": "0645d4364802f575f33554cc46b5461fcf10a749fd7e1592b3a2ab3ec745e941"
+      },
+      {
+        "name": "journal-intelligence",
+        "characters": 620,
+        "sha256": "a4a39a8413286e7860795e19efeb10d4557ebc0f71b352fb56f6df1757927610"
+      },
+      {
+        "name": "literature-discovery",
+        "characters": 612,
+        "sha256": "ffecb3610213c35b9e95bd46ae7464919c55ca22980a9f3cb6b20675f6e57632"
+      },
+      {
+        "name": "manuscript-review",
+        "characters": 678,
+        "sha256": "291f07467806195eb1fc952d7861bd752f613be75de3a289e42ad38ab3c7ce6b"
+      },
+      {
+        "name": "manuscript-writing",
+        "characters": 711,
+        "sha256": "cc3295bfb754904a5059df87cba1364b0d46ddf1f0d8805a193a5818ebc7e47e"
+      },
+      {
+        "name": "paper-deep-reading",
+        "characters": 599,
+        "sha256": "900ef6c0bdb97be72f2206f7c746e3e54c4323c486a326898dff2e97771790fe"
+      },
+      {
+        "name": "peer-review-response",
+        "characters": 661,
+        "sha256": "7dc8b80bef042370fa7e8e5a503d390d61fc52764de1eecdbe9d9e11d194ff89"
+      },
+      {
+        "name": "publication-stewardship",
+        "characters": 601,
+        "sha256": "481467a48b3ff0c1dd5142d40aa80479faad9bf80c54466375b245889153d153"
+      },
+      {
+        "name": "research-design",
+        "characters": 653,
+        "sha256": "795d10d5549eacc4ed32e98fb4b7d6cbb957da61f665473cb7fba4bd2a28c558"
+      },
+      {
+        "name": "research-intake",
+        "characters": 602,
+        "sha256": "8d9da547567fda555c1ba2a4ac4e3da42fa2b1a31ccc6184ece050113b752dcb"
+      },
+      {
+        "name": "research-paper-workflow",
+        "characters": 770,
+        "sha256": "3f9d1098949f77ec29e9ff0b4c3f7a29780e6023bc0d594657235a79fd8b2173"
+      },
+      {
+        "name": "robustness-reproducibility",
+        "characters": 603,
+        "sha256": "0eb3c3fabaa6c6d6a989220392823e20119e0272baac4c99f4ba309749e3bed4"
+      },
+      {
+        "name": "scientific-visualization",
+        "characters": 674,
+        "sha256": "43cc7851b889f6051f5ff308fc1c171492b6fde32dee61ca46e8b993e1b5e707"
+      },
+      {
+        "name": "submission-packaging",
+        "characters": 602,
+        "sha256": "a15e9f1b0da66937a86bc6bf8ae6ced3bc1cbe92f7d051281a861250361f97c7"
+      },
+      {
+        "name": "topic-novelty",
+        "characters": 662,
+        "sha256": "6bf425295435373c3781e587554fef1476696adc1e9509345a4b084cb6173a95"
+      }
+    ],
+    "entry_body_and_description_changes": 0,
+    "version_metadata_only": true,
+    "UI_yaml_unchanged": true,
+    "research_profile_keys": [
+      "quantitative-observational",
+      "experimental",
+      "causal-quasi-experimental",
+      "predictive-ml",
+      "qualitative",
+      "mixed-methods",
+      "systematic-review",
+      "scoping-review",
+      "meta-analysis",
+      "theory-proof",
+      "simulation-numerical",
+      "methods-software",
+      "data-resource",
+      "humanities-interpretive",
+      "narrative-conceptual",
+      "protocol-design"
+    ],
+    "default": "general",
+    "extensions_allowed": true,
+    "professional_sources_unchanged": true
+  },
+  "scope": "Compared actual selected candidate source resources with original frozen manifests. Documentation/evidence added after freeze are outside these modules. No claim of an OS access sandbox or all tools instrumented."
+}

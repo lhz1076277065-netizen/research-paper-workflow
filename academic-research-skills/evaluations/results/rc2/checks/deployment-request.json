@@ -1,0 +1,8 @@
+{
+  "run_id": "deployment.local-edit.0",
+  "evaluation_kind": "deployment",
+  "user_prompt": "请把下面结果段改得简洁清楚，保留数字和推断范围，只处理这一段：本项对48个独立单位的探索性分析估计关联为0.18，95%置信区间为−0.02至0.38。这也许暗示正关联，但证据还不够确定。",
+  "candidate_entry_injected": false,
+  "scope": "Use the actual visible host catalog with a natural-language local task. No global installation, artificial catalog, description-only route test or candidate entry path is supplied. Candidate auto-discovery is not established when absent from the catalog.",
+  "model_override": null
+}

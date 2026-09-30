@@ -1,0 +1,823 @@
+{
+  "review_type": "independent_blind_research_review",
+  "scope": {
+    "input_directory": "LOCAL_EVIDENCE_ROOT/blind-packets/research",
+    "files_read_in_full": [
+      "design.md",
+      "reading.md",
+      "J1-design-0.md",
+      "J1-design-1.md",
+      "J2-design-0.md",
+      "J2-design-1.md",
+      "J3-design-0.md",
+      "J3-design-1.md",
+      "J1-reading.md",
+      "J2-reading.md",
+      "J3-reading.md"
+    ],
+    "mapping_or_skills_or_source_history_read": false,
+    "external_sources_used": false,
+    "other_assistants_called": false,
+    "provenance_tails_used_for_judgment": false
+  },
+  "criteria": {
+    "good": "具体可定位优点，不是总排名",
+    "bad": "负面科学或迁移错误",
+    "equivalent": "达到共同正确基线",
+    "unknown": "匿名文本不足以确认",
+    "not_scored": [
+      "length",
+      "number_of_fields",
+      "number_of_calls",
+      "conservative_phrasing"
+    ]
+  },
+  "overall": {
+    "single_winner": null,
+    "critical_errors": [],
+    "design_core": "六稿均正确：完整分布不额外校准，A 的锐界为 [69/100,307/420]，B 为 7/10",
+    "reading_core": "三稿均正确：A/B 未给直接相反命题；共源、定义、实际图示范围与迁移前提均受限",
+    "differences": "主要是配置和有限样本程序、具体结果分支以及 B 时间内部措辞核对"
+  },
+  "independent_results": {
+    "observable_conditional_cells": {
+      "order": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "g1": [
+        "3/8",
+        "1/8",
+        "1/8",
+        "3/8"
+      ],
+      "g2": [
+        "3/10",
+        "1/5",
+        "1/5",
+        "3/10"
+      ]
+    },
+    "A": {
+      "parameter": "t=q1 in [0,1/5]",
+      "q2": "1/6-2t/3",
+      "theta1_range": [
+        "3/4",
+        "11/12"
+      ],
+      "theta2_range": [
+        "17/28",
+        "13/20"
+      ],
+      "target_function": "1/2+1/(10(1-2t))+9/(100(1+2t))",
+      "derivative": "(1+76t+4t^2)/(50(1-2t)^2(1+2t)^2)>0",
+      "sharp_set": [
+        "69/100",
+        "307/420"
+      ],
+      "width": "43/1050"
+    },
+    "B": {
+      "q1": "1/10",
+      "q2": "1/10",
+      "theta1": "13/16",
+      "theta2": "5/8",
+      "target": "7/10"
+    },
+    "truth_sufficiency": "新增总体真值分布识别 q/θ；A 中任何一组总体 q 足够，依赖原平均校准。24 实现值仍有抽样误差。",
+    "replication_minimal_same_rate": "E/E′ given g independent and same marginal q sufficient for agreement inversion; independence from D unnecessary",
+    "replication_failure": "E′=E gives X′=X; same full three-report distribution at both A endpoints",
+    "verified_numbers": {
+      "J1_D0_size_K_ge_6_at_q_0_1": 0.02765828447069799,
+      "J1_D0_power_K_ge_6_at_q_0_2": 0.34410756771518364,
+      "J1_D0_U_endpoint_K0": 0.004722366482869652,
+      "J1_D0_K0_one_sided_95_q_upper": 0.11734615615494881,
+      "J1_D0_K0_target_upper": 0.7035590538120741,
+      "J3_D0_counts_0_20_target_CI": [
+        0.69,
+        0.7175764633944636
+      ],
+      "J3_D0_counts_7_20_target_CI": [
+        0.7020107576381838,
+        0.7309523809523809
+      ],
+      "J3_D0_counts_13_20_target_CI": null,
+      "J2_D0_direct_SE_generic_upper": 0.10212037714663724,
+      "endpoint_group1_error_detection": {
+        "n24": 0.9952776335171304,
+        "n12": 0.931280523264,
+        "n10": 0.8926258175999999
+      }
+    },
+    "computation_limits": "标准库独立复核并非真实实验；离散代数点检查不替代报告中的连续单调性证明；未读取匿名稿声称附带的源代码。"
+  },
+  "dimensions": {
+    "scientific_correctness": {
+      "good": "全部九稿核心结论正确",
+      "bad": [],
+      "equivalent": "六设计的数学识别核心、三精读的非矛盾核心相当",
+      "unknown": "完整 A 定理及现实模型真实性不在片段内"
+    },
+    "decisive_design": {
+      "good": [
+        "J1-design-0 给具体检验与端点事件",
+        "J2-design-0 给直接估计精度界与无缩界结果",
+        "J3-design-0 给三种具体计数与可复现区间",
+        "三精读补材料和验证对应具体缺口"
+      ],
+      "bad": [],
+      "equivalent": "全部真值方案合法并保留原目标；没有理由仅因分层或单组选择判错",
+      "unknown": "未给实际损失或精度目标，分配最优性和达到决策要求的概率未知"
+    },
+    "evidence_transfer": {
+      "good": "全部区分题设与新增条件、总体识别与样本精度；全部精读处理共源与图像未取得",
+      "bad": [],
+      "equivalent": "三精读主迁移判断相当",
+      "relative_limitations": [
+        "J1-design-1/J2-design-1 同率复制要求独立于 D 偏强但充分",
+        "J2-reading 未显式指出 B2/B3 行动时间措辞张力"
+      ],
+      "unknown": "B 原始记录真实性、身份和全部历史因果机制"
+    },
+    "expression_and_visible_cost": {
+      "good": "各稿范围与实际完成事项清楚",
+      "bad": [],
+      "equivalent": "设计方案都恰好购买 24 单位真值；未以文长或字段计效果",
+      "unknown": "人员耗时、复制成本、行政组织成本、实际资源开销"
+    }
+  },
+  "drafts": [
+    {
+      "file": "J1-design-0.md",
+      "anonymous_id": "J1",
+      "task": "design",
+      "run": 0,
+      "judgments": {
+        "scientific_correctness": "相当",
+        "decisive_design": "好",
+        "evidence_transfer": "好",
+        "expression": "相当",
+        "actual_total_cost": "未知"
+      },
+      "critical_errors": [],
+      "findings": [
+        {
+          "location": {
+            "file": "J1-design-0.md",
+            "line_start": 18,
+            "line_end": 56
+          },
+          "dimension": "scientific_correctness",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "完整观测表、合法构造与锐界正确",
+          "reason": "独立枚举 T/E/D 得到同一全部单元概率；F 连续严格递增",
+          "impact": "证明原模型下不点识别，没有忽略完整分布"
+        },
+        {
+          "location": {
+            "file": "J1-design-0.md",
+            "line_start": 85,
+            "line_end": 108
+          },
+          "dimension": "decisive_design",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "24 全组1真值与 K/S 联合似然合法",
+          "reason": "平均 q 精确使缺口一维；原 E/D 独立使 K/S 独立",
+          "impact": "保留原总体目标且可做有效有限样本推断"
+        },
+        {
+          "location": {
+            "file": "J1-design-0.md",
+            "line_start": 110,
+            "line_end": 120
+          },
+          "dimension": "decisive_design",
+          "assessment": "未知",
+          "severity": "informational",
+          "finding": "检验数值正确，但决策完成概率未保证",
+          "reason": "K≥6 单侧大小为 .027658；独立补算在 q1=.2 时功效 .344108",
+          "impact": "端点排除力不能替代 Θ>.70 的功效；联合 K/S 程序可能不同",
+          "recommendation": "若需此阈值决策，预先给目标差异与功效并计算所选程序性能"
+        },
+        {
+          "location": {
+            "file": "J1-design-0.md",
+            "line_start": 124,
+            "line_end": 136
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "同率独立复制条件及依赖失败构造正确",
+          "reason": "边际一致率反演不需要 E′ 与 D 独立；E′=E 保持全三报告观测等价",
+          "impact": "不会以操作次数或拟合证明独立性"
+        }
+      ],
+      "truth_allocation": {
+        "g1": 24,
+        "g2": 0
+      },
+      "paid_truth_units": 24
+    },
+    {
+      "file": "J1-design-1.md",
+      "anonymous_id": "J1",
+      "task": "design",
+      "run": 1,
+      "judgments": {
+        "scientific_correctness": "相当",
+        "decisive_design": "相当",
+        "evidence_transfer": "好",
+        "expression": "相当",
+        "actual_total_cost": "未知"
+      },
+      "critical_errors": [],
+      "findings": [
+        {
+          "location": {
+            "file": "J1-design-1.md",
+            "line_start": 30,
+            "line_end": 82
+          },
+          "dimension": "scientific_correctness",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "全约束曲线、非矩形 θ 区间、A 锐界与 B 点值正确",
+          "reason": "两个 θ 区间由同一个 t 联系，端点满足所有分布约束",
+          "impact": "不作非法独立取极值"
+        },
+        {
+          "location": {
+            "file": "J1-design-1.md",
+            "line_start": 88,
+            "line_end": 103
+          },
+          "dimension": "decisive_design",
+          "assessment": "相当",
+          "severity": "none",
+          "finding": "12+12 两 q 区间方法有效",
+          "reason": "两个 97.5% CP 区间联合至少 95%；反推 t 的式子正确；全零案例复现",
+          "impact": "主程序保守且不使用 Y/T 全部信息，实际精度未知"
+        },
+        {
+          "location": {
+            "file": "J1-design-1.md",
+            "line_start": 105,
+            "line_end": 112
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "相当",
+          "severity": "low",
+          "finding": "复制要求全部相互独立比必要条件更强",
+          "reason": "同率边际反演只需 E/E′ 独立与同率",
+          "impact": "可能不必要地排除 E′ 与 D 相关的有效校准机制",
+          "recommendation": "说明 E′ 与 D 独立并非该校准式的必要条件"
+        },
+        {
+          "location": {
+            "file": "J1-design-1.md",
+            "line_start": 118,
+            "line_end": 123
+          },
+          "dimension": "decisive_design",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "兼容、拒绝与空集动作区分正确",
+          "reason": "包含 .1 不能证实 A=B；置信集为空有统计错误概率",
+          "impact": "没有未拒绝即证实或空集即逻辑推翻"
+        }
+      ],
+      "truth_allocation": {
+        "g1": 12,
+        "g2": 12
+      },
+      "paid_truth_units": 24
+    },
+    {
+      "file": "J2-design-0.md",
+      "anonymous_id": "J2",
+      "task": "design",
+      "run": 0,
+      "judgments": {
+        "scientific_correctness": "相当",
+        "decisive_design": "好",
+        "evidence_transfer": "好",
+        "expression": "相当",
+        "actual_total_cost": "未知"
+      },
+      "critical_errors": [],
+      "findings": [
+        {
+          "location": {
+            "file": "J2-design-0.md",
+            "line_start": 29,
+            "line_end": 55
+          },
+          "dimension": "scientific_correctness",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "锐界、θ1>θ2 与协方差恒等式正确",
+          "reason": "目标沿合法一维曲线单调；平均校准遗漏加权 qθ 项",
+          "impact": "解释合并校准捷径为何在 A 无效"
+        },
+        {
+          "location": {
+            "file": "J2-design-0.md",
+            "line_start": 80,
+            "line_end": 100
+          },
+          "dimension": "decisive_design",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "10+14 直接估计与模型辅助区间均有效",
+          "reason": "无偏估计方差正确，通用 SE 上界 .1021204≤.1022；两 q CP 全零无缩界示例复现",
+          "impact": "强调小预算精度未保证，不把直接估计自动当更精确"
+        },
+        {
+          "location": {
+            "file": "J2-design-0.md",
+            "line_start": 106,
+            "line_end": 118
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "分别给同率复制与未知率三报告的充分条件",
+          "reason": "前者不需与 D 独立；后者相关式正确，正复制可靠性比必要的非零条件更强",
+          "impact": "支持不同复制机制，没有将新增假设追认为题设"
+        },
+        {
+          "location": {
+            "file": "J2-design-0.md",
+            "line_start": 122,
+            "line_end": 127
+          },
+          "dimension": "decisive_design",
+          "assessment": "未知",
+          "severity": "none",
+          "finding": "阈值动作边界正确但分配最优性未知",
+          "reason": "Θ≥τ 在 τ≤下界、τ>上界的判断正确；未给损失与精度",
+          "impact": "不能据按权重取整宣称最优，稿件未这样宣称"
+        }
+      ],
+      "truth_allocation": {
+        "g1": 10,
+        "g2": 14
+      },
+      "paid_truth_units": 24
+    },
+    {
+      "file": "J2-design-1.md",
+      "anonymous_id": "J2",
+      "task": "design",
+      "run": 1,
+      "judgments": {
+        "scientific_correctness": "相当",
+        "decisive_design": "相当",
+        "evidence_transfer": "好",
+        "expression": "相当",
+        "actual_total_cost": "未知"
+      },
+      "critical_errors": [],
+      "findings": [
+        {
+          "location": {
+            "file": "J2-design-1.md",
+            "line_start": 16,
+            "line_end": 65
+          },
+          "dimension": "scientific_correctness",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "完整观测分布、导数展开、锐界与 B 唯一值正确",
+          "reason": "F′ 的多项式形式与独立推导一致",
+          "impact": "原模型得到保留"
+        },
+        {
+          "location": {
+            "file": "J2-design-1.md",
+            "line_start": 72,
+            "line_end": 99
+          },
+          "dimension": "decisive_design",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "10+14 四计数联合集合有效",
+          "reason": "四个区间各错误预算 α/4，Bonferroni 保证联合覆盖；与原曲线相交",
+          "impact": "Y/T 进入推断，但区间不保证比两计数法总更窄"
+        },
+        {
+          "location": {
+            "file": "J2-design-1.md",
+            "line_start": 108,
+            "line_end": 118
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "相当",
+          "severity": "low",
+          "finding": "同率复制全相互独立条件充分但不最小",
+          "reason": "E′ 与 D 独立并非边际复制一致率反演必要条件",
+          "impact": "假设负担可减少，未导致假识别",
+          "recommendation": "补充可不要求 E′ 与 D 独立的较弱充分条件"
+        },
+        {
+          "location": {
+            "file": "J2-design-1.md",
+            "line_start": 85,
+            "line_end": 102
+          },
+          "dimension": "decisive_design",
+          "assessment": "未知",
+          "severity": "none",
+          "finding": "有限样本结果分支正确但 24 次性能未量化",
+          "reason": "阈值、空集及 B 核查用途都清楚；没有实际用途精度要求",
+          "impact": "可执行推断，不能保证完成决策"
+        }
+      ],
+      "truth_allocation": {
+        "g1": 10,
+        "g2": 14
+      },
+      "paid_truth_units": 24
+    },
+    {
+      "file": "J3-design-0.md",
+      "anonymous_id": "J3",
+      "task": "design",
+      "run": 0,
+      "judgments": {
+        "scientific_correctness": "相当",
+        "decisive_design": "好",
+        "evidence_transfer": "好",
+        "expression": "相当",
+        "actual_total_cost": "未知"
+      },
+      "critical_errors": [],
+      "findings": [
+        {
+          "location": {
+            "file": "J3-design-0.md",
+            "line_start": 42,
+            "line_end": 99
+          },
+          "dimension": "scientific_correctness",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "合法全曲线、三个参数点、锐界和协方差解释正确",
+          "reason": "独立生成模型逐单元复现，导数恒正",
+          "impact": "0.70 是 A 的可行点而非唯一点"
+        },
+        {
+          "location": {
+            "file": "J3-design-0.md",
+            "line_start": 103,
+            "line_end": 138
+          },
+          "dimension": "decisive_design",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "24 全组1、两计数 CP 程序及三个具体结果正确",
+          "reason": "97.5% 区间各自覆盖，联合至少 95%；(0,20)、(7,20)、(13,20) 数值独立复现",
+          "impact": "给出具体收缩、排除 .70 与空集核查动作"
+        },
+        {
+          "location": {
+            "file": "J3-design-0.md",
+            "line_start": 105,
+            "line_end": 107
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "单组充分性明确依赖精确平均 q",
+          "reason": "q1 总体值通过已知平均校准确定 q2；有限真值仍不能精确知道 q1",
+          "impact": "实际平均校准不成立时不得照搬单组充分性"
+        },
+        {
+          "location": {
+            "file": "J3-design-0.md",
+            "line_start": 144,
+            "line_end": 162
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "同率及未知率复制公式正确",
+          "reason": "未知 r 三报告需 r≠1/2，原可靠性正使根与分母可识别",
+          "impact": "无需将有限样本拟合当独立性证明"
+        }
+      ],
+      "truth_allocation": {
+        "g1": 24,
+        "g2": 0
+      },
+      "paid_truth_units": 24
+    },
+    {
+      "file": "J3-design-1.md",
+      "anonymous_id": "J3",
+      "task": "design",
+      "run": 1,
+      "judgments": {
+        "scientific_correctness": "相当",
+        "decisive_design": "相当",
+        "evidence_transfer": "好",
+        "expression": "相当",
+        "actual_total_cost": "未知"
+      },
+      "critical_errors": [],
+      "findings": [
+        {
+          "location": {
+            "file": "J3-design-1.md",
+            "line_start": 36,
+            "line_end": 82
+          },
+          "dimension": "scientific_correctness",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "F、导数下界与 B 为 A 子点关系正确",
+          "reason": "不同代数形式与基准相等且严格单调",
+          "impact": "A 可小于、等于、大于 .70 的判断有构造依据"
+        },
+        {
+          "location": {
+            "file": "J3-design-1.md",
+            "line_start": 96,
+            "line_end": 121
+          },
+          "dimension": "decisive_design",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "10+14 四计数方案正确",
+          "reason": "各 98.75% 区间联合至少 95%；θ1 反推 q1 在 θ1≥.75 分母非零",
+          "impact": "两组抽样是直接估计与核查选择，不是识别必要条件"
+        },
+        {
+          "location": {
+            "file": "J3-design-1.md",
+            "line_start": 123,
+            "line_end": 129
+          },
+          "dimension": "decisive_design",
+          "assessment": "未知",
+          "severity": "none",
+          "finding": "动作规则有效但精度与最优分配未知",
+          "reason": "给达标、未达标、空集及 B 分支，没有实际阈值和数据",
+          "impact": "可实施，不能承诺 24 次达标"
+        },
+        {
+          "location": {
+            "file": "J3-design-1.md",
+            "line_start": 135,
+            "line_end": 144
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "复制使用最小边际校准条件",
+          "reason": "E′ 与 E 给定 g 独立且同率即可，不额外需与 D 独立",
+          "impact": "保留新增假设与有限核查的边界"
+        }
+      ],
+      "truth_allocation": {
+        "g1": 10,
+        "g2": 14
+      },
+      "paid_truth_units": 24
+    },
+    {
+      "file": "J1-reading.md",
+      "anonymous_id": "J1",
+      "task": "reading",
+      "run": null,
+      "judgments": {
+        "scientific_correctness": "相当",
+        "decisive_design": "好",
+        "evidence_transfer": "好",
+        "expression": "相当",
+        "actual_total_cost": "未知"
+      },
+      "critical_errors": [],
+      "findings": [
+        {
+          "location": {
+            "file": "J1-reading.md",
+            "line_start": 13,
+            "line_end": 23
+          },
+          "dimension": "scientific_correctness",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "A 的理论与资源贡献、定义缺口和图1范围定位准确",
+          "reason": "分别依据 A1/A2/A3/A4/A5；标识唯一不自动推出标签唯一",
+          "impact": "理解贡献但不把摘要当完整证明或实测性能"
+        },
+        {
+          "location": {
+            "file": "J1-reading.md",
+            "line_start": 27,
+            "line_end": 37
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "来源共依赖与 B 内部时间措辞均明确核对",
+          "reason": "B2 两转录共源；B2 行动前与 B3 行动已启动需澄清；B6 原图未取得",
+          "impact": "不虚构事件阶段、日期或独立样本"
+        },
+        {
+          "location": {
+            "file": "J1-reading.md",
+            "line_start": 41,
+            "line_end": 65
+          },
+          "dimension": "decisive_design",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "反例对齐和研究目标分支有可执行下一动作",
+          "reason": "同操作、同模型条件、同见证才是真正反例；图不变量不自动保证因果",
+          "impact": "迁移有前提且补材料对准待检命题"
+        },
+        {
+          "location": {
+            "file": "J1-reading.md",
+            "line_start": 67,
+            "line_end": 67
+          },
+          "dimension": "actual_total_cost",
+          "assessment": "未知",
+          "severity": "none",
+          "finding": "成本和工期未能估算",
+          "reason": "输入缺实施细节和真实材料规模",
+          "impact": "不能作实际运行成本排名"
+        }
+      ]
+    },
+    {
+      "file": "J2-reading.md",
+      "anonymous_id": "J2",
+      "task": "reading",
+      "run": null,
+      "judgments": {
+        "scientific_correctness": "相当",
+        "decisive_design": "好",
+        "evidence_transfer": "相当",
+        "expression": "相当",
+        "actual_total_cost": "未知"
+      },
+      "critical_errors": [],
+      "findings": [
+        {
+          "location": {
+            "file": "J2-reading.md",
+            "line_start": 11,
+            "line_end": 21
+          },
+          "dimension": "scientific_correctness",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "A 的资源贡献和 A2/A3 条件缺口准确",
+          "reason": "没有把 1/8 扩成任意图保证，图1只按文字解释",
+          "impact": "与其余精读在 A 的主判断相当"
+        },
+        {
+          "location": {
+            "file": "J2-reading.md",
+            "line_start": 28,
+            "line_end": 35
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "相当",
+          "severity": "none",
+          "finding": "来源线与已核验独立来源区分正确，图2取得范围准确",
+          "reason": "共源转录不是三份独立证据，B6 原图缺失",
+          "impact": "未虚构来源独立性、日期或视觉观察"
+        },
+        {
+          "location": {
+            "file": "J2-reading.md",
+            "line_start": 28,
+            "line_end": 33
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "相当",
+          "severity": "low",
+          "finding": "B2/B3 内部时间措辞张力未显式指出",
+          "reason": "行动发生前与行动已启动的参照阶段不清；31 行虽保留阶段未知，未直指此内部问题",
+          "impact": "摘要少一层文本一致性核对，但未推出零因果或捏造日期",
+          "recommendation": "明确提出 B2/B3 两处行动阶段和参照时间需澄清"
+        },
+        {
+          "location": {
+            "file": "J2-reading.md",
+            "line_start": 47,
+            "line_end": 61
+          },
+          "dimension": "decisive_design",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "同域反例、来源簇敏感性与资源计量的下一动作明确",
+          "reason": "迁移先对齐模型与见证；删除重复转录、分别验证忠实性与开销对准具体缺口",
+          "impact": "没有因文章类型贬低 A 或以先后即因果"
+        }
+      ]
+    },
+    {
+      "file": "J3-reading.md",
+      "anonymous_id": "J3",
+      "task": "reading",
+      "run": null,
+      "judgments": {
+        "scientific_correctness": "相当",
+        "decisive_design": "好",
+        "evidence_transfer": "好",
+        "expression": "相当",
+        "actual_total_cost": "未知"
+      },
+      "critical_errors": [],
+      "findings": [
+        {
+          "location": {
+            "file": "J3-reading.md",
+            "line_start": 11,
+            "line_end": 17
+          },
+          "dimension": "scientific_correctness",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "A 的贡献、条件、证明概要与性能范围准确",
+          "reason": "明确核对唯一标识/唯一标签及单调是否允许相等",
+          "impact": "不补定理假设也不直接判定定理错误"
+        },
+        {
+          "location": {
+            "file": "J3-reading.md",
+            "line_start": 23,
+            "line_end": 29
+          },
+          "dimension": "evidence_transfer",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "共源、同名、回忆时间与观念时间及内部措辞差异处理正确",
+          "reason": "依据 B2/B3/B4/B5/B6；图2只有说明",
+          "impact": "历史因果和图像判断限于实际取得材料"
+        },
+        {
+          "location": {
+            "file": "J3-reading.md",
+            "line_start": 35,
+            "line_end": 53
+          },
+          "dimension": "decisive_design",
+          "assessment": "好",
+          "severity": "none",
+          "finding": "同模型反例链、条件内验证和条件外测试清楚",
+          "reason": "同目标编码、合法输入、同操作与证据保留都是迁移前提",
+          "impact": "A 不自动担保 B，B 不直接推翻 A；补材料对应命题"
+        }
+      ]
+    }
+  ],
+  "within_id_differences": [
+    {
+      "anonymous_id": "J1",
+      "design_0": "24 全组1；K/S 联合似然与具体 K 单侧行动，复制不需独立于 D",
+      "design_1": "12+12；主程序两 q CP、未利用 Y/T 全部信息；复制条件更强",
+      "implication": "两次独立输出不可合并；具体数值优势只属于 design-0，分配全局最优性未知"
+    },
+    {
+      "anonymous_id": "J2",
+      "design_0": "10+14；两 q CP、直接目标方差、未知复制率三报告路线",
+      "design_1": "10+14；四个 q/θ 计数联合集合、同率复制条件更强",
+      "implication": "用更多类型计数不保证 CP 区间总更窄；不能把直接 SE 界当全受约束程序精度"
+    },
+    {
+      "anonymous_id": "J3",
+      "design_0": "24 全组1；q/θ1 两计数 CP、三个具体数值结果、未知率三报告路线",
+      "design_1": "10+14；四计数方案、强调分层为直接估计核查选择、最小同率复制条件",
+      "implication": "单组依赖精确平均校准；两组覆盖不等于识别必要条件，不预设统一胜者"
+    }
+  ],
+  "unknowns": [
+    "真实实验与样本结果",
+    "指定目标下的最优真值分配",
+    "完整联合程序在实际阈值下的功效",
+    "A 完整证明与存储计量",
+    "B 原始图像与转录",
+    "第三份记录作者身份",
+    "全部历史竞争解释",
+    "真实执行工时与总成本"
+  ],
+  "next_action": "先给实际 Θ 阈值/精度和所选有限样本程序，再计算 24 次性能；精读先补定义、时间与来源缺口。无需追加同型无真值记录来解决 A 的识别缺口。",
+  "artifacts": {
+    "review": "review.md",
+    "findings": "findings.json",
+    "stdlib_check": "verify_review.py",
+    "check_status": "passed"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "simple-edit",
+  "condition": "comparison",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "unseen_material",
+  "skill_snapshot": {
+    "root": "LOCAL_EVIDENCE_ROOT/suite/snapshots/comparison/manuscript-writing",
+    "manifest": "LOCAL_EVIDENCE_ROOT/suite/identities/comparison.manuscript-writing.json",
+    "manifest_sha256": "d375b7f567c6cdca2856813a31904d1efc6e2dd113ce27781673f04f9a9f08e4"
+  },
+  "user_prompt": "只改好下面一段表达，保留数字与推断含义，保存 answer.md。",
+  "material": "合成开发材料：在48个独立单位中，关联估计为0.18，95%置信区间−0.02到0.38。原句：我们或许可能在非常有限的条件下有点观察到了一个可能的关系，但目前不太清楚。",
+  "material_files": [],
+  "skill_entry": "LOCAL_EVIDENCE_ROOT/suite/snapshots/comparison/manuscript-writing/SKILL.md",
+  "skill_entry_sha256": "b28256342c0d611818178a3582196af331469aaf034aa1d9ce5768d459a67e73",
+  "initial_skill_text": "---\nname: manuscript-writing\ndescription: \"当需要起草、整合或改写学术稿件时使用；完整稿按证据组织全文并终审，单段或摘要请求只处理指定范围。\"\nmetadata:\n  version: \"3.2.0-rc.1\"\n---\n\n# 证据与贡献驱动的完整论文写作\n\n完整稿任务从真实研究形成完整可编辑论文；用库内适合写作实现完成适用章节。最终调用指定anti-defensive-writing整理贡献与表达，再核对事实，不能以单摘要替代全文或包装低价值结果。仅摘要或局部改稿请求直接完成相应范围。\n\n由当前Agent及其现有模型执行，原生子代理按需使用；不寻找本地大模型或其他宿主联动。外部专业Skill从用户指定13仓库的本地安装/当前GitHub版本选择；方法和原创代码可自主探索。缺依赖按本任务准备并验证后运行。方法与实现可自主选择、改造或新写代码；正式结论依据实际证据。\n\n专业细节按需查 [原专业参考](references/protocol.md)。完整稿最终表达时读 [指定写作终审](references/final-expression.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。\n\n交付实际成果及关键证据、采用的Skill与完成范围。局部任务直接做；完整研究保留科学目标与下一步，不让自检通过、导出函数或普通小题替代用户的研究目标。\n\n脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。\n",
+  "adapter_contract": "Supply the prompt/material and the condition entry only; expose equal tools and permissions. Record additional resource reads and tool calls if the host can. Do not pass other-arm answers."
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "cross-reading",
+  "condition": "comparison",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "unseen_material",
+  "skill_snapshot": {
+    "root": "LOCAL_EVIDENCE_ROOT/suite/snapshots/comparison/paper-deep-reading",
+    "manifest": "LOCAL_EVIDENCE_ROOT/suite/identities/comparison.paper-deep-reading.json",
+    "manifest_sha256": "843b85e41b9dc702609af6202b4eab7ed646b549bf131d41145d7f5d3ecc5532"
+  },
+  "user_prompt": "完成两份材料的精读和跨资料判断，保存 answer.md 和简短 operation.md。",
+  "material": "\n\n## fixtures/rc2/reading.md\n# 两份合成原始资料：精读与跨资料判断\n仅供通用Skill开发；作者、刊物、资料编号均为虚构，不是真实文献。\n\n## 原始资料A：《一种保留边界见证的记录压缩方法》\nA1 摘要：资源紧张会使边界错误难以发现。本文把记录压缩至原存储量的1/8，\n在下述模型内保留全部边界见证。贡献是使既有边界检查在存储约束下仍可执行。\nA2 方法：对象为有限有向无环图；每个节点有唯一的不可变标识。边集合完整，\n节点的时间标签按拓扑序单调。见证定义为沿有向路径满足规定标签转换的节点对。\nA3 定理：存储指定前沿节点及其可达关系，重建后见证集合与原图相同。\n证明通过拓扑序归纳：前沿之间的连接编码保留每一步可达性；\n标签唯一且单调保证归纳步不把两个具有不同转换状态的节点合并。\nA4 图1（文字图示）：左图画完整有向无环图；中图保留前沿节点；\n右图对照原/重建的见证对，两列逐一对应。它示范构造，不是实测性能验证。\nA5 范围：重复标识或标签逆序可使重建失真；没有测试这两种情况，也没有实测运行时间。\n\n## 原始资料B：《顺序扰动下的边界证据丢失》\nB1 摘要：一种同样称为“前沿压缩”的策略不能保留某些证据。\nB2 材料：汇集三份历史过程记载；两份转录自同一份后期回忆，\n第三份是行动发生前的原始记录。其标识是作者在不同文本中使用的名称，并不保证唯一。\nB3 分析：文中的“见证”指文本中的解释性陈述。后期回忆声称某观念促成行动；\n行动前的记录显示行动已启动。三个文本都出现相同观念名称。\nB4 结果：以文本出现顺序压缩后，行动前的记录被合并到后期回忆，\n产生了不符合原始时间关系的解释。作者不声称已经证明观念没有作用。\nB5 图2说明：时间轴将原始记录时间与叙述形成时间分开，并标明两份回忆的共同来源。\nB6 未获得：原始图像、完整转录、第三份记录的作者身份核验和全文附录。\n\n用户目标：精读已提供部分，判断两份材料是否真的给出相反结论，以及它们能怎样改变\n下一步研究设计。需要可定位证据和迁移条件，不要以文章类型或资源贡献贬低A，\n不要补造B的图像/全文/样本，也不要强行生成数据集或整篇论文。\n",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills/evaluations/fixtures/rc2/reading.md",
+      "sha256": "2d0022632422e004d88cd3dc358e0058337a5a4558fd44904c6ec8d8857e5e7e"
+    }
+  ],
+  "skill_entry": "LOCAL_EVIDENCE_ROOT/suite/snapshots/comparison/paper-deep-reading/SKILL.md",
+  "skill_entry_sha256": "20ee390e7163d81441c701751114f0a35b41a289ea527e9c8726479aa0ba89ef",
+  "initial_skill_text": "---\nname: paper-deep-reading\ndescription: \"当给定论文、摘要或图表需要精读、解释方法和证据时使用；按已取得原文定位，摘要任务不补造全文细节。\"\nmetadata:\n  version: \"3.2.0-rc.1\"\n---\n\n# 顶刊问题、模型和图表精读\n\n用库内适合阅读实现，实际拆解问题、理论/模型、数据、验证和关键图表；提炼论文值得发表的原因、迁移前提与未解决问题。\n\n由当前Agent及其现有模型执行，原生子代理按需使用；不寻找本地大模型或其他宿主联动。外部专业Skill从用户指定13仓库的本地安装/当前GitHub版本选择；方法和原创代码可自主探索。缺依赖按本任务准备并验证后运行。方法与实现可自主选择、改造或新写代码；正式结论依据实际证据。\n\n专业细节按需查 [原专业参考](references/protocol.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。\n\n交付实际成果及关键证据、采用的Skill与完成范围。局部任务直接做；完整研究保留科学目标与下一步，不让自检通过、导出函数或普通小题替代用户的研究目标。\n\n脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。\n",
+  "adapter_contract": "Supply the prompt/material and the condition entry only; expose equal tools and permissions. Record additional resource reads and tool calls if the host can. Do not pass other-arm answers."
+}

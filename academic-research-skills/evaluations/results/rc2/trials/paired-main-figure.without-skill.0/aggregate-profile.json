@@ -1,0 +1,689 @@
+{
+  "source": "LOCAL_EVIDENCE_ROOT/trials/paired-main-figure.without-skill.0/figure-results.csv",
+  "n_rows": 6,
+  "n_cols": 13,
+  "columns": {
+    "condition": {
+      "type": "unknown",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "group": {
+      "type": "unknown",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "n_clusters": {
+      "type": "ordinal",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "n_unique": 6,
+      "categories": [
+        [
+          "16",
+          1
+        ],
+        [
+          "4",
+          1
+        ],
+        [
+          "10",
+          1
+        ],
+        [
+          "6",
+          1
+        ],
+        [
+          "15",
+          1
+        ],
+        [
+          "9",
+          1
+        ]
+      ],
+      "min_group_n": 1,
+      "max_group_n": 1,
+      "small_groups_flag": true
+    },
+    "target_weight": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": 0.3333333333333333,
+      "median": 0.3,
+      "sd": 0.13662601021279466,
+      "min": 0.2,
+      "max": 0.5,
+      "skewness": 0.2904464502823017,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.11250000000000002,
+      "outlier_hi": 0.7875000000000001,
+      "needs_log_axis": false
+    },
+    "loss_A": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": 6.8,
+      "median": 6.5,
+      "sd": 2.349468024894146,
+      "min": 4.0,
+      "max": 10.0,
+      "skewness": 0.16655019080062483,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -8.881784197001252e-16,
+      "outlier_hi": 13.600000000000001,
+      "needs_log_axis": false
+    },
+    "loss_B": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": 6.933333333333333,
+      "median": 7.5,
+      "sd": 1.840289832245635,
+      "min": 4.4,
+      "max": 8.8,
+      "skewness": -0.33725525631756675,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": 1.299999999999999,
+      "outlier_hi": 12.500000000000002,
+      "needs_log_axis": false
+    },
+    "A_low": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": 5.133333333333334,
+      "median": 4.5,
+      "sd": 1.9663841605003498,
+      "min": 3.0,
+      "max": 8.0,
+      "skewness": 0.36221840610088646,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.1250000000000009,
+      "outlier_hi": 10.475000000000001,
+      "needs_log_axis": false
+    },
+    "A_high": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": 8.466666666666667,
+      "median": 8.5,
+      "sd": 2.776088375154268,
+      "min": 5.0,
+      "max": 12.0,
+      "skewness": -0.001592664136079484,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": 0.12499999999999911,
+      "outlier_hi": 16.725,
+      "needs_log_axis": false
+    },
+    "B_low": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": 5.266666666666667,
+      "median": 5.5,
+      "sd": 1.3662601021279464,
+      "min": 3.4,
+      "max": 6.8,
+      "skewness": -0.20261544371693355,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": 1.174999999999999,
+      "outlier_hi": 9.375000000000002,
+      "needs_log_axis": false
+    },
+    "B_high": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": 8.6,
+      "median": 9.5,
+      "sd": 2.33238075793812,
+      "min": 5.4,
+      "max": 10.8,
+      "skewness": -0.4079396492176583,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": 1.424999999999999,
+      "outlier_hi": 15.625000000000002,
+      "needs_log_axis": false
+    },
+    "difference_A_minus_B": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": -0.13333333333333333,
+      "median": -0.30000000000000004,
+      "sd": 1.318585100274786,
+      "min": -1.8,
+      "max": 2.0,
+      "skewness": 0.3492103247031382,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -2.725,
+      "outlier_hi": 2.275,
+      "needs_log_axis": false
+    },
+    "diff_low": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": -0.75,
+      "median": -0.6499999999999999,
+      "sd": 1.2629330940315089,
+      "min": -2.5,
+      "max": 1.0,
+      "skewness": -0.04467879775663992,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -3.6999999999999997,
+      "outlier_hi": 2.0999999999999996,
+      "needs_log_axis": false
+    },
+    "diff_high": {
+      "type": "continuous",
+      "n_total": 6,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 6,
+      "mean": 0.48333333333333334,
+      "median": 0.05,
+      "sd": 1.4218532507494106,
+      "min": -1.1,
+      "max": 3.0,
+      "skewness": 0.6763141639460627,
+      "skew_label": "moderately skewed",
+      "n_outliers_iqr": 1,
+      "outlier_lo": -1.7500000000000002,
+      "outlier_hi": 2.45,
+      "needs_log_axis": false
+    }
+  },
+  "correlation": {
+    "columns": [
+      "target_weight",
+      "loss_A",
+      "loss_B",
+      "A_low",
+      "A_high",
+      "B_low",
+      "B_high",
+      "difference_A_minus_B",
+      "diff_low",
+      "diff_high"
+    ],
+    "matrix": {
+      "target_weight": {
+        "target_weight": 1.0,
+        "loss_A": 0.336,
+        "loss_B": 0.345,
+        "A_low": 0.352,
+        "A_high": 0.32,
+        "B_low": 0.393,
+        "B_high": 0.314,
+        "difference_A_minus_B": 0.118,
+        "diff_low": 0.023,
+        "diff_high": 0.199
+      },
+      "loss_A": {
+        "target_weight": 0.336,
+        "loss_A": 1.0,
+        "loss_B": 0.829,
+        "A_low": 0.987,
+        "A_high": 0.994,
+        "B_low": 0.817,
+        "B_high": 0.829,
+        "difference_A_minus_B": 0.625,
+        "diff_low": 0.507,
+        "diff_high": 0.709
+      },
+      "loss_B": {
+        "target_weight": 0.345,
+        "loss_A": 0.829,
+        "loss_B": 1.0,
+        "A_low": 0.744,
+        "A_high": 0.876,
+        "B_low": 0.992,
+        "B_high": 0.997,
+        "difference_A_minus_B": 0.081,
+        "diff_low": -0.055,
+        "diff_high": 0.2
+      },
+      "A_low": {
+        "target_weight": 0.352,
+        "loss_A": 0.987,
+        "loss_B": 0.744,
+        "A_low": 1.0,
+        "A_high": 0.962,
+        "B_low": 0.743,
+        "B_high": 0.738,
+        "difference_A_minus_B": 0.721,
+        "diff_low": 0.622,
+        "diff_high": 0.785
+      },
+      "A_high": {
+        "target_weight": 0.32,
+        "loss_A": 0.994,
+        "loss_B": 0.876,
+        "A_low": 0.962,
+        "A_high": 1.0,
+        "B_low": 0.857,
+        "B_high": 0.881,
+        "difference_A_minus_B": 0.547,
+        "diff_low": 0.418,
+        "diff_high": 0.644
+      },
+      "B_low": {
+        "target_weight": 0.393,
+        "loss_A": 0.817,
+        "loss_B": 0.992,
+        "A_low": 0.743,
+        "A_high": 0.857,
+        "B_low": 1.0,
+        "B_high": 0.979,
+        "difference_A_minus_B": 0.073,
+        "diff_low": -0.051,
+        "diff_high": 0.18
+      },
+      "B_high": {
+        "target_weight": 0.314,
+        "loss_A": 0.829,
+        "loss_B": 0.997,
+        "A_low": 0.738,
+        "A_high": 0.881,
+        "B_low": 0.979,
+        "B_high": 1.0,
+        "difference_A_minus_B": 0.086,
+        "diff_low": -0.057,
+        "diff_high": 0.21
+      },
+      "difference_A_minus_B": {
+        "target_weight": 0.118,
+        "loss_A": 0.625,
+        "loss_B": 0.081,
+        "A_low": 0.721,
+        "A_high": 0.547,
+        "B_low": 0.073,
+        "B_high": 0.086,
+        "difference_A_minus_B": 1.0,
+        "diff_low": 0.98,
+        "diff_high": 0.984
+      },
+      "diff_low": {
+        "target_weight": 0.023,
+        "loss_A": 0.507,
+        "loss_B": -0.055,
+        "A_low": 0.622,
+        "A_high": 0.418,
+        "B_low": -0.051,
+        "B_high": -0.057,
+        "difference_A_minus_B": 0.98,
+        "diff_low": 1.0,
+        "diff_high": 0.929
+      },
+      "diff_high": {
+        "target_weight": 0.199,
+        "loss_A": 0.709,
+        "loss_B": 0.2,
+        "A_low": 0.785,
+        "A_high": 0.644,
+        "B_low": 0.18,
+        "B_high": 0.21,
+        "difference_A_minus_B": 0.984,
+        "diff_low": 0.929,
+        "diff_high": 1.0
+      }
+    },
+    "pairs_sorted": [
+      {
+        "a": "loss_B",
+        "b": "B_high",
+        "r": 0.9971444871733178,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss_A",
+        "b": "A_high",
+        "r": 0.9935098552131209,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss_B",
+        "b": "B_low",
+        "r": 0.9916552840955827,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss_A",
+        "b": "A_low",
+        "r": 0.9870222355920982,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "difference_A_minus_B",
+        "b": "diff_high",
+        "r": 0.9842646496500733,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "difference_A_minus_B",
+        "b": "diff_low",
+        "r": 0.9800125712882819,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "B_low",
+        "b": "B_high",
+        "r": 0.9790880682441961,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "A_low",
+        "b": "A_high",
+        "r": 0.9623505606580455,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "diff_low",
+        "b": "diff_high",
+        "r": 0.9294396974071543,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "A_high",
+        "b": "B_high",
+        "r": 0.880940911687033,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss_B",
+        "b": "A_high",
+        "r": 0.8763950466527384,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "A_high",
+        "b": "B_low",
+        "r": 0.8570492204580151,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss_A",
+        "b": "B_high",
+        "r": 0.8292191707127727,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss_A",
+        "b": "loss_B",
+        "r": 0.8289192693404317,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss_A",
+        "b": "B_low",
+        "r": 0.8174494494979321,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "A_low",
+        "b": "diff_high",
+        "r": 0.7849562016133514,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss_B",
+        "b": "A_low",
+        "r": 0.7435416564993311,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "A_low",
+        "b": "B_low",
+        "r": 0.7434449171442268,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "A_low",
+        "b": "B_high",
+        "r": 0.737840580416619,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "A_low",
+        "b": "difference_A_minus_B",
+        "r": 0.7209584211730189,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss_A",
+        "b": "diff_high",
+        "r": 0.7088549622734516,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "A_high",
+        "b": "diff_high",
+        "r": 0.6438334999546637,
+        "magnitude": "strong"
+      },
+      {
+        "a": "loss_A",
+        "b": "difference_A_minus_B",
+        "r": 0.6249246420293603,
+        "magnitude": "strong"
+      },
+      {
+        "a": "A_low",
+        "b": "diff_low",
+        "r": 0.6217253636820991,
+        "magnitude": "strong"
+      },
+      {
+        "a": "A_high",
+        "b": "difference_A_minus_B",
+        "r": 0.5471006336296624,
+        "magnitude": "strong"
+      },
+      {
+        "a": "loss_A",
+        "b": "diff_low",
+        "r": 0.5068715945095092,
+        "magnitude": "strong"
+      },
+      {
+        "a": "A_high",
+        "b": "diff_low",
+        "r": 0.4175682269712288,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "target_weight",
+        "b": "B_low",
+        "r": 0.39285714285714274,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "target_weight",
+        "b": "A_low",
+        "r": 0.35236708355968016,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "target_weight",
+        "b": "loss_B",
+        "r": 0.3446930131883042,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "target_weight",
+        "b": "loss_A",
+        "r": 0.336450230738478,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "target_weight",
+        "b": "A_high",
+        "r": 0.31989942191008763,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "target_weight",
+        "b": "B_high",
+        "r": 0.3138102782833962,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "B_high",
+        "b": "diff_high",
+        "r": 0.209872248061243,
+        "magnitude": "weak"
+      },
+      {
+        "a": "loss_B",
+        "b": "diff_high",
+        "r": 0.19974862652188308,
+        "magnitude": "weak"
+      },
+      {
+        "a": "target_weight",
+        "b": "diff_high",
+        "r": 0.1990437627834721,
+        "magnitude": "weak"
+      },
+      {
+        "a": "B_low",
+        "b": "diff_high",
+        "r": 0.17982574430782672,
+        "magnitude": "weak"
+      },
+      {
+        "a": "target_weight",
+        "b": "difference_A_minus_B",
+        "r": 0.11841784928346731,
+        "magnitude": "weak"
+      },
+      {
+        "a": "B_high",
+        "b": "difference_A_minus_B",
+        "r": 0.0858413053283157,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "loss_B",
+        "b": "difference_A_minus_B",
+        "r": 0.08132162745201824,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "B_low",
+        "b": "difference_A_minus_B",
+        "r": 0.07253093268612386,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "B_high",
+        "b": "diff_low",
+        "r": -0.057033429641092925,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "loss_B",
+        "b": "diff_low",
+        "r": -0.05507359155043075,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "B_low",
+        "b": "diff_low",
+        "r": -0.05099985511425365,
+        "magnitude": "negligible"
+      },
+      {
+        "a": "target_weight",
+        "b": "diff_low",
+        "r": 0.023181752324660854,
+        "magnitude": "negligible"
+      }
+    ]
+  },
+  "group_summary": {
+    "by": [
+      "condition",
+      "group"
+    ],
+    "n_groups": 6,
+    "min_n_per_group": 1,
+    "max_n_per_group": 1,
+    "median_n_per_group": 1,
+    "small_groups_flag": true,
+    "tiny_groups_flag": true,
+    "per_group_counts": [
+      [
+        "('C1', 'G1')",
+        1
+      ],
+      [
+        "('C1', 'G2')",
+        1
+      ],
+      [
+        "('C1', 'G3')",
+        1
+      ],
+      [
+        "('C2', 'G1')",
+        1
+      ],
+      [
+        "('C2', 'G2')",
+        1
+      ],
+      [
+        "('C2', 'G3')",
+        1
+      ]
+    ]
+  },
+  "warnings": [
+    "列 'n_clusters' 至少有一个类别 n<10 — 小样本必须展示原始数据点，不要只画均值柱状图。"
+  ],
+  "suggestions": [
+    "分类 vs 连续，小样本（每组 n<10）→ **箱线图/小提琴图 + stripplot 叠加原始点**；**避免**只画均值柱状图，会掩盖分布。",
+    "≥3 个连续变量 → 相关性热力图（['target_weight', 'loss_A', 'loss_B', 'A_low', 'A_high']）或 pairplot 散点矩阵"
+  ]
+}

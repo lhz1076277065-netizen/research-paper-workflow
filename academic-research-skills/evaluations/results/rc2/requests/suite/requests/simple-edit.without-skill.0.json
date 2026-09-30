@@ -1,0 +1,15 @@
+{
+  "case_id": "simple-edit",
+  "condition": "without-skill",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "unseen_material",
+  "skill_snapshot": null,
+  "user_prompt": "只改好下面一段表达，保留数字与推断含义，保存 answer.md。",
+  "material": "合成开发材料：在48个独立单位中，关联估计为0.18，95%置信区间−0.02到0.38。原句：我们或许可能在非常有限的条件下有点观察到了一个可能的关系，但目前不太清楚。",
+  "material_files": [],
+  "skill_entry": null,
+  "skill_entry_sha256": null,
+  "initial_skill_text": "",
+  "adapter_contract": "Supply the prompt/material and the condition entry only; expose equal tools and permissions. Record additional resource reads and tool calls if the host can. Do not pass other-arm answers."
+}

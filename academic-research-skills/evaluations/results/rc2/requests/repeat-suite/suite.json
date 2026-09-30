@@ -1,0 +1,25 @@
+{
+  "schema": "host-evaluation-2",
+  "evaluation_kind": "same_version_repeat",
+  "status": "prepared_not_run",
+  "jobs": [
+    {
+      "id": "constrained-design.release.1",
+      "request": "LOCAL_EVIDENCE_ROOT/repeat-suite/requests/constrained-design.release.1.json",
+      "request_sha256": "e310c784758c605a955841355a5ccf4fd604e7568c639e413f2aeeb23b778134",
+      "shares_exact_snapshot_with": "constrained-design.release.0"
+    },
+    {
+      "id": "constrained-design.without-skill.1",
+      "request": "LOCAL_EVIDENCE_ROOT/repeat-suite/requests/constrained-design.without-skill.1.json",
+      "request_sha256": "039b494bd129144d4ea570bf079ccc01916e5f9ba7d961c9793433ddb5738baa",
+      "shares_exact_snapshot_with": "constrained-design.without-skill.0"
+    },
+    {
+      "id": "constrained-design.comparison.1",
+      "request": "LOCAL_EVIDENCE_ROOT/repeat-suite/requests/constrained-design.comparison.1.json",
+      "request_sha256": "6bffed2e715293c32792185efe1cc4bbb46e3b2a87f2ac4e3fa447b43252d9a9",
+      "shares_exact_snapshot_with": "constrained-design.comparison.0"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "source": "current parent rollout tool-call and turn-context metadata only",
+  "configured_models_in_session": [
+    "gpt-6.1-sol"
+  ],
+  "spawns": {
+    "rc2_trial01": {
+      "timestamp": "2026-09-30T10:41:08.929Z",
+      "call_id": "call_iCZlh9LZ09y9wGK7GACOgGuJ",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial02": {
+      "timestamp": "2026-09-30T10:41:29.127Z",
+      "call_id": "call_S7LW3rYLmOkx1Bf6h50oauHM",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial03": {
+      "timestamp": "2026-09-30T10:41:48.479Z",
+      "call_id": "call_6RSfIlRWRiU8WOOVRUZK4ZNH",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial04": {
+      "timestamp": "2026-09-30T10:43:32.754Z",
+      "call_id": "call_Efztujg4D17FGuz4BH30vRq7",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial05": {
+      "timestamp": "2026-09-30T10:43:53.720Z",
+      "call_id": "call_OonSW9b2HqyNoVNEzufeq1Pw",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial06": {
+      "timestamp": "2026-09-30T10:55:07.439Z",
+      "call_id": "call_HyRogBe5wyIDJhjcCzP4mE2u",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial07": {
+      "timestamp": "2026-09-30T10:55:25.284Z",
+      "call_id": "call_Qbyu6wXRNZ4f0RaKvHAWdelr",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial08": {
+      "timestamp": "2026-09-30T10:57:31.617Z",
+      "call_id": "call_bKe4v1Yg6vzeWkm5AVDyI9dR",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial09": {
+      "timestamp": "2026-09-30T11:01:02.386Z",
+      "call_id": "call_3sAHHqzFchnRCX6pEEbmM6Hm",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial10": {
+      "timestamp": "2026-09-30T11:03:13.016Z",
+      "call_id": "call_wyBbOkWKq2TUoIIdM2XZ08fY",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial11": {
+      "timestamp": "2026-09-30T11:18:18.566Z",
+      "call_id": "call_paRkUtH3HO1NQlYPLd5MkeNK",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial12": {
+      "timestamp": "2026-09-30T11:18:38.123Z",
+      "call_id": "call_y3BDeBzMENNvtAV4lQs17Oah",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial13": {
+      "timestamp": "2026-09-30T11:19:01.566Z",
+      "call_id": "call_EpvqAd2BvFKnMnOQEw26Wisy",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial14": {
+      "timestamp": "2026-09-30T11:26:57.053Z",
+      "call_id": "call_Rr74PN9yyLajgbwfHkh06emy",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial15": {
+      "timestamp": "2026-09-30T11:31:59.056Z",
+      "call_id": "call_sQq6QAehlKdr4JLMR5mZPi7f",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_blind_manuscript": {
+      "timestamp": "2026-09-30T11:36:04.364Z",
+      "call_id": "call_ZPCJAmuuTp8yS6HMSC3bMWp7",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial16": {
+      "timestamp": "2026-09-30T11:40:08.961Z",
+      "call_id": "call_36ceJELaRgyUw3n3SZsj3bbl",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_blind_figure": {
+      "timestamp": "2026-09-30T11:49:51.763Z",
+      "call_id": "call_JNdJlhbbY0uexc7DIaHkYeAx",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial17": {
+      "timestamp": "2026-09-30T11:50:13.238Z",
+      "call_id": "call_Wo22UJtwAzfE6exiDFyWSQko",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial18": {
+      "timestamp": "2026-09-30T11:52:40.609Z",
+      "call_id": "call_NAH2oFkkMEKMRUjopg5r2V3j",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial19": {
+      "timestamp": "2026-09-30T12:02:36.339Z",
+      "call_id": "call_c75cVuTSYmHXj9kLswuS2qAS",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_blind_research": {
+      "timestamp": "2026-09-30T12:07:26.204Z",
+      "call_id": "call_VtS6TfG1P9o4lRTkVLbwDwDj",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc2_trial20": {
+      "timestamp": "2026-09-30T12:07:44.090Z",
+      "call_id": "call_ZpyLMeWJRtVxer7mMwO8ph1B",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    }
+  },
+  "actual_served_model_version": null,
+  "token_metric_scope": "Any parent aggregate is not trial input, cached, output, peak or cost; not attributed here",
+  "hidden_reasoning_exported": false
+}

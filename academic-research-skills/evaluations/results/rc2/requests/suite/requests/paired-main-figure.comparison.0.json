@@ -1,0 +1,28 @@
+{
+  "case_id": "paired-main-figure",
+  "condition": "comparison",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "unseen_material",
+  "skill_snapshot": {
+    "root": "LOCAL_EVIDENCE_ROOT/suite/snapshots/comparison/scientific-visualization",
+    "manifest": "LOCAL_EVIDENCE_ROOT/suite/identities/comparison.scientific-visualization.json",
+    "manifest_sha256": "24c3836c9432a26bcc0d762c3ca921b2e27670790ae08301c12a69d2c3462daf"
+  },
+  "user_prompt": "Complete the supplied synthetic figure task. Save figure.svg, figure.png, figure.py, caption.md and operation.md.",
+  "material": "\n\n## fixtures/rc2/figure.md\n# Synthetic main-figure task\nAll results are frozen synthetic development fixtures, not observations from a research project.\nLower loss is better, in loss points. A and B were evaluated on the same independent clusters\nwithin each condition and group. Clusters are independent between conditions.\nThe supplied intervals are 95% percentile cluster-bootstrap intervals from the paired evaluation:\nA/B columns are marginal intervals; diff_low/high are intervals for the paired difference A−B.\nUnderlying cluster observations, aggregate bootstrap draws and cross-group covariances are unavailable.\nThe target weights were specified for each condition; they are not the empirical cluster proportions.\nThere are no causal assignments and no equivalence tests.\n\nMake one main figure for a 180 mm wide by at most 105 mm high layout using an appropriate\nprofessional implementation. Provide editable code, vector output, target-size preview and a caption.\nReaders should be able to answer: does the target-weighted average advantage hold in both conditions;\nwhich groups contradict it; what does the supplied uncertainty concern; and how much of the changed\naverage remains when C1 target weights are applied to C2 results?\nChoose the scientific expression and inspect the actual final figure. Do not make a paper or acquire\nnew observations. Explain any remaining uncertainty in a short operation note.\n\n\n## fixtures/rc2/figure-results.csv\ncondition,group,n_clusters,target_weight,loss_A,loss_B,A_low,A_high,B_low,B_high,difference_A_minus_B,diff_low,diff_high\nC1,G1,16,0.5,10,8,8,12,6,10,2,1,3\nC1,G2,4,0.2,6,7,4,8,5,9,-1,-1.8,-0.2\nC1,G3,10,0.3,4,4.4,3,5,3.4,5.4,-0.4,-0.7,-0.1\nC2,G1,6,0.2,9,8.4,7,11,6.4,10.4,0.6,0.1,1.1\nC2,G2,15,0.5,7,8.8,5,9,6.8,10.8,-1.8,-2.5,-1.1\nC2,G3,9,0.3,4.8,5,3.8,5.8,4,6,-0.2,-0.6,0.2\n",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills/evaluations/fixtures/rc2/figure.md",
+      "sha256": "5db07acc8ff8740c1a50bcd757b12413c9f0a235ce5d7430432a266b6c081a3f"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills/evaluations/fixtures/rc2/figure-results.csv",
+      "sha256": "e2d5923ff6b2d1a95321ece8956a892ad4416d051c8c763c9ea31881a306374c"
+    }
+  ],
+  "skill_entry": "LOCAL_EVIDENCE_ROOT/suite/snapshots/comparison/scientific-visualization/SKILL.md",
+  "skill_entry_sha256": "85893ffa990afd245fbb6f9be85bc6e1b2ee50c864c4f2600f5478525f7fb136",
+  "initial_skill_text": "---\nname: scientific-visualization\ndescription: \"当需要规划、制作、审查或实质修改论文图表时使用；让关键比较与反例可读，交付正式图和核查，局部标签请求只改当前范围。\"\nmetadata:\n  version: \"3.2.0-rc.1\"\n---\n\n# 正式论文图表的专业生产\n\n主要图必须让指定库的匹配绘图Skill参与论证规划、选图、制作/实质修订、数值和最终视觉核查。绑定本稿最终图，不能用别处的导出函数演示替代。\n\n由当前Agent及其现有模型执行，原生子代理按需使用；不寻找本地大模型或其他宿主联动。外部专业Skill从用户指定13仓库的本地安装/当前GitHub版本选择；方法和原创代码可自主探索。缺依赖按本任务准备并验证后运行。方法与实现可自主选择、改造或新写代码；正式结论依据实际证据。\n\n专业细节按需查 [原专业参考](references/protocol.md)。正式图制作时读 [图表流程](references/figure-production.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。\n\n交付实际成果及关键证据、采用的Skill与完成范围。局部任务直接做；完整研究保留科学目标与下一步，不让自检通过、导出函数或普通小题替代用户的研究目标。\n\n脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。\n",
+  "adapter_contract": "Supply the prompt/material and the condition entry only; expose equal tools and permissions. Record additional resource reads and tool calls if the host can. Do not pass other-arm answers."
+}

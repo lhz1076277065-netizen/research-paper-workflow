@@ -1,0 +1,102 @@
+{
+  "mapping": {
+    "J1": "comparison",
+    "J2": "release",
+    "J3": "without-skill"
+  },
+  "files": [
+    {
+      "anonymous_path": "J1-reading.md",
+      "original_path": "trials/cross-reading.comparison.0/answer.md",
+      "sha256": "ccf74fb083a2157990965d09bf39ac11da0504ed6a39ad83a6d5b0ba0bba93b9",
+      "anonymous_sha256": "aab7c422eef1597105cd3955ecc458546dded3e8ad371540c9470b3b3f422cd4",
+      "content_normalized": true,
+      "omitted_provenance_tail": {
+        "from_line": 69,
+        "tail_sha256": "3ff365cf223c01ff4f43909fb0d226da719d393a3ece5ba8475c65b751e7933b",
+        "reason": "Operational/source/version footer only. Scientific derivation, conclusions and source-based reasoning retained."
+      }
+    },
+    {
+      "anonymous_path": "J1-design-0.md",
+      "original_path": "trials/constrained-design.comparison.0/answer.md",
+      "sha256": "5312520deceb8f5a70baa9eb29b59402b8727395e7e4518d774085ad837b63cf",
+      "anonymous_sha256": "5b9243b0d653905a3c0d72ff576af45625a31675c043eea9a9f598f005a1d2ed",
+      "content_normalized": true,
+      "omitted_provenance_tail": {
+        "from_line": 138,
+        "tail_sha256": "6123c955ad676cd9bd8e97b71fc75eeb6b90e91f93bedc95a1ff47af87d729cc",
+        "reason": "Operational/source/version footer only. Scientific derivation, conclusions and source-based reasoning retained."
+      }
+    },
+    {
+      "anonymous_path": "J1-design-1.md",
+      "original_path": "trials/constrained-design.comparison.1/answer.md",
+      "sha256": "9396c10ec76243b449c886a905eb7723addbc533f3e812c2844b83c4fa80b079",
+      "anonymous_sha256": "9396c10ec76243b449c886a905eb7723addbc533f3e812c2844b83c4fa80b079",
+      "content_normalized": false,
+      "omitted_provenance_tail": null
+    },
+    {
+      "anonymous_path": "J2-reading.md",
+      "original_path": "trials/cross-reading.release.0/answer.md",
+      "sha256": "68f259c2e45f3dac1d314b2efae903a1836e73c8156ee55f035eb82cc3b77d1e",
+      "anonymous_sha256": "58f2619a456f0a7ae57ff84c144fddee20132c792655d9a0940baf9ff3992e4e",
+      "content_normalized": true,
+      "omitted_provenance_tail": {
+        "from_line": 63,
+        "tail_sha256": "7b6d585a9e283daaa74c47c178fd0b35ea4fbb9e4094703efeebf93447dee62f",
+        "reason": "Operational/source/version footer only. Scientific derivation, conclusions and source-based reasoning retained."
+      }
+    },
+    {
+      "anonymous_path": "J2-design-0.md",
+      "original_path": "trials/constrained-design.release.0/answer.md",
+      "sha256": "e0903e14fa685f881d4d4e19c6b28b05648a0b945d8fd5645724fa75096031e3",
+      "anonymous_sha256": "b39c416a503cadf1dd5c48cd7a2e0108d232833fb64efa25c013c5828d184766",
+      "content_normalized": true,
+      "omitted_provenance_tail": {
+        "from_line": 129,
+        "tail_sha256": "3fea6c337a0e8a170826c5c9f875e1dc09252553b7e408f65f54e93e8acc57b5",
+        "reason": "Operational/source/version footer only. Scientific derivation, conclusions and source-based reasoning retained."
+      }
+    },
+    {
+      "anonymous_path": "J2-design-1.md",
+      "original_path": "trials/constrained-design.release.1/answer.md",
+      "sha256": "08ba53780a79a073732cf6a55906a13ba0de9a3bf13d51d19465b65c2a4c2960",
+      "anonymous_sha256": "08ba53780a79a073732cf6a55906a13ba0de9a3bf13d51d19465b65c2a4c2960",
+      "content_normalized": false,
+      "omitted_provenance_tail": null
+    },
+    {
+      "anonymous_path": "J3-reading.md",
+      "original_path": "trials/cross-reading.without-skill.0/answer.md",
+      "sha256": "ac99587c0c38faf68cae0cbc24848cab17c5df16ef5c073ecf31bbebdd90cca7",
+      "anonymous_sha256": "ac99587c0c38faf68cae0cbc24848cab17c5df16ef5c073ecf31bbebdd90cca7",
+      "content_normalized": false,
+      "omitted_provenance_tail": null
+    },
+    {
+      "anonymous_path": "J3-design-0.md",
+      "original_path": "trials/constrained-design.without-skill.0/answer.md",
+      "sha256": "986b08ec94d72b1613517a77d9c05996b65b4fbff447988e162d45dc9c4e3abd",
+      "anonymous_sha256": "fc7c64ab25ecc1abf6f7daef174032b74b0055cf212661b86eb2bca355ba8f02",
+      "content_normalized": true,
+      "omitted_provenance_tail": {
+        "from_line": 164,
+        "tail_sha256": "2019ec5985d1d40cd99d24f1f71e1d02b303fd1619859f7de002339b41d3e675",
+        "reason": "Operational/source/version footer only. Scientific derivation, conclusions and source-based reasoning retained."
+      }
+    },
+    {
+      "anonymous_path": "J3-design-1.md",
+      "original_path": "trials/constrained-design.without-skill.1/answer.md",
+      "sha256": "12f086f9751c3a856b11e828d503188346d341155924f5a64ee24a5d7b8f2c1e",
+      "anonymous_sha256": "12f086f9751c3a856b11e828d503188346d341155924f5a64ee24a5d7b8f2c1e",
+      "content_normalized": false,
+      "omitted_provenance_tail": null
+    }
+  ],
+  "scope": "Root-only until blind review completed; reviewers receive packet only."
+}

@@ -1,0 +1,50 @@
+{
+  "run_id": "long-revision.release.0",
+  "parent_run_id": "iteration-rc2-20260930T101654Z",
+  "role": "user_task",
+  "agent": "rc2_trial04",
+  "evaluation_kind": "unseen_material",
+  "condition": "release",
+  "replicate": 0,
+  "status": "native_agent_completed",
+  "completion_source": "native final response received by root; artifact existence separately verified",
+  "native_dispatch": {
+    "timestamp": "2026-09-30T10:43:32.754Z",
+    "call_id": "call_Efztujg4D17FGuz4BH30vRq7",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_override": null
+  },
+  "actual_elapsed_seconds": null,
+  "completion_observed_at": "2026-09-30T12:28:17.486782+00:00",
+  "request_sha256": "c855af043f4862f7410f4ad43c488901a7d04ebfcc6b8d5c62f641cfa774e86e",
+  "frozen_resource_check": "passed",
+  "resource_metrics": {
+    "coverage": "instrumented_reads_only",
+    "initial_entry_chars": 711,
+    "read_events": 10,
+    "unique_resources": 10,
+    "unique_resource_bytes": 59060,
+    "resource_display_chars": 48510,
+    "exact_repeated_displays": 0,
+    "input_tokens": null,
+    "cached_input_tokens": null,
+    "output_tokens": null,
+    "peak_context_tokens": null,
+    "cost": null
+  },
+  "output_files": {
+    "source-manuscript.md": "bbaafe34c9cce3dec51214f8b1dd9af386fe19c445dce3dfcb3b75ede3557ce3",
+    "check-receipt.json": "c4f607f0770726a402e9ad3ea589f8b23559a2874e0bc3a389e1a67936d7a118",
+    "professional-draft.md": "f8e4b105f328cb72f996d51f2cc2b99376fdec86114cb7fb1d53c8e48d06c22f",
+    "check_manuscript.py": "fa64097590c5d3401dd8c14ae14a661d010f02d40f536ee4b2e21c35923a530c",
+    "evidence-notes.md": "b49f1fca8a10230480d33f0cc8ce32e988daea811269adafe296785f7f01f044",
+    "factual-semantic-diff.md": "da8bc137a8de5a3cead10628ed74ccde4637fd686cd4fd88cc00e622a68645e0",
+    "resource_reads.jsonl": "3d85d5de06a973dd357a3f3ae0a7f58b269f6447bbbf7419e084675589c9b4df",
+    "manuscript.md": "39b6a0a58df3ef009be76e30a2380511a4cdbce1f3df4a76ab9cc4a7fda2708c",
+    "operation.md": "54bcda806098cd9750d2d6eaad266aa6ec0ae0be442fb8986d39f17eaf08a802",
+    "figure-results.csv": "e2d5923ff6b2d1a95321ece8956a892ad4416d051c8c763c9ea31881a306374c"
+  },
+  "quality_evaluated_by_exit_code": false,
+  "cli_adapter_executed": false
+}

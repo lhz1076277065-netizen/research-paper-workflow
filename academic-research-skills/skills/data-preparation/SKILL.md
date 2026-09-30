@@ -2,7 +2,7 @@
 name: data-preparation
 description: "当已有研究数据或材料需要清理、整合、转换和质量检查时使用；保留来源与处理记录，避免改变目标量或泄漏验证信息。"
 metadata:
-  version: "3.2.0-rc.1"
+  version: "3.2.0-rc.2"
 ---
 
 # 真实材料整理与可复现处理

@@ -1,0 +1,38 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0"
+  },
+  "repository": "Haojae/scipilot-figure-skill",
+  "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+  "checks": [
+    {
+      "path": "scripts/profile_data.py",
+      "sha256": "d8a2a72c2607c390f2d3ed1508209d515ad4fbf833fa1602ab9da519b3596ec4",
+      "matched_cache_index": true
+    },
+    {
+      "path": "scripts/setup_style.py",
+      "sha256": "d58ef81684577bb605a92733dd2ca48ade03b4f819b3d255fd62f319be7fea82",
+      "matched_cache_index": true
+    },
+    {
+      "path": "scripts/visual_qa.py",
+      "sha256": "67675709e523c76e2748d50749de7bc6332f07df865379b26d024321fb40120f",
+      "matched_cache_index": true
+    },
+    {
+      "path": "scripts/export_figure.py",
+      "sha256": "40ce3bcd31dfc4b33e38a1cb180c75dc730ee6fa046f04934c79f285c6f890c1",
+      "matched_cache_index": true
+    },
+    {
+      "path": "scripts/check_figure.py",
+      "sha256": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06",
+      "matched_cache_index": true
+    }
+  ]
+}

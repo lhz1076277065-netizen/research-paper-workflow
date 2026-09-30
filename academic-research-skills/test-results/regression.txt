@@ -348,11 +348,16 @@ test_support_must_exist_in_index (test_release.DynamicCheckout.test_support_must
 test_timeout_is_passed_to_git (test_release.DynamicCheckout.test_timeout_is_passed_to_git) ... ok
 test_interrupted_owned_venv_creation_is_repairable (test_release.EnvironmentRecovery.test_interrupted_owned_venv_creation_is_repairable) ... ok
 test_managed_package_can_resume_without_network_or_wheelhouse (test_release.EnvironmentRecovery.test_managed_package_can_resume_without_network_or_wheelhouse) ... ok
+test_adapter_changing_snapshot_is_not_a_valid_completed_run (test_release.EvaluationHarness.test_adapter_changing_snapshot_is_not_a_valid_completed_run) ... ok
+test_changed_entry_or_reference_stops_adapter_before_execution (test_release.EvaluationHarness.test_changed_entry_or_reference_stops_adapter_before_execution) ... ok
 test_changed_material_stops_adapter_before_execution (test_release.EvaluationHarness.test_changed_material_stops_adapter_before_execution) ... ok
 test_custom_cases_keep_raw_material_equal_without_scoring_leak (test_release.EvaluationHarness.test_custom_cases_keep_raw_material_equal_without_scoring_leak) ... ok
 test_custom_material_path_and_duplicate_case_rejected (test_release.EvaluationHarness.test_custom_material_path_and_duplicate_case_rejected) ... ok
 test_fixture_command_not_reported_as_model_performance (test_release.EvaluationHarness.test_fixture_command_not_reported_as_model_performance) ... ok
 test_paired_material_identical_and_no_quality_claim (test_release.EvaluationHarness.test_paired_material_identical_and_no_quality_claim) ... ok
+test_read_rejects_escape_changed_identity_and_role_bypass (test_release.EvaluationHarness.test_read_rejects_escape_changed_identity_and_role_bypass) ... ok
+test_read_trace_measures_display_without_claiming_tokens (test_release.EvaluationHarness.test_read_trace_measures_display_without_claiming_tokens) ... ok
+test_snapshot_is_independent_and_only_selected_module_copied (test_release.EvaluationHarness.test_snapshot_is_independent_and_only_selected_module_copied) ... ok
 test_unconfigured_command_not_used (test_release.EvaluationHarness.test_unconfigured_command_not_used) ... ok
 test_desktop_metadata_excluded (test_release.PortabilityFixes.test_desktop_metadata_excluded) ... ok
 test_installer_preserves_executable_bit (test_release.PortabilityFixes.test_installer_preserves_executable_bit) ... ok
@@ -509,6 +514,6 @@ test_wrong_contract (test_suite.ValidatorNegativeTests.test_wrong_contract) ... 
 test_wrong_output_artifact (test_suite.ValidatorNegativeTests.test_wrong_output_artifact) ... ok
 
 ----------------------------------------------------------------------
-Ran 509 tests in 50.499s
+Ran 514 tests in 21.781s
 
 OK

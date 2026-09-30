@@ -1,0 +1,20 @@
+{
+  "case_id": "constrained-design",
+  "condition": "without-skill",
+  "replicate": 1,
+  "synthetic_material": true,
+  "evaluation_kind": "same_version_repeat",
+  "skill_snapshot": null,
+  "user_prompt": "完成所给两个条件下的研究判断与决定性设计，交付 answer.md 和简短 operation.md。",
+  "material": "\n\n## fixtures/rc2/design.md\n# 合成设计材料：两个校准条件\n这是Skill开发夹具，符号不代表任何具体学科；没有已完成真实实验。\n\n在两个群组g=1,2内，潜在二元真值T均以概率1/2取1。两个二元报告X与Y满足：\nX=T XOR E，Y=T XOR D；\n给定g时T、E、D相互独立，E~Bernoulli(q_g)，D~Bernoulli(1−θ_g)。\n0≤q_g≤1/5，1/2≤θ_g≤1。独立单位间同分布；全部分布约束均是本题模型。\n可观察完整的(g,X,Y)联合分布；群组权重w_1=2/5，w_2=3/5。\n观察到P(X=Y|g=1)=3/4，P(X=Y|g=2)=3/5。目标为Θ=(2/5)θ_1+(3/5)θ_2。\n\n情形A：除此之外仅知道(2/5)q_1+(3/5)q_2=1/10；q_g分别未知。\n情形B：知道q_1=q_2=1/10，其余科学约束与观测相同。\n两个情形的观测分布是总体层面的已知信息，暂不考虑估计误差。\n\n团队比较继续收集同类型(X,Y)记录、换一致性估计器、或购买24个单位的真值T。\n真值购买可按群组在总体中做有已知纳入概率的抽样，费用相同；没有额外免费真值。\n他们也考虑复制一次X报告；尚不知复制误差与E或D是否条件独立。\n\n请分别判断当前信息能回答什么，完成必要推导或满足全部约束的构造。\n若仍有障碍，提出能实际改变判断的设计，说明新增信息在什么条件下足够，\n以及不同结果怎样决定下一动作。保留原目标，不用更容易的模型代替本题。\n不做文献综述、不下载研究数据、不写论文。\n",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills/evaluations/fixtures/rc2/design.md",
+      "sha256": "e7092e70782c1fb9b3abc4c16923b5b64877dd5c172a46eb20a6a91e62dc9592"
+    }
+  ],
+  "skill_entry": null,
+  "skill_entry_sha256": null,
+  "initial_skill_text": "",
+  "adapter_contract": "Supply the prompt/material and the condition entry only; expose equal tools and permissions. Record additional resource reads and tool calls if the host can. Do not pass other-arm answers."
+}

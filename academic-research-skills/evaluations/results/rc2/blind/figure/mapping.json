@@ -1,0 +1,64 @@
+{
+  "mapping": {
+    "F1": "without-skill",
+    "F2": "release",
+    "F3": "comparison"
+  },
+  "files": [
+    {
+      "anonymous_path": "F1/figure.png",
+      "original_path": "trials/paired-main-figure.without-skill.0/figure.png",
+      "sha256": "fe97d07dab5519235663721beb0338f4da99ad9c5804f1af669882c9f05fc50c",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "F1/figure.svg",
+      "original_path": "trials/paired-main-figure.without-skill.0/figure.svg",
+      "sha256": "25ef0d45b8b0bab36fd435920e2a1b72a75eb6cc13dbb95e23c04212cc0cef43",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "F1/caption.md",
+      "original_path": "trials/paired-main-figure.without-skill.0/caption.md",
+      "sha256": "cc56cdb3e64858fcfaaf9214ab63b146178cf8837868a8c7145f2e98293a514d",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "F2/figure.png",
+      "original_path": "trials/paired-main-figure.release.0/figure.png",
+      "sha256": "e81747222c389386a202a16b4983b4863434994da06588e19a19087d5f2c8bad",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "F2/figure.svg",
+      "original_path": "trials/paired-main-figure.release.0/figure.svg",
+      "sha256": "877c3f31e00e8ff09eb650e26f920f2c54bafaf3d3564dec5b0104d311cbaf0c",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "F2/caption.md",
+      "original_path": "trials/paired-main-figure.release.0/caption.md",
+      "sha256": "f8ce1837bdb52d77af624f4a36a2a6412b1f286e42886ef228d8a7df54e169fe",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "F3/figure.png",
+      "original_path": "trials/paired-main-figure.comparison.0/figure.png",
+      "sha256": "436ff1428afccc60ea838f4159e5088a9e86d3a22b79e9191f7df5ad2001af94",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "F3/figure.svg",
+      "original_path": "trials/paired-main-figure.comparison.0/figure.svg",
+      "sha256": "bf3b0a9ab0a4363acbb22e871ae0739af088bc59a37c9e97455c7fb5b97ed409",
+      "content_normalized": false
+    },
+    {
+      "anonymous_path": "F3/caption.md",
+      "original_path": "trials/paired-main-figure.comparison.0/caption.md",
+      "sha256": "8b37d05abc567e60491059b62380f9b94e6eb6496323f6e57ffbda3bba2e873a",
+      "content_normalized": false
+    }
+  ],
+  "scope": "Root-only until blind review completed; reviewers receive packet only."
+}

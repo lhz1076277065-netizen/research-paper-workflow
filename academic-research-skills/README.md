@@ -1,4 +1,4 @@
-# Academic Research Skills 3.2.0-rc.1
+# Academic Research Skills 3.2.0-rc.2
 
 One optional research orchestrator and eighteen standalone specialist skills. Full research preserves the scientific question, examines nearest prior work, states the intended knowledge gain and develops a decisive test. Focused requests use the relevant specialist directly.
 

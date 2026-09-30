@@ -1,0 +1,45 @@
+{
+  "run_id": "constrained-design.without-skill.1",
+  "parent_run_id": "iteration-rc2-20260930T101654Z",
+  "role": "user_task",
+  "agent": "rc2_trial18",
+  "evaluation_kind": "same_version_repeat",
+  "condition": "without-skill",
+  "replicate": 1,
+  "status": "native_agent_completed",
+  "completion_source": "native final response received by root; artifact existence separately verified",
+  "native_dispatch": {
+    "timestamp": "2026-09-30T11:52:40.609Z",
+    "call_id": "call_NAH2oFkkMEKMRUjopg5r2V3j",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_override": null
+  },
+  "actual_elapsed_seconds": null,
+  "completion_observed_at": "2026-09-30T12:28:17.486782+00:00",
+  "request_sha256": "039b494bd129144d4ea570bf079ccc01916e5f9ba7d961c9793433ddb5738baa",
+  "frozen_resource_check": "passed",
+  "resource_metrics": {
+    "coverage": "instrumented_reads_only",
+    "initial_entry_chars": 0,
+    "read_events": 0,
+    "unique_resources": 0,
+    "unique_resource_bytes": 0,
+    "resource_display_chars": 0,
+    "exact_repeated_displays": 0,
+    "input_tokens": null,
+    "cached_input_tokens": null,
+    "output_tokens": null,
+    "peak_context_tokens": null,
+    "cost": null
+  },
+  "output_files": {
+    "answer.md": "12f086f9751c3a856b11e828d503188346d341155924f5a64ee24a5d7b8f2c1e",
+    "resource_reads.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification.json": "8004c87d7ff537d53d9b0f6290c99cbd5b0c2b3d44923ee6d4393bab67c3bc13",
+    "verify.py": "822155830c7e3428dd04233b508cb47ac98b4a48420d9ed5f27b3a5b65ce1112",
+    "operation.md": "0dee2bfc7066e1d8bea30ae0cc2d50943f9f391669bf36e76f7d8f1e69532d67"
+  },
+  "quality_evaluated_by_exit_code": false,
+  "cli_adapter_executed": false
+}

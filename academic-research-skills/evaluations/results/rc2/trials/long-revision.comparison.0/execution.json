@@ -1,0 +1,45 @@
+{
+  "run_id": "long-revision.comparison.0",
+  "parent_run_id": "iteration-rc2-20260930T101654Z",
+  "role": "user_task",
+  "agent": "rc2_trial09",
+  "evaluation_kind": "unseen_material",
+  "condition": "comparison",
+  "replicate": 0,
+  "status": "native_agent_completed",
+  "completion_source": "native final response received by root; artifact existence separately verified",
+  "native_dispatch": {
+    "timestamp": "2026-09-30T11:01:02.386Z",
+    "call_id": "call_3sAHHqzFchnRCX6pEEbmM6Hm",
+    "fork_turns": "none",
+    "model_override": null,
+    "reasoning_override": null
+  },
+  "actual_elapsed_seconds": null,
+  "completion_observed_at": "2026-09-30T12:28:17.486782+00:00",
+  "request_sha256": "e7415d91af6d08873f4180a23105b8c615434b48ce34969503f9bd0ba71bd847",
+  "frozen_resource_check": "passed",
+  "resource_metrics": {
+    "coverage": "instrumented_reads_only",
+    "initial_entry_chars": 711,
+    "read_events": 11,
+    "unique_resources": 11,
+    "unique_resource_bytes": 60958,
+    "resource_display_chars": 51736,
+    "exact_repeated_displays": 0,
+    "input_tokens": null,
+    "cached_input_tokens": null,
+    "output_tokens": null,
+    "peak_context_tokens": null,
+    "cost": null
+  },
+  "output_files": {
+    "check_revision.py": "4cf8390c8ddfa939f08fad49d780b0a4c07600c2c44eb3e832b657854d67f673",
+    "factual-semantic-diff.md": "d9a8b428cf3b4a3e0f4fe3ae6c8df43fb12650a2470a24a16856d332809482a5",
+    "resource_reads.jsonl": "f1af71aae1855e56d9a2532b3636001b6e75a187746b247e98dee4a53cb4c0e8",
+    "manuscript.md": "ce4f35c9e57b0a359c78fe1c61efce06fa2b170607cd5f2e1b0a137400a9eb66",
+    "operation.md": "205f4eba54441ba78e868887abcfde9c4f142ffc61db9146f959af1fb29123b8"
+  },
+  "quality_evaluated_by_exit_code": false,
+  "cli_adapter_executed": false
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "host-evaluation-2",
+  "status": "prepared_not_run",
+  "evaluation_kind": "development",
+  "jobs": [
+    {
+      "id": "research-judgement.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/regression-suite/requests/research-judgement.release.0.json",
+      "request_sha256": "ac22f1ffaabab016abf97d8b4b65394b7fef367f8c8746d3bf805593c81d8743"
+    }
+  ],
+  "controls": "Keep actual model/version, tools, permissions, budgets and sampling equal. Repeated fresh contexts; shared-context reading is not independent A/B.",
+  "scoring": "Blindly inspect real answers and traces for task completion, correctness, unsupported claims, useful novelty, questions and context/tool cost. No automatic scientific quality claim."
+}

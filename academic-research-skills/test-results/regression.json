@@ -1,7 +1,7 @@
 {
-  "version": "3.2.0-rc.1",
-  "generated_at": "2026-09-30T08:13:38.857503+00:00",
-  "tests_run": 509,
+  "version": "3.2.0-rc.2",
+  "generated_at": "2026-09-30T12:50:33.237251+00:00",
+  "tests_run": 514,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
@@ -12,7 +12,7 @@
     "test_lean": 54,
     "test_portability": 50,
     "test_quality31": 68,
-    "test_release": 52,
+    "test_release": 57,
     "test_suite": 121
   },
   "platform": "Darwin",
@@ -1420,6 +1420,14 @@
       "status": "passed"
     },
     {
+      "id": "test_release.EvaluationHarness.test_adapter_changing_snapshot_is_not_a_valid_completed_run",
+      "status": "passed"
+    },
+    {
+      "id": "test_release.EvaluationHarness.test_changed_entry_or_reference_stops_adapter_before_execution",
+      "status": "passed"
+    },
+    {
       "id": "test_release.EvaluationHarness.test_changed_material_stops_adapter_before_execution",
       "status": "passed"
     },
@@ -1437,6 +1445,18 @@
     },
     {
       "id": "test_release.EvaluationHarness.test_paired_material_identical_and_no_quality_claim",
+      "status": "passed"
+    },
+    {
+      "id": "test_release.EvaluationHarness.test_read_rejects_escape_changed_identity_and_role_bypass",
+      "status": "passed"
+    },
+    {
+      "id": "test_release.EvaluationHarness.test_read_trace_measures_display_without_claiming_tokens",
+      "status": "passed"
+    },
+    {
+      "id": "test_release.EvaluationHarness.test_snapshot_is_independent_and_only_selected_module_copied",
       "status": "passed"
     },
     {

@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.2.0-rc.2
+
+- Freeze full selected Skill resources and materials for host comparisons; record the actual displayed resource identity and distinguish development, new materials and same-version repeats.
+- Expand research judgment into complete transferable examples for identification, finite information and nonnumeric evidence; preserve the original scientific target.
+- Make figure review answer reader questions about direct comparisons, weights and uncertainty; keep descriptive reweighting distinct from causal explanations.
+- Strengthen whole-manuscript evidence, contribution and factual/semantic comparison; retain concise necessary limits.
+- Add five meaningful harness regression checks. Native synthetic evaluations and anonymous content review are documented separately from engineering checks.
+
+
 ## 3.2.0-rc.1
 
 Add transferable research decision examples and direct navigation from the relevant entries; clarify runtime professional-operation handoffs, meaningful main-figure review and retention, whole-manuscript expression with semantic/factual comparison, and minimal continuation state. Describe trigger timing and scope for all nineteen capabilities. Reuse verified source text offline and preserve edited caches. Extend the existing host evaluation harness to fixed custom cases with frozen material hashes. Separate engineering, host behavior and content quality observations; do not infer general scientific improvement from software totals.

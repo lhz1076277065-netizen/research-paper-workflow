@@ -1,0 +1,38 @@
+{
+  "version": "3.2.0-rc.2",
+  "scope": "Current pre-pack distribution layout and published-evidence identities. ZIP CRC/per-file digest/extraction and remote publication are recorded outside these archives to avoid self-reference.",
+  "capability_count": 19,
+  "capabilities": [
+    "analysis-execution",
+    "citation-audit",
+    "data-discovery",
+    "data-preparation",
+    "ethics-protocol",
+    "journal-intelligence",
+    "literature-discovery",
+    "manuscript-review",
+    "manuscript-writing",
+    "paper-deep-reading",
+    "peer-review-response",
+    "publication-stewardship",
+    "research-design",
+    "research-intake",
+    "research-paper-workflow",
+    "robustness-reproducibility",
+    "scientific-visualization",
+    "submission-packaging",
+    "topic-novelty"
+  ],
+  "default_profile": "general",
+  "research_profile_count": 16,
+  "professional_sources_unchanged": true,
+  "published_evidence_files": 230,
+  "published_evidence_digests_verified": true,
+  "source_authoritative_diff": "source-diffs/v3.2.0-rc.1-to-v3.2.0-rc.2.patch",
+  "old_versions_preserved": true,
+  "global_install_performed": false,
+  "chosen_file_counts_including_package_manifest": {
+    "runtime": 1029,
+    "source": 1667
+  }
+}

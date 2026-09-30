@@ -1,0 +1,64 @@
+{
+  "synthetic": true,
+  "size_mm": [
+    180,
+    100
+  ],
+  "professional_style": {
+    "journal": "nature",
+    "lang": "en",
+    "sciplots_used": false,
+    "cjk_font": null,
+    "constrained_layout": false
+  },
+  "numerical_checks": "PASS",
+  "layout_audit": [],
+  "means": [
+    {
+      "condition": "C1",
+      "weight_condition": "C1",
+      "loss_A": 7.4,
+      "loss_B": 6.720000000000001,
+      "A_minus_B": 0.6799999999999999
+    },
+    {
+      "condition": "C2",
+      "weight_condition": "C2",
+      "loss_A": 6.74,
+      "loss_B": 7.58,
+      "A_minus_B": -0.8400000000000001
+    },
+    {
+      "condition": "C2",
+      "weight_condition": "C1",
+      "loss_A": 7.34,
+      "loss_B": 7.460000000000001,
+      "A_minus_B": -0.12000000000000005
+    }
+  ],
+  "total_change": -1.52,
+  "fixed_weight_change": -0.8,
+  "additional_reweighting": -0.72,
+  "retained_fraction": 0.5263157894736842,
+  "aggregate_CI": "not identifiable from supplied summaries",
+  "figure.svg": {
+    "path": "LOCAL_EVIDENCE_ROOT/trials/paired-main-figure.without-skill.0/figure.svg",
+    "ext": "svg",
+    "size_bytes": 27013,
+    "category": "vector"
+  },
+  "figure.png": {
+    "path": "LOCAL_EVIDENCE_ROOT/trials/paired-main-figure.without-skill.0/figure.png",
+    "ext": "png",
+    "size_bytes": 203558,
+    "category": "raster",
+    "size_px": [
+      2125,
+      1181
+    ],
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  }
+}

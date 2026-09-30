@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic exact-distribution checks, not acquired data",
+  "A_lower": {
+    "q": [
+      "0",
+      "1/6"
+    ],
+    "theta": [
+      "3/4",
+      "13/20"
+    ],
+    "target": "69/100"
+  },
+  "A_upper": {
+    "q": [
+      "1/5",
+      "1/30"
+    ],
+    "theta": [
+      "11/12",
+      "17/28"
+    ],
+    "target": "307/420"
+  },
+  "A_width": "43/1050",
+  "B_target": "7/10",
+  "direct_24_stratified_SE_conservative_ceiling": 0.10212037714663724,
+  "hypothetical_zero_X_errors_not_observed": [
+    [
+      0.0,
+      0.2
+    ],
+    [
+      0.69,
+      0.730952380952381
+    ]
+  ]
+}

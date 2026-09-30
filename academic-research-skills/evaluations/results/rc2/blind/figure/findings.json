@@ -1,0 +1,636 @@
+{
+  "review_type": "独立匿名主图成果审查",
+  "anonymous_ids": [
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "scope": {
+    "allowed_inputs": [
+      "figure.md",
+      "figure-results.csv",
+      "F1/figure.png",
+      "F1/figure.svg",
+      "F1/caption.md",
+      "F2/figure.png",
+      "F2/figure.svg",
+      "F2/caption.md",
+      "F3/figure.png",
+      "F3/figure.svg",
+      "F3/caption.md"
+    ],
+    "prohibited_context_read": false,
+    "delegation_used": false,
+    "originals_modified": false,
+    "png_opened": [
+      "F1",
+      "F2",
+      "F3"
+    ]
+  },
+  "critical_errors": [],
+  "reader_questions": [
+    {
+      "question": "同一目标加权平均优势是否在两个条件均成立？",
+      "answer": "不成立：C1 B 更低（+0.68）；C2 A 更低（−0.84）"
+    },
+    {
+      "question": "哪些组反对各自总体方向？",
+      "answer": "C1 G2/G3；C2 G1"
+    },
+    {
+      "question": "所给不确定性针对什么？",
+      "answer": "每一条件/组的配对 A−B 差值；不针对加权均值、变化或保留比例"
+    },
+    {
+      "question": "C1 权重应用于 C2 后保留多少变化？",
+      "answer": "C2 标准化差值 −0.12；相对 C1 的变化 −0.80，为总变化 −1.52 的 52.6316%"
+    }
+  ],
+  "numeric_semantics": {
+    "independent_recomputation": {
+      "C1": {
+        "A": 7.4,
+        "B": 6.72,
+        "A_minus_B": 0.68
+      },
+      "C2": {
+        "A": 6.74,
+        "B": 7.58,
+        "A_minus_B": -0.84
+      },
+      "C2_with_C1_weights": {
+        "A": 7.34,
+        "B": 7.46,
+        "A_minus_B": -0.12
+      },
+      "total_change": -1.52,
+      "fixed_C1_weight_change": -0.8,
+      "weight_switch_at_C2": -0.72,
+      "retained_percent": 52.63157894736842,
+      "weight_switch_percent": 47.36842105263158
+    },
+    "group_and_plot_consistency": "全部六个组别/条件的 A−B、配对端点、n、目标权重一致；SVG 点及须线坐标反算通过",
+    "shared_assessment": {
+      "status": "核对一致；未发现关键错误",
+      "group_points_and_intervals": "按 SVG 刻度坐标反算六个点与区间端点，均与 CSV 一致",
+      "n_and_weights": "所有已显示簇数及目标权重与 CSV 一致",
+      "uncertainty_object": "组内配对 A−B 的 95% percentile cluster-bootstrap 区间",
+      "aggregate_uncertainty": "均值、变化、保留比例和分解的不确定性不可由现有端点恢复",
+      "interpretation_limits": [
+        "均值反转仅为点估计",
+        "目标权重不是经验簇数比例",
+        "C2/G3 跨零不等于等效",
+        "固定权重比较为 C1 参照的描述性标准化，无因果归因"
+      ]
+    }
+  },
+  "visual_readability": {
+    "physical_layout_pass": [
+      "F1",
+      "F2",
+      "F3"
+    ],
+    "inspection_basis": "最终 PNG 实际打开观察；SVG 物理宽高、字体和坐标核对",
+    "physical_font_note": "SVG width/viewBox 的单位对应关系使文字的用户单位字号等于物理 pt；未仅根据 2125 px 宽度判断可读性",
+    "printing_and_external_reader_validation": "未知"
+  },
+  "figures": [
+    {
+      "anonymous_id": "F1",
+      "critical_errors": [],
+      "reader_questions": [
+        {
+          "question": "同一目标加权平均优势是否在两个条件均成立？",
+          "answer": "不成立：C1 B 更低（+0.68）；C2 A 更低（−0.84）",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "b 三行均值与 a 方向轴",
+          "access_cost": "图内可答"
+        },
+        {
+          "question": "哪些组反对各自总体方向？",
+          "answer": "C1 G2/G3；C2 G1",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "a 下方两行直接反例说明",
+          "access_cost": "图内直接点名"
+        },
+        {
+          "question": "所给不确定性针对什么？",
+          "answer": "每一条件/组的配对 A−B 差值；不针对加权均值、变化或保留比例",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "a 须线说明、底部脚注和 caption.md",
+          "access_cost": "percentile 及完整组内/总体边界由图注补足；C2/G3 提示位于小灰色脚注"
+        },
+        {
+          "question": "C1 权重应用于 C2 后保留多少变化？",
+          "answer": "C2 标准化差值 −0.12；相对 C1 的变化 −0.80，为总变化 −1.52 的 52.6316%",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "c 的固定权重文字及比例条",
+          "access_cost": "图内可答"
+        }
+      ],
+      "numeric_semantics": {
+        "status": "核对一致；未发现关键错误",
+        "group_points_and_intervals": "按 SVG 刻度坐标反算六个点与区间端点，均与 CSV 一致",
+        "n_and_weights": "所有已显示簇数及目标权重与 CSV 一致",
+        "uncertainty_object": "组内配对 A−B 的 95% percentile cluster-bootstrap 区间",
+        "aggregate_uncertainty": "均值、变化、保留比例和分解的不确定性不可由现有端点恢复",
+        "interpretation_limits": [
+          "均值反转仅为点估计",
+          "目标权重不是经验簇数比例",
+          "C2/G3 跨零不等于等效",
+          "固定权重比较为 C1 参照的描述性标准化，无因果归因"
+        ]
+      },
+      "visual_readability": {
+        "svg_physical_mm": {
+          "width": 180,
+          "height": 100
+        },
+        "layout_constraint_status": "符合 180 mm × ≤105 mm",
+        "png_pixels": [
+          2125,
+          1181
+        ],
+        "font_range_physical_pt": [
+          6.6,
+          10.0
+        ],
+        "screen_inspection": "实际打开最终 PNG，未观察到文字重叠、数据裁切或必要标签缺失",
+        "strengths": [
+          {
+            "location": "a 下方",
+            "reason": "直接点名全部反例",
+            "impact": "减少从组别符号推导总体反例的成本"
+          },
+          {
+            "location": "b/c",
+            "reason": "三套权重的点估计与固定权重/权重切换量均正确标示",
+            "impact": "能直接读出反转与 52.6% 保留变化"
+          }
+        ],
+        "concerns": [
+          {
+            "severity": "minor",
+            "location": "b 每行灰色 A/B 结果及全图最下方脚注",
+            "reason": "物理字号为 6.6/6.8 pt；C2/G3 跨零提示为底部灰字",
+            "impact": "辅助数值及跨零提示的首读可见性较弱；实际打印效果未知"
+          },
+          {
+            "severity": "minor",
+            "location": "a 与 b 横轴",
+            "reason": "同一 loss point 在两面板占 26.14/47.24 SVG 单位；比例为 1.81",
+            "impact": "跨面板的视觉距离不能直接比较，须查看刻度或数字"
+          },
+          {
+            "severity": "minor",
+            "location": "a 条件行及须线",
+            "reason": "条件需由图例映射；没有逐行精确端点表",
+            "impact": "条件识别及精确端点复核多一步；未造成任务答案缺失"
+          }
+        ],
+        "print_validation": "未知"
+      },
+      "uncertainty": {
+        "printed_readability": "未知",
+        "external_reader_validation": "未知",
+        "grayscale_and_color_vision_validation": "未知",
+        "code_and_operation_note": "未读取，未知",
+        "aggregate_estimate_uncertainty": "不可由给定材料恢复"
+      }
+    },
+    {
+      "anonymous_id": "F2",
+      "critical_errors": [],
+      "reader_questions": [
+        {
+          "question": "同一目标加权平均优势是否在两个条件均成立？",
+          "answer": "不成立：C1 B 更低（+0.68）；C2 A 更低（−0.84）",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "b 三行数值及顶端符号约定",
+          "access_cost": "图内可答"
+        },
+        {
+          "question": "哪些组反对各自总体方向？",
+          "answer": "C1 G2/G3；C2 G1",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "a 组别符号结合 b 总体符号；caption.md 明确点名",
+          "access_cost": "PNG 须推导；图注明示反例"
+        },
+        {
+          "question": "所给不确定性针对什么？",
+          "answer": "每一条件/组的配对 A−B 差值；不针对加权均值、变化或保留比例",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "a 右侧端点列与 a 下方方法说明",
+          "access_cost": "图内对象和 percentile 方法明确；跨零不等效的含义由图注说明"
+        },
+        {
+          "question": "C1 权重应用于 C2 后保留多少变化？",
+          "answer": "C2 标准化差值 −0.12；相对 C1 的变化 −0.80，为总变化 −1.52 的 52.6316%",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "b 的中间标准化行及全图最下方句",
+          "access_cost": "图内可答"
+        }
+      ],
+      "numeric_semantics": {
+        "status": "核对一致；未发现关键错误",
+        "group_points_and_intervals": "按 SVG 刻度坐标反算六个点与区间端点，均与 CSV 一致",
+        "n_and_weights": "所有已显示簇数及目标权重与 CSV 一致",
+        "uncertainty_object": "组内配对 A−B 的 95% percentile cluster-bootstrap 区间",
+        "aggregate_uncertainty": "均值、变化、保留比例和分解的不确定性不可由现有端点恢复",
+        "interpretation_limits": [
+          "均值反转仅为点估计",
+          "目标权重不是经验簇数比例",
+          "C2/G3 跨零不等于等效",
+          "固定权重比较为 C1 参照的描述性标准化，无因果归因"
+        ]
+      },
+      "visual_readability": {
+        "svg_physical_mm": {
+          "width": 180,
+          "height": 104
+        },
+        "layout_constraint_status": "符合 180 mm × ≤105 mm",
+        "png_pixels": [
+          2125,
+          1228
+        ],
+        "font_range_physical_pt": [
+          7.1,
+          9.6
+        ],
+        "screen_inspection": "实际打开最终 PNG，未观察到文字重叠、数据裁切或必要标签缺失",
+        "strengths": [
+          {
+            "location": "a 右侧六行 Difference [95% interval]",
+            "reason": "逐行列出正确配对点估计与精确端点",
+            "impact": "可直接核对 C2/G3 跨零及所有组区间"
+          },
+          {
+            "location": "a/b 的水平坐标与零线",
+            "reason": "同一坐标尺度对齐，两层共用 −3 到 +3 刻度",
+            "impact": "组别与总体差值的空间大小可直接比较"
+          },
+          {
+            "location": "b 三行及底部句",
+            "reason": "按 C1→C2 固定 C1 权重→C2 自有权重排列；差值足以回答问题",
+            "impact": "标准化路径与约 53% 的保留变化可直接读取，不需要额外 A/B 列"
+          }
+        ],
+        "concerns": [
+          {
+            "severity": "minor",
+            "location": "a/b 之间的反例关系与 G3/C2 行",
+            "reason": "PNG 未直接点名反例或写明跨零后方向未定；图注具备说明",
+            "impact": "首读需推导或转读图注，但完整成果能回答问题"
+          },
+          {
+            "severity": "minor",
+            "location": "a 的须线刻度及全图最下方保留变化句",
+            "reason": "刻度只出现在 b 下方，保留比例以长底句表达",
+            "impact": "需要上下扫描；未发现错轴或裁切"
+          }
+        ],
+        "print_validation": "未知"
+      },
+      "uncertainty": {
+        "printed_readability": "未知",
+        "external_reader_validation": "未知",
+        "grayscale_and_color_vision_validation": "未知",
+        "code_and_operation_note": "未读取，未知",
+        "aggregate_estimate_uncertainty": "不可由给定材料恢复"
+      }
+    },
+    {
+      "anonymous_id": "F3",
+      "critical_errors": [],
+      "reader_questions": [
+        {
+          "question": "同一目标加权平均优势是否在两个条件均成立？",
+          "answer": "不成立：C1 B 更低（+0.68）；C2 A 更低（−0.84）",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "b 的 A/B/A−B 表与逐行赢家文字",
+          "access_cost": "图内直接写明赢家"
+        },
+        {
+          "question": "哪些组反对各自总体方向？",
+          "answer": "C1 G2/G3；C2 G1",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "a 下方粗体 Counterexamples",
+          "access_cost": "图内直接点名"
+        },
+        {
+          "question": "所给不确定性针对什么？",
+          "answer": "每一条件/组的配对 A−B 差值；不针对加权均值、变化或保留比例",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "顶端须线说明、a 下方 C2/G3 行、底部定义与 caption.md",
+          "access_cost": "percentile 方法及完整限制由图注补足；图内直接提示跨零方向未定"
+        },
+        {
+          "question": "C1 权重应用于 C2 后保留多少变化？",
+          "answer": "C2 标准化差值 −0.12；相对 C1 的变化 −0.80，为总变化 −1.52 的 52.6316%",
+          "reviewer_assessment": "能回答（审查判断，未做外部读者验证）",
+          "location": "b 下方总变化及两项变化文字",
+          "access_cost": "图内可答"
+        }
+      ],
+      "numeric_semantics": {
+        "status": "核对一致；未发现关键错误",
+        "group_points_and_intervals": "按 SVG 刻度坐标反算六个点与区间端点，均与 CSV 一致",
+        "n_and_weights": "所有已显示簇数及目标权重与 CSV 一致",
+        "uncertainty_object": "组内配对 A−B 的 95% percentile cluster-bootstrap 区间",
+        "aggregate_uncertainty": "均值、变化、保留比例和分解的不确定性不可由现有端点恢复",
+        "interpretation_limits": [
+          "均值反转仅为点估计",
+          "目标权重不是经验簇数比例",
+          "C2/G3 跨零不等于等效",
+          "固定权重比较为 C1 参照的描述性标准化，无因果归因"
+        ]
+      },
+      "visual_readability": {
+        "svg_physical_mm": {
+          "width": 180,
+          "height": 103
+        },
+        "layout_constraint_status": "符合 180 mm × ≤105 mm",
+        "png_pixels": [
+          2125,
+          1216
+        ],
+        "font_range_physical_pt": [
+          7.0,
+          10.5
+        ],
+        "screen_inspection": "实际打开最终 PNG，未观察到文字重叠、数据裁切或必要标签缺失",
+        "strengths": [
+          {
+            "location": "b 的差值列",
+            "reason": "正确差值旁直接写 A lower/B lower，并紧邻 point estimates 限定",
+            "impact": "总体方向不需要符号推导，也未被解释为显著赢家"
+          },
+          {
+            "location": "a 下方两行说明",
+            "reason": "粗体直接点名反例，紧接明确 C2/G3 方向未定",
+            "impact": "关键组与不确定性的答案首读更直接"
+          },
+          {
+            "location": "b 下方变化文字",
+            "reason": "−1.52、−0.80（53%）、−0.72（47%）及 C2 权重切换参照均明确",
+            "impact": "固定权重保留变化可直接读取"
+          }
+        ],
+        "concerns": [
+          {
+            "severity": "minor",
+            "location": "a 左侧 C/n 列，尤其 G1 的 C1/16 行",
+            "reason": "列间间距较紧，须依赖纵向对齐辨认；未观察到实际叠字",
+            "impact": "轻微分列读取成本"
+          },
+          {
+            "severity": "minor",
+            "location": "a 须线与 b 数值表",
+            "reason": "组别区间没有逐行精确端点文字；总体以数表呈现",
+            "impact": "端点复核需轴估读或原表；跨层级效应量大小需读数字，不妨碍任务答案"
+          },
+          {
+            "severity": "minor",
+            "location": "全图顶部及底部说明",
+            "reason": "部分区间/不确定性定义重复",
+            "impact": "增加阅读行数；没有外部证据据此认定总体信息成本更高"
+          }
+        ],
+        "print_validation": "未知"
+      },
+      "uncertainty": {
+        "printed_readability": "未知",
+        "external_reader_validation": "未知",
+        "grayscale_and_color_vision_validation": "未知",
+        "code_and_operation_note": "未读取，未知",
+        "aggregate_estimate_uncertainty": "不可由给定材料恢复"
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "dimension": "数值正确性与科学推断边界",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "相当"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "相当"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "相当"
+        }
+      ],
+      "basis": "均正确，无虚构总体区间、因果或等效结论"
+    },
+    {
+      "dimension": "总体方向的首读成本",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "相当"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "差"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "差"
+        }
+      ],
+      "basis": "F3 逐行给出赢家文字；F1/F2 使用符号和方向约定"
+    },
+    {
+      "dimension": "关键反例的首读成本",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "好"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "差"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "差"
+        }
+      ],
+      "basis": "F1 图内点名；F3 提示更突出且条件逐行明确；F2 需推导或图注"
+    },
+    {
+      "dimension": "区间端点的精确核对",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "差"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "相当"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "好"
+        }
+      ],
+      "basis": "只有 F2 逐行给出全部端点；缺少端点表不等于任务失败"
+    },
+    {
+      "dimension": "图内区间方法与对象的完整表达",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "差"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "相当"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "好"
+        }
+      ],
+      "basis": "F2 图内明确 percentile 与 each group；F1/F3 由图注补足"
+    },
+    {
+      "dimension": "固定权重保留变化的答案正确、可取得",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "相当"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "相当"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "相当"
+        }
+      ],
+      "basis": "均直接给出 −0.80 与约 53%；表现形式不同"
+    },
+    {
+      "dimension": "组别与总体效应量的空间直接比较",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "差"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "相当"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "好"
+        }
+      ],
+      "basis": "F2 共享水平尺度；F1 轴尺度不同；F3 总体为数表"
+    },
+    {
+      "dimension": "180 mm 下的屏幕/字号可读性",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "差"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "差"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "相当"
+        }
+      ],
+      "basis": "F1 辅助数值为 6.6 pt；F2/F3 主数据约 7.5–8 pt，均未观察到碰撞；不等同打印通过"
+    },
+    {
+      "dimension": "实际打印、外部读者表现",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "未知"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "未知"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "未知"
+        }
+      ],
+      "basis": "未取得相应验证"
+    },
+    {
+      "dimension": "总体必要信息成本",
+      "assessments": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "left_relative_to_right": "未知"
+        },
+        {
+          "left": "F1",
+          "right": "F3",
+          "left_relative_to_right": "未知"
+        },
+        {
+          "left": "F2",
+          "right": "F3",
+          "left_relative_to_right": "未知"
+        }
+      ],
+      "basis": "区间复核与反例首读各有优势，无任务时间或错误率证据，不能武断合并"
+    }
+  ],
+  "uncertainty": {
+    "printed_readability": "未知",
+    "external_reader_task_performance": "未知",
+    "grayscale_print_and_color_vision": "未知",
+    "editable_code_implementation_and_operation_note": "盲审范围未包括，未知",
+    "aggregate_intervals_and_decomposition_uncertainty": "缺簇观测、联合 bootstrap 抽样和协方差信息，无法恢复",
+    "overall_information_cost": "无外部任务时间/错误率证据；仅可报告具体位置的局部成本",
+    "version_or_skill_superiority": "未读取映射或过程，不能推断",
+    "reader_question_assessments": "审查者判断；不是外部读者测试通过率"
+  },
+  "summary": "科学答案一致且尺寸合规；F2 方便精确区间核对和共用尺度比较；F3 方便直接识别总体赢家、反例和跨零含义；F1 亦完整作答但部分辅助字号较小、跨面板尺度不同。无单一总排名。"
+}

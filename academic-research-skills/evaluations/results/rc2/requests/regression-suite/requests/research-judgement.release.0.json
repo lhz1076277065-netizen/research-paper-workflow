@@ -1,0 +1,24 @@
+{
+  "case_id": "research-judgement",
+  "condition": "release",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "development",
+  "skill_snapshot": {
+    "root": "LOCAL_EVIDENCE_ROOT/regression-suite/snapshots/release/topic-novelty",
+    "manifest": "LOCAL_EVIDENCE_ROOT/regression-suite/identities/release.topic-novelty.json",
+    "manifest_sha256": "a7ca9af7199d10dde08191d2a56723671cd25d8315a6c6eb709b8fc4e7d93cb9"
+  },
+  "user_prompt": "Improve this weak research plan using the supplied study profiles. Deliver a justified comparison of plausible research routes and choose the next discriminating work. Keep the scientific objective and distinguish an idea from established knowledge. Do not conduct a new empirical study. Write judgement.md and a short operation note.",
+  "material": "\n\n## fixtures/heldout/research-brief.md\n# Fixed development-evaluation material: NOT real literature or empirical research\n\nThe user wants a defensible study of when apparent improvements in a generic estimation system are reliable. No field-specific dataset or new manuscript is requested. The following summaries R1–R4 are fabricated study profiles for reasoning evaluation; they have no real authors, DOI, journal or publication priority.\n\nR1: An established correction rule substantially improves average error when reference measurements are collected independently of the target outcome. It does not evaluate references acquired through the same selection process as targets.\nR2: A larger estimator improves average error on a random split of the same records. Its inputs contain a proxy recorded after the target measurement. It reports neither removal of that proxy nor evaluation under changed acquisition conditions.\nR3: A simple calibration procedure remains stable under an independent acquisition change, but only for one narrow range of measurement precision. Behavior outside that precision range is not established.\nR4: A carefully executed replication finds the advertised average gain disappears when the reference process becomes dependent on target selection. This distinguishes two acquisition mechanisms but does not establish how to diagnose dependence without observing the target truth.\n\nWeak draft plan: \"Use a bigger model on a new benchmark; if average error is lower, call this a novel generally robust method. Run many configurations and report the best result.\"\n\nAvailable resources: symbolic reasoning, an inexpensive manufactured measurement simulator, and the supplied study profiles. There are no actual observations, ethics issues, field results or computational restrictions. Pilot work is feasible, but the full scientific question must remain the reliability of apparent improvements. Work now consists of improving the problem and deciding what evidence would distinguish plausible answers, not producing new empirical findings.\n",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills/evaluations/fixtures/heldout/research-brief.md",
+      "sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c"
+    }
+  ],
+  "skill_entry": "LOCAL_EVIDENCE_ROOT/regression-suite/snapshots/release/topic-novelty/SKILL.md",
+  "skill_entry_sha256": "6bf425295435373c3781e587554fef1476696adc1e9509345a4b084cb6173a95",
+  "initial_skill_text": "---\nname: topic-novelty\ndescription: \"当需要从方向、文献或已有结果提出有知识增量的选题，或判断方案是否已被完成时使用；比较最近邻、竞争路线与决定性验证。\"\nmetadata:\n  version: \"3.2.0-rc.2\"\n---\n\n# 重要问题与可验证创新\n\n结合标杆精读和最近邻核查提出原创路线、强假设与可能反例；比较能改变认识/实践的增量，选择最有信息价值的研究动作，允许新方法与代码探索。\n\n由当前Agent及其现有模型执行，原生子代理按需使用；不寻找本地大模型或其他宿主联动。外部专业Skill从用户指定13仓库的本地安装/当前GitHub版本选择；方法和原创代码可自主探索。缺依赖按本任务准备并验证后运行。方法与实现可自主选择、改造或新写代码；正式结论依据实际证据。\n\n专业细节按需查 [原专业参考](references/protocol.md)。问题与路线判断时读 [研究判断示例](references/research-quality.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。\n\n交付实际成果及关键证据、采用的Skill与完成范围。局部任务直接做；完整研究保留科学目标与下一步，不让自检通过、导出函数或普通小题替代用户的研究目标。\n\n脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。\n",
+  "adapter_contract": "Supply the prompt/material and the condition entry only; expose equal tools and permissions. Record additional resource reads and tool calls if the host can. Do not pass other-arm answers."
+}

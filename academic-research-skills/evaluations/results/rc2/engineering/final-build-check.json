@@ -1,0 +1,13 @@
+{
+  "command": [
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "scripts/build_release.py",
+    "--check"
+  ],
+  "cwd": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills",
+  "exit_code": 0,
+  "elapsed_seconds": 0.088,
+  "started_unix": 1790772858.045089,
+  "stdout": "logs/final-build-check.stdout",
+  "stderr": "logs/final-build-check.stderr"
+}

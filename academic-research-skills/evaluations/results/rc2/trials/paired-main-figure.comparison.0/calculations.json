@@ -1,0 +1,32 @@
+{
+  "estimates": [
+    {
+      "results": "C1",
+      "weights": "C1",
+      "A": 7.4,
+      "B": 6.720000000000001,
+      "difference": 0.6799999999999999
+    },
+    {
+      "results": "C2",
+      "weights": "C2",
+      "A": 6.74,
+      "B": 7.58,
+      "difference": -0.8400000000000001
+    },
+    {
+      "results": "C2",
+      "weights": "C1",
+      "A": 7.34,
+      "B": 7.460000000000001,
+      "difference": -0.12000000000000005
+    }
+  ],
+  "total_change": -1.52,
+  "fixed_C1_weight_change": -0.8,
+  "weight_switch_at_C2": -0.72,
+  "retained_fraction": 0.5263157894736842,
+  "weight_switch_fraction": 0.47368421052631576,
+  "aggregate_intervals": null,
+  "interval_scope": "supplied 95% paired percentile cluster-bootstrap intervals, within group and condition"
+}

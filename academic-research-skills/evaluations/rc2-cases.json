@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "id": "constrained-design",
+      "skill": "research-design",
+      "prompt": "完成所给两个条件下的研究判断与决定性设计，交付 answer.md 和简短 operation.md。",
+      "material_files": [
+        "fixtures/rc2/design.md"
+      ]
+    },
+    {
+      "id": "paired-main-figure",
+      "skill": "scientific-visualization",
+      "prompt": "Complete the supplied synthetic figure task. Save figure.svg, figure.png, figure.py, caption.md and operation.md.",
+      "material_files": [
+        "fixtures/rc2/figure.md",
+        "fixtures/rc2/figure-results.csv"
+      ]
+    },
+    {
+      "id": "long-revision",
+      "skill": "manuscript-writing",
+      "prompt": "Revise the complete supplied synthetic manuscript using the frozen update and evidence. Deliver the full editable manuscript and factual/semantic comparison.",
+      "material_files": [
+        "fixtures/rc2/evidence-notes.md",
+        "fixtures/rc2/long-manuscript.md",
+        "fixtures/rc2/figure-results.csv"
+      ]
+    },
+    {
+      "id": "cross-reading",
+      "skill": "paper-deep-reading",
+      "prompt": "完成两份材料的精读和跨资料判断，保存 answer.md 和简短 operation.md。",
+      "material_files": [
+        "fixtures/rc2/reading.md"
+      ]
+    },
+    {
+      "id": "simple-edit",
+      "skill": "manuscript-writing",
+      "prompt": "只改好下面一段表达，保留数字与推断含义，保存 answer.md。",
+      "material": "合成开发材料：在48个独立单位中，关联估计为0.18，95%置信区间−0.02到0.38。原句：我们或许可能在非常有限的条件下有点观察到了一个可能的关系，但目前不太清楚。"
+    }
+  ]
+}

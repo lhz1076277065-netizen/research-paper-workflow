@@ -1,0 +1,422 @@
+{
+  "review_type": "independent_blind_synthetic_manuscript_content_review",
+  "allowed_input_files": [
+    "long-manuscript.md",
+    "evidence-notes.md",
+    "figure-results.csv",
+    "M1.md",
+    "M2.md",
+    "M3.md"
+  ],
+  "all_allowed_files_read_in_full": true,
+  "identity_mapping_skills_versions_logs_or_history_read": false,
+  "external_sources_or_other_assistants_used": false,
+  "critical_error_definition": "影响数值/方向、原始问题或反例、N1来源层级，或形成无支持的因果/显著性/等价/外推、删失完整科学章节的错误。",
+  "original_goal_source": "evidence-notes.md:18–23",
+  "original_scientific_boundaries_sources": [
+    "long-manuscript.md:43–54,63–86,115–133",
+    "evidence-notes.md:3–16",
+    "figure-results.csv:1–7"
+  ],
+  "reference_checks": {
+    "inputs_sha256": {
+      "long-manuscript.md": "bbaafe34c9cce3dec51214f8b1dd9af386fe19c445dce3dfcb3b75ede3557ce3",
+      "evidence-notes.md": "b49f1fca8a10230480d33f0cc8ce32e988daea811269adafe296785f7f01f044",
+      "figure-results.csv": "e2d5923ff6b2d1a95321ece8956a892ad4416d051c8c763c9ea31881a306374c",
+      "M1.md": "39b6a0a58df3ef009be76e30a2380511a4cdbce1f3df4a76ab9cc4a7fda2708c",
+      "M2.md": "7b6914dba9128aaa6f2d33247678c2f31eed9a9e31b43b3cbf20a2e312f5c7bd",
+      "M3.md": "ce4f35c9e57b0a359c78fe1c61efce06fa2b170607cd5f2e1b0a137400a9eb66"
+    },
+    "recomputed": {
+      "C1_target": {
+        "A": "7.4",
+        "B": "6.72",
+        "A_minus_B": "0.68"
+      },
+      "C2_target": {
+        "A": "6.74",
+        "B": "7.58",
+        "A_minus_B": "-0.84"
+      },
+      "C2_fixed_C1": {
+        "A": "7.34",
+        "B": "7.46",
+        "A_minus_B": "-0.12"
+      },
+      "C2_target_minus_fixed_difference": "-0.72",
+      "common_C1_weight_C2_minus_C1_difference": "-0.80"
+    },
+    "stale_exact_strings": {
+      "M1.md": [],
+      "M2.md": [],
+      "M3.md": []
+    },
+    "checks": "all passed",
+    "inputs_sha256_after": {
+      "long-manuscript.md": "bbaafe34c9cce3dec51214f8b1dd9af386fe19c445dce3dfcb3b75ede3557ce3",
+      "evidence-notes.md": "b49f1fca8a10230480d33f0cc8ce32e988daea811269adafe296785f7f01f044",
+      "figure-results.csv": "e2d5923ff6b2d1a95321ece8956a892ad4416d051c8c763c9ea31881a306374c",
+      "M1.md": "39b6a0a58df3ef009be76e30a2380511a4cdbce1f3df4a76ab9cc4a7fda2708c",
+      "M2.md": "7b6914dba9128aaa6f2d33247678c2f31eed9a9e31b43b3cbf20a2e312f5c7bd",
+      "M3.md": "ce4f35c9e57b0a359c78fe1c61efce06fa2b170607cd5f2e1b0a137400a9eb66"
+    },
+    "anonymous_input_bytes_unchanged": true,
+    "saved_report_runnable_numerical_check": "passed",
+    "json_structure_and_pairwise_consistency": "passed"
+  },
+  "candidates": {
+    "M1": {
+      "critical_errors": [],
+      "critical_errors_assessment": "完整阅读与复算所覆盖范围内未发现关键错误。",
+      "evidence_support": {
+        "assessment": "充分且相当，限于指定合成材料",
+        "checks": [
+          {
+            "dimension": "数值更新",
+            "location": "M1.md:7,58,69,77,81,85,101",
+            "finding": "所有受影响的C2/G3值、加权均值和差值一致；无旧值残留。",
+            "impact": "摘要、结果、图注及结论方向正确。"
+          },
+          {
+            "dimension": "目标与独立单位",
+            "location": "M1.md:25,36,38–44",
+            "finding": "保留簇数、配对、条件间独立、目标权重和固定C1权重定义。",
+            "impact": "原始比较和估量对象未改变。"
+          },
+          {
+            "dimension": "原始反例",
+            "location": "M1.md:56,64–66,73,81,101",
+            "finding": "C1/G2与G3负差和区间完整保留，并约束每组优势解读。",
+            "impact": "无选择性删减。"
+          },
+          {
+            "dimension": "C2/G3不确定性",
+            "location": "M1.md:58,69,81",
+            "finding": "−0.2与[−0.6,0.2]同时保留；未推出等价或无差异。",
+            "impact": "点排序未冒充方向性推断。"
+          },
+          {
+            "dimension": "N1证据来源",
+            "location": "M1.md:15,23,89,105",
+            "finding": "N1只有摘要；全文、可比性和外部验证未建立；N2–N4为完整本地说明。",
+            "impact": "未把摘要升级为全文、复现或独立验证。"
+          },
+          {
+            "dimension": "推断边界",
+            "location": "M1.md:48–50,87,95–97",
+            "finding": "保留配对/边际区间区别，聚合不确定性与交互检验缺失，调优后探索及因果/等价/外推限制。",
+            "impact": "强化表述未扩大显著性或因果范围。"
+          }
+        ],
+        "unsupported_material_claims_found": []
+      },
+      "argument_expression": {
+        "assessment": "已成立贡献和主要论证清楚；组成幅度与符号的连接仍可更显式。",
+        "strengths": [
+          {
+            "location": "M1.md:13,17,73,77,85,91,101",
+            "reason": "贡献是条件性平均排序及组反例的解释，不是新通用方法或准备操作。",
+            "impact": "强化贡献没有改写科学事实。"
+          },
+          {
+            "location": "M1.md:77,87",
+            "reason": "固定C1权重后仍为负，准确说明C2点排序不要求改用C2权重，同时保留因果边界。",
+            "impact": "原始敏感性结果获得清楚含义。"
+          },
+          {
+            "location": "M1.md:5–50,52–77,79–107",
+            "reason": "所有功能性章节保留，结果重组未损失完整稿件。",
+            "impact": "满足完整正文目标。"
+          }
+        ],
+        "issues": [],
+        "optional_improvement": {
+          "location": "M1.md:77,87",
+          "reason": "相比M3:78，未把同一C2结果的权重幅度对比直接连接到符号不变。",
+          "impact": "局部解释精度略低，不是必要分析缺失或事实错误。"
+        }
+      },
+      "comparisons": {
+        "M2": {
+          "dimensions": {
+            "numerical_update_and_direction": "相当",
+            "complete_manuscript_and_original_goal": "相当",
+            "original_counterexamples_and_C2G3_uncertainty": "相当",
+            "N1_summary_full_source_and_provenance": "相当",
+            "causal_significance_equivalence_transfer_scope": "相当",
+            "established_contribution_and_main_argument": "相当",
+            "workflow_execution": "未知",
+            "diff_and_operation_deliverables": "未知",
+            "composition_magnitude_vs_sign_expression": "相当"
+          },
+          "rationale": "M1与M2均正确连接条件平均、原始反例和固定权重后仍为负，核心科学内容相当。",
+          "workflow_rationale": "正文不能验证实际流程执行，未读取受限材料；未观察不能作为未完成证据。"
+        },
+        "M3": {
+          "dimensions": {
+            "numerical_update_and_direction": "相当",
+            "complete_manuscript_and_original_goal": "相当",
+            "original_counterexamples_and_C2G3_uncertainty": "相当",
+            "N1_summary_full_source_and_provenance": "相当",
+            "causal_significance_equivalence_transfer_scope": "相当",
+            "established_contribution_and_main_argument": "相当",
+            "workflow_execution": "未知",
+            "diff_and_operation_deliverables": "未知",
+            "composition_magnitude_vs_sign_expression": "差"
+          },
+          "rationale": "M3:78在同一C2结果下比较两套权重的−0.72，并连接共同C1权重下的异号；这是局部论证更明确，其他科学证据维度相当，不支持统一总胜者。",
+          "workflow_rationale": "正文不能验证实际流程执行，未读取受限材料；未观察不能作为未完成证据。"
+        }
+      },
+      "uncertainty": {
+        "workflow_execution": "未知：仅凭正文不能确认专业写作流程或指定英文写作处理是否实际执行，未读取流程材料。",
+        "required_diff_and_operation_deliverables": "未知：事实语义差异文件与操作文件不在允许输入中，不能判定其保存或质量。",
+        "external_validity_and_N1_full_source": "未知：N1全文、独立评估队列和可比性未建立；本次材料不能验证外部效果。",
+        "inferential_ceiling": "已知限制：合成调优后探索性摘要数据；缺簇级记录、聚合联合不确定性和交互检验；不支持因果、聚合显著性、等价或一般部署收益。",
+        "review_conclusion": "未发现关键错误仅针对完整阅读和复算所覆盖的可见内容，不是所有未观察事项均已正确执行的保证。"
+      }
+    },
+    "M2": {
+      "critical_errors": [],
+      "critical_errors_assessment": "完整阅读与复算所覆盖范围内未发现关键错误。",
+      "evidence_support": {
+        "assessment": "充分且相当，限于指定合成材料",
+        "checks": [
+          {
+            "dimension": "数值更新",
+            "location": "M2.md:7,50–52,60,62,68,72,88",
+            "finding": "所有更新值和均值差与当前表一致，无旧值残留。",
+            "impact": "正文和图注同步，排序方向正确。"
+          },
+          {
+            "dimension": "目标与独立单位",
+            "location": "M2.md:19,21,27–29",
+            "finding": "簇数、配对、独立性、目标权重与固定权重操作保留。",
+            "impact": "没有用簇比例替换决策权重。"
+          },
+          {
+            "dimension": "原始反例",
+            "location": "M2.md:47–49,54,56,68,88",
+            "finding": "保留C1/G2与G3反例，正确说明反例不否定加权算术。",
+            "impact": "全部原始比較参与论证。"
+          },
+          {
+            "dimension": "C2/G3不确定性",
+            "location": "M2.md:52,60,68",
+            "finding": "点差与跨零区间分开，未认定方向性优势或等价。",
+            "impact": "未把不确定性变成无效应。"
+          },
+          {
+            "dimension": "N1证据来源",
+            "location": "M2.md:15,76,92",
+            "finding": "N1摘要及缺失全文信息明确，不能建立独立复现或科学矛盾。",
+            "impact": "来源用途没有夸大。"
+          },
+          {
+            "dimension": "推断边界",
+            "location": "M2.md:33–37,64,74,82–84",
+            "finding": "保留配对区间解释、聚合/交互缺失和探索性、因果、等价、外推限制。",
+            "impact": "点反转未被升级为显著反转或机制。"
+          }
+        ],
+        "unsupported_material_claims_found": []
+      },
+      "argument_expression": {
+        "assessment": "问题、结果、讨论和结论闭环明确；只有轻微表格导航问题。",
+        "strengths": [
+          {
+            "location": "M2.md:13,56,64,72–76,88",
+            "reason": "比较问题与对应证据相连，贡献落在条件平均、组反例和固定权重描述。",
+            "impact": "成立贡献更明确，未制造新方法。"
+          },
+          {
+            "location": "M2.md:62,64,74",
+            "reason": "固定C1权重后仍为负且幅度依赖权重，因果与交互范围明确。",
+            "impact": "与M1的实质组成解释相当。"
+          },
+          {
+            "location": "M2.md:5–37,39–64,66–94",
+            "reason": "所有功能性章节和图注完整。",
+            "impact": "精简未丢失原始科学内容。"
+          }
+        ],
+        "issues": [
+          {
+            "severity": "低",
+            "location": "M2.md:39–52",
+            "reason": "Results: C1标题下放置同时包含C2行的全表；条件列清楚，C2随后完整说明。",
+            "impact": "轻微导航负担，无科学事实或推断错误。",
+            "suggestion": "可把全表放在共同Results标题下。"
+          }
+        ],
+        "optional_improvement": {
+          "location": "M2.md:62,64,74",
+          "reason": "未像M3:78那样量化并立即解释同一C2结果在两种权重下的幅度差。",
+          "impact": "局部连接未同样展开；原任务不要求新增该数。"
+        }
+      },
+      "comparisons": {
+        "M1": {
+          "dimensions": {
+            "numerical_update_and_direction": "相当",
+            "complete_manuscript_and_original_goal": "相当",
+            "original_counterexamples_and_C2G3_uncertainty": "相当",
+            "N1_summary_full_source_and_provenance": "相当",
+            "causal_significance_equivalence_transfer_scope": "相当",
+            "established_contribution_and_main_argument": "相当",
+            "workflow_execution": "未知",
+            "diff_and_operation_deliverables": "未知",
+            "composition_magnitude_vs_sign_expression": "相当"
+          },
+          "rationale": "M1与M2均正确连接条件平均、原始反例和固定权重后仍为负，核心科学内容相当。",
+          "workflow_rationale": "正文不能验证实际流程执行，未读取受限材料；未观察不能作为未完成证据。"
+        },
+        "M3": {
+          "dimensions": {
+            "numerical_update_and_direction": "相当",
+            "complete_manuscript_and_original_goal": "相当",
+            "original_counterexamples_and_C2G3_uncertainty": "相当",
+            "N1_summary_full_source_and_provenance": "相当",
+            "causal_significance_equivalence_transfer_scope": "相当",
+            "established_contribution_and_main_argument": "相当",
+            "workflow_execution": "未知",
+            "diff_and_operation_deliverables": "未知",
+            "composition_magnitude_vs_sign_expression": "差"
+          },
+          "rationale": "M3:78在同一C2结果下比较两套权重的−0.72，并连接共同C1权重下的异号；这是局部论证更明确，其他科学证据维度相当，不支持统一总胜者。",
+          "workflow_rationale": "正文不能验证实际流程执行，未读取受限材料；未观察不能作为未完成证据。"
+        }
+      },
+      "uncertainty": {
+        "workflow_execution": "未知：仅凭正文不能确认专业写作流程或指定英文写作处理是否实际执行，未读取流程材料。",
+        "required_diff_and_operation_deliverables": "未知：事实语义差异文件与操作文件不在允许输入中，不能判定其保存或质量。",
+        "external_validity_and_N1_full_source": "未知：N1全文、独立评估队列和可比性未建立；本次材料不能验证外部效果。",
+        "inferential_ceiling": "已知限制：合成调优后探索性摘要数据；缺簇级记录、聚合联合不确定性和交互检验；不支持因果、聚合显著性、等价或一般部署收益。",
+        "review_conclusion": "未发现关键错误仅针对完整阅读和复算所覆盖的可见内容，不是所有未观察事项均已正确执行的保证。"
+      }
+    },
+    "M3": {
+      "critical_errors": [],
+      "critical_errors_assessment": "完整阅读与复算所覆盖范围内未发现关键错误。",
+      "evidence_support": {
+        "assessment": "充分且相当，限于指定合成材料",
+        "checks": [
+          {
+            "dimension": "数值更新",
+            "location": "M3.md:7,25,56,66,68,72,78,90",
+            "finding": "更新传播完整；−0.72权重对比另经复算正确。",
+            "impact": "新增描述性算术有原表支持。"
+          },
+          {
+            "dimension": "目标与独立单位",
+            "location": "M3.md:23,29–33",
+            "finding": "配对、独立单位、簇数、目标权重及固定权重时保留C2结果完整。",
+            "impact": "没有改变原始比较或引入干预。"
+          },
+          {
+            "dimension": "原始反例",
+            "location": "M3.md:51–53,60–62,72,76,90",
+            "finding": "C1/G2与G3损失、负差和区间齐备。",
+            "impact": "保留平均优势的原始限制。"
+          },
+          {
+            "dimension": "C2/G3不确定性",
+            "location": "M3.md:56,66,72,80",
+            "finding": "更新点差与跨零区间完整，并区分点排序、未解决方向与非等价。",
+            "impact": "弱证据没有被抬高。"
+          },
+          {
+            "dimension": "N1证据来源",
+            "location": "M3.md:17,82,94",
+            "finding": "N1只有摘要；全文、版本和单独队列不能建立；N2–N4为完整本地说明。",
+            "impact": "未制造全文审查、复现或外部验证。"
+          },
+          {
+            "dimension": "推断边界",
+            "location": "M3.md:37–39,78–80,86",
+            "finding": "边际/配对区间区别以及聚合/交互、探索、因果、等价、外推限制保留。",
+            "impact": "−0.72没有被当作因果份额。"
+          }
+        ],
+        "unsupported_material_claims_found": []
+      },
+      "argument_expression": {
+        "assessment": "成立贡献和主要论证清楚；组成对幅度与符号的作用解释更明确。",
+        "strengths": [
+          {
+            "location": "M3.md:13,15,68,76–80,90",
+            "reason": "先比较同一C2结果的两套权重，再比较共同C1权重下的条件差，明确−0.72改变幅度但不改C2符号。",
+            "impact": "将组成幅度与条件点排序分开，优点在推理连接而不是数字数量。"
+          },
+          {
+            "location": "M3.md:78–80",
+            "reason": "额外算术明确止于描述性对比，不归因机制、不认定显著反转。",
+            "impact": "增强论证而未升级证据强度。"
+          },
+          {
+            "location": "M3.md:5–39,41–68,70–96",
+            "reason": "所有功能性章节保留；研究状态置于方法子节；明确未提供操作定义。",
+            "impact": "完整性保持，未补造方法。"
+          }
+        ],
+        "issues": [],
+        "optional_improvement": null
+      },
+      "comparisons": {
+        "M1": {
+          "dimensions": {
+            "numerical_update_and_direction": "相当",
+            "complete_manuscript_and_original_goal": "相当",
+            "original_counterexamples_and_C2G3_uncertainty": "相当",
+            "N1_summary_full_source_and_provenance": "相当",
+            "causal_significance_equivalence_transfer_scope": "相当",
+            "established_contribution_and_main_argument": "相当",
+            "workflow_execution": "未知",
+            "diff_and_operation_deliverables": "未知",
+            "composition_magnitude_vs_sign_expression": "好"
+          },
+          "rationale": "M3:78在同一C2结果下比较两套权重的−0.72，并连接共同C1权重下的异号；这是局部论证更明确，其他科学证据维度相当，不支持统一总胜者。",
+          "workflow_rationale": "正文不能验证实际流程执行，未读取受限材料；未观察不能作为未完成证据。"
+        },
+        "M2": {
+          "dimensions": {
+            "numerical_update_and_direction": "相当",
+            "complete_manuscript_and_original_goal": "相当",
+            "original_counterexamples_and_C2G3_uncertainty": "相当",
+            "N1_summary_full_source_and_provenance": "相当",
+            "causal_significance_equivalence_transfer_scope": "相当",
+            "established_contribution_and_main_argument": "相当",
+            "workflow_execution": "未知",
+            "diff_and_operation_deliverables": "未知",
+            "composition_magnitude_vs_sign_expression": "好"
+          },
+          "rationale": "M3:78在同一C2结果下比较两套权重的−0.72，并连接共同C1权重下的异号；这是局部论证更明确，其他科学证据维度相当，不支持统一总胜者。",
+          "workflow_rationale": "正文不能验证实际流程执行，未读取受限材料；未观察不能作为未完成证据。"
+        }
+      },
+      "uncertainty": {
+        "workflow_execution": "未知：仅凭正文不能确认专业写作流程或指定英文写作处理是否实际执行，未读取流程材料。",
+        "required_diff_and_operation_deliverables": "未知：事实语义差异文件与操作文件不在允许输入中，不能判定其保存或质量。",
+        "external_validity_and_N1_full_source": "未知：N1全文、独立评估队列和可比性未建立；本次材料不能验证外部效果。",
+        "inferential_ceiling": "已知限制：合成调优后探索性摘要数据；缺簇级记录、聚合联合不确定性和交互检验；不支持因果、聚合显著性、等价或一般部署收益。",
+        "review_conclusion": "未发现关键错误仅针对完整阅读和复算所覆盖的可见内容，不是所有未观察事项均已正确执行的保证。"
+      }
+    }
+  },
+  "overall_conclusion": {
+    "uniform_winner": null,
+    "top_journal_total_score": null,
+    "evidence_support": "三份核心证据维度相当。",
+    "local_argument_difference": "M3在组成对幅度和符号的作用解释上更明确；M1与M2在该维度相当。",
+    "minor_navigation_issue": "M2:39–52的跨条件全表位于Results: C1之下，仅有低影响导航问题。",
+    "unobserved_processes": "流程、指定写作处理执行和另外两份交付均未知，不据此排名。",
+    "ranking_exclusions": [
+      "篇幅",
+      "表格或声明数量",
+      "措辞保守程度",
+      "调用来源数量",
+      "未观察的流程"
+    ],
+    "input_preservation": "六份匿名输入的SHA-256与写入审查前一致，字节未改变。"
+  }
+}

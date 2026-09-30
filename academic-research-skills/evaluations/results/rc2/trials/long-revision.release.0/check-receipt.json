@@ -1,0 +1,32 @@
+{
+  "subject": "LOCAL_EVIDENCE_ROOT/trials/long-revision.release.0/manuscript.md",
+  "subject_sha256": "39b6a0a58df3ef009be76e30a2380511a4cdbce1f3df4a76ab9cc4a7fda2708c",
+  "checked_at_utc": "2026-09-30T10:54:19.853302+00:00",
+  "checks": [
+    "six frozen rows and all interval endpoints match Table 1",
+    "paired point differences match A minus B",
+    "cluster totals and target weight totals match",
+    "all three weighted point summaries recomputed with Decimal",
+    "updated differences propagated through five affected sections",
+    "obsolete numeric assertions absent from manuscript"
+  ],
+  "point_summaries": {
+    "C1": {
+      "A": "7.4",
+      "B": "6.72",
+      "A_minus_B": "0.68"
+    },
+    "C2": {
+      "A": "6.74",
+      "B": "7.58",
+      "A_minus_B": "-0.84"
+    },
+    "C2_with_C1_weights": {
+      "A": "7.34",
+      "B": "7.46",
+      "A_minus_B": "-0.12"
+    }
+  },
+  "automatic_result": "PASS",
+  "scope": "numeric and explicit text consistency; does not certify scientific semantics, human approval, or external verification"
+}

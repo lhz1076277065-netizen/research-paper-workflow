@@ -2,7 +2,7 @@
 name: topic-novelty
 description: "当需要从方向、文献或已有结果提出有知识增量的选题，或判断方案是否已被完成时使用；比较最近邻、竞争路线与决定性验证。"
 metadata:
-  version: "3.2.0-rc.1"
+  version: "3.2.0-rc.2"
 ---
 
 # 重要问题与可验证创新

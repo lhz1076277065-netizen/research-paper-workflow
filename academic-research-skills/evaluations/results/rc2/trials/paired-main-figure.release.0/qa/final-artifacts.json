@@ -1,0 +1,37 @@
+{
+  "files": {
+    "figure.svg": {
+      "sha256": "877c3f31e00e8ff09eb650e26f920f2c54bafaf3d3564dec5b0104d311cbaf0c",
+      "bytes": 23327
+    },
+    "figure.png": {
+      "sha256": "e81747222c389386a202a16b4983b4863434994da06588e19a19087d5f2c8bad",
+      "bytes": 180840
+    },
+    "figure.py": {
+      "sha256": "76ae34786a0ae8247028066d3ca88d8b1ff4d5855fc9167598deb91d9d5e9c7f",
+      "bytes": 11455
+    },
+    "caption.md": {
+      "sha256": "f8ce1837bdb52d77af624f4a36a2a6412b1f286e42886ef228d8a7df54e169fe",
+      "bytes": 1883
+    },
+    "operation.md": {
+      "sha256": "c2550cad6b97046b825ed68e3c05fed4869b3fb3cc808704662a87e571c72fea",
+      "bytes": 2085
+    }
+  },
+  "visual_review": {
+    "reviewed_files": [
+      "preview.png",
+      "figure.png",
+      "preview_grayscale.png"
+    ],
+    "revisions": [
+      "Separated table headers",
+      "Separated interval note and panel title",
+      "Reduced footer to one line and added footer-versus-tick check"
+    ],
+    "final_findings": "No clipped intervals or text overlaps observed; markers and labels remain distinguishable in grayscale. Target-size preview inspected."
+  }
+}

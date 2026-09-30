@@ -1,24 +1,5 @@
 # 源码差异
 
-两个 patch 与 JSON 清单分别记录五项修复和候选版增强。为避免十九份生成副本重复同一改动，清单展示维护源、测试和文档；完整源码包仍包含全部生成文件、历史及实际评估证据。文件哈希说明差异身份，不代表语义或科研质量通过。
+三个 patch 与 JSON 清单依次记录 v3.1.0→v3.1.1 根因修复、v3.1.1→v3.2.0-rc.1 增强和 v3.2.0-rc.1→v3.2.0-rc.2 当前迭代。当前差异包含三个直接维护的专业 protocol；共享维护源只列一次，十九份生成副本不重复展开。完整源码包含全部分发文件、历史与实际评估。哈希记录身份，不表示语义或科研质量认证。
 
-[
-  {
-    "comparison": "v3.1.0-to-v3.1.1",
-    "changed_authoritative_files": 38,
-    "status_counts": {
-      "added": 0,
-      "modified": 38,
-      "removed": 0
-    }
-  },
-  {
-    "comparison": "v3.1.1-to-v3.2.0-rc.1",
-    "changed_authoritative_files": 57,
-    "status_counts": {
-      "added": 7,
-      "modified": 50,
-      "removed": 0
-    }
-  }
-]
+当前新增/修改/删除：{"added": 8, "modified": 49, "removed": 0}。

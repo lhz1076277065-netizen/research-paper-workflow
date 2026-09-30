@@ -293,5 +293,51 @@ class EvaluationHarness(Work):
     def test_unconfigured_command_not_used(self):
         m=self.tool()
         with self.assertRaises(ValueError):m.run({'jobs':[]},[],self.root/'out','none','none')
+    def project_request(self,m):
+        skills=self.root/'source';module=skills/'manuscript-writing';module.mkdir(parents=True)
+        (module/'SKILL.md').write_text('Frozen entry\n')
+        (module/'reference.md').write_text('First line\nSecond line\n')
+        cases=self.root/'one.json';m.save(cases,[{'id':'one','skill':'manuscript-writing','prompt':'Edit one paragraph.'}])
+        suite=m.prepare(skills,self.root/'suite',cases_file=cases,evaluation_kind='same_version_repeat')
+        job=next(j for j in suite['jobs'] if '.release.' in j['id'])
+        return suite,job,m.load(job['request']),module
+    def test_snapshot_is_independent_and_only_selected_module_copied(self):
+        m=self.tool();suite,job,r,module=self.project_request(m)
+        (module/'reference.md').write_text('Updated original, after freeze')
+        m.verify_request(r)
+        self.assertEqual((Path(r['skill_snapshot']['root'])/'reference.md').read_text(),'First line\nSecond line\n')
+        self.assertEqual(r['evaluation_kind'],'same_version_repeat')
+        self.assertEqual(len(list((self.root/'suite/snapshots/release').iterdir())),1)
+    def test_changed_entry_or_reference_stops_adapter_before_execution(self):
+        m=self.tool();suite,job,r,module=self.project_request(m);suite['jobs']=[job]
+        ref=Path(r['skill_snapshot']['root'])/'reference.md';ref.write_text('Changed frozen reference')
+        with self.assertRaisesRegex(ValueError,'reference changed'):
+            m.run(suite,['unused-adapter','{request}','{output}'],self.root/'runs','fixture','no-model')
+        ref.write_text('First line\nSecond line\n');Path(r['skill_entry']).write_text('Changed frozen entry')
+        with self.assertRaisesRegex(ValueError,'entry changed'):m.verify_request(r)
+    def test_read_trace_measures_display_without_claiming_tokens(self):
+        m=self.tool();suite,job,r,module=self.project_request(m)
+        ref=Path(r['skill_snapshot']['root'])/'reference.md';trace=self.root/'reads.jsonl'
+        for _ in range(2):self.assertEqual(m.read_resources(r,[ref],trace,line_start=2,line_end=2),['Second line\n'])
+        metrics=m.resource_metrics(trace,r['initial_skill_text'])
+        self.assertEqual(metrics['read_events'],2);self.assertEqual(metrics['unique_resources'],1)
+        self.assertEqual(metrics['resource_display_chars'],24);self.assertEqual(metrics['exact_repeated_displays'],1)
+        self.assertIsNone(metrics['peak_context_tokens']);self.assertIsNone(metrics['input_tokens'])
+    def test_read_rejects_escape_changed_identity_and_role_bypass(self):
+        m=self.tool();suite,job,r,module=self.project_request(m);trace=self.root/'reads.jsonl'
+        outside=self.root/'external';outside.mkdir();(outside/'private.md').write_text('Outside module')
+        (module/'escaped-dir').symlink_to(outside,target_is_directory=True)
+        with self.assertRaisesRegex(ValueError,'outside module'):m.snapshot(module,self.root/'escape-copy',self.root/'escape-identity.json')
+        self.assertFalse((self.root/'escape-copy').exists())
+        with self.assertRaisesRegex(ValueError,'outside frozen'):m.read_resources(r,[module/'reference.md'],trace)
+        ref=Path(r['skill_snapshot']['root'])/'reference.md'
+        with self.assertRaisesRegex(ValueError,'project kind'):m.read_resources(r,[ref],trace,kind='professional')
+        Path(r['skill_snapshot']['manifest']).write_text('{}')
+        with self.assertRaisesRegex(ValueError,'identity changed'):m.read_resources(r,[ref],trace)
+    def test_adapter_changing_snapshot_is_not_a_valid_completed_run(self):
+        m=self.tool();suite,job,r,module=self.project_request(m);suite['jobs']=[job]
+        adapter=self.root/'adapter.py';adapter.write_text('from pathlib import Path\nimport json,sys\nr=json.loads(Path(sys.argv[1]).read_text())\nPath(r["skill_entry"]).write_text("Mutated")\nPath(sys.argv[2]).write_text("Answer")\n')
+        with self.assertRaisesRegex(ValueError,'entry changed'):
+            m.run(suite,[sys.executable,str(adapter),'{request}','{output}'],self.root/'runs','fixture','no-model')
 
 if __name__=='__main__':unittest.main()

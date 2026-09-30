@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "material_kind": "synthetic_only",
+  "design": {
+    "sharp_endpoints": [
+      {
+        "q1": "0",
+        "q2": "1/6",
+        "theta1": "3/4",
+        "theta2": "13/20",
+        "target": "69/100"
+      },
+      {
+        "q1": "1/5",
+        "q2": "1/30",
+        "theta1": "11/12",
+        "theta2": "17/28",
+        "target": "307/420"
+      }
+    ],
+    "B_theta": [
+      "13/16",
+      "5/8"
+    ],
+    "B_target": "7/10",
+    "bound_reason": "q2=1/6-(2/3)q1; target is strictly increasing on q1 in [0,1/5]; endpoint complete joint laws verified"
+  },
+  "figure_and_manuscript": {
+    "weighted_means": {
+      "C1": {
+        "A": "37/5",
+        "B": "168/25",
+        "difference": "17/25"
+      },
+      "C2": {
+        "A": "337/50",
+        "B": "379/50",
+        "difference": "-21/25"
+      },
+      "C2_C1_weights": {
+        "A": "367/50",
+        "B": "373/50",
+        "difference": "-3/25"
+      }
+    },
+    "total_change": "-38/25",
+    "fixed_weight_change": "-4/5",
+    "retained_fraction": "10/19",
+    "aggregate_interval": null,
+    "causal_attribution": false
+  },
+  "scope": "Exact arithmetic and feasible constructions. Human-readable claims, figures and full manuscripts require separate content review."
+}
