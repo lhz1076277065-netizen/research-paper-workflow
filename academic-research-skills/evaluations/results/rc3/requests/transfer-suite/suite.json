@@ -1,0 +1,54 @@
+{
+  "schema": "host-evaluation-2",
+  "status": "prepared_not_run",
+  "evaluation_kind": "unseen_material",
+  "jobs": [
+    {
+      "id": "chain-a.without-skill.0",
+      "request": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-a.without-skill.0.json",
+      "request_sha256": "500bc09ef4ffc3c5240cd533cdea5672fc8022060945d22690bea5a1a2604e83"
+    },
+    {
+      "id": "chain-a.comparison.0",
+      "request": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-a.comparison.0.json",
+      "request_sha256": "6975dc7d884f7dfb089ff3695a081e4197b66caa38e971e22dae558c5c2a0d26"
+    },
+    {
+      "id": "chain-a.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-a.release.0.json",
+      "request_sha256": "592c22b838d4d44d3a67641a56cbb52215a6e27ebfb2f2721c1bb2605f6484fc"
+    },
+    {
+      "id": "chain-b.without-skill.0",
+      "request": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-b.without-skill.0.json",
+      "request_sha256": "bf8e3882d9f5f5e5085086baafa1ba8531402f2d92c423da4b7151a829bf3a98"
+    },
+    {
+      "id": "chain-b.comparison.0",
+      "request": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-b.comparison.0.json",
+      "request_sha256": "bccaa5e33a3e9e200edcf6fa81af9cdb86f74a2a9c835d7a98b16ad6b11aa411"
+    },
+    {
+      "id": "chain-b.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-b.release.0.json",
+      "request_sha256": "1d7977ff03e204dbf13c0623359acd3fa305c496f67804f3e0b04b2e1f7149ed"
+    },
+    {
+      "id": "chain-c.without-skill.0",
+      "request": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-c.without-skill.0.json",
+      "request_sha256": "511d2f3984f5e6af73f118e2dc60c5816ee7de91e066e40c46049c37a48b847c"
+    },
+    {
+      "id": "chain-c.comparison.0",
+      "request": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-c.comparison.0.json",
+      "request_sha256": "8acab714560890f99770c8e25d8eff16ebaf0c19f80dfcf562b0e2a56ff23741"
+    },
+    {
+      "id": "chain-c.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-c.release.0.json",
+      "request_sha256": "461cb19cbeee3a065f81e9ca41a8674eb4b8ba96288247cbbc9c49d16ff6bdef"
+    }
+  ],
+  "manual_bundle_mode": true,
+  "native_registered_discovery_proven": false
+}

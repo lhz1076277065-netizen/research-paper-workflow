@@ -1,0 +1,186 @@
+{
+  "capability_count": 19,
+  "all_entry_bodies_descriptions_and_ui_unchanged": true,
+  "entry_chars_total": 12062,
+  "entry_chars_range": [
+    592,
+    770
+  ],
+  "research_profiles": 16,
+  "default": "general",
+  "extensions_allowed": true,
+  "entries": [
+    {
+      "capability": "analysis-execution",
+      "entry_chars": 617,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "78c6dddcd0136018d61d9109abe41c9bf554da497d716459448d4891d8639677",
+      "version": "3.2.0-rc.3",
+      "resource_files": 51
+    },
+    {
+      "capability": "citation-audit",
+      "entry_chars": 592,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "1fcaa32ab674155aa5a4ab8cc01510088b6108db04b7bbbaae988ae12a8ec09c",
+      "version": "3.2.0-rc.3",
+      "resource_files": 50
+    },
+    {
+      "capability": "data-discovery",
+      "entry_chars": 604,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "63484b487b9b2f35fa555b63218f951f3d2fed9ff9f7d081741118c5bb9f18c1",
+      "version": "3.2.0-rc.3",
+      "resource_files": 48
+    },
+    {
+      "capability": "data-preparation",
+      "entry_chars": 609,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "87d2dfb7ba801e9674bd28654e76d2abe273cfe0b8ca1b584c5529658d767503",
+      "version": "3.2.0-rc.3",
+      "resource_files": 48
+    },
+    {
+      "capability": "ethics-protocol",
+      "entry_chars": 592,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "70db0945ec88b37736a4353d8fb40ee3f5e823bae693093afe1e42ad7960c3d1",
+      "version": "3.2.0-rc.3",
+      "resource_files": 48
+    },
+    {
+      "capability": "journal-intelligence",
+      "entry_chars": 620,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "316bce37cc98f15c6b47ebeec5675126c909d1c7c53e99890ac758a7ed07f244",
+      "version": "3.2.0-rc.3",
+      "resource_files": 50
+    },
+    {
+      "capability": "literature-discovery",
+      "entry_chars": 612,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "d637543aff67ba3385b664ebc668d124f901bafbcd83e9b53e7f58c2f43f12cf",
+      "version": "3.2.0-rc.3",
+      "resource_files": 50
+    },
+    {
+      "capability": "manuscript-review",
+      "entry_chars": 678,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "906449f7e7ec88b1cdb8f4141a2846a360b1ef190f30a66538ca11c5ae521335",
+      "version": "3.2.0-rc.3",
+      "resource_files": 51
+    },
+    {
+      "capability": "manuscript-writing",
+      "entry_chars": 711,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "8dbc094af2d70359b717bdb500b27fab746ab2d6c605ed8af2025c087f54a23d",
+      "version": "3.2.0-rc.3",
+      "resource_files": 51
+    },
+    {
+      "capability": "paper-deep-reading",
+      "entry_chars": 599,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "6d91c3f68f6fe264a02f917bfc90b36bdf47b027a6a8c8067a57fcef6592816c",
+      "version": "3.2.0-rc.3",
+      "resource_files": 52
+    },
+    {
+      "capability": "peer-review-response",
+      "entry_chars": 661,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "8ba07b5b0503c0ed335f18b2e58cda79e06a1f3a9e9a6fff352c1fe37869487b",
+      "version": "3.2.0-rc.3",
+      "resource_files": 48
+    },
+    {
+      "capability": "publication-stewardship",
+      "entry_chars": 601,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "8210f7db0af9e3c38c43f0f913c18a19afc0f3839e912675d04e72dc03faf955",
+      "version": "3.2.0-rc.3",
+      "resource_files": 48
+    },
+    {
+      "capability": "research-design",
+      "entry_chars": 653,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "603e3f7638e9a1fc155338d2ab8ee08b4c89a2c3886458a511677f7b6f3001e0",
+      "version": "3.2.0-rc.3",
+      "resource_files": 50
+    },
+    {
+      "capability": "research-intake",
+      "entry_chars": 602,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "76cc633c5b702082b6c8280f4f5c2248c04e6d851a55d26a2b22aed7d5d05319",
+      "version": "3.2.0-rc.3",
+      "resource_files": 50
+    },
+    {
+      "capability": "research-paper-workflow",
+      "entry_chars": 770,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "795e1046ad1ae9a52b302fda9029b8c0ca45d554354afbdc92c2e6bba9acda01",
+      "version": "3.2.0-rc.3",
+      "resource_files": 54
+    },
+    {
+      "capability": "robustness-reproducibility",
+      "entry_chars": 603,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "1a87fd8844df714f6d1cd6b6db39af2e266084815708fbf9132a6c4ef7efceef",
+      "version": "3.2.0-rc.3",
+      "resource_files": 50
+    },
+    {
+      "capability": "scientific-visualization",
+      "entry_chars": 674,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "4de27a9ee5eda6ddd4ae61e3e1d6a1ef66cf7a2928d3dce5d3ac199e6e53c784",
+      "version": "3.2.0-rc.3",
+      "resource_files": 52
+    },
+    {
+      "capability": "submission-packaging",
+      "entry_chars": 602,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "b6170260269081dcc66de13db3ea14a9c3747d391f0b605c506496cbea013331",
+      "version": "3.2.0-rc.3",
+      "resource_files": 48
+    },
+    {
+      "capability": "topic-novelty",
+      "entry_chars": 662,
+      "entry_body_description_unchanged": true,
+      "ui_yaml_unchanged": true,
+      "entry_sha256": "ee394b8f7fca54c5ba4a452a0bc7fbb9747118b2ff4766d50e6e981f51a71598",
+      "version": "3.2.0-rc.3",
+      "resource_files": 49
+    }
+  ],
+  "proof_scope": "file structure and preserved entry scope, not nineteen new native routing/behavior certificates"
+}

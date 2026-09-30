@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-09-30T16:40:23.732648+00:00",
+  "status": "PASS",
+  "old_intro_words": 33,
+  "new_intro_words": 26,
+  "main_text_words": 662,
+  "whole_manuscript_words": 990,
+  "word_count_rule": "whitespace-delimited; main text sections 1-5 including headings; whole count includes draft banner and references",
+  "baseline_and_source_hashes": "PASS",
+  "anonymous_text_and_svg": "PASS",
+  "numeric_display_and_locations": "PASS",
+  "R1_R5_response_coverage": "PASS",
+  "actual_diffs_refreshed": true,
+  "computational_replication_performed": false,
+  "author_or_ethics_approval_inferred": false
+}

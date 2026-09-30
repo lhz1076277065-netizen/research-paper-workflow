@@ -1,0 +1,152 @@
+{
+  "source": "parent rollout turn_context and spawn/followup metadata only",
+  "configured_models_in_session": [
+    "gpt-6.1-sol"
+  ],
+  "spawns": {
+    "rc3_chain_a_control": {
+      "timestamp": "2026-09-30T14:09:49.853Z",
+      "call_id": "call_IR7aLwkWY5xwn4nvReRezypA",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_chain_a_candidate": {
+      "timestamp": "2026-09-30T14:10:14.545Z",
+      "call_id": "call_obYu0doyg5ytIXsJGXft0DWn",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_chain_a_comparison": {
+      "timestamp": "2026-09-30T14:10:47.938Z",
+      "call_id": "call_1mdoKU5uTjiz5SIGK94MSRSC",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_chain_b_control": {
+      "timestamp": "2026-09-30T14:25:16.645Z",
+      "call_id": "call_TNBbZfz16HgnmLqhQBwuOB9J",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_chain_b_comparison": {
+      "timestamp": "2026-09-30T14:31:48.283Z",
+      "call_id": "call_yvD70KyJqEkkDkWMgCTSM7tb",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_chain_b_candidate": {
+      "timestamp": "2026-09-30T14:33:52.920Z",
+      "call_id": "call_cDcA2kISfnnL6OIqiddqurLJ",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_chain_c_control": {
+      "timestamp": "2026-09-30T15:32:52.317Z",
+      "call_id": "call_BlKehXaX4x6rnW6Js6kTzeSk",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_chain_c_comparison": {
+      "timestamp": "2026-09-30T15:44:04.268Z",
+      "call_id": "call_2OARBe9nFi19jl00Rr52VQk5",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_chain_c_candidate": {
+      "timestamp": "2026-09-30T16:01:18.915Z",
+      "call_id": "call_UlTRtT3kbRFEh5VPssAAJVvx",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_targeted_regression": {
+      "timestamp": "2026-09-30T16:21:57.358Z",
+      "call_id": "call_nOvGzHEl8EBcyyUL0XGQxQBv",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_blind_chain_a": {
+      "timestamp": "2026-09-30T16:33:22.089Z",
+      "call_id": "call_hTPqUz3IlaQlKnmoDWGQRnXX",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_blind_chain_b": {
+      "timestamp": "2026-09-30T16:47:30.631Z",
+      "call_id": "call_Msa4ozxGBuyx4kGwQTcPiS9Q",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    },
+    "rc3_blind_chain_c": {
+      "timestamp": "2026-09-30T16:52:45.844Z",
+      "call_id": "call_2TdWy1MZPdJkGZXZnb7lIBh7",
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null
+    }
+  },
+  "followup_dispatches": [
+    {
+      "timestamp": "2026-09-30T15:04:28.556Z",
+      "call_id": "call_DTziXgFrxDnab4m8gL2HjNb0",
+      "target": "rc3_chain_b_control",
+      "message_sha256": "f0607f004599b6b2e2e99f13a8baa6baabe70818a413f265aeb8e672de32efa3"
+    },
+    {
+      "timestamp": "2026-09-30T15:07:51.260Z",
+      "call_id": "call_aqeBoEnMRhVDEO7r0V1elUxV",
+      "target": "rc3_chain_b_control",
+      "message_sha256": "6f840a553457b3ad9f302b93fcc521e164028e556d849682bf8f941efce78803"
+    },
+    {
+      "timestamp": "2026-09-30T15:20:33.035Z",
+      "call_id": "call_tNmgzXw41TtEAhEqTOmTFwb7",
+      "target": "rc3_chain_b_comparison",
+      "message_sha256": "ec0dbb331a2a7b531403f7634eb0c70f8efb2c6d84cb2b47fe5a4720dc4875da"
+    },
+    {
+      "timestamp": "2026-09-30T15:24:21.910Z",
+      "call_id": "call_RYAPbCn7Ekxn6oTlZwwWYQO5",
+      "target": "rc3_chain_b_comparison",
+      "message_sha256": "d2f142ea0c6d1ce239c06a959fbe4adf40f16b043a9ac5a22c6922124951fe2e"
+    },
+    {
+      "timestamp": "2026-09-30T15:29:28.105Z",
+      "call_id": "call_vWo4FqjDDA1IzBnAgvbobX7M",
+      "target": "rc3_chain_b_candidate",
+      "message_sha256": "f32ca0b48bcb10768d07a76709cb0d8face32325acb27bd3deab7a63c1e89571"
+    },
+    {
+      "timestamp": "2026-09-30T15:34:06.779Z",
+      "call_id": "call_FczkWpeUa8nrCFvdPM7I8YwA",
+      "target": "rc3_chain_b_candidate",
+      "message_sha256": "02fc4f9258d39bfd0899ff1a7783700366a7e8428d8d453622b77cb332b57666"
+    },
+    {
+      "timestamp": "2026-09-30T15:42:24.653Z",
+      "call_id": "call_jGRDwHloQf7hv4h9vHvJeAz5",
+      "target": "rc3_chain_b_candidate",
+      "message_sha256": "d1891a53b6947b5904e73a1c2ed7e0737aec2d06aa1d454c339ad48f5ac34bb2"
+    },
+    {
+      "timestamp": "2026-09-30T15:58:54.250Z",
+      "call_id": "call_fin4MoBVlvK05lNpDJRq0Ou2",
+      "target": "rc3_chain_b_candidate",
+      "message_sha256": "8fbde9484fe73126393018a29f938c6b39f6b2da9d3db93dd620925ee92daafd"
+    }
+  ],
+  "actual_served_model_version": null,
+  "hidden_reasoning_exported": false,
+  "per_trial_tokens_peak_cost": null
+}

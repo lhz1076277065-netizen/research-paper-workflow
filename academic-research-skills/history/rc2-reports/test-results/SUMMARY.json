@@ -1,0 +1,82 @@
+{
+  "version": "3.2.0-rc.2",
+  "scope": "Complete discipline-neutral Skill release candidate; synthetic development fixtures, no actual research paper",
+  "regression": {
+    "version": "3.2.0-rc.2",
+    "generated_at": "2026-09-30T12:50:33.237251+00:00",
+    "tests_run": 514,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "groups": {
+      "test_architecture": 86,
+      "test_integration": 78,
+      "test_lean": 54,
+      "test_portability": 50,
+      "test_quality31": 68,
+      "test_release": 57,
+      "test_suite": 121
+    },
+    "platform": "Darwin",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "scope": "Local software regression. HTTP/source responses are synthetic fixtures unless separately reported.",
+    "native_agent_behavior_evaluated": false,
+    "real_paper_lifecycle_tested": false,
+    "macos_native_tested": true
+  },
+  "retained_rc1_cases": 509,
+  "new_targeted_cases": 5,
+  "build": {
+    "generated_files": 797,
+    "drift": 0,
+    "evidence_in_source": "evaluations/results/rc2/engineering/final-build-check.json"
+  },
+  "smoke": {
+    "scientific_tests": 7,
+    "scientific_passed": true,
+    "manufactured_inputs": true
+  },
+  "structure": {
+    "skills_checked": 19,
+    "passed": true
+  },
+  "preserved": {
+    "capabilities": 19,
+    "research_profiles": 16,
+    "default_profile": "general",
+    "extensions_allowed": true,
+    "external_professional_sources": 13,
+    "entry_body_and_description_changes": 0,
+    "UI_yaml_unchanged": true,
+    "selected_frozen_candidate_modules_unchanged": 5,
+    "old_rc1_archives_unchanged": true
+  },
+  "native_evaluation": {
+    "new_material_task_executions": 15,
+    "targeted_same_version_repeats": 3,
+    "old_material_regression_executions": 1,
+    "natural_deployment_probes": 1,
+    "task_executions": 20,
+    "anonymous_content_reviews": 3,
+    "total_independent_contexts": 23,
+    "manual_project_entry_contexts": 13,
+    "without_project_entry_contexts": 6,
+    "candidate_tuned_using_test_results": false,
+    "exact_model_version": null,
+    "configured_model_alias": "gpt-6.1-sol",
+    "rc2_platform_registration_or_auto_discovery_established": false,
+    "local_figure_gains": [
+      "paired endpoint verification",
+      "shared effect-size scale"
+    ],
+    "uniform_quality_gain_established": false,
+    "per_trial_tokens": null,
+    "peak_effective_context": null,
+    "per_trial_cost": null,
+    "report_in_source": "evaluations/results/QUALITY_REPORT.zh-CN.md"
+  },
+  "real_research_project_or_manuscript_produced": false,
+  "scientific_quality_certified": false
+}

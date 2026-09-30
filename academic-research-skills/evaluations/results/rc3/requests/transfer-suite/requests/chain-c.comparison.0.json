@@ -1,0 +1,75 @@
+{
+  "case_id": "chain-c",
+  "condition": "comparison",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "unseen_material",
+  "skill_snapshot": {
+    "root": "LOCAL_EVIDENCE_ROOT/transfer-suite/snapshots/comparison/chain-c",
+    "manifest": "LOCAL_EVIDENCE_ROOT/transfer-suite/identities/comparison.chain-c.json",
+    "manifest_sha256": "e5bf0ca610cd6e773b5ff72f2288cc5265dc0cd903fd57206bcbc4954b718e9f"
+  },
+  "user_prompt": "完成 chain-c 的合成 Skill 开发任务，按照材料 README.md 交付实际成果。",
+  "material": "# SYNTHETIC / Skill development fixture\nAll journals, authors, license facts, review comments, results and draft passages\nin this directory are fictional. Only the two bibliographic DOI identities in\nreferences.json are real; they are included to test identity vs semantic support.\nNo research, peer review, submission or publication is being performed for a\nreal project. Use the supplied current fictional policies as a closed-world\ndecision task, not internet recommendations for real journals. No external\nsubmission, messaging, author declaration or approval is authorized.\nRequest: resume the supplied draft at its current state. Review its important\nclaims and citations, choose a defensible journal/article type, revise the actual\ndraft, answer the supplied review comments through real changes or justified\ndisagreement, and build an editable submission package. Prepare a version-aware\ncorrection note for the supplied older public snapshot. Preserve that snapshot.\nDo not invent new experiments or fill unknown authors, permissions or ethics\ndecisions as approved. Continue the work possible on the permitted material.\nSeparate scientific reasoning, manuscript text, author requests and operation\nreceipts. A checklist without the actual revised files is not the requested work.\n",
+  "material_root": "LOCAL_EVIDENCE_ROOT/materials/chain-c",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/README.md",
+      "sha256": "e17d0385b8fa634435f7ba1020e70964b9164070e43429a3bcf42ae04c514f8d"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/author-and-license.md",
+      "sha256": "3fde6ec7364d57672ca9f099c286db7379673966b0da49e8dca140f0dbd21c1f"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/caption-v2.md",
+      "sha256": "b7fdbc08707f6dc4a7417b9e0f9e6f9b9d032a169dc7b4feec4d7659193bccbb"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/draft-v2.md",
+      "sha256": "558deb060c3d3a820b545805b3908d1636359cd5459bed3539e1cb2b71f331da"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/evidence.md",
+      "sha256": "4bf79c81a4551afd0956ddfdf6217eb7b2d73953d32c792d8cd50c807183ab0f"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/journal-policies.md",
+      "sha256": "bccc289b41ba08d8636caa129b246650c2bcb50f1dcff81b5074e55b56cf315c"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/published-snapshot-v1.md",
+      "sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/references.json",
+      "sha256": "3ce863036f4de5b131aafc129b8e8b03acf10f83848dde7a679a05238832f593"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/review-comments.md",
+      "sha256": "57bd8f6dafec51148b20750024b2cd4bcedaaa9434b75340c66354767bf81dc7"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/source-availability.md",
+      "sha256": "c89e89603c7b2f6ad23c2c328d0e019da6a8bbf0e334ea2c83e4c1ce17187399"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-c/supplement-v2.md",
+      "sha256": "e5955a0d69ef2250c5bb2dda7713e331636125086ff528063584bfa232196ff5"
+    }
+  ],
+  "skill_entry": "LOCAL_EVIDENCE_ROOT/transfer-suite/snapshots/comparison/chain-c/SKILL.md",
+  "skill_entry_sha256": "73c37fa48f2928ba35ddb45bf527b93a9472569dd3e5008a8b2f41b9d91e9627",
+  "initial_skill_text": "---\nname: research-paper-workflow\ndescription: \"当用户要求跨阶段开展学术研究或完成整篇研究成果时协调问题、设计、证据、图稿与交付；单项请求直接用对应能力，更新Skill本身不启动论文研究。\"\nmetadata:\n  version: \"3.2.0-rc.1\"\n---\n\n# 实际学术研究到完整成果的当前Agent总控\n\n用户请求实际开展研究时，先建立研究承诺、最近邻差异与决定性验证；按阶段推进真实研究、正式图表、全文与选刊。不要把工程试跑或容易下载的小数据分析作为顶刊目标完成。\n\n由当前Agent及其现有模型执行，原生子代理按需使用；不寻找本地大模型或其他宿主联动。外部专业Skill从用户指定13仓库的本地安装/当前GitHub版本选择；方法和原创代码可自主探索。缺依赖按本任务准备并验证后运行。方法与实现可自主选择、改造或新写代码；正式结论依据实际证据。\n\n完整项目先读 [科研主线](references/research-lifecycle.md) 和 [研究质量](references/research-quality.md)，建立一份可见路线板后持续推进。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。\n\n交付实际成果及关键证据、采用的Skill与完成范围。局部任务直接做；完整研究保留科学目标与下一步，不让自检通过、导出函数或普通小题替代用户的研究目标。\n\n脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。\n\n开发、更新或打包本套Skill时，交付通用Skill文件与软件验证，不自动选具体课题或撰稿。\n",
+  "available_selected_capabilities": [
+    "research-paper-workflow",
+    "journal-intelligence",
+    "ethics-protocol",
+    "citation-audit",
+    "manuscript-review",
+    "submission-packaging",
+    "peer-review-response",
+    "publication-stewardship"
+  ],
+  "adapter_contract": "Equal current native Agent/model/tools/professional pool. No other-arm answers. Project capability resources demand-loaded within frozen bundle; evaluation-only bundling, not native auto-discovery."
+}

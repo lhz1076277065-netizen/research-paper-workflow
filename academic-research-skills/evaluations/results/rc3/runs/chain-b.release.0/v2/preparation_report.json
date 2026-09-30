@@ -1,0 +1,62 @@
+{
+  "synthetic": true,
+  "archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+  "generated_at_utc": "2026-09-30T16:15:53.685329+00:00",
+  "preparation_code_sha256": "70a3f5f642b8ee8640d7e19723b99a3ef7a75be53c0cba92cb68f7007ece06a9",
+  "sample_flow": [
+    {
+      "stage": "raw_measurement_rows",
+      "count": 43
+    },
+    {
+      "stage": "unique_events_after_exact_copy_removal",
+      "count": 41
+    },
+    {
+      "stage": "events_after_active_metadata_join",
+      "count": 41
+    },
+    {
+      "stage": "unit_method_means",
+      "count": 16
+    },
+    {
+      "stage": "independent_paired_units",
+      "count": 8
+    }
+  ],
+  "duplicates_removed": [
+    "e004",
+    "e041"
+  ],
+  "conflicting_events": 0,
+  "missing_raw_fields": 0,
+  "metadata_rows": 16,
+  "active_metadata_rows_used": 8,
+  "unmatched_events": 0,
+  "ambiguous_metadata_matches": 0,
+  "metadata_join": "unit_id and inclusive observation-date validity; one active match per event",
+  "measurement_conversion": {
+    "score": 1.0,
+    "subscore": 0.001
+  },
+  "technical_repetition_rule": "equal-weight mean per independent unit and method after conversion",
+  "independent_units_per_stratum": {
+    "g1": 4,
+    "g2": 4
+  },
+  "target_weights": {
+    "g1": 0.8,
+    "g2": 0.2
+  },
+  "sampled_unit_weights": {
+    "g1": 0.5,
+    "g2": 0.5
+  },
+  "unit_independence_status": "stipulated conditional on stratum by synthetic dictionary; not externally validated",
+  "derived_hashes": {
+    "sample_flow.csv": "66d521f6fdafede8fcab5d2d1771b30523c589a3f92633d7bd85bedb2d27d466",
+    "paired_units.csv": "f0506488b34bb5fc27f42d4225df41a97356256537a9c3747bfcc0d2559c1c75",
+    "converted_events.csv": "a799066a3fd01ad2785a12153919e621ad2e59e6b7ea65481aa48a8bd732ffa4"
+  }
+}

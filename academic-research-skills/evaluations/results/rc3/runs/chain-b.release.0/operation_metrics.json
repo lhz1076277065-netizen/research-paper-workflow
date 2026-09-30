@@ -1,0 +1,46 @@
+{
+  "recorded_at_utc": "2026-09-30T15:20:13.945896+00:00",
+  "first_successful_resource_read_utc": "2026-09-30T14:35:14.657475+00:00",
+  "last_resource_read_utc": "2026-09-30T14:48:55.065198+00:00",
+  "successful_resource_read_records": 39,
+  "resource_read_records_by_kind": {
+    "project": 16,
+    "material": 2,
+    "professional": 21
+  },
+  "unique_resource_paths": 35,
+  "resource_read_source_bytes_sum_with_repeats": 271446,
+  "resource_read_displayed_chars_sum_with_repeats": 156630,
+  "input_tokens": null,
+  "cached_input_tokens": null,
+  "output_tokens": null,
+  "total_tokens": null,
+  "cost": null,
+  "unknown_token_cost_reason": "per-Agent provider usage and billable charge are unavailable in this task API",
+  "full_agent_turn_wall_seconds": null,
+  "full_agent_turn_wall_reason": "exact dispatch/start timestamp unavailable; successful resource-read window is observable",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "Pillow": "12.3.0"
+  },
+  "model": "current native Agent/model inherited for this task; precise model identifier not exposed",
+  "global_installs": 0,
+  "new_subagents": 0,
+  "outgoing_messages": 0,
+  "observed_read_to_record_seconds": 2699.288421,
+  "end_to_end_rerun_stage_seconds": 2.603721791994758,
+  "end_to_end_rerun_start_utc": "2026-09-30T15:11:32.354673+00:00",
+  "end_to_end_rerun_finish_utc": "2026-09-30T15:11:34.959729+00:00",
+  "stage_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "finalized_at_utc": "2026-09-30T15:27:56.126817+00:00",
+  "observed_read_to_finalize_seconds": 3161.469342
+}

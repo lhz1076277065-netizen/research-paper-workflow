@@ -1,0 +1,94 @@
+{
+  "sources": [
+    {
+      "evidence_id": "E001",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/README.md",
+      "locator": "Synthetic status, primary target, composition, design boundaries",
+      "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    },
+    {
+      "evidence_id": "E002",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.without-skill.0/v2/inputs/original/dictionary.md",
+      "locator": "Event copies, independent units, precision, conversion, temporal join, independence",
+      "sha256": "52a2a3ebb520e3971d898205ab312a96affac0735bcb5fa369bcfa7eed77d4c7",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    },
+    {
+      "evidence_id": "E003",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.without-skill.0/v2/inputs/original/measurements.csv",
+      "locator": "Complete original event table",
+      "sha256": "2e3a498385f00877ea8ed9f8aa2be4a86942f4382e7a469e13699fbc04f24539",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    },
+    {
+      "evidence_id": "E004",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.without-skill.0/v2/inputs/original/units.csv",
+      "locator": "Complete historical and current metadata table",
+      "sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    },
+    {
+      "evidence_id": "E005",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.without-skill.0/v2/results.json",
+      "locator": "strata; aggregates; interval; plus flow.json and paired_units.csv",
+      "sha256": "526e5e73cc65587efd417fb032dbaba28bcd1b64ba051601093836fab7cc041d",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    },
+    {
+      "evidence_id": "E006",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.without-skill.0/v2/robustness_leave_one_out.csv",
+      "locator": "All rows; results.json.robustness; robustness_weight_sensitivity.csv; analysis.py.calculate",
+      "sha256": "d7eb73bd9834ed9e010bc997321f791a335e841c90b7f649feee59f8220561c3",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    },
+    {
+      "evidence_id": "E007",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.without-skill.0/v2/main_figure.svg",
+      "locator": "Both panels; figure_machine_qa.json; PNG and grayscale Agent inspection",
+      "sha256": "e8452095911dfc0541a825339770d2f28d071630e8b5cc8e32657961f1ef86fd",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    },
+    {
+      "evidence_id": "E008",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.without-skill.0/v2/inputs/original/LICENSE.txt",
+      "locator": "Entire fixture reuse permission and synthetic material statement",
+      "sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    },
+    {
+      "evidence_id": "E009",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.without-skill.0/v2/inputs/approved-correction.json",
+      "locator": "Authorized raw-value correction; definitions and weights unchanged",
+      "sha256": "ea52cbde1af67ee7b218ad6be411549ee37547262bf4d3d0e116eaa8c2d2f379",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    },
+    {
+      "evidence_id": "E010",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.without-skill.0/v2/correction_dependency_audit.json",
+      "locator": "Exactly three raw rows, two unique events; unchanged members and definitions",
+      "sha256": "8a1271fbd01836f490011b5d9273839c69e4ca7f0b7cfa1ad51e22533a5ddd9e",
+      "agent_checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+      "verification": "Agent inspected and machine checked; human verification unknown",
+      "material_class": "synthetic development fixture or derived artifact"
+    }
+  ]
+}

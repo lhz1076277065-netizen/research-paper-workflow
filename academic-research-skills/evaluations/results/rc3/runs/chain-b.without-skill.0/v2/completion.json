@@ -1,0 +1,26 @@
+{
+  "recorded_at_utc": "2026-09-30T15:30:36.984648+00:00",
+  "status": "correction_complete",
+  "same_agent_continuation": true,
+  "synthetic": true,
+  "check_status": "PASS",
+  "old_files_checked_unchanged": 47,
+  "analysis_method_code_unchanged": true,
+  "primary_outputs": [
+    "prepare.py",
+    "analysis.py",
+    "check.py",
+    "results.json",
+    "robustness_leave_one_out.csv",
+    "robustness_weight_sensitivity.csv",
+    "main_figure.png",
+    "main_figure.svg",
+    "caption.md",
+    "manuscript.md",
+    "checks.md",
+    "operation-correction.md"
+  ],
+  "human_scientific_approval": "unknown",
+  "token_usage": "unknown",
+  "cost": "unknown"
+}

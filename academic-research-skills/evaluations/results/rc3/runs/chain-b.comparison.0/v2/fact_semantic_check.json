@@ -1,0 +1,100 @@
+{
+  "status": "passed scoped computational and Agent semantic checks",
+  "checked_at_utc": "2026-09-30T15:53:53.751316+00:00",
+  "synthetic": true,
+  "original_identities_unchanged": [
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/README.md",
+      "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/archives/mirror-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/archives/paired-measurements-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/archives/proxy.zip",
+      "sha256": "32c235076cb288f6b3748172706af617b967cf5e6ea214121434b602e7085b93"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/candidates.json",
+      "sha256": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/paired-measurements-v2.zip",
+      "sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/approved-correction.json",
+      "sha256": "ea52cbde1af67ee7b218ad6be411549ee37547262bf4d3d0e116eaa8c2d2f379"
+    }
+  ],
+  "prior_run_files_unchanged": true,
+  "authorised_correction_checked": true,
+  "prior_caption_disclosure_retained": true,
+  "independent_bootstrap_count_algorithm": "all multinomial count vectors; integer multiplicities; rational means",
+  "bootstrap_distributions_match_exactly": true,
+  "prespecified_target_weights_retained": true,
+  "trust_boundary_checks": [
+    "conflicting duplicate rejected",
+    "nonunique date-valid metadata join rejected"
+  ],
+  "figure": {
+    "svg_mm": [
+      179.99999983333333,
+      103.00000002222221
+    ],
+    "png_mm": [
+      179.95935991871985,
+      102.99720599441198
+    ],
+    "png_pixels": [
+      4251,
+      2433
+    ],
+    "editable_svg_text": true,
+    "embedded_raster": false,
+    "Agent_viewed_final_png_and_grayscale": true
+  },
+  "subjects": [
+    {
+      "file": "manuscript_draft.md",
+      "sha256": "bee0c4c989eddc3ba6f8222bc322e96e13b4632a522bac5a6dddf604c07ececa"
+    },
+    {
+      "file": "manuscript.md",
+      "sha256": "297180ff904449d2002a6b859cfa1955b9f1722e3683451a6ca620814ca5c8db"
+    },
+    {
+      "file": "caption.md",
+      "sha256": "39a565c05d76a5b4f477e5d0db4efa10fd55a203e87f59e153b2d2c147c6a5c8"
+    },
+    {
+      "file": "main_figure.svg",
+      "sha256": "755d2bdefeb2a047d084e55d3ec136fcc3f672e3075a7dec75ed1a5c6aca5114"
+    },
+    {
+      "file": "main_figure.png",
+      "sha256": "021f39c51cd8a310cebd39fe2195f9eeb6273d66f43fe3c44ce05769f08ff699"
+    },
+    {
+      "file": "results.json",
+      "sha256": "b8422058262d4f23dd185f1e02cbc79fb8df42ded52574d75b579d7af8e81920"
+    }
+  ],
+  "expression_numeric_tokens_unchanged": true,
+  "semantic_review": {
+    "target_and_comparator": "A-B paired units; 80/20 primary; 50/50 diagnostic retained",
+    "direction": "opposing strata; target point estimate negative; interval crosses zero",
+    "scope": "manufactured eight-unit fixture; conditional empirical resampling; real population unknown",
+    "causality": "descriptive throughout; no causal attribution added",
+    "significance": "no superiority, equivalence or hypothesis-test claim added",
+    "important_counterevidence": "stratum-2 direction and positive sample aggregate retained"
+  },
+  "human_verification": "not performed",
+  "real_external_validation": "not performed",
+  "submission_ready": false
+}

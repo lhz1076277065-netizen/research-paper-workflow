@@ -1,0 +1,55 @@
+# Target composition changes the direction of a paired method comparison
+
+SYNTHETIC developmental manuscript v3. Proposed article type: Technical Note. Prepared for anonymous review under the supplied Journal Lens policy v2 (2026-09-01). Not submitted; author approval and required declarations remain pending.
+
+## Abstract
+
+An aggregate method comparison depends on the composition used to combine strata. We report a diagnostic comparison from the supplied synthetic result memo for eight independent paired units, four in each of two strata. Lower scores are better, and differences are expressed as A−B. Technical repetitions were averaged within each unit and method after unit conversion. Mean differences were −1.00 score in g1 and +3.00 score in g2. Their equal sampled mixture gave +1.00 score, whereas the target weights of 0.8 for g1 and 0.2 for g2, fixed before measurement, gave −0.20 score. The reported 95% within-stratum paired-unit bootstrap percentile interval for the target-weighted mean was [−0.60, 0.20] score. Thus the reported aggregate direction changes with composition, while the stratum-specific results favor different methods. The interval includes zero and does not establish equivalence. The available record supports a composition diagnostic, with no causal assignment, causal adjustment or external validation. Numerical source data and resampling outputs were not supplied; results are reported from the memo rather than independently replicated.
+
+## Introduction
+
+A single aggregate comparison may change meaning when the intended population mixture differs from the sampled mixture. This note makes that dependence explicit by retaining both stratum-specific paired differences and comparing their sampled and prespecified target-weighted summaries. Its contribution is a transparent diagnostic of composition-dependent direction, without a claim to a new general causal or predictive method.
+
+## Methods
+
+### Units and paired differences
+
+The supplied record describes eight independent units, with four units in each of strata g1 and g2. Both A and B were measured on the same unit. Technical repetitions were averaged within each unit and method after unit conversion; they are repeated measurements within a unit, not additional independent units. The number of repetitions and details of the conversion were not supplied. Independence is a stated feature of the supplied design record, not a conclusion inferred from a methodological citation. The record does not permit an independent audit of that assumption.
+
+For each unit, the comparison is the converted, repetition-averaged score for A minus the corresponding score for B. Lower scores are better, so a negative difference favors A and a positive difference favors B within the comparison described. The reported stratum means are the inputs to the summaries below.
+
+### Composition and interval
+
+The target weights, 0.8 for g1 and 0.2 for g2, were fixed before measurement. The equal sampled mixture follows from four units per stratum and uses weights 0.5 and 0.5. For stratum mean differences d1 and d2, the weighted comparison is w1×d1 + w2×d2, with w1+w2=1. Target weighting changes the aggregate being described; it does not change the within-stratum observations or their signs.
+
+The supplied analysis record reports resampling paired units within each stratum and reapplying the target weights. The interval object is the target-weighted mean paired difference. Resampling is at the independent-unit level, preserving A and B together within each unit, after technical repetitions have been averaged. The reported interval is a 95% percentile bootstrap interval, not an interval for a causal effect or an equivalence test. The number of bootstrap draws, quantile implementation, random seed, numerical source data and original analysis script were not provided. We did not rerun the bootstrap or certify its implementation or coverage.
+
+## Results
+
+Within g1, mean A−B was −1.00 score (four units), favoring A. Within g2, mean A−B was +3.00 score (four units), favoring B. Both strata are retained in Figure 1 because their opposing directions explain the aggregate behavior.
+
+The equal sampled mixture gave 0.5×(−1.00)+0.5×3.00=+1.00 score. The prespecified target mixture gave 0.8×(−1.00)+0.2×3.00=−0.20 score. These summaries use the same reported stratum means; their different directions arise from their different composition weights. The target-weighted mean has the supplied 95% interval [−0.60, 0.20] score. No intervals were supplied for either stratum or the equal sampled mixture, and none are added to Figure 1.
+
+## Discussion
+
+In this supplied comparison, the equal sampled summary favors B and the target-weighted point estimate favors A. Neither is a universal ranking: g2 favors B, while g1 favors A. Choosing a mixture therefore changes the aggregate conclusion and must be reported together with the strata being combined. A target mixture is not justified merely because it gives a preferred direction; the present target weights are reported as fixed before measurement.
+
+The target interval includes zero and spans negative and positive values. It neither establishes practical equivalence nor proves exact absence of a difference. No equivalence margin or registered equivalence test is recorded. No causal assignment, confounding measurements or causal adjustment are available, so the comparison does not establish a causal advantage. A propensity-score bibliographic identity cannot supply those missing design features.
+
+The scope is limited to the supplied synthetic record. There are four independent units per stratum and no external validation. Without numerical source data, protocol details and resampling outputs, this developmental revision can reconcile reported values and interpretation but cannot independently reproduce the means, validate independence or verify bootstrap coverage in this or another target population. The note supports reporting both composition and stratum-specific directions when using an aggregate comparison.
+
+## Data and code access
+
+The fixture license permits local analysis and aggregate-result and code sharing, but prohibits redistribution of raw unit-level records and identifiers. No raw data are supplied with this package. The supplied result memo, its aggregate values and the new figure-drawing code are distinguished in Supplement S1; the figure code does not recreate the original analysis. The original numerical data and bootstrap script or realizations were not obtained. Any request to consult controlled materials must specify its purpose, requested fields and safeguards and first obtain a confirmed lawful access scope, designated custodian and approved access mechanism. None of these access approvals or mechanisms is confirmed, and this draft promises no raw-data access or redistribution.
+
+## Required declarations — unresolved draft
+
+Author list and order, affiliations beyond the supplied working file, contact and ORCID, author contributions and final approval remain unconfirmed. Funding and sponsor role, conflicts, human-participant status, ethics determination and any consent requirements are unknown. No exemption, approval, consent, no-conflict or no-funding statement is asserted. These declarations require author confirmation before any actual submission. Local AI assistance was used to revise language, reconcile the supplied results and prepare files; a venue-appropriate disclosure requires author review. See the separate editor-only declaration draft.
+
+## Figure
+
+Figure 1 and its editable caption accompany this manuscript. Both g1 and g2 are shown; only the target-weighted mean carries the supplied uncertainty interval.
+
+## References
+
+No external references are relied on to establish the empirical facts or design assumptions in this synthetic note. The unsupported uses of Efron (1979) and Rosenbaum and Rubin (1983) in v2 have been removed. Their real bibliographic identities, bounded source access and claim-support decisions are retained in the separate internal citation audit. The supplied result memo is the source of the reported synthetic results.

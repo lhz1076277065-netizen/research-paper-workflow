@@ -1,0 +1,96 @@
+{
+  "synthetic": true,
+  "score_direction": "lower is better",
+  "contrast": "A minus B; negative favors A",
+  "strata": {
+    "g1": {
+      "n_independent_units": 4,
+      "target_weight": 0.8,
+      "sample_weight": 0.5,
+      "A_mean_score": 5.5,
+      "B_mean_score": 6.5,
+      "difference_A_minus_B": -1.0,
+      "sd_difference": 0.408248290463863,
+      "bootstrap_percentile_95": [
+        -1.375,
+        -0.625
+      ],
+      "n_bootstrap_ordered_samples": 256
+    },
+    "g2": {
+      "n_independent_units": 4,
+      "target_weight": 0.2,
+      "sample_weight": 0.5,
+      "A_mean_score": 9.5,
+      "B_mean_score": 6.5,
+      "difference_A_minus_B": 3.0,
+      "sd_difference": 2.160246899469287,
+      "bootstrap_percentile_95": [
+        1.5,
+        5.0
+      ],
+      "n_bootstrap_ordered_samples": 256
+    }
+  },
+  "aggregates": {
+    "target": {
+      "weights": {
+        "g1": 0.8,
+        "g2": 0.2
+      },
+      "A_mean_score": 6.300000000000001,
+      "B_mean_score": 6.5,
+      "difference_A_minus_B": -0.1999999999999993,
+      "bootstrap_percentile_95": [
+        -0.6499999999999999,
+        0.25
+      ],
+      "n_joint_ordered_bootstrap_samples": 65536
+    },
+    "sample_mix": {
+      "weights": {
+        "g1": 0.5,
+        "g2": 0.5
+      },
+      "A_mean_score": 7.5,
+      "B_mean_score": 6.5,
+      "difference_A_minus_B": 1.0,
+      "bootstrap_percentile_95": [
+        0.1875,
+        2.0
+      ],
+      "n_joint_ordered_bootstrap_samples": 65536
+    }
+  },
+  "robustness": {
+    "leave_one_unit_out_fixed_target_weights": {
+      "n_checks": 8,
+      "range": [
+        -0.4,
+        -0.06666666666666665
+      ],
+      "all_negative": true
+    },
+    "composition": {
+      "zero_crossing_g1_weight": 0.75,
+      "difference_at_g1_0_7": 0.19999999999999996,
+      "difference_at_g1_0_9": -0.6
+    },
+    "alternative_welch_satterthwaite_approximation": {
+      "standard_error": 0.2708012801545321,
+      "degrees_freedom": 5.584615384615384,
+      "approximate_95_interval": [
+        -0.8747593751351949,
+        0.4747593751351963
+      ],
+      "assumption": "Independent units within strata; within-stratum normal paired differences for small-sample t approximation"
+    }
+  },
+  "interval": {
+    "method": "Approximate 95% percentile stratified paired unit bootstrap",
+    "weights": "Fixed; no uncertainty in target composition included",
+    "sampling": "All 256 ordered resamples per stratum and 65536 joint combinations; no Monte Carlo",
+    "quantile": "numpy.quantile(method='linear')",
+    "scope": "Conditional on fixture independence and empirical within-stratum units; population coverage not validated"
+  }
+}

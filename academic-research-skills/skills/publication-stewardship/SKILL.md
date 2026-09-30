@@ -2,7 +2,7 @@
 name: publication-stewardship
 description: "当论文进入校样、发表、归档、更正或版本维护时使用；处理实际状态和文件，不伪造尚未发生的发表流程。"
 metadata:
-  version: "3.2.0-rc.2"
+  version: "3.2.0-rc.3"
 ---
 
 # 校样、版本与发表后维护

@@ -1,0 +1,196 @@
+{
+  "case_id": "chain-c",
+  "condition": "without-skill",
+  "replicate": 0,
+  "generated_at_utc": "2026-09-30T16:00:21.695026+00:00",
+  "submission_ready": false,
+  "submitted": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2311,
+      "sha256": "61882d01650b30cf1ebfb5eb022b1be1e089e1dfd61e4d6d789dcf9d9198db43"
+    },
+    {
+      "path": "answer.md",
+      "bytes": 946,
+      "sha256": "3dc46856500fdbdd3421d3e5d71c48004d6df944ae2d5f62544f53825d2277b5"
+    },
+    {
+      "path": "author-requests.md",
+      "bytes": 3212,
+      "sha256": "1536f2dc47b1d69ec3daa5c996140753661da98eca65ed17c408ff262fea5c8c"
+    },
+    {
+      "path": "build-receipt.json",
+      "bytes": 717,
+      "sha256": "8c312c82395dbba93095562545b5547671a27dd963d5cfc723b6a398a2213e76"
+    },
+    {
+      "path": "build_artifacts.py",
+      "bytes": 7391,
+      "sha256": "12065c447c1c79410313e8fd2bd70cd2dc9078febff2f7c1900679b2915c2a69"
+    },
+    {
+      "path": "check_package.py",
+      "bytes": 8095,
+      "sha256": "75b091bb5f8d3e1e6e7f66002b64a5252648776690563e8a71becee0234e86b8"
+    },
+    {
+      "path": "correction/version-correction-v1-to-v3-draft.docx",
+      "bytes": 4080,
+      "sha256": "623a192e66b54f131011e655f0300d8bcf8ff876af6161b7c13ab2123452aa16"
+    },
+    {
+      "path": "correction/version-correction-v1-to-v3-draft.md",
+      "bytes": 4388,
+      "sha256": "47e9bfcbcb3a23c67505e63a1028ec127bacb8c8c023c6af6d7211dc4aa4c624"
+    },
+    {
+      "path": "operation.md",
+      "bytes": 12002,
+      "sha256": "919d4472c8bd54119c63e07e45198bec1a2fef28b604d8ff634797418a6e0e0d"
+    },
+    {
+      "path": "preserved/published-snapshot-v1.md",
+      "bytes": 372,
+      "sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf"
+    },
+    {
+      "path": "reasoning/claim-citation-decisions.md",
+      "bytes": 7096,
+      "sha256": "a29704b07cac89c7435b7d2fe2fe60ba08d35969e110075eea3cd80d92ee3144"
+    },
+    {
+      "path": "reasoning/journal-ethics-license-decisions.md",
+      "bytes": 4355,
+      "sha256": "b9da33f1beae225d94cddb135accf889d2c9917e5c8fe34cd28907a5fc1fca30"
+    },
+    {
+      "path": "reasoning/manuscript-v2-to-v3.diff",
+      "bytes": 10408,
+      "sha256": "c78a5403b08e1c0610a85eccb2fbc2130eb5918610e5977886cf19459d4edd2c"
+    },
+    {
+      "path": "resource_reads.jsonl",
+      "bytes": 6761,
+      "sha256": "6c2d034fa136c8a7b6bb0cc4f90bdeb2b5d51190a6e564aa6766baab413d70a2"
+    },
+    {
+      "path": "submission/PACKAGE-NOTE.docx",
+      "bytes": 2852,
+      "sha256": "d32474db027141101498073bfa6348f2d787dae3ad8305e598bccad6be6b72d9"
+    },
+    {
+      "path": "submission/PACKAGE-NOTE.md",
+      "bytes": 1519,
+      "sha256": "f0622163dade7659e711af802507d958e6d1fe304dfe794de77af23a8d1f471a"
+    },
+    {
+      "path": "submission/editor-only/cover-letter-v3-draft.docx",
+      "bytes": 3165,
+      "sha256": "af271f5bd1afcb40ded40a423d1b8c220d24a6f69f9bb32760cf60204a65687f"
+    },
+    {
+      "path": "submission/editor-only/cover-letter-v3-draft.md",
+      "bytes": 2157,
+      "sha256": "acc46c0e8e3ea60e4bf307947c821fff0b7158e91871c3dcd69bd9d4e2e3bcbe"
+    },
+    {
+      "path": "submission/editor-only/declarations-v3-draft.docx",
+      "bytes": 3672,
+      "sha256": "e3177f7effbe7b4ea801806e26101bfd7c1d7b148d25c8170f0370bf5c0606a0"
+    },
+    {
+      "path": "submission/editor-only/declarations-v3-draft.md",
+      "bytes": 3611,
+      "sha256": "31b167aa8bf6889f7df408ab242199c9b8c9a92d94e940787dcfca25fa1bc596"
+    },
+    {
+      "path": "submission/editor-only/title-page-v3.docx",
+      "bytes": 2817,
+      "sha256": "88a0d8570c5ca98daee10570d7757d2dcf2f179b83716040ce4f0868107a665b"
+    },
+    {
+      "path": "submission/editor-only/title-page-v3.md",
+      "bytes": 1598,
+      "sha256": "62da4408c0d540b7e26740ecb0821ed3922c03baae3fc5f9cb26aa854f55eead"
+    },
+    {
+      "path": "submission/review/aggregate-results-v3.csv",
+      "bytes": 297,
+      "sha256": "77ae9cd7d400cef416d95993d0f49ca277ff51f991ff761f8cfe2fcbdf525295"
+    },
+    {
+      "path": "submission/review/figure-1-caption-v3.docx",
+      "bytes": 2892,
+      "sha256": "064154c28703c3a788e106e013131d7ff90b1ff2530825c1c0d72a386281167c"
+    },
+    {
+      "path": "submission/review/figure-1-caption-v3.md",
+      "bytes": 1764,
+      "sha256": "877b16a1bf7682093c0ed10c5dc6f0e2e8a1d6ebc129cfbf544d6f896d660fd7"
+    },
+    {
+      "path": "submission/review/figure-1-v3.pdf",
+      "bytes": 20087,
+      "sha256": "2f1089fa343c0a1a33885339c24da0fb241d81a30bd8689e86597f7da807f9c1"
+    },
+    {
+      "path": "submission/review/figure-1-v3.png",
+      "bytes": 80831,
+      "sha256": "f52b964d77c9f355e0678407e9eb4b2eb054aa63623875cca434a5c2ffd3e3d9"
+    },
+    {
+      "path": "submission/review/figure-1-v3.svg",
+      "bytes": 11512,
+      "sha256": "a54d938bada78f2f39746eecdcf5fd2a9a456854d154b90886704ada444b45f5"
+    },
+    {
+      "path": "submission/review/figure_1_v3.py",
+      "bytes": 2522,
+      "sha256": "8f681177f6297c8195e7819df13655f13e571e8fb7ac2eb0ec83599a116c22c1"
+    },
+    {
+      "path": "submission/review/manuscript-v3-anonymous.docx",
+      "bytes": 5228,
+      "sha256": "5dba2519c7bc36868f9a1a37ff40589bc52ea465ac3ca195ecd9c8ef1c1d35c9"
+    },
+    {
+      "path": "submission/review/manuscript-v3-anonymous.md",
+      "bytes": 8209,
+      "sha256": "71703beae25ac4d4cbf18ce2fef9f440b1a1444ddb19472fc6de9d1e604922af"
+    },
+    {
+      "path": "submission/review/responses-v3-draft.docx",
+      "bytes": 4631,
+      "sha256": "c4269fe9a84c1edc940dc1433ec1bebcfcf7a862336e67674a11865e58522cfa"
+    },
+    {
+      "path": "submission/review/responses-v3-draft.md",
+      "bytes": 6218,
+      "sha256": "66bdc6dfaf60dde722826e0db0fcee7f10c2905fe6b2fb3c7f6b0b8f9bb1a87e"
+    },
+    {
+      "path": "submission/review/supplement-s1-v3.docx",
+      "bytes": 4138,
+      "sha256": "bd41123e0a8d12a5d95b4a2de23ced8ca92bb742838c1432e60ca9a1c94468d2"
+    },
+    {
+      "path": "submission/review/supplement-s1-v3.md",
+      "bytes": 4541,
+      "sha256": "09cf38006aca9454ddc516629d3093906c3a1b5f5fc5ba932d48682cf01a1226"
+    },
+    {
+      "path": "submission-package-v3.zip",
+      "bytes": 134723,
+      "sha256": "dea5372c4be3ba8d1becf0b2b1a07d1ff6672016f53b97cbe09c304c6d217c35"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 1281,
+      "sha256": "3859c7381458df9728da20f21d6c241784979cd0d3f3c4b1dd67d8ab8258c55b"
+    }
+  ],
+  "excluded": "Local .matplotlib font cache; manifest does not hash itself"
+}

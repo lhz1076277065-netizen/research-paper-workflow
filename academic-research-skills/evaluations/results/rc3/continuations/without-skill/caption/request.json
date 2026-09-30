@@ -1,0 +1,43 @@
+{
+  "case_id": "chain-b",
+  "condition": "without-skill",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "development",
+  "skill_snapshot": null,
+  "user_prompt": "在你刚完成的合成开发产物上做一次局部续接：仅在 caption.md 末尾添加以下一句原文：\nAll measurements in this figure are synthetic Skill-development inputs.\n保留当前原始输入、分析代码、数值结果、主图和稿件。实际修改图注即可；另写 operation-caption.md，记录此次具体动作与可获取的真实时间。不要把它扩成一轮全文或研究重做。",
+  "material": "在你刚完成的合成开发产物上做一次局部续接：仅在 caption.md 末尾添加以下一句原文：\nAll measurements in this figure are synthetic Skill-development inputs.\n保留当前原始输入、分析代码、数值结果、主图和稿件。实际修改图注即可；另写 operation-caption.md，记录此次具体动作与可获取的真实时间。不要把它扩成一轮全文或研究重做。",
+  "material_root": "LOCAL_EVIDENCE_ROOT/materials/chain-b",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/README.md",
+      "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/mirror-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/paired-measurements-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/proxy.zip",
+      "sha256": "32c235076cb288f6b3748172706af617b967cf5e6ea214121434b602e7085b93"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/candidates.json",
+      "sha256": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828"
+    }
+  ],
+  "skill_entry": null,
+  "skill_entry_sha256": null,
+  "initial_skill_text": "",
+  "available_selected_capabilities": [],
+  "adapter_contract": "Equal current native Agent/model/tools/professional pool. No other-arm answers. Project capability resources demand-loaded within frozen bundle; evaluation-only bundling, not native auto-discovery.",
+  "continuation_phase": "caption",
+  "parent_case_id": "chain-b",
+  "prior_artifact_checkpoint": "LOCAL_EVIDENCE_ROOT/checkpoints/chain-b.without-skill.0/initial",
+  "fresh_context": false,
+  "same_agent_continuation": true
+}

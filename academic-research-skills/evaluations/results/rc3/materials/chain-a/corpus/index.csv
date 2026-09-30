@@ -1,0 +1,11 @@
+id,work_id,version,access,title,cites,path
+R01,W-A,2020,preprint,Trace compression through induced images,R03;R05,R01.md
+R02,W-A,2021,published,Canonical witness export in ordered event graphs,R01;R03;R05,R02.md
+R03,W-B,2019,published,Interval-closed event subsets and ancestral queries,R06,R03.md
+R04,W-C,2022,published,Witness export for cyclic query machines,R02,R04.md
+R05,ARCH-M,1984-05-18,minutes,Workshop minutes: trial deployment,R07,R05.md
+R06,W-D,2018,abstract,Compressed witnesses in undirected networks,,R06.md
+R07,ARCH-C,1984-06-21,circular,Committee circular on query-preserving export,R03;R05,R07.md
+R08,ARCH-R,2008,recollection,Retrospective account of the export decision,R05;R07,R08.md
+R09,W-E,2023,abstract,Trace compression in symbolic word storage,,R09.md
+R10,W-F,2024,technical-note,Reachability certificates for retained event vertices,R02;R03,R10.md

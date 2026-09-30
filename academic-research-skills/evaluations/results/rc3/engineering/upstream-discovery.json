@@ -1,0 +1,24 @@
+{
+  "command": [
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "work/academic-research-skills/scripts/upstream.py",
+    "discover",
+    "--repo",
+    "Haojae/scipilot-figure-skill",
+    "--out",
+    "professional/scipilot-live-index.json",
+    "--query",
+    "figure",
+    "--limit",
+    "5",
+    "--allow-network",
+    "--timeout",
+    "25"
+  ],
+  "cwd": "LOCAL_EVIDENCE_ROOT",
+  "exit_code": 0,
+  "elapsed_seconds": 2.411,
+  "started_unix": 1790777685.1120589,
+  "stdout": "logs/upstream-discovery.stdout",
+  "stderr": "logs/upstream-discovery.stderr"
+}

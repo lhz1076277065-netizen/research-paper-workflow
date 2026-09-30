@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-09-30T15:17:36.137629+00:00",
+  "synthetic": true,
+  "approved_changes": [
+    {
+      "event_id": "e040",
+      "before": "4950.000000",
+      "after": "5950.000000",
+      "unit": "subscore"
+    },
+    {
+      "event_id": "e041",
+      "before": "5050.000000",
+      "after": "6050.000000",
+      "unit": "subscore"
+    },
+    {
+      "event_id": "e041",
+      "before": "5050.000000",
+      "after": "6050.000000",
+      "unit": "subscore"
+    }
+  ],
+  "changed_raw_rows_including_copy": 3,
+  "changed_unique_events": 2,
+  "unchanged_raw_rows": 40,
+  "byte_identical_members": {
+    "LICENSE.txt": true,
+    "units.csv": true
+  },
+  "dictionary_original_definitions_retained": true,
+  "dictionary_appended_note": "\nVersion 2 approved synthetic correction: u08 method B raw values each increased by 1000 subscore. Exact event copies receive the same correction; definitions and target weights are unchanged.\n",
+  "target_weights": [
+    0.8,
+    0.2
+  ],
+  "preparation_and_analysis_methods_changed": false
+}

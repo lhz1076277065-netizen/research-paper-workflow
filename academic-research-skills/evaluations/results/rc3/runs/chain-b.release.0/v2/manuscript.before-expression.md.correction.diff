@@ -1,0 +1,59 @@
+--- preserved/manuscript.before-expression.md
++++ corrected/manuscript.before-expression.md
+@@ -4,7 +4,7 @@
+ 
+ ## Abstract
+ 
+-We performed an analysis of two methods, A and B, using the supplied synthetic paired measurements. The requested target gives weights 0.8 and 0.2 to two strata, whereas the sample contains four units per stratum. We removed duplicated events, converted measurement units, joined the valid metadata, and averaged technical repeats. The stratum-specific mean A-minus-B differences were -1.00 and +3.00 score. The target contrast was -0.20 score, with a conditional 95% paired bootstrap percentile interval of [-0.65, +0.25]. The sample-composition contrast was +1.00 score. Leave-one-unit-out target estimates ranged from -0.400 to -0.067 score. The ranking crossed at a first-stratum weight of 0.75. These calculations describe the synthetic empirical strata under the given independence model and do not establish a causal or real-world advantage. [claim:C001] [evidence:E001,E002,E006,E007]
++We performed an analysis of two methods, A and B, using the supplied synthetic paired measurements. The requested target gives weights 0.8 and 0.2 to two strata, whereas the sample contains four units per stratum. We removed duplicated events, converted measurement units, joined the valid metadata, and averaged technical repeats. The stratum-specific mean A-minus-B differences were -1.00 and +2.75 score. The target contrast was -0.25 score, with a conditional 95% paired bootstrap percentile interval of [-0.65, +0.15]. The sample-composition contrast was +0.875 score. Leave-one-unit-out target estimates ranged from -0.400 to -0.117 score. The ranking crossed at a first-stratum weight of 11/15 (approximately 0.7333). These calculations describe the synthetic empirical strata under the given independence model and do not establish a causal or real-world advantage. [claim:C001] [evidence:E001,E002,E006,E007]
+ 
+ ## Introduction
+ 
+@@ -16,7 +16,7 @@
+ 
+ ### Synthetic material and preparation
+ 
+-The original paired archive contains a measurement table, a history-bearing unit table, a dictionary, and a reuse license. Its SHA-256 identity was checked against the supplied candidate record before local acquisition. The mirror has the same digest and does not provide an independent source; the proxy contains a different measurement object. [claim:C004] [evidence:E001,E003,E004,E005]
++The analyzed paired archive contains a measurement table, a history-bearing unit table, a dictionary, and a reuse license. Its SHA-256 identity was checked against the authorized correction record before local acquisition. Relative to the preserved earlier archive, the two distinct B events for u08 and the exact copy of one event each increase by 1,000 subscore. Every other measurement is unchanged; the dictionary preserves its previous definitions and appends only the correction record. Target weights remain unchanged. [claim:C004] [evidence:E001,E002,E003,E004,E005,E012]
+ 
+ The measurement file has 43 rows, including exact copies of events e004 and e041. Removing these copies leaves 41 distinct events: 17 for A and 24 for B. Values labeled subscore were divided by 1,000 because the dictionary defines 1 score as 1,000 subscore. Each event was joined to unit metadata using unit identifier and its observation date, 15 January 2026, within inclusive validity dates. This selected one active record per event from 16 metadata rows. No event had a missing field, conflicting duplicate, unmatched metadata, or multiple active matches. [claim:C005] [evidence:E002,E003,E004,E005]
+ 
+@@ -36,30 +36,30 @@
+ 
+ ## Results
+ 
+-The stratum 1 paired differences were -1.5, -1.0, -0.5, and -1.0 score; the stratum 2 differences were +1.0, +2.0, +3.0, and +6.0 score. All observed units therefore favored A in stratum 1 and B in stratum 2. Figure 1 exposes this disagreement and the two compositions. [claim:C011] [evidence:E005,E006,E008]
++The stratum 1 paired differences were -1.5, -1.0, -0.5, and -1.0 score; the stratum 2 differences were +1.0, +2.0, +3.0, and +5.0 score. All observed units therefore favored A in stratum 1 and B in stratum 2. Figure 1 exposes this disagreement and the two compositions. [claim:C011] [evidence:E005,E006,E008]
+ 
+ | Summary | Mean A score | Mean B score | A-minus-B score | Conditional 95% percentile interval |
+ |---|---:|---:|---:|---:|
+ | Stratum 1, n=4 | 5.50 | 6.50 | -1.00 | [-1.375, -0.625] |
+-| Stratum 2, n=4 | 9.50 | 6.50 | +3.00 | [+1.500, +5.000] |
+-| Target 80/20, n=8 | 6.30 | 6.50 | -0.20 | [-0.650, +0.250] |
+-| Sampled 50/50, n=8 | 7.50 | 6.50 | +1.00 | [+0.1875, +2.0000] |
++| Stratum 2, n=4 | 9.50 | 6.75 | +2.75 | [+1.500, +4.250] |
++| Target 80/20, n=8 | 6.30 | 6.55 | -0.25 | [-0.650, +0.150] |
++| Sampled 50/50, n=8 | 7.50 | 6.625 | +0.875 | [+0.1875, +1.6250] |
+ 
+-The target point estimate favors A by 0.20 score, whereas the sampled-composition point estimate favors B by 1.00 score. The target interval includes zero. Holding the stratum means fixed, moving from sampled to target composition changes the contrast by -1.20 score. [claim:C012] [evidence:E006,E008]
++The target point estimate favors A by 0.25 score, whereas the sampled-composition point estimate favors B by 0.875 score. The target interval includes zero. Holding the stratum means fixed, moving from sampled to target composition changes the contrast by -1.125 score. [claim:C012] [evidence:E006,E008]
+ 
+-The composition function is Delta(w) = 3 - 4w. It crosses zero at w=0.75: point estimates favor A above that weight and B below it. All eight leave-one-unit-out target estimates remained negative, ranging from -0.400 to -0.067 score. Seven of the eight omission intervals included zero. Omitting u08, whose stratum 2 difference is +6.00, produced -0.400 score with interval [-0.733, -0.067]. We retained u08 in the primary analysis because no supplied information invalidates that measurement. [claim:C013] [evidence:E005,E006,E007]
++The composition function is Delta(w) = 2.75 - 3.75w. It crosses zero at w=11/15 (approximately 0.7333): point estimates favor A above that weight and B below it. All eight leave-one-unit-out target estimates remained negative, ranging from -0.400 to -0.117 score. Six of the eight omission intervals included zero. Omitting u03, whose first-stratum difference is -0.50, produced -0.383 score with interval [-0.733, -0.033]. Omitting u08, whose stratum 2 difference is +5.00, produced -0.400 score with interval [-0.733, -0.067]. We retained u08 in the primary analysis because no supplied information invalidates that measurement. [claim:C013] [evidence:E005,E006,E007]
+ 
+ ## Discussion
+ 
+ The supplied records show that changing composition changes the aggregate descriptive ranking, while the underlying stratum-specific paired differences remain fixed. The target result and sampled result answer different questions. A universal method advantage would conceal the opposite second-stratum comparison. [claim:C014] [evidence:E006,E008]
+ 
+-The target point direction survives single-unit omission, but the width and zero inclusion of the conditional interval depend on the observed units. In particular, removing the largest second-stratum difference changes zero inclusion. This sensitivity does not justify excluding that unit or treating a favorable omission as the primary analysis. [claim:C015] [evidence:E007]
++The target point direction survives single-unit omission, but the width and zero inclusion of the conditional interval depend on the observed units. In particular, omitting either u03 or u08 changes zero inclusion. This sensitivity does not justify excluding that unit or treating a favorable omission as the primary analysis. [claim:C015] [evidence:E007]
+ 
+ Inference beyond the manufactured fixture remains unresolved. Stratum weighting corrects the supplied composition mismatch but does not verify representativeness within strata, score validity, independence in a real population, or transportability. Dependence among real units could change the uncertainty calculation. The target interval's inclusion of zero does not establish equivalence, and the paired descriptive contrast does not identify a causal effect. [claim:C016] [evidence:E001,E002,E006]
+ 
+ ## Conclusion
+ 
+-The original paired synthetic records give a target A-minus-B contrast of -0.20 score and a sampled-composition contrast of +1.00 score. Stratum-specific directions oppose each other, and the target conditional interval includes zero. A clearly stated composition and an intact paired unit are therefore essential to interpreting this fixture's comparison. [claim:C017] [evidence:E006,E008]
++The corrected paired synthetic records give a target A-minus-B contrast of -0.25 score and a sampled-composition contrast of +0.875 score. Stratum-specific directions oppose each other, and the target conditional interval includes zero. A clearly stated composition and an intact paired unit are therefore essential to interpreting this fixture's comparison. [claim:C017] [evidence:E006,E008]
+ 
+ ## Data, code, and software attribution
+ 

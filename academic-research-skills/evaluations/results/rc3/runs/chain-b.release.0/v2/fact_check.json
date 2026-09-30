@@ -1,0 +1,48 @@
+{
+  "synthetic": true,
+  "checked_at_utc": "2026-09-30T16:15:55.081835+00:00",
+  "status": "PASS within synthetic computational scope",
+  "checker": "current Agent and verify.py; not an external scientific reviewer",
+  "independent_numeric_method": "Exact Fraction arithmetic from original archive members; bootstrap count convolution independent of ordered-draw enumerator",
+  "passed": [
+    "original ZIP digest",
+    "43 to 41 exact-copy row flow",
+    "one active date-valid metadata record per event",
+    "score/subscore conversion",
+    "eight paired unit means",
+    "two stratum mean contrasts and intervals",
+    "fixed target and sampled-composition contrasts and intervals",
+    "all eight fixed-weight omission contrasts and intervals",
+    "six zero-containing omission intervals; u03/u08 exclusions",
+    "composition crossing and all 101 sensitivity rows",
+    "main-figure source values and interval labels",
+    "final manuscript and caption key numerical consistency"
+  ],
+  "subject_hashes": {
+    "manuscript.before-expression.md": "c1754a16696ec2b6f56fbd43f012148504f4f4c02c6aeb3e853a1e97ad6e5df6",
+    "manuscript.md": "5830075cd40ce51117657264633cb013eb0bc5c078ccf18ece3fa20f41eedcb7",
+    "manuscript.expression.diff": "288cfe3fe312a0f03e74a05d06d6dd9a13e6a7c4f4a4ae223e10efc47b1b180b",
+    "caption.md": "0d39fa3aa7b7ba50d494d5185a4f5ab69c2c1e1ab4e4c0f48918e38ea4ba9a4d",
+    "results.json": "e6842a5906cbfb29e527016576de33dc7ba2dd546ecf40110bc0b16a91c7ff4d",
+    "figure_source.csv": "5b8e923e47e8091ba4822a1f2fa982f3cd4f9552eb07bb88b9a63b4bafe0b7ea",
+    "main_figure.png": "44c2badbcc305efae85d002258d0cb6a932e278f93c573aae4da2c63f6160c70",
+    "main_figure.svg": "e47461b19e69fa611fe459c4800993b5900a3b62968e976262afdf37b0f3596c",
+    "writing_review.md": "d74da761a7036f9fe3e900849a7ffab40b18f82a0e6fef0658aa880fbcca5dfe"
+  },
+  "semantic_review": {
+    "record": "writing_review.md",
+    "reviewer": "current Agent",
+    "checks": [
+      "target and comparator unchanged",
+      "paired independent unit and denominator unchanged",
+      "opposite strata retained",
+      "primary interval zero inclusion retained",
+      "descriptive and conditional scope retained",
+      "non-equivalence and non-causal semantics retained",
+      "exploratory sensitivity not relabeled prespecified"
+    ],
+    "human_verification": "not performed",
+    "real_world_validation": "not supplied",
+    "submission_ready": false
+  }
+}

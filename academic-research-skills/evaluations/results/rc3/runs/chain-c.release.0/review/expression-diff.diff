@@ -1,0 +1,77 @@
+--- review/manuscript-v3-before-expression.md
++++ submission/anonymous/manuscript-v3.md
+@@ -1,49 +1,57 @@
+-# Comparing methods under target and sampled mixtures
++# Mixture-dependent direction in a paired method comparison
+ 
+-SYNTHETIC DEVELOPMENTAL WORKING DRAFT — anonymous. Prepared for author review, not submission. Journal Lens Technical Note, fictional policy v2.
++SYNTHETIC DEVELOPMENTAL DRAFT — anonymous author-review copy. Technical Note for fictional Journal Lens, policy v2. Not approved for submission.
+ 
+ ## Abstract
+ 
+-We reviewed the supplied comparison of A and B and changed its interpretation. There were eight independent paired units, four in g1 and four in g2. Technical repetitions were averaged by unit and method after unit conversion. We used the supplied g1 mean A−B of −1.00 score and g2 mean of +3.00 score to compare the equal sampled mixture with the prespecified target composition of 0.8:0.2. Lower score is better. The equal mixture gives +1.00, while the target mixture gives −0.20. The supplied 95% within-stratum paired-unit bootstrap percentile interval for the target contrast is [−0.60, 0.20]. It includes zero. These results support a diagnostic comparison of mixtures, not universal dominance, a causal effect, or equivalence.
++An aggregate method comparison can change direction when the intended mixture differs from the sampled mixture. This diagnostic note makes that dependence explicit using supplied results for eight independent paired units, four in each of two strata. Mean A−B was −1.00 score in g1 and +3.00 in g2; lower score is better. The equal sampled mixture gives +1.00, whereas the prespecified g1:g2 target mixture of 0.8:0.2 gives −0.20. The target's supplied 95% within-stratum paired-unit bootstrap percentile interval is [−0.60, 0.20] and includes zero. Reporting both stratum contrasts and mixture weights explains the directional change while retaining the g2 result favoring B. The finding is a descriptive diagnostic for the specified comparison; it establishes neither universal dominance, a causal effect, nor equivalence.
+ 
+ ## 1. Introduction
+ 
+-The practical question is whether a single aggregate comparison can be reused when the intended mixture differs from the observed mixture. This diagnostic finding is potentially useful even without a new predictive algorithm. We report the comparison under the target and sampled mixtures and keep the g2 result because it is relevant to interpreting the aggregate result.
++An aggregate comparison may change direction when its mixture changes. This note diagnoses that dependence by comparing stratum-specific paired contrasts under sampled and prespecified target weights.
+ 
+ ## 2. Methods
+ 
+-The supplied record specifies eight independent paired units, four per stratum. A and B were measured on the same units. Technical repetitions were averaged within each unit and method after unit conversion. The independent sampling objects are units, not technical repetitions. Independence is stated in the supplied record and has not been independently verified from raw records.
++### 2.1. Units and measurement
+ 
+-Let the unit contrast be its converted, repetition-averaged score under A minus that under B. The target weights 0.8 for g1 and 0.2 for g2 were fixed before measurement. The target aggregate is 0.8 times the g1 mean plus 0.2 times the g2 mean. The equal observed mixture uses weights 0.5 and 0.5.
++The supplied record specifies eight independent units, four in g1 and four in g2. Methods A and B were measured on every same unit. Technical repetitions were averaged within each unit and method after unit conversion. The unit contrast is the converted, repetition-averaged score under A minus that under B. Units are the independent sampling objects; repetitions within a unit are not additional independent units. Independence is a premise of the supplied record, not a conclusion established by a citation or independently verified from raw records in this task. Lower score denotes better performance.
+ 
+-The reported analysis script resampled paired units within stratum and reapplied the target weights. The interval is the supplied 95% percentile bootstrap interval for that weighted contrast. Pairing must remain intact; treating technical repetitions as independent units would change the sampling object. The source records, script, resampling realizations, seed and number of resamples were not supplied, so the interval has not been independently replicated here.
++### 2.2. Target quantity and sampled quantity
++
++The g1:g2 target weights of 0.8:0.2 were fixed before measurement. If the supplied stratum means are d_g1 and d_g2, the target contrast is Δ_target = 0.8 × d_g1 + 0.2 × d_g2. The observed equal unit mixture has weights 0.5:0.5, giving Δ_sampled = 0.5 × d_g1 + 0.5 × d_g2. These are two descriptive aggregate quantities formed from the same stratum contrasts.
++
++### 2.3. Reported interval
++
++The reported analysis script resampled paired units within stratum and reapplied the fixed target weights. The supplied interval is a 95% within-stratum paired-unit bootstrap percentile interval for Δ_target. This resampling object preserves the A/B pairing and the unit as the sampling object; counting technical repetitions as independent observations would change that object. No interval is supplied for either stratum or the equal sampled mixture. The numerical source records, original script, bootstrap realizations, resample count and seed were not supplied; the interval has not been independently replicated here.
+ 
+ ## 3. Results
+ 
+-The g1 mean A−B was −1.00 score, favoring A's lower score. The g2 mean was +3.00 score, favoring B's lower score. Thus g2 contradicts a claim that A is better in both strata and is retained in the main text and Figure 1.
++The g1 mean A−B was −1.00 score, favoring A's lower score. The g2 mean was +3.00 score, favoring B's lower score. The opposite stratum directions are essential to the aggregate comparison and are retained in Figure 1.
+ 
+-The equal sampled mixture is 0.5 × (−1.00) + 0.5 × (+3.00) = +1.00 score. The target mixture is 0.8 × (−1.00) + 0.2 × (+3.00) = −0.20 score. The aggregate point-estimate direction changes solely from reweighting the same supplied stratum contrasts. These arithmetic checks do not constitute a new analysis of raw units.
++For the equal sampled mixture, Δ_sampled = 0.5 × (−1.00) + 0.5 × (+3.00) = +1.00 score. For the prespecified target mixture, Δ_target = 0.8 × (−1.00) + 0.2 × (+3.00) = −0.20 score. Reweighting changes the aggregate point estimate by −1.20 score and reverses its direction without changing either stratum contrast. The sampled point estimate favors B; the target point estimate favors A. These calculations check arithmetic from the supplied results and do not constitute a new analysis of raw units.
+ 
+-The target interval [−0.60, 0.20] includes zero and values favoring either method. There is no equivalence margin or registered equivalence test in the available record. This interval does not establish equivalence or exact absence of a difference. No intervals for the strata or the sampled mixture were supplied.
++The target interval [−0.60, 0.20] includes negative values, zero and positive values. It therefore leaves uncertainty about the direction of the target comparison. No equivalence margin or registered equivalence test is present in the record; crossing zero establishes neither practical equivalence nor an exact absence of a difference.
+ 
+-## 4. Discussion
++## 4. Interpretation and evidence limits
+ 
+-This result identifies mixture dependence in an aggregate paired comparison. It does not establish a universal ranking. The supplied abstract-level description of Rosenbaum and Rubin concerns assignment probabilities conditional on observed covariates [1]. It does not establish that unmeasured confounding is irrelevant here. There is no causal assignment, confounding measurement or causal adjustment in the record.
++The directional change is explained by mixture weighting: g1's negative contrast receives more weight in the target mixture, while g2's positive contrast remains visible. A sample aggregate and a target aggregate answer different mixture-specific questions. Neither one alone establishes a universal ranking.
+ 
+-The numerical values are reported from the authoritative synthetic result memo v2. Numerical source data, original code and bootstrap realizations were not supplied. Their absence prevents independent replication and assessment of empirical interval coverage. There was no external validation in the supplied record.
++The supplied abstract-level description of Rosenbaum and Rubin concerns assignment probabilities conditional on observed covariates [1]. It supplies no evidence that unmeasured confounding is irrelevant to this comparison. There is no causal assignment, confounding measurement or causal adjustment in the available record, so reweighting cannot supply a causal interpretation.
++
++The numerical estimates and interval are reported from the authoritative synthetic result memo v2. Missing numerical source data, original analysis code and resampling outputs prevent independent replication and assessment of empirical interval coverage. Four units per stratum provide a small evidence base, and no external validation is supplied. The note identifies a mixture-dependent point-estimate direction within this record.
+ 
+ ## 5. Conclusion
+ 
+-For this specified comparison, report the target weights and the stratum-specific contrasts together. The equal and target aggregates have different directions, while g2 favors B. This is a descriptive diagnostic finding for the stated mixture.
++Report stratum-specific paired contrasts with explicit target weights before interpreting an aggregate comparison. In this fixture, the equal sampled mixture gives +1.00 score and the prespecified target mixture gives −0.20, while g2 favors B. Together, these values make mixture dependence directly inspectable for the stated comparison.
+ 
+ ## Data and code access
+ 
+-Aggregate results and display-generation code may be shared under the fixture license. Raw unit-level records and identifiers may not be redistributed and are not included. Original numerical data and analysis code were not provided. A draft request for controlled materials can specify verification purpose, exact records needed, users and storage/redistribution safeguards, subject to an authorized custodian's confirmation of a lawful access mechanism. The custodian, contact, permissions and approval are unknown; no access entitlement or transfer is promised.
++Aggregate results and display-generation code accompany this local package. Raw unit-level records and identifiers may not be redistributed under the fixture license and are not included. Original numerical data and analysis code were not supplied. A draft controlled-materials request must specify verification purpose, required materials, intended users, and storage and redistribution safeguards; access requires an authorized custodian to confirm a lawful mechanism and approve it. The custodian, contact and approval remain unknown. No access entitlement, repository deposit or transfer is asserted. See the accompanying data/code access statement.
+ 
+ ## Declarations
+ 
+-Author list, contributions and approval: UNKNOWN. Funding and sponsor role: UNKNOWN. Conflicts: UNKNOWN. Human-participant status, ethics determination, consent and approval: UNKNOWN. No exemption or approval is asserted. AI-assisted developmental editing and aggregate figure preparation were used; accountable author verification remains pending.
++Author list, contributions and approval: UNKNOWN. Funding and sponsor role: UNKNOWN. Conflicts: UNKNOWN. Human-participant status, ethics determination, consent and approval: UNKNOWN. No approval or exemption is asserted. AI-assisted developmental editing and aggregate-display preparation were used; accountable author verification remains pending.
+ 
+ ## References
+ 
+-[1] Rosenbaum, P. R., and Rubin, D. B. (1983). The central role of the propensity score in observational studies for causal effects. Biometrika. https://doi.org/10.1093/biomet/70.1.41. Only the supplied abstract-level description was available; neither full text nor implementation was obtained.
++[1] Rosenbaum, P. R., and Rubin, D. B. (1983). The central role of the propensity score in observational studies for causal effects. Biometrika. https://doi.org/10.1093/biomet/70.1.41. Use is limited to the supplied abstract-level description; full text and implementation were not obtained.

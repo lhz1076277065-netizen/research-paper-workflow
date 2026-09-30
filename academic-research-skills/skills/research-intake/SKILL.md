@@ -2,7 +2,7 @@
 name: research-intake
 description: "当研究材料零散、目标或已有进展需要整理时使用；识别当前请求、可复用成果与真正缺口，形成可续接的任务边界。"
 metadata:
-  version: "3.2.0-rc.2"
+  version: "3.2.0-rc.3"
 ---
 
 # 研究目标与科学价值定位

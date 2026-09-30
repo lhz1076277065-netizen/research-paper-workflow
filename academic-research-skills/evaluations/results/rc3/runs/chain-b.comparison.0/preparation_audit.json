@@ -1,0 +1,23 @@
+{
+  "raw_rows": 43,
+  "unique_events": 41,
+  "exact_duplicates_removed": [
+    "e004",
+    "e041"
+  ],
+  "metadata_rows": 16,
+  "joined_rows": 41,
+  "metadata_matches_per_event": 1,
+  "unit_pairs": 8,
+  "units_per_stratum": {
+    "g1": 4,
+    "g2": 4
+  },
+  "measurement_unit_counts_unique_events": {
+    "score": 30,
+    "subscore": 11
+  },
+  "missing_values": 0,
+  "unpaired_units": 0,
+  "rule": "deduplicate event_id; convert; validity-date join; mean technical repetitions; pair independent units"
+}

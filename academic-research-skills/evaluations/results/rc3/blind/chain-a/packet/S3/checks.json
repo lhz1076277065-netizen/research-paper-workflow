@@ -1,0 +1,101 @@
+{
+  "synthetic": true,
+  "model": "finite simple DAG; all labels z; vertex i timestamp i; induced inclusion of retained subset; distinct-vertex nonempty-path reachability",
+  "enumeration_scope": "all forward edge masks and retained subsets for n=0..5; not a proof for arbitrary n",
+  "graphs": 1100,
+  "graph_subset_cases": 33867,
+  "equivalence_cases": 30093,
+  "equivalence_without_interval_closure_cases": 3660,
+  "cover_equivalence_mismatches": 0,
+  "certificate_size_examples": {
+    "chain_8": {
+      "cover_pairs": 7,
+      "reachable_pairs": 28
+    },
+    "two_layers_4_plus_4": {
+      "cover_pairs": 16,
+      "reachable_pairs": 16
+    }
+  },
+  "minimal_converse_counterexample": {
+    "equivalence": false,
+    "cover_condition": false,
+    "interval_closed": false,
+    "retained": [
+      0,
+      2
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "internal_reachability": [],
+    "target_reachability_on_retained": [
+      [
+        0,
+        2
+      ]
+    ],
+    "covers": [
+      [
+        0,
+        2
+      ]
+    ],
+    "missing_covers": [
+      [
+        0,
+        2
+      ]
+    ]
+  },
+  "interval_closure_not_necessary": {
+    "equivalence": true,
+    "cover_condition": true,
+    "interval_closed": false,
+    "retained": [
+      0,
+      2
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "internal_reachability": [
+      [
+        0,
+        2
+      ]
+    ],
+    "target_reachability_on_retained": [
+      [
+        0,
+        2
+      ]
+    ],
+    "covers": [
+      [
+        0,
+        2
+      ]
+    ],
+    "missing_covers": []
+  },
+  "certificate_scope": "unique irredundant generating relation of the known restricted reachability order; no runtime or oracle-query minimality claim"
+}

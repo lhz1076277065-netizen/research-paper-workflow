@@ -1,0 +1,89 @@
+{
+  "status": "passed scoped computational and Agent semantic checks",
+  "checked_at_utc": "2026-09-30T15:11:18.376824+00:00",
+  "synthetic": true,
+  "original_identities_unchanged": [
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/README.md",
+      "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/archives/mirror-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/archives/paired-measurements-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/archives/proxy.zip",
+      "sha256": "32c235076cb288f6b3748172706af617b967cf5e6ea214121434b602e7085b93"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/candidates.json",
+      "sha256": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828"
+    }
+  ],
+  "independent_bootstrap_count_algorithm": "all multinomial count vectors; integer multiplicities; rational means",
+  "bootstrap_distributions_match_exactly": true,
+  "prespecified_target_weights_retained": true,
+  "trust_boundary_checks": [
+    "conflicting duplicate rejected",
+    "nonunique date-valid metadata join rejected"
+  ],
+  "figure": {
+    "svg_mm": [
+      179.99999983333333,
+      103.00000002222221
+    ],
+    "png_mm": [
+      179.95935991871985,
+      102.99720599441198
+    ],
+    "png_pixels": [
+      4251,
+      2433
+    ],
+    "editable_svg_text": true,
+    "embedded_raster": false,
+    "Agent_viewed_final_png_and_grayscale": true
+  },
+  "subjects": [
+    {
+      "file": "manuscript_draft.md",
+      "sha256": "975061157712f477d116c46d2e17fafa6da7657c133b4823606426c656c1452e"
+    },
+    {
+      "file": "manuscript.md",
+      "sha256": "2013ab414b4f8da13eef21f066941b37e5318743371e053d8db46e05ec0bd2b9"
+    },
+    {
+      "file": "caption.md",
+      "sha256": "0b743c47d1b7b543aee938b6ce69083d879351343d0813f8746dcc8a1c2d7520"
+    },
+    {
+      "file": "main_figure.svg",
+      "sha256": "dc9558266707fcfc46a702ae803d4c373221383f5cb2cb837a1ea52941465ab9"
+    },
+    {
+      "file": "main_figure.png",
+      "sha256": "8a368c0154c0f7b641ed3b78a65d0d3b3a6e2c05cbe26813670cbe659a5b2f59"
+    },
+    {
+      "file": "results.json",
+      "sha256": "cd04dafc0033f0913ecb259d2e173c0f2ae08ad1797e0a6a7b66351b6156b09c"
+    }
+  ],
+  "expression_numeric_tokens_unchanged": true,
+  "semantic_review": {
+    "target_and_comparator": "A-B paired units; 80/20 primary; 50/50 diagnostic retained",
+    "direction": "opposing strata; target point estimate negative; interval crosses zero",
+    "scope": "manufactured eight-unit fixture; conditional empirical resampling; real population unknown",
+    "causality": "descriptive throughout; no causal attribution added",
+    "significance": "no superiority, equivalence or hypothesis-test claim added",
+    "important_counterevidence": "stratum-2 direction and positive sample aggregate retained"
+  },
+  "human_verification": "not performed",
+  "real_external_validation": "not performed",
+  "submission_ready": false
+}

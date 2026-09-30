@@ -1,0 +1,430 @@
+{
+  "base_commit": "3c6563aa7d84e551ce3e91d8f7e0f0d0abadfaa0",
+  "scope": "General Skill development only; no real academic topic/data/paper or extra model host",
+  "previous_turn_classification": "progress: complete rc.2 source/runtime folders, GitHub commit/tag/release, actual CI and five asset identities",
+  "work_packages": [
+    {
+      "id": "EV-01",
+      "requirements": {
+        "id": "EV-01",
+        "priority": "P0",
+        "milestone": "rc.2",
+        "title": "固定评估条件与实际读取资源身份",
+        "targets": [
+          "academic-research-skills/evaluations/run_host.py",
+          "academic-research-skills/evaluations/results/checks/evaluation-dispatch.json"
+        ],
+        "basis": [
+          "S5",
+          "S10"
+        ],
+        "changes": [
+          "冻结候选、基线与测试输入；运行时记录实际读取入口/参考文件的身份，不要求全部加载",
+          "同一候选稳定性复测与改版后的开发复测分开；保留真实宿主和工具条件",
+          "比较基线为无本项目Skill但拥有相同专业来源，另列实际部署体验实验"
+        ],
+        "acceptance": [
+          "任何被读参考改变时能解释运行身份，不把已改候选的重复当同版本方差",
+          "运行记录不泄露其他组答案；源材料未改变",
+          "不宣称现有评估已发生版本污染：本项是补强风险控制"
+        ]
+      },
+      "current_evidence_scope": "Complete frozen module/material/reader identities and anonymous double hashes verified for current native tasks.",
+      "further_verification_required": false,
+      "bounded_iteration_actions_completed": true,
+      "broader_claims_require_new_evidence": true
+    },
+    {
+      "id": "EV-02",
+      "requirements": {
+        "id": "EV-02",
+        "priority": "P0",
+        "milestone": "rc.2",
+        "title": "新增有区分力的盲评与保留任务",
+        "targets": [
+          "academic-research-skills/evaluations/",
+          "academic-research-skills/evaluations/results/QUALITY_REPORT.zh-CN.md"
+        ],
+        "basis": [
+          "S4",
+          "S5",
+          "S13"
+        ],
+        "changes": [
+          "保留现有合成场景为可复算回归，增加未用于调试的任务族",
+          "重点测试原科学约束下的研究设计、读者科学判断的图、长全文事实与论证",
+          "开发时先同任务少量独立重复；基于波动与决策风险扩展，不设所有任务固定次数"
+        ],
+        "acceptance": [
+          "各维度报告好/差/相当/未知及证据，不按面板/声明/调用数量排名",
+          "包含正常简单任务以观察过度流程",
+          "匿名审查者不知道版本映射；科学正确性争议回到原材料/计算/证明"
+        ]
+      },
+      "current_evidence_scope": "Nine unseen comparisons, one old-neighbor context/four operations, six same-Agent phases and three anonymous reviews completed; no new rc.3 same-version independent repeats.",
+      "further_verification_required": false,
+      "bounded_iteration_actions_completed": true,
+      "broader_claims_require_new_evidence": true
+    },
+    {
+      "id": "KN-01",
+      "requirements": {
+        "id": "KN-01",
+        "priority": "P0",
+        "milestone": "rc.2",
+        "title": "把研究判断短例升级为完整可迁移推演",
+        "targets": [
+          "academic-research-skills/src/common/references/research-quality.md",
+          "academic-research-skills/skills/topic-novelty/references/protocol.md",
+          "academic-research-skills/skills/research-design/references/protocol.md"
+        ],
+        "basis": [
+          "S4",
+          "S6",
+          "S15"
+        ],
+        "changes": [
+          "加入少量从输入到候选选择、关键推导/检验、结果分支和下一行动的完整例子",
+          "区分不识别、有限样本不确定和实际资源不足；反例遵守同一科学约束",
+          "配对边界相近但行动相反的例子，教会何时不用某种做法"
+        ],
+        "acceptance": [
+          "留出材料上有正确决定性设计/证明，非复述缺口清单",
+          "不强制基础理论立即应用，不按方法复杂度选择",
+          "不把案例答案或固定数字写入通用入口"
+        ]
+      },
+      "current_evidence_scope": "Retained complete reasoning examples; original constrained proof/counterexamples correctly exercised, fixed-S local gain; global novelty/economy unknown.",
+      "further_verification_required": false,
+      "bounded_iteration_actions_completed": true,
+      "broader_claims_require_new_evidence": true
+    },
+    {
+      "id": "FG-01",
+      "requirements": {
+        "id": "FG-01",
+        "priority": "P0",
+        "milestone": "rc.2",
+        "title": "以科学读者任务验收主图",
+        "targets": [
+          "academic-research-skills/src/common/references/figure-production.md",
+          "academic-research-skills/skills/scientific-visualization/references/protocol.md"
+        ],
+        "basis": [
+          "S7",
+          "S13"
+        ],
+        "changes": [
+          "在当前正式图流程中加入关键比较与阅读层级判断",
+          "验证合适的简洁表达，不把新增面板当质量收益",
+          "对目标版面、直接效应、权重/分层、区间定义和关键反例做实际视觉/内容核对"
+        ],
+        "acceptance": [
+          "固定表的数值与语义无变化；读者能直接回答关键科学问题",
+          "专业实现确实影响最终图；不同测试图不能替代",
+          "不要求每次生成多版或比较所有绘图仓库"
+        ]
+      },
+      "current_evidence_scope": "Actual final figures inspected; bounded numeric/interval readout gains and alternative threshold/model strengths preserved; human reading-time unknown.",
+      "further_verification_required": false,
+      "bounded_iteration_actions_completed": true,
+      "broader_claims_require_new_evidence": true
+    },
+    {
+      "id": "WR-01",
+      "requirements": {
+        "id": "WR-01",
+        "priority": "P0",
+        "milestone": "rc.2",
+        "title": "全文科学写作与反防御性整理实质增强",
+        "targets": [
+          "academic-research-skills/src/common/references/final-expression.md",
+          "academic-research-skills/skills/manuscript-writing/references/protocol.md",
+          "academic-research-skills/skills/citation-audit/references/protocol.md"
+        ],
+        "basis": [
+          "S4",
+          "S8"
+        ],
+        "changes": [
+          "从最强已建立贡献组织全文，明确证据层级和关键未决范围",
+          "改前改后检查量值、比较对象、假设、外推、因果强度与反例",
+          "按指定来源在当前Agent内做最终全文表达整理；保留必要限制但压缩重复过程叙述"
+        ],
+        "acceptance": [
+          "具有更清楚可论证贡献，不以口号或禁词数达标",
+          "E1等摘要/备忘录的已知信息与未获得全文显式分开",
+          "正文不会被额外审计文案淹没"
+        ]
+      },
+      "current_evidence_scope": "Complete evidence-preserving writing and correction propagation exercised; old magnitude/direction bridge repaired, C actual R5 fulfilled only in candidate.",
+      "further_verification_required": false,
+      "bounded_iteration_actions_completed": true,
+      "broader_claims_require_new_evidence": true
+    },
+    {
+      "id": "CX-01",
+      "requirements": {
+        "id": "CX-01",
+        "priority": "P1",
+        "milestone": "rc.2/rc.3",
+        "title": "归因运行成本与实际上下文负担",
+        "targets": [
+          "academic-research-skills/evaluations/",
+          "academic-research-skills/src/common/references/provider-policy.md"
+        ],
+        "basis": [
+          "S4",
+          "S5",
+          "S10"
+        ],
+        "changes": [
+          "为请求、研究操作、审查与重试区分运行ID及父子关系",
+          "分列可取得的input/cached/output、wall time、唯一资源、重复读取及工具输出量",
+          "不能取得的峰值上下文/费用保留未知；按边际科学价值判断是否复用或继续"
+        ],
+        "acceptance": [
+          "不将2,440,576累计token当一次推理窗口或费用",
+          "不为节省而截断必要原文/推导",
+          "相同资源已在当前上下文可用时减少重复展示；丢失时回读原文"
+        ]
+      },
+      "current_evidence_scope": "Instrumented reader, known program/operation windows, continuation and retries attributed; tokens/cache/peak/fees unknown and no universal burden reduction.",
+      "further_verification_required": false,
+      "bounded_iteration_actions_completed": true,
+      "broader_claims_require_new_evidence": true
+    },
+    {
+      "id": "PR-01",
+      "requirements": {
+        "id": "PR-01",
+        "priority": "P1",
+        "milestone": "rc.3",
+        "title": "运行期专业路线与来源更新兼容",
+        "targets": [
+          "academic-research-skills/assets/research31-policy.json",
+          "academic-research-skills/src/common/references/provider-policy.md",
+          "academic-research-skills/src/common/scripts/upstream.py"
+        ],
+        "basis": [
+          "S9",
+          "S16"
+        ],
+        "changes": [
+          "保留13仓库范围、按任务发现当前入口与实际依赖；不全量预装",
+          "在已有短操作说明里记录任务适配、实际动作、最终产物和范围",
+          "上游变化先做相关操作小验证，兼容后用于新任务；本地改造和已完成研究保留"
+        ],
+        "acceptance": [
+          "文献/图/稿件能力为当前成果服务，不以函数出口冒称完整专业操作",
+          "无跨宿主/本地助手端点搜索；原生内部协作仍可选",
+          "普通软件与原创代码不被来源角色表变成方法白名单"
+        ]
+      },
+      "current_evidence_scope": "Declared dependency drift reproduced/fixed and current selected route/local adaptation/related old figure strict check completed; undeclared/semantic compatibility not certified.",
+      "further_verification_required": false,
+      "bounded_iteration_actions_completed": true,
+      "broader_claims_require_new_evidence": true
+    },
+    {
+      "id": "KT-01",
+      "requirements": {
+        "id": "KT-01",
+        "priority": "P1",
+        "milestone": "rc.3",
+        "title": "沉淀版本化可迁移知识而非自动叠加规则",
+        "targets": [
+          "academic-research-skills/skills/paper-deep-reading/references/protocol.md",
+          "academic-research-skills/src/common/references/research-quality.md",
+          "academic-research-skills/evaluations/"
+        ],
+        "basis": [
+          "S6",
+          "S14",
+          "S18"
+        ],
+        "changes": [
+          "把优秀案例与真实失败提炼为按任务读取的短专家工作说明",
+          "分开可迁移科学方法、特定上游版本兼容信息和单项目事实",
+          "修正“真实科学问题 vs 仅资源/测量/边界贡献”的潜在表述张力",
+          "对新增知识做旧任务回归和未见材料验证，复核后随候选发布，不自动改已装入口"
+        ],
+        "acceptance": [
+          "实例涵盖适用条件、动作理由和不适用边界",
+          "可复用知识不携带私人数据、整篇版权内容或项目目标",
+          "经验改善至少一个对应任务且未造成相近任务误触发"
+        ]
+      },
+      "current_evidence_scope": "Versioned short expert lessons validated on unseen and old/neighbor materials; no installed auto-update, no private/test answers in general guides.",
+      "further_verification_required": false,
+      "bounded_iteration_actions_completed": true,
+      "broader_claims_require_new_evidence": true
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "research-intake",
+      "name": "研究接入",
+      "proposed_improvement": "把宽泛目标转为重要的未决判断，而非先挑方便数据。区分知识价值、受益者/理论意义与可行性；保留用户的真正目标。",
+      "evidence_of_success": "面对易做但低信息量题目，提出更有价值且可验证的路线；必要材料不足时提出实际获取或重设计动作，不偷换目标。",
+      "wave": "A",
+      "rc3_behavior_scope": "retained software/structure; available in A but no observed entry invocation"
+    },
+    {
+      "id": "journal-intelligence",
+      "name": "标杆与选刊",
+      "proposed_improvement": "早期提炼领域标杆的论证/证据标准，后期按真实稿件做匹配。分开主题契合、贡献契合、证据差距和实际投稿条件。",
+      "evidence_of_success": "同一摘要在不同读者/文章类型/政策下给出可追溯的候选与具体差距；不凭高影响因子或“Nature风格”推荐。",
+      "wave": "C",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "literature-discovery",
+      "name": "文献发现",
+      "proposed_improvement": "融合概念同义词、方法术语和前后向引文追踪，保留标杆学习库与广泛相关证据库；区分独立研究、重复版本和同队列报告。",
+      "evidence_of_success": "在预设但对执行者隐藏的相关材料集中找出最近邻、关键相反证据和名称不同但问题相同的工作，并给出检索空白。",
+      "wave": "A",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "paper-deep-reading",
+      "name": "论文精读",
+      "proposed_improvement": "从重要论断逆向定位图表、方法、公式、代码和补充；再比较跨论文共同条件与不同结论。把迁移条件写清，而非只做摘要。",
+      "evidence_of_success": "换一篇结构、结论或方法不同的论文，仍能重建关键证据，指出一个影响迁移的条件；不把未读实现补成惯例。",
+      "wave": "A",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "topic-novelty",
+      "name": "选题与创新",
+      "proposed_improvement": "沿未满足需求、解释冲突、能力边界、测量瓶颈和理论障碍形成少量差异真实的候选；对比最强最近邻，设计可区分答案的验证。",
+      "evidence_of_success": "在相同材料下提出的路线不是换数据/模型名字；其决定性验证能在合理模型假设下区分至少一个真正竞争解释。",
+      "wave": "A",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "research-design",
+      "name": "研究设计",
+      "proposed_improvement": "把科学主张映射为观测/生成模型、目标量或命题、独立单位和可检验条件；比较识别、信息量与资源而不只列算法。",
+      "evidence_of_success": "给出满足同一科学约束的竞争情况和能区分它们的设计；不能用放松约束的玩具反例代替原问题结论。",
+      "wave": "A",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "ethics-protocol",
+      "name": "治理与权限",
+      "proposed_improvement": "按实际活动连接数据许可、材料保密、伦理/注册与真实作者声明；让治理嵌入设计和获取，不做通用审批长清单。",
+      "evidence_of_success": "受限动作与可继续的工作被正确分开；生成可用申请/披露材料，未知许可和身份不被自动填成已批准或无。",
+      "wave": "C",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "data-discovery",
+      "name": "数据与材料获取",
+      "proposed_improvement": "从目标对象、测量定义、时间/空间/群体覆盖、真值与验证要求反向选材料；合法可访问性不等于能回答问题。",
+      "evidence_of_success": "能识别缺失关键变量、代理测量不等价和镜像并非独立验证；按实际需要获取完整材料而非只交下载链接。",
+      "wave": "B",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "data-preparation",
+      "name": "数据准备",
+      "proposed_improvement": "检查测量语义、连接关系、独立单位、时间对齐、变换与缺失；根据研究划分处理，保留样本流与可重跑转换。",
+      "evidence_of_success": "面对重复对象、多对多连接、混合单位及泄漏诱因，输出的样本权重和研究对象仍正确，核心结果可从原始材料重建。",
+      "wave": "B",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "analysis-execution",
+      "name": "实际研究执行",
+      "proposed_improvement": "让研究设计落实为真实实验、分析、仿真、证明或解释；以已知特例/复算检验实现，再执行有理由的基线和主方案。",
+      "evidence_of_success": "不以数据概况/IQR代替推断；遇到异常能区分实现错误、识别不足、证据不足和真实发现，并做下一项有效工作。",
+      "wave": "B",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "robustness-reproducibility",
+      "name": "稳健与复现",
+      "proposed_improvement": "围绕最可能改变主要结论的威胁选检验；使用适用的独立验证、敏感性边界、负对照或证明，而非堆叠同类分析。",
+      "evidence_of_success": "发现关键反例能定位哪些主张需改、哪些仍成立；稳健性由检验结果支持，而不是“做了很多检验”。",
+      "wave": "B",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "scientific-visualization",
+      "name": "正式图表",
+      "proposed_improvement": "把图设计为读者完成关键比较的工具：主效应、层级、反例、支持范围和必要的不确定性；比较表达方案，选信息增益高且负担适当的一种。",
+      "evidence_of_success": "在目标版面尺度下，读者能准确回答预先声明的科学问题；专业Skill实际参与最终图，新增面板有不可替代的信息用途。",
+      "wave": "A",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "manuscript-writing",
+      "name": "完整稿件",
+      "proposed_improvement": "围绕核心贡献构建全文论证，使每项关键主张有适合的证据位置；专业写作、科学/引文检查、指定反防御性整理与事实对照形成一条实际链。",
+      "evidence_of_success": "全文更清楚地陈述贡献及科学意义；来源未读与已知结果被准确区分；数字、比较、推断强度及关键反例不因润色改变。",
+      "wave": "A",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "citation-audit",
+      "name": "引文审计",
+      "proposed_improvement": "把检查重心从元数据转到具体论断的支持关系，区分主证据、背景、局部支持、相反证据和重复研究；处理版本/更正。",
+      "evidence_of_success": "DOI全部真实但引文错配的材料仍能识别；修正时不把另一情境的结果移作当前主张的证据。",
+      "wave": "B",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "manuscript-review",
+      "name": "科学审稿",
+      "proposed_improvement": "按问题重要性、设计识别、证据链和表达分别审查；区分会改变结论的错误、可通过说明解决的问题和纯风格偏好。",
+      "evidence_of_success": "意见有位置、依据和可执行修法；不会机械建议更多数据/实验，不会把强假设或探索路线仅因大胆而否定。",
+      "wave": "B",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "submission-packaging",
+      "name": "投稿准备",
+      "proposed_improvement": "以目标刊当前规则和真实最终稿为输入，检查全文、图表、补充、匿名、引用和声明一致性，产出可编辑可提交材料。",
+      "evidence_of_success": "数据/稿件版本更新后受影响附件正确同步；准备完成与用户授权外部提交清楚区分。",
+      "wave": "C",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "peer-review-response",
+      "name": "审稿回复",
+      "proposed_improvement": "把意见拆为证据、解释、方法和表达问题，实施有价值的修订；对不当/不适用要求给有依据的回应。",
+      "evidence_of_success": "每项回复对应真实改动或合理不同意；不虚报补实验，不为讨好审稿而改变结果或回避关键问题。",
+      "wave": "C",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "publication-stewardship",
+      "name": "发表管理",
+      "proposed_improvement": "处理校样、持久标识、数据/代码关联、版本和更正；判断改动影响的具体科学主张。",
+      "evidence_of_success": "校样或发表后发现错误时定位影响、保留历史并同步相关材料；不将文本替换冒充无影响更正。",
+      "wave": "C",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    },
+    {
+      "id": "research-paper-workflow",
+      "name": "生命周期总控",
+      "proposed_improvement": "维护科学目标、关键主张、尚缺证据、实际来源及产物版本；选择下一项信息价值高的工作，原生内部协作可选。",
+      "evidence_of_success": "从任意阶段接续；局部变更只更新受影响工作，关键设计变化传播到相应论断；没有其他助手发现或整链重跑。",
+      "wave": "A",
+      "rc3_behavior_scope": "actual integrated synthetic task-chain operation; not standalone auto-routing or universal capability certification"
+    }
+  ],
+  "remaining_named_scenarios": [],
+  "invariants": [
+    "Current Agent and its existing model; optional native internal subagents only",
+    "Thirteen designated external Skill repositories, dynamically discovered paths; literature/data/scientific software/original code remain unrestricted by that list",
+    "Nineteen independent capabilities and optional coordinator; general/extensible research profiles",
+    "Development tasks do not automatically begin a paper or acquire research data",
+    "Short default context; new expert detail is demand-loaded",
+    "Evidence-preserving final anti-defensive workflow for complete manuscripts"
+  ],
+  "completion_claim": false,
+  "bounded_iteration_actions_completed": true,
+  "universal_full_lifecycle_top_journal_claim_established": false
+}

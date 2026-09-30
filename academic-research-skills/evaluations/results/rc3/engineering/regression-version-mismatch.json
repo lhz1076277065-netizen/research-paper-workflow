@@ -1,0 +1,12 @@
+{
+  "command": [
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "tests/run_all.py"
+  ],
+  "cwd": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills",
+  "exit_code": 1,
+  "elapsed_seconds": 24.185,
+  "started_unix": 1790775350.7165902,
+  "stdout": "logs/regression.stdout",
+  "stderr": "logs/regression.stderr"
+}

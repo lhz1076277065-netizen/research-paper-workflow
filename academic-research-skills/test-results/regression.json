@@ -1,7 +1,7 @@
 {
-  "version": "3.2.0-rc.2",
-  "generated_at": "2026-09-30T12:50:33.237251+00:00",
-  "tests_run": 514,
+  "version": "3.2.0-rc.3",
+  "generated_at": "2026-09-30T13:38:25.835457+00:00",
+  "tests_run": 517,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
@@ -9,7 +9,7 @@
   "groups": {
     "test_architecture": 86,
     "test_integration": 78,
-    "test_lean": 54,
+    "test_lean": 57,
     "test_portability": 50,
     "test_quality31": 68,
     "test_release": 57,
@@ -784,6 +784,10 @@
       "status": "passed"
     },
     {
+      "id": "test_lean.Sources.test_declared_dependency_identity_input_is_validated",
+      "status": "passed"
+    },
+    {
       "id": "test_lean.Sources.test_default_branch_is_detected",
       "status": "passed"
     },
@@ -804,11 +808,19 @@
       "status": "passed"
     },
     {
+      "id": "test_lean.Sources.test_entry_unchanged_does_not_hide_declared_dependency_drift",
+      "status": "passed"
+    },
+    {
       "id": "test_lean.Sources.test_fresh_discovery_sees_new_commit_and_path",
       "status": "passed"
     },
     {
       "id": "test_lean.Sources.test_function_interface_uses_discovered_path",
+      "status": "passed"
+    },
+    {
+      "id": "test_lean.Sources.test_local_dependency_adaptation_needs_matching_digest_review",
       "status": "passed"
     },
     {

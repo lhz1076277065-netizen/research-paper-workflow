@@ -1,0 +1,655 @@
+{
+  "computed_at_utc": "2026-09-30T16:56:22.531244+00:00",
+  "archive_identity": {
+    "paired": {
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+      "matches_catalogue": true
+    },
+    "mirror": {
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+      "matches_catalogue": true
+    },
+    "proxy": {
+      "sha256": "32c235076cb288f6b3748172706af617b967cf5e6ea214121434b602e7085b93",
+      "matches_catalogue": true
+    }
+  },
+  "member_sha256": {
+    "LICENSE.txt": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571",
+    "dictionary.md": "99560c1c5360a1e26d10cc1f8211e3b9f0925ef0116b5166f342ced1776cc858",
+    "measurements.csv": "5f6c8244cabb460cd66160d81d8004b6d47d31ba8f464bebba3077bf22fe3375",
+    "units.csv": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f"
+  },
+  "preparation": {
+    "raw_measurement_rows": 43,
+    "metadata_history_rows": 16,
+    "copies_removed": [
+      {
+        "event_id": "e004",
+        "duplicate_csv_line": 43
+      },
+      {
+        "event_id": "e041",
+        "duplicate_csv_line": 44
+      }
+    ],
+    "unique_events": 41,
+    "methods": {
+      "A": 17,
+      "B": 24
+    },
+    "measurement_units": {
+      "score": 30,
+      "subscore": 11
+    },
+    "independent_pairs": 8,
+    "all_metadata_matches_unique": true,
+    "joins": [
+      {
+        "event_id": "e001",
+        "unit_id": "u01",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e002",
+        "unit_id": "u01",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e003",
+        "unit_id": "u01",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e004",
+        "unit_id": "u01",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e005",
+        "unit_id": "u01",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e006",
+        "unit_id": "u01",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e007",
+        "unit_id": "u02",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e008",
+        "unit_id": "u02",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e009",
+        "unit_id": "u02",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e010",
+        "unit_id": "u02",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e011",
+        "unit_id": "u02",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e012",
+        "unit_id": "u03",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e013",
+        "unit_id": "u03",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e014",
+        "unit_id": "u03",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e015",
+        "unit_id": "u03",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e016",
+        "unit_id": "u04",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e017",
+        "unit_id": "u04",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e018",
+        "unit_id": "u04",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e019",
+        "unit_id": "u04",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e020",
+        "unit_id": "u04",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e021",
+        "unit_id": "u04",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e022",
+        "unit_id": "u05",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e023",
+        "unit_id": "u05",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e024",
+        "unit_id": "u05",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e025",
+        "unit_id": "u05",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e026",
+        "unit_id": "u05",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e027",
+        "unit_id": "u06",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e028",
+        "unit_id": "u06",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e029",
+        "unit_id": "u06",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e030",
+        "unit_id": "u06",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e031",
+        "unit_id": "u07",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e032",
+        "unit_id": "u07",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e033",
+        "unit_id": "u07",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e034",
+        "unit_id": "u07",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e035",
+        "unit_id": "u07",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e036",
+        "unit_id": "u07",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e037",
+        "unit_id": "u08",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e038",
+        "unit_id": "u08",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e039",
+        "unit_id": "u08",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e040",
+        "unit_id": "u08",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      },
+      {
+        "event_id": "e041",
+        "unit_id": "u08",
+        "observed_at": "2026-01-15",
+        "metadata_record": "current",
+        "active_match_count": 1
+      }
+    ]
+  },
+  "pairs": [
+    {
+      "unit_id": "u01",
+      "stratum": "g1",
+      "A_score": 4.0,
+      "B_score": 5.5,
+      "n_A_technical": 2,
+      "n_B_technical": 4,
+      "difference_A_minus_B": -1.5
+    },
+    {
+      "unit_id": "u02",
+      "stratum": "g1",
+      "A_score": 5.0,
+      "B_score": 6.0,
+      "n_A_technical": 3,
+      "n_B_technical": 2,
+      "difference_A_minus_B": -1.0
+    },
+    {
+      "unit_id": "u03",
+      "stratum": "g1",
+      "A_score": 6.0,
+      "B_score": 6.5,
+      "n_A_technical": 1,
+      "n_B_technical": 3,
+      "difference_A_minus_B": -0.5
+    },
+    {
+      "unit_id": "u04",
+      "stratum": "g1",
+      "A_score": 7.0,
+      "B_score": 8.0,
+      "n_A_technical": 2,
+      "n_B_technical": 4,
+      "difference_A_minus_B": -1.0
+    },
+    {
+      "unit_id": "u05",
+      "stratum": "g2",
+      "A_score": 8.0,
+      "B_score": 7.0,
+      "n_A_technical": 3,
+      "n_B_technical": 2,
+      "difference_A_minus_B": 1.0
+    },
+    {
+      "unit_id": "u06",
+      "stratum": "g2",
+      "A_score": 9.0,
+      "B_score": 7.0,
+      "n_A_technical": 1,
+      "n_B_technical": 3,
+      "difference_A_minus_B": 2.0
+    },
+    {
+      "unit_id": "u07",
+      "stratum": "g2",
+      "A_score": 10.0,
+      "B_score": 7.0,
+      "n_A_technical": 2,
+      "n_B_technical": 4,
+      "difference_A_minus_B": 3.0
+    },
+    {
+      "unit_id": "u08",
+      "stratum": "g2",
+      "A_score": 11.0,
+      "B_score": 5.0,
+      "n_A_technical": 3,
+      "n_B_technical": 2,
+      "difference_A_minus_B": 6.0
+    }
+  ],
+  "strata": {
+    "g1": {
+      "A_mean": 5.5,
+      "B_mean": 6.5,
+      "mean_difference": -1.0,
+      "sample_variance": 0.16666666666666666,
+      "ordered_resamples": 256,
+      "inverse_empirical_cdf_95": [
+        -1.375,
+        -0.625
+      ],
+      "linear_95": [
+        -1.375,
+        -0.625
+      ]
+    },
+    "g2": {
+      "A_mean": 9.5,
+      "B_mean": 6.5,
+      "mean_difference": 3.0,
+      "sample_variance": 4.666666666666667,
+      "ordered_resamples": 256,
+      "inverse_empirical_cdf_95": [
+        1.5,
+        5.0
+      ],
+      "linear_95": [
+        1.5,
+        5.0
+      ]
+    }
+  },
+  "aggregates": {
+    "target": {
+      "g1_weight": 0.8,
+      "mean_difference": -0.2,
+      "ordered_resamples": 65536,
+      "inverse_empirical_cdf_95": [
+        -0.65,
+        0.25
+      ],
+      "linear_95": [
+        -0.65,
+        0.25
+      ]
+    },
+    "sample": {
+      "g1_weight": 0.5,
+      "mean_difference": 1.0,
+      "ordered_resamples": 65536,
+      "inverse_empirical_cdf_95": [
+        0.1875,
+        2.0
+      ],
+      "linear_95": [
+        0.1875,
+        2.0
+      ]
+    }
+  },
+  "leave_one_unit_out": [
+    {
+      "omitted_unit": "u01",
+      "mean_difference": -0.06666666666666667,
+      "ordered_resamples": 6912,
+      "inverse_empirical_cdf_95": [
+        -0.45,
+        0.38333333333333336
+      ],
+      "linear_95": [
+        -0.45,
+        0.38333333333333336
+      ]
+    },
+    {
+      "omitted_unit": "u02",
+      "mean_difference": -0.2,
+      "ordered_resamples": 6912,
+      "inverse_empirical_cdf_95": [
+        -0.7,
+        0.3333333333333333
+      ],
+      "linear_95": [
+        -0.7,
+        0.3333333333333333
+      ]
+    },
+    {
+      "omitted_unit": "u03",
+      "mean_difference": -0.3333333333333333,
+      "ordered_resamples": 6912,
+      "inverse_empirical_cdf_95": [
+        -0.7166666666666667,
+        0.1
+      ],
+      "linear_95": [
+        -0.7166666666666667,
+        0.1
+      ]
+    },
+    {
+      "omitted_unit": "u04",
+      "mean_difference": -0.2,
+      "ordered_resamples": 6912,
+      "inverse_empirical_cdf_95": [
+        -0.7,
+        0.3333333333333333
+      ],
+      "linear_95": [
+        -0.7,
+        0.3333333333333333
+      ]
+    },
+    {
+      "omitted_unit": "u05",
+      "mean_difference": -0.06666666666666667,
+      "ordered_resamples": 6912,
+      "inverse_empirical_cdf_95": [
+        -0.5333333333333333,
+        0.4
+      ],
+      "linear_95": [
+        -0.5333333333333333,
+        0.4
+      ]
+    },
+    {
+      "omitted_unit": "u06",
+      "mean_difference": -0.13333333333333333,
+      "ordered_resamples": 6912,
+      "inverse_empirical_cdf_95": [
+        -0.6666666666666666,
+        0.4
+      ],
+      "linear_95": [
+        -0.6666666666666666,
+        0.4
+      ]
+    },
+    {
+      "omitted_unit": "u07",
+      "mean_difference": -0.2,
+      "ordered_resamples": 6912,
+      "inverse_empirical_cdf_95": [
+        -0.7333333333333333,
+        0.4
+      ],
+      "linear_95": [
+        -0.7333333333333333,
+        0.4
+      ]
+    },
+    {
+      "omitted_unit": "u08",
+      "mean_difference": -0.4,
+      "ordered_resamples": 6912,
+      "inverse_empirical_cdf_95": [
+        -0.7333333333333333,
+        -0.06666666666666667
+      ],
+      "linear_95": [
+        -0.7333333333333333,
+        -0.06666666666666667
+      ]
+    }
+  ],
+  "weight_sensitivity": {
+    "formula": "3 - 4*w_g1",
+    "zero_crossing": 0.75,
+    "at_0_7": 0.2,
+    "at_0_8": -0.2,
+    "at_0_9": -0.6
+  },
+  "welch_satterthwaite": {
+    "standard_error": 0.27080128015453203,
+    "degrees_freedom": 5.584615384615384,
+    "ci95": [
+      -0.8747593751351954,
+      0.47475937513519534
+    ]
+  },
+  "anonymous_artifact_checks": [
+    {
+      "artifact": "S1",
+      "point_estimates": "match",
+      "main_intervals_both_quantile_conventions": "match",
+      "support_table": "match",
+      "LOO_points": "match",
+      "LOO_intervals": "not supplied",
+      "weight_sensitivity": "match",
+      "alternative_interval": "match"
+    },
+    {
+      "artifact": "S2",
+      "point_estimates": "match",
+      "main_intervals_both_quantile_conventions": "match",
+      "support_table": "match",
+      "LOO_points": "match",
+      "LOO_intervals": "match",
+      "weight_sensitivity": "match",
+      "alternative_interval": "not supplied"
+    },
+    {
+      "artifact": "S3",
+      "point_estimates": "match",
+      "main_intervals_both_quantile_conventions": "match",
+      "support_table": "match",
+      "LOO_points": "match",
+      "LOO_intervals": "not supplied",
+      "weight_sensitivity": "match",
+      "alternative_interval": "not supplied"
+    }
+  ],
+  "input_sha256": {
+    "S2/main_figure.png": "f7d5692d141100b65fc60350efd2c19c08527d09e930aa72ea9e6b8a85d69804",
+    "S2/weight-sensitivity.csv": "aae47ecd6a5de99a5f56ee4201e81cf112a71c6b25d6a9ab3afe33c317ef5852",
+    "S2/caption.md": "4ae696189642ea58efeba4b8e4e7417afe75457cd594786007f23f8526b019b4",
+    "S2/support-table.csv": "58b8cc5e9c90f426eec00086b7e68ed52030aea540f6d0bdb47afac80c4f4354",
+    "S2/results.json": "5749210705f0a6e8d1cd871a143643931e08422c0ff298a0d9dfeb018d3ccf75",
+    "S2/main_figure.svg": "48f4f75822dd571a51cf4077ae934e9ef0a899facca46531cadbbdaa1c640144",
+    "S2/leave-one-unit-out.csv": "f1d93631fd56da9b138c536298d46c459807ff671b10956a5519bbe9720773d6",
+    "S2/manuscript.md": "31530d50d3c1a753bb4b787f0a82253298ed168453a934d227efa5a362784038",
+    "S3/main_figure.png": "8a368c0154c0f7b641ed3b78a65d0d3b3a6e2c05cbe26813670cbe659a5b2f59",
+    "S3/weight-sensitivity.csv": "4c8cdf98970bd668e1d336ee94625e54e24eb4735834dfa78f1f197344ee6f08",
+    "S3/caption.md": "0b743c47d1b7b543aee938b6ce69083d879351343d0813f8746dcc8a1c2d7520",
+    "S3/support-table.csv": "62ca82ad15ff72e1e76a60c052ec0fc3fb0a7cfdab33790b2200b8cc59013dd4",
+    "S3/results.json": "cd04dafc0033f0913ecb259d2e173c0f2ae08ad1797e0a6a7b66351b6156b09c",
+    "S3/main_figure.svg": "dc9558266707fcfc46a702ae803d4c373221383f5cb2cb837a1ea52941465ab9",
+    "S3/leave-one-unit-out.csv": "1400fc3add91021c03c0bf4064208bd4d600943c63a5b5539c087516aa0be332",
+    "S3/manuscript.md": "2013ab414b4f8da13eef21f066941b37e5318743371e053d8db46e05ec0bd2b9",
+    "S1/main_figure.png": "0ad4b0501ae6d47a535716938a8d7257b8e322d94b29510fc6b392fd0b5fdfc9",
+    "S1/weight-sensitivity.csv": "b43c688500dfea684db96029afe337f438c75d3639559b137dbc2e1fd13ceca0",
+    "S1/caption.md": "7ef87f574351fe50504fa3dd053643aafe773ef3208ccef134a15aedc470d402",
+    "S1/support-table.csv": "577623e8e1203e4de02f64d21430a010f801c08190af3cc03576aa2a5df70d4a",
+    "S1/results.json": "1313c647faceb71f34dbe61b7e32bed13a979799ba2bd29f9639d1d423b09076",
+    "S1/main_figure.svg": "aa89322c28b349da9a8f4c5d3f197bba7314b3ef7fdb57ce7f0ba97aa02c90d7",
+    "S1/leave-one-unit-out.csv": "5cfd055b3b3f66e90f77d4120ffe8f98b477caa62558358e1911eda420baf097",
+    "S1/manuscript.md": "bc6b7fa3b1ec2896a1adcaa20ac65665ca9a7cd478718b3fe1c1dfaddf4e320c",
+    "raw/candidates.json": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828",
+    "raw/README.md": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3",
+    "raw/archives/mirror-v1.zip": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+    "raw/archives/proxy.zip": "32c235076cb288f6b3748172706af617b967cf5e6ea214121434b602e7085b93",
+    "raw/archives/paired-measurements-v1.zip": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+  }
+}

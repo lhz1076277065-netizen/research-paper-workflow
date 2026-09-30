@@ -1,0 +1,451 @@
+{
+  "mapping": {
+    "S1": "without-skill",
+    "S2": "release",
+    "S3": "comparison"
+  },
+  "files": [
+    {
+      "anonymous": "S1/manuscript.md",
+      "original": "runs/chain-c.without-skill.0/submission/review/manuscript-v3-anonymous.md",
+      "original_sha256": "71703beae25ac4d4cbf18ce2fef9f440b1a1444ddb19472fc6de9d1e604922af",
+      "anonymous_sha256": "71703beae25ac4d4cbf18ce2fef9f440b1a1444ddb19472fc6de9d1e604922af",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/caption.md",
+      "original": "runs/chain-c.without-skill.0/submission/review/figure-1-caption-v3.md",
+      "original_sha256": "877b16a1bf7682093c0ed10c5dc6f0e2e8a1d6ebc129cfbf544d6f896d660fd7",
+      "anonymous_sha256": "877b16a1bf7682093c0ed10c5dc6f0e2e8a1d6ebc129cfbf544d6f896d660fd7",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/supplement.md",
+      "original": "runs/chain-c.without-skill.0/submission/review/supplement-s1-v3.md",
+      "original_sha256": "09cf38006aca9454ddc516629d3093906c3a1b5f5fc5ba932d48682cf01a1226",
+      "anonymous_sha256": "09cf38006aca9454ddc516629d3093906c3a1b5f5fc5ba932d48682cf01a1226",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/responses.md",
+      "original": "runs/chain-c.without-skill.0/submission/review/responses-v3-draft.md",
+      "original_sha256": "66bdc6dfaf60dde722826e0db0fcee7f10c2905fe6b2fb3c7f6b0b8f9bb1a87e",
+      "anonymous_sha256": "66bdc6dfaf60dde722826e0db0fcee7f10c2905fe6b2fb3c7f6b0b8f9bb1a87e",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/claim-citation.md",
+      "original": "runs/chain-c.without-skill.0/reasoning/claim-citation-decisions.md",
+      "original_sha256": "a29704b07cac89c7435b7d2fe2fe60ba08d35969e110075eea3cd80d92ee3144",
+      "anonymous_sha256": "a29704b07cac89c7435b7d2fe2fe60ba08d35969e110075eea3cd80d92ee3144",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/policy-license.md",
+      "original": "runs/chain-c.without-skill.0/reasoning/journal-ethics-license-decisions.md",
+      "original_sha256": "b9da33f1beae225d94cddb135accf889d2c9917e5c8fe34cd28907a5fc1fca30",
+      "anonymous_sha256": "b9da33f1beae225d94cddb135accf889d2c9917e5c8fe34cd28907a5fc1fca30",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/author-queries.md",
+      "original": "runs/chain-c.without-skill.0/author-requests.md",
+      "original_sha256": "1536f2dc47b1d69ec3daa5c996140753661da98eca65ed17c408ff262fea5c8c",
+      "anonymous_sha256": "1536f2dc47b1d69ec3daa5c996140753661da98eca65ed17c408ff262fea5c8c",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/title-page.md",
+      "original": "runs/chain-c.without-skill.0/submission/editor-only/title-page-v3.md",
+      "original_sha256": "62da4408c0d540b7e26740ecb0821ed3922c03baae3fc5f9cb26aa854f55eead",
+      "anonymous_sha256": "62da4408c0d540b7e26740ecb0821ed3922c03baae3fc5f9cb26aa854f55eead",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/cover-letter.md",
+      "original": "runs/chain-c.without-skill.0/submission/editor-only/cover-letter-v3-draft.md",
+      "original_sha256": "acc46c0e8e3ea60e4bf307947c821fff0b7158e91871c3dcd69bd9d4e2e3bcbe",
+      "anonymous_sha256": "acc46c0e8e3ea60e4bf307947c821fff0b7158e91871c3dcd69bd9d4e2e3bcbe",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/declarations.md",
+      "original": "runs/chain-c.without-skill.0/submission/editor-only/declarations-v3-draft.md",
+      "original_sha256": "31b167aa8bf6889f7df408ab242199c9b8c9a92d94e940787dcfca25fa1bc596",
+      "anonymous_sha256": "31b167aa8bf6889f7df408ab242199c9b8c9a92d94e940787dcfca25fa1bc596",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/correction-draft.md",
+      "original": "runs/chain-c.without-skill.0/correction/version-correction-v1-to-v3-draft.md",
+      "original_sha256": "47e9bfcbcb3a23c67505e63a1028ec127bacb8c8c023c6af6d7211dc4aa4c624",
+      "anonymous_sha256": "47e9bfcbcb3a23c67505e63a1028ec127bacb8c8c023c6af6d7211dc4aa4c624",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/preserved-v1.md",
+      "original": "runs/chain-c.without-skill.0/preserved/published-snapshot-v1.md",
+      "original_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+      "anonymous_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/package-note.md",
+      "original": "runs/chain-c.without-skill.0/submission/PACKAGE-NOTE.md",
+      "original_sha256": "f0622163dade7659e711af802507d958e6d1fe304dfe794de77af23a8d1f471a",
+      "anonymous_sha256": "f0622163dade7659e711af802507d958e6d1fe304dfe794de77af23a8d1f471a",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/figure.svg",
+      "original": "runs/chain-c.without-skill.0/submission/review/figure-1-v3.svg",
+      "original_sha256": "a54d938bada78f2f39746eecdcf5fd2a9a456854d154b90886704ada444b45f5",
+      "anonymous_sha256": "a54d938bada78f2f39746eecdcf5fd2a9a456854d154b90886704ada444b45f5",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/figure.png",
+      "original": "runs/chain-c.without-skill.0/submission/review/figure-1-v3.png",
+      "original_sha256": "f52b964d77c9f355e0678407e9eb4b2eb054aa63623875cca434a5c2ffd3e3d9",
+      "anonymous_sha256": "f52b964d77c9f355e0678407e9eb4b2eb054aa63623875cca434a5c2ffd3e3d9",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/editable-copies/version-correction-v1-to-v3-draft.docx",
+      "original": "runs/chain-c.without-skill.0/correction/version-correction-v1-to-v3-draft.docx",
+      "original_sha256": "623a192e66b54f131011e655f0300d8bcf8ff876af6161b7c13ab2123452aa16",
+      "anonymous_sha256": "623a192e66b54f131011e655f0300d8bcf8ff876af6161b7c13ab2123452aa16",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/editable-copies/PACKAGE-NOTE.docx",
+      "original": "runs/chain-c.without-skill.0/submission/PACKAGE-NOTE.docx",
+      "original_sha256": "d32474db027141101498073bfa6348f2d787dae3ad8305e598bccad6be6b72d9",
+      "anonymous_sha256": "d32474db027141101498073bfa6348f2d787dae3ad8305e598bccad6be6b72d9",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/editable-copies/cover-letter-v3-draft.docx",
+      "original": "runs/chain-c.without-skill.0/submission/editor-only/cover-letter-v3-draft.docx",
+      "original_sha256": "af271f5bd1afcb40ded40a423d1b8c220d24a6f69f9bb32760cf60204a65687f",
+      "anonymous_sha256": "af271f5bd1afcb40ded40a423d1b8c220d24a6f69f9bb32760cf60204a65687f",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/editable-copies/declarations-v3-draft.docx",
+      "original": "runs/chain-c.without-skill.0/submission/editor-only/declarations-v3-draft.docx",
+      "original_sha256": "e3177f7effbe7b4ea801806e26101bfd7c1d7b148d25c8170f0370bf5c0606a0",
+      "anonymous_sha256": "e3177f7effbe7b4ea801806e26101bfd7c1d7b148d25c8170f0370bf5c0606a0",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/editable-copies/title-page-v3.docx",
+      "original": "runs/chain-c.without-skill.0/submission/editor-only/title-page-v3.docx",
+      "original_sha256": "88a0d8570c5ca98daee10570d7757d2dcf2f179b83716040ce4f0868107a665b",
+      "anonymous_sha256": "88a0d8570c5ca98daee10570d7757d2dcf2f179b83716040ce4f0868107a665b",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/editable-copies/figure-1-caption-v3.docx",
+      "original": "runs/chain-c.without-skill.0/submission/review/figure-1-caption-v3.docx",
+      "original_sha256": "064154c28703c3a788e106e013131d7ff90b1ff2530825c1c0d72a386281167c",
+      "anonymous_sha256": "064154c28703c3a788e106e013131d7ff90b1ff2530825c1c0d72a386281167c",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/editable-copies/manuscript-v3-anonymous.docx",
+      "original": "runs/chain-c.without-skill.0/submission/review/manuscript-v3-anonymous.docx",
+      "original_sha256": "5dba2519c7bc36868f9a1a37ff40589bc52ea465ac3ca195ecd9c8ef1c1d35c9",
+      "anonymous_sha256": "5dba2519c7bc36868f9a1a37ff40589bc52ea465ac3ca195ecd9c8ef1c1d35c9",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/editable-copies/responses-v3-draft.docx",
+      "original": "runs/chain-c.without-skill.0/submission/review/responses-v3-draft.docx",
+      "original_sha256": "c4269fe9a84c1edc940dc1433ec1bebcfcf7a862336e67674a11865e58522cfa",
+      "anonymous_sha256": "c4269fe9a84c1edc940dc1433ec1bebcfcf7a862336e67674a11865e58522cfa",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/editable-copies/supplement-s1-v3.docx",
+      "original": "runs/chain-c.without-skill.0/submission/review/supplement-s1-v3.docx",
+      "original_sha256": "bd41123e0a8d12a5d95b4a2de23ced8ca92bb742838c1432e60ca9a1c94468d2",
+      "anonymous_sha256": "bd41123e0a8d12a5d95b4a2de23ced8ca92bb742838c1432e60ca9a1c94468d2",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/manuscript.md",
+      "original": "runs/chain-c.release.0/submission/anonymous/manuscript-v3.md",
+      "original_sha256": "1c478921360de28479853ac2ed259d9c8f6258ec9faeb83651a59a3de32e7408",
+      "anonymous_sha256": "1c478921360de28479853ac2ed259d9c8f6258ec9faeb83651a59a3de32e7408",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/caption.md",
+      "original": "runs/chain-c.release.0/submission/anonymous/caption-v3.md",
+      "original_sha256": "cf7b2f54e4ae5f7a31807559da0f7c4db1611ae294fcda0dc3e99c8c451b4c44",
+      "anonymous_sha256": "cf7b2f54e4ae5f7a31807559da0f7c4db1611ae294fcda0dc3e99c8c451b4c44",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/supplement.md",
+      "original": "runs/chain-c.release.0/submission/anonymous/supplement-v3.md",
+      "original_sha256": "166c70278df9bc185e8ca1a5dddaae5daf3a409167a5305360bda8c1e27f7963",
+      "anonymous_sha256": "166c70278df9bc185e8ca1a5dddaae5daf3a409167a5305360bda8c1e27f7963",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/responses.md",
+      "original": "runs/chain-c.release.0/review/response-draft.md",
+      "original_sha256": "3b1ea37cd05d9d4d67b7622472a154b738faafb8fd351126c51957f8d6905e29",
+      "anonymous_sha256": "3b1ea37cd05d9d4d67b7622472a154b738faafb8fd351126c51957f8d6905e29",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/scientific-review.md",
+      "original": "runs/chain-c.release.0/science/scientific-audit.md",
+      "original_sha256": "9520e420cc4765dbfbf0313445bef1cb4a84e9ecf50a3d2b075a3a3163cec849",
+      "anonymous_sha256": "9520e420cc4765dbfbf0313445bef1cb4a84e9ecf50a3d2b075a3a3163cec849",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/claim-citation.md",
+      "original": "runs/chain-c.release.0/science/citation-audit.md",
+      "original_sha256": "6d43480452cf768e57dc29d2097963ed58cbc8e72fd4f8a16043ecdf61e6ae1d",
+      "anonymous_sha256": "6d43480452cf768e57dc29d2097963ed58cbc8e72fd4f8a16043ecdf61e6ae1d",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/policy-license.md",
+      "original": "runs/chain-c.release.0/science/journal-selection.md",
+      "original_sha256": "224de4214d06786418595f6ee862014e27777d69a11ba015c6ed96c4c141860b",
+      "anonymous_sha256": "224de4214d06786418595f6ee862014e27777d69a11ba015c6ed96c4c141860b",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/author-queries.md",
+      "original": "runs/chain-c.release.0/author-requests.md",
+      "original_sha256": "debe7d3df1bd92ffc04c75c7755fd097343bf6503c23f62b5fef04189374793b",
+      "anonymous_sha256": "debe7d3df1bd92ffc04c75c7755fd097343bf6503c23f62b5fef04189374793b",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/title-page.md",
+      "original": "runs/chain-c.release.0/submission/editorial/title-page-v3.md",
+      "original_sha256": "1708b55da18ef903bfcc37dc4e4ce489ea1cad207f28c101e0d1546badf88e0b",
+      "anonymous_sha256": "1708b55da18ef903bfcc37dc4e4ce489ea1cad207f28c101e0d1546badf88e0b",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/cover-letter.md",
+      "original": "runs/chain-c.release.0/submission/editorial/cover-letter-draft.md",
+      "original_sha256": "41e965ff1cc75ece4f8f918385c1946693811c5822747c96e53024c830b9fc4e",
+      "anonymous_sha256": "41e965ff1cc75ece4f8f918385c1946693811c5822747c96e53024c830b9fc4e",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/data-access-request.md",
+      "original": "runs/chain-c.release.0/submission/editorial/controlled-access-request-draft.md",
+      "original_sha256": "bd0c0d8a9f62472e9cfed80e058411e0f1e986bb540184b790856a822391c791",
+      "anonymous_sha256": "bd0c0d8a9f62472e9cfed80e058411e0f1e986bb540184b790856a822391c791",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/data-code-access.md",
+      "original": "runs/chain-c.release.0/submission/anonymous/data-code-access.md",
+      "original_sha256": "5aedc55335e3c116eb9922c5755dab693cc020de13b0a78dfa6753121c5f3cd0",
+      "anonymous_sha256": "5aedc55335e3c116eb9922c5755dab693cc020de13b0a78dfa6753121c5f3cd0",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/correction-draft.md",
+      "original": "runs/chain-c.release.0/correction/correction-note-draft.md",
+      "original_sha256": "ff1f3611c8278c740e9491e6e08287778bd57464bd18f9f13da4d1979646c4db",
+      "anonymous_sha256": "ff1f3611c8278c740e9491e6e08287778bd57464bd18f9f13da4d1979646c4db",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/preserved-v1.md",
+      "original": "runs/chain-c.release.0/baseline/published-snapshot-v1.md",
+      "original_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+      "anonymous_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/figure.svg",
+      "original": "runs/chain-c.release.0/submission/anonymous/figure1-v3.svg",
+      "original_sha256": "766002a0286647be905d96a5efec5ef72b66aeaba216188ad499ee373e758232",
+      "anonymous_sha256": "766002a0286647be905d96a5efec5ef72b66aeaba216188ad499ee373e758232",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/figure.png",
+      "original": "runs/chain-c.release.0/receipts/figure1-final.png",
+      "original_sha256": "fb198a07e1f9c3b32e2c60e2c0697db3cd763874e753ef19de373a4d789cdeb7",
+      "anonymous_sha256": "fb198a07e1f9c3b32e2c60e2c0697db3cd763874e753ef19de373a4d789cdeb7",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/manuscript.md",
+      "original": "runs/chain-c.comparison.0/manuscript-v3-anonymous.md",
+      "original_sha256": "2d0c986ce6b3895cd4f50eb45d87c1386de71ea8e1ce75191f8cc28ecb1d5d5c",
+      "anonymous_sha256": "2d0c986ce6b3895cd4f50eb45d87c1386de71ea8e1ce75191f8cc28ecb1d5d5c",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/caption.md",
+      "original": "runs/chain-c.comparison.0/caption-v3.md",
+      "original_sha256": "237906dd609f76b7639e33f1dfd27b4038a033eb3b14b1fddc80b00b85185a64",
+      "anonymous_sha256": "237906dd609f76b7639e33f1dfd27b4038a033eb3b14b1fddc80b00b85185a64",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/supplement.md",
+      "original": "runs/chain-c.comparison.0/supplement-v3.md",
+      "original_sha256": "0aeb1ed8e5bc18dadbdf91f44922dbf3da2ea74a2397b01513d5c8472d370ef3",
+      "anonymous_sha256": "0aeb1ed8e5bc18dadbdf91f44922dbf3da2ea74a2397b01513d5c8472d370ef3",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/responses.md",
+      "original": "runs/chain-c.comparison.0/response-to-reviewers.md",
+      "original_sha256": "c107fb54bcce6e1f589424d62f1fcecb6b545d8ac17bd7f7946c22dc4beb7d40",
+      "anonymous_sha256": "c107fb54bcce6e1f589424d62f1fcecb6b545d8ac17bd7f7946c22dc4beb7d40",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/scientific-review.md",
+      "original": "runs/chain-c.comparison.0/scientific-review.md",
+      "original_sha256": "737922c7cf6610cff9931a566a9a68d3140e0028f645ca7c0a725eae49d761d0",
+      "anonymous_sha256": "737922c7cf6610cff9931a566a9a68d3140e0028f645ca7c0a725eae49d761d0",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/author-queries.md",
+      "original": "runs/chain-c.comparison.0/author-queries.md",
+      "original_sha256": "91d31e72d639ed5c0722d893f4c86bb63491ac4c95ad92b86704617722caa862",
+      "anonymous_sha256": "91d31e72d639ed5c0722d893f4c86bb63491ac4c95ad92b86704617722caa862",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/title-page.md",
+      "original": "runs/chain-c.comparison.0/title-page-draft.md",
+      "original_sha256": "ec11172b791469d95ea7eec2af9359ee1e23419a993090bd2789c8fc56c13e04",
+      "anonymous_sha256": "ec11172b791469d95ea7eec2af9359ee1e23419a993090bd2789c8fc56c13e04",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/cover-letter.md",
+      "original": "runs/chain-c.comparison.0/cover-letter-draft.md",
+      "original_sha256": "4343fbafa120111afa9a22a63b9bada5c5f0b4fd44208f2f87c613a2fb673987",
+      "anonymous_sha256": "4343fbafa120111afa9a22a63b9bada5c5f0b4fd44208f2f87c613a2fb673987",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/declarations.md",
+      "original": "runs/chain-c.comparison.0/declarations-draft.md",
+      "original_sha256": "5297c6f9a04e1918fcf1f1749771ffae903ced0be351cbb2961a96c5e1103f91",
+      "anonymous_sha256": "5297c6f9a04e1918fcf1f1749771ffae903ced0be351cbb2961a96c5e1103f91",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/data-access-request.md",
+      "original": "runs/chain-c.comparison.0/data-access-request-draft.md",
+      "original_sha256": "12510a826992c1cd1860b321c4d823e7e7d5b79bf59e000fe5c6fc2f068433f5",
+      "anonymous_sha256": "12510a826992c1cd1860b321c4d823e7e7d5b79bf59e000fe5c6fc2f068433f5",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/correction-draft.md",
+      "original": "runs/chain-c.comparison.0/correction-note-v1-draft.md",
+      "original_sha256": "57e3d4c3236dc3ec7fb7b8d9409061f8a7a806d64cc1fc77e60da9a0ba519d9e",
+      "anonymous_sha256": "57e3d4c3236dc3ec7fb7b8d9409061f8a7a806d64cc1fc77e60da9a0ba519d9e",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/preserved-v1.md",
+      "original": "runs/chain-c.comparison.0/baseline/published-snapshot-v1.md",
+      "original_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+      "anonymous_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/figure.svg",
+      "original": "runs/chain-c.comparison.0/figure-1.svg",
+      "original_sha256": "5141cea6ea73828f8bdf21248b06aa6ec92ba4c36176f5a7a14a230794a31ecd",
+      "anonymous_sha256": "5141cea6ea73828f8bdf21248b06aa6ec92ba4c36176f5a7a14a230794a31ecd",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/figure.png",
+      "original": "runs/chain-c.comparison.0/figure-1.png",
+      "original_sha256": "aa1df6794a76ae66adbf707c09b3b54ba410587a866e48f3bc8b8cf26147b387",
+      "anonymous_sha256": "aa1df6794a76ae66adbf707c09b3b54ba410587a866e48f3bc8b8cf26147b387",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/editable-copies/caption-v3.docx",
+      "original": "runs/chain-c.comparison.0/editable/caption-v3.docx",
+      "original_sha256": "7ffab16ac43b213a8435a01637b9f784b7584e62c4d92eb5a5e7f126ea266304",
+      "anonymous_sha256": "7ffab16ac43b213a8435a01637b9f784b7584e62c4d92eb5a5e7f126ea266304",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/editable-copies/correction-note-v1-draft.docx",
+      "original": "runs/chain-c.comparison.0/editable/correction-note-v1-draft.docx",
+      "original_sha256": "388128f0c2c20a61259fb1fca599e18bdbf5d50fc9fe69c4f9ea97f0240164d2",
+      "anonymous_sha256": "388128f0c2c20a61259fb1fca599e18bdbf5d50fc9fe69c4f9ea97f0240164d2",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/editable-copies/cover-letter-draft.docx",
+      "original": "runs/chain-c.comparison.0/editable/cover-letter-draft.docx",
+      "original_sha256": "9678577b64cca9a6aca66e69a8859d537438ee57b42077a7c24eacf7fe494d1c",
+      "anonymous_sha256": "9678577b64cca9a6aca66e69a8859d537438ee57b42077a7c24eacf7fe494d1c",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/editable-copies/data-access-request-draft.docx",
+      "original": "runs/chain-c.comparison.0/editable/data-access-request-draft.docx",
+      "original_sha256": "d7ae045e2ff02b889cc515f83e46cc66c98bc585151cfa55d998b2e371fe1fa1",
+      "anonymous_sha256": "d7ae045e2ff02b889cc515f83e46cc66c98bc585151cfa55d998b2e371fe1fa1",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/editable-copies/declarations-draft.docx",
+      "original": "runs/chain-c.comparison.0/editable/declarations-draft.docx",
+      "original_sha256": "09a2023fc99205b850028f2dd77babaf25e06b26689fd81f0facb0a9f1c96f0b",
+      "anonymous_sha256": "09a2023fc99205b850028f2dd77babaf25e06b26689fd81f0facb0a9f1c96f0b",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/editable-copies/manuscript-v3-anonymous.docx",
+      "original": "runs/chain-c.comparison.0/editable/manuscript-v3-anonymous.docx",
+      "original_sha256": "6b1067a3eafbe60d672fdd5be05b5bd172284352c3a72a5841fcd4c33a8c4be1",
+      "anonymous_sha256": "6b1067a3eafbe60d672fdd5be05b5bd172284352c3a72a5841fcd4c33a8c4be1",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/editable-copies/response-to-reviewers.docx",
+      "original": "runs/chain-c.comparison.0/editable/response-to-reviewers.docx",
+      "original_sha256": "c3503e5adf5c154bab9da482fbf226701dcc4b488b61179892a3d1af66811408",
+      "anonymous_sha256": "c3503e5adf5c154bab9da482fbf226701dcc4b488b61179892a3d1af66811408",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/editable-copies/supplement-v3.docx",
+      "original": "runs/chain-c.comparison.0/editable/supplement-v3.docx",
+      "original_sha256": "cd76003fba13fc4211374907e8305480819d051f385dce837d3598364c0267fc",
+      "anonymous_sha256": "cd76003fba13fc4211374907e8305480819d051f385dce837d3598364c0267fc",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/editable-copies/title-page-draft.docx",
+      "original": "runs/chain-c.comparison.0/editable/title-page-draft.docx",
+      "original_sha256": "beadb4f6bdae4535d989e883048c0350a65d2fc1d3b492bf8c17f17c26d072ec",
+      "anonymous_sha256": "beadb4f6bdae4535d989e883048c0350a65d2fc1d3b492bf8c17f17c26d072ec",
+      "path_redacted": false
+    }
+  ],
+  "transform": "Local paths only in textual review copies; original scientific text/numbers, images and native documents preserved; publication v1/v2/v3 not redacted."
+}

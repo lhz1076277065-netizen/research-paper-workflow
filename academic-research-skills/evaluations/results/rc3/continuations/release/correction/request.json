@@ -1,0 +1,63 @@
+{
+  "case_id": "chain-b",
+  "condition": "release",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "development",
+  "skill_snapshot": {
+    "root": "LOCAL_EVIDENCE_ROOT/transfer-suite/snapshots/release/chain-b",
+    "manifest": "LOCAL_EVIDENCE_ROOT/transfer-suite/identities/release.chain-b.json",
+    "manifest_sha256": "949d54d722780aabf5a1da3631172012edc64c49d354df76378d25f7d64bdd56"
+  },
+  "user_prompt": "接续同一合成开发项目，现授权采用更正后的原始档案 LOCAL_EVIDENCE_ROOT/continuation-materials/paired-measurements-v2.zip。\n更正说明见 LOCAL_EVIDENCE_ROOT/continuation-materials/approved-correction.json：u08 的 B 原始值增加1000 subscore，包括相同事件副本；定义、其他数据和目标权重均未改变。\n保留旧版材料与已完成产物，按受影响的实际依赖更新准备、分析、相关稳健性、主图、图注和全文；与本次更正无关的工作可复用。沿用你的研究方法，不能只改一处文本数字。交付 v2/ 下完整更新后的相关文件和 operation-correction.md，指出真实变化与未知范围。不需要任何外部研究、论文或新实验。\n压缩包仍按摘要和成员字节核验；解出的成员可直接读取，另存衍生身份，勿把它们当原请求的冻结 material。",
+  "material": "接续同一合成开发项目，现授权采用更正后的原始档案 LOCAL_EVIDENCE_ROOT/continuation-materials/paired-measurements-v2.zip。\n更正说明见 LOCAL_EVIDENCE_ROOT/continuation-materials/approved-correction.json：u08 的 B 原始值增加1000 subscore，包括相同事件副本；定义、其他数据和目标权重均未改变。\n保留旧版材料与已完成产物，按受影响的实际依赖更新准备、分析、相关稳健性、主图、图注和全文；与本次更正无关的工作可复用。沿用你的研究方法，不能只改一处文本数字。交付 v2/ 下完整更新后的相关文件和 operation-correction.md，指出真实变化与未知范围。不需要任何外部研究、论文或新实验。\n压缩包仍按摘要和成员字节核验；解出的成员可直接读取，另存衍生身份，勿把它们当原请求的冻结 material。",
+  "material_root": "LOCAL_EVIDENCE_ROOT/materials/chain-b",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/README.md",
+      "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/mirror-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/paired-measurements-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/proxy.zip",
+      "sha256": "32c235076cb288f6b3748172706af617b967cf5e6ea214121434b602e7085b93"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/candidates.json",
+      "sha256": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/continuation-materials/paired-measurements-v2.zip",
+      "sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/continuation-materials/approved-correction.json",
+      "sha256": "ea52cbde1af67ee7b218ad6be411549ee37547262bf4d3d0e116eaa8c2d2f379"
+    }
+  ],
+  "skill_entry": "LOCAL_EVIDENCE_ROOT/transfer-suite/snapshots/release/chain-b/SKILL.md",
+  "skill_entry_sha256": "795e1046ad1ae9a52b302fda9029b8c0ca45d554354afbdc92c2e6bba9acda01",
+  "initial_skill_text": "---\nname: research-paper-workflow\ndescription: \"当用户要求跨阶段开展学术研究或完成整篇研究成果时协调问题、设计、证据、图稿与交付；单项请求直接用对应能力，更新Skill本身不启动论文研究。\"\nmetadata:\n  version: \"3.2.0-rc.3\"\n---\n\n# 实际学术研究到完整成果的当前Agent总控\n\n用户请求实际开展研究时，先建立研究承诺、最近邻差异与决定性验证；按阶段推进真实研究、正式图表、全文与选刊。不要把工程试跑或容易下载的小数据分析作为顶刊目标完成。\n\n由当前Agent及其现有模型执行，原生子代理按需使用；不寻找本地大模型或其他宿主联动。外部专业Skill从用户指定13仓库的本地安装/当前GitHub版本选择；方法和原创代码可自主探索。缺依赖按本任务准备并验证后运行。方法与实现可自主选择、改造或新写代码；正式结论依据实际证据。\n\n完整项目先读 [科研主线](references/research-lifecycle.md) 和 [研究质量](references/research-quality.md)，建立一份可见路线板后持续推进。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。\n\n交付实际成果及关键证据、采用的Skill与完成范围。局部任务直接做；完整研究保留科学目标与下一步，不让自检通过、导出函数或普通小题替代用户的研究目标。\n\n脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。\n\n开发、更新或打包本套Skill时，交付通用Skill文件与软件验证，不自动选具体课题或撰稿。\n",
+  "available_selected_capabilities": [
+    "research-paper-workflow",
+    "data-discovery",
+    "data-preparation",
+    "analysis-execution",
+    "robustness-reproducibility",
+    "scientific-visualization",
+    "manuscript-writing"
+  ],
+  "adapter_contract": "Equal current native Agent/model/tools/professional pool. No other-arm answers. Project capability resources demand-loaded within frozen bundle; evaluation-only bundling, not native auto-discovery.",
+  "continuation_phase": "correction",
+  "parent_case_id": "chain-b",
+  "prior_artifact_checkpoint": "LOCAL_EVIDENCE_ROOT/checkpoints/chain-b.release.0/after-caption",
+  "fresh_context": false,
+  "same_agent_continuation": true
+}

@@ -1,0 +1,69 @@
+{
+  "version": "3.2.0-rc.3",
+  "checked_at": "2026-09-30T14:15:48.564550+00:00",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "python": "3.12.14",
+  "passed": true,
+  "checks": [
+    {
+      "name": "local_python_scripts",
+      "status": "passed",
+      "detail": {
+        "files": 11
+      }
+    },
+    {
+      "name": "empty_default_provider_registry",
+      "status": "passed",
+      "detail": "dynamic source selection enabled"
+    },
+    {
+      "name": "designated_skill_source_scope",
+      "status": "passed",
+      "detail": {
+        "selected_sources": 13,
+        "outside_library_rejected": true,
+        "ordinary_scientific_software_restricted": false
+      }
+    },
+    {
+      "name": "focused_environment_needs_no_statistical_stack",
+      "status": "passed",
+      "detail": "no packages needed"
+    },
+    {
+      "name": "scientific_imports",
+      "status": "passed",
+      "detail": {
+        "status": "environment_verified",
+        "python": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python"
+      }
+    },
+    {
+      "name": "analytic_compute_plot_report",
+      "status": "passed",
+      "detail": {
+        "material_kind": "manufactured analytic verification; not empirical research",
+        "n": 21,
+        "slope": 2.0,
+        "intercept": 1.0,
+        "integral_sin_0_pi": 2.0,
+        "quadrature_error_estimate": 2.220446049250313e-14
+      }
+    },
+    {
+      "name": "actual_output_handoff",
+      "status": "passed",
+      "detail": {
+        "status": "checked_for_handoff",
+        "semantic_or_visual_review_performed_here": false
+      }
+    }
+  ],
+  "scientific_smoke_requested": true,
+  "native_host_activation_tested": false,
+  "model_ability_measured": false,
+  "real_paper_lifecycle_tested": false,
+  "output_directory": "LOCAL_EVIDENCE_ROOT/scientific-smoke"
+}

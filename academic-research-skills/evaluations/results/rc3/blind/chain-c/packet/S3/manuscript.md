@@ -1,0 +1,32 @@
+SYNTHETIC DEVELOPMENT DRAFT — prepared for author review; no real research or submission.
+
+# Target composition can reverse an aggregate method comparison
+
+## Abstract
+An aggregate method comparison can change direction when its stratum composition differs from the intended target. This Technical Note makes that dependence explicit in a supplied synthetic paired comparison. The record contains eight independent units, four in each of two strata, with both methods measured on each unit. Mean A−B was −1.00 score in g1 and +3.00 in g2, where lower score is better. These contrasts yield +1.00 for the equal sampled mixture and −0.20 for the target g1:g2 mixture of 0.8:0.2 fixed before measurement. The supplied 95% within-stratum paired-unit bootstrap percentile interval for the target contrast is [−0.60, 0.20]. The contribution is a diagnostic of composition-dependent comparison, preserving the opposing stratum result and the uncertainty around the target estimate; it establishes neither universal dominance, a causal effect nor equivalence.
+
+## Introduction
+A single aggregate comparison may answer the wrong practical question when the sampled composition differs from the intended target. Reporting stratum contrasts alongside explicit target weights lets readers see whether the aggregate direction depends on that choice. This note demonstrates that diagnostic in a two-stratum synthetic comparison: the equal sampled mixture and the prespecified target mixture give opposite directions from the same stratum estimates.
+
+## Methods
+The unit of inference was an independent unit, with A and B measured on the same unit. The supplied record identifies eight independent paired units: four in g1 and four in g2. Technical repetitions were averaged within each unit and method after unit conversion. They were not treated as additional independent units. The number of technical repetitions and the conversion details are not provided.
+
+Let d_g be the stratum mean of the within-unit score difference A−B. Negative differences favor A and positive differences favor B. For weights w1 and w2 summing to one, the aggregate contrast is w1 d_g1 + w2 d_g2. The target weights 0.8 and 0.2 were fixed before measurement. The equal observed unit mixture instead assigns weights 0.5 and 0.5 because each stratum contributes four units. Thus the two aggregates answer questions about different compositions.
+
+The supplied analysis description reports resampling paired units within each stratum and reapplying the target weights to each resample. Its reported uncertainty object is a 95% within-stratum paired-unit bootstrap percentile interval for the target-weighted mean difference. Pairing is preserved by resampling the unit's A and B measurements together. The numerical source data, original analysis script, bootstrap realizations, resample count and seed are unavailable in this task. Results are reported from the supplied authoritative version 2 memo; the weighted arithmetic can be reconciled from its aggregates, but the interval cannot be independently reproduced here.
+
+## Results
+The stratum contrasts point in opposite directions: g1 has A−B = −1.00 score, whereas g2 has A−B = +3.00 score. Accordingly, g2 favors B on the reported point estimate and does not support a universal advantage for A (Figure 1; Supplement S1).
+
+The equal sampled mixture gives 0.5 × (−1.00) + 0.5 × 3.00 = +1.00 score. The target mixture gives 0.8 × (−1.00) + 0.2 × 3.00 = −0.20 score. The change in composition therefore reverses the aggregate point-estimate direction without changing either stratum estimate. The supplied target interval [−0.60, 0.20] includes zero and differences of both signs. No interval for either stratum or for the equal sampled mixture was supplied.
+
+## Discussion
+The diagnostic contribution is the contrast between two explicitly defined compositions. The larger g1 weight in the target mixture changes the direction of the aggregate point estimate. Retaining g2 is essential: its opposing contrast explains why a single aggregate cannot stand for all mixtures. This finding concerns the supplied comparison and target weights; no new causal or predictive method or external validation is established.
+
+The record contains no treatment assignment, measured confounders or causal adjustment that would identify a causal effect. Pairing and the supplied independence description do not supply those missing design features. The target interval is a sampling-uncertainty summary under the reported paired-unit resampling procedure, not a causal interval or a guarantee for every population. Its inclusion of zero does not demonstrate equivalence or an exact absence of difference. No equivalence margin or registered equivalence test is available. With four units per stratum and no numerical data or bootstrap outputs supplied, the interval's implementation and operating properties remain unverified.
+
+## Conclusion
+Reporting stratum contrasts with explicit mixture weights exposes a direction change that an aggregate alone would conceal. In this fixture, the equal sampled mixture yields +1.00 and the target mixture yields −0.20 score. The note therefore makes target composition part of the interpretation of the comparison.
+
+## Data and code access
+The governing fixture license permits local analysis, code and aggregate-result sharing, and prohibits redistribution of raw unit-level records and identifiers. Those materials are excluded from this package. Any proposed access must be assessed by the responsible data holder through a pathway compatible with that license; contact, access arrangements and approval are unknown. No unrestricted open-data deposit or approved controlled access is claimed. The original analysis data and bootstrap code were not supplied. This local package provides aggregate values and editable display/reconciliation code, which does not reproduce the original bootstrap analysis. Supplement S1 gives the available methodological record and reporting bounds. Required author, funding, conflict and ethics declarations remain in a separate unapproved draft.

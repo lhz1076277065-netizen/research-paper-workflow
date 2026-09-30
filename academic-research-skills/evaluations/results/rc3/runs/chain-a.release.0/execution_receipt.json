@@ -1,0 +1,15 @@
+{
+  "command": [
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "LOCAL_EVIDENCE_ROOT/runs/chain-a.release.0/certificate_check.py"
+  ],
+  "started_at": "2026-09-30T14:23:19.580868+00:00",
+  "completed_at": "2026-09-30T14:23:20.157103+00:00",
+  "wall_seconds": 0.5759757090127096,
+  "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "exit_code": 0,
+  "stdout": "{\n  \"synthetic\": true,\n  \"model\": \"finite simple DAG; all labels z; vertex i timestamp i; induced inclusion of retained subset; distinct-vertex nonempty-path reachability\",\n  \"enumeration_scope\": \"all forward edge masks and retained subsets for n=0..5; not a proof for arbitrary n\",\n  \"graphs\": 1100,\n  \"graph_subset_cases\": 33867,\n  \"equivalence_cases\": 30093,\n  \"equivalence_without_interval_closure_cases\": 3660,\n  \"cover_equivalence_mismatches\": 0,\n  \"certificate_scope\": \"unique irredundant generating relation of the known restricted reachability order; no runtime or oracle-query minimality claim\"\n}\n",
+  "stderr": "",
+  "run_number": 2,
+  "reason": "Added explicit smallest-target check and certificate-size family examples after first complete mathematical enumeration."
+}

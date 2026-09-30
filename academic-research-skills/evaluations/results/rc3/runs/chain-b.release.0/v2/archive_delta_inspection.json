@@ -1,0 +1,110 @@
+{
+  "checked_at_utc": "2026-09-30T16:08:35.777434+00:00",
+  "members": [
+    {
+      "at_utc": "2026-09-30T16:08:35.776206+00:00",
+      "original_zip_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+      "member_name": "LICENSE.txt",
+      "member_sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571",
+      "member_bytes": 119,
+      "actual_read_byte_range": [
+        0,
+        119
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "inspect delta after strict dictionary byte-identity check failed"
+    },
+    {
+      "at_utc": "2026-09-30T16:08:35.776481+00:00",
+      "original_zip_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+      "member_name": "dictionary.md",
+      "member_sha256": "99560c1c5360a1e26d10cc1f8211e3b9f0925ef0116b5166f342ced1776cc858",
+      "member_bytes": 906,
+      "actual_read_byte_range": [
+        0,
+        906
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "inspect delta after strict dictionary byte-identity check failed"
+    },
+    {
+      "at_utc": "2026-09-30T16:08:35.776496+00:00",
+      "original_zip_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+      "member_name": "measurements.csv",
+      "member_sha256": "5f6c8244cabb460cd66160d81d8004b6d47d31ba8f464bebba3077bf22fe3375",
+      "member_bytes": 1774,
+      "actual_read_byte_range": [
+        0,
+        1774
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "inspect delta after strict dictionary byte-identity check failed"
+    },
+    {
+      "at_utc": "2026-09-30T16:08:35.776499+00:00",
+      "original_zip_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+      "member_name": "units.csv",
+      "member_sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f",
+      "member_bytes": 676,
+      "actual_read_byte_range": [
+        0,
+        676
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "inspect delta after strict dictionary byte-identity check failed"
+    },
+    {
+      "at_utc": "2026-09-30T16:08:35.776771+00:00",
+      "original_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "LICENSE.txt",
+      "member_sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571",
+      "member_bytes": 119,
+      "actual_read_byte_range": [
+        0,
+        119
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "inspect delta after strict dictionary byte-identity check failed"
+    },
+    {
+      "at_utc": "2026-09-30T16:08:35.776777+00:00",
+      "original_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "dictionary.md",
+      "member_sha256": "52a2a3ebb520e3971d898205ab312a96affac0735bcb5fa369bcfa7eed77d4c7",
+      "member_bytes": 1099,
+      "actual_read_byte_range": [
+        0,
+        1099
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "inspect delta after strict dictionary byte-identity check failed"
+    },
+    {
+      "at_utc": "2026-09-30T16:08:35.776780+00:00",
+      "original_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "measurements.csv",
+      "member_sha256": "2e3a498385f00877ea8ed9f8aa2be4a86942f4382e7a469e13699fbc04f24539",
+      "member_bytes": 1774,
+      "actual_read_byte_range": [
+        0,
+        1774
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "inspect delta after strict dictionary byte-identity check failed"
+    },
+    {
+      "at_utc": "2026-09-30T16:08:35.776782+00:00",
+      "original_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "units.csv",
+      "member_sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f",
+      "member_bytes": 676,
+      "actual_read_byte_range": [
+        0,
+        676
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "inspect delta after strict dictionary byte-identity check failed"
+    }
+  ],
+  "dictionary_diff": "--- prior/dictionary.md\n+++ corrected/dictionary.md\n@@ -10,3 +10,5 @@\n within-stratum resampling model. Generalization to a real population is unknown.\n Target weights (0.8,0.2) were stipulated before measurements. There are four\n observed units in each stratum. No real data or real-world validation is present.\n+\n+Version 2 approved synthetic correction: u08 method B raw values each increased by 1000 subscore. Exact event copies receive the same correction; definitions and target weights are unchanged.\n"
+}

@@ -1,0 +1,1 @@
+SYNTHETIC Supplement S1. Eight paired independent units; four per stratum. Technical repetitions averaged within unit/method after conversion. Target weights fixed before measurement at 0.8/0.2. Data and resampling outputs not supplied in this task. See evidence.md for reporting results.

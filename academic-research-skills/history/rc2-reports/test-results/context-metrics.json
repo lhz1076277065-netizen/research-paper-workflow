@@ -1,0 +1,32 @@
+{
+  "version": "3.2.0-rc.2",
+  "entry_characters": {
+    "analysis-execution": 617,
+    "citation-audit": 592,
+    "data-discovery": 604,
+    "data-preparation": 609,
+    "ethics-protocol": 592,
+    "journal-intelligence": 620,
+    "literature-discovery": 612,
+    "manuscript-review": 678,
+    "manuscript-writing": 711,
+    "paper-deep-reading": 599,
+    "peer-review-response": 661,
+    "publication-stewardship": 601,
+    "research-design": 653,
+    "research-intake": 602,
+    "research-paper-workflow": 770,
+    "robustness-reproducibility": 603,
+    "scientific-visualization": 674,
+    "submission-packaging": 602,
+    "topic-novelty": 662
+  },
+  "entry_total_characters": 12062,
+  "entry_min_characters": 592,
+  "entry_max_characters": 770,
+  "meaning": "File characters only; not model context, tokens, peak or cost",
+  "trial_metrics": "evaluations/results/rc2/context-metrics.json",
+  "per_trial_tokens": "unknown",
+  "repeated_effective_context": "unknown",
+  "cost_change": "unknown"
+}

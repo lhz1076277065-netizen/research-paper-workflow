@@ -1,0 +1,20 @@
+[
+  {
+    "id": "paired",
+    "path": "archives/paired-measurements-v1.zip",
+    "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+    "description": "original paired score archive with dictionary and unit metadata"
+  },
+  {
+    "id": "mirror",
+    "path": "archives/mirror-v1.zip",
+    "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+    "description": "mirror copy of paired archive; same source"
+  },
+  {
+    "id": "proxy",
+    "path": "archives/proxy.zip",
+    "sha256": "32c235076cb288f6b3748172706af617b967cf5e6ea214121434b602e7085b93",
+    "description": "easy flat table, different proxy measurements"
+  }
+]

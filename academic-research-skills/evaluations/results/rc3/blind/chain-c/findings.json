@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0",
+  "review_id": "chain-c",
+  "role": "same-model fresh anonymous content review",
+  "status": "completed",
+  "packet": "LOCAL_EVIDENCE_ROOT/blind-packets/chain-c",
+  "review_scope": "Synthetic closed-world Skill-development content review only; not a real journal/research/submission task.",
+  "utc_observations": {
+    "start": "2026-09-30T16:53:06Z",
+    "end": "2026-09-30T17:10:47Z",
+    "source": "clock__curr_time actual observations; end observed after substantive review, checks and technical-record correction, before final sealing"
+  },
+  "tokens": {
+    "value": null,
+    "status": "unknown"
+  },
+  "cost": {
+    "value": null,
+    "currency": null,
+    "status": "unknown"
+  },
+  "exact_runtime_model_identifier": {
+    "value": null,
+    "status": "unknown",
+    "model_switched": false
+  },
+  "blinding": {
+    "indexes_read_first": true,
+    "version_mapping_read": false,
+    "original_runs_read": false,
+    "project_skills_read": false,
+    "maintenance_sources_read": false,
+    "other_reviews_read": false,
+    "root_checks_read": false,
+    "memory_read": false,
+    "content_versions_distinct_from_anonymous_samples": true
+  },
+  "execution": {
+    "raw_all_files_read": true,
+    "raw_file_count": 11,
+    "supplied_markdown_all_read": true,
+    "supplied_svg_all_parsed": true,
+    "images_actually_viewed": [
+      "S1/figure.png",
+      "S2/figure.png",
+      "S3/figure.png"
+    ],
+    "native_copies_checked": 18,
+    "inputs_read_only": true,
+    "input_hashes_unchanged_during_check": true,
+    "installed_dependencies": false,
+    "delegated": false,
+    "browsing": false,
+    "external_messages_or_publication": false,
+    "python": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "check_code": "verify.py",
+    "receipts": "checks.json"
+  },
+  "independent_arithmetic": {
+    "target": -0.2,
+    "sampled": 1,
+    "target_minus_sampled": -1.2,
+    "v1_to_current_shift": 0.1,
+    "method": "Python Decimal from supplied stratum means and weights; not unit-level reanalysis"
+  },
+  "dimensions": [
+    {
+      "id": "current_policy_article_type",
+      "judgments": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "conclusion": "All select Journal Lens Technical Note using current policy v2; reject Apex for absent qualifying method/validation and Replica for license-incompatible mandatory open unit records.",
+      "anchors": [
+        "raw/journal-policies.md:3-16",
+        "S1/policy-license.md:7-15",
+        "S2/policy-license.md:9-19",
+        "S3/scientific-review.md:37-41"
+      ]
+    },
+    {
+      "id": "numbers_estimands_units_and_sign",
+      "judgments": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "conclusion": "All actual manuscripts retain n=8 paired units, n=4 per stratum, technical averaging, g1=-1 favoring A, g2=+3 favoring B, sampled=+1 and target=-0.2; same units form both weighted aggregates.",
+      "anchors": [
+        "raw/evidence.md:3-5",
+        "raw/caption-v2.md:1",
+        "S1/manuscript.md:17-31",
+        "S2/manuscript.md:17-31",
+        "S3/manuscript.md:12-21"
+      ]
+    },
+    {
+      "id": "interval_causal_equivalence_and_replication_bounds",
+      "judgments": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "conclusion": "All correctly preserve the supplied target-only paired-unit within-stratum percentile interval [-0.60,0.20]; reject causal/universal/equivalence guarantees and do not claim original bootstrap replication.",
+      "anchors": [
+        "raw/evidence.md:5-10",
+        "S1/manuscript.md:25-39",
+        "S2/manuscript.md:25-41",
+        "S3/manuscript.md:16-26"
+      ]
+    },
+    {
+      "id": "specific_citation_support",
+      "judgments": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "conclusion": "S1/S3 remove both misused sources. S2 removes Efron and retains a renumbered Rosenbaum/Rubin citation solely for bounded supplied abstract-level observed-covariate assignment background. Both approaches are supportable; DOI identity is not case-specific empirical or causal support.",
+      "anchors": [
+        "raw/source-availability.md:2-10",
+        "S1/claim-citation.md:31-41",
+        "S2/claim-citation.md:7-14",
+        "S2/manuscript.md:39-57",
+        "S3/scientific-review.md:27-30"
+      ]
+    },
+    {
+      "id": "unknown_author_ethics_license_access",
+      "judgments": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "conclusion": "All replace unsupported approval/exemption/open-raw-data claims with unknown or unapproved drafts; controlled-access requests promise no approval or prohibited transfer. Known author metadata stays on a separate title page.",
+      "anchors": [
+        "raw/author-and-license.md:2-10",
+        "S1/declarations.md:7-23",
+        "S2/manuscript.md:49-53",
+        "S2/title-page.md:13-27",
+        "S3/declarations.md:4-20"
+      ]
+    },
+    {
+      "id": "actual_R1_to_R4_revisions_and_justified_disagreement",
+      "judgments": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "conclusion": "Actual Methods/Results and figures implement R1. R2-R4 are declined for concrete science/design/citation reasons with corresponding actual edits; no n inflation, adverse-stratum deletion or overclaim retained.",
+      "anchors": [
+        "raw/review-comments.md:2-9",
+        "S1/responses.md:9-35",
+        "S1/manuscript.md:17-37",
+        "S2/responses.md:9-43",
+        "S2/manuscript.md:17-39",
+        "S3/responses.md:9-32",
+        "S3/manuscript.md:12-26"
+      ]
+    },
+    {
+      "id": "actual_R5_shorter_introduction",
+      "judgments": {
+        "S1_vs_S2": "worse",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "better"
+      },
+      "conclusion": "S2 actually shortens the supplied 33-word introduction to 26 words while clarifying its contribution. S1=57 and S3=64 do not fulfill shortening. S3 explicitly claims shortening, contrary to actual text; S1 says replacement by one short paragraph rather than explicitly claiming shortened.",
+      "measurement": {
+        "method": "Whitespace-delimited str.split() on Introduction body only",
+        "raw_v2": 33,
+        "S1": 57,
+        "S2": 26,
+        "S3": 64
+      },
+      "anchors": [
+        "raw/draft-v2.md:13-15",
+        "raw/review-comments.md:10-11",
+        "S1/manuscript.md:11",
+        "S1/responses.md:41-43",
+        "S2/manuscript.md:11",
+        "S2/responses.md:49-51",
+        "S3/manuscript.md:9",
+        "S3/responses.md:37-39",
+        "checks.json:samples"
+      ]
+    },
+    {
+      "id": "actual_figure_evidence",
+      "judgments": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "conclusion": "All three actual PNGs viewed. SVG geometry independently recovers all four points and the sole supplied target interval. No invented unit points, other intervals or significance symbols. Row order/style differences do not alter science.",
+      "anchors": [
+        "S1/figure.png",
+        "S1/figure.svg:line2d_10-13/LineCollection_1",
+        "S1/caption.md:5-7",
+        "S2/figure.png",
+        "S2/figure.svg:line2d_10-13/LineCollection_1",
+        "S2/caption.md:5-7",
+        "S3/figure.png",
+        "S3/figure.svg:line2d_11-14/LineCollection_1",
+        "S3/caption.md:4-6",
+        "checks.json:samples.*.figure"
+      ]
+    },
+    {
+      "id": "editable_package_and_native_text_synchronization",
+      "judgments": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "conclusion": "Markdown is permitted by the closed policy and complete supplied editable texts exist in every sample. All 9 S1 and all 9 S3 DOCX copies match corresponding Markdown paragraph/table text after formatting-marker removal. S2 native copies are not applicable and do not confer a disadvantage.",
+      "measurements": {
+        "S1_native_copies_checked": 9,
+        "S1_text_equal": true,
+        "S2_native_copies_checked": 0,
+        "S2_native_parity": null,
+        "S3_native_copies_checked": 9,
+        "S3_text_equal": true,
+        "anonymous_native_xml_identity_absent": true,
+        "manuscript_all_whitespace_words": {
+          "S1": 1179,
+          "S2": 990,
+          "S3": 896
+        }
+      },
+      "anchors": [
+        "raw/journal-policies.md:7-11",
+        "S1/PACKAGE-INDEX.md:3",
+        "S2/PACKAGE-INDEX.md:3",
+        "S3/PACKAGE-INDEX.md:3",
+        "S1/editable-copies/",
+        "S3/editable-copies/",
+        "checks.json:samples.*.native_parity"
+      ],
+      "limitation": "Content parity and metadata inspection, not DOCX visual-layout/rendering acceptance."
+    },
+    {
+      "id": "older_v1_preservation_and_correction",
+      "judgments": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "conclusion": "Each preserved-v1 file is byte-identical to raw v1. Each actual correction draft explicitly changes -0.30 to -0.20, preserves reported interval/strata/sample mixture, withdraws universal/causal/equivalence/open-raw-data claims, and remains unapproved/unissued. S2/S3 explicitly say discrepancy cause undocumented; S1 invents no cause.",
+      "anchors": [
+        "raw/published-snapshot-v1.md:1-5",
+        "S1/preserved-v1.md:1-5",
+        "S2/preserved-v1.md:1-5",
+        "S3/preserved-v1.md:1-5",
+        "S1/correction-draft.md:5-31",
+        "S2/correction-draft.md:7-36",
+        "S3/correction-draft.md:4-23",
+        "checks.json:input_sha256_before"
+      ],
+      "v1_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf"
+    },
+    {
+      "id": "original_replication_execution_and_external_stage",
+      "judgments": {
+        "S1_vs_S2": "unknown",
+        "S1_vs_S3": "unknown",
+        "S2_vs_S3": "unknown"
+      },
+      "conclusion": "Raw numerical data, original bootstrap implementation/realizations, underlying display-code sources/diffs/operation receipts and complete source-run external history are not supplied for this blind review. Draft declarations cannot certify those stages. Packet omissions are not automatically defects of the unseen original run.",
+      "anchors": [
+        "raw/evidence.md:6-10",
+        "S1/PACKAGE-INDEX.md:3",
+        "S2/PACKAGE-INDEX.md:3",
+        "S3/PACKAGE-INDEX.md:3",
+        "S1/supplement.md:26-32",
+        "S2/supplement.md:17-23",
+        "S3/supplement.md:17-22"
+      ]
+    }
+  ],
+  "actionable_findings": [
+    {
+      "id": "C-R5-S1",
+      "sample": "S1",
+      "severity": "minor",
+      "dimension": "actual_R5_shorter_introduction",
+      "issue": "R5 shortening request not actually fulfilled: introduction grows 33 to 57 whitespace words. Contribution clarification is implemented.",
+      "anchors": [
+        "raw/review-comments.md:10-11",
+        "raw/draft-v2.md:13-15",
+        "S1/manuscript.md:11",
+        "S1/responses.md:41-43"
+      ],
+      "minimal_remedy": "Shorten introduction while preserving contribution/evidence and synchronize response plus existing manuscript/response DOCX; otherwise accurately mark shortening unfulfilled.",
+      "numerical_science_error": false
+    },
+    {
+      "id": "C-R5-S3",
+      "sample": "S3",
+      "severity": "moderate",
+      "dimension": "actual_R5_shorter_introduction",
+      "issue": "Reply explicitly says introduction shortened, but actual text grows 33 to 64 whitespace words. Original lines were already one paragraph; paragraph consolidation does not support the completion statement.",
+      "anchors": [
+        "raw/draft-v2.md:13-15",
+        "S3/manuscript.md:9",
+        "S3/responses.md:37-39"
+      ],
+      "minimal_remedy": "Actually shorten introduction and synchronize Markdown/DOCX/reply, or remove the false completion claim and mark shortening unfulfilled.",
+      "numerical_science_error": false
+    }
+  ],
+  "unknowns": [
+    "Empirical independent-unit validity and complete sampling/conversion records.",
+    "Independent original means/bootstrap replication and interval coverage.",
+    "Unobtained paper full texts and current publication correction/retraction status.",
+    "Final authorship/approval, funding/conflict/ethics/consent and lawful operational access approval.",
+    "Underlying claimed source code/diffs/operation receipts and complete original-run external-action history.",
+    "Review token count, billed cost and exact runtime model identifier."
+  ],
+  "overall_winner": null,
+  "overall_winner_policy": "No forced overall winner. S2 advantage is restricted to actual R5 shortening; core scientific dimensions comparable.",
+  "write_scope": "blind-reviews/chain-c only",
+  "artifacts": [
+    "review.md",
+    "findings.json",
+    "verify.py",
+    "checks.json"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "mapping": {
+    "S1": "without-skill",
+    "S2": "release",
+    "S3": "comparison"
+  },
+  "files": [
+    {
+      "anonymous": "S1/main_figure.png",
+      "original": "checkpoints/chain-b.without-skill.0/initial/main_figure.png",
+      "original_sha256": "0ad4b0501ae6d47a535716938a8d7257b8e322d94b29510fc6b392fd0b5fdfc9",
+      "anonymous_sha256": "0ad4b0501ae6d47a535716938a8d7257b8e322d94b29510fc6b392fd0b5fdfc9",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/main_figure.svg",
+      "original": "checkpoints/chain-b.without-skill.0/initial/main_figure.svg",
+      "original_sha256": "aa89322c28b349da9a8f4c5d3f197bba7314b3ef7fdb57ce7f0ba97aa02c90d7",
+      "anonymous_sha256": "aa89322c28b349da9a8f4c5d3f197bba7314b3ef7fdb57ce7f0ba97aa02c90d7",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/caption.md",
+      "original": "checkpoints/chain-b.without-skill.0/initial/caption.md",
+      "original_sha256": "7ef87f574351fe50504fa3dd053643aafe773ef3208ccef134a15aedc470d402",
+      "anonymous_sha256": "7ef87f574351fe50504fa3dd053643aafe773ef3208ccef134a15aedc470d402",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/manuscript.md",
+      "original": "checkpoints/chain-b.without-skill.0/initial/manuscript.md",
+      "original_sha256": "bc6b7fa3b1ec2896a1adcaa20ac65665ca9a7cd478718b3fe1c1dfaddf4e320c",
+      "anonymous_sha256": "bc6b7fa3b1ec2896a1adcaa20ac65665ca9a7cd478718b3fe1c1dfaddf4e320c",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/results.json",
+      "original": "checkpoints/chain-b.without-skill.0/initial/results.json",
+      "original_sha256": "1313c647faceb71f34dbe61b7e32bed13a979799ba2bd29f9639d1d423b09076",
+      "anonymous_sha256": "1313c647faceb71f34dbe61b7e32bed13a979799ba2bd29f9639d1d423b09076",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/support-table.csv",
+      "original": "checkpoints/chain-b.without-skill.0/initial/paired_units.csv",
+      "original_sha256": "577623e8e1203e4de02f64d21430a010f801c08190af3cc03576aa2a5df70d4a",
+      "anonymous_sha256": "577623e8e1203e4de02f64d21430a010f801c08190af3cc03576aa2a5df70d4a",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/weight-sensitivity.csv",
+      "original": "checkpoints/chain-b.without-skill.0/initial/robustness_weight_sensitivity.csv",
+      "original_sha256": "b43c688500dfea684db96029afe337f438c75d3639559b137dbc2e1fd13ceca0",
+      "anonymous_sha256": "b43c688500dfea684db96029afe337f438c75d3639559b137dbc2e1fd13ceca0",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S1/leave-one-unit-out.csv",
+      "original": "checkpoints/chain-b.without-skill.0/initial/robustness_leave_one_out.csv",
+      "original_sha256": "5cfd055b3b3f66e90f77d4120ffe8f98b477caa62558358e1911eda420baf097",
+      "anonymous_sha256": "5cfd055b3b3f66e90f77d4120ffe8f98b477caa62558358e1911eda420baf097",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/main_figure.png",
+      "original": "checkpoints/chain-b.release.0/initial/main_figure.png",
+      "original_sha256": "f7d5692d141100b65fc60350efd2c19c08527d09e930aa72ea9e6b8a85d69804",
+      "anonymous_sha256": "f7d5692d141100b65fc60350efd2c19c08527d09e930aa72ea9e6b8a85d69804",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/main_figure.svg",
+      "original": "checkpoints/chain-b.release.0/initial/main_figure.svg",
+      "original_sha256": "48f4f75822dd571a51cf4077ae934e9ef0a899facca46531cadbbdaa1c640144",
+      "anonymous_sha256": "48f4f75822dd571a51cf4077ae934e9ef0a899facca46531cadbbdaa1c640144",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/caption.md",
+      "original": "checkpoints/chain-b.release.0/initial/caption.md",
+      "original_sha256": "4ae696189642ea58efeba4b8e4e7417afe75457cd594786007f23f8526b019b4",
+      "anonymous_sha256": "4ae696189642ea58efeba4b8e4e7417afe75457cd594786007f23f8526b019b4",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/manuscript.md",
+      "original": "checkpoints/chain-b.release.0/initial/manuscript.md",
+      "original_sha256": "31530d50d3c1a753bb4b787f0a82253298ed168453a934d227efa5a362784038",
+      "anonymous_sha256": "31530d50d3c1a753bb4b787f0a82253298ed168453a934d227efa5a362784038",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/results.json",
+      "original": "checkpoints/chain-b.release.0/initial/results.json",
+      "original_sha256": "5749210705f0a6e8d1cd871a143643931e08422c0ff298a0d9dfeb018d3ccf75",
+      "anonymous_sha256": "5749210705f0a6e8d1cd871a143643931e08422c0ff298a0d9dfeb018d3ccf75",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/support-table.csv",
+      "original": "checkpoints/chain-b.release.0/initial/figure_source.csv",
+      "original_sha256": "58b8cc5e9c90f426eec00086b7e68ed52030aea540f6d0bdb47afac80c4f4354",
+      "anonymous_sha256": "58b8cc5e9c90f426eec00086b7e68ed52030aea540f6d0bdb47afac80c4f4354",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/weight-sensitivity.csv",
+      "original": "checkpoints/chain-b.release.0/initial/composition_sensitivity.csv",
+      "original_sha256": "aae47ecd6a5de99a5f56ee4201e81cf112a71c6b25d6a9ab3afe33c317ef5852",
+      "anonymous_sha256": "aae47ecd6a5de99a5f56ee4201e81cf112a71c6b25d6a9ab3afe33c317ef5852",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S2/leave-one-unit-out.csv",
+      "original": "checkpoints/chain-b.release.0/initial/leave_one_unit_out.csv",
+      "original_sha256": "f1d93631fd56da9b138c536298d46c459807ff671b10956a5519bbe9720773d6",
+      "anonymous_sha256": "f1d93631fd56da9b138c536298d46c459807ff671b10956a5519bbe9720773d6",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/main_figure.png",
+      "original": "checkpoints/chain-b.comparison.0/initial/main_figure.png",
+      "original_sha256": "8a368c0154c0f7b641ed3b78a65d0d3b3a6e2c05cbe26813670cbe659a5b2f59",
+      "anonymous_sha256": "8a368c0154c0f7b641ed3b78a65d0d3b3a6e2c05cbe26813670cbe659a5b2f59",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/main_figure.svg",
+      "original": "checkpoints/chain-b.comparison.0/initial/main_figure.svg",
+      "original_sha256": "dc9558266707fcfc46a702ae803d4c373221383f5cb2cb837a1ea52941465ab9",
+      "anonymous_sha256": "dc9558266707fcfc46a702ae803d4c373221383f5cb2cb837a1ea52941465ab9",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/caption.md",
+      "original": "checkpoints/chain-b.comparison.0/initial/caption.md",
+      "original_sha256": "0b743c47d1b7b543aee938b6ce69083d879351343d0813f8746dcc8a1c2d7520",
+      "anonymous_sha256": "0b743c47d1b7b543aee938b6ce69083d879351343d0813f8746dcc8a1c2d7520",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/manuscript.md",
+      "original": "checkpoints/chain-b.comparison.0/initial/manuscript.md",
+      "original_sha256": "2013ab414b4f8da13eef21f066941b37e5318743371e053d8db46e05ec0bd2b9",
+      "anonymous_sha256": "2013ab414b4f8da13eef21f066941b37e5318743371e053d8db46e05ec0bd2b9",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/results.json",
+      "original": "checkpoints/chain-b.comparison.0/initial/results.json",
+      "original_sha256": "cd04dafc0033f0913ecb259d2e173c0f2ae08ad1797e0a6a7b66351b6156b09c",
+      "anonymous_sha256": "cd04dafc0033f0913ecb259d2e173c0f2ae08ad1797e0a6a7b66351b6156b09c",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/support-table.csv",
+      "original": "checkpoints/chain-b.comparison.0/initial/pairs.csv",
+      "original_sha256": "62ca82ad15ff72e1e76a60c052ec0fc3fb0a7cfdab33790b2200b8cc59013dd4",
+      "anonymous_sha256": "62ca82ad15ff72e1e76a60c052ec0fc3fb0a7cfdab33790b2200b8cc59013dd4",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/weight-sensitivity.csv",
+      "original": "checkpoints/chain-b.comparison.0/initial/weight_sensitivity.csv",
+      "original_sha256": "4c8cdf98970bd668e1d336ee94625e54e24eb4735834dfa78f1f197344ee6f08",
+      "anonymous_sha256": "4c8cdf98970bd668e1d336ee94625e54e24eb4735834dfa78f1f197344ee6f08",
+      "path_redacted": false
+    },
+    {
+      "anonymous": "S3/leave-one-unit-out.csv",
+      "original": "checkpoints/chain-b.comparison.0/initial/leave_one_unit_out.csv",
+      "original_sha256": "1400fc3add91021c03c0bf4064208bd4d600943c63a5b5539c087516aa0be332",
+      "anonymous_sha256": "1400fc3add91021c03c0bf4064208bd4d600943c63a5b5539c087516aa0be332",
+      "path_redacted": false
+    }
+  ],
+  "transform": "Only local paths redacted where present; science text and numbers preserved. Images are original bytes. Initial inputs common; no v2 correction mixed into this comparison."
+}

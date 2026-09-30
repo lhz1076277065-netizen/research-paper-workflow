@@ -1,0 +1,33 @@
+{
+  "checked_at_utc": "2026-09-30T15:30:36.669482+00:00",
+  "status": "PASS",
+  "checks": {
+    "archive_and_member_identity": true,
+    "professional_byte_identity": true,
+    "authorized_source_correction_matches": true,
+    "old_output_bytes_preserved": true,
+    "unchanged_analysis_method_code": true,
+    "original_data_flow_and_pairing": true,
+    "invalid_input_rejection": true,
+    "inclusive_temporal_join": true,
+    "unit_conversion_and_technical_aggregation": true,
+    "target_estimand_and_stratum_disagreement": true,
+    "bootstrap_reproducibility": true,
+    "leave_one_unit_out_and_weight_sensitivity": true,
+    "alternative_interval": true,
+    "figure_dimension_dpi_editable_svg": true,
+    "manuscript_caption_numeric_consistency": true,
+    "all_18_claims_have_evidence_bindings": true
+  },
+  "svg_size_mm": [
+    179.99999983333333,
+    100.00000002499999
+  ],
+  "png_size_mm": [
+    179.95935991871985,
+    99.99153331639997
+  ],
+  "human_scientific_approval": "unknown",
+  "token_usage": "unknown",
+  "cost": "unknown"
+}

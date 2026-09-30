@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-09-30T16:48:54.343757+00:00",
+  "observed_started_at": "2026-09-30T16:02:01+00:00",
+  "observed_wall_span_seconds": 2813.343757,
+  "status": "PASS",
+  "method": "run_host.verify_request(request) completed without exception; plus byte-copy source integrity and own package checks",
+  "request_path": "LOCAL_EVIDENCE_ROOT/transfer-suite/requests/chain-c.release.0.json",
+  "request_sha256": "461cb19cbeee3a065f81e9ca41a8674eb4b8ba96288247cbbc9c49d16ff6bdef",
+  "skill_manifest_sha256": "d8f9d296b251680496763712a9f8d1d7d11519c9313f6b1b8deec6561229e876",
+  "run_host_sha256": "3cb7cc62d8aaafaebd7f69f466dbb19e5712a79166b0f201bdb275c4fb1643f7",
+  "old_public_snapshot_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+  "manuscript_v3_sha256": "1c478921360de28479853ac2ed259d9c8f6258ec9faeb83651a59a3de32e7408",
+  "frozen_inputs_modified": false,
+  "scientific_replication_performed": false,
+  "author_or_ethics_approval_inferred": false,
+  "external_submission_or_message_performed": false,
+  "submission_status": "ready_for_author_review / NOT_SUBMISSION_READY",
+  "token_cost_and_peak_memory": "UNKNOWN"
+}

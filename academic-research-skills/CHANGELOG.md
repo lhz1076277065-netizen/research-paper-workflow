@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.2.0-rc.3
+
+- Bind and inspect the indexed identities of explicitly selected upstream support files and adapters. Preserve locally adapted files; require matching reviewed digests when declared dependencies drift. Legacy bindings remain usable.
+- Add short, scoped expert guidance for source time/definition alignment, a counterexample's first reading, and magnitude versus direction arguments. Keep all nineteen concise entry bodies and general research routing.
+- Add three shared-runtime regression cases for dependency-only drift, exact adaptation review, and malformed identity declarations. Separate fresh synthetic transfer, local continuations, old/neighbor regression, and anonymous content review from engineering checks.
+
 ## 3.2.0-rc.2
 
 - Freeze full selected Skill resources and materials for host comparisons; record the actual displayed resource identity and distinguish development, new materials and same-version repeats.

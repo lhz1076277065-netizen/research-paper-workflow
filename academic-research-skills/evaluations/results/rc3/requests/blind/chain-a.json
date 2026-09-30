@@ -1,0 +1,15 @@
+{
+  "evaluation_role": "same-model fresh anonymous content review",
+  "packet": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/blind-packets/chain-a",
+  "allowed_reads": "This packet/raw and anonymous S1/S2/S3 artifacts only; standard tools and existing Python permitted. Do not read version mapping, run folders, project Skills, maintenance sources, old reviews or root checks.",
+  "prompt": "Review source selection, definitions, constrained mathematical reasoning, completed discriminating operation and source-critical historical inference. Inspect supplied raw corpus and all three anonymous answers; finite enumeration must not be mistaken for a general proof.",
+  "judgment": "For each relevant dimension report better/worse/comparable/unknown with exact evidence anchors. Prioritize scientific correctness and actual completed work; do not rank by number of files, checks, panels, methods or declarations. No forced overall winner. Resolve disputed science using supplied definitions/bytes and independent calculations, not voting.",
+  "output": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/blind-reviews/chain-a",
+  "required": [
+    "review.md",
+    "findings.json"
+  ],
+  "fictional_boundary": "All case materials are synthetic Skill-development fixtures. No real paper, scientific publication, external action or author approval.",
+  "clock_scope": "Record actual obtainable UTC start/end observations; no guessed billing/tokens.",
+  "prepared_status": "prepared_not_dispatched"
+}

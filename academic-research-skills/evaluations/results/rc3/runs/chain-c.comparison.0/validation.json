@@ -1,0 +1,25 @@
+{
+  "case_id": "chain-c",
+  "condition": "comparison",
+  "replicate": 0,
+  "synthetic_material": true,
+  "start_utc": "2026-09-30T15:44:21+00:00",
+  "end_utc": "2026-09-30T16:20:54.492065+00:00",
+  "request_sha256": "8acab714560890f99770c8e25d8eff16ebaf0c19f80dfcf562b0e2a56ff23741",
+  "checks": {
+    "actual_deliverables_exist": true,
+    "anonymous_text_and_claim_repairs": true,
+    "v1_and_v2_original_bytes_preserved": true,
+    "aggregate_arithmetic_and_complete_vector_display": true,
+    "five_comments_and_final_markdown_locations": true,
+    "editable_round_trip_anonymity_and_render_checks": true,
+    "read_resource_hashes_and_pinned_professional_versions": true,
+    "verify_request": true
+  },
+  "word_count_conservative": 896,
+  "snapshot_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+  "scientific_results": "supplied memo v2; no bootstrap replication",
+  "scientific_validation_or_human_approval": false,
+  "submission_status": "ready_for_author_review; not submission-ready",
+  "external_actions": []
+}

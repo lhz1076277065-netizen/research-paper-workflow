@@ -1,0 +1,12 @@
+{
+  "run_id": "chain-b.comparison.0",
+  "phase": "caption",
+  "same_agent_continuation": true,
+  "changed_existing_files": [
+    "caption.md"
+  ],
+  "prior_caption_is_byte_prefix": true,
+  "required_sentence_occurrences": 1,
+  "other_prior_files_unchanged": true,
+  "new_operation_sha256": "dc0d505bac8b54047d03b858f2bc34c9329ddc3d3393bb9ba570ed554ff476dc"
+}

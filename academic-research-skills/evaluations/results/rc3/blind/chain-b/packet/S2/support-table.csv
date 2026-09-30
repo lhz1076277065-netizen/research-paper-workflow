@@ -1,0 +1,5 @@
+row,n_independent_units,target_weight,sampled_weight,A_mean_score,B_mean_score,difference_A_minus_B,interval_lo,interval_hi
+g1,4,0.8,0.5,5.5,6.5,-1.0,-1.375,-0.625
+g2,4,0.2,0.5,9.5,6.5,3.0,1.5,5.0
+Target 80/20,8,,,6.300000000000001,6.5,-0.19999999999999996,-0.6500000000000001,0.2499999999999999
+Sampled 50/50,8,,,7.5,6.5,1.0,0.1875,2.0

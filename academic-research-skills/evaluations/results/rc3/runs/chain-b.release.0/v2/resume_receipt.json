@@ -1,0 +1,34 @@
+{
+  "resume_checked_at_utc": "2026-09-30T15:59:56.581563+00:00",
+  "same_agent_continuation": true,
+  "model_change": false,
+  "old_artifacts_verified_unchanged": 57,
+  "completed_before_capacity_failures": [
+    "approved correction resource read",
+    "original artifact/input snapshot",
+    "seven reused files copied to v2",
+    "corrected archive path/digest, exact target checks, professional-cache path adapted"
+  ],
+  "not_yet_completed_at_resume": [
+    "corrected archive acquisition and member delta check",
+    "updated preparation and estimates",
+    "main figure",
+    "caption and full manuscript",
+    "final checks and operation-correction record"
+  ],
+  "capacity_failures": [
+    {
+      "index": 1,
+      "error": "Selected model is at capacity",
+      "timestamp_utc": null,
+      "evidence": "parent reported interruption; no successful completion claim"
+    },
+    {
+      "index": 2,
+      "error": "model capacity insufficient",
+      "timestamp_utc": null,
+      "evidence": "parent reported second interrupted attempt; no successful completion claim"
+    }
+  ],
+  "retry_scope": "continue existing same request and v2 state; not a new independent repetition"
+}

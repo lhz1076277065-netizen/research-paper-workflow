@@ -19,7 +19,7 @@ import sys
 import time
 from datetime import datetime, timezone
 
-VERSION = '3.2.0-rc.2'
+VERSION = '3.2.0-rc.3'
 
 class ContractError(ValueError):
     pass
@@ -106,10 +106,17 @@ def inspect_provider(provider, config):
     out['entry_version']='matched_observation' if actual==expected else 'changed' if expected else 'unrecorded'
     reviewed=spec.get('reviewed_file_sha256',{})
     if not isinstance(reviewed,dict):raise ContractError('reviewed_file_sha256 must be an object')
+    indexed=provider.get('discovered_file_blob_sha',{})
+    if not isinstance(indexed,dict) or any(rel not in paths or not isinstance(dig,str) or len(dig)!=40 or any(c not in '0123456789abcdefABCDEF' for c in dig) for rel,dig in indexed.items()):
+        raise ContractError('Invalid declared source file identities')
+    for rel in indexed:
+        if not paths[rel].is_file() and rel not in out['missing_paths']:out['missing_paths'].append(rel)
+    changed=[rel for rel,dig in indexed.items() if paths[rel].is_file() and blob(paths[rel])!=dig.lower()]
+    out['indexed_files_changed']=changed
     drift=[rel for rel,dig in reviewed.items() if rel not in paths or not paths[rel].is_file() or sha(paths[rel])!=dig]
     out['reviewed_files_changed']=drift
     out['review_record']='digest_bound' if reviewed else 'legacy_boolean' if spec.get('source_reviewed') else 'observation_only'
-    if drift:out['status']='source_review_required'
+    if drift or any(reviewed.get(rel)!=sha(paths[rel]) for rel in changed):out['status']='source_review_required'
     elif out['missing_paths']:out['status']='missing_files'
     elif provider.get('discovered_blob_sha')==actual:
         out['status']='files_available';out['review_record']='read_selected_source_during_execution'

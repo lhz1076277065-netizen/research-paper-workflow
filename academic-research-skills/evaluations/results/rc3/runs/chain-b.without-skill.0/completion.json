@@ -1,0 +1,21 @@
+{
+  "status": "initial_complete",
+  "recorded_at_utc": "2026-09-30T15:02:26.185096+00:00",
+  "synthetic": true,
+  "primary_outputs": [
+    "prepare.py",
+    "analysis.py",
+    "check.py",
+    "results.json",
+    "main_figure.png",
+    "main_figure.svg",
+    "caption.md",
+    "manuscript.md",
+    "checks.md",
+    "operation.md"
+  ],
+  "check_status": "PASS",
+  "human_scientific_approval": "unknown",
+  "token_usage": "unknown",
+  "cost": "unknown"
+}

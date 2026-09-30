@@ -1,0 +1,11 @@
+{
+  "schema": "host-evaluation-2",
+  "jobs": [
+    {
+      "id": "targeted-regression.release.0",
+      "request": "LOCAL_EVIDENCE_ROOT/targeted-regression/request.json",
+      "request_sha256": "78082cf6062d9673d9e75d7954115667db63d5703ad256804c18f911ff5600d0"
+    }
+  ],
+  "status": "prepared_not_run"
+}

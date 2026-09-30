@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "prepared_at_utc": "2026-09-30T15:17:36.139357+00:00",
+  "candidate": "authorized corrected paired",
+  "selection_reason": "Explicit correction continuation; original estimator and definitions retained",
+  "source": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/paired-measurements-v2.zip",
+  "archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+  "supersedes_archive_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+  "correction_authorization_source": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/approved-correction.json",
+  "correction_authorization_sha256": "ea52cbde1af67ee7b218ad6be411549ee37547262bf4d3d0e116eaa8c2d2f379",
+  "proxy_used": false,
+  "members": [
+    {
+      "path": "LICENSE.txt",
+      "sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571"
+    },
+    {
+      "path": "dictionary.md",
+      "sha256": "52a2a3ebb520e3971d898205ab312a96affac0735bcb5fa369bcfa7eed77d4c7"
+    },
+    {
+      "path": "measurements.csv",
+      "sha256": "2e3a498385f00877ea8ed9f8aa2be4a86942f4382e7a469e13699fbc04f24539"
+    },
+    {
+      "path": "units.csv",
+      "sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f"
+    }
+  ]
+}

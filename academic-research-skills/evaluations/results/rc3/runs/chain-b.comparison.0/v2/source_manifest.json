@@ -1,0 +1,87 @@
+{
+  "synthetic": true,
+  "human_verified": false,
+  "sources": [
+    {
+      "evidence_id": "E001",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/README.md",
+      "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3",
+      "locator": "whole README",
+      "verification": "Agent checked; human verification not performed"
+    },
+    {
+      "evidence_id": "E002",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/inputs/extracted/dictionary.md",
+      "sha256": "52a2a3ebb520e3971d898205ab312a96affac0735bcb5fa369bcfa7eed77d4c7",
+      "locator": "ZIP member dictionary.md; full byte range",
+      "verification": "Agent checked; human verification not performed",
+      "original_archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07"
+    },
+    {
+      "evidence_id": "E003",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/inputs/extracted/measurements.csv",
+      "sha256": "2e3a498385f00877ea8ed9f8aa2be4a86942f4382e7a469e13699fbc04f24539",
+      "locator": "ZIP member measurements.csv; full byte range",
+      "verification": "Agent checked; human verification not performed",
+      "original_archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07"
+    },
+    {
+      "evidence_id": "E004",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/inputs/extracted/units.csv",
+      "sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f",
+      "locator": "ZIP member units.csv; full byte range",
+      "verification": "Agent checked; human verification not performed",
+      "original_archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07"
+    },
+    {
+      "evidence_id": "E009",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/inputs/extracted/LICENSE.txt",
+      "sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571",
+      "locator": "ZIP member LICENSE.txt; full byte range",
+      "verification": "Agent checked; human verification not performed",
+      "original_archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07"
+    },
+    {
+      "evidence_id": "E005",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/analysis.py",
+      "sha256": "28fd987d6b5f04af9bedbc7de850cdb85deb707512cac10a01b6dc50b88ebc5d",
+      "locator": "paired_units, compute, figure",
+      "verification": "Agent checked; human verification not performed"
+    },
+    {
+      "evidence_id": "E006",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/results.json",
+      "sha256": "b8422058262d4f23dd185f1e02cbc79fb8df42ded52574d75b579d7af8e81920",
+      "locator": "strata, aggregates, bootstrap, robustness",
+      "verification": "Agent checked; human verification not performed"
+    },
+    {
+      "evidence_id": "E010",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/archive_identity.json",
+      "sha256": "66dd75a13523f4c50b507c8d403ce80bf1cf5149c9f1b4de2c158fe94c147849",
+      "locator": "selected_id, source_sha256, zip_crc_ok, members",
+      "verification": "Agent checked; human verification not performed"
+    },
+    {
+      "evidence_id": "E008",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/bibliographic_receipt.json",
+      "sha256": "afb1fd9cd4874f4755573a6c3e2b74dec86d00bcaa6ce305e60a368d86cc0241",
+      "locator": "arXiv metadata, author list, title, DOI",
+      "verification": "Agent checked; human verification not performed"
+    },
+    {
+      "evidence_id": "E007",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/candidates.json",
+      "sha256": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828",
+      "locator": "paired, mirror and proxy candidates",
+      "verification": "Agent checked; human verification not performed"
+    },
+    {
+      "evidence_id": "E011",
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/approved-correction.json",
+      "sha256": "ea52cbde1af67ee7b218ad6be411549ee37547262bf4d3d0e116eaa8c2d2f379",
+      "locator": "changed_rows, unchanged_definitions and original/corrected ZIP digests",
+      "verification": "Agent checked; human verification not performed"
+    }
+  ]
+}

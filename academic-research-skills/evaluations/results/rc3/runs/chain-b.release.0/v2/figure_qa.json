@@ -1,0 +1,93 @@
+{
+  "synthetic": true,
+  "layout_issues": [],
+  "displayed_values": [
+    {
+      "row": "g1",
+      "estimate": -1.0,
+      "interval": [
+        -1.375,
+        -0.625
+      ]
+    },
+    {
+      "row": "g2",
+      "estimate": 2.75,
+      "interval": [
+        1.5,
+        4.25
+      ]
+    },
+    {
+      "row": "target",
+      "estimate": -0.25,
+      "interval": [
+        -0.6500000000000001,
+        0.1499999999999998
+      ]
+    },
+    {
+      "row": "sampled",
+      "estimate": 0.875,
+      "interval": [
+        0.1875,
+        1.625
+      ]
+    }
+  ],
+  "size_mm_requested": [
+    180,
+    100
+  ],
+  "style": {
+    "journal": "general",
+    "lang": "en",
+    "sciplots_used": false,
+    "cjk_font": null,
+    "constrained_layout": false
+  },
+  "preview": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/main_figure_preview.png",
+  "exported": true,
+  "final_checks": {
+    "main_figure.png": {
+      "issues": [],
+      "info": {
+        "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/main_figure.png",
+        "ext": "png",
+        "size_bytes": 178062,
+        "category": "raster",
+        "size_px": [
+          2125,
+          1181
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      }
+    },
+    "main_figure.svg": {
+      "issues": [],
+      "info": {
+        "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/main_figure.svg",
+        "ext": "svg",
+        "size_bytes": 19568,
+        "category": "vector"
+      }
+    }
+  },
+  "svg_size_mm": [
+    179.99999983333333,
+    100.00000002499999
+  ],
+  "PNG_pixels": [
+    2125,
+    1181
+  ],
+  "PNG_dpi": [
+    299.9994,
+    299.9994
+  ],
+  "SVG_text_editable": true,
+  "SVG_embedded_raster_images": 0
+}

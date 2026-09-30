@@ -1,0 +1,18 @@
+{
+  "stage": "before final expression",
+  "draft_sha256": "975061157712f477d116c46d2e17fafa6da7657c133b4823606426c656c1452e",
+  "reviewer": "current Agent; no human verification claimed",
+  "numeric_review": "matched to completed analysis and original inputs",
+  "semantic_review": [
+    "Primary 80/20 target retained",
+    "50/50 sample comparison retained",
+    "Opposing strata retained",
+    "Target interval includes zero",
+    "No causality, real-field result or superiority guarantee",
+    "Analyst-chosen sensitivity checks labelled"
+  ],
+  "source_binding_repairs": [
+    "Add E009 for LICENSE.txt",
+    "Add E010 for archive identity; E003 is measurements rather than ZIP identity"
+  ]
+}

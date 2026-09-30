@@ -1,0 +1,205 @@
+{
+  "synthetic": true,
+  "submission_ready": false,
+  "sources": [
+    {
+      "id": "E001",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/README.md",
+          "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/candidates.json",
+          "sha256": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828"
+        }
+      ],
+      "locator": "target and synthetic scope; original archive candidate identity",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E002",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/raw/extracted/dictionary.md",
+          "sha256": "99560c1c5360a1e26d10cc1f8211e3b9f0925ef0116b5166f342ced1776cc858"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/raw/extracted/LICENSE.txt",
+          "sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571"
+        }
+      ],
+      "locator": "score conversion, technical precision, paired independent unit, conditional independence, target weights, synthetic status and reuse",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E003",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/raw/extracted/measurements.csv",
+          "sha256": "5f6c8244cabb460cd66160d81d8004b6d47d31ba8f464bebba3077bf22fe3375"
+        }
+      ],
+      "locator": "all 43 raw rows; e004/e041 copies; 41 unique events",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E004",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/raw/extracted/units.csv",
+          "sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f"
+        }
+      ],
+      "locator": "all 16 metadata history rows and inclusive validity dates",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E005",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/preparation_report.json",
+          "sha256": "16a8765858f7c09f44304e005eb26ba392431f7687a07063255e715f53584cde"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/derived/paired_units.csv",
+          "sha256": "ed24b7c871a9a51317bfd1e3e3158d0f620f60f5459f17b7bb46a145f3dbaa6d"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/archive_receipt.json",
+          "sha256": "8ad3dbcd582969b6bc0f3d12e9c7ade971811cd23ab68776db5133e6c5904e24"
+        }
+      ],
+      "locator": "complete preparation and paired-unit flow",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E006",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/results.json",
+          "sha256": "5749210705f0a6e8d1cd871a143643931e08422c0ff298a0d9dfeb018d3ccf75"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/target_bootstrap_mass.csv",
+          "sha256": "0eb07df9d29edcafe53d3197ac21209f4cc1434ce0017a50229aa32c0e6b8f85"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/bootstrap_arrays.npz",
+          "sha256": "8f0df4443192fbf2b690c3b23946c093e5bb738c59baf267181b73587041c5d6"
+        }
+      ],
+      "locator": "strata, primary_target, sample_composition_comparator, bootstrap method and all enumerated draws",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E007",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/leave_one_unit_out.csv",
+          "sha256": "f1d93631fd56da9b138c536298d46c459807ff671b10956a5519bbe9720773d6"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/composition_sensitivity.csv",
+          "sha256": "aae47ecd6a5de99a5f56ee4201e81cf112a71c6b25d6a9ab3afe33c317ef5852"
+        }
+      ],
+      "locator": "all 8 omission analyses and 101 composition rows",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E008",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/figure_source.csv",
+          "sha256": "58b8cc5e9c90f426eec00086b7e68ed52030aea540f6d0bdb47afac80c4f4354"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/main_figure.svg",
+          "sha256": "48f4f75822dd571a51cf4077ae934e9ef0a899facca46531cadbbdaa1c640144"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/main_figure.png",
+          "sha256": "f7d5692d141100b65fc60350efd2c19c08527d09e930aa72ea9e6b8a85d69804"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/figure_qa.json",
+          "sha256": "b838b425424f1fea25666d182d678c07880236ce16dc8de1dc8b15be3625bacf"
+        }
+      ],
+      "locator": "main figure values, exact dimensions, final export and review",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E009",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/bibliographic_receipt.json",
+          "sha256": "522bd4500fe76ca4a80131dce5e5e1c7bd622b423f4d130f89053db8154e3df4"
+        }
+      ],
+      "locator": "authoritative arXiv bibliographic record; DOI; software attribution only",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E010",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/reproduce.py",
+          "sha256": "b98dccbe51cc748e3864cb42cc5f6324e5e5d8c9e414e0dcbb84e6adf1cc7fe6"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/verify.py",
+          "sha256": "2f66daf7ddf2a1f09f7ec5c05e59e6ee98025758a3c9870d24d6542136146e38"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/execution_log.jsonl",
+          "sha256": "c09bf397df21df1bb73bdcef6a56e9f63647afbbbadb3c38c5f4e0a8b6860259"
+        }
+      ],
+      "locator": "actual local availability and end-to-end computational audit",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00"
+    },
+    {
+      "id": "E011",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/professional_selection.json",
+          "sha256": "1e96967599c3f00951ec4c0c1d9706d7dc34c75b6d35a479b639a92eca9ba4a3"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/professional_calls.jsonl",
+          "sha256": "3abd51b73acc28de4f6770fad97b46ae5338564ce34ecfb3abcc9d27c4c0e656"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/writing_review.md",
+          "sha256": "b1ed73e8f8d5749679ca64c9cb5034795603d7020799c844983bed0a6b5c0835"
+        }
+      ],
+      "locator": "actual selected professional implementations, their outputs, and evidence-preserving expression adaptation",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:27:56.121162+00:00"
+    }
+  ]
+}

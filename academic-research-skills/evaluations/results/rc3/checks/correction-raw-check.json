@@ -1,0 +1,29 @@
+{
+  "synthetic_only": true,
+  "private_root_verification_not_executor_input": true,
+  "raw_archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+  "raw_rows": 43,
+  "unique_events": 41,
+  "independent_units": 8,
+  "unit_A_minus_B": {
+    "u01": -1.5,
+    "u02": -1.0,
+    "u03": -0.5,
+    "u04": -1.0,
+    "u05": 1.0,
+    "u06": 2.0,
+    "u07": 3.0,
+    "u08": 5.0
+  },
+  "stratum_means": [
+    -1.0,
+    2.75
+  ],
+  "target": -0.25,
+  "sampled": 0.875,
+  "exact_bootstrap_draws": 65536,
+  "percentile_inverted_cdf": [
+    -0.6499999999999999,
+    0.15000000000000002
+  ]
+}

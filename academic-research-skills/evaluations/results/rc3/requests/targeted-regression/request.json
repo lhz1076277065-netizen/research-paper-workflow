@@ -1,0 +1,59 @@
+{
+  "case_id": "targeted-regression",
+  "condition": "release",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "development",
+  "material_role": "old_material_regression_and_adjacent_simple_task",
+  "skill_snapshot": {
+    "root": "LOCAL_EVIDENCE_ROOT/targeted-regression/snapshot",
+    "manifest": "LOCAL_EVIDENCE_ROOT/targeted-regression/identity.json",
+    "manifest_sha256": "d0120f8f1277ac3511231936698e02608f16773c5da98d8e9d3e2ca72793c769"
+  },
+  "user_prompt": "Complete the independent developmental requests in README.md.",
+  "material": "# SYNTHETIC targeted regression; not research or a real paper\nThe raw material was used in an earlier Skill-development version. No earlier\nanswers or review conclusions are provided. Complete the independent requests\nbelow without forcing them into one paper.\n1. Use reading.md for its complete requested comparison and deliver reading-answer.md.\n2. Use evidence-notes.md, long-manuscript.md and figure-results.csv to revise the\ncomplete long manuscript; deliver manuscript.md and factual-semantic-diff.md.\n3. Assess whether the supplied prior-figure.png/SVG/caption correctly communicate\nthe fixed figure-results table at its current size. Name any material issue and\nactually fix the figure/caption only if needed; preserving a suitable figure is\nallowed. Deliver figure-review.md with reader questions and actual inspection.\n4. Adjacent simple task, manuscript-writing scope: only polish the supplied\nsentence, preserving its numbers and inferential strength: “This illustrative\ncomparison produced a difference of 0.24 with a confidence interval from 0.10\nto 0.38; it reports association.” Deliver sentence.md, do not add a study design.\nNo real citations, data, authors or approvals are to be invented. Keep an\noperation.md separating actual use from scientific results.\n\nEarlier raw request wording:\ncross-reading: 完成两份材料的精读和跨资料判断，保存 answer.md 和简短 operation.md。\nlong-revision: Revise the complete supplied synthetic manuscript using the frozen update and evidence. Deliver the full editable manuscript and factual/semantic comparison.\n",
+  "material_root": "LOCAL_EVIDENCE_ROOT/targeted-regression/materials",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/targeted-regression/materials/README.md",
+      "sha256": "f7ef2cf981e4d2519bcee21ff75b06a86523559b856bdfb54413445181e5e7f2"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/targeted-regression/materials/evidence-notes.md",
+      "sha256": "b49f1fca8a10230480d33f0cc8ce32e988daea811269adafe296785f7f01f044"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/targeted-regression/materials/figure-results.csv",
+      "sha256": "e2d5923ff6b2d1a95321ece8956a892ad4416d051c8c763c9ea31881a306374c"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/targeted-regression/materials/long-manuscript.md",
+      "sha256": "bbaafe34c9cce3dec51214f8b1dd9af386fe19c445dce3dfcb3b75ede3557ce3"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/targeted-regression/materials/prior-caption.md",
+      "sha256": "f8ce1837bdb52d77af624f4a36a2a6412b1f286e42886ef228d8a7df54e169fe"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/targeted-regression/materials/prior-figure.png",
+      "sha256": "e81747222c389386a202a16b4983b4863434994da06588e19a19087d5f2c8bad"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/targeted-regression/materials/prior-figure.svg",
+      "sha256": "877c3f31e00e8ff09eb650e26f920f2c54bafaf3d3564dec5b0104d311cbaf0c"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/targeted-regression/materials/reading.md",
+      "sha256": "2d0022632422e004d88cd3dc358e0058337a5a4558fd44904c6ec8d8857e5e7e"
+    }
+  ],
+  "skill_entry": "LOCAL_EVIDENCE_ROOT/targeted-regression/snapshot/SKILL.md",
+  "skill_entry_sha256": "6d91c3f68f6fe264a02f917bfc90b36bdf47b027a6a8c8067a57fcef6592816c",
+  "initial_skill_text": "---\nname: paper-deep-reading\ndescription: \"当给定论文、摘要或图表需要精读、解释方法和证据时使用；按已取得原文定位，摘要任务不补造全文细节。\"\nmetadata:\n  version: \"3.2.0-rc.3\"\n---\n\n# 顶刊问题、模型和图表精读\n\n用库内适合阅读实现，实际拆解问题、理论/模型、数据、验证和关键图表；提炼论文值得发表的原因、迁移前提与未解决问题。\n\n由当前Agent及其现有模型执行，原生子代理按需使用；不寻找本地大模型或其他宿主联动。外部专业Skill从用户指定13仓库的本地安装/当前GitHub版本选择；方法和原创代码可自主探索。缺依赖按本任务准备并验证后运行。方法与实现可自主选择、改造或新写代码；正式结论依据实际证据。\n\n专业细节按需查 [原专业参考](references/protocol.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。\n\n交付实际成果及关键证据、采用的Skill与完成范围。局部任务直接做；完整研究保留科学目标与下一步，不让自检通过、导出函数或普通小题替代用户的研究目标。\n\n脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。\n",
+  "available_selected_capabilities": [
+    "paper-deep-reading",
+    "scientific-visualization",
+    "manuscript-writing"
+  ],
+  "adapter_contract": "Fresh native context, no prior answers; same frozen candidate expert files and common professional pool. One context with four operations, not four independent trials."
+}

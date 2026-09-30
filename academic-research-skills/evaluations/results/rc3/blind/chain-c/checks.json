@@ -1,0 +1,483 @@
+{
+  "utc_check_observed_at": "2026-09-30T17:06:12.703024+00:00",
+  "scope": "raw and anonymous S1/S2/S3 only; no original run/source/mapping read",
+  "arithmetic": {
+    "target": "-0.2",
+    "sampled": "1.0",
+    "difference": "-1.2",
+    "v1_to_current_change": "0.10"
+  },
+  "raw_intro_whitespace_words": 33,
+  "samples": {
+    "S1": {
+      "intro_whitespace_words": 57,
+      "manuscript_all_whitespace_words": 1179,
+      "v1_byte_identical": true,
+      "figure": {
+        "points_from_svg_coordinates": [
+          -0.9999999876077169,
+          2.9999999876077164,
+          1.0,
+          -0.1999999999999997
+        ],
+        "target_interval_from_svg_coordinates": [
+          -0.5999999876077168,
+          0.20000000000000043
+        ],
+        "png_dimensions": [
+          1880,
+          920
+        ],
+        "svg_text": [
+          "−1",
+          "0",
+          "1",
+          "2",
+          "3",
+          "Mean A−B (score; lower score is better)",
+          "g1 (n=4)",
+          "g2 (n=4)",
+          "Equal sampled mix (0.5/0.5; n=8)",
+          "Target mix (0.8/0.2; n=8)",
+          "-1.00",
+          "+3.00",
+          "+1.00",
+          "-0.20",
+          "Composition changes the aggregate direction",
+          "SYNTHETIC memo v2 aggregates. Interval only for target: 95% within-stratum",
+          "paired-unit percentile bootstrap [−0.60, 0.20]; not independently recomputed."
+        ],
+        "png_visual_inspection": "Viewed by the reviewing agent through view_image in this review."
+      },
+      "native_copies_applicable": true,
+      "native_parity": [
+        {
+          "docx": "PACKAGE-NOTE.docx",
+          "markdown": "package-note.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 6,
+          "markdown_blocks": 6,
+          "core_properties": {
+            "title": "Synthetic developmental draft",
+            "creator": null,
+            "lastModifiedBy": null
+          }
+        },
+        {
+          "docx": "cover-letter-v3-draft.docx",
+          "markdown": "cover-letter.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 9,
+          "markdown_blocks": 9,
+          "core_properties": {
+            "title": "Synthetic developmental draft",
+            "creator": null,
+            "lastModifiedBy": null
+          }
+        },
+        {
+          "docx": "declarations-v3-draft.docx",
+          "markdown": "declarations.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 16,
+          "markdown_blocks": 16,
+          "core_properties": {
+            "title": "Synthetic developmental draft",
+            "creator": null,
+            "lastModifiedBy": null
+          }
+        },
+        {
+          "docx": "figure-1-caption-v3.docx",
+          "markdown": "caption.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 5,
+          "markdown_blocks": 5,
+          "core_properties": {
+            "title": "Synthetic developmental draft",
+            "creator": null,
+            "lastModifiedBy": null
+          },
+          "identity_absent_from_word_and_properties_xml": true
+        },
+        {
+          "docx": "manuscript-v3-anonymous.docx",
+          "markdown": "manuscript.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 28,
+          "markdown_blocks": 28,
+          "core_properties": {
+            "title": "Synthetic developmental draft",
+            "creator": null,
+            "lastModifiedBy": null
+          },
+          "identity_absent_from_word_and_properties_xml": true
+        },
+        {
+          "docx": "responses-v3-draft.docx",
+          "markdown": "responses.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 24,
+          "markdown_blocks": 24,
+          "core_properties": {
+            "title": "Synthetic developmental draft",
+            "creator": null,
+            "lastModifiedBy": null
+          },
+          "identity_absent_from_word_and_properties_xml": true
+        },
+        {
+          "docx": "supplement-s1-v3.docx",
+          "markdown": "supplement.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 43,
+          "markdown_blocks": 43,
+          "core_properties": {
+            "title": "Synthetic developmental draft",
+            "creator": null,
+            "lastModifiedBy": null
+          },
+          "identity_absent_from_word_and_properties_xml": true
+        },
+        {
+          "docx": "title-page-v3.docx",
+          "markdown": "title-page.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 16,
+          "markdown_blocks": 16,
+          "core_properties": {
+            "title": "Synthetic developmental draft",
+            "creator": null,
+            "lastModifiedBy": null
+          }
+        },
+        {
+          "docx": "version-correction-v1-to-v3-draft.docx",
+          "markdown": "correction-draft.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 43,
+          "markdown_blocks": 43,
+          "core_properties": {
+            "title": "Synthetic developmental draft",
+            "creator": null,
+            "lastModifiedBy": null
+          }
+        }
+      ]
+    },
+    "S2": {
+      "intro_whitespace_words": 26,
+      "manuscript_all_whitespace_words": 990,
+      "v1_byte_identical": true,
+      "figure": {
+        "points_from_svg_coordinates": [
+          -1.0000000127783322,
+          3.000000012778332,
+          -0.20000000255566658,
+          1.0
+        ],
+        "target_interval_from_svg_coordinates": [
+          -0.6000000076669993,
+          0.20000000255566658
+        ],
+        "png_dimensions": [
+          2160,
+          1050
+        ],
+        "svg_text": [
+          "-1",
+          "0",
+          "1",
+          "2",
+          "3",
+          "Mean A-B (score): negative favors A, positive favors B",
+          "g1 (n = 4)",
+          "g2 (n = 4)",
+          "Target (0.8 / 0.2)",
+          "Sampled (0.5 / 0.5)",
+          "-1.00",
+          "+3.00",
+          "-0.20",
+          "+1.00",
+          "Only the target row has the supplied 95% percentile interval.",
+          "SYNTHETIC: mixture-dependent paired comparison"
+        ],
+        "png_visual_inspection": "Viewed by the reviewing agent through view_image in this review."
+      },
+      "native_copies_applicable": false,
+      "native_parity": []
+    },
+    "S3": {
+      "intro_whitespace_words": 64,
+      "manuscript_all_whitespace_words": 896,
+      "v1_byte_identical": true,
+      "figure": {
+        "points_from_svg_coordinates": [
+          -0.9999999999999996,
+          2.999999999999999,
+          1.0,
+          -0.19999999999999946
+        ],
+        "target_interval_from_svg_coordinates": [
+          -0.5999999999999998,
+          0.20000000000000037
+        ],
+        "png_dimensions": [
+          2160,
+          1110
+        ],
+        "svg_text": [
+          "−1",
+          "0",
+          "1",
+          "2",
+          "3",
+          "Mean A−B score (lower score is better)",
+          "g1 (n = 4)",
+          "g2 (n = 4)",
+          "Equal sampled mix (0.5/0.5; n = 8)",
+          "Target mix (0.8/0.2; n = 8)",
+          "−1.00",
+          "+3.00",
+          "+1.00",
+          "−0.20",
+          "Supplied 95% interval [−0.60, 0.20]",
+          "SYNTHETIC — aggregate estimates from memo v2"
+        ],
+        "png_visual_inspection": "Viewed by the reviewing agent through view_image in this review."
+      },
+      "native_copies_applicable": true,
+      "native_parity": [
+        {
+          "docx": "caption-v3.docx",
+          "markdown": "caption.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 4,
+          "markdown_blocks": 4,
+          "core_properties": {
+            "creator": null,
+            "description": null,
+            "language": "zh-CN",
+            "lastModifiedBy": null,
+            "revision": "0",
+            "subject": null,
+            "title": "Development draft"
+          },
+          "identity_absent_from_word_and_properties_xml": true
+        },
+        {
+          "docx": "correction-note-v1-draft.docx",
+          "markdown": "correction-draft.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 25,
+          "markdown_blocks": 25,
+          "core_properties": {
+            "creator": null,
+            "description": null,
+            "language": "zh-CN",
+            "lastModifiedBy": null,
+            "revision": "0",
+            "subject": null,
+            "title": "Development draft"
+          }
+        },
+        {
+          "docx": "cover-letter-draft.docx",
+          "markdown": "cover-letter.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 6,
+          "markdown_blocks": 6,
+          "core_properties": {
+            "creator": null,
+            "description": null,
+            "language": "zh-CN",
+            "lastModifiedBy": null,
+            "revision": "0",
+            "subject": null,
+            "title": "Development draft"
+          }
+        },
+        {
+          "docx": "data-access-request-draft.docx",
+          "markdown": "data-access-request.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 5,
+          "markdown_blocks": 5,
+          "core_properties": {
+            "creator": null,
+            "description": null,
+            "language": "zh-CN",
+            "lastModifiedBy": null,
+            "revision": "0",
+            "subject": null,
+            "title": "Development draft"
+          }
+        },
+        {
+          "docx": "declarations-draft.docx",
+          "markdown": "declarations.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 11,
+          "markdown_blocks": 11,
+          "core_properties": {
+            "creator": null,
+            "description": null,
+            "language": "zh-CN",
+            "lastModifiedBy": null,
+            "revision": "0",
+            "subject": null,
+            "title": "Development draft"
+          }
+        },
+        {
+          "docx": "manuscript-v3-anonymous.docx",
+          "markdown": "manuscript.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 20,
+          "markdown_blocks": 20,
+          "core_properties": {
+            "creator": null,
+            "description": null,
+            "language": "zh-CN",
+            "lastModifiedBy": null,
+            "revision": "0",
+            "subject": null,
+            "title": "Development draft"
+          },
+          "identity_absent_from_word_and_properties_xml": true
+        },
+        {
+          "docx": "response-to-reviewers.docx",
+          "markdown": "responses.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 25,
+          "markdown_blocks": 25,
+          "core_properties": {
+            "creator": null,
+            "description": null,
+            "language": "zh-CN",
+            "lastModifiedBy": null,
+            "revision": "0",
+            "subject": null,
+            "title": "Development draft"
+          },
+          "identity_absent_from_word_and_properties_xml": true
+        },
+        {
+          "docx": "supplement-v3.docx",
+          "markdown": "supplement.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 31,
+          "markdown_blocks": 31,
+          "core_properties": {
+            "creator": null,
+            "description": null,
+            "language": "zh-CN",
+            "lastModifiedBy": null,
+            "revision": "0",
+            "subject": null,
+            "title": "Development draft"
+          },
+          "identity_absent_from_word_and_properties_xml": true
+        },
+        {
+          "docx": "title-page-draft.docx",
+          "markdown": "title-page.md",
+          "paragraph_and_cell_text_equal": true,
+          "native_blocks": 10,
+          "markdown_blocks": 10,
+          "core_properties": {
+            "creator": null,
+            "description": null,
+            "language": "zh-CN",
+            "lastModifiedBy": null,
+            "revision": "0",
+            "subject": null,
+            "title": "Development draft"
+          }
+        }
+      ]
+    }
+  },
+  "input_sha256_before": {
+    "S1/PACKAGE-INDEX.md": "b85b39ef8bcfae7c2bb56c548a72de9051f1c50e8e3466ee91ed05f4ce6302c5",
+    "S1/author-queries.md": "1536f2dc47b1d69ec3daa5c996140753661da98eca65ed17c408ff262fea5c8c",
+    "S1/caption.md": "877b16a1bf7682093c0ed10c5dc6f0e2e8a1d6ebc129cfbf544d6f896d660fd7",
+    "S1/claim-citation.md": "a29704b07cac89c7435b7d2fe2fe60ba08d35969e110075eea3cd80d92ee3144",
+    "S1/correction-draft.md": "47e9bfcbcb3a23c67505e63a1028ec127bacb8c8c023c6af6d7211dc4aa4c624",
+    "S1/cover-letter.md": "acc46c0e8e3ea60e4bf307947c821fff0b7158e91871c3dcd69bd9d4e2e3bcbe",
+    "S1/declarations.md": "31b167aa8bf6889f7df408ab242199c9b8c9a92d94e940787dcfca25fa1bc596",
+    "S1/editable-copies/PACKAGE-NOTE.docx": "d32474db027141101498073bfa6348f2d787dae3ad8305e598bccad6be6b72d9",
+    "S1/editable-copies/cover-letter-v3-draft.docx": "af271f5bd1afcb40ded40a423d1b8c220d24a6f69f9bb32760cf60204a65687f",
+    "S1/editable-copies/declarations-v3-draft.docx": "e3177f7effbe7b4ea801806e26101bfd7c1d7b148d25c8170f0370bf5c0606a0",
+    "S1/editable-copies/figure-1-caption-v3.docx": "064154c28703c3a788e106e013131d7ff90b1ff2530825c1c0d72a386281167c",
+    "S1/editable-copies/manuscript-v3-anonymous.docx": "5dba2519c7bc36868f9a1a37ff40589bc52ea465ac3ca195ecd9c8ef1c1d35c9",
+    "S1/editable-copies/responses-v3-draft.docx": "c4269fe9a84c1edc940dc1433ec1bebcfcf7a862336e67674a11865e58522cfa",
+    "S1/editable-copies/supplement-s1-v3.docx": "bd41123e0a8d12a5d95b4a2de23ced8ca92bb742838c1432e60ca9a1c94468d2",
+    "S1/editable-copies/title-page-v3.docx": "88a0d8570c5ca98daee10570d7757d2dcf2f179b83716040ce4f0868107a665b",
+    "S1/editable-copies/version-correction-v1-to-v3-draft.docx": "623a192e66b54f131011e655f0300d8bcf8ff876af6161b7c13ab2123452aa16",
+    "S1/figure.png": "f52b964d77c9f355e0678407e9eb4b2eb054aa63623875cca434a5c2ffd3e3d9",
+    "S1/figure.svg": "a54d938bada78f2f39746eecdcf5fd2a9a456854d154b90886704ada444b45f5",
+    "S1/manuscript.md": "71703beae25ac4d4cbf18ce2fef9f440b1a1444ddb19472fc6de9d1e604922af",
+    "S1/package-note.md": "f0622163dade7659e711af802507d958e6d1fe304dfe794de77af23a8d1f471a",
+    "S1/policy-license.md": "b9da33f1beae225d94cddb135accf889d2c9917e5c8fe34cd28907a5fc1fca30",
+    "S1/preserved-v1.md": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+    "S1/responses.md": "66bdc6dfaf60dde722826e0db0fcee7f10c2905fe6b2fb3c7f6b0b8f9bb1a87e",
+    "S1/supplement.md": "09cf38006aca9454ddc516629d3093906c3a1b5f5fc5ba932d48682cf01a1226",
+    "S1/title-page.md": "62da4408c0d540b7e26740ecb0821ed3922c03baae3fc5f9cb26aa854f55eead",
+    "S2/PACKAGE-INDEX.md": "2cad4c478cdb985bedac8f768bd2c0aada9151aa0308f17a5be3d50185ab33ad",
+    "S2/author-queries.md": "debe7d3df1bd92ffc04c75c7755fd097343bf6503c23f62b5fef04189374793b",
+    "S2/caption.md": "cf7b2f54e4ae5f7a31807559da0f7c4db1611ae294fcda0dc3e99c8c451b4c44",
+    "S2/claim-citation.md": "6d43480452cf768e57dc29d2097963ed58cbc8e72fd4f8a16043ecdf61e6ae1d",
+    "S2/correction-draft.md": "ff1f3611c8278c740e9491e6e08287778bd57464bd18f9f13da4d1979646c4db",
+    "S2/cover-letter.md": "41e965ff1cc75ece4f8f918385c1946693811c5822747c96e53024c830b9fc4e",
+    "S2/data-access-request.md": "bd0c0d8a9f62472e9cfed80e058411e0f1e986bb540184b790856a822391c791",
+    "S2/data-code-access.md": "5aedc55335e3c116eb9922c5755dab693cc020de13b0a78dfa6753121c5f3cd0",
+    "S2/figure.png": "fb198a07e1f9c3b32e2c60e2c0697db3cd763874e753ef19de373a4d789cdeb7",
+    "S2/figure.svg": "766002a0286647be905d96a5efec5ef72b66aeaba216188ad499ee373e758232",
+    "S2/manuscript.md": "1c478921360de28479853ac2ed259d9c8f6258ec9faeb83651a59a3de32e7408",
+    "S2/policy-license.md": "224de4214d06786418595f6ee862014e27777d69a11ba015c6ed96c4c141860b",
+    "S2/preserved-v1.md": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+    "S2/responses.md": "3b1ea37cd05d9d4d67b7622472a154b738faafb8fd351126c51957f8d6905e29",
+    "S2/scientific-review.md": "9520e420cc4765dbfbf0313445bef1cb4a84e9ecf50a3d2b075a3a3163cec849",
+    "S2/supplement.md": "166c70278df9bc185e8ca1a5dddaae5daf3a409167a5305360bda8c1e27f7963",
+    "S2/title-page.md": "1708b55da18ef903bfcc37dc4e4ce489ea1cad207f28c101e0d1546badf88e0b",
+    "S3/PACKAGE-INDEX.md": "df69f96c955b4dbe37aac9358b993a87cefe864a3b05caf788dcdd3d4582efa2",
+    "S3/author-queries.md": "91d31e72d639ed5c0722d893f4c86bb63491ac4c95ad92b86704617722caa862",
+    "S3/caption.md": "237906dd609f76b7639e33f1dfd27b4038a033eb3b14b1fddc80b00b85185a64",
+    "S3/correction-draft.md": "57e3d4c3236dc3ec7fb7b8d9409061f8a7a806d64cc1fc77e60da9a0ba519d9e",
+    "S3/cover-letter.md": "4343fbafa120111afa9a22a63b9bada5c5f0b4fd44208f2f87c613a2fb673987",
+    "S3/data-access-request.md": "12510a826992c1cd1860b321c4d823e7e7d5b79bf59e000fe5c6fc2f068433f5",
+    "S3/declarations.md": "5297c6f9a04e1918fcf1f1749771ffae903ced0be351cbb2961a96c5e1103f91",
+    "S3/editable-copies/caption-v3.docx": "7ffab16ac43b213a8435a01637b9f784b7584e62c4d92eb5a5e7f126ea266304",
+    "S3/editable-copies/correction-note-v1-draft.docx": "388128f0c2c20a61259fb1fca599e18bdbf5d50fc9fe69c4f9ea97f0240164d2",
+    "S3/editable-copies/cover-letter-draft.docx": "9678577b64cca9a6aca66e69a8859d537438ee57b42077a7c24eacf7fe494d1c",
+    "S3/editable-copies/data-access-request-draft.docx": "d7ae045e2ff02b889cc515f83e46cc66c98bc585151cfa55d998b2e371fe1fa1",
+    "S3/editable-copies/declarations-draft.docx": "09a2023fc99205b850028f2dd77babaf25e06b26689fd81f0facb0a9f1c96f0b",
+    "S3/editable-copies/manuscript-v3-anonymous.docx": "6b1067a3eafbe60d672fdd5be05b5bd172284352c3a72a5841fcd4c33a8c4be1",
+    "S3/editable-copies/response-to-reviewers.docx": "c3503e5adf5c154bab9da482fbf226701dcc4b488b61179892a3d1af66811408",
+    "S3/editable-copies/supplement-v3.docx": "cd76003fba13fc4211374907e8305480819d051f385dce837d3598364c0267fc",
+    "S3/editable-copies/title-page-draft.docx": "beadb4f6bdae4535d989e883048c0350a65d2fc1d3b492bf8c17f17c26d072ec",
+    "S3/figure.png": "aa1df6794a76ae66adbf707c09b3b54ba410587a866e48f3bc8b8cf26147b387",
+    "S3/figure.svg": "5141cea6ea73828f8bdf21248b06aa6ec92ba4c36176f5a7a14a230794a31ecd",
+    "S3/manuscript.md": "2d0c986ce6b3895cd4f50eb45d87c1386de71ea8e1ce75191f8cc28ecb1d5d5c",
+    "S3/preserved-v1.md": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+    "S3/responses.md": "c107fb54bcce6e1f589424d62f1fcecb6b545d8ac17bd7f7946c22dc4beb7d40",
+    "S3/scientific-review.md": "737922c7cf6610cff9931a566a9a68d3140e0028f645ca7c0a725eae49d761d0",
+    "S3/supplement.md": "0aeb1ed8e5bc18dadbdf91f44922dbf3da2ea74a2397b01513d5c8472d370ef3",
+    "S3/title-page.md": "ec11172b791469d95ea7eec2af9359ee1e23419a993090bd2789c8fc56c13e04",
+    "raw/README.md": "e17d0385b8fa634435f7ba1020e70964b9164070e43429a3bcf42ae04c514f8d",
+    "raw/author-and-license.md": "3fde6ec7364d57672ca9f099c286db7379673966b0da49e8dca140f0dbd21c1f",
+    "raw/caption-v2.md": "b7fdbc08707f6dc4a7417b9e0f9e6f9b9d032a169dc7b4feec4d7659193bccbb",
+    "raw/draft-v2.md": "558deb060c3d3a820b545805b3908d1636359cd5459bed3539e1cb2b71f331da",
+    "raw/evidence.md": "4bf79c81a4551afd0956ddfdf6217eb7b2d73953d32c792d8cd50c807183ab0f",
+    "raw/journal-policies.md": "bccc289b41ba08d8636caa129b246650c2bcb50f1dcff81b5074e55b56cf315c",
+    "raw/published-snapshot-v1.md": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+    "raw/references.json": "3ce863036f4de5b131aafc129b8e8b03acf10f83848dde7a679a05238832f593",
+    "raw/review-comments.md": "57bd8f6dafec51148b20750024b2cd4bcedaaa9434b75340c66354767bf81dc7",
+    "raw/source-availability.md": "c89e89603c7b2f6ad23c2c328d0e019da6a8bbf0e334ea2c83e4c1ce17187399",
+    "raw/supplement-v2.md": "e5955a0d69ef2250c5bb2dda7713e331636125086ff528063584bfa232196ff5"
+  },
+  "input_hashes_unchanged_during_check": true,
+  "native_parity_all_equal": true
+}

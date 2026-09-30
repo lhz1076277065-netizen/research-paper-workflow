@@ -1,0 +1,65 @@
+SYNTHETIC Skill-development output — scientific reasoning and policy/citation judgments, not a real peer review or research finding.
+
+# Evidence-bound decision
+The defensible contribution is a diagnostic of composition dependence in the supplied synthetic comparison. It is not a universal, causal or equivalence result, and no new algorithm, experiment or external validation has been performed. Resume from supplied working draft v2 and authoritative result memo v2; preserve the older public snapshot v1 separately. The manuscript has been revised to expose the g1/g2 contrast, target estimand and uncertainty.
+
+## Claim and evidence audit
+E1 = evidence.md, complete authoritative result memo v2; E2 = draft-v2.md Methods and supplement-v2.md; E3 = caption-v2.md; E4 = references.json; E5 = source-availability.md; E6 = journal-policies.md; E7 = author-and-license.md; E8 = published-snapshot-v1.md; E9 = review-comments.md. These are supplied frozen fixture records, opened by the current Agent. They are not independent empirical verification or named-human approval.
+
+| Draft-v2 claim/location | Evidence status and reasoning | Actual repair |
+| --- | --- | --- |
+| Title / Abstract: universal advantage of A | Contradicted by the reported g2 point estimate +3.00, where lower score is better; neither strata nor populations are shown to be uniformly favorable | Final title and Abstract foreground composition; Results and Figure 1 retain g2 |
+| Abstract: target −0.20 with 95% interval [−0.60, 0.20] | E1 supports accurate reporting; interval is a paired-unit within-stratum percentile bootstrap object, not independently replicated | Exact object retained in Abstract, Methods, caption and S1 |
+| Abstract: proves causal advantage | Unestablished: E1/E2 contain no assignment, confounding measurement or causal adjustment; this does not establish an absence of all possible causal effects either | Causal title/claim removed; Discussion identifies missing design, not a causal null |
+| Abstract: practical equivalence to zero | Unsupported: interval includes zero and both signs; no equivalence margin or registered equivalence test | Equivalence claim removed; Discussion explains the inferential distinction |
+| Abstract: Efron confirms fixture independence and every-target interval validity | DOI identity is supplied, full text unavailable; a generic paper cannot supply the fixture's independent-unit evidence or universal empirical coverage | Supporting citation and reference removed; unit provenance tied to E1/E2 |
+| Abstract: Rosenbaum/Rubin proves unmeasured confounding cannot matter | Supplied abstract paraphrase concerns assignment probabilities/adjustment conditional on observed covariates; it supplies no fixture design evidence or exclusion of unmeasured confounding | Supporting citation and reference removed; no substitute causal citation fabricated |
+| Methods: eight paired independent units, four per stratum | E1/E2 support reporting this as a controlling fixture fact; unit records absent, independence not independently checked | Retained with paired unit as inference/resampling object, technical averaging explicit |
+| Methods: target weights fixed before measurement | E1/E2 support the prespecification statement only; no registration inferred | 0.8/0.2 preserved, equal observed 0.5/0.5 separated |
+| Results: g2 supports A's advantage | Sign error: +3.00 A−B favors B | Results state direction correctly; caption/plot retain the opposing point |
+| Results: sampled +1.00 vs target −0.20 | E1 supports reporting; arithmetic verified locally from supplied means: 0.5(−1)+0.5(3)=1; 0.8(−1)+0.2(3)=−0.2 | Equations, sign change, same-unit dependence and figure added |
+| Declarations: all authors approved, ethics approved, unrestricted raw data sharing confirmed | Author/funding/conflict/ethics/human-participant facts UNKNOWN; raw-record/identifier redistribution prohibited by E7 | Unsupported claims removed; separate unapproved declarations and author requests supplied |
+| v1 target −0.30 and public interpretation/access claims | Numerical conflict with E1 and mixture arithmetic; substantive interpretation/access errors | Unchanged v1 archive plus version-aware correction draft; numerical root cause remains undocumented |
+
+## Citation identity versus semantic support
+| Supplied identity | Material actually available and identity scope | Important proposition / semantic disposition |
+| --- | --- | --- |
+| B. Efron (1979), “Bootstrap Methods: Another Look at the Jackknife,” The Annals of Statistics, DOI 10.1214/aos/1176344552 | Crossref identity record in E4, checked in the fixture at 2026-09-30T13:54:17.025683+00:00. Metadata-only; no original text or supporting locator read | Fixture independence / validity for every population: unverifiable from the available source and not an acceptable supporting citation. Remove these uses |
+| Paul R. Rosenbaum and Donald B. Rubin (1983), “The central role of the propensity score in observational studies for causal effects,” Biometrika, DOI 10.1093/biomet/70.1.41 | Crossref identity in E4, checked at 2026-09-30T13:54:18.601266+00:00. Only E5's bounded paraphrase of the official abstract is supplied. Official abstract location recorded there: https://academic.oup.com/biomet/article-abstract/70/1/41/240879?login=false. No original abstract was fetched anew here and no full text was obtained | Observed-covariate adjustment: background-only within the available scope. Fixture causal interpretation / immunity to unmeasured confounding: no support. Remove these uses |
+
+Both DOI identities are retained byte-for-byte in baseline/references.json for traceability. Both supporting reference entries and all numerical [1]/[2] calls are removed from manuscript v3, so no orphan citations or unread-method claims remain. No replacement source or unseen volume/pages is invented. Publication correction/retraction status and implementation details are UNKNOWN; no live check was performed. Identity agreement is not semantic verification. Only fixture-local reading and aggregate arithmetic were done in this run.
+
+## Closed-world venue decision
+Source: complete fictional official policy snapshots in journal-policies.md, dated as of 2026-09-30. Selection uses the supplied current rule, not internet recommendations, real journal identities, indicators or acceptance probabilities.
+
+| Venue | Fit and hard constraint | Decision |
+| --- | --- | --- |
+| Journal Apex | Quantitative scope is broad enough, but Research Article requires a novel general causal/predictive method and external validation; diagnostic notes/reanalyses are excluded. Neither necessary method nor validation exists | Exclude on article type/evidence. Wording cannot remedy the gap; no extra research invented |
+| Journal Lens | Diagnostic-methods / measurement-comparison audience. Current v2 (2026-09-01) accepts Technical Note, ≤2500 main-text words, double-blind review, separate title page, editable manuscript/caption, supporting material, data/code statement. Restricted raw data with a specific controlled-access statement is permitted | Selected as developmental target, Technical Note. Separate title page and anonymous files supplied; declarations/access approval prevent actual submission |
+| Journal Replica | Replication/boundary scope could match, but supplied policy v1 requires openly deposited raw unit-level records and identifiers with no controlled-access exception | Exclude on non-remediable conflict with existing fixture license. Topic fit cannot override permission |
+
+The old Lens 2025 rule allowing an author line is superseded. It is not applied. No unprovided page, fee, abstract, format or AI-policy limit is fabricated. Generic editable formats are supplied; policy confirmation before any real action remains outside this synthetic task.
+
+## Permissions and ethics judgment
+E7 permits this local developmental editing and anonymous package preparation, local analysis, code and aggregate-result sharing. It forbids redistribution of unit-level records and identifiers. We have no such records and include none. Controlled access is a proposed process, not granted permission; a request cannot override the license. Holder/contact, safeguards, expanded permission and access approval are UNKNOWN. Known author and affiliation appear only in a separate title-page draft; coauthor/order/approval/contact/ORCID, funding, conflict, participant status, ethics determination and consent remain UNKNOWN. No declaration is signed, no ethics exemption inferred, and no external service, message, submission, repository deposit or publisher action is executed.
+
+## Review response decisions and expression review
+R1 is accepted through explicit units, technical averaging, two mixtures, interval object and arithmetic explanation. R2 is declined because removing g2 would conceal the evidence needed for the diagnostic and the strongest counterexample to universal dominance. R3 is declined: same-unit technical repetitions are not new independent units, and Efron's identity is not study-design evidence. R4 is declined: the available citation/design do not identify a causal effect, and crossing zero does not establish equivalence. R5 is accepted as expression work, with a shorter introduction and an explicit contribution sentence; no additional experiments are required to honor that request. Exact R1–R5 text, actions, final positions and evidence appear in response-to-reviewers.md.
+
+Professional scientific-writing and peer-review guidance was applied in the current native Agent to evidence alignment, paired-unit statistics, permissions, readable IMRAD prose and response construction. Citation-management guidance was adapted to the supplied closed bibliography; its live search/enrichment steps were not run. Anti-defensive-writing-en was actually applied after the scientific revision: the opening moves from a result/log summary to the target-composition question and diagnostic contribution; the title, Abstract, Introduction and Conclusion were reorganized. Direction, values, pairing, target prespecification, interval object, negative g2 result and causal/equivalence limits were preserved. Its pressure to delete unfavorable results or change evaluation dimensions was not followed. Original v2, scientific pre-expression v3 and final v3 plus both diffs are retained. Agent-based fact review is not human approval.
+
+## Figure reasoning and bounded implementation
+Figure 1's task is to reveal that the two mixture estimates differ in direction because of opposing stratum estimates. Only four aggregate means and one supplied interval exist; there are no individual observations or known distributions. A labeled horizontal point/interval plot with a zero reference is selected over a mean bar, boxplot, violin or fabricated raw-point display. A small numeric table is the alternative already provided in S1. All four points remain; only the target has an error bar, explicitly labeled as supplied 95% percentile bootstrap uncertainty. SciPilot chart-selection, pitfall, recipe and visual-review guidance and its actual local visual_qa script support the display. No distribution EDA, original resampling or missing-unit reconstruction is claimed. Lens supplies no dimensions/fonts/DPI, so the local choice of 7.2 × 3.7 inches, ≥9-point labels and vector-first export is a package choice, not a journal mandate.
+
+## Route board and completion bounds
+| Stage | Actual output | Next relevant decision |
+| --- | --- | --- |
+| Resume / evidence and citation audit | scientific-review.md; unchanged baseline files | Permitted raw/code/full-text availability if later review is needed |
+| Scientific revision / final expression | manuscript-v3-pre-expression.md; manuscript-v3-anonymous.md; manuscript-v2-to-v3.diff; final-expression.diff | Accountable author fact and approval review |
+| Displays and supporting record | caption-v3.md; supplement-v3.md; aggregate-results-v2.csv; plot_figure.py; Figure 1 files | No new interval or original-data replication possible here |
+| Policy and governance | Venue table above; separate title/declaration/access drafts; author-queries.md | Confirm required unknowns without inventing approvals |
+| Review comments | response-to-reviewers.md, R1–R5 mapped to actual revisions | Author approval of reply, not presumed reviewer acceptance |
+| Package / stewardship | cover-letter draft, package README/inventory, unchanged v1, correction draft | No real submission/correction authorized |
+| Software and version checks | validation.json; verification.json; resource_reads.jsonl; operation.md | These receipts verify files/consistency, not scientific merit or journal acceptance |
+
+The requested local synthetic work can be completed using the supplied record. Scientific results remain supplied fixture results; operations establish that actual files were prepared consistently. Draft completion and author-review readiness do not imply fully verified science, approved declarations, submission readiness, submission, acceptance or publication.

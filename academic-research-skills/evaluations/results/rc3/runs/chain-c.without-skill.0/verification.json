@@ -1,0 +1,35 @@
+{
+  "checked_at_utc": "2026-09-30T15:55:34.382368+00:00",
+  "status": "passed_local_checks",
+  "frozen_request_sha256": "511d2f3984f5e6af73f118e2dc60c5816ee7de91e066e40c46049c37a48b847c",
+  "verify_request": {
+    "completed_without_exception": true,
+    "return": null
+  },
+  "material_hashes_checked": 11,
+  "material_reads_full": 11,
+  "professional_reads_full": 4,
+  "project_reads": 0,
+  "snapshot_preserved_sha256": "fe70fc7ea3069c4507b59737a781ded7bda8d96f45eda8ed8de1e52d98ac6caf",
+  "aggregate_arithmetic_checked": true,
+  "reporting_values_consistent": true,
+  "g2_retained": true,
+  "main_text_word_count_upper_bound": 1179,
+  "word_count_method": "All whitespace-delimited tokens in manuscript, including title/notes/declarations",
+  "docx_xml_zip_and_text_parity_checked": 9,
+  "anonymous_review_text_and_docx_properties_checked": true,
+  "editable_svg_text_checked": true,
+  "zip_content_matches_submission_folder": true,
+  "submission_ready": false,
+  "submitted": false,
+  "unverified": [
+    "Raw-data numerical replication",
+    "independence audit",
+    "bootstrap implementation and coverage",
+    "original full texts",
+    "human authorship and ethics approval",
+    "controlled-access mechanism",
+    "DOCX rendering in Word",
+    "journal acceptance"
+  ]
+}

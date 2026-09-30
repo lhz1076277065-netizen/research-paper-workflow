@@ -1,0 +1,5 @@
+quantity,mean_A_minus_B_score,ci_lower,ci_upper,independent_paired_units,weight_g1,weight_g2,source,status
+g1,-1.00,,,4,,,evidence.md version 2,supplied aggregate
+g2,3.00,,,4,,,evidence.md version 2,supplied aggregate
+equal sampled mixture,1.00,,,8,0.5,0.5,evidence.md version 2,supplied aggregate
+target mixture,-0.20,-0.60,0.20,8,0.8,0.2,evidence.md version 2,supplied aggregate and interval

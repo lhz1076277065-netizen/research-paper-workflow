@@ -1,0 +1,58 @@
+{
+  "N001": {
+    "concept": "Independent paired units",
+    "value": 8,
+    "unit": "units",
+    "evidence": "E005"
+  },
+  "N002": {
+    "concept": "Unique technical events",
+    "value": 41,
+    "unit": "events",
+    "evidence": "E005"
+  },
+  "N003": {
+    "concept": "Target A minus B",
+    "value": -0.25,
+    "unit": "score",
+    "evidence": "E005"
+  },
+  "N004": {
+    "concept": "Target percentile interval",
+    "value": [
+      -0.65,
+      0.15
+    ],
+    "unit": "score",
+    "evidence": "E005"
+  },
+  "N005": {
+    "concept": "Sample-mix A minus B",
+    "value": 0.875,
+    "unit": "score",
+    "evidence": "E005"
+  },
+  "N006": {
+    "concept": "Fixed-target leave-one-unit-out range",
+    "value": [
+      -0.4,
+      -0.11666666666666667
+    ],
+    "unit": "score",
+    "evidence": "E006"
+  },
+  "M001": {
+    "method": "Deduplicate, convert, date-valid join, unit/method mean, paired difference",
+    "result": "N001,N002,N003"
+  },
+  "M002": {
+    "method": "Fixed-weight stratified paired percentile bootstrap",
+    "result": "N004"
+  },
+  "M003": {
+    "method": "Leave one independent unit out; fixed target weights",
+    "result": "N006"
+  },
+  "analysis_intent": "Descriptive; exploratory interval and sensitivity choices",
+  "human_verification": "unknown; machine and Agent checks do not certify scientific approval"
+}

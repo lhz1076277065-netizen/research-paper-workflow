@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "version": 2,
+  "original_zip_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+  "corrected_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+  "correction": "u08 method B values +1000 subscore, including identical event copies",
+  "changed_rows": [
+    {
+      "event_id": "e040",
+      "before": "4950.000000",
+      "after": "5950.000000",
+      "unit": "subscore"
+    },
+    {
+      "event_id": "e041",
+      "before": "5050.000000",
+      "after": "6050.000000",
+      "unit": "subscore"
+    },
+    {
+      "event_id": "e041",
+      "before": "5050.000000",
+      "after": "6050.000000",
+      "unit": "subscore"
+    }
+  ],
+  "unchanged_definitions": true,
+  "answers_supplied": false
+}

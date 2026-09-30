@@ -1,0 +1,15 @@
+{
+  "command": [
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "scripts/selftest.py",
+    "--scientific-smoke",
+    "--out",
+    "LOCAL_EVIDENCE_ROOT/scientific-smoke"
+  ],
+  "cwd": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills",
+  "exit_code": 0,
+  "elapsed_seconds": 3.398,
+  "started_unix": 1790777745.352962,
+  "stdout": "logs/scientific-smoke.stdout",
+  "stderr": "logs/scientific-smoke.stderr"
+}

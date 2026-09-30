@@ -1,0 +1,21 @@
+{
+  "stage": "corrected complete draft before retained final-expression pass",
+  "draft_sha256": "bee0c4c989eddc3ba6f8222bc322e96e13b4632a522bac5a6dddf604c07ececa",
+  "reviewer": "same current Agent; no human verification",
+  "methods_retained": [
+    "paired independent units",
+    "fixed 80/20 target",
+    "exact stratified percentile bootstrap",
+    "unit-deletion influence",
+    "alternative-target weight sweep"
+  ],
+  "reviewed_dependencies": [
+    "u08 B mean and contrast",
+    "stratum-2 mean and SD",
+    "target and sample means/contrasts/intervals",
+    "unit-deletion range and affected unit labels",
+    "weight crossing and its distance from target",
+    "source-authorisation description",
+    "prior caption disclosure retained"
+  ]
+}

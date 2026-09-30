@@ -1,0 +1,44 @@
+--- manuscript_draft.md
++++ manuscript.md
+@@ -1,22 +1,22 @@
+-# SYNTHETIC — A report of a target-weighted paired comparison
++# SYNTHETIC — Target composition reverses the point estimate when paired stratum contrasts oppose
+ 
+ **Agent-produced synthetic development manuscript. All measurements are manufactured; this is not a report of real academic observations or a submission-ready paper.** [claim:C001] [evidence:E001,E002]
+ 
+ ## Abstract
+ 
+-We analysed a synthetic paired score archive to compare methods A and B at a prespecified target composition of 80% stratum 1 and 20% stratum 2. The observed sample had four independent paired units in each stratum. After deduplicating events, converting units, linking date-valid metadata and averaging technical repetitions, we calculated unit-level A−B differences; lower scores were preferable. The stratum means were −1.00 and +3.00 score. Target standardization gave −0.20 score with a conditional 95% percentile bootstrap interval of [−0.65, 0.25], whereas the sample's 50%/50% composition gave +1.00 [0.1875, 2.00]. Intervals enumerate within-stratum resampling of paired units with fixed weights. Removing any one unit retained a negative target mean, with estimates from −0.40 to −0.0667. Alternative compositions crossed zero at a 75% stratum-1 share. This synthetic analysis demonstrates that the descriptive aggregate depends on the intended composition; the target interval does not establish a definitive advantage for either method. [claim:C002] [evidence:E001,E005,E006]
++Opposing stratum contrasts make the intended composition decisive for an aggregate comparison. We compared methods A and B in a synthetic paired score archive at a prespecified target composition of 80% stratum 1 and 20% stratum 2. The observed sample had four independent paired units in each stratum. After deduplicating events, converting units, linking date-valid metadata and averaging technical repetitions, we calculated unit-level A−B differences; lower scores were preferable. The stratum means were −1.00 and +3.00 score. Target standardization gave −0.20 score with a conditional 95% percentile bootstrap interval of [−0.65, 0.25], whereas the sample's 50%/50% composition gave +1.00 [0.1875, 2.00]. Intervals enumerate within-stratum resampling of paired units with fixed weights. Removing any one unit retained a negative target mean, with estimates from −0.40 to −0.0667. Alternative compositions crossed zero at a 75% stratum-1 share. This synthetic analysis demonstrates that the descriptive aggregate depends on the intended composition; the target interval does not establish a definitive advantage for either method. [claim:C002] [evidence:E001,E005,E006]
+ 
+ ## Introduction
+ 
+-This report documents the processing and analysis of a synthetic paired dataset. The material specifies a target composition distinct from the observed sample composition. Our aim was to compute the corresponding descriptive contrast and display the stratum-specific results. The score is lower-is-better, and no assignment or causal-identification design is supplied. [claim:C011] [evidence:E001,E002]
++A descriptive aggregate compares methods for a particular composition of units. When the target mix differs from the observed sample, its comparison must retain that intended mix. This synthetic paired dataset specifies a target composition distinct from the observed sample composition. The score is lower-is-better, and no assignment or causal-identification design is supplied. [claim:C011] [evidence:E001,E002]
+ 
+-Averaging equally over the observed units gives each stratum half the weight, while the target gives stratum 1 four times the weight of stratum 2. These aggregates answer different questions. We retain the stipulated 80%/20% comparison as primary and use the balanced sample aggregate as a composition diagnostic. No real-field novelty or population finding is claimed. [claim:C002] [evidence:E001,E006]
++Averaging equally over the observed units gives each stratum half the weight, while the target gives stratum 1 four times the weight of stratum 2. These aggregates answer different questions. The objective is to estimate the stipulated 80%/20% descriptive contrast, show whether strata agree, and assess its conditional uncertainty. The balanced sample aggregate serves as a composition diagnostic; it does not redefine the primary comparison. [claim:C002] [evidence:E001,E006]
+ 
+ ## Methods
+ 
+ ### Material and preparation
+ 
+-The original paired-score archive was selected from the supplied catalogue because it contains the relevant measurements, dictionary and unit metadata. Its SHA-256 digest was verified against both the frozen material identity and catalogue before copying and extraction. The catalogue identifies the mirror as the same source by its identical digest; it provides no independent validation. The convenient proxy describes different measurements and was not analysed. [claim:C013] [evidence:E007,E003]
++The original paired-score archive was selected from the supplied catalogue because it contains the relevant measurements, dictionary and unit metadata. Its SHA-256 digest was verified against both the frozen material identity and catalogue before copying and extraction. The catalogue identifies the mirror as the same source by its identical digest; it provides no independent validation. The convenient proxy describes different measurements and was not analysed. [claim:C013] [evidence:E007,E010]
+ 
+ Measurements carry event identifiers, unit identifiers, method, observation date, value and measurement unit. Exact repeated records with the same event identifier were removed; conflicting repeated identifiers would stop the analysis. Values reported in subscore were divided by 1,000 to obtain score. Each event was linked by unit identifier and observation date to exactly one metadata record whose inclusive validity interval contained that date. Historical metadata were therefore not joined as additional observations. Within each unit and method, converted technical repetitions were averaged using the dictionary's equal-precision rule. A and B were paired by independent unit; technical repetitions did not increase the independent-unit sample size. [claim:C004] [evidence:E002,E003,E004,E005]
+ 
+@@ -58,11 +58,11 @@
+ 
+ ## Conclusion
+ 
+-This synthetic comparison demonstrates composition-specific aggregation: the prespecified target mean is −0.20 score with a conditional interval crossing zero, while the balanced sample aggregate is +1.00. Preserving paired units, stratum contrasts and the declared target makes that distinction explicit without claiming causal or real-population superiority. [claim:C006] [evidence:E001,E006]
++Target-specific aggregation changes the descriptive answer in this synthetic comparison: the prespecified target mean is −0.20 score with a conditional interval crossing zero, while the balanced sample aggregate is +1.00. Preserving paired units, opposing stratum contrasts and the declared composition makes both the answer and its uncertainty explicit. [claim:C006] [evidence:E001,E006]
+ 
+ ## Availability and declarations
+ 
+-The accompanying local package contains the checked original archive, extracted measurements and dictionary, `prepare.py`, `analysis.py`, `pairs.csv`, bootstrap probability tables, sensitivity outputs, editable figure and caption. The source license permits reuse of synthetic evaluation material and states that no real individuals or organizations are involved. Authorship, funding and competing-interest information were not supplied; no such declarations are invented. There is no real-participant study or asserted ethics approval, trial registration or submission. [claim:C012] [evidence:E002,E003,E004,E005]
++The accompanying local package contains the checked original archive, extracted measurements and dictionary, `prepare.py`, `analysis.py`, `pairs.csv`, bootstrap probability tables, sensitivity outputs, editable figure and caption. The source license permits reuse of synthetic evaluation material and states that no real individuals or organizations are involved. Authorship, funding and competing-interest information were not supplied; no such declarations are invented. There is no real-participant study or asserted ethics approval, trial registration or submission. [claim:C012] [evidence:E002,E003,E004,E005,E009]
+ 
+ The current Agent prepared the code, figure and prose locally, using SciPilot figure guidance and K-Dense scientific-writing guidance. Factual checks are computational and Agent-performed; accountable human scientific verification and submission approval have not occurred. The scientific-writing resource is acknowledged in the software reference below. [claim:C015] [evidence:E005,E008]
+ 

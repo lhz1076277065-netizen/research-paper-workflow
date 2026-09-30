@@ -1,0 +1,88 @@
+{
+  "synthetic": true,
+  "score_direction": "lower is better",
+  "contrast": "A minus B",
+  "strata": [
+    {
+      "stratum": "g1",
+      "n": 4,
+      "mean_A": 5.5,
+      "mean_B": 6.5,
+      "mean_difference": -1.0,
+      "sd_difference": 0.408248290463863,
+      "ci95_percentile": [
+        -1.375,
+        -0.625
+      ],
+      "ordered_resamples": 256
+    },
+    {
+      "stratum": "g2",
+      "n": 4,
+      "mean_A": 9.5,
+      "mean_B": 6.5,
+      "mean_difference": 3.0,
+      "sd_difference": 2.160246899469287,
+      "ci95_percentile": [
+        1.5,
+        5.0
+      ],
+      "ordered_resamples": 256
+    }
+  ],
+  "aggregates": [
+    {
+      "composition": "target",
+      "weights": [
+        0.8,
+        0.2
+      ],
+      "difference": -0.2,
+      "mean_A": 6.3,
+      "mean_B": 6.5,
+      "ci95_percentile": [
+        -0.65,
+        0.25
+      ],
+      "ordered_resamples": 65536
+    },
+    {
+      "composition": "sample",
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "difference": 1.0,
+      "mean_A": 7.5,
+      "mean_B": 6.5,
+      "ci95_percentile": [
+        0.1875,
+        2.0
+      ],
+      "ordered_resamples": 65536
+    }
+  ],
+  "bootstrap": {
+    "unit": "paired independent unit",
+    "within_stratum": true,
+    "target_weights_fixed": true,
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "quantile_definition": "inverse empirical CDF",
+    "monte_carlo": false,
+    "conditional_model": "independent draws from each stratum's empirical paired-unit distribution",
+    "population_coverage_validated": false
+  },
+  "robustness": {
+    "leave_one_unit_out_range": [
+      -0.4,
+      -0.06666666666666665
+    ],
+    "leave_one_unit_out_all_negative": true,
+    "zero_crossing_stratum_1_weight": 0.75,
+    "weight_sensitivity_is_alternative_estimand_not_weight_uncertainty": true
+  }
+}
+SYNTHETIC preparation, weighting, exact-bootstrap and hand-reference checks passed.

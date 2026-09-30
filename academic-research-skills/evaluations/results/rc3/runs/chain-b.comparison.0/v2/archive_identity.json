@@ -1,0 +1,47 @@
+{
+  "synthetic": true,
+  "selected_id": "authorised_corrected_paired",
+  "selection_reason": "same paired measurements with exactly the authorised u08 B correction",
+  "request_sha256": "64b3b32ef20cbd9b6a3c21d2164ca17fe557884da63df2ad59c29cedae914beb",
+  "source_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/paired-measurements-v2.zip",
+  "source_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+  "copied_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/inputs/source.zip",
+  "zip_crc_ok": true,
+  "prior_source_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+  "correction_authorisation_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/approved-correction.json",
+  "correction_authorisation_sha256": "ea52cbde1af67ee7b218ad6be411549ee37547262bf4d3d0e116eaa8c2d2f379",
+  "members": [
+    {
+      "original_archive": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/paired-measurements-v2.zip",
+      "original_archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "LICENSE.txt",
+      "member_sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571",
+      "bytes": 119,
+      "extracted_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/inputs/extracted/LICENSE.txt"
+    },
+    {
+      "original_archive": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/paired-measurements-v2.zip",
+      "original_archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "dictionary.md",
+      "member_sha256": "52a2a3ebb520e3971d898205ab312a96affac0735bcb5fa369bcfa7eed77d4c7",
+      "bytes": 1099,
+      "extracted_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/inputs/extracted/dictionary.md"
+    },
+    {
+      "original_archive": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/paired-measurements-v2.zip",
+      "original_archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "measurements.csv",
+      "member_sha256": "2e3a498385f00877ea8ed9f8aa2be4a86942f4382e7a469e13699fbc04f24539",
+      "bytes": 1774,
+      "extracted_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/inputs/extracted/measurements.csv"
+    },
+    {
+      "original_archive": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/paired-measurements-v2.zip",
+      "original_archive_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "units.csv",
+      "member_sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f",
+      "bytes": 676,
+      "extracted_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.comparison.0/v2/inputs/extracted/units.csv"
+    }
+  ]
+}

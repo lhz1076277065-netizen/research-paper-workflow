@@ -1,0 +1,20 @@
+{
+  "raw_event_rows": 43,
+  "exact_duplicate_archive_rows_removed": 2,
+  "unique_measurement_events": 41,
+  "unit_metadata_history_rows": 16,
+  "independent_paired_units": 8,
+  "stratum_unit_counts": {
+    "g1": 4,
+    "g2": 4
+  },
+  "technical_events_by_method": {
+    "B": 24,
+    "A": 17
+  },
+  "unmatched_metadata": 0,
+  "multiply_matched_metadata": 0,
+  "incomplete_pairs": 0,
+  "missing_score_values": 0,
+  "independence": "Stipulated by dictionary for fixture within-stratum resampling; real population independence unknown"
+}

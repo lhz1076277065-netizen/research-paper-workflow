@@ -1,0 +1,255 @@
+{
+  "scope": "all identity inclusions in all timestamp-ordered DAGs with 0..5 vertices; constant label z",
+  "examples": {
+    "inducedness_insufficient": {
+      "timestamps": [
+        0,
+        1,
+        2
+      ],
+      "labels": [
+        "z",
+        "z",
+        "z"
+      ],
+      "target_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "retained": [
+        0,
+        2
+      ],
+      "source_edges": [],
+      "source_reachability": [],
+      "excursion_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "missing_source_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "bidirectional": false,
+      "interval_closed": false
+    },
+    "interval_closure_unnecessary": {
+      "timestamps": [
+        0,
+        1,
+        2
+      ],
+      "labels": [
+        "z",
+        "z",
+        "z"
+      ],
+      "target_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "retained": [
+        0,
+        2
+      ],
+      "source_edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "source_reachability": [
+        [
+          0,
+          2
+        ]
+      ],
+      "excursion_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "missing_source_pairs": [],
+      "bidirectional": true,
+      "interval_closed": false
+    },
+    "replacement_need_not_be_an_edge": {
+      "timestamps": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "labels": [
+        "z",
+        "z",
+        "z",
+        "z"
+      ],
+      "target_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "retained": [
+        0,
+        1,
+        3
+      ],
+      "source_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "source_reachability": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "excursion_pairs": [
+        [
+          0,
+          3
+        ]
+      ],
+      "missing_source_pairs": [],
+      "bidirectional": true,
+      "interval_closed": false
+    },
+    "sparse_boundary": {
+      "timestamps": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "labels": [
+        "z",
+        "z",
+        "z",
+        "z"
+      ],
+      "target_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "retained": [
+        0,
+        1,
+        3
+      ],
+      "source_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "source_reachability": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "excursion_pairs": [
+        [
+          1,
+          3
+        ]
+      ],
+      "missing_source_pairs": [],
+      "bidirectional": true,
+      "interval_closed": false
+    }
+  },
+  "enumeration": {
+    "graphs": 1100,
+    "images": 33867,
+    "preserved": 30093,
+    "interval_closed": 26433,
+    "preserved_not_interval_closed": 3660,
+    "failed_bidirectional": 3774
+  },
+  "criterion_mismatches": 0,
+  "quadratic_boundary_example": {
+    "retained_vertices": 16,
+    "omitted_vertices": 1,
+    "target_edges": 16,
+    "boundary_pairs": 64
+  },
+  "check_elapsed_seconds": 0.134256,
+  "status": "assertions_passed"
+}

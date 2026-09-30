@@ -1,0 +1,7 @@
+# Figure 1 caption
+
+SYNTHETIC DEVELOPMENTAL DRAFT — anonymous author-review copy.
+
+Figure 1. Mixture-dependent direction of the supplied A−B score contrast. Lower score is better: negative contrasts favor A and positive contrasts favor B. Points show stratum mean contrasts (g1: −1.00, four independent paired units; g2: +3.00, four independent paired units) and two aggregates formed from the same eight units (prespecified target g1:g2 weights 0.8:0.2: −0.20; equal sampled weights 0.5:0.5: +1.00). These are summary estimates, not individual unit observations. The horizontal interval is shown only for the target contrast: the supplied 95% within-stratum paired-unit bootstrap percentile interval [−0.60, 0.20]. Pairing and the unit-level sampling object are preserved in the reported procedure; technical repetitions were averaged within unit and method after conversion. Stratum and equal-mixture intervals were not supplied and are not drawn. No significance symbols or additional tests are used. The target interval includes zero and is neither a causal nor an equivalence interval. Values are transcribed from result memo v2; raw data and bootstrap outputs were not supplied for independent replication.
+
+Alt text: Four summary contrasts appear on a common A−B score axis with a zero reference. g1 is at −1.00, g2 at +3.00, the target 0.8:0.2 aggregate at −0.20, and the sampled 0.5:0.5 aggregate at +1.00. A horizontal interval from −0.60 to 0.20 crosses zero on the target row only. Negative values favor A; positive values favor B.

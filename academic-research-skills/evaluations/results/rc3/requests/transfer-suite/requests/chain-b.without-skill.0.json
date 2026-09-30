@@ -1,0 +1,38 @@
+{
+  "case_id": "chain-b",
+  "condition": "without-skill",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "unseen_material",
+  "skill_snapshot": null,
+  "user_prompt": "完成 chain-b 的合成 Skill 开发任务，按照材料 README.md 交付实际成果。",
+  "material": "# SYNTHETIC / Skill development fixture\nThe local archives and measurements below are manufactured development inputs,\nnot observations from a real academic field. This task tests the Skill.\nScientific target in the fixture: compare A with B on a prespecified target mix\nof two strata, w1=0.8 and w2=0.2, using the same independent units for both\nmethods. Score is lower-is-better. Observed sampling contains four units per\nstratum, not a self-weighting sample of that target. This is descriptive; no\nassignment or causal-identification design is supplied. Do not switch to a\nconvenient proxy object or silently replace the target weights with row counts.\nInspect candidates.json, obtain the fitting local archive into your workspace,\ncheck its identity, and rebuild analysis from its original files. All methods,\ncomputations, plot design and explanation remain your decisions.\nDeliver reproducible preparation/analysis, an actual relevant robustness check,\none main figure (180 mm wide, at most 105 mm high; editable SVG and PNG), its\ncaption and a coherent short synthetic manuscript. Mark it SYNTHETIC. The\nfigure should allow a reader to compare target vs sampled composition, see\nwhether both strata agree, and understand the interval being shown. Explain\nwhich results are conditional and which inputs or independence remain unknown.\nUse one suitable professional figure and one writing implementation from the\nshared pool when they improve the final artifacts; adapt inside this Agent.\nDo not call an export function alone a complete professional workflow.\n",
+  "material_root": "LOCAL_EVIDENCE_ROOT/materials/chain-b",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/README.md",
+      "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/mirror-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/paired-measurements-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/proxy.zip",
+      "sha256": "32c235076cb288f6b3748172706af617b967cf5e6ea214121434b602e7085b93"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/candidates.json",
+      "sha256": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828"
+    }
+  ],
+  "skill_entry": null,
+  "skill_entry_sha256": null,
+  "initial_skill_text": "",
+  "available_selected_capabilities": [],
+  "adapter_contract": "Equal current native Agent/model/tools/professional pool. No other-arm answers. Project capability resources demand-loaded within frozen bundle; evaluation-only bundling, not native auto-discovery."
+}

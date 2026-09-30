@@ -1,0 +1,12 @@
+{
+  "run_id": "chain-b.release.0",
+  "phase": "caption",
+  "same_agent_continuation": true,
+  "changed_existing_files": [
+    "caption.md"
+  ],
+  "prior_caption_is_byte_prefix": true,
+  "required_sentence_occurrences": 1,
+  "other_prior_files_unchanged": true,
+  "new_operation_sha256": "4215c1925249abfd25cb7c5b1d44be4c02d119cbc65ee17faa55b104d93ad277"
+}

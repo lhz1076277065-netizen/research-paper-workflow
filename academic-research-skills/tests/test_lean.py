@@ -96,6 +96,38 @@ class Sources(unittest.TestCase):
         self.assertIn('shared/guide.md',d['providers'][0]['required_paths'])
     def test_support_path_missing_is_specific(self):
         with self.assertRaises(u.UpstreamError):u.bind(self.index(),self.path,'paper-deep-reading','read',support=['missing.md'])
+    def dependency_fixture(self,root):
+        reg=u.bind(self.index(),self.path,'paper-deep-reading','read',support=['shared/guide.md'])
+        entry=root/self.path;entry.parent.mkdir(parents=True);entry.write_text(self.text)
+        guide=root/'shared/guide.md';guide.parent.mkdir();guide.write_text('test')
+        provider=reg['providers'][0];cfg={'providers':{provider['id']:{'root':str(root)}}}
+        return provider,cfg,guide
+    def test_entry_unchanged_does_not_hide_declared_dependency_drift(self):
+        with tempfile.TemporaryDirectory() as t:
+            provider,cfg,guide=self.dependency_fixture(Path(t))
+            self.assertEqual(b.inspect_provider(provider,cfg)['status'],'files_available')
+            guide.write_text('Changed operation, same entry')
+            result=b.inspect_provider(provider,cfg)
+            self.assertEqual(result['status'],'source_review_required')
+            self.assertEqual(result['indexed_files_changed'],['shared/guide.md'])
+            self.assertEqual(guide.read_text(),'Changed operation, same entry')
+    def test_local_dependency_adaptation_needs_matching_digest_review(self):
+        with tempfile.TemporaryDirectory() as t:
+            provider,cfg,guide=self.dependency_fixture(Path(t));guide.write_text('Reviewed local adaptation')
+            cfg['providers'][provider['id']]['source_reviewed']=True
+            self.assertEqual(b.inspect_provider(provider,cfg)['status'],'source_review_required')
+            cfg['providers'][provider['id']]['reviewed_file_sha256']={'shared/guide.md':b.sha(guide)}
+            result=b.inspect_provider(provider,cfg)
+            self.assertEqual(result['status'],'files_available');self.assertEqual(result['indexed_files_changed'],['shared/guide.md'])
+            guide.write_text('Unreviewed next adaptation')
+            self.assertEqual(b.inspect_provider(provider,cfg)['status'],'source_review_required')
+    def test_declared_dependency_identity_input_is_validated(self):
+        with tempfile.TemporaryDirectory() as t:
+            provider,cfg,guide=self.dependency_fixture(Path(t))
+            for identities in ([],{'unbound.md':'a'*40},{'shared/guide.md':'not-a-blob-sha'}):
+                with self.subTest(identities=identities):
+                    provider['discovered_file_blob_sha']=identities
+                    with self.assertRaises(b.ContractError):b.inspect_provider(provider,cfg)
     def test_reference_not_mislabeled_native(self):
         with self.assertRaises(u.UpstreamError):u.bind(self.index(),'shared/guide.md','research-design','read')
     def test_only_chosen_entry_bound(self):

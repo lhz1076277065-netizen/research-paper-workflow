@@ -1,0 +1,98 @@
+{
+  "units": [
+    {
+      "unit_id": "u01",
+      "stratum": "g1",
+      "A_score": 4.0,
+      "B_score": 5.5,
+      "difference_A_minus_B": -1.5,
+      "n_A_events": 2,
+      "n_B_events": 4
+    },
+    {
+      "unit_id": "u02",
+      "stratum": "g1",
+      "A_score": 5.0,
+      "B_score": 6.0,
+      "difference_A_minus_B": -1.0,
+      "n_A_events": 3,
+      "n_B_events": 2
+    },
+    {
+      "unit_id": "u03",
+      "stratum": "g1",
+      "A_score": 6.0,
+      "B_score": 6.5,
+      "difference_A_minus_B": -0.5,
+      "n_A_events": 1,
+      "n_B_events": 3
+    },
+    {
+      "unit_id": "u04",
+      "stratum": "g1",
+      "A_score": 7.0,
+      "B_score": 8.0,
+      "difference_A_minus_B": -1.0,
+      "n_A_events": 2,
+      "n_B_events": 4
+    },
+    {
+      "unit_id": "u05",
+      "stratum": "g2",
+      "A_score": 8.0,
+      "B_score": 7.0,
+      "difference_A_minus_B": 1.0,
+      "n_A_events": 3,
+      "n_B_events": 2
+    },
+    {
+      "unit_id": "u06",
+      "stratum": "g2",
+      "A_score": 9.0,
+      "B_score": 7.0,
+      "difference_A_minus_B": 2.0,
+      "n_A_events": 1,
+      "n_B_events": 3
+    },
+    {
+      "unit_id": "u07",
+      "stratum": "g2",
+      "A_score": 10.0,
+      "B_score": 7.0,
+      "difference_A_minus_B": 3.0,
+      "n_A_events": 2,
+      "n_B_events": 4
+    },
+    {
+      "unit_id": "u08",
+      "stratum": "g2",
+      "A_score": 11.0,
+      "B_score": 5.0,
+      "difference_A_minus_B": 6.0,
+      "n_A_events": 3,
+      "n_B_events": 2
+    }
+  ],
+  "flow": [
+    {
+      "stage": "raw_measurement_rows",
+      "count": 43
+    },
+    {
+      "stage": "unique_events_after_exact_copy_removal",
+      "count": 41
+    },
+    {
+      "stage": "events_after_active_metadata_join",
+      "count": 41
+    },
+    {
+      "stage": "unit_method_means",
+      "count": 16
+    },
+    {
+      "stage": "independent_paired_units",
+      "count": 8
+    }
+  ]
+}

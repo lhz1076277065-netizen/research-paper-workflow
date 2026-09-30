@@ -1,0 +1,325 @@
+{
+  "synthetic": true,
+  "checked_at_utc": "2026-09-30T16:20:07.795725+00:00",
+  "changed_prepared_units": {
+    "u08": {
+      "before": {
+        "unit_id": "u08",
+        "stratum": "g2",
+        "A_score": "11.0",
+        "B_score": "5.0",
+        "difference_A_minus_B": "6.0",
+        "n_A_events": "3",
+        "n_B_events": "2"
+      },
+      "after": {
+        "unit_id": "u08",
+        "stratum": "g2",
+        "A_score": "11.0",
+        "B_score": "6.0",
+        "difference_A_minus_B": "5.0",
+        "n_A_events": "3",
+        "n_B_events": "2"
+      }
+    }
+  },
+  "numeric_summaries": [
+    {
+      "summary": "g1",
+      "before_A": 5.5,
+      "after_A": 5.5,
+      "before_B": 6.5,
+      "after_B": 6.5,
+      "before_difference": -1.0,
+      "after_difference": -1.0,
+      "difference_change": 0.0,
+      "before_interval": [
+        -1.375,
+        -0.625
+      ],
+      "after_interval": [
+        -1.375,
+        -0.625
+      ]
+    },
+    {
+      "summary": "g2",
+      "before_A": 9.5,
+      "after_A": 9.5,
+      "before_B": 6.5,
+      "after_B": 6.75,
+      "before_difference": 3.0,
+      "after_difference": 2.75,
+      "difference_change": -0.25,
+      "before_interval": [
+        1.5,
+        5.0
+      ],
+      "after_interval": [
+        1.5,
+        4.25
+      ]
+    },
+    {
+      "summary": "target",
+      "before_A": 6.300000000000001,
+      "after_A": 6.300000000000001,
+      "before_B": 6.5,
+      "after_B": 6.550000000000001,
+      "before_difference": -0.19999999999999996,
+      "after_difference": -0.25,
+      "difference_change": -0.050000000000000044,
+      "before_interval": [
+        -0.6500000000000001,
+        0.2499999999999999
+      ],
+      "after_interval": [
+        -0.6500000000000001,
+        0.1499999999999998
+      ]
+    },
+    {
+      "summary": "sampled",
+      "before_A": 7.5,
+      "after_A": 7.5,
+      "before_B": 6.5,
+      "after_B": 6.625,
+      "before_difference": 1.0,
+      "after_difference": 0.875,
+      "difference_change": -0.125,
+      "before_interval": [
+        0.1875,
+        2.0
+      ],
+      "after_interval": [
+        0.1875,
+        1.625
+      ]
+    }
+  ],
+  "omission_comparison": [
+    {
+      "omitted_unit": "u01",
+      "before": {
+        "omitted_unit": "u01",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.06666666666666665,
+        "interval_lo": -0.4500000000000001,
+        "interval_hi": 0.3833333333333331,
+        "resample_configurations": 6912
+      },
+      "after": {
+        "omitted_unit": "u01",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.1166666666666667,
+        "interval_lo": -0.4500000000000001,
+        "interval_hi": 0.2666666666666665,
+        "resample_configurations": 6912
+      },
+      "point_change": -0.050000000000000044,
+      "before_zero_inclusion": true,
+      "after_zero_inclusion": true
+    },
+    {
+      "omitted_unit": "u02",
+      "before": {
+        "omitted_unit": "u02",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.19999999999999996,
+        "interval_lo": -0.7000000000000003,
+        "interval_hi": 0.33333333333333304,
+        "resample_configurations": 6912
+      },
+      "after": {
+        "omitted_unit": "u02",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.25,
+        "interval_lo": -0.7166666666666668,
+        "interval_hi": 0.21666666666666645,
+        "resample_configurations": 6912
+      },
+      "point_change": -0.050000000000000044,
+      "before_zero_inclusion": true,
+      "after_zero_inclusion": true
+    },
+    {
+      "omitted_unit": "u03",
+      "before": {
+        "omitted_unit": "u03",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.33333333333333337,
+        "interval_lo": -0.7166666666666668,
+        "interval_hi": 0.09999999999999976,
+        "resample_configurations": 6912
+      },
+      "after": {
+        "omitted_unit": "u03",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.3833333333333334,
+        "interval_lo": -0.7333333333333335,
+        "interval_hi": -0.03333333333333366,
+        "resample_configurations": 6912
+      },
+      "point_change": -0.050000000000000044,
+      "before_zero_inclusion": true,
+      "after_zero_inclusion": false
+    },
+    {
+      "omitted_unit": "u04",
+      "before": {
+        "omitted_unit": "u04",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.19999999999999996,
+        "interval_lo": -0.7000000000000003,
+        "interval_hi": 0.33333333333333304,
+        "resample_configurations": 6912
+      },
+      "after": {
+        "omitted_unit": "u04",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.25,
+        "interval_lo": -0.7166666666666668,
+        "interval_hi": 0.21666666666666645,
+        "resample_configurations": 6912
+      },
+      "point_change": -0.050000000000000044,
+      "before_zero_inclusion": true,
+      "after_zero_inclusion": true
+    },
+    {
+      "omitted_unit": "u05",
+      "before": {
+        "omitted_unit": "u05",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.06666666666666665,
+        "interval_lo": -0.5333333333333334,
+        "interval_hi": 0.3999999999999997,
+        "resample_configurations": 6912
+      },
+      "after": {
+        "omitted_unit": "u05",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.1333333333333333,
+        "interval_lo": -0.5333333333333334,
+        "interval_hi": 0.2666666666666663,
+        "resample_configurations": 6912
+      },
+      "point_change": -0.06666666666666665,
+      "before_zero_inclusion": true,
+      "after_zero_inclusion": true
+    },
+    {
+      "omitted_unit": "u06",
+      "before": {
+        "omitted_unit": "u06",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.1333333333333333,
+        "interval_lo": -0.6666666666666667,
+        "interval_hi": 0.3999999999999997,
+        "resample_configurations": 6912
+      },
+      "after": {
+        "omitted_unit": "u06",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.19999999999999996,
+        "interval_lo": -0.6666666666666667,
+        "interval_hi": 0.2666666666666663,
+        "resample_configurations": 6912
+      },
+      "point_change": -0.06666666666666665,
+      "before_zero_inclusion": true,
+      "after_zero_inclusion": true
+    },
+    {
+      "omitted_unit": "u07",
+      "before": {
+        "omitted_unit": "u07",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.19999999999999996,
+        "interval_lo": -0.7333333333333334,
+        "interval_hi": 0.3999999999999997,
+        "resample_configurations": 6912
+      },
+      "after": {
+        "omitted_unit": "u07",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.2666666666666667,
+        "interval_lo": -0.7333333333333334,
+        "interval_hi": 0.19999999999999973,
+        "resample_configurations": 6912
+      },
+      "point_change": -0.06666666666666676,
+      "before_zero_inclusion": true,
+      "after_zero_inclusion": true
+    },
+    {
+      "omitted_unit": "u08",
+      "before": {
+        "omitted_unit": "u08",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.4,
+        "interval_lo": -0.7333333333333334,
+        "interval_hi": -0.06666666666666687,
+        "resample_configurations": 6912
+      },
+      "after": {
+        "omitted_unit": "u08",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.4,
+        "interval_lo": -0.7333333333333334,
+        "interval_hi": -0.06666666666666687,
+        "resample_configurations": 6912
+      },
+      "point_change": 0.0,
+      "before_zero_inclusion": false,
+      "after_zero_inclusion": false
+    }
+  ],
+  "zero_containing_omission_intervals_before": 7,
+  "zero_containing_omission_intervals_after": 6,
+  "zero_crossing_before": 0.75,
+  "zero_crossing_after": 0.7333333333333333,
+  "unchanged_unit_ids": [
+    "u01",
+    "u02",
+    "u03",
+    "u04",
+    "u05",
+    "u06",
+    "u07"
+  ],
+  "unchanged_definitions_weights_method_and_sample_flow": true,
+  "scope": "authorized synthetic input correction in same Agent context; no new experiment or independent replication"
+}

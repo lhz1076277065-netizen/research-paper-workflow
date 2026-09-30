@@ -1,0 +1,5 @@
+  [PASS] 程序自检未发现缺字 / 裁切 / 刻度重叠。
+  >>> 仍需 AI 读图复核感知性问题（见 visual_review.md）。
+[scipilot-figure-skill] wrote LOCAL_EVIDENCE_ROOT/runs/chain-b.release.0/v2/main_figure.svg
+[scipilot-figure-skill] wrote LOCAL_EVIDENCE_ROOT/runs/chain-b.release.0/v2/main_figure.png
+{"preview": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/main_figure_preview.png", "layout_issues": [], "exported": true}

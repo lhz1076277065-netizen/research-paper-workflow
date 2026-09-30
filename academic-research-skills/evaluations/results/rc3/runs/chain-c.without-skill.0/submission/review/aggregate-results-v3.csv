@@ -1,0 +1,5 @@
+comparison,n_independent_units,w_g1,w_g2,mean_A_minus_B_score,ci_lower,ci_upper,source
+g1,4,1.0,0.0,-1.00,,,evidence.md version 2
+g2,4,0.0,1.0,3.00,,,evidence.md version 2
+equal_sampled_mixture,8,0.5,0.5,1.00,,,evidence.md version 2
+target_mixture,8,0.8,0.2,-0.20,-0.60,0.20,evidence.md version 2

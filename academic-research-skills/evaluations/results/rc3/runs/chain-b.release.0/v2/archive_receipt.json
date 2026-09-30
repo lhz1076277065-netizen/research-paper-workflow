@@ -1,0 +1,63 @@
+{
+  "synthetic": true,
+  "selected_candidate": "authorized corrected paired archive",
+  "source_path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/paired-measurements-v2.zip",
+  "copied_archive": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/raw/original.zip",
+  "original_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+  "approved_correction_sha256": "ea52cbde1af67ee7b218ad6be411549ee37547262bf4d3d0e116eaa8c2d2f379",
+  "prior_archive_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+  "members": [
+    {
+      "at_utc": "2026-09-30T16:15:53.682935+00:00",
+      "original_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "LICENSE.txt",
+      "member_sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571",
+      "member_bytes": 119,
+      "actual_read_byte_range": [
+        0,
+        119
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "acquire, inspect, and preserve original member"
+    },
+    {
+      "at_utc": "2026-09-30T16:15:53.683150+00:00",
+      "original_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "dictionary.md",
+      "member_sha256": "52a2a3ebb520e3971d898205ab312a96affac0735bcb5fa369bcfa7eed77d4c7",
+      "member_bytes": 1099,
+      "actual_read_byte_range": [
+        0,
+        1099
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "acquire, inspect, and preserve original member"
+    },
+    {
+      "at_utc": "2026-09-30T16:15:53.683360+00:00",
+      "original_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "measurements.csv",
+      "member_sha256": "2e3a498385f00877ea8ed9f8aa2be4a86942f4382e7a469e13699fbc04f24539",
+      "member_bytes": 1774,
+      "actual_read_byte_range": [
+        0,
+        1774
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "acquire, inspect, and preserve original member"
+    },
+    {
+      "at_utc": "2026-09-30T16:15:53.683498+00:00",
+      "original_zip_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+      "member_name": "units.csv",
+      "member_sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f",
+      "member_bytes": 676,
+      "actual_read_byte_range": [
+        0,
+        676
+      ],
+      "range_semantics": "half-open bytes; full member",
+      "purpose": "acquire, inspect, and preserve original member"
+    }
+  ]
+}

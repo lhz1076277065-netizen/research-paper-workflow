@@ -1,0 +1,9 @@
+{
+  "scope": "Synthetic fixture reproducing a mechanical source-identity gap, not an actual upstream repository update or professional quality test",
+  "baseline_commit": "3c6563aa7d84e551ce3e91d8f7e0f0d0abadfaa0",
+  "entry_matches_index": true,
+  "declared_dependency_matches_index": false,
+  "status_before_fix": "files_available",
+  "old_local_adaptation_preserved": true,
+  "expected_next_behavior": "require review of changed declared dependency, allow an explicit byte-bound local adaptation without overwriting it"
+}

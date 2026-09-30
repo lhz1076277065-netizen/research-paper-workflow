@@ -1,0 +1,51 @@
+{
+  "case_id": "chain-b",
+  "condition": "without-skill",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "development",
+  "skill_snapshot": null,
+  "user_prompt": "接续同一合成开发项目，现授权采用更正后的原始档案 LOCAL_EVIDENCE_ROOT/continuation-materials/paired-measurements-v2.zip。\n更正说明见 LOCAL_EVIDENCE_ROOT/continuation-materials/approved-correction.json：u08 的 B 原始值增加1000 subscore，包括相同事件副本；定义、其他数据和目标权重均未改变。\n保留旧版材料与已完成产物，按受影响的实际依赖更新准备、分析、相关稳健性、主图、图注和全文；与本次更正无关的工作可复用。沿用你的研究方法，不能只改一处文本数字。交付 v2/ 下完整更新后的相关文件和 operation-correction.md，指出真实变化与未知范围。不需要任何外部研究、论文或新实验。\n压缩包仍按摘要和成员字节核验；解出的成员可直接读取，另存衍生身份，勿把它们当原请求的冻结 material。",
+  "material": "接续同一合成开发项目，现授权采用更正后的原始档案 LOCAL_EVIDENCE_ROOT/continuation-materials/paired-measurements-v2.zip。\n更正说明见 LOCAL_EVIDENCE_ROOT/continuation-materials/approved-correction.json：u08 的 B 原始值增加1000 subscore，包括相同事件副本；定义、其他数据和目标权重均未改变。\n保留旧版材料与已完成产物，按受影响的实际依赖更新准备、分析、相关稳健性、主图、图注和全文；与本次更正无关的工作可复用。沿用你的研究方法，不能只改一处文本数字。交付 v2/ 下完整更新后的相关文件和 operation-correction.md，指出真实变化与未知范围。不需要任何外部研究、论文或新实验。\n压缩包仍按摘要和成员字节核验；解出的成员可直接读取，另存衍生身份，勿把它们当原请求的冻结 material。",
+  "material_root": "LOCAL_EVIDENCE_ROOT/materials/chain-b",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/README.md",
+      "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/mirror-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/paired-measurements-v1.zip",
+      "sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/archives/proxy.zip",
+      "sha256": "32c235076cb288f6b3748172706af617b967cf5e6ea214121434b602e7085b93"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-b/candidates.json",
+      "sha256": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/continuation-materials/paired-measurements-v2.zip",
+      "sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/continuation-materials/approved-correction.json",
+      "sha256": "ea52cbde1af67ee7b218ad6be411549ee37547262bf4d3d0e116eaa8c2d2f379"
+    }
+  ],
+  "skill_entry": null,
+  "skill_entry_sha256": null,
+  "initial_skill_text": "",
+  "available_selected_capabilities": [],
+  "adapter_contract": "Equal current native Agent/model/tools/professional pool. No other-arm answers. Project capability resources demand-loaded within frozen bundle; evaluation-only bundling, not native auto-discovery.",
+  "continuation_phase": "correction",
+  "parent_case_id": "chain-b",
+  "prior_artifact_checkpoint": "LOCAL_EVIDENCE_ROOT/checkpoints/chain-b.without-skill.0/after-caption",
+  "fresh_context": false,
+  "same_agent_continuation": true
+}

@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "status": "completed_independent_anonymous_content_review",
+  "fictional_boundary": "SYNTHETIC Skill-development fixture; no real paper, scientific publication, external action or human approval",
+  "clock": {
+    "start_observed_utc": "2026-09-30T16:47:49Z",
+    "end_observed_utc": "2026-09-30T17:05:50Z",
+    "start_source": "clock__curr_time first observation before request read",
+    "end_source": "clock__curr_time observation after output and unchanged-input validation; before writing this final receipt",
+    "elapsed_wall_seconds": 1081,
+    "tokens": null,
+    "billing_cost": null,
+    "usage_unknown_reason": "No obtainable token or billing receipt; no guessed usage"
+  },
+  "model": {
+    "same_model_by_inheritance": true,
+    "model_override": false,
+    "exact_serving_identifier": null,
+    "subagents_created": 0
+  },
+  "read_scope": {
+    "request": "LOCAL_EVIDENCE_ROOT/review-requests/chain-b.json",
+    "packet": "LOCAL_EVIDENCE_ROOT/blind-packets/chain-b",
+    "inputs": [
+      "raw/**",
+      "S1/**",
+      "S2/**",
+      "S3/**"
+    ],
+    "self_generated_auxiliary_reads": true,
+    "forbidden_materials_read": false,
+    "memory_read": false,
+    "mapping_read": false,
+    "web_or_external_links_visited": false,
+    "installations": false,
+    "packet_mutations": false,
+    "output_directory": "LOCAL_EVIDENCE_ROOT/blind-reviews/chain-b"
+  },
+  "views": [
+    {
+      "artifact": "S1/main_figure.png",
+      "original_png_actually_viewed": true,
+      "tool_display_original_resized_to_width_px": 2048,
+      "target_size_preview_actually_viewed": true,
+      "preview_file": "S1-180mm-at-96dpi.png",
+      "preview_width_px": 680,
+      "preview_nominal_screen_dpi": 96,
+      "svg_mm": [
+        180,
+        100
+      ],
+      "png_original_pixels": [
+        4251,
+        2362
+      ],
+      "physical_print_test": false
+    },
+    {
+      "artifact": "S2/main_figure.png",
+      "original_png_actually_viewed": true,
+      "tool_display_original_resized_to_width_px": 2048,
+      "target_size_preview_actually_viewed": true,
+      "preview_file": "S2-180mm-at-96dpi.png",
+      "preview_width_px": 680,
+      "preview_nominal_screen_dpi": 96,
+      "svg_mm": [
+        180,
+        100
+      ],
+      "png_original_pixels": [
+        2125,
+        1181
+      ],
+      "physical_print_test": false
+    },
+    {
+      "artifact": "S3/main_figure.png",
+      "original_png_actually_viewed": true,
+      "tool_display_original_resized_to_width_px": 2048,
+      "target_size_preview_actually_viewed": true,
+      "preview_file": "S3-180mm-at-96dpi.png",
+      "preview_width_px": 680,
+      "preview_nominal_screen_dpi": 96,
+      "svg_mm": [
+        180,
+        103
+      ],
+      "png_original_pixels": [
+        4251,
+        2433
+      ],
+      "physical_print_test": false
+    }
+  ],
+  "independent_recalculation": {
+    "script": "recompute.py",
+    "python": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "raw_archive_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+    "mirror_bytes_identical": true,
+    "proxy_not_equivalent": true,
+    "row_count": 43,
+    "unique_events": 41,
+    "independent_units": 8,
+    "units_per_stratum": [
+      4,
+      4
+    ],
+    "technical_repeat_handling": "Convert then equal-precision mean within unit and method; pair by unit; no repeat-count weighting",
+    "metadata_join": "unit_id and inclusive observed_at validity bounds; exactly one match for every event",
+    "arithmetic": "Fractions for scores and bootstrap counts; scipy.stats.t for separately checked S1 alternative interval",
+    "target_estimate": -0.2,
+    "target_interval": [
+      -0.65,
+      0.25
+    ],
+    "sample_mix_estimate": 1.0,
+    "sample_mix_interval": [
+      0.1875,
+      2.0
+    ],
+    "loo_estimate_range": [
+      -0.4,
+      -0.06666666666666667
+    ],
+    "loo_intervals_include_zero_count": 7,
+    "u08_omission_interval": [
+      -0.7333333333333333,
+      -0.06666666666666667
+    ],
+    "quantile_conventions": "linear and inverse empirical CDF independently checked; endpoints identical here",
+    "weight_sensitivity_formula": "3 - 4*w_g1",
+    "zero_crossing_weight_g1": 0.75,
+    "welch_satterthwaite": {
+      "standard_error": 0.27080128015453203,
+      "degrees_freedom": 5.584615384615384,
+      "ci95": [
+        -0.8747593751351954,
+        0.47475937513519534
+      ]
+    },
+    "anonymous_artifact_checks": [
+      {
+        "artifact": "S1",
+        "point_estimates": "match",
+        "main_intervals_both_quantile_conventions": "match",
+        "support_table": "match",
+        "LOO_points": "match",
+        "LOO_intervals": "not supplied",
+        "weight_sensitivity": "match",
+        "alternative_interval": "match"
+      },
+      {
+        "artifact": "S2",
+        "point_estimates": "match",
+        "main_intervals_both_quantile_conventions": "match",
+        "support_table": "match",
+        "LOO_points": "match",
+        "LOO_intervals": "match",
+        "weight_sensitivity": "match",
+        "alternative_interval": "not supplied"
+      },
+      {
+        "artifact": "S3",
+        "point_estimates": "match",
+        "main_intervals_both_quantile_conventions": "match",
+        "support_table": "match",
+        "LOO_points": "match",
+        "LOO_intervals": "not supplied",
+        "weight_sensitivity": "match",
+        "alternative_interval": "not supplied"
+      }
+    ],
+    "detailed_result": "recomputation.json"
+  },
+  "judgment_convention": "X_vs_Y rates X relative to Y within that dimension only. No sum, score, vote or overall winner.",
+  "dimensions": [
+    {
+      "id": "source_numerical_fidelity",
+      "dimension": "原对象及数值与原档相符",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "三份主结果符合 paired 字典并与从原始 ZIP 的独立复算匹配。",
+      "evidence_anchors": [
+        "raw/candidates.json",
+        "paired-measurements-v1.zip!dictionary.md:2-12",
+        "S1/manuscript.md:45-48",
+        "S2/manuscript.md:45-48",
+        "S3/manuscript.md:43",
+        "recomputation.json:anonymous_artifact_checks"
+      ]
+    },
+    {
+      "id": "source_choice_explanation",
+      "dimension": "来源选择解释",
+      "judgments": {
+        "S2_vs_S1": "better",
+        "S3_vs_S1": "better",
+        "S3_vs_S2": "better"
+      },
+      "reason": "S2 比 S1 更明确说明摘要核验；S3 进一步明确镜像同源且 proxy 测量对象不等价。这是解释维度，并未核实原作者的获取执行过程。",
+      "evidence_anchors": [
+        "S1/manuscript.md:20",
+        "S2/manuscript.md:19",
+        "S3/manuscript.md:19",
+        "raw/candidates.json",
+        "proxy.zip!dictionary.md:1"
+      ]
+    },
+    {
+      "id": "preparation_units",
+      "dimension": "去重换算有效连接技术重复独立单位",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "43 行去除 e004/e041 两个精确副本，41 技术事件，16 元数据历史行，每事件恰一有效匹配；8 配对单位各层4个。独立单位与等精度为夹具规定，全部成果遵循。",
+      "evidence_anchors": [
+        "paired-measurements-v1.zip!dictionary.md:2-12",
+        "paired-measurements-v1.zip!measurements.csv:43-44",
+        "S1/manuscript.md:20,40",
+        "S2/manuscript.md:19-21",
+        "S3/manuscript.md:21,37",
+        "independent-pairs.csv:2-9"
+      ]
+    },
+    {
+      "id": "estimand_pairing",
+      "dimension": "目标估计量配对与组成反向解释",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "各稿均固定80/20目标，保留50/50为比较诊断，保留两层相反方向。均没有按技术行数加权或把样本组成冒充目标。",
+      "evidence_anchors": [
+        "S1/manuscript.md:25,51,64",
+        "S2/manuscript.md:25-33,50,56",
+        "S3/manuscript.md:25,43,53"
+      ]
+    },
+    {
+      "id": "primary_interval",
+      "dimension": "主要区间定义范围数值",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "枚举paired单位的层内重采样。线性与逆经验CDF本次主要及删一单位端点相同；三稿均区分枚举精确性与总体覆盖率。",
+      "evidence_anchors": [
+        "S1/manuscript.md:28",
+        "S2/manuscript.md:31-33",
+        "S3/manuscript.md:27",
+        "recomputation.json:aggregates",
+        "recomputation.json:leave_one_unit_out"
+      ]
+    },
+    {
+      "id": "loo_point",
+      "dimension": "删一单位点估计稳健性",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "八次点估计逐项符合独立复算，固定目标范围为[-0.4,-0.06666666666666667]，均负；没有声明由此获总体确定优势。",
+      "evidence_anchors": [
+        "S1/leave-one-unit-out.csv:2-9",
+        "S2/leave-one-unit-out.csv:2-9",
+        "S3/leave-one-unit-out.csv:2-9",
+        "S1/manuscript.md:56,64",
+        "S2/manuscript.md:52,58",
+        "S3/manuscript.md:47,55"
+      ]
+    },
+    {
+      "id": "loo_interval_influence",
+      "dimension": "单位影响改变区间解释",
+      "judgments": {
+        "S2_vs_S1": "better",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "worse"
+      },
+      "reason": "S2准确揭示删u08后区间[-0.7333333333,-0.0666666667]不再跨零，并解释保留完整结果避免选择性删除。S1/S3只报告点符号稳定但没有作错误外推。",
+      "evidence_anchors": [
+        "S2/manuscript.md:52,58",
+        "S2/leave-one-unit-out.csv:9",
+        "S1/manuscript.md:56,64",
+        "S3/manuscript.md:47,55",
+        "recomputation.json:leave_one_unit_out[7]"
+      ]
+    },
+    {
+      "id": "interval_model_sensitivity",
+      "dimension": "区间模型敏感性解释",
+      "judgments": {
+        "S2_vs_S1": "worse",
+        "S3_vs_S1": "worse",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "S1正确复算的替代Welch–Satterthwaite区间展示宽度的模型依赖，并明确其未验证正态假设及同样跨零。优势来自回答区间模型问题，不依据方法数量。",
+      "evidence_anchors": [
+        "S1/manuscript.md:33,59,67",
+        "S1/results.json:robustness.alternative_welch_satterthwaite_approximation",
+        "recomputation.json:welch_satterthwaite"
+      ]
+    },
+    {
+      "id": "inference_boundaries",
+      "dimension": "合成因果真实总体未知输入边界",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "均充分限制为合成条件描述，承认真实采样、代表性、测量有效性/独立性等未知；没有人类科学或投稿审批断言。",
+      "evidence_anchors": [
+        "S1/manuscript.md:64,67,77",
+        "S2/manuscript.md:33,58,60,68",
+        "S3/manuscript.md:27,55,57,65-67"
+      ]
+    },
+    {
+      "id": "manuscript_coherence",
+      "dimension": "完整稿科学连贯性",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "三稿主问题、方法、结果、讨论、结论相连；层向相反与跨零目标区间限制各自结论。敏感性分项优势不同，不能据此强迫整体冠军。",
+      "evidence_anchors": [
+        "S1/manuscript.md:13,25,45-48,64,72",
+        "S2/manuscript.md:11-13,27,45-48,56-60,64",
+        "S3/manuscript.md:11-13,25,43,53-57,61"
+      ]
+    },
+    {
+      "id": "figure_composition_reading",
+      "dimension": "图比较目标与样本组成",
+      "judgments": {
+        "S2_vs_S1": "better",
+        "S3_vs_S1": "better",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "实际180mm预览中三者答对80/20对50/50；S1斜线穿过白色百分比且20%处点纹密集，S2/S3蓝底百分比更易读。该局部视觉问题不造成组成错误。",
+      "evidence_anchors": [
+        "S1/main_figure.png:panel a",
+        "S2/main_figure.png:panel a",
+        "S3/main_figure.png:panel a",
+        "S1-180mm-at-96dpi.png",
+        "S2-180mm-at-96dpi.png",
+        "S3-180mm-at-96dpi.png"
+      ]
+    },
+    {
+      "id": "figure_stratum_units",
+      "dimension": "图展示相反层向及全部单位",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "三者均实际显示四个负差和四个正差，重复-1点通过垂直偏移可辨；均值和区间位置正确。",
+      "evidence_anchors": [
+        "S1/main_figure.png:panel b",
+        "S2/main_figure.png:panel b",
+        "S3/main_figure.png:panel b",
+        "independent-pairs.csv:2-9"
+      ]
+    },
+    {
+      "id": "figure_numeric_readout",
+      "dimension": "图直接读取均值和区间端点",
+      "judgments": {
+        "S2_vs_S1": "better",
+        "S3_vs_S1": "worse",
+        "S3_vs_S2": "worse"
+      },
+      "reason": "S2右列直接标均值/区间；S1行标直接给均值、端点查图注；S3仅通过轴位置读值。判断依据读者提取数字的任务。",
+      "evidence_anchors": [
+        "S2/main_figure.png:panel b right column",
+        "S2/caption.md:3",
+        "S1/main_figure.png:panel b row labels",
+        "S3/main_figure.png:panel b"
+      ]
+    },
+    {
+      "id": "figure_interval_model",
+      "dimension": "图独立理解区间单位条件范围",
+      "judgments": {
+        "S2_vs_S1": "better",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "worse"
+      },
+      "reason": "S2图内说明配对层内重采样、固定权重、经验层和夹具规定的独立性；S1/S3需借助图注补齐条件范围。三份完整图注都科学正确。",
+      "evidence_anchors": [
+        "S2/main_figure.svg:439,442",
+        "S1/main_figure.svg:482",
+        "S3/main_figure.svg:771,774",
+        "S1/caption.md:3",
+        "S2/caption.md:3",
+        "S3/caption.md:3"
+      ]
+    },
+    {
+      "id": "figure_weight_threshold",
+      "dimension": "图解释权重反向阈值",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "better",
+        "S3_vs_S2": "better"
+      },
+      "reason": "S3直接显示Δ(w)=3-4w的75%零点并标出目标/样本位置；S1/S2图仅显示两种组成、函数在稿中。这是阈值解释优势，非面板数排名。",
+      "evidence_anchors": [
+        "S3/main_figure.png:panel c",
+        "S3/manuscript.md:49",
+        "S1/main_figure.png",
+        "S2/main_figure.png",
+        "S1/manuscript.md:56",
+        "S2/manuscript.md:52"
+      ]
+    },
+    {
+      "id": "figure_size_editability",
+      "dimension": "图尺寸可编辑文字渲染完整性",
+      "judgments": {
+        "S2_vs_S1": "comparable",
+        "S3_vs_S1": "comparable",
+        "S3_vs_S2": "comparable"
+      },
+      "reason": "SVG依次180x100、180x100、180x103mm，均符合高度限制且保留可编辑text元素；原PNG及目标尺度预览未见裁切或错误数值。未作实体印刷试验。",
+      "evidence_anchors": [
+        "S1/main_figure.svg:root and text elements",
+        "S2/main_figure.svg:root and text elements",
+        "S3/main_figure.svg:root and text elements",
+        "figure-inspection.json"
+      ]
+    },
+    {
+      "id": "execution_provenance",
+      "dimension": "原作者代码获取和专业流程执行",
+      "judgments": {
+        "S2_vs_S1": "unknown",
+        "S3_vs_S1": "unknown",
+        "S3_vs_S2": "unknown"
+      },
+      "reason": "匿名包未提供准备分析代码、获取日志、证据账本及资源适配过程。正确结果和资源署名不足以验证执行事实；不能越界读取原runs补证。",
+      "evidence_anchors": [
+        "S1/manuscript.md:77",
+        "S2/manuscript.md:68,72",
+        "S3/manuscript.md:65-71"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "none",
+      "kind": "validated_result",
+      "artifacts": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "summary": "主要科学计算和已给稳健性结果都与原档复算一致",
+      "dimensions": [
+        "source_numerical_fidelity",
+        "preparation_units",
+        "estimand_pairing",
+        "primary_interval",
+        "loo_point"
+      ],
+      "anchors": [
+        "paired-measurements-v1.zip!dictionary.md:2-12",
+        "S1/manuscript.md:45-48",
+        "S2/manuscript.md:45-48",
+        "S3/manuscript.md:43",
+        "recomputation.json"
+      ],
+      "action_required": false
+    },
+    {
+      "id": "F02",
+      "severity": "informational",
+      "kind": "substantive_reporting_advantage",
+      "artifacts": [
+        "S2"
+      ],
+      "summary": "S2揭示u08删除后的区间不跨零，而点符号稳定并不表示区间稳健",
+      "dimensions": [
+        "loo_interval_influence"
+      ],
+      "anchors": [
+        "S2/manuscript.md:52,58",
+        "S2/leave-one-unit-out.csv:9"
+      ],
+      "independent_value": {
+        "point": -0.4,
+        "interval": [
+          -0.7333333333333333,
+          -0.06666666666666667
+        ]
+      },
+      "action_required": false
+    },
+    {
+      "id": "F03",
+      "severity": "informational",
+      "kind": "substantive_reporting_advantage",
+      "artifacts": [
+        "S1"
+      ],
+      "summary": "替代区间正确且明确额外正态假设，揭示区间模型依赖；优势不依赖方法数量",
+      "dimensions": [
+        "interval_model_sensitivity"
+      ],
+      "anchors": [
+        "S1/manuscript.md:33,59,67"
+      ],
+      "independent_value": {
+        "standard_error": 0.27080128015453203,
+        "degrees_freedom": 5.584615384615384,
+        "ci95": [
+          -0.8747593751351954,
+          0.47475937513519534
+        ]
+      },
+      "action_required": false
+    },
+    {
+      "id": "F04",
+      "severity": "informational",
+      "kind": "source_explanation_advantage",
+      "artifacts": [
+        "S3"
+      ],
+      "summary": "明确镜像同源与proxy不等价，来源选择说明最具体；获取执行仍未知",
+      "dimensions": [
+        "source_choice_explanation"
+      ],
+      "anchors": [
+        "S3/manuscript.md:19",
+        "raw/candidates.json",
+        "proxy.zip!dictionary.md:1"
+      ],
+      "action_required": false
+    },
+    {
+      "id": "F05",
+      "severity": "informational",
+      "kind": "figure_reader_task_advantage",
+      "artifacts": [
+        "S2"
+      ],
+      "summary": "图内均值与区间数字及条件重采样说明，使单图阅读更直接",
+      "dimensions": [
+        "figure_numeric_readout",
+        "figure_interval_model"
+      ],
+      "anchors": [
+        "S2/main_figure.png:panel b right column",
+        "S2/main_figure.svg:439,442"
+      ],
+      "action_required": false
+    },
+    {
+      "id": "F06",
+      "severity": "informational",
+      "kind": "figure_reader_task_advantage",
+      "artifacts": [
+        "S3"
+      ],
+      "summary": "组成曲线直接解释75%阈值与80/20、50/50的相反点方向",
+      "dimensions": [
+        "figure_weight_threshold"
+      ],
+      "anchors": [
+        "S3/main_figure.png:panel c",
+        "S3/manuscript.md:49"
+      ],
+      "action_required": false
+    },
+    {
+      "id": "F07",
+      "severity": "minor",
+      "kind": "figure_wording_risk",
+      "artifacts": [
+        "S3"
+      ],
+      "summary": "孤立图中75%: tie容易被理解成证明等效，稿与图注已正确限制为点函数为零",
+      "dimensions": [
+        "figure_weight_threshold",
+        "inference_boundaries"
+      ],
+      "anchors": [
+        "S3/main_figure.svg:727",
+        "S3/manuscript.md:27,49",
+        "S3/caption.md:3"
+      ],
+      "suggestion": "将图内标签改为75%: point Δ=0；无需新增检验",
+      "action_required": false
+    },
+    {
+      "id": "F08",
+      "severity": "minor",
+      "kind": "figure_legibility",
+      "artifacts": [
+        "S1"
+      ],
+      "summary": "180mm预览中白色斜线穿过白色百分比、20%处点纹密集，百分比读取稍受干扰",
+      "dimensions": [
+        "figure_composition_reading"
+      ],
+      "anchors": [
+        "S1/main_figure.png:panel a",
+        "S1-180mm-at-96dpi.png"
+      ],
+      "suggestion": "减弱百分比附近的纹理或为数字留净底，保留灰度可辨的类别编码",
+      "action_required": false
+    },
+    {
+      "id": "F09",
+      "severity": "unknown",
+      "kind": "scope_limited_execution_evidence",
+      "artifacts": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "summary": "完整再现包、原作者获取/代码运行、专业资源适配与软件书目核验未在匿名包提供可复核证据",
+      "dimensions": [
+        "execution_provenance"
+      ],
+      "anchors": [
+        "S1/manuscript.md:77",
+        "S2/manuscript.md:68,72",
+        "S3/manuscript.md:65-71"
+      ],
+      "meaning": "unknown不是失败或伪造判断；独立复算确认的内容结果仍有效",
+      "action_required": false
+    }
+  ],
+  "overall": {
+    "forced_winner": null,
+    "scientific_numeric_correctness": "comparable",
+    "manuscript_core_argument": "comparable with distinct reporting advantages",
+    "figure": "S2 stronger numeric/interval readout; S3 stronger composition-threshold explanation; no overall ranking",
+    "ranking_by_check_panel_method_word_counts": false
+  },
+  "artifacts_written": [
+    "review.md",
+    "findings.json",
+    "recompute.py",
+    "recomputation.json",
+    "independent-pairs.csv",
+    "figure-inspection.json",
+    "S1-180mm-at-96dpi.png",
+    "S2-180mm-at-96dpi.png",
+    "S3-180mm-at-96dpi.png"
+  ],
+  "validation": {
+    "output_json_valid": true,
+    "required_files_exist": true,
+    "judgments_valid": true,
+    "anonymous_input_hashes_unchanged": true,
+    "independent_recompute_exit_code": 0
+  }
+}

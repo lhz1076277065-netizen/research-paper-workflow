@@ -1,0 +1,196 @@
+{
+  "source": "<DataFrame>",
+  "n_rows": 8,
+  "n_cols": 7,
+  "columns": {
+    "unit_id": {
+      "type": "unknown",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "stratum": {
+      "type": "unknown",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "A_score": {
+      "type": "continuous",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 8,
+      "mean": 7.5,
+      "median": 7.5,
+      "sd": 2.449489742783178,
+      "min": 4.0,
+      "max": 11.0,
+      "skewness": 0.0,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": 0.5,
+      "outlier_hi": 14.5,
+      "needs_log_axis": false
+    },
+    "B_score": {
+      "type": "continuous",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 8,
+      "mean": 6.625,
+      "median": 6.75,
+      "sd": 0.7905694150420949,
+      "min": 5.5,
+      "max": 8.0,
+      "skewness": 0.21345374206136555,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": 4.5,
+      "outlier_hi": 8.5,
+      "needs_log_axis": false
+    },
+    "n_A_technical": {
+      "type": "ordinal",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 8,
+      "n_unique": 3,
+      "categories": [
+        [
+          "2",
+          3
+        ],
+        [
+          "3",
+          3
+        ],
+        [
+          "1",
+          2
+        ]
+      ],
+      "min_group_n": 2,
+      "max_group_n": 3,
+      "small_groups_flag": true
+    },
+    "n_B_technical": {
+      "type": "ordinal",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 8,
+      "n_unique": 3,
+      "categories": [
+        [
+          "4",
+          3
+        ],
+        [
+          "2",
+          3
+        ],
+        [
+          "3",
+          2
+        ]
+      ],
+      "min_group_n": 2,
+      "max_group_n": 3,
+      "small_groups_flag": true
+    },
+    "difference_A_minus_B": {
+      "type": "continuous",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 8,
+      "mean": 0.875,
+      "median": 0.25,
+      "sd": 2.310689445660259,
+      "min": -1.5,
+      "max": 5.0,
+      "skewness": 0.527168595497232,
+      "skew_label": "moderately skewed",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -5.875,
+      "outlier_hi": 7.125,
+      "needs_log_axis": false
+    }
+  },
+  "correlation": {
+    "columns": [
+      "A_score",
+      "B_score",
+      "difference_A_minus_B"
+    ],
+    "matrix": {
+      "A_score": {
+        "A_score": 1.0,
+        "B_score": 0.332,
+        "difference_A_minus_B": 0.946
+      },
+      "B_score": {
+        "A_score": 0.332,
+        "B_score": 1.0,
+        "difference_A_minus_B": 0.01
+      },
+      "difference_A_minus_B": {
+        "A_score": 0.946,
+        "B_score": 0.01,
+        "difference_A_minus_B": 1.0
+      }
+    },
+    "pairs_sorted": [
+      {
+        "a": "A_score",
+        "b": "difference_A_minus_B",
+        "r": 0.9464899825923331,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "A_score",
+        "b": "B_score",
+        "r": 0.33197000110349356,
+        "magnitude": "moderate"
+      },
+      {
+        "a": "B_score",
+        "b": "difference_A_minus_B",
+        "r": 0.009775306506486444,
+        "magnitude": "negligible"
+      }
+    ]
+  },
+  "group_summary": {
+    "by": [
+      "stratum"
+    ],
+    "n_groups": 2,
+    "min_n_per_group": 4,
+    "max_n_per_group": 4,
+    "median_n_per_group": 4,
+    "small_groups_flag": true,
+    "tiny_groups_flag": false,
+    "per_group_counts": [
+      [
+        "g1",
+        4
+      ],
+      [
+        "g2",
+        4
+      ]
+    ]
+  },
+  "warnings": [
+    "\u5217 'n_A_technical' \u81f3\u5c11\u6709\u4e00\u4e2a\u7c7b\u522b n<10 \u2014 \u5c0f\u6837\u672c\u5fc5\u987b\u5c55\u793a\u539f\u59cb\u6570\u636e\u70b9\uff0c\u4e0d\u8981\u53ea\u753b\u5747\u503c\u67f1\u72b6\u56fe\u3002",
+    "\u5217 'n_B_technical' \u81f3\u5c11\u6709\u4e00\u4e2a\u7c7b\u522b n<10 \u2014 \u5c0f\u6837\u672c\u5fc5\u987b\u5c55\u793a\u539f\u59cb\u6570\u636e\u70b9\uff0c\u4e0d\u8981\u53ea\u753b\u5747\u503c\u67f1\u72b6\u56fe\u3002"
+  ],
+  "suggestions": [
+    "\u5206\u7c7b vs \u8fde\u7eed\uff0c\u5c0f\u6837\u672c\uff08\u6bcf\u7ec4 n<10\uff09\u2192 **\u7bb1\u7ebf\u56fe/\u5c0f\u63d0\u7434\u56fe + stripplot \u53e0\u52a0\u539f\u59cb\u70b9**\uff1b**\u907f\u514d**\u53ea\u753b\u5747\u503c\u67f1\u72b6\u56fe\uff0c\u4f1a\u63a9\u76d6\u5206\u5e03\u3002",
+    "\u22653 \u4e2a\u8fde\u7eed\u53d8\u91cf \u2192 \u76f8\u5173\u6027\u70ed\u529b\u56fe\uff08['A_score', 'B_score', 'difference_A_minus_B']\uff09\u6216 pairplot \u6563\u70b9\u77e9\u9635"
+  ]
+}

@@ -1,0 +1,1 @@
+SYNTHETIC Figure 1. A−B in score (lower score is better). g1: −1.00; g2: +3.00. Target mix 0.8/0.2: −0.20. Equal sampled mix: +1.00. Target interval [−0.60,0.20] is a 95% within-stratum paired-unit bootstrap percentile interval; it is not a causal or equivalence interval.

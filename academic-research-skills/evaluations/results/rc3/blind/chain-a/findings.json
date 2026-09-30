@@ -1,0 +1,662 @@
+{
+  "evaluation": "independent anonymous content review of synthetic Chain A; not real research or journal peer review",
+  "packet_root": "LOCAL_EVIDENCE_ROOT/blind-packets/chain-a",
+  "output_root": "LOCAL_EVIDENCE_ROOT/blind-reviews/chain-a",
+  "clock": {
+    "first_observed_utc": "2026-09-30T16:33:41Z",
+    "content_review_finished_observed_utc": "2026-09-30T16:47:27.648801+00:00",
+    "clock_scope": "First available tool UTC observation to final output-check UTC observation; no active-work-time, billing or token estimate."
+  },
+  "read_scope": {
+    "request": "LOCAL_EVIDENCE_ROOT/review-requests/chain-a.json",
+    "raw": "README, index and all supplied R01-R10 passages",
+    "anonymous_artifacts": "S1/S2/S3 answer, Python checker and saved JSON result; all inspected",
+    "prohibited_materials_read": false,
+    "original_artifacts_edited": false,
+    "input_manifest": [
+      {
+        "path": "review-requests/chain-a.json",
+        "sha256": "01478e98c4d7c8f62daa22e0280371f898eae666db4c635fa039db5c0372f111"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/README.md",
+        "sha256": "946e8bb07508be64bdac20ccdf66211ad0fafcecb3e7eaffa72d78368c43aa63"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/index.csv",
+        "sha256": "aee8abc0aac564a3f3bc13b781fbacd04cfaba3b24192199a4882276b32a14e1"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R01.md",
+        "sha256": "f9e02214efd5dda1dc4231f9e72f4ad854b9a118ebab87c249ceba72d151624a"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R02.md",
+        "sha256": "d235366c06be97e2f3ed0b9b795da7270e8568472721e7b906581b61af0cd9d0"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R03.md",
+        "sha256": "80ab03a9de3d062a04c6ff7cf6f82b0730ce3b2e8778a7a72072b9520a0026c5"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R04.md",
+        "sha256": "266f43894c97bef8889197aa0b55645b88cdb2ed85bec14d66d4fa67371c0481"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R05.md",
+        "sha256": "f6191212221a84bab334a29d5ac8008967ec94997df566f101c104fb91282cdc"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R06.md",
+        "sha256": "d5b35295d9297a5337256bd04bb222b84d31a73661df97a52703774c12bbf60a"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R07.md",
+        "sha256": "45ba91c51f18953d244b4e26e389c46e5e776a5082736c8958d108b75e919e80"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R08.md",
+        "sha256": "7764ff937efbe82668c42095809e1bb5304827a3389cc0ea27b269c48320f5ba"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R09.md",
+        "sha256": "5a8acd74d719d15c1b5ad54bc7d15dc08194fc7d56b10973f3f1d3e3bb3a515b"
+      },
+      {
+        "path": "blind-packets/chain-a/raw/corpus/R10.md",
+        "sha256": "b349e598521380b3fb4a41ca0557c2bc257b06e60b972871f3018d08a6ce745c"
+      },
+      {
+        "path": "blind-packets/chain-a/S1/answer.md",
+        "sha256": "0046b81dd12c768e60489542276e280a0e389039d488fe615dbde4f9a337d49c"
+      },
+      {
+        "path": "blind-packets/chain-a/S1/verify.py",
+        "sha256": "f3f54d081605ddbe648f955b20031b1e5fe4a28ea636b41a23980ac0a748007f"
+      },
+      {
+        "path": "blind-packets/chain-a/S1/verification.json",
+        "sha256": "50fa9bd4cd3bd6d95a26592b5158d92e491d6101e3c74433ffedc3c09925fa50"
+      },
+      {
+        "path": "blind-packets/chain-a/S2/answer.md",
+        "sha256": "bda8e3e799c1b619bfcad2f005a5704d0128a514481630380de14d6f6e870f26"
+      },
+      {
+        "path": "blind-packets/chain-a/S2/reachability_check.py",
+        "sha256": "287b9aaeae94afe77df4b4642b498fee61ecca6a672f231abe75cd0243bd7e4a"
+      },
+      {
+        "path": "blind-packets/chain-a/S2/results.json",
+        "sha256": "8fe2c31f0c5ea78feff773166085f9caaf70ae9182f6eb266b0052f9ba78e848"
+      },
+      {
+        "path": "blind-packets/chain-a/S3/answer.md",
+        "sha256": "7058438b0862809841b5c069e78e58f25f1d8415ee77a71b3e9b2559ae7581a5"
+      },
+      {
+        "path": "blind-packets/chain-a/S3/certificate_check.py",
+        "sha256": "c64c2109123d46f6e8f61bae5dbaa4ec4c740d807f3e380997125f74245b3aff"
+      },
+      {
+        "path": "blind-packets/chain-a/S3/checks.json",
+        "sha256": "8e3678b1cc8b5578badb9f8d4472eb3ec2870768e39ab786c1fb81014e6ce049"
+      }
+    ]
+  },
+  "overall": {
+    "judgment": "no_forced_winner",
+    "core_scientific_correctness": "comparable",
+    "statement": "Core mathematics, completed discrimination and causal-history conclusion are comparable. S3 has a correct limited generator-minimality result; S2/S3 specify the next cost investigation more concretely. S2 has a local historical circulation wording issue. Real efficiency and global certificate optimality remain unknown."
+  },
+  "dimensions": [
+    {
+      "id": "source_selection",
+      "dimension": "来源选择与访问边界",
+      "pairwise": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "reason": "均正确合并 R01/R02，使用 R03 与 R10 作为同模型最近邻，拒绝把 R04/R06/R09 的表面相似当作直接证据；没有虚构全文或外部搜索。",
+      "anchors": [
+        {
+          "path": "S1/answer.md",
+          "line_start": 3,
+          "line_end": 5
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 9,
+          "line_end": 21
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 7,
+          "line_end": 17
+        }
+      ]
+    },
+    {
+      "id": "model_and_goal",
+      "dimension": "定义、模型约束与双向目标",
+      "pairwise": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "reason": "均保留诱导单射、标签/时间保持、有限简单 DAG 与不同顶点的正长度路径；重复标签不合并身份，任意标签和允许时间相同情形由一般证明处理。",
+      "anchors": [
+        {
+          "path": "S1/answer.md",
+          "line_start": 7,
+          "line_end": 17
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 61,
+          "line_end": 61
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 35,
+          "line_end": 57
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 5,
+          "line_end": 5
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 27,
+          "line_end": 55
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 66,
+          "line_end": 66
+        }
+      ]
+    },
+    {
+      "id": "exact_mathematical_boundary",
+      "dimension": "反例、严格较弱条件与一般正确性",
+      "pairwise": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "reason": "三顶点反例与其最小性正确；区间闭包充分但非必要。覆盖条件与外部游程条件都是精确必要充分条件，二者不矛盾。一般证明独立于有限枚举。",
+      "anchors": [
+        {
+          "path": "S1/answer.md",
+          "line_start": 21,
+          "line_end": 49
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 39,
+          "line_end": 67
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 29,
+          "line_end": 55
+        }
+      ]
+    },
+    {
+      "id": "fixed_vertex_generator_minimality",
+      "dimension": "固定 S 的关系生成最小性",
+      "pairwise": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "worse",
+        "S2_vs_S3": "worse"
+      },
+      "reason": "S3 明确并证明 C(P) 是已知严格可达关系 P 在固定 S 上唯一最小生成关系；这是真实且有边界的形式进展。S1 提供同一覆盖判据但没有提出该生成关系最小性结论，S2 没有该结论；二者的克制不构成科学错误。这里的 better 仅比较这一具体问题的完成程度。",
+      "anchors": [
+        {
+          "path": "S1/answer.md",
+          "line_start": 25,
+          "line_end": 39
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 87,
+          "line_end": 89
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 55,
+          "line_end": 57
+        }
+      ]
+    },
+    {
+      "id": "completed_discrimination",
+      "dimension": "已实际完成的判别工作与可复算性",
+      "pairwise": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "reason": "三份脚本均在内存截获写入后重运行，通过且与保存结果一致（忽略本次重运行变化的时间字段）。独立逐路径核查亦一致。检查数量差异只来自真空边界，不能成为质量优势。",
+      "anchors": [
+        {
+          "path": "S1/answer.md",
+          "line_start": 51,
+          "line_end": 61
+        },
+        {
+          "path": "S1/verify.py",
+          "line_start": 66,
+          "line_end": 118
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 71,
+          "line_end": 89
+        },
+        {
+          "path": "S2/reachability_check.py",
+          "line_start": 85,
+          "line_end": 148
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 59,
+          "line_end": 66
+        },
+        {
+          "path": "S3/certificate_check.py",
+          "line_start": 63,
+          "line_end": 119
+        }
+      ]
+    },
+    {
+      "id": "historical_inference",
+      "dimension": "历史来源依赖与因果判断",
+      "pairwise": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "reason": "均正确区分会议、文字形成和接触时间；R08 不是独立同期佐证；批准试行不等于全面采用；未知会前稿本不能视为不存在。均只得出因果证据不足而没有断言绝无影响。",
+      "anchors": [
+        {
+          "path": "S1/answer.md",
+          "line_start": 63,
+          "line_end": 67
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 93,
+          "line_end": 104
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 68,
+          "line_end": 81
+        }
+      ]
+    },
+    {
+      "id": "historical_wording_fidelity",
+      "dimension": "历史时间措辞对原始证据的精确性",
+      "pairwise": {
+        "S1_vs_S2": "better",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "worse"
+      },
+      "reason": "S2 第97行把晚于会议的圆函发行表头写成“结果公开流通晚于会议”。原料缺流转记录，且 R05 所指结果身份未知；只能确认表头顺序和纪要中的归因。S1/S3 的措辞更忠实。此局部问题不推翻 S2 的最终因果结论。",
+      "anchors": [
+        {
+          "path": "raw/corpus/R05.md",
+          "line_start": 2,
+          "line_end": 5
+        },
+        {
+          "path": "raw/corpus/R07.md",
+          "line_start": 2,
+          "line_end": 5
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 63,
+          "line_end": 63
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 97,
+          "line_end": 102
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 68,
+          "line_end": 68
+        }
+      ]
+    },
+    {
+      "id": "next_mathematical_investigation",
+      "dimension": "下一步数学调查的可判别价值",
+      "pairwise": {
+        "S1_vs_S2": "worse",
+        "S1_vs_S3": "worse",
+        "S2_vs_S3": "comparable"
+      },
+      "reason": "S2/S3 都把尚未完成的经济性问题变成与 R10 同输入、同预处理口径比较的调查，并给出二次膨胀边界与成功/失败判据。S3 明确列出输入索引、固定 S、复用/更新及预处理成本；S2 强调稀疏出入界结构及失败端点。S1 证明现阶段条件正确并承认无成本优势，但没有同样具体的下一项数学操作。此比较依据可改变认识的动作，不依据篇幅。",
+      "anchors": [
+        {
+          "path": "raw/corpus/R10.md",
+          "line_start": 2,
+          "line_end": 7
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 39,
+          "line_end": 39
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 49,
+          "line_end": 49
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 67,
+          "line_end": 69
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 87,
+          "line_end": 89
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 79,
+          "line_end": 79
+        }
+      ]
+    },
+    {
+      "id": "empirical_economy_and_external_claims",
+      "dimension": "实际经济性、通用证书最优性与外部新颖性",
+      "pairwise": {
+        "S1_vs_S2": "unknown",
+        "S1_vs_S3": "unknown",
+        "S2_vs_S3": "unknown"
+      },
+      "reason": "材料不足以比较真实运行收益、所有编码下的最小证书或全球新颖性；三份都恰当地限制此类主张。方法/Skill 名称自述的实际调用历史也未核验，不能代替科学内容证据。",
+      "anchors": [
+        {
+          "path": "S1/answer.md",
+          "line_start": 39,
+          "line_end": 39
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 49,
+          "line_end": 49
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 69,
+          "line_end": 69
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 87,
+          "line_end": 89
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 108,
+          "line_end": 108
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 57,
+          "line_end": 57
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 79,
+          "line_end": 79
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 83,
+          "line_end": 83
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "A01",
+      "type": "confirmed_science",
+      "status": "confirmed",
+      "claim": "双向可达性目标等价于覆盖关系包含于保留边，亦等价于外部游程可在保留图替代。区间闭包严格过强。",
+      "comparison": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "comparable",
+        "S2_vs_S3": "comparable"
+      },
+      "anchors": [
+        {
+          "path": "raw/corpus/R01.md",
+          "line_start": 2,
+          "line_end": 9
+        },
+        {
+          "path": "raw/corpus/R03.md",
+          "line_start": 3,
+          "line_end": 9
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 21,
+          "line_end": 49
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 39,
+          "line_end": 67
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 29,
+          "line_end": 55
+        }
+      ],
+      "independent_basis": "由 H 与 G[S] 同构、有限严格偏序的覆盖链分解及保留点路径切分直接推导；一般证明不是枚举结论。"
+    },
+    {
+      "id": "A02",
+      "type": "confirmed_science",
+      "status": "confirmed",
+      "claim": "S3 对固定 S 的已知可达关系之唯一最小生成关系的结论成立，但没有解决通用证书/编码/运行时间最优性。",
+      "comparison": {
+        "S1_vs_S2": "comparable",
+        "S1_vs_S3": "worse",
+        "S2_vs_S3": "worse"
+      },
+      "anchors": [
+        {
+          "path": "S3/answer.md",
+          "line_start": 55,
+          "line_end": 57
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 79,
+          "line_end": 79
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 39,
+          "line_end": 39
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 89,
+          "line_end": 89
+        }
+      ],
+      "independent_basis": "若 Q 的正传递闭包恰为 P，则 Q⊆P，且每个覆盖对必须直接在 Q；否则其 Q 路径产生 P 的内部中间点。C(P) 的闭包为 P，故 C(P) 是所有此类 Q 的子集。"
+    },
+    {
+      "id": "A03",
+      "type": "source_precision_issue",
+      "status": "confirmed_local_issue",
+      "severity": "low",
+      "claim": "S2/answer.md:97 的“结果公开流通晚于会议”超过可确认的发行表头顺序。",
+      "anchors": [
+        {
+          "path": "S2/answer.md",
+          "line_start": 97,
+          "line_end": 102
+        },
+        {
+          "path": "raw/corpus/R05.md",
+          "line_start": 2,
+          "line_end": 5
+        },
+        {
+          "path": "raw/corpus/R07.md",
+          "line_start": 2,
+          "line_end": 5
+        }
+      ],
+      "impact": "没有流转记录，所指结果身份不明；此措辞应收窄，但最终因果证据不足判断仍正确。",
+      "recommended_revision": "圆函表头的发行日期晚于会议表头；纪要声称所指结果下月传阅，但实际流转、会前访问和所指结果身份均未知。"
+    },
+    {
+      "id": "A04",
+      "type": "reproducibility",
+      "status": "confirmed",
+      "claim": "三份脚本重运行结果与保存结果一致；S1 与 S2/S3 的数目差异仅为6505个空集/单点真空组合。",
+      "anchors": [
+        {
+          "path": "S1/verification.json",
+          "line_start": 153,
+          "line_end": 204
+        },
+        {
+          "path": "S2/results.json",
+          "line_start": 238,
+          "line_end": 254
+        },
+        {
+          "path": "S3/checks.json",
+          "line_start": 4,
+          "line_end": 18
+        }
+      ],
+      "independent_basis": "全部路径枚举独立得到1100图、33867图/子集组合、30093保持、3774失败、26433闭包、3660保持而非闭包。S1省去6505真空组合后为27362；失败和保持非闭包数不变。",
+      "limit": "这些是有限合成结构检验，不是任意有限图的一般证明、采纳率或性能基准。"
+    },
+    {
+      "id": "A05",
+      "type": "unavailable_evidence",
+      "status": "unknown",
+      "claim": "S3 第59行引用 execution_receipt.json，但该文件未包含在允许读取的 S3 匿名产物中。",
+      "anchors": [
+        {
+          "path": "S3/answer.md",
+          "line_start": 59,
+          "line_end": 59
+        },
+        {
+          "path": "S3/checks.json",
+          "line_start": 1,
+          "line_end": 100
+        }
+      ],
+      "impact": "不能核验该既往执行收据及原始运行起止。现有代码与结果已本次复算通过；缺少收据不构成数学错误或否定实际可复算性。",
+      "requested_followup": "如需审核既往执行时间，可在匿名边界内补给收据；本轮不读取原运行目录。"
+    },
+    {
+      "id": "A06",
+      "type": "next_investigation",
+      "status": "supported_comparison",
+      "claim": "S2/S3 对下一项成本调查的输入、公平基线或成功/失败标准较 S1 更可操作。",
+      "comparison": {
+        "S1_vs_S2": "worse",
+        "S1_vs_S3": "worse",
+        "S2_vs_S3": "comparable"
+      },
+      "anchors": [
+        {
+          "path": "raw/corpus/R10.md",
+          "line_start": 2,
+          "line_end": 7
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 39,
+          "line_end": 39
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 49,
+          "line_end": 49
+        },
+        {
+          "path": "S1/answer.md",
+          "line_start": 67,
+          "line_end": 69
+        },
+        {
+          "path": "S2/answer.md",
+          "line_start": 87,
+          "line_end": 89
+        },
+        {
+          "path": "S3/answer.md",
+          "line_start": 79,
+          "line_end": 79
+        }
+      ],
+      "limit": "这比较下一步调查设计，不证明任何方案已经更快、更省存储或全球新颖。"
+    }
+  ],
+  "verification": {
+    "provided_script_reruns": {
+      "method": "exec each already inspected script with a non-main name; replace only its output Path writer with an in-memory sink; invoke main; compare emitted JSON with supplied result. Original files were read only.",
+      "S1": "passed; exact JSON comparison excluding completed_utc",
+      "S2": "passed; exact JSON comparison excluding check_elapsed_seconds",
+      "S3": "passed; exact JSON comparison"
+    },
+    "independent_path_enumeration": {
+      "method": "Enumerate every actual positive directed path, filter by endpoints and interior vertices, then compute covers and relational closure; does not import the supplied checker functions.",
+      "scope": "Every i<j edge set and retained subset, n=0..5; constant labels and canonical distinct integer times only.",
+      "counts": {
+        "graphs": 1100,
+        "graph_subset_cases": 33867,
+        "preserved": 30093,
+        "failed": 3774,
+        "interval_closed": 26433,
+        "preserved_without_interval_closure": 3660
+      },
+      "status": "passed",
+      "reproduction_python": "from itertools import combinations\n\ndef paths(n, edges):\n    adj={u:[] for u in range(n)}\n    for a,b in edges: adj[a].append(b)\n    found=[]\n    def walk(p):\n        for b in adj[p[-1]]:\n            q=p+(b,); found.append(q); walk(q)\n    for a in range(n): walk((a,))\n    return found\n\ndef closure(rel):\n    rel=set(rel)\n    while True:\n        new=rel|{(a,d) for a,b in rel for c,d in rel if b==c}\n        if new==rel: return rel\n        rel=new\n\ncounts=[0,0,0,0,0,0]\nfor n in range(6):\n    possible=list(combinations(range(n),2))\n    for mask in range(1<<len(possible)):\n        edges={e for i,e in enumerate(possible) if mask>>i&1}\n        ps=paths(n,edges); counts[0]+=1\n        for sm in range(1<<n):\n            S={i for i in range(n) if sm>>i&1}\n            selected=[p for p in ps if p[0] in S and p[-1] in S]\n            P={(p[0],p[-1]) for p in selected}\n            K={(p[0],p[-1]) for p in selected if set(p)<=S}\n            X={(p[0],p[-1]) for p in selected if len(p)>2 and not(set(p[1:-1])&S)}\n            C={(a,b) for a,b in P if not any((a,c) in P and (c,b) in P for c in S)}\n            safe=K==P; closed=all(set(p)<=S for p in selected)\n            assert safe==(X<=K)==(C<=edges)\n            assert closed==(not X) and (not closed or safe)\n            assert closure(C)==P\n            assert all(e not in closure(C-{e}) for e in C)\n            for i,value in enumerate([1,safe,not safe,closed,safe and not closed],1): counts[i]+=value\nassert counts==[1100,33867,30093,3774,26433,3660]\nprint('Independent finite check passed:',counts)\n"
+    },
+    "general_derivation": "Both exact criteria, interval_closed iff X empty, and the limited unique minimum generator statement were independently derived from raw definitions; all finite verification is supplementary.",
+    "output_integrity": "Both required outputs parsed/checked; no additional reviewer output file."
+  },
+  "unknowns": [
+    "Genuine original run times/provenance beyond supplied anonymous bytes, including unavailable S3 receipt.",
+    "Runtime savings, universal compactness and optimality over arbitrary certificate encodings.",
+    "Causal historical influence and independent predecision delivery/use evidence.",
+    "Global novelty or external literature; actual named Skill/method invocation history."
+  ]
+}

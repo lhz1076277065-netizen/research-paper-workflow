@@ -2,7 +2,7 @@
 name: manuscript-review
 description: "当需要科学内容审查、论证诊断或稿件一致性检查时使用；指出影响结论的缺口和可执行修订，不自动重建研究。"
 metadata:
-  version: "3.2.0-rc.2"
+  version: "3.2.0-rc.3"
 ---
 
 # 科学贡献、证据与表达审查

@@ -1,0 +1,187 @@
+{
+  "synthetic": true,
+  "analysis_intent": "descriptive",
+  "generated_at_utc": "2026-09-30T15:11:32.495629+00:00",
+  "analysis_code_sha256": "2cb4af1c5e2263982b2939d062d081c957408527875f380f6e96ed4c3fcd4de9",
+  "paired_data_sha256": "ed24b7c871a9a51317bfd1e3e3158d0f620f60f5459f17b7bb46a145f3dbaa6d",
+  "score_direction": "lower is better; negative A-minus-B favors A",
+  "n_independent_units": 8,
+  "strata": {
+    "g1": {
+      "n_independent_units": 4,
+      "A_mean_score": 5.5,
+      "B_mean_score": 6.5,
+      "mean_difference_A_minus_B": -1.0,
+      "sample_variance_difference": 0.16666666666666666,
+      "paired_unit_differences": [
+        -1.5,
+        -1.0,
+        -0.5,
+        -1.0
+      ],
+      "bootstrap_percentile_interval_95": [
+        -1.375,
+        -0.625
+      ]
+    },
+    "g2": {
+      "n_independent_units": 4,
+      "A_mean_score": 9.5,
+      "B_mean_score": 6.5,
+      "mean_difference_A_minus_B": 3.0,
+      "sample_variance_difference": 4.666666666666667,
+      "paired_unit_differences": [
+        1.0,
+        2.0,
+        3.0,
+        6.0
+      ],
+      "bootstrap_percentile_interval_95": [
+        1.5,
+        5.0
+      ]
+    }
+  },
+  "primary_target": {
+    "weights": {
+      "g1": 0.8,
+      "g2": 0.2
+    },
+    "A_mean_score": 6.300000000000001,
+    "B_mean_score": 6.5,
+    "difference_A_minus_B": -0.19999999999999996,
+    "bootstrap_percentile_interval_95": [
+      -0.6500000000000001,
+      0.2499999999999999
+    ]
+  },
+  "sample_composition_comparator": {
+    "weights": {
+      "g1": 0.5,
+      "g2": 0.5
+    },
+    "A_mean_score": 7.5,
+    "B_mean_score": 6.5,
+    "difference_A_minus_B": 1.0,
+    "bootstrap_percentile_interval_95": [
+      0.1875,
+      2.0
+    ],
+    "interpretation": "Comparator at sampled stratum composition, not the prespecified target estimator"
+  },
+  "bootstrap": {
+    "method": "exhaustive stratified paired-unit percentile bootstrap",
+    "draws_per_stratum": {
+      "g1": 256,
+      "g2": 256
+    },
+    "joint_configurations": 65536,
+    "sampling": "sample n_h paired units with replacement independently within each stratum; fixed stratum weights",
+    "quantile_definition": "inverse empirical CDF; sorted order statistic ceil(q*M), q=0.025 and 0.975",
+    "random_seed": null,
+    "Monte_Carlo_error": "none; exact enumeration of the empirical resampling distribution",
+    "conditional_scope": "empirical paired-unit distributions, fixed target weights, and fixture-stipulated unit independence",
+    "coverage_limit": "not a guaranteed 95% population coverage interval with n=4 per stratum; no real-world probability sampling information supplied"
+  },
+  "robustness": {
+    "intent": "exploratory; chosen after data inspection",
+    "leave_one_unit_out": [
+      {
+        "omitted_unit": "u01",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.06666666666666665,
+        "interval_lo": -0.4500000000000001,
+        "interval_hi": 0.3833333333333331,
+        "resample_configurations": 6912
+      },
+      {
+        "omitted_unit": "u02",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.19999999999999996,
+        "interval_lo": -0.7000000000000003,
+        "interval_hi": 0.33333333333333304,
+        "resample_configurations": 6912
+      },
+      {
+        "omitted_unit": "u03",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.33333333333333337,
+        "interval_lo": -0.7166666666666668,
+        "interval_hi": 0.09999999999999976,
+        "resample_configurations": 6912
+      },
+      {
+        "omitted_unit": "u04",
+        "omitted_stratum": "g1",
+        "n_g1_remaining": 3,
+        "n_g2_remaining": 4,
+        "fixed_target_difference": -0.19999999999999996,
+        "interval_lo": -0.7000000000000003,
+        "interval_hi": 0.33333333333333304,
+        "resample_configurations": 6912
+      },
+      {
+        "omitted_unit": "u05",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.06666666666666665,
+        "interval_lo": -0.5333333333333334,
+        "interval_hi": 0.3999999999999997,
+        "resample_configurations": 6912
+      },
+      {
+        "omitted_unit": "u06",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.1333333333333333,
+        "interval_lo": -0.6666666666666667,
+        "interval_hi": 0.3999999999999997,
+        "resample_configurations": 6912
+      },
+      {
+        "omitted_unit": "u07",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.19999999999999996,
+        "interval_lo": -0.7333333333333334,
+        "interval_hi": 0.3999999999999997,
+        "resample_configurations": 6912
+      },
+      {
+        "omitted_unit": "u08",
+        "omitted_stratum": "g2",
+        "n_g1_remaining": 4,
+        "n_g2_remaining": 3,
+        "fixed_target_difference": -0.4,
+        "interval_lo": -0.7333333333333334,
+        "interval_hi": -0.06666666666666687,
+        "resample_configurations": 6912
+      }
+    ],
+    "loo_target_estimate_range": [
+      -0.4,
+      -0.06666666666666665
+    ],
+    "all_loo_point_estimates_favor_A": true,
+    "all_loo_intervals_include_zero": false,
+    "weight_sensitivity_formula": "difference(w_g1) = 3 - 4*w_g1",
+    "sign_crossing_weight_g1": 0.75,
+    "scope": "composition sensitivity changes the described population; it does not revise the fixed 0.8/0.2 target or identify a causal mechanism"
+  },
+  "unknown_real_world_inputs": [
+    "sampling frame and inclusion probabilities",
+    "target transportability",
+    "measurement validity",
+    "independence outside the stipulated fixture",
+    "assignment or causal identification"
+  ]
+}

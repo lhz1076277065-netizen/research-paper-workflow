@@ -1,0 +1,110 @@
+{
+  "scope": "Root reconciliation of actual anonymous reviews against frozen definitions, bytes and independent calculations. Original answers/guides not tuned after evaluation.",
+  "mappings": {
+    "chain-a": {
+      "S1": "without-skill",
+      "S2": "comparison",
+      "S3": "release"
+    },
+    "chain-b": {
+      "S1": "without-skill",
+      "S2": "release",
+      "S3": "comparison"
+    },
+    "chain-c": {
+      "S1": "without-skill",
+      "S2": "release",
+      "S3": "comparison"
+    }
+  },
+  "critical_numeric_or_model_errors_in_reviewed_outputs": [],
+  "local_issues": [
+    {
+      "chain": "A",
+      "condition": "comparison",
+      "issue": "Circular issue-header order expanded to actual public circulation; final causal-insufficiency conclusion still supported."
+    },
+    {
+      "chain": "B",
+      "condition": "comparison",
+      "issue": "75%: tie label potentially ambiguous in isolation; caption/manuscript limit it to point contrast."
+    },
+    {
+      "chain": "B",
+      "condition": "without-skill",
+      "issue": "Percentage hatch texture slightly reduces native-size legibility."
+    },
+    {
+      "chain": "C",
+      "condition": "without-skill",
+      "issue": "R5 shorter introduction not implemented, 33 to 57 words; no explicit shortened assertion."
+    },
+    {
+      "chain": "C",
+      "condition": "comparison",
+      "issue": "R5 shorter introduction not implemented, 33 to 64 words; explicit completed-shortening assertion unsupported."
+    }
+  ],
+  "candidate_bounded_gains": [
+    "A fixed-S unique minimal generating relation proof",
+    "B interval-impact/u08 explanation and figure numeric/interval readout",
+    "C actual R5 shortening 33 to 26",
+    "old reading explicit time wording pair",
+    "old manuscript magnitude/direction argument"
+  ],
+  "other_conditions_bounded_gains": [
+    "rc.1 B source selection and 75% threshold expression",
+    "without-project B interval model sensitivity"
+  ],
+  "B_original": {
+    "target": -0.2,
+    "sample": 1,
+    "target_interval": [
+      -0.65,
+      0.25
+    ],
+    "g1": -1,
+    "g2": 3
+  },
+  "B_correction": {
+    "target": -0.25,
+    "sample": 0.875,
+    "target_interval": [
+      -0.65,
+      0.15
+    ],
+    "g1": -1,
+    "g2": 2.75,
+    "old_files_preserved": {
+      "without-skill": 47,
+      "comparison": 45,
+      "release": 57
+    }
+  },
+  "C_supplied_not_raw_replicated": {
+    "target": -0.2,
+    "sample": 1,
+    "target_interval": [
+      -0.6,
+      0.2
+    ],
+    "independent_units": 8
+  },
+  "old_regression": {
+    "four_operations_one_context": true,
+    "time_wording_pair_explicit": true,
+    "magnitude_direction_bridge_explicit": true,
+    "old_figure_bytes_preserved": true,
+    "sentence_scope_preserved": true
+  },
+  "source_reviews": {
+    "chain-a": "b415e57f267ecd2fa955bf2c3fc2fbc3eeed0ad9e80a1a89351fc9365a02397f",
+    "chain-b": "3840dcf93604dc90ef830fad9f4a2bac590b883e728bdc7f3527969d92c8d70c",
+    "chain-c": "ccda335194217d37c8900c20a5351f8c9e348bc398d2e3f86896f0f66acbb780"
+  },
+  "overall_winner": null,
+  "universal_gain_established": false,
+  "external_expert_or_top_journal_certification": false,
+  "per_trial_tokens_peak_cost": null,
+  "execution_scope": "Anonymous reviewers did not receive operation logs; actual native source/task operations are separately evidenced in original runs, not inferred from output science."
+}

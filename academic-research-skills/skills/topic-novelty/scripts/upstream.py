@@ -242,6 +242,7 @@ def bind(index, entry, capability, service, *, requires_host=(), requires_facts=
                 'requires_host':list(requires_host),'requires_facts':list(requires_facts),
                 'entry_git_blob_sha':None,  # discovery is not a semantic/source review
                 'discovered_blob_sha':index['files'][entry]['blob_sha'],
+                'discovered_file_blob_sha':{path:_sha(index['files'][path]['blob_sha']) for path in required},
                 'resolved_commit':index['commit'],'script':None,
                 'purpose':'Run-local selection for '+service,'notes':'Read selected current source and actual dependencies.',
                 'adaptations':[],

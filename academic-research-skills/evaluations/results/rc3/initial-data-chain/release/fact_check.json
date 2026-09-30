@@ -1,0 +1,51 @@
+{
+  "synthetic": true,
+  "checked_at_utc": "2026-09-30T15:11:34.949606+00:00",
+  "status": "PASS within synthetic computational scope",
+  "checker": "current Agent and verify.py; not an external scientific reviewer",
+  "independent_numeric_method": "Exact Fraction arithmetic from original archive members; bootstrap count convolution independent of ordered-draw enumerator",
+  "passed": [
+    "original ZIP digest",
+    "43 to 41 exact-copy row flow",
+    "one active date-valid metadata record per event",
+    "score/subscore conversion",
+    "eight paired unit means",
+    "two stratum mean contrasts and intervals",
+    "fixed target and sampled-composition contrasts and intervals",
+    "all eight fixed-weight omission contrasts and intervals",
+    "seven zero-containing omission intervals",
+    "composition crossing and all 101 sensitivity rows",
+    "main-figure source values and interval labels",
+    "final manuscript and caption key numerical consistency"
+  ],
+  "subject_hashes": {
+    "manuscript.before-expression.md": "437f72ff032074925998ac4dfe074e6f467ff4657f61129ec930da034e6f39f8",
+    "manuscript.md": "31530d50d3c1a753bb4b787f0a82253298ed168453a934d227efa5a362784038",
+    "manuscript.expression.diff": "d2a4f3d37eff018ed93e873538f5f93b325df74cc15f76c7a097fe6d0b9c8549",
+    "caption.md": "4ae696189642ea58efeba4b8e4e7417afe75457cd594786007f23f8526b019b4",
+    "results.json": "5749210705f0a6e8d1cd871a143643931e08422c0ff298a0d9dfeb018d3ccf75",
+    "figure_source.csv": "58b8cc5e9c90f426eec00086b7e68ed52030aea540f6d0bdb47afac80c4f4354",
+    "main_figure.png": "f7d5692d141100b65fc60350efd2c19c08527d09e930aa72ea9e6b8a85d69804",
+    "main_figure.svg": "48f4f75822dd571a51cf4077ae934e9ef0a899facca46531cadbbdaa1c640144",
+    "writing_review.md": "b1ed73e8f8d5749679ca64c9cb5034795603d7020799c844983bed0a6b5c0835",
+    "source_manifest.json": "37d272f589a58503b1b6027ae1b796f584246c20a8d76faea0465d3814f0ac13",
+    "claims.csv": "58f3498d877549324a96581320ed7238604e6619d9a7407b535ec37382e19881",
+    "visual_review.md": "34ff20de50c27494dbd270f12e2041959f86f1668218c218069fb7daabf15cdb"
+  },
+  "semantic_review": {
+    "record": "writing_review.md",
+    "reviewer": "current Agent",
+    "checks": [
+      "target and comparator unchanged",
+      "paired independent unit and denominator unchanged",
+      "opposite strata retained",
+      "primary interval zero inclusion retained",
+      "descriptive and conditional scope retained",
+      "non-equivalence and non-causal semantics retained",
+      "exploratory sensitivity not relabeled prespecified"
+    ],
+    "human_verification": "not performed",
+    "real_world_validation": "not supplied",
+    "submission_ready": false
+  }
+}

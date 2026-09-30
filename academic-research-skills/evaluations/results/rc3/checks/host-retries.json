@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "agent": "rc3_chain_b_candidate",
+      "run_id": "chain-b.release.0",
+      "phase": "correction",
+      "native_error": "Selected model is at capacity. Please try a different model.",
+      "consecutive_failed_turns": 2,
+      "observed_by_root_at": "2026-09-30T15:43:25.798565+00:00",
+      "same_model_retry": true,
+      "counted_as_success_or_independent_trial": false
+    }
+  ],
+  "model_override": null,
+  "rule": "Preserve actual completed artifacts; retry same frozen request without changing control conditions."
+}

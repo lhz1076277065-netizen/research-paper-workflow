@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "LOCAL_EVIDENCE_ROOT/runs/chain-b.release.0/v2/prepare.py", line 251, in <module>
+    acquire()
+  File "LOCAL_EVIDENCE_ROOT/runs/chain-b.release.0/v2/prepare.py", line 93, in acquire
+    verify_correction(archive)
+  File "LOCAL_EVIDENCE_ROOT/runs/chain-b.release.0/v2/prepare.py", line 52, in verify_correction
+    raise ValueError(f"Unauthorized member change: {name}")
+ValueError: Unauthorized member change: dictionary.md

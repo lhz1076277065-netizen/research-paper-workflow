@@ -1,0 +1,290 @@
+{
+  "updated_at_utc": "2026-09-30T16:14:23.436657+00:00",
+  "basis": "actual corrected results and unchanged scientific method; reused unaffected sections",
+  "guarded_replacements": [
+    {
+      "label": "manuscript.before-expression.md table",
+      "occurrences": 1,
+      "before": "| Stratum 2, n=4 | 9.50 | 6.50 | +3.00 | [+1.500, +5.000] |",
+      "after": "| Stratum 2, n=4 | 9.50 | 6.75 | +2.75 | [+1.500, +4.250] |"
+    },
+    {
+      "label": "manuscript.before-expression.md table",
+      "occurrences": 1,
+      "before": "| Target 80/20, n=8 | 6.30 | 6.50 | -0.20 | [-0.650, +0.250] |",
+      "after": "| Target 80/20, n=8 | 6.30 | 6.55 | -0.25 | [-0.650, +0.150] |"
+    },
+    {
+      "label": "manuscript.before-expression.md table",
+      "occurrences": 1,
+      "before": "| Sampled 50/50, n=8 | 7.50 | 6.50 | +1.00 | [+0.1875, +2.0000] |",
+      "after": "| Sampled 50/50, n=8 | 7.50 | 6.625 | +0.875 | [+0.1875, +1.6250] |"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "+3.00",
+      "after": "+2.75"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 2,
+      "before": "-0.20",
+      "after": "-0.25"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "0.20 score",
+      "after": "0.25 score"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 2,
+      "before": "+1.00 score",
+      "after": "+0.875 score"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "by 1.00 score",
+      "after": "by 0.875 score"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "[-0.65, +0.25]",
+      "after": "[-0.65, +0.15]"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 2,
+      "before": "-0.067 score",
+      "after": "-0.117 score"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "+6.0 score",
+      "after": "+5.0 score"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "+6.00",
+      "after": "+5.00"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "-1.20 score",
+      "after": "-1.125 score"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "Delta(w) = 3 - 4w",
+      "after": "Delta(w) = 2.75 - 3.75w"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "w=0.75",
+      "after": "w=11/15 (approximately 0.7333)"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "first-stratum weight of 0.75",
+      "after": "first-stratum weight of 11/15 (approximately 0.7333)"
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "Seven of the eight omission intervals included zero.",
+      "after": "Six of the eight omission intervals included zero. Omitting u03, whose first-stratum difference is -0.50, produced -0.383 score with interval [-0.733, -0.033]."
+    },
+    {
+      "label": "manuscript.before-expression.md affected claim",
+      "occurrences": 1,
+      "before": "The original paired synthetic records",
+      "after": "The corrected paired synthetic records"
+    },
+    {
+      "label": "manuscript.before-expression.md archive preparation",
+      "occurrences": 1,
+      "before": "The original paired archive contains a measurement table, a history-bearing unit table, a dictionary, and a reuse license. Its SHA-256 identity was checked against the supplied candidate record before local acquisition. The mirror has the same digest and does not provide an independent source; the proxy contains a different measurement object. [claim:C004] [evidence:E001,E003,E004,E005]",
+      "after": "The analyzed paired archive contains a measurement table, a history-bearing unit table, a dictionary, and a reuse license. Its SHA-256 identity was checked against the authorized correction record before local acquisition. Relative to the preserved earlier archive, the two distinct B events for u08 and the exact copy of one event each increase by 1,000 subscore. Every other measurement is unchanged; the dictionary preserves its previous definitions and appends only the correction record. Target weights remain unchanged. [claim:C004] [evidence:E001,E002,E003,E004,E005,E012]"
+    },
+    {
+      "label": "manuscript.before-expression.md influence meaning",
+      "occurrences": 1,
+      "before": "In particular, removing the largest second-stratum difference changes zero inclusion.",
+      "after": "In particular, omitting either u03 or u08 changes zero inclusion."
+    },
+    {
+      "label": "manuscript.md table",
+      "occurrences": 1,
+      "before": "| Stratum 2, n=4 | 9.50 | 6.50 | +3.00 | [+1.500, +5.000] |",
+      "after": "| Stratum 2, n=4 | 9.50 | 6.75 | +2.75 | [+1.500, +4.250] |"
+    },
+    {
+      "label": "manuscript.md table",
+      "occurrences": 1,
+      "before": "| Target 80/20, n=8 | 6.30 | 6.50 | -0.20 | [-0.650, +0.250] |",
+      "after": "| Target 80/20, n=8 | 6.30 | 6.55 | -0.25 | [-0.650, +0.150] |"
+    },
+    {
+      "label": "manuscript.md table",
+      "occurrences": 1,
+      "before": "| Sampled 50/50, n=8 | 7.50 | 6.50 | +1.00 | [+0.1875, +2.0000] |",
+      "after": "| Sampled 50/50, n=8 | 7.50 | 6.625 | +0.875 | [+0.1875, +1.6250] |"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "+3.00",
+      "after": "+2.75"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 2,
+      "before": "-0.20",
+      "after": "-0.25"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "0.20 score",
+      "after": "0.25 score"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 2,
+      "before": "+1.00 score",
+      "after": "+0.875 score"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "by 1.00 score",
+      "after": "by 0.875 score"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "[-0.65, +0.25]",
+      "after": "[-0.65, +0.15]"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 2,
+      "before": "-0.067 score",
+      "after": "-0.117 score"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "+6.0 score",
+      "after": "+5.0 score"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "+6.00",
+      "after": "+5.00"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "-1.20 score",
+      "after": "-1.125 score"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "Delta(w) = 3 - 4w",
+      "after": "Delta(w) = 2.75 - 3.75w"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "w=0.75",
+      "after": "w=11/15 (approximately 0.7333)"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "first-stratum weight of 0.75",
+      "after": "first-stratum weight of 11/15 (approximately 0.7333)"
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "Seven omission intervals included zero.",
+      "after": "Six omission intervals included zero. Omitting u03, whose first-stratum difference was -0.50, gave -0.383 score with interval [-0.733, -0.033]."
+    },
+    {
+      "label": "manuscript.md affected claim",
+      "occurrences": 1,
+      "before": "The original paired synthetic records",
+      "after": "The corrected paired synthetic records"
+    },
+    {
+      "label": "manuscript.md archive preparation",
+      "occurrences": 1,
+      "before": "The original paired archive supplies synthetic measurements, time-valid unit metadata, a data dictionary, and a reuse license. Its identity was checked against the supplied archive digest before local acquisition.",
+      "after": "The analyzed paired archive supplies synthetic measurements, time-valid unit metadata, a data dictionary, and a reuse license. Its identity was checked against the authorized archive digest before local acquisition. It incorporates an approved correction: the two distinct B events for u08, including the exact copy of one event, each increase by 1,000 subscore relative to the preserved earlier archive. All other measurements and the original definitions remain unchanged; the dictionary adds only a correction record. Target weights remain 0.8/0.2."
+    },
+    {
+      "label": "manuscript.md influence meaning",
+      "occurrences": 1,
+      "before": "Removing the largest second-stratum difference changes whether the interval includes zero.",
+      "after": "Omitting either u03 or u08 changes whether the interval includes zero."
+    },
+    {
+      "label": "caption numerical claim",
+      "occurrences": 1,
+      "before": "+3.00",
+      "after": "+2.75"
+    },
+    {
+      "label": "caption numerical claim",
+      "occurrences": 2,
+      "before": "-0.20",
+      "after": "-0.25"
+    },
+    {
+      "label": "caption numerical claim",
+      "occurrences": 2,
+      "before": "+1.00",
+      "after": "+0.875"
+    },
+    {
+      "label": "caption numerical claim",
+      "occurrences": 1,
+      "before": "[-0.65, +0.25]",
+      "after": "[-0.65, +0.15]"
+    },
+    {
+      "label": "caption numerical claim",
+      "occurrences": 1,
+      "before": "+2.0000",
+      "after": "+1.6250"
+    }
+  ],
+  "source_and_output_hashes": {
+    "manuscript.md": {
+      "preserved_sha256": "31530d50d3c1a753bb4b787f0a82253298ed168453a934d227efa5a362784038",
+      "corrected_sha256": "5830075cd40ce51117657264633cb013eb0bc5c078ccf18ece3fa20f41eedcb7"
+    },
+    "manuscript.before-expression.md": {
+      "preserved_sha256": "437f72ff032074925998ac4dfe074e6f467ff4657f61129ec930da034e6f39f8",
+      "corrected_sha256": "c1754a16696ec2b6f56fbd43f012148504f4f4c02c6aeb3e853a1e97ad6e5df6"
+    },
+    "caption.md": {
+      "preserved_sha256": "a9656f73ab22d2eeec694af80b2009538d70a4526241152e0712f9bfac08cb46",
+      "corrected_sha256": "0d39fa3aa7b7ba50d494d5185a4f5ab69c2c1e1ab4e4c0f48918e38ea4ba9a4d"
+    }
+  }
+}

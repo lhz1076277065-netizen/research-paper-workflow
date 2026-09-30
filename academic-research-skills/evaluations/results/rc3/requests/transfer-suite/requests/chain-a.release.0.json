@@ -1,0 +1,77 @@
+{
+  "case_id": "chain-a",
+  "condition": "release",
+  "replicate": 0,
+  "synthetic_material": true,
+  "evaluation_kind": "unseen_material",
+  "skill_snapshot": {
+    "root": "LOCAL_EVIDENCE_ROOT/transfer-suite/snapshots/release/chain-a",
+    "manifest": "LOCAL_EVIDENCE_ROOT/transfer-suite/identities/release.chain-a.json",
+    "manifest_sha256": "1cbedca99475bc0585604240a5ee883467d44891d964e47f9513ff266d59b7f7"
+  },
+  "user_prompt": "完成 chain-a 的合成 Skill 开发任务，按照材料 README.md 交付实际成果。",
+  "material": "# SYNTHETIC / Skill development fixture\nAll R01–R10 works, people and historical records in this directory are fictional.\nThis is a closed corpus, not a real literature review or academic research project.\nThe searchable catalogue is corpus/index.csv; full supplied text is under corpus/.\nNo full papers or implementation details exist beyond the supplied passages.\nQuestion: when can a finite, labelled, time-ordered directed acyclic graph be\nreused by an induced embedding while preserving reachability in BOTH directions?\nDo not replace this bidirectional goal with a forward-only question. The group\nalso wants to know whether the supplied records support the causal claim that\na formal result drove adoption of the procedure. Use the corpus to decide a\nvaluable next investigation, and actually complete a discriminating mathematical\nor source-critical operation. Formal progress need not wait for causal history.\n",
+  "material_root": "LOCAL_EVIDENCE_ROOT/materials/chain-a",
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/README.md",
+      "sha256": "946e8bb07508be64bdac20ccdf66211ad0fafcecb3e7eaffa72d78368c43aa63"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R01.md",
+      "sha256": "f9e02214efd5dda1dc4231f9e72f4ad854b9a118ebab87c249ceba72d151624a"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R02.md",
+      "sha256": "d235366c06be97e2f3ed0b9b795da7270e8568472721e7b906581b61af0cd9d0"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R03.md",
+      "sha256": "80ab03a9de3d062a04c6ff7cf6f82b0730ce3b2e8778a7a72072b9520a0026c5"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R04.md",
+      "sha256": "266f43894c97bef8889197aa0b55645b88cdb2ed85bec14d66d4fa67371c0481"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R05.md",
+      "sha256": "f6191212221a84bab334a29d5ac8008967ec94997df566f101c104fb91282cdc"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R06.md",
+      "sha256": "d5b35295d9297a5337256bd04bb222b84d31a73661df97a52703774c12bbf60a"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R07.md",
+      "sha256": "45ba91c51f18953d244b4e26e389c46e5e776a5082736c8958d108b75e919e80"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R08.md",
+      "sha256": "7764ff937efbe82668c42095809e1bb5304827a3389cc0ea27b269c48320f5ba"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R09.md",
+      "sha256": "5a8acd74d719d15c1b5ad54bc7d15dc08194fc7d56b10973f3f1d3e3bb3a515b"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/R10.md",
+      "sha256": "b349e598521380b3fb4a41ca0557c2bc257b06e60b972871f3018d08a6ce745c"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/materials/chain-a/corpus/index.csv",
+      "sha256": "aee8abc0aac564a3f3bc13b781fbacd04cfaba3b24192199a4882276b32a14e1"
+    }
+  ],
+  "skill_entry": "LOCAL_EVIDENCE_ROOT/transfer-suite/snapshots/release/chain-a/SKILL.md",
+  "skill_entry_sha256": "795e1046ad1ae9a52b302fda9029b8c0ca45d554354afbdc92c2e6bba9acda01",
+  "initial_skill_text": "---\nname: research-paper-workflow\ndescription: \"当用户要求跨阶段开展学术研究或完成整篇研究成果时协调问题、设计、证据、图稿与交付；单项请求直接用对应能力，更新Skill本身不启动论文研究。\"\nmetadata:\n  version: \"3.2.0-rc.3\"\n---\n\n# 实际学术研究到完整成果的当前Agent总控\n\n用户请求实际开展研究时，先建立研究承诺、最近邻差异与决定性验证；按阶段推进真实研究、正式图表、全文与选刊。不要把工程试跑或容易下载的小数据分析作为顶刊目标完成。\n\n由当前Agent及其现有模型执行，原生子代理按需使用；不寻找本地大模型或其他宿主联动。外部专业Skill从用户指定13仓库的本地安装/当前GitHub版本选择；方法和原创代码可自主探索。缺依赖按本任务准备并验证后运行。方法与实现可自主选择、改造或新写代码；正式结论依据实际证据。\n\n完整项目先读 [科研主线](references/research-lifecycle.md) 和 [研究质量](references/research-quality.md)，建立一份可见路线板后持续推进。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。\n\n交付实际成果及关键证据、采用的Skill与完成范围。局部任务直接做；完整研究保留科学目标与下一步，不让自检通过、导出函数或普通小题替代用户的研究目标。\n\n脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。\n\n开发、更新或打包本套Skill时，交付通用Skill文件与软件验证，不自动选具体课题或撰稿。\n",
+  "available_selected_capabilities": [
+    "research-paper-workflow",
+    "research-intake",
+    "literature-discovery",
+    "paper-deep-reading",
+    "topic-novelty",
+    "research-design"
+  ],
+  "adapter_contract": "Equal current native Agent/model/tools/professional pool. No other-arm answers. Project capability resources demand-loaded within frozen bundle; evaluation-only bundling, not native auto-discovery."
+}

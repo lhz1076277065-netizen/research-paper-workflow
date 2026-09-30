@@ -1,0 +1,57 @@
+{
+  "schema_version": "runtime-providers-1",
+  "capabilities": [
+    "scientific-visualization"
+  ],
+  "providers": [
+    {
+      "id": "Haojae/scipilot-figure-skill::SKILL.md",
+      "repo": "Haojae/scipilot-figure-skill",
+      "entrypoint": "SKILL.md",
+      "capabilities": [
+        "scientific-visualization"
+      ],
+      "mode": "native",
+      "phase": 1,
+      "default_candidate": true,
+      "source_review_status": "discovered_needs_task_reading",
+      "required_paths": [
+        "SKILL.md",
+        "references/chart_selection.md",
+        "references/visual_review.md",
+        "scripts/check_figure.py"
+      ],
+      "requires_host": [],
+      "requires_facts": [],
+      "entry_git_blob_sha": null,
+      "discovered_blob_sha": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+      "discovered_file_blob_sha": {
+        "SKILL.md": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+        "references/chart_selection.md": "547e3ed795beb8c52c40d56107dd368e729f31d8",
+        "references/visual_review.md": "62a2d1b8ab54fdeacbfb972474d3c6c4b8f7527d",
+        "scripts/check_figure.py": "30d4bdeed5694e8690031235744d76093ee4176a"
+      },
+      "resolved_commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "script": null,
+      "purpose": "Run-local selection for figure-review",
+      "notes": "Read selected current source and actual dependencies.",
+      "adaptations": [],
+      "services": {
+        "figure-review": {
+          "capabilities": [
+            "scientific-visualization"
+          ],
+          "requires_host": [],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      }
+    }
+  ],
+  "source_index": {
+    "repository": "Haojae/scipilot-figure-skill",
+    "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "checked_at": "2026-09-30T14:14:47.511003+00:00",
+    "complete": true
+  }
+}

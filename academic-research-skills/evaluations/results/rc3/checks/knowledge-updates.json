@@ -1,0 +1,103 @@
+{
+  "base_version": "3.2.0-rc.2",
+  "candidate_version": "3.2.0-rc.3",
+  "automatic_installed_entry_modification": false,
+  "status": "implemented, software-checked, frozen-candidate unseen/old/neighbor operations and anonymous observations complete; general causal gain unproven",
+  "lessons": [
+    {
+      "lesson": "dependency identity",
+      "target": "src/common/scripts/upstream.py",
+      "before_sha256": "3dfa7aafe0c3b75491efe79e6a7695c52587558be83644056d2025d13e06de7d",
+      "after_sha256": "33e0650f1e7155f470a93da77c04a6f663e732efe662a42aef741e9531f42505",
+      "source_evidence": "dependency-drift-reproduction.json",
+      "source_evidence_sha256": "4e7129cfb17a4168e086fe2422cdda2df668a9fef8549e3064790f75a496e08c",
+      "knowledge_class": "upstream version/identity compatibility",
+      "private_data_or_full_copyright_text_included": false,
+      "planned_validation": "completed current bounded validation; broader transfer unknown",
+      "initial_implementation_after_sha256": "33e0650f1e7155f470a93da77c04a6f663e732efe662a42aef741e9531f42505",
+      "version_metadata_adjustment_separately_preserved": false,
+      "validation_evidence": [
+        "content-reconciliation.json",
+        "evaluation-dispatch.json",
+        "runs/targeted-regression.release.0/operation.md"
+      ],
+      "evaluated_candidate_revised_using_unseen_answers": false
+    },
+    {
+      "lesson": "runtime related source check",
+      "target": "src/common/scripts/provider_runtime.py",
+      "before_sha256": "806517da65894d8e5323d69be0b8c2c299d618c709e4ca66615ddd051c71b6e2",
+      "after_sha256": "3db39ba6ea0cb073797bce580ba2049600548cc2915f3b234e7515b7ac52fe40",
+      "source_evidence": "logs/targeted-source.json",
+      "source_evidence_sha256": "1e60311cfe2fd96bbeb4931544ba7e8438f6c0a046395efdeb517fd592a2c388",
+      "knowledge_class": "upstream version/identity compatibility",
+      "private_data_or_full_copyright_text_included": false,
+      "planned_validation": "completed current bounded validation; broader transfer unknown",
+      "initial_implementation_after_sha256": "3db39ba6ea0cb073797bce580ba2049600548cc2915f3b234e7515b7ac52fe40",
+      "version_metadata_adjustment_separately_preserved": false,
+      "validation_evidence": [
+        "content-reconciliation.json",
+        "evaluation-dispatch.json",
+        "runs/targeted-regression.release.0/operation.md"
+      ],
+      "evaluated_candidate_revised_using_unseen_answers": false
+    },
+    {
+      "lesson": "time/definition alignment",
+      "target": "skills/paper-deep-reading/references/protocol.md",
+      "before_sha256": "ff0ba51d04e1bdd0d4ddd48ea7e9aab5ebddb71c0a6d664ee448208a0076a8f3",
+      "after_sha256": "0686d1da115cdc64d7fb5e66da7e8c6fcab512f5bf99ac5dd0a1d98a9e82e9ff",
+      "source_evidence": "evaluations/results/rc2/blind/research/findings.json",
+      "source_evidence_sha256": "036feecb7aff1190c087e7506a188bd1c9153e930bf2715f90c5c6bf252f14ef",
+      "knowledge_class": "task-specific transferable expert decision",
+      "private_data_or_full_copyright_text_included": false,
+      "planned_validation": "completed current bounded validation; broader transfer unknown",
+      "initial_implementation_after_sha256": "0686d1da115cdc64d7fb5e66da7e8c6fcab512f5bf99ac5dd0a1d98a9e82e9ff",
+      "version_metadata_adjustment_separately_preserved": false,
+      "validation_evidence": [
+        "content-reconciliation.json",
+        "evaluation-dispatch.json",
+        "runs/targeted-regression.release.0/operation.md"
+      ],
+      "evaluated_candidate_revised_using_unseen_answers": false
+    },
+    {
+      "lesson": "counterexample first-read and scale/endpoint choice",
+      "target": "src/common/references/figure-production.md",
+      "before_sha256": "6c95c9a4b10eebe06334616988bed5fcc0f3314140eb28d52be09927cc295c79",
+      "after_sha256": "946d80071d4840c82177f42f29e64e9ece3b78d081f26065ac8f58b28b08aa2b",
+      "source_evidence": "evaluations/results/rc2/blind/figure/findings.json",
+      "source_evidence_sha256": "38f449e6a6179f58cf06c78ccde8badf069cddea4a49c2975b1fc1b077e43716",
+      "knowledge_class": "task-specific transferable expert decision",
+      "private_data_or_full_copyright_text_included": false,
+      "planned_validation": "completed current bounded validation; broader transfer unknown",
+      "initial_implementation_after_sha256": "946d80071d4840c82177f42f29e64e9ece3b78d081f26065ac8f58b28b08aa2b",
+      "version_metadata_adjustment_separately_preserved": false,
+      "validation_evidence": [
+        "content-reconciliation.json",
+        "evaluation-dispatch.json",
+        "runs/targeted-regression.release.0/operation.md"
+      ],
+      "evaluated_candidate_revised_using_unseen_answers": false
+    },
+    {
+      "lesson": "magnitude versus direction argument",
+      "target": "src/common/references/final-expression.md",
+      "before_sha256": "25293fb41e4d7523405d282942c0d85d6d11ac5a72788996b1c006d044cdefbf",
+      "after_sha256": "6bc2dffc222ea2774c0d8067f225e1526f4c492e0c703fa714dc21478124efca",
+      "source_evidence": "evaluations/results/rc2/blind/manuscript/findings.json",
+      "source_evidence_sha256": "7e87dd2eabf828fa976be9aa66ab063185b8fd991f6c297ef5cd304709d5d31f",
+      "knowledge_class": "task-specific transferable expert decision",
+      "private_data_or_full_copyright_text_included": false,
+      "planned_validation": "completed current bounded validation; broader transfer unknown",
+      "initial_implementation_after_sha256": "6bc2dffc222ea2774c0d8067f225e1526f4c492e0c703fa714dc21478124efca",
+      "version_metadata_adjustment_separately_preserved": false,
+      "validation_evidence": [
+        "content-reconciliation.json",
+        "evaluation-dispatch.json",
+        "runs/targeted-regression.release.0/operation.md"
+      ],
+      "evaluated_candidate_revised_using_unseen_answers": false
+    }
+  ]
+}

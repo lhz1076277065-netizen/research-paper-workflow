@@ -1,0 +1,116 @@
+{
+  "source_commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+  "live_discovered_complete_tree": true,
+  "declared_paths": [
+    "SKILL.md",
+    "references/chart_selection.md",
+    "references/visual_review.md",
+    "scripts/check_figure.py"
+  ],
+  "pristine": {
+    "provider_id": "Haojae/scipilot-figure-skill::SKILL.md",
+    "status": "files_available",
+    "entry": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/SKILL.md",
+    "missing_paths": [],
+    "entry_version": "unrecorded",
+    "runtime_tested": false,
+    "dependency_coverage": "declared_paths_only; host must read actual manifest",
+    "root": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation",
+    "layout": "repository",
+    "resolved_paths": {
+      "SKILL.md": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/SKILL.md",
+      "references/chart_selection.md": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/references/chart_selection.md",
+      "references/visual_review.md": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/references/visual_review.md",
+      "scripts/check_figure.py": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/scripts/check_figure.py"
+    },
+    "entry_git_blob_sha": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+    "entry_sha256": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc",
+    "declared_file_sha256": {
+      "SKILL.md": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc",
+      "references/chart_selection.md": "71fe5970b4a9aee66d6c02d1e0696b367f7dafd9c7e17502ee66c56f36870852",
+      "references/visual_review.md": "c4ca4a28a315e7de46f67b5972b3765b979f01fe30616c0681dd2595bed554a1",
+      "scripts/check_figure.py": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06"
+    },
+    "indexed_files_changed": [],
+    "reviewed_files_changed": [],
+    "review_record": "read_selected_source_during_execution"
+  },
+  "unreviewed_local_adaptation": {
+    "provider_id": "Haojae/scipilot-figure-skill::SKILL.md",
+    "status": "source_review_required",
+    "entry": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/SKILL.md",
+    "missing_paths": [],
+    "entry_version": "unrecorded",
+    "runtime_tested": false,
+    "dependency_coverage": "declared_paths_only; host must read actual manifest",
+    "root": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation",
+    "layout": "repository",
+    "resolved_paths": {
+      "SKILL.md": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/SKILL.md",
+      "references/chart_selection.md": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/references/chart_selection.md",
+      "references/visual_review.md": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/references/visual_review.md",
+      "scripts/check_figure.py": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/scripts/check_figure.py"
+    },
+    "entry_git_blob_sha": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+    "entry_sha256": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc",
+    "declared_file_sha256": {
+      "SKILL.md": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc",
+      "references/chart_selection.md": "1186aad719abdc1be43d100e726ecf285b33afc9be401b8d63014b27d5cd5857",
+      "references/visual_review.md": "c4ca4a28a315e7de46f67b5972b3765b979f01fe30616c0681dd2595bed554a1",
+      "scripts/check_figure.py": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06"
+    },
+    "indexed_files_changed": [
+      "references/chart_selection.md"
+    ],
+    "reviewed_files_changed": [],
+    "review_record": "observation_only"
+  },
+  "explicitly_reviewed_local_adaptation": {
+    "provider_id": "Haojae/scipilot-figure-skill::SKILL.md",
+    "status": "files_available",
+    "entry": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/SKILL.md",
+    "missing_paths": [],
+    "entry_version": "unrecorded",
+    "runtime_tested": false,
+    "dependency_coverage": "declared_paths_only; host must read actual manifest",
+    "root": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation",
+    "layout": "repository",
+    "resolved_paths": {
+      "SKILL.md": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/SKILL.md",
+      "references/chart_selection.md": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/references/chart_selection.md",
+      "references/visual_review.md": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/references/visual_review.md",
+      "scripts/check_figure.py": "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/scripts/check_figure.py"
+    },
+    "entry_git_blob_sha": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+    "entry_sha256": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc",
+    "declared_file_sha256": {
+      "SKILL.md": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc",
+      "references/chart_selection.md": "1186aad719abdc1be43d100e726ecf285b33afc9be401b8d63014b27d5cd5857",
+      "references/visual_review.md": "c4ca4a28a315e7de46f67b5972b3765b979f01fe30616c0681dd2595bed554a1",
+      "scripts/check_figure.py": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06"
+    },
+    "indexed_files_changed": [
+      "references/chart_selection.md"
+    ],
+    "reviewed_files_changed": [],
+    "review_record": "read_selected_source_during_execution"
+  },
+  "command": [
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "LOCAL_EVIDENCE_ROOT/compatibility/scipilot-local-adaptation/scripts/check_figure.py",
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/iteration-rc2-20260930T101654Z/trials/paired-main-figure.release.0/figure.png",
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/iteration-rc2-20260930T101654Z/trials/paired-main-figure.release.0/figure.svg",
+    "--strict"
+  ],
+  "returncode": 0,
+  "actual_related_operation": "read-only file-format/DPI review of preserved earlier final figure",
+  "original_figures_unchanged": true,
+  "local_adaptation_retained": true,
+  "source_semantic_compatibility_universally_certified": false,
+  "native_full_skill_workflow_completed_by_this_check": false,
+  "source_fetching_alone_counted_as_professional_workflow": false,
+  "existing_outputs_sha256": {
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/iteration-rc2-20260930T101654Z/trials/paired-main-figure.release.0/figure.png": "e81747222c389386a202a16b4983b4863434994da06588e19a19087d5f2c8bad",
+    "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/iteration-rc2-20260930T101654Z/trials/paired-main-figure.release.0/figure.svg": "877c3f31e00e8ff09eb650e26f920f2c54bafaf3d3564dec5b0104d311cbaf0c"
+  }
+}

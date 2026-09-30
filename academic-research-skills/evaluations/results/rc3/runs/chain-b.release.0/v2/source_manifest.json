@@ -1,0 +1,258 @@
+{
+  "synthetic": true,
+  "submission_ready": false,
+  "sources": [
+    {
+      "id": "E001",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/README.md",
+          "sha256": "df754b3b5a3f5a0cd8fa731ba267bda0268649abb7a72ff731e81e348b3b4db3"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/materials/chain-b/candidates.json",
+          "sha256": "1e3ebef276d4b24e638255b598ec745829fd6aef6d31f9297d0985db68cfe828"
+        }
+      ],
+      "locator": "target and synthetic scope; original archive candidate identity",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.106851+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E002",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/raw/extracted/dictionary.md",
+          "sha256": "52a2a3ebb520e3971d898205ab312a96affac0735bcb5fa369bcfa7eed77d4c7"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/raw/extracted/LICENSE.txt",
+          "sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571"
+        }
+      ],
+      "locator": "score conversion, technical precision, paired independent unit, conditional independence, target weights, synthetic status and reuse; original definitions preserved and correction record appended",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.107135+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E003",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/raw/extracted/measurements.csv",
+          "sha256": "2e3a498385f00877ea8ed9f8aa2be4a86942f4382e7a469e13699fbc04f24539"
+        }
+      ],
+      "locator": "all 43 raw rows; e004/e041 copies; 41 unique events",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.107355+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E004",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/raw/extracted/units.csv",
+          "sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f"
+        }
+      ],
+      "locator": "all 16 metadata history rows and inclusive validity dates",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.107456+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E005",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/preparation_report.json",
+          "sha256": "7419dffd39d1866272c6c10b975b78f085487dcce6a6dc5b4ddb5ed8f889ecc7"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/derived/paired_units.csv",
+          "sha256": "f0506488b34bb5fc27f42d4225df41a97356256537a9c3747bfcc0d2559c1c75"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/archive_receipt.json",
+          "sha256": "88733899d9b3f40ce6b5628a0f19defd4bb7ec53e0e82357c5ba02744c1969cb"
+        }
+      ],
+      "locator": "complete preparation and paired-unit flow",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.108989+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E006",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/results.json",
+          "sha256": "e6842a5906cbfb29e527016576de33dc7ba2dd546ecf40110bc0b16a91c7ff4d"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/target_bootstrap_mass.csv",
+          "sha256": "a2b2e3819d43f0333292376609160757f415202154846d9571ada12fc3d2406a"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/bootstrap_arrays.npz",
+          "sha256": "65bf7cd88807e11fc5dc1249b1ac53f98b8c0326147b8dd1147db895d7fd30d3"
+        }
+      ],
+      "locator": "strata, primary_target, sample_composition_comparator, bootstrap method and all enumerated draws",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.110099+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E007",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/leave_one_unit_out.csv",
+          "sha256": "8b3a918a9c85a239da23de6fba1534cf41bff29c507a2c54d12c6f1f76a524b7"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/composition_sensitivity.csv",
+          "sha256": "5d18c41f1d239daa9c9d929b0a4e3272d4621de96ebb31487f28b7880ec56e36"
+        }
+      ],
+      "locator": "all eight corrected fixed-weight omissions (six zero-containing intervals, u03/u08 exclusions) and 101 composition sensitivity rows",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.110261+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E008",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/figure_source.csv",
+          "sha256": "5b8e923e47e8091ba4822a1f2fa982f3cd4f9552eb07bb88b9a63b4bafe0b7ea"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/main_figure.svg",
+          "sha256": "e47461b19e69fa611fe459c4800993b5900a3b62968e976262afdf37b0f3596c"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/main_figure.png",
+          "sha256": "44c2badbcc305efae85d002258d0cb6a932e278f93c573aae4da2c63f6160c70"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/figure_qa.json",
+          "sha256": "f57d0cab638b99dbc7adf484c7d8ae75b2aea89486eecc43e2f995d3e0b49d72"
+        }
+      ],
+      "locator": "main figure values, exact dimensions, final export and review",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.110557+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E009",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/bibliographic_receipt.json",
+          "sha256": "522bd4500fe76ca4a80131dce5e5e1c7bd622b423f4d130f89053db8154e3df4"
+        }
+      ],
+      "locator": "authoritative arXiv bibliographic record; DOI; software attribution only",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.110802+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E010",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/reproduce.py",
+          "sha256": "b98dccbe51cc748e3864cb42cc5f6324e5e5d8c9e414e0dcbb84e6adf1cc7fe6"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/verify.py",
+          "sha256": "a691ff241b6244b62944896468eea67e6a4e1b00e4a59c3b71112ad48a065dd9"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/execution_log.jsonl",
+          "sha256": "6172e0f8e5c00fcd16647612e6b9c63b50e131441802ac8138b9076fdbc3c0e5"
+        }
+      ],
+      "locator": "actual local availability and end-to-end computational audit",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:20:13.945896+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.111128+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E011",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/professional_selection.json",
+          "sha256": "1017d1eacda7b9adea699947c4c4984f120dc592c552c8e3939af72ffd220ac8"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/professional_calls.jsonl",
+          "sha256": "e3f7fa49ad160368860da96e34d8f2a9e2621c925ad47b2730a8adbe97417b95"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/writing_review.md",
+          "sha256": "d74da761a7036f9fe3e900849a7ffab40b18f82a0e6fef0658aa880fbcca5dfe"
+        }
+      ],
+      "locator": "actual selected professional implementations, their outputs, and evidence-preserving expression adaptation",
+      "verification_state": "agent_checked_synthetic_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T15:27:56.121162+00:00",
+      "continuation_checked_at_utc": "2026-09-30T16:25:25.111482+00:00",
+      "continuation_scope": "content and file identities reconciled with corrected related outputs; prior original intake/bibliographic receipt reused"
+    },
+    {
+      "id": "E012",
+      "files": [
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuations/chain-b.release.0/correction/request.json",
+          "sha256": "96b38aa5b7d56757c3854163eedcfe3846d7bbde3c8b344ec54a16b4d721a999"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/continuation-materials/approved-correction.json",
+          "sha256": "ea52cbde1af67ee7b218ad6be411549ee37547262bf4d3d0e116eaa8c2d2f379"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/raw/original.zip",
+          "sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/correction_receipt.json",
+          "sha256": "d0467473463c6204030b2f196186ce6b055046c089b264150968a122e7f4ba8e"
+        },
+        {
+          "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/change_impact.json",
+          "sha256": "18586a096e5da8aa6a0b10edb0947ab68975e15db037ff0cb49e39253b8f65b5"
+        }
+      ],
+      "locator": "authorized synthetic correction, exact row/member delta, corrected raw measurements and actual downstream changes",
+      "verification_state": "agent_checked_synthetic_computational_scope",
+      "human_verification": "not_performed",
+      "checked_at_utc": "2026-09-30T16:25:25.112190+00:00"
+    }
+  ],
+  "same_agent_correction_continuation": true,
+  "generated_at_utc": "2026-09-30T16:25:25.112196+00:00"
+}

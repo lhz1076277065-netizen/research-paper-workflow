@@ -1,0 +1,24 @@
+{
+  "analysis_started_at_utc": "2026-09-30T14:59:13.757609+00:00",
+  "analysis_finished_at_utc": "2026-09-30T14:59:14.366724+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "libraries": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "Pillow": "12.3.0"
+  },
+  "professional_calls": [
+    "profile_data(paired, group_cols=['stratum'])",
+    "render_report(profile)",
+    "setup_style(journal='nature', lang='en', use_sciplots=False, constrained_layout=False)",
+    "render_preview(fig, main_figure_preview.png, dpi=150)",
+    "audit_layout(fig)",
+    "check_figure(main_figure.png/svg, min_dpi=300, target_inches=(180/25.4,100/25.4))"
+  ],
+  "external_model_calls": 0,
+  "subagents_created": 0,
+  "token_usage": "unknown",
+  "cost": "unknown"
+}

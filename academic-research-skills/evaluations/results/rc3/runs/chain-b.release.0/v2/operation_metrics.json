@@ -1,0 +1,209 @@
+{
+  "recorded_at_utc": "2026-09-30T16:30:53.273720+00:00",
+  "synthetic": true,
+  "same_agent_continuation": true,
+  "independent_repetition": false,
+  "correction_started_snapshot_utc": "2026-09-30T15:41:06.498067+00:00",
+  "resume_checked_at_utc": "2026-09-30T15:59:56.581563+00:00",
+  "first_observed_clock_after_resumed_state_check_utc": "2026-09-30T16:05:04+00:00",
+  "observable_snapshot_to_record_seconds": 2986.775653,
+  "observable_window_scope": "includes capacity interruptions and manual work; not full Agent turn wall time or model execution time",
+  "full_agent_turn_wall_seconds": null,
+  "input_tokens": null,
+  "cached_input_tokens": null,
+  "output_tokens": null,
+  "total_tokens": null,
+  "cost": null,
+  "unknown_reason": "task API exposes no reliable token, billing, dispatch or capacity-failure timings",
+  "capacity_failures": [
+    {
+      "index": 1,
+      "error": "Selected model is at capacity",
+      "timestamp_utc": null,
+      "evidence": "parent reported interruption; no successful completion claim"
+    },
+    {
+      "index": 2,
+      "error": "model capacity insufficient",
+      "timestamp_utc": null,
+      "evidence": "parent reported second interrupted attempt; no successful completion claim"
+    }
+  ],
+  "capacity_failure_count": 2,
+  "capacity_failure_timestamps_and_durations": "unavailable; reported by dispatcher; not successes or separate independent repetitions",
+  "stage_receipts": [
+    {
+      "stage": "prepare.py",
+      "phase": "corrected-input preparation attempt; strict dictionary byte check failed",
+      "started_at_utc": "2026-09-30T16:07:33.942475+00:00",
+      "finished_at_utc": "2026-09-30T16:07:33.992279+00:00",
+      "wall_seconds": 0.04948162502842024,
+      "exit_code": 1,
+      "code_sha256": "34082e7b7447448148696e5c7c3b001d256ea25514a710e9bfc9e8e68f6c85ef"
+    },
+    {
+      "stage": "prepare.py",
+      "phase": "corrected-input computation",
+      "started_at_utc": "2026-09-30T16:09:34.113647+00:00",
+      "finished_at_utc": "2026-09-30T16:09:34.174166+00:00",
+      "wall_seconds": 0.060186332964804024,
+      "exit_code": 0,
+      "code_sha256": "70a3f5f642b8ee8640d7e19723b99a3ef7a75be53c0cba92cb68f7007ece06a9"
+    },
+    {
+      "stage": "analyze.py",
+      "phase": "corrected-input computation",
+      "started_at_utc": "2026-09-30T16:09:34.174479+00:00",
+      "finished_at_utc": "2026-09-30T16:09:34.300951+00:00",
+      "wall_seconds": 0.1264787920517847,
+      "exit_code": 0,
+      "code_sha256": "034abdb12d947bd2b66b761e3bd337db3b3289ea3a0a09448c83748da4ac19c6"
+    },
+    {
+      "stage": "figure.py",
+      "phase": "corrected main-figure preview",
+      "started_at_utc": "2026-09-30T16:11:14.926985+00:00",
+      "finished_at_utc": "2026-09-30T16:11:28.100648+00:00",
+      "wall_seconds": 13.173364750051405,
+      "exit_code": 0,
+      "code_sha256": "c69e07e13bae7a23c260a105b65012e766557a2f9b62d8b3d01f2956f18eb28a"
+    },
+    {
+      "started_at_utc": "2026-09-30T16:15:53.635205+00:00",
+      "finished_at_utc": "2026-09-30T16:15:53.694606+00:00",
+      "duration_seconds": 0.05913683300605044,
+      "command": [
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/acceptance-20260930-091827/environment/.venv/bin/python",
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/prepare.py"
+      ],
+      "exit_code": 0,
+      "log": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/prepare.execution.log",
+      "code_sha256": "70a3f5f642b8ee8640d7e19723b99a3ef7a75be53c0cba92cb68f7007ece06a9"
+    },
+    {
+      "started_at_utc": "2026-09-30T16:15:53.695696+00:00",
+      "finished_at_utc": "2026-09-30T16:15:53.816667+00:00",
+      "duration_seconds": 0.12096624996047467,
+      "command": [
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/acceptance-20260930-091827/environment/.venv/bin/python",
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/analyze.py"
+      ],
+      "exit_code": 0,
+      "log": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/analyze.execution.log",
+      "code_sha256": "034abdb12d947bd2b66b761e3bd337db3b3289ea3a0a09448c83748da4ac19c6"
+    },
+    {
+      "started_at_utc": "2026-09-30T16:15:53.816982+00:00",
+      "finished_at_utc": "2026-09-30T16:15:55.027405+00:00",
+      "duration_seconds": 1.210412250016816,
+      "command": [
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/acceptance-20260930-091827/environment/.venv/bin/python",
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/figure.py",
+        "--export"
+      ],
+      "exit_code": 0,
+      "log": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/figure.execution.log",
+      "code_sha256": "c69e07e13bae7a23c260a105b65012e766557a2f9b62d8b3d01f2956f18eb28a"
+    },
+    {
+      "started_at_utc": "2026-09-30T16:15:55.027913+00:00",
+      "finished_at_utc": "2026-09-30T16:15:55.091407+00:00",
+      "duration_seconds": 0.0635022500064224,
+      "command": [
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/acceptance-20260930-091827/environment/.venv/bin/python",
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/verify.py"
+      ],
+      "exit_code": 0,
+      "log": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/verify.execution.log",
+      "code_sha256": "a691ff241b6244b62944896468eea67e6a4e1b00e4a59c3b71112ad48a065dd9"
+    }
+  ],
+  "successful_stage_count": 7,
+  "failed_noncapacity_stage_count": 1,
+  "successful_stage_seconds_sum": 14.814047458057757,
+  "noncapacity_failed_stage_seconds_sum": 0.04948162502842024,
+  "last_end_to_end_pipeline": [
+    {
+      "started_at_utc": "2026-09-30T16:15:53.635205+00:00",
+      "finished_at_utc": "2026-09-30T16:15:53.694606+00:00",
+      "duration_seconds": 0.05913683300605044,
+      "command": [
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/acceptance-20260930-091827/environment/.venv/bin/python",
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/prepare.py"
+      ],
+      "exit_code": 0,
+      "log": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/prepare.execution.log",
+      "code_sha256": "70a3f5f642b8ee8640d7e19723b99a3ef7a75be53c0cba92cb68f7007ece06a9"
+    },
+    {
+      "started_at_utc": "2026-09-30T16:15:53.695696+00:00",
+      "finished_at_utc": "2026-09-30T16:15:53.816667+00:00",
+      "duration_seconds": 0.12096624996047467,
+      "command": [
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/acceptance-20260930-091827/environment/.venv/bin/python",
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/analyze.py"
+      ],
+      "exit_code": 0,
+      "log": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/analyze.execution.log",
+      "code_sha256": "034abdb12d947bd2b66b761e3bd337db3b3289ea3a0a09448c83748da4ac19c6"
+    },
+    {
+      "started_at_utc": "2026-09-30T16:15:53.816982+00:00",
+      "finished_at_utc": "2026-09-30T16:15:55.027405+00:00",
+      "duration_seconds": 1.210412250016816,
+      "command": [
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/acceptance-20260930-091827/environment/.venv/bin/python",
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/figure.py",
+        "--export"
+      ],
+      "exit_code": 0,
+      "log": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/figure.execution.log",
+      "code_sha256": "c69e07e13bae7a23c260a105b65012e766557a2f9b62d8b3d01f2956f18eb28a"
+    },
+    {
+      "started_at_utc": "2026-09-30T16:15:55.027913+00:00",
+      "finished_at_utc": "2026-09-30T16:15:55.091407+00:00",
+      "duration_seconds": 0.0635022500064224,
+      "command": [
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/acceptance-20260930-091827/environment/.venv/bin/python",
+        "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/verify.py"
+      ],
+      "exit_code": 0,
+      "log": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc3-20260930T132640Z/runs/chain-b.release.0/v2/verify.execution.log",
+      "code_sha256": "a691ff241b6244b62944896468eea67e6a4e1b00e4a59c3b71112ad48a065dd9"
+    }
+  ],
+  "last_end_to_end_pipeline_seconds": 1.4540175829897635,
+  "new_resource_read_records": 1,
+  "new_resource_read_kinds": [
+    "material"
+  ],
+  "prior_context_resource_reads_reused": 39,
+  "derived_member_read_records": 49,
+  "retrospective_read_records": "eight full-member ranges from failed strict dictionary test are explicitly retrospective; exact times unavailable",
+  "professional_call_records": 11,
+  "professional_script_calls": 9,
+  "professional_current_agent_manual_records": 2,
+  "environment": {
+    "python_executable": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "matplotlib": "3.11.2",
+      "Pillow": "12.3.0"
+    }
+  },
+  "model": {
+    "executor": "same current native Agent/model; no override or host switch",
+    "exact_runtime_model_id": null,
+    "identity_status": "not exposed by task API"
+  },
+  "global_installs": 0,
+  "new_subagents": 0,
+  "outgoing_messages": 0,
+  "new_external_research": false,
+  "old_artifacts_preserved": 57,
+  "frozen_inputs_preserved": 7
+}

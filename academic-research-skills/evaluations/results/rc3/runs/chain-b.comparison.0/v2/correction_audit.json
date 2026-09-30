@@ -1,0 +1,61 @@
+{
+  "synthetic": true,
+  "checked_at_utc": "2026-09-30T15:42:49.591401+00:00",
+  "prior_source_sha256": "078a354c60fa96ee7ceedca955517176765f7406bd409dec7512337f59018ef4",
+  "corrected_source_sha256": "79b22107370676dc295fc00eb7f376b895baea4dfebf4ac2d781cf45bd588e07",
+  "changed_raw_rows": [
+    {
+      "event_id": "e040",
+      "before": "4950.000000",
+      "after": "5950.000000",
+      "unit": "subscore"
+    },
+    {
+      "event_id": "e041",
+      "before": "5050.000000",
+      "after": "6050.000000",
+      "unit": "subscore"
+    },
+    {
+      "event_id": "e041",
+      "before": "5050.000000",
+      "after": "6050.000000",
+      "unit": "subscore"
+    }
+  ],
+  "changed_measurement_csv_lines": [
+    41,
+    42,
+    44
+  ],
+  "changed_unique_events": [
+    "e040",
+    "e041"
+  ],
+  "other_raw_fields_identical": true,
+  "unit_metadata_and_license_byte_identical": true,
+  "dictionary_original_definition_bytes_retained": true,
+  "dictionary_appended_annotation": "Version 2 approved synthetic correction: u08 method B raw values each increased by 1000 subscore. Exact event copies receive the same correction; definitions and target weights are unchanged.",
+  "member_digests": [
+    {
+      "member": "LICENSE.txt",
+      "prior_sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571",
+      "corrected_sha256": "bda8f55c1e47df90f5b48fa9b333f7caca570c4993b224943dd3147253348571"
+    },
+    {
+      "member": "dictionary.md",
+      "prior_sha256": "99560c1c5360a1e26d10cc1f8211e3b9f0925ef0116b5166f342ced1776cc858",
+      "corrected_sha256": "52a2a3ebb520e3971d898205ab312a96affac0735bcb5fa369bcfa7eed77d4c7"
+    },
+    {
+      "member": "measurements.csv",
+      "prior_sha256": "5f6c8244cabb460cd66160d81d8004b6d47d31ba8f464bebba3077bf22fe3375",
+      "corrected_sha256": "2e3a498385f00877ea8ed9f8aa2be4a86942f4382e7a469e13699fbc04f24539"
+    },
+    {
+      "member": "units.csv",
+      "prior_sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f",
+      "corrected_sha256": "6d9076e3c05ec31e908d71600fd1bae8b04abec987191d08d286c3fb3476040f"
+    }
+  ]
+}

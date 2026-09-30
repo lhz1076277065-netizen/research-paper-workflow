@@ -189,13 +189,16 @@ test_blob_mismatch_rejected (test_lean.Sources.test_blob_mismatch_rejected) ... 
 test_cache_cannot_hide_a_changed_index_blob (test_lean.Sources.test_cache_cannot_hide_a_changed_index_blob) ... ok
 test_compact_display_preserves_full_index (test_lean.Sources.test_compact_display_preserves_full_index) ... ok
 test_credentials_in_url_rejected (test_lean.Sources.test_credentials_in_url_rejected) ... ok
+test_declared_dependency_identity_input_is_validated (test_lean.Sources.test_declared_dependency_identity_input_is_validated) ... ok
 test_default_branch_is_detected (test_lean.Sources.test_default_branch_is_detected) ... ok
 test_discovered_entry_changed_requires_new_source (test_lean.Sources.test_discovered_entry_changed_requires_new_source) ... ok
 test_duplicate_conflicting_paths_rejected (test_lean.Sources.test_duplicate_conflicting_paths_rejected) ... ok
 test_dynamic_native_handoff_without_review_form (test_lean.Sources.test_dynamic_native_handoff_without_review_form) ... ok
 test_edited_cache_is_preserved_and_rejected (test_lean.Sources.test_edited_cache_is_preserved_and_rejected) ... ok
+test_entry_unchanged_does_not_hide_declared_dependency_drift (test_lean.Sources.test_entry_unchanged_does_not_hide_declared_dependency_drift) ... ok
 test_fresh_discovery_sees_new_commit_and_path (test_lean.Sources.test_fresh_discovery_sees_new_commit_and_path) ... ok
 test_function_interface_uses_discovered_path (test_lean.Sources.test_function_interface_uses_discovered_path) ... ok
+test_local_dependency_adaptation_needs_matching_digest_review (test_lean.Sources.test_local_dependency_adaptation_needs_matching_digest_review) ... ok
 test_missing_entry_rejected (test_lean.Sources.test_missing_entry_rejected) ... ok
 test_native_bind_keeps_support_paths (test_lean.Sources.test_native_bind_keeps_support_paths) ... ok
 test_network_not_implicitly_used (test_lean.Sources.test_network_not_implicitly_used) ... ok
@@ -514,6 +517,6 @@ test_wrong_contract (test_suite.ValidatorNegativeTests.test_wrong_contract) ... 
 test_wrong_output_artifact (test_suite.ValidatorNegativeTests.test_wrong_output_artifact) ... ok
 
 ----------------------------------------------------------------------
-Ran 514 tests in 21.781s
+Ran 517 tests in 23.530s
 
 OK

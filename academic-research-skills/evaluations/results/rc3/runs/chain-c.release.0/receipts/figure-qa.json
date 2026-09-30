@@ -1,0 +1,41 @@
+{
+  "summary_arithmetic": "PASS",
+  "bootstrap_replicated": false,
+  "style": {
+    "journal": "general",
+    "lang": "en",
+    "sciplots_used": false,
+    "cjk_font": null,
+    "constrained_layout": true
+  },
+  "layout_issues": [],
+  "exported": true,
+  "file_checks": {
+    "figure1-v3.svg": {
+      "issues": [],
+      "info": {
+        "path": "LOCAL_EVIDENCE_ROOT/runs/chain-c.release.0/submission/anonymous/figure1-v3.svg",
+        "ext": "svg",
+        "size_bytes": 10037,
+        "category": "vector"
+      }
+    },
+    "figure1-final.png": {
+      "issues": [],
+      "info": {
+        "path": "LOCAL_EVIDENCE_ROOT/runs/chain-c.release.0/receipts/figure1-final.png",
+        "ext": "png",
+        "size_bytes": 82917,
+        "category": "raster",
+        "size_px": [
+          2160,
+          1050
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ]
+      }
+    }
+  }
+}

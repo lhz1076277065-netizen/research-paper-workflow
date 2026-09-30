@@ -2,7 +2,7 @@
 name: analysis-execution
 description: "当需要实际统计分析、数值计算、模型评价、理论推导或证明时使用；按研究类型执行并核查结果，基础证明无需安装统计环境。"
 metadata:
-  version: "3.2.0-rc.2"
+  version: "3.2.0-rc.3"
 ---
 
 # 实际分析、实验、仿真与推导
