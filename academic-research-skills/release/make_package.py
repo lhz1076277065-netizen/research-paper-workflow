@@ -11,7 +11,7 @@ def chosen(kind):
         rel=f.relative_to(ROOT)
         if f.is_symlink() or not f.is_file() or set(rel.parts)&EXCLUDED or f.suffix in FONTS or f.suffix=='.pyc' or f.name in {'.DS_Store','PACKAGE-MANIFEST.json'}:continue
         if kind=='runtime':
-            if rel.parts[0] in {'src','tests','evaluations','history','previous-release','release'}:continue
+            if rel.parts[0] in {'src','tests','evaluations','history','previous-release','release','source-diffs'}:continue
             if rel.as_posix() in {'scripts/build_release.py','scripts/_v300_build_release.py','UPGRADE-RECEIPT.json','release/make_package.py','release/coverage-baseline.json','release/ci-matrix.example.yml'}:continue
             if rel.parts[0]=='test-results' and rel.name not in {'SUMMARY.json','SUMMARY.zh-CN.md','context-metrics.json','distribution-checks.json'}:continue
         files.append(f)

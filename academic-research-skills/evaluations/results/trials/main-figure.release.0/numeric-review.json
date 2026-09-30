@@ -1,0 +1,70 @@
+{
+  "input_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+  "rows": 8,
+  "all_row_values_and_intervals_locked_by_hash": true,
+  "intervals_reestimated": false,
+  "aggregate_intervals_supplied": false,
+  "weighted_summaries": [
+    {
+      "label": "Reference; observed 80:20",
+      "condition": "reference",
+      "weight_source": "reference",
+      "S1_weight": "0.8",
+      "S2_weight": "0.2",
+      "A_loss": "4.80",
+      "B_loss": "4.36",
+      "B_minus_A": "-0.44",
+      "interval": null
+    },
+    {
+      "label": "Changed; observed 20:80",
+      "condition": "changed",
+      "weight_source": "changed",
+      "S1_weight": "0.2",
+      "S2_weight": "0.8",
+      "A_loss": "6.60",
+      "B_loss": "7.52",
+      "B_minus_A": "0.92",
+      "interval": null
+    },
+    {
+      "label": "Changed; fixed reference 80:20",
+      "condition": "changed",
+      "weight_source": "reference",
+      "S1_weight": "0.8",
+      "S2_weight": "0.2",
+      "A_loss": "5.40",
+      "B_loss": "5.48",
+      "B_minus_A": "0.08",
+      "interval": null
+    }
+  ],
+  "stratum_contrasts": [
+    {
+      "condition": "reference",
+      "stratum": "S1",
+      "B_minus_A": "-0.8",
+      "interval": null
+    },
+    {
+      "condition": "reference",
+      "stratum": "S2",
+      "B_minus_A": "1.0",
+      "interval": null
+    },
+    {
+      "condition": "changed",
+      "stratum": "S1",
+      "B_minus_A": "-0.2",
+      "interval": null
+    },
+    {
+      "condition": "changed",
+      "stratum": "S2",
+      "B_minus_A": "1.2",
+      "interval": null
+    }
+  ],
+  "tests": "Exact Decimal assertions for weights, all summaries and four stratum contrasts.",
+  "inference": "Descriptive only; no significance, causality or mechanism inference."
+}

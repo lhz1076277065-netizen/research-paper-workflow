@@ -1,0 +1,153 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Synthetic benchmark manuscript</title><style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:40px auto;line-height:1.48;color:#18202a;font-size:15px}h1{font-size:28px;line-height:1.22}h2{font-size:21px;margin-top:30px}h3{font-size:17px}table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}th,td{border:1px solid #ccd3da;padding:7px}th{text-align:left;background:#f0f3f6}img{width:100%;height:auto}code{white-space:normal;overflow-wrap:anywhere;font-size:12px}a{color:#176e9c}p{orphans:3;widows:3}h1,h2,h3{break-after:avoid}table,tr,img{break-inside:avoid}@page{size:A4;margin:18mm 17mm}@media print{body{max-width:none;margin:0;font-size:10.5pt;line-height:1.35}h1{font-size:18pt}h2{font-size:14pt}h3{font-size:11.5pt}table{font-size:9pt}th,td{padding:4px}a{color:inherit;text-decoration:none}}
+</style><body><h1>A reference-average gain does not establish robustness: a synthetic A–B benchmark</h1>
+<p><em>Fixed synthetic development sample; not an empirical research article.</em></p>
+<h2>Abstract</h2>
+<p>A favorable benchmark average can support a narrower claim than the decision to replace an existing method. This fixed synthetic comparison examines whether method B&#39;s reference-average advantage over method A persists across acquisition conditions and strata. Eight manufactured summaries cover two methods, two conditions and two strata. Sample-weighted loss is lower for B in the reference condition: 4.36 versus 4.80 for A, a B-minus-A difference of −0.44. In the changed condition, B&#39;s weighted loss is higher: 7.52 versus 6.60, a difference of +0.92. B also has higher loss in S2 in both conditions, despite having lower loss in S1. The reference mixture assigns 80% of the weight to S1; the changed mixture assigns 80% to S2. The established result is therefore a conditional average benefit with an explicit counterexample to a general improvement claim. Reporting the average together with strata and evaluation conditions preserves that benefit while defining its scope. These manufactured summaries support descriptive comparisons; they do not identify a causal acquisition mechanism or provide aggregate uncertainty.</p>
+<h2>Introduction</h2>
+<p>Replacing an estimation method requires evidence about where its advantage holds. A lower average loss in a reference benchmark is useful, but the average alone does not establish improvement within every stratum or under a different acquisition setting. When stratum composition changes, the decision must account for both the performance within each stratum and the weights used to summarize it.</p>
+<p>The supplied fixture makes this distinction explicit. It compares methods A and B under reference and changed acquisition conditions, using lower loss as the favorable outcome [E1]. The stratum mixture differs between conditions [E2]. The question is whether B&#39;s favorable reference average supports an improvement claim across the comparisons provided, rather than whether B is universally superior or why its performance differs.</p>
+<p>The contribution of this development sample is a concrete reporting lesson: an average gain must remain attached to its evaluation condition and stratum composition. The evidence establishes B&#39;s reference-average benefit, locates the S2 counterexample within that same condition, and shows a reversal in the changed-condition average. Presenting these results together answers the decision question more clearly than either a favorable average alone or a general statement that the evidence is limited.</p>
+<h2>Methods</h2>
+<h3>Fixed material and comparison</h3>
+<p>The material comprises eight manufactured benchmark summaries: one for each combination of two methods, two conditions and two strata [E1]. These are fixed development fixtures, not collected observations. A and B have identical supplied counts within each condition–stratum combination. In the reference condition, S1 has n = 80 and S2 has n = 20; in the changed condition, S1 has n = 20 and S2 has n = 80. The count total is 100 for each method within each condition. Here, n supplies the weighting rule; it is not evidence of recruited participants or independent empirical replicates.</p>
+<p>Loss is reported on the supplied fixture scale, with lower values indicating better performance. For method m in condition c, sample-weighted loss is:</p>
+<p><code>L(c,m) = [n(c,S1) × loss(c,S1,m) + n(c,S2) × loss(c,S2,m)] / [n(c,S1) + n(c,S2)]</code>.</p>
+<p>All differences are defined as B minus A. A negative difference favors B; a positive difference favors A. We report both condition-specific weighted losses and the stratum comparisons that those averages summarize. No new metric, fitted model or experiment was introduced.</p>
+<h3>Uncertainty and interpretation</h3>
+<p>The supplied intervals are 95% intervals for the individual row summaries. Their construction and dependence structure are not provided. They are reproduced unchanged in Table 1 and Figure 1b; they are not intervals for weighted averages or B-minus-A differences. We did not re-estimate them, combine their endpoints into aggregate intervals, calculate p values or infer significance from interval overlap or separation.</p>
+<p>Acquisition condition is an evaluation setting, not an assigned intervention. Because both the setting and stratum mixture differ between conditions, their aggregate comparison does not identify a causal acquisition effect. The analysis is descriptive arithmetic on the frozen summaries. No data collection, recruitment, model fitting, new sample simulation or additional experiment was performed.</p>
+<p>Figure 1 separates the condition-level decision contrast from the stratum-level evidence needed to interpret it [E3]. Panel a shows weighted differences without uncertainty bars; panel b shows every supplied row loss and its interval, making the S2 counterexample visible.</p>
+<h2>Results</h2>
+<h3>The reference-average benefit coexists with a stratum counterexample</h3>
+<p>In the reference condition, weighted loss is 4.80 for A and 4.36 for B, yielding a B-minus-A difference of −0.44 (Table 2; Figure 1a). This favorable average summarizes opposite directions across the two strata. In S1, loss decreases from 4.0 for A to 3.2 for B, a difference of −0.80. In S2, it increases from 8.0 to 9.0, a difference of +1.00 (Table 1; Figure 1b).</p>
+<p>The supplied reference-S2 intervals are [7.5, 8.5] for A and [8.4, 9.6] for B. They locate the row summaries and their supplied uncertainty; they do not establish the statistical significance of the method difference. S1 carries 80% of the reference weight, so the weighted benefit is compatible with higher B loss in S2.</p>
+<h3>The changed-condition average favors A</h3>
+<p>In the changed condition, weighted loss is 6.60 for A and 7.52 for B, giving a difference of +0.92 (Table 2; Figure 1a). B retains a lower loss in S1, at 4.8 versus 5.0 for A, but has a higher loss in S2, at 8.2 versus 7.0. The respective stratum differences are −0.20 and +1.20.</p>
+<p>The changed-S1 intervals are [4.5, 5.5] for A and [4.3, 5.3] for B; the changed-S2 intervals are [6.6, 7.4] and [7.7, 8.7], respectively. S2 carries 80% of the changed-condition weight. Thus B&#39;s weighted advantage does not persist across both supplied conditions, and its within-stratum advantage does not extend to S2 in either condition. These are comparisons within the fixture, not a test of an acquisition mechanism.</p>
+<h3>Tables and figure</h3>
+<p><strong>Table 1 | Complete fixed row summaries</strong></p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Stratum</th>
+<th>Method</th>
+<th align="right">n</th>
+<th align="right">Loss</th>
+<th>Supplied 95% interval</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Reference</td>
+<td>S1</td>
+<td>A</td>
+<td align="right">80</td>
+<td align="right">4.0</td>
+<td>[3.7, 4.3]</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>S1</td>
+<td>B</td>
+<td align="right">80</td>
+<td align="right">3.2</td>
+<td>[2.9, 3.5]</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>S2</td>
+<td>A</td>
+<td align="right">20</td>
+<td align="right">8.0</td>
+<td>[7.5, 8.5]</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>S2</td>
+<td>B</td>
+<td align="right">20</td>
+<td align="right">9.0</td>
+<td>[8.4, 9.6]</td>
+</tr>
+<tr>
+<td>Changed</td>
+<td>S1</td>
+<td>A</td>
+<td align="right">20</td>
+<td align="right">5.0</td>
+<td>[4.5, 5.5]</td>
+</tr>
+<tr>
+<td>Changed</td>
+<td>S1</td>
+<td>B</td>
+<td align="right">20</td>
+<td align="right">4.8</td>
+<td>[4.3, 5.3]</td>
+</tr>
+<tr>
+<td>Changed</td>
+<td>S2</td>
+<td>A</td>
+<td align="right">80</td>
+<td align="right">7.0</td>
+<td>[6.6, 7.4]</td>
+</tr>
+<tr>
+<td>Changed</td>
+<td>S2</td>
+<td>B</td>
+<td align="right">80</td>
+<td align="right">8.2</td>
+<td>[7.7, 8.7]</td>
+</tr>
+</tbody></table>
+<p>All eight rows and interval endpoints are reproduced from the frozen table [E1]. Counts define the weights used in Table 2. No row was excluded. Loss units beyond the fixture scale are unspecified, and the intervals do not represent uncertainty in the aggregates.</p>
+<p><strong>Table 2 | Condition-specific sample-weighted comparisons</strong></p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>S1:S2 weights</th>
+<th align="right">Weighted loss A</th>
+<th align="right">Weighted loss B</th>
+<th align="right">B minus A</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Reference</td>
+<td>80:20</td>
+<td align="right">4.80</td>
+<td align="right">4.36</td>
+<td align="right">−0.44</td>
+</tr>
+<tr>
+<td>Changed</td>
+<td>20:80</td>
+<td align="right">6.60</td>
+<td align="right">7.52</td>
+<td align="right">+0.92</td>
+</tr>
+</tbody></table>
+<p>Each method has total weight 100 per condition. Values were calculated using the Methods formula. A negative difference favors B; a positive difference favors A. No aggregate interval or significance test is available from these summaries.</p>
+<p><img src="figure-1.svg" alt="Weighted B-minus-A loss is negative in the reference condition and positive in the changed condition. The row-summary plot shows lower B loss in S1 and higher B loss in S2 under both conditions; all eight supplied 95% intervals are displayed."></p>
+<p><strong>Figure 1 | Weighted comparisons and their stratum context.</strong> <strong>a</strong>, Sample-weighted B-minus-A loss for each condition, calculated with the supplied counts. The vertical zero line denotes equal weighted loss; negative values favor B and positive values favor A. No aggregate or difference interval is shown because none was supplied or estimated. <strong>b</strong>, All eight fixed row losses and their supplied 95% intervals. Gray circles denote A and blue squares denote B; horizontal bars reproduce the supplied endpoints. Counts beside each condition–stratum label apply to both methods. The reference S1:S2 mixture is 80:20 and the changed mixture is 20:80. n is a fixture weighting count, not an empirical replicate count. Lower loss is better. Source data are supplied in <code>fixed-results.csv</code>; no observations, interval estimates or significance tests were generated.</p>
+<h2>Discussion</h2>
+<p>The reference-average gain establishes a conditional benefit, not improvement across all supplied comparisons. B has lower loss in S1 under both conditions, higher loss in S2 under both conditions, and a weighted benefit in the reference condition that reverses in the changed condition. The S2 result is central to the argument: it prevents the reference average from being read as a benefit shared across strata. The changed-condition average separately prevents the benefit from being read as robust across these evaluation settings.</p>
+<p>This supports a specific reporting and evaluation decision. Retain the favorable reference average, but report its mixture and the stratum comparisons alongside it. A decision to replace A across a broader range of conditions would require evidence beyond that average. In this fixture, making the counterexample visible improves the accuracy of the claim without obscuring the reference benefit or treating a local comparison as a universal verdict on B.</p>
+<p>The aggregate reversal occurs between conditions with different mixture weights and different row losses. The supplied summaries do not identify how much of that contrast reflects acquisition conditions, mixture changes, method sensitivity or other explanations. Describing these features together is warranted; assigning a causal mechanism to them is not. A prospective validation should compare acquisition settings at a fixed stratum mixture and, separately, vary the mixture while holding the acquisition process fixed [E4]. Such a design would make the competing explanations distinguishable. It remains a proposal, not a completed validation or a guarantee of identification without further design assumptions.</p>
+<p>The inferential boundary follows from the material: the summaries are manufactured, the interval dependence is unknown, and only two conditions and two strata are represented. Consequently, the example establishes a descriptive reporting lesson rather than a population performance claim, an aggregate significance claim or a causal mechanism. Its value is the clear separation between a supported average benefit and the broader robustness claim that benefit cannot establish.</p>
+<h2>Conclusion</h2>
+<p>Method B lowers sample-weighted loss by 0.44 in the reference condition and increases it by 0.92 in the changed condition. Its higher loss in S2 in both conditions is the decisive within-stratum counterexample. The supported claim is a conditional average benefit in this fixed synthetic fixture. A broader robustness claim requires additional validation that separates acquisition changes from mixture changes.</p>
+<h2>Declarations and references</h2>
+<p>This manuscript is a fixed synthetic development sample. No empirical data, participants, recruitment, ethics approvals or publication claims are involved. No empirical approvals, registrations, author identities, funding statements or competing-interest declarations have been inferred. The supplied counts, losses and intervals are preserved in the accompanying frozen results table. AI assistance was used to revise the full manuscript, organize its argument, generate a figure from the supplied summaries and perform local arithmetic and consistency checks; independent human scientific review was not performed in this execution. The sample is not presented as a submission-ready article.</p>
+<p>E1–E4 are internal synthetic memo labels retained from the supplied manuscript, not published references. The full separate memo documents were not supplied. E1&#39;s numeric support is the frozen benchmark table; E2–E4 are supported here only by the descriptions in the supplied manuscript:</p>
+<ul>
+<li><strong>E1.</strong> Fixed benchmark table and interval definitions.</li>
+<li><strong>E2.</strong> Context and stratum-mixture memo.</li>
+<li><strong>E3.</strong> Main-figure evidence brief.</li>
+<li><strong>E4.</strong> Prospective validation design memo.</li>
+</ul>
+<p><strong>Writing and figure workflow attribution.</strong> The revision used K-Dense&#39;s scientific-writing workflow, version 2.1, adapted to a synthetic fixture; the English anti-defensive-writing source for final expression; and Nature Figure, version 2.8.0, for evidence-focused display design and figure checks. These are production resources, not scientific support for the benchmark claims. Repository commits and the exact adopted scope are recorded in the operation note. The scientific-writing resource is described by Kassis, T., Agarwal, V., He, Y., Patel, D., and Brueckner, A. M. (2026), <em>Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents</em>, arXiv:2609.00065, current record v2 checked during this execution. <a href="https://doi.org/10.48550/arXiv.2609.00065">DOI: 10.48550/arXiv.2609.00065</a>.</p>
+</body></html>

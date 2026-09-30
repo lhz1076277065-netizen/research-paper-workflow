@@ -1,8 +1,8 @@
 ---
 name: citation-audit
-description: "引用真实性与论断支持核验"
+description: "当需要核查引文、参考文献、来源身份或论断与出处的对应关系时使用；区分实际取得的正文证据与尚未核实的信息。"
 metadata:
-  version: "3.1.1"
+  version: "3.2.0-rc.1"
 ---
 
 # 引用真实性与论断支持核验

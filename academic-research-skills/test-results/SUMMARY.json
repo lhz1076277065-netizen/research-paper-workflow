@@ -1,10 +1,10 @@
 {
-  "version": "3.1.1",
-  "scope": "five record-semantic fixes; complete general Skill library",
+  "version": "3.2.0-rc.1",
+  "scope": "Complete discipline-neutral Skill release candidate; fixed synthetic development scenarios only",
   "regression": {
-    "version": "3.1.1",
-    "generated_at": "2026-09-30T06:26:06.999733+00:00",
-    "tests_run": 503,
+    "version": "3.2.0-rc.1",
+    "generated_at": "2026-09-30T08:13:38.857503+00:00",
+    "tests_run": 509,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
@@ -12,10 +12,10 @@
     "groups": {
       "test_architecture": 86,
       "test_integration": 78,
-      "test_lean": 51,
+      "test_lean": 54,
       "test_portability": 50,
       "test_quality31": 68,
-      "test_release": 49,
+      "test_release": 52,
       "test_suite": 121
     },
     "platform": "Darwin",
@@ -26,27 +26,47 @@
     "real_paper_lifecycle_tested": false,
     "macos_native_tested": true
   },
-  "retained_v310_cases": 489,
-  "new_bug_regressions": 14,
-  "targeted_probe_outcomes": [
-    "ready_for_content_review",
-    "record_error",
-    "research_in_progress",
-    "ready_for_content_review",
-    "research_in_progress",
-    "ready_for_content_review"
-  ],
-  "original_source_unchanged": true,
-  "independent_capabilities": 19,
-  "external_skill_sources": 13,
-  "research_profiles": 16,
-  "default_profile": "general",
-  "empirical_research_or_manuscript_produced": false,
-  "native_agent_quality_gain_established": false,
+  "retained_v311_cases": 503,
+  "new_targeted_cases": 6,
+  "build": {
+    "generated_files": 797,
+    "drift": 0
+  },
   "smoke": {
-    "basic": 4,
-    "scientific": 7,
-    "passed": true,
+    "basic_tests": 4,
+    "scientific_tests": 7,
+    "scientific_passed": true,
     "manufactured_inputs": true
-  }
+  },
+  "preserved": {
+    "capabilities": 19,
+    "research_profiles": 16,
+    "default_profile": "general",
+    "extensions_allowed": true,
+    "external_professional_sources": 13,
+    "detailed_protocols_unchanged_this_round": 19,
+    "original_zip_identities_unchanged": true
+  },
+  "native_evaluation": {
+    "first_scenario_executions": 9,
+    "research_repeat_executions": 3,
+    "scenario_execution_records": 12,
+    "blind_content_reviews": 3,
+    "metadata_routing_contexts": 2,
+    "focused_resume_contexts": 1,
+    "independent_contexts_total": 18,
+    "same_candidate_version_repetition": false,
+    "research_initial_observation_informed_navigation_repair": true,
+    "platform_auto_discovery_tested": false,
+    "unmodified_full_upstream_workflows_claimed": false,
+    "exact_model_id": "unknown",
+    "per_trial_tokens": "unknown",
+    "per_trial_cost": "unknown",
+    "peak_effective_context": "unknown",
+    "general_quality_gain_established": false,
+    "report_in_source": "evaluations/results/QUALITY_REPORT.zh-CN.md"
+  },
+  "real_research_project_or_manuscript_produced": false,
+  "scientific_quality_certified": false,
+  "reserved_unrun_case": "evaluations/reserved-cases.json"
 }

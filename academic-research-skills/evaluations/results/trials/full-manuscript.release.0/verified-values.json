@@ -1,0 +1,107 @@
+{
+  "rows": [
+    {
+      "condition": "reference",
+      "stratum": "S1",
+      "method": "A",
+      "n": "80",
+      "loss": "4.0",
+      "lo": "3.7",
+      "hi": "4.3"
+    },
+    {
+      "condition": "reference",
+      "stratum": "S1",
+      "method": "B",
+      "n": "80",
+      "loss": "3.2",
+      "lo": "2.9",
+      "hi": "3.5"
+    },
+    {
+      "condition": "reference",
+      "stratum": "S2",
+      "method": "A",
+      "n": "20",
+      "loss": "8.0",
+      "lo": "7.5",
+      "hi": "8.5"
+    },
+    {
+      "condition": "reference",
+      "stratum": "S2",
+      "method": "B",
+      "n": "20",
+      "loss": "9.0",
+      "lo": "8.4",
+      "hi": "9.6"
+    },
+    {
+      "condition": "changed",
+      "stratum": "S1",
+      "method": "A",
+      "n": "20",
+      "loss": "5.0",
+      "lo": "4.5",
+      "hi": "5.5"
+    },
+    {
+      "condition": "changed",
+      "stratum": "S1",
+      "method": "B",
+      "n": "20",
+      "loss": "4.8",
+      "lo": "4.3",
+      "hi": "5.3"
+    },
+    {
+      "condition": "changed",
+      "stratum": "S2",
+      "method": "A",
+      "n": "80",
+      "loss": "7.0",
+      "lo": "6.6",
+      "hi": "7.4"
+    },
+    {
+      "condition": "changed",
+      "stratum": "S2",
+      "method": "B",
+      "n": "80",
+      "loss": "8.2",
+      "lo": "7.7",
+      "hi": "8.7"
+    }
+  ],
+  "aggregates": {
+    "reference": {
+      "A": {
+        "n": 100,
+        "loss": "4.8"
+      },
+      "B": {
+        "n": 100,
+        "loss": "4.36"
+      },
+      "B_minus_A": "-0.44"
+    },
+    "changed": {
+      "A": {
+        "n": 100,
+        "loss": "6.6"
+      },
+      "B": {
+        "n": 100,
+        "loss": "7.52"
+      },
+      "B_minus_A": "0.92"
+    }
+  },
+  "cell_differences": {
+    "reference/S1": "-0.8",
+    "reference/S2": "1.0",
+    "changed/S1": "-0.2",
+    "changed/S2": "1.2"
+  },
+  "interpretation": "Deterministic descriptive arithmetic from frozen manufactured summaries; no tests or new observations."
+}

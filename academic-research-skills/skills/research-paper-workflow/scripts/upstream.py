@@ -154,12 +154,19 @@ def discover(repo, *, ref=None, api=None, max_tree_calls=100):
     result['tree_calls'] = calls
     return result
 
-def read_source(index, entry, *, api=None):
+def read_source(index, entry, *, api=None, cache=None):
     """Read the indexed version even if default branch moves in the meantime."""
     repo, commit, entry = repository(index['repository']), _sha(index['commit']), relpath(entry)
     row = index.get('files',{}).get(entry)
     if row is None:
         raise UpstreamError('Path is absent from this index; check current layout or incomplete tree')
+    cached=Path(cache).expanduser() if cache is not None else None
+    if cached is not None and cached.exists():
+        content=cached.read_bytes()
+        actual=hashlib.sha1(b'blob '+str(len(content)).encode()+b'\0'+content).hexdigest()
+        if actual!=_sha(row['blob_sha']):raise UpstreamError('Existing source differs from the indexed version; retain it and choose a new output path')
+        try:return content.decode('utf-8')
+        except UnicodeDecodeError as exc:raise UpstreamError('Cached source is not UTF-8 text') from exc
     client=api or GitHubAPI()
     data = client('/repos/'+repo+'/contents/'+quote(entry,safe='/')+'?ref='+commit)
     if data.get('type') != 'file':raise UpstreamError('Selected source is not a file')
@@ -175,9 +182,13 @@ def read_source(index, entry, *, api=None):
     if actual != row['blob_sha'] or actual != data.get('sha'):
         raise UpstreamError('File differs from indexed source version; rediscover explicitly')
     try:
-        return content.decode('utf-8')
+        text=content.decode('utf-8')
     except UnicodeDecodeError as exc:
         raise UpstreamError('Selected source is binary, not a text skill') from exc
+    if cached is not None:
+        cached.parent.mkdir(parents=True,exist_ok=True)
+        with cached.open('xb') as f:f.write(content)
+    return text
 
 def provider_id(index, entry):
     """One stable identity for discover/bind/fetch/config; commit remains per-run."""
@@ -277,12 +288,10 @@ def main(argv=None):
             index = discover(a.repo,ref=a.ref,api=api,max_tree_calls=a.max_tree_calls)
             save_json(a.out,index);result = {**candidates(index,a.query,a.limit),'index':str(Path(a.out).absolute())}
         elif a.action == 'read':
-            index = read_json(a.index);text = read_source(index,a.entry,api=api)
-            out = Path(a.out).expanduser();out.parent.mkdir(parents=True,exist_ok=True)
-            if out.exists():
-                raise UpstreamError('Use a new source file path to retain run history')
-            out.write_text(text,encoding='utf-8')
-            result = {'status':'source_read','path':str(out.absolute()),'commit':index['commit'],'execution_performed':False}
+            index = read_json(a.index);out=Path(a.out).expanduser();reused=out.exists()
+            text = read_source(index,a.entry,api=api,cache=out)
+            result = {'status':'source_reused' if reused else 'source_read','path':str(out.absolute()),'commit':index['commit'],
+                      'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'characters':len(text),'cache_reused':reused,'execution_performed':False}
         elif a.action == 'bind':
             result = bind(read_json(a.index),a.entry,a.capability,a.service,requires_host=a.requires_host,
                           requires_facts=a.requires_fact,support=a.support,adapter=a.adapter,script=a.script)

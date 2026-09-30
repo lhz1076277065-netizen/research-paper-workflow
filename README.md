@@ -1,6 +1,6 @@
 # Academic Research Skills
 
-Version **3.1.1** is a complete, discipline-neutral library: one optional research orchestrator and eighteen independently usable specialist Skills. It preserves sixteen extensible research profiles, a `general` default and the user's thirteen external professional source repositories. Use a focused Skill for a focused request; developing this library produces Skill files and validation, without starting a research project.
+Version **3.2.0-rc.1** is the complete release candidate of this discipline-neutral library: one optional research orchestrator and eighteen independently usable specialist Skills. Stable **3.1.1** remains available in [Releases](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.1.1). The library preserves sixteen extensible research profiles, a `general` default and the user's thirteen external professional source repositories. Use a focused Skill for a focused request; developing this library produces Skill files and validation, without starting a research project.
 
 The complete source lives in [academic-research-skills/](academic-research-skills/). Runtime and source ZIPs are published in [GitHub Releases](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases). Start with its [中文说明](academic-research-skills/README.zh-CN.md), [English guide](academic-research-skills/README.md), or the chosen `skills/<capability>/SKILL.md`.
 
@@ -9,7 +9,7 @@ The complete source lives in [academic-research-skills/](academic-research-skill
 Use the existing Codex installer to install one capability from this repository:
 
 ```bash
-python "$CODEX_HOME/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --path academic-research-skills/skills/research-paper-workflow
+python "$CODEX_HOME/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --ref v3.2.0-rc.1 --path academic-research-skills/skills/research-paper-workflow
 ```
 
 Replace the path's final name with the capability you need, for example `journal-intelligence` or `scientific-visualization`. Installing all nineteen is optional. Restart Codex to refresh its native Skill catalog. Other Agents may load a selected folder or use the library's documented export tools; file loading is distinct from native automatic routing.
@@ -20,7 +20,7 @@ The previous installation path `research-paper-workflow/` also contains the curr
 
 Ask `$journal-intelligence` to match journals, `$manuscript-writing` to edit the supplied text, or `$research-paper-workflow` to pursue a complete authorized research project. The current Agent uses its existing model, chooses necessary professional implementations and preserves the actual scientific objective. Native internal delegation is optional. Optional record checkers verify artifact identity and applicable completion; they do not certify scientific quality.
 
-v3.1.1 fixes five reproduced record issues: factual-review types, reviewed manuscript version, assistant scope versus ordinary action names, literature/reading/novelty input association and prospective protocol delivery. See [MIGRATION.zh-CN.md](academic-research-skills/MIGRATION.zh-CN.md) and [UPDATE_REPORT.md](academic-research-skills/UPDATE_REPORT.md).
+v3.1.1 fixes five reproduced record issues: factual-review types, reviewed manuscript version, assistant scope versus ordinary action names, literature/reading/novelty input association and prospective protocol delivery. v3.2.0-rc.1 adds transferable decision examples, clearer trigger descriptions, professional figure/full-writing handoffs, verified source reuse and focused continuation. See [MIGRATION.zh-CN.md](academic-research-skills/MIGRATION.zh-CN.md), [UPDATE_REPORT.zh-CN.md](academic-research-skills/UPDATE_REPORT.zh-CN.md) and [source changes](academic-research-skills/source-diffs/README.zh-CN.md).
 
 ```bash
 python academic-research-skills/scripts/build_release.py --check
@@ -28,7 +28,7 @@ python -m unittest discover -s academic-research-skills/tests -v
 python academic-research-skills/scripts/selftest.py --out /tmp/academic-skill-smoke
 ```
 
-Local v3.1.1 regression: **503 passed**, plus four basic and seven manufactured scientific smoke checks. Read the [actual test summary](academic-research-skills/test-results/SUMMARY.json) for scope and limitations. Native behavior and content quality require separate evidence. Existing root tests and CI retain the legacy helpers and additionally check the complete library; the unrelated experiment trigger is unchanged.
+Local candidate regression: **509 passed**, plus four basic and seven manufactured scientific smoke checks. Read the [actual test summary](academic-research-skills/test-results/SUMMARY.json) for scope and limitations. Twelve same-host independent-context scenario executions, three anonymous content reviews, two metadata-routing observations and one focused continuation are reported separately in the [quality evaluation](academic-research-skills/evaluations/results/QUALITY_REPORT.zh-CN.md). Results are mixed and bounded to fixed synthetic development samples, without a universal quality score, exact token/cost measurement or automatic platform-discovery claim. Existing root tests and CI retain the legacy helpers and additionally check the complete library; the unrelated experiment trigger is unchanged.
 
 ## License
 

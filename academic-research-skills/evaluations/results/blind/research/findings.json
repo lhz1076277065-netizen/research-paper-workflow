@@ -1,0 +1,291 @@
+{
+  "review_type": "independent_content_blind_review",
+  "scope": {
+    "root": "LOCAL_EVIDENCE_ROOT/blind-research",
+    "input_files": [
+      "materials/research-brief.md",
+      "J1/judgement.md",
+      "J2/judgement.md",
+      "J3/judgement.md",
+      "J4/judgement.md",
+      "J5/judgement.md",
+      "J6/judgement.md"
+    ],
+    "full_read": true,
+    "read_note": "J2 首次展示被截断，随后重新全文读取；六份判断均已完整阅读。",
+    "excluded": ["身份映射", "Skill", "执行记录", "其他测试目录", "父任务报告", "附带检查程序"],
+    "identity_inference_performed": false,
+    "new_research_performed": false,
+    "simulation_or_attached_check_run": false,
+    "real_literature_search_performed": false,
+    "anonymous_artifacts_modified": false,
+    "limitations": [
+      "固定合成开发样例，R1–R4 不是真实文献。",
+      "仅评审七份指定文本，可检查展示的简单算术但不核验外部检查程序。",
+      "不评定经验性能、真实新颖性或期刊层级。",
+      "不计算总分，不按路线数、步骤数或篇幅评定质量。"
+    ]
+  },
+  "criteria": [
+    "scientific_objective",
+    "nearest_neighbors_and_counterevidence",
+    "knowledge_increment",
+    "substantive_route_difference",
+    "discrimination_and_fair_comparison",
+    "next_action_information_value_and_branches",
+    "evidence_boundaries"
+  ],
+  "cross_judgement_findings": [
+    {
+      "id": "objective_preserved",
+      "finding": "六份均保留可靠性科学目标，没有把新基准或更大模型直接等同于知识贡献。"
+    },
+    {
+      "id": "identifiability_status_split",
+      "finding": "J1/J3/J6 仅提出目标模型证明任务；J2/J4/J5 完成了文内受限两世界例子，但没有完成原采集机制问题的不可识别证明。"
+    },
+    {
+      "id": "no_counterexample_overgeneralization",
+      "finding": "六份总体未将 R4 单一失败情形或有限两世界例子推广为所有依赖有害或所有真值免费诊断不可能。"
+    },
+    {
+      "id": "mechanism_vs_gain",
+      "finding": "依赖标签可识别与增益正负可识别是不同任务；S、Y 与参考采集关系仍需具体建模。"
+    },
+    {
+      "id": "planned_fairness_and_confirmation",
+      "finding": "均有公平比较与独立确认计划，尚无完成证据。J4 明示选择预算和诊断危害；J6 明示开发标签对等；J2 明示生成族留出及独立重复单位。"
+    },
+    {
+      "id": "unknown_precision_range",
+      "finding": "简报未提供 R3 精度数值。任何范围内外对照必须标为自定模拟范围，不能声称复现 R3 阈值。"
+    }
+  ],
+  "judgements": [
+    {
+      "id": "J1",
+      "source": "J1/judgement.md",
+      "evaluations": {
+        "scientific_objective": "保持信息预算、总体和环境条件下的可靠增益目标；容量仍是候选手段。",
+        "nearest_neighbors_and_counterevidence": "准确区分采集独立与参考值无关、代理可用性与已证泄漏、R4 个案与普遍结论；承认缺少原方法公式。",
+        "knowledge_increment": "适用边界、识别准则、额外信息需求及具名失败修复均有候选增量，尚未形成证明或发现。",
+        "substantive_route_difference": "采集/识别、精度、时点/容量和方法修复回答不同问题，条件衔接合理。",
+        "discrimination_and_fair_comparison": "固定总体、匹配可行采集率、同输入及独立调参/终测有价值；仅在独立采集下扫精度不能识别采集×精度交互，开发标签和选择机会未明示对齐。",
+        "next_action_information_value_and_branches": "可识别、不可识别及未决分别触发诊断、额外信息或有限反例搜索；不同依赖不等于不同增益，未找到反例不等于已识别。",
+        "evidence_boundaries": "无已跑模拟、经验发现或真实新颖性声称；目标模型不可识别仍是证明任务。"
+      },
+      "valuable_reasoning": ["过程标签与增益符号识别分离", "符号审查三种结果改变后续动作", "新增信息后检验是否恢复识别"],
+      "identifiability": {
+        "status": "proposed_proof_target_only",
+        "completed_target_model_proof": false,
+        "completed_bounded_example_in_text": false,
+        "scope": "待定义的科学模型族及操作观测集"
+      },
+      "priority_findings": [
+        {
+          "id": "J1_interaction_coverage",
+          "location": "Choose the next discriminating work：After that audit 段",
+          "finding": "先单精度比较采集，再只在独立采集下改变精度，无法识别采集×精度交互。",
+          "suggestion": "若主张联合适用域，在依赖采集下增加精度对照。"
+        },
+        {
+          "id": "J1_fair_supervision",
+          "location": "Comparison of plausible routes / planned pilot",
+          "finding": "合法开发标签、监督和调参机会未具体声明。",
+          "suggestion": "对齐各候选的开发信息与选择机会。"
+        }
+      ]
+    },
+    {
+      "id": "J2",
+      "source": "J2/judgement.md",
+      "evaluations": {
+        "scientific_objective": "保持可靠可复现增益及使用前识别条件；预真值时点是明确可修正的工作假设。",
+        "nearest_neighbors_and_counterevidence": "不池化不同方法/总体/损失；不把独立采集当作任意校正有效保证，代理因果解释保持未知。",
+        "knowledge_increment": "R 同分布但增益 +1/−1 的受限例子成立，不能替代含 S/A 和测量约束的主问题论证。",
+        "substantive_route_difference": "采集/识别、精度域和清洁容量实质不同且可共存。",
+        "discrimination_and_fair_comparison": "配对评分、分因素干预、固定总体、同合法输入和整个生成族留出能区分主要解释；独立重复单位明确，具体监督/调参预算尚需声明。",
+        "next_action_information_value_and_branches": "先观测契约后识别论证；明确随机采集不保证任意增益，真值审计不再真值免费；符号搜索未决应显式保留。",
+        "evidence_boundaries": "例子清楚标为构造而非模拟或复现；附带 runnable check 未在允许范围读取或运行，不由本评审核验。"
+      },
+      "valuable_reasoning": ["有限反例的具体算术和范围限制", "机制识别与性能识别分离", "生成族留出及独立重复单位"],
+      "identifiability": {
+        "status": "bounded_analytical_counterexample_plus_proposed_target_model_proof",
+        "completed_target_model_proof": false,
+        "completed_bounded_example_in_text": true,
+        "example_arithmetic_consistent": true,
+        "example_gains": [1, -1],
+        "scope": "仅 R 等概率正负一、固定精度及常量其他输入，无额外测量/选择约束的两世界例子",
+        "overgeneralized_in_text": false
+      },
+      "priority_findings": [
+        {
+          "id": "J2_target_model_gap",
+          "location": "Next discriminating work：minimal analytical example",
+          "finding": "例子未含目标选择或采集方程，不能证明 R1/R4 问题不可识别。",
+          "suggestion": "在明确测量方程、S/A 约束和完整操作观测集下另作论证。"
+        },
+        {
+          "id": "J2_unverified_check",
+          "location": "minimal analytical example：accompanying runnable check",
+          "finding": "外部检查存在及运行状态不在本评审可核验范围。",
+          "suggestion": "将文内解析论证与外部执行凭据分开。"
+        },
+        {
+          "id": "J2_unresolved_branch_and_budget",
+          "location": "Next discriminating work / Conditional pilot plan",
+          "finding": "未决搜索状态和具体监督/选择预算仍需具体化。",
+          "suggestion": "不把找不到反例视为识别；对齐开发标签和调参机会。"
+        }
+      ]
+    },
+    {
+      "id": "J3",
+      "source": "J3/judgement.md",
+      "evaluations": {
+        "scientific_objective": "保持采集/精度改变后可用输入下的可靠性，精度未变成独立换题。",
+        "nearest_neighbors_and_counterevidence": "正确处理 R1/R4 条件兼容、R3 未覆盖区间、R2 时点歧义及不可定量池化。",
+        "knowledge_increment": "条件边界、充分条件和信息需求有价值；重演 R4 被明确排除为足够贡献。",
+        "substantive_route_difference": "容量、采集边界、诊断与精度域实质不同；B/C 相连但性能成立与事前可知并不等价。",
+        "discrimination_and_fair_comparison": "两采集×两精度设计、配对种子、训练/终测分离和条件性容量消融有效；target-dependent 所指 S 或 T 未落实，单机制强度留出不是跨族确认。",
+        "next_action_information_value_and_branches": "不可识别是待构造证明；搜索失败不推识别，各主要结果会改变路线；新增参考/元数据的充分性及扩展后的新确认仍需声明。",
+        "evidence_boundaries": "无已执行模拟或真实新颖性，规则及精度值明确是制造选择。"
+      },
+      "valuable_reasoning": ["紧凑交叉设计检查交互", "证明任务与搜索失败区分", "更大估计器仅在有判别必要时加入"],
+      "identifiability": {
+        "status": "proposed_proof_target_only",
+        "completed_target_model_proof": false,
+        "completed_bounded_example_in_text": false,
+        "scope": "需先定义的操作观测、测量与采集模型族"
+      },
+      "priority_findings": [
+        {
+          "id": "J3_selection_truth_distinction",
+          "location": "Chosen next discriminating work：target-dependent reference acquisition",
+          "finding": "依赖目标选择 S 与直接依赖真值 T 可能是不同机制。",
+          "suggestion": "写出参考采集方程及 S/T 关系。"
+        },
+        {
+          "id": "J3_rescue_and_confirmation",
+          "location": "How the next evidence changes the plan",
+          "finding": "新增独立参考不自动保证性能识别；扩展挑战不能沿用受反馈污染的终测作为确认。",
+          "suggestion": "证明新增信息的识别效力；扩展后重新冻结并使用新确认集。"
+        }
+      ]
+    },
+    {
+      "id": "J4",
+      "source": "J4/judgement.md",
+      "evaluations": {
+        "scientific_objective": "保持可靠性并加入有害背书与弃权的决策含义，未改成只识别依赖标签。",
+        "nearest_neighbors_and_counterevidence": "准确限制 R4 个案、R2 时点警示、R3 精度域，并指出独立非万能、依赖非必然有害。",
+        "knowledge_increment": "条件证书/警示/信息限有增量；+1/−3 无约束例子成立但不证明意向采集模型。M 同边际需补为同联合观测关系。",
+        "substantive_route_difference": "清洁容量、精度边界和可观测可靠性条件需要不同证据，且均有反驳和负结果价值。",
+        "discrimination_and_fair_comparison": "总体/样本分配/选择预算匹配，代理与采集分离，表观与真增益、交互、良性依赖、误背书/弃权及简单诊断基线均可比较；开发监督仍需声明。",
+        "next_action_information_value_and_branches": "在科学约束下重作论证后决定信息补充或诊断；主要竞争解释及简单基线胜出均能改变项目；原问题证明仍待完成。",
+        "evidence_boundaries": "精确思想例子不被当作经验结果，模拟未跑；外部精确检查过程未核验，真实新颖性保持未知。"
+      },
+      "valuable_reasoning": ["危害背书率与弃权率共同评估", "良性依赖与有害机制均纳入", "选择预算及简单诊断基线明确"],
+      "identifiability": {
+        "status": "bounded_analytical_counterexample_plus_proposed_target_model_proof",
+        "completed_target_model_proof": false,
+        "completed_bounded_example_in_text": true,
+        "example_arithmetic_consistent": true,
+        "example_gains": [1, -3],
+        "scope": "Y=±X 且 R=X 的无约束构造；完整等价需要 M 与 X 同联合关系",
+        "overgeneralized_in_text": false
+      },
+      "priority_findings": [
+        {
+          "id": "J4_metadata_joint_law",
+          "location": "A concrete caution about the chosen route：O=(X,R,M)",
+          "finding": "相同 M 边际本身不足以保证 O 联合律相同，若 M 与 X 的关联改变就不观测等价。",
+          "suggestion": "令 M 为常量或明确两世界 M|X 同分布。"
+        },
+        {
+          "id": "J4_model_and_development_labels",
+          "location": "The next discriminating work",
+          "finding": "目标科学模型证明和合法开发标签配置仍待具体化。",
+          "suggestion": "保留受限例子定位，补测量/选择约束及各方法对等开发监督。"
+        }
+      ]
+    },
+    {
+      "id": "J5",
+      "source": "J5/judgement.md",
+      "evaluations": {
+        "scientific_objective": "保持采用/审计/暂缓的可靠性问题，边界及负结果也可贡献知识。",
+        "nearest_neighbors_and_counterevidence": "明确 R1 的结果独立与 R4 的选择依赖非自动反面、参考值关联非采集依赖、元数据存在非准确充分。",
+        "knowledge_increment": "边界、清洁容量、精度域与诊断均有候选增量；+1/−3 例子只证明少观测无约束世界的增益歧义。",
+        "substantive_route_difference": "性能边界与部署诊断不同，容量和精度也有各自判别证据；A/D 的衔接不是模型变体。",
+        "discrimination_and_fair_comparison": "固定总体、交叉因素、合法输入消融、参考估计训练边界、独立重复和新确认集有价值；生成族留出不够明确，R3 数值域和既有校正需标为制造类比。",
+        "next_action_information_value_and_branches": "先选择/测量图及观测契约的信息价值明确；打破一个反例不等于全族可识别，新增信息需要另作证明或增益界；未决搜索应保留。",
+        "evidence_boundaries": "无模拟/经验结果/真实优先权声称；设计数值不是题内事实，个别范围及原方法措辞需避免复现暗示。"
+      },
+      "valuable_reasoning": ["结果独立和选择依赖不强行二分", "探索后要求新确认集", "区分增益歧义与过程歧义"],
+      "identifiability": {
+        "status": "bounded_analytical_counterexample_plus_proposed_target_model_proof",
+        "completed_target_model_proof": false,
+        "completed_bounded_example_in_text": true,
+        "example_arithmetic_consistent": true,
+        "example_gains": [1, -3],
+        "scope": "仅同分布 Z、相同元数据、Y=±Z 的无进一步约束构造",
+        "overgeneralized_in_text": false
+      },
+      "priority_findings": [
+        {
+          "id": "J5_simulator_not_replication",
+          "location": "planned pilot table：Precision / Estimator",
+          "finding": "R3 范围没有数值、既有校正没有公式，表格措辞有复现暗示。",
+          "suggestion": "明确为假定模拟精度域和制造规则类比。"
+        },
+        {
+          "id": "J5_full_family_identification",
+          "location": "The next discriminating work：least additional information",
+          "finding": "排除一个世界不等于扩展观测后整个模型族的增益可识别。",
+          "suggestion": "新增信息后证明全族识别或可用增益界，并保留未决分支。"
+        },
+        {
+          "id": "J5_mechanism_family_confirmation",
+          "location": "Route B / planned pilot Evaluation",
+          "finding": "独立记录和重复已安排，但全生成机制族留出未明确。",
+          "suggestion": "若声称对未见采集条件适用，确认时留出完整机制族。"
+        }
+      ]
+    },
+    {
+      "id": "J6",
+      "source": "J6/judgement.md",
+      "evaluations": {
+        "scientific_objective": "保持可靠性、失败原因及使用证据；真值免费证书失败不会让主问题被放弃。",
+        "nearest_neighbors_and_counterevidence": "总体准确限制 R1–R4；outcome-selective 与原 target-selection-dependent 的关系需要说明。",
+        "knowledge_increment": "识别/部分识别、增益下界和信息需求实质区别于缩放模型，仍是候选贡献。",
+        "substantive_route_difference": "机制/精度边界、可诊断性和可修复方法分别有独立证据及条件准入。",
+        "discrimination_and_fair_comparison": "合法输入、相同调参访问、开发标签对等、封存评价真值及新实现/条件留出明确；生成定性锚点检查不能替代独立机制解释确认。",
+        "next_action_information_value_and_branches": "反例必须满足测量/选择约束；新增信息后再证识别/界，界不足可弃权；搜索失败仍未决。不可识别是待证明目标。",
+        "evidence_boundaries": "无完成算例、模拟或真实新颖性声称；参数不伪造，定性锚点设定检查应与解释确认分开。"
+      },
+      "valuable_reasoning": ["反例尊重科学模型约束", "新增信息的识别效力再次验证", "合法开发标签对齐", "部分识别与弃权"],
+      "identifiability": {
+        "status": "proposed_proof_target_only",
+        "completed_target_model_proof": false,
+        "completed_bounded_example_in_text": false,
+        "scope": "需定义的测量/选择约束及完整操作观测联合律"
+      },
+      "priority_findings": [
+        {
+          "id": "J6_selection_truth_distinction",
+          "location": "The next discriminating work：outcome-selective reference acquisition",
+          "finding": "直接依赖 Y 与依赖目标选择 S 不自动等价。",
+          "suggestion": "明确 S/Y/A 结构，保留或解释原简报选择机制。"
+        },
+        {
+          "id": "J6_anchor_vs_confirmation",
+          "location": "The pilot should check intended qualitative anchors",
+          "finding": "生成锚点只能核查制造设定，不能独立确认按锚点选出的机制解释。",
+          "suggestion": "再以未按预期结果挑选的可容许机制和锁定评价挑战解释。"
+        }
+      ]
+    }
+  ]
+}

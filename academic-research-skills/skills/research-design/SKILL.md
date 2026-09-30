@@ -1,8 +1,8 @@
 ---
 name: research-design
-description: "问题导向的研究设计"
+description: "当需要选择方法、比较方案、规划能区分解释的验证或制作方案稿时使用；由问题和材料决定设计，不编造未来结果。"
 metadata:
-  version: "3.1.1"
+  version: "3.2.0-rc.1"
 ---
 
 # 问题导向的研究设计
@@ -11,7 +11,7 @@ metadata:
 
 由当前Agent及其现有模型执行，原生子代理按需使用；不寻找本地大模型或其他宿主联动。外部专业Skill从用户指定13仓库的本地安装/当前GitHub版本选择；方法和原创代码可自主探索。缺依赖按本任务准备并验证后运行。方法与实现可自主选择、改造或新写代码；正式结论依据实际证据。
 
-专业细节按需查 [原专业参考](references/protocol.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。
+专业细节按需查 [原专业参考](references/protocol.md)。问题与路线判断时读 [研究判断示例](references/research-quality.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。
 
 交付实际成果及关键证据、采用的Skill与完成范围。局部任务直接做；完整研究保留科学目标与下一步，不让自检通过、导出函数或普通小题替代用户的研究目标。
 

@@ -1,0 +1,437 @@
+{
+  "review_identity": {
+    "type": "independent_context_review_within_same_current_model",
+    "external_discipline_expert_review": false,
+    "language": "zh-CN",
+    "composite_score_or_journal_certification": false
+  },
+  "blinding_and_scope": {
+    "anonymous_labels": [
+      "F1",
+      "F2",
+      "F3"
+    ],
+    "version_identity_guessed": false,
+    "version_mapping_read": false,
+    "execution_logs_read": false,
+    "parent_reports_read": false,
+    "other_scenarios_read": false,
+    "skill_source_read": false,
+    "subagents_delegated": false,
+    "common_inputs_read_before_pngs": [
+      "materials/figure-brief.md",
+      "materials/fixed-results.csv"
+    ],
+    "pngs_actually_opened": [
+      "F1/figure.png",
+      "F2/figure.png",
+      "F3/figure.png"
+    ],
+    "captions_read": [
+      "F1/caption.md",
+      "F2/caption.md",
+      "F3/caption.md"
+    ],
+    "plot_source_read": false,
+    "coordinate_level_programmatic_audit": false,
+    "final_publication_size_checked": false
+  },
+  "reference_basis": {
+    "synthetic_fixed_results": true,
+    "loss_direction": "lower_is_better",
+    "signed_difference": "B_minus_A; negative favors B point loss",
+    "weights": "n divided by sum(n) within each condition and method",
+    "intervals": "Supplied row-specific 95% intervals; construction unspecified; not re-estimated",
+    "aggregate_or_difference_intervals_supplied": false,
+    "raw_sample_data_supplied": false,
+    "sampling_unit_and_independence_specified": false,
+    "significance_test_supplied": false,
+    "causal_identification_supplied": false,
+    "mechanism_evidence_supplied": false
+  },
+  "independent_calculations": {
+    "arithmetic": "Python stdlib decimal; fixed CSV inputs only",
+    "stratum_comparisons": [
+      {
+        "condition": "reference",
+        "stratum": "S1",
+        "n_per_method": 80,
+        "loss_A": 4.0,
+        "loss_B": 3.2,
+        "B_minus_A": -0.8,
+        "supplied_95_interval_A": [
+          3.7,
+          4.3
+        ],
+        "supplied_95_interval_B": [
+          2.9,
+          3.5
+        ]
+      },
+      {
+        "condition": "reference",
+        "stratum": "S2",
+        "n_per_method": 20,
+        "loss_A": 8.0,
+        "loss_B": 9.0,
+        "B_minus_A": 1.0,
+        "supplied_95_interval_A": [
+          7.5,
+          8.5
+        ],
+        "supplied_95_interval_B": [
+          8.4,
+          9.6
+        ]
+      },
+      {
+        "condition": "changed",
+        "stratum": "S1",
+        "n_per_method": 20,
+        "loss_A": 5.0,
+        "loss_B": 4.8,
+        "B_minus_A": -0.2,
+        "supplied_95_interval_A": [
+          4.5,
+          5.5
+        ],
+        "supplied_95_interval_B": [
+          4.3,
+          5.3
+        ]
+      },
+      {
+        "condition": "changed",
+        "stratum": "S2",
+        "n_per_method": 80,
+        "loss_A": 7.0,
+        "loss_B": 8.2,
+        "B_minus_A": 1.2,
+        "supplied_95_interval_A": [
+          6.6,
+          7.4
+        ],
+        "supplied_95_interval_B": [
+          7.7,
+          8.7
+        ]
+      }
+    ],
+    "supplied_mix_aggregates": [
+      {
+        "condition": "reference",
+        "n_total_per_method": 100,
+        "weights": {
+          "S1": 0.8,
+          "S2": 0.2
+        },
+        "loss_A": 4.8,
+        "loss_B": 4.36,
+        "B_minus_A": -0.44
+      },
+      {
+        "condition": "changed",
+        "n_total_per_method": 100,
+        "weights": {
+          "S1": 0.2,
+          "S2": 0.8
+        },
+        "loss_A": 6.6,
+        "loss_B": 7.52,
+        "B_minus_A": 0.92
+      }
+    ],
+    "changed_losses_at_reference_weights": {
+      "weights": {
+        "S1": 0.8,
+        "S2": 0.2
+      },
+      "loss_A": 5.4,
+      "loss_B": 5.48,
+      "B_minus_A": 0.08,
+      "interpretation": "descriptive sensitivity only; no interval or causal mechanism attribution"
+    },
+    "interval_overlap_examples": [
+      {
+        "condition": "reference",
+        "stratum": "S2",
+        "overlap": [
+          8.4,
+          8.5
+        ]
+      },
+      {
+        "condition": "changed",
+        "stratum": "S1",
+        "overlap": [
+          4.5,
+          5.3
+        ]
+      }
+    ],
+    "overlap_caution": "Row-interval overlap or non-overlap alone is not a supplied test of method differences"
+  },
+  "figures": [
+    {
+      "id": "F1",
+      "figure": "LOCAL_EVIDENCE_ROOT/blind-figure/F1/figure.png",
+      "caption": "LOCAL_EVIDENCE_ROOT/blind-figure/F1/caption.md",
+      "dimensions": {
+        "key_comparison": {
+          "assessment": "聚合反转明确；差值需自行相减",
+          "evidence": [
+            "标题写明 aggregate ranking reverses；b 标注 4.80/4.36 与 6.60/7.52",
+            "a、b 使用相同 0–10 损失范围"
+          ],
+          "improvements": [
+            "补 Δ = −0.44 与 +0.92",
+            "将 lower is better 提示纳入轴标签"
+          ]
+        },
+        "stratum_counterexamples": {
+          "assessment": "四个层内反例完整可见",
+          "evidence": [
+            "S1 的 B 为 3.2、4.8，低于 A 的 4.0、5.0",
+            "S2 的 B 为 9.0、8.2，高于 A 的 8.0、7.0",
+            "条件间有水平分隔线"
+          ],
+          "improvements": [
+            "可用短注释明确 S1 偏向 B、S2 偏向 A"
+          ]
+        },
+        "aggregation_weights": {
+          "assessment": "给定混合及公式明确；敏感性未画",
+          "evidence": [
+            "b 行标签注明 S1:S2 = 80:20 与 20:80",
+            "图注给出 Σ(n×loss)/Σn，100 per method per condition",
+            "图注明确层内损失与权重都改变"
+          ],
+          "improvements": [
+            "若要直接诊断 composition-only 解释，可在图注加入 changed 按 reference 权重后 Δ = +0.08"
+          ]
+        },
+        "uncertainty_and_applicability": {
+          "assessment": "行区间与聚合点明确分离；计数及区间构造未知交代具体",
+          "evidence": [
+            "图内说明 a 为给定 95% 区间、b 为加权点且无聚合区间",
+            "图注说明 interval construction、sampling unit、independence 未说明",
+            "无显著性、因果、机制认证"
+          ],
+          "improvements": [
+            "短句说明行区间不能充当方法差或聚合差的区间",
+            "不能据合成计数推断目标人群中的泛化优越性"
+          ]
+        },
+        "caption_and_claim_fidelity": {
+          "assessment": "主要事实和推断边界忠实",
+          "evidence": [
+            "四个加权值均与独立计算一致",
+            "拒绝 B 无条件总体更优；不声称 composition-only、因果或机制"
+          ],
+          "improvements": [
+            "把 conditional comparison 精确为给定条件和混合下的描述性点比较"
+          ]
+        },
+        "layout_and_information_burden": {
+          "assessment": "两面板清楚；标签和留白占地较大",
+          "evidence": [
+            "统一图例、蓝圆/橙方、直接数值标签",
+            "未见遮挡或截断",
+            "全尺度上 0.44 聚合差较小"
+          ],
+          "improvements": [
+            "缩短标题及重复 per method 标签",
+            "最终缩小版面需检查聚合差与脚注可读性"
+          ]
+        }
+      }
+    },
+    {
+      "id": "F2",
+      "figure": "LOCAL_EVIDENCE_ROOT/blind-figure/F2/figure.png",
+      "caption": "LOCAL_EVIDENCE_ROOT/blind-figure/F2/caption.md",
+      "dimensions": {
+        "key_comparison": {
+          "assessment": "有符号差值和反转直接可读",
+          "evidence": [
+            "d 零线分隔 B lower loss 与 A lower loss",
+            "−0.44、+0.92 在零线两侧；+0.08 为独立空心菱形"
+          ],
+          "improvements": [
+            "若需要绝对损失，可在 d 行标签补图注中的 A/B 聚合值"
+          ]
+        },
+        "stratum_counterexamples": {
+          "assessment": "两个条件的层内方向完整且共用尺度",
+          "evidence": [
+            "a、b 的 S1 均为 B 较低、S2 均为 A 较低",
+            "图注说明纵向偏移只是可见性安排"
+          ],
+          "improvements": [
+            "图注 lower loss 可统一加 point-estimate 限定"
+          ]
+        },
+        "aggregation_weights": {
+          "assessment": "权重变化可视化，且有可核对的固定权重敏感性",
+          "evidence": [
+            "c 百分比条表示 80:20 → 20:80",
+            "d 的 changed 80:20 fixed 为 +0.08；图注给出 A = 5.40、B = 5.48",
+            "图注称其为 descriptive sensitivity comparison"
+          ],
+          "improvements": [
+            "将 Changed 80:20 fixed 改成 Changed losses / reference mix",
+            "observed 改成 supplied mix，以免混淆合成与真实采集",
+            "该参考权重选择不能成为唯一机制分解或既定目标人群"
+          ]
+        },
+        "uncertainty_and_applicability": {
+          "assessment": "派生点差无区间明确；原始区间与计数语义可再限定",
+          "evidence": [
+            "a、b 为给定行 95% 区间；d 标题写 no intervals",
+            "底注写 derived point differences only",
+            "图注排除聚合/差值区间、显著性、因果、机制"
+          ],
+          "improvements": [
+            "补区间构造、抽样单位及相关性未提供的说明",
+            "+0.08 不能当作有统计把握的 A 优势"
+          ]
+        },
+        "caption_and_claim_fidelity": {
+          "assessment": "所有计算、菱形身份与主要结论忠实",
+          "evidence": [
+            "−0.44、+0.92、+0.08 与独立计算一致",
+            "明确不支持未限定的 B 总体更优，未转为 A 普遍更优"
+          ],
+          "improvements": [
+            "将 observed overall ranking 改为 aggregate point ranking under supplied mixes"
+          ]
+        },
+        "layout_and_information_burden": {
+          "assessment": "四面板功能不同；阅读步骤和小差值缩放负担较大",
+          "evidence": [
+            "上方两条件，下方权重与差值的布局有逻辑",
+            "权重条用灰度加纹理；菱形用填充区别描述性方案",
+            "未见遮挡或截断"
+          ],
+          "improvements": [
+            "缩短 c、d 标题并按最终版面处理页脚换行",
+            "保留 +0.08 空心点与零线的可分辨距离"
+          ]
+        }
+      }
+    },
+    {
+      "id": "F3",
+      "figure": "LOCAL_EVIDENCE_ROOT/blind-figure/F3/figure.png",
+      "caption": "LOCAL_EVIDENCE_ROOT/blind-figure/F3/caption.md",
+      "dimensions": {
+        "key_comparison": {
+          "assessment": "聚合点排序清楚；标题存在层内排序随条件变化的潜在歧义",
+          "evidence": [
+            "c 直接标出 A 4.80、B 4.36、A 6.60、B 7.52",
+            "标题称 ranking varies by stratum and acquisition condition，但每一层的方向实际保持"
+          ],
+          "improvements": [
+            "标题明确 aggregate ranking reverses",
+            "补 Δ = −0.44 与 +0.92"
+          ]
+        },
+        "stratum_counterexamples": {
+          "assessment": "四组层内比较完整",
+          "evidence": [
+            "a 的 S1 两组 B 均在 A 左侧；S2 两组 B 均在 A 右侧",
+            "条件间分隔线及数值标签清楚"
+          ],
+          "improvements": [
+            "图内短句说明层内方向保持而聚合方向改变"
+          ]
+        },
+        "aggregation_weights": {
+          "assessment": "行权重与混合条均明确；有重复信息",
+          "evidence": [
+            "a 每行给 n 和 w；b 再画 80:20 与 20:80",
+            "页脚与图注说明 w = n/Σn",
+            "图注明确反转不能全归因于权重变化"
+          ],
+          "improvements": [
+            "a 可仅保留 n，由 b 表达权重",
+            "Share of observations 改为 Share of supplied counts",
+            "若需要权重诊断，可在图注加入重加权 +0.08"
+          ]
+        },
+        "uncertainty_and_applicability": {
+          "assessment": "行区间与聚合点均值分开；计数及区间来源限定可补",
+          "evidence": [
+            "a 轴注 supplied 95% intervals；c 轴注 point means only",
+            "页脚及图注说明无聚合区间、显著性、因果或机制证据",
+            "a、c 的损失横轴范围不同"
+          ],
+          "improvements": [
+            "补区间构造、抽样单位和独立性未知",
+            "不跨面板比较视觉距离或把差值当显著性等级"
+          ]
+        },
+        "caption_and_claim_fidelity": {
+          "assessment": "数值及推断忠实；图题需精确化",
+          "evidence": [
+            "四个加权值与固定数据一致",
+            "图注拒绝 B 无条件更优且明确层内损失也变化"
+          ],
+          "improvements": [
+            "调整主标题以免暗示层内排名随条件反转"
+          ]
+        },
+        "layout_and_information_burden": {
+          "assessment": "左右分区清楚；权重和长标题占地可压缩",
+          "evidence": [
+            "左侧全部层内结果，右侧权重及聚合上下排列",
+            "直接方法标签、圆/方及灰度条可读",
+            "未见遮挡或截断"
+          ],
+          "improvements": [
+            "删除 a 重复的 w 并缩短标题",
+            "最终缩小后保持不同横轴范围及刻度清楚"
+          ]
+        }
+      }
+    }
+  ],
+  "cross_figure_findings": [
+    {
+      "dimension": "numerical_fidelity",
+      "finding": "No point-value label, aggregate arithmetic, or major caption factual error found",
+      "evidence": "All eight loss labels and supplied-mix aggregates agree with fixed CSV and independent arithmetic; plotted interval locations visually agree with supplied endpoints",
+      "limit": "No plotting-source or coordinate-level audit"
+    },
+    {
+      "dimension": "aggregation_weights",
+      "finding": "F2 directly supplies an additional fixed-weight diagnostic",
+      "evidence": "Changed losses at reference 80:20 weights give B−A = +0.08; F1 and F3 correctly acknowledge both losses and weights change in captions",
+      "limit": "Absence of this sensitivity in F1/F3 is not a numerical error or a composition-only claim"
+    },
+    {
+      "dimension": "uncertainty_and_applicability",
+      "finding": "All three separate supplied row intervals from derived aggregate point comparisons",
+      "evidence": "No aggregate intervals plotted; no significance, causal, or mechanism certification in captions",
+      "improvement": "F2/F3 can add the unspecified interval-construction and sampling-unit/independence caveat already explicit in F1"
+    },
+    {
+      "dimension": "layout_and_information_burden",
+      "finding": "Different layouts support different reading tasks",
+      "evidence": "F1 two panels show absolute loss; F2 four panels add sensitivity; F3 three panels visualize mix but repeat row weights",
+      "limit": "Full-size PNG inspection only; final publication scale not checked"
+    }
+  ],
+  "not_evaluated": [
+    "version identities or relative skill effectiveness",
+    "editable plotting source",
+    "vector output",
+    "designated source-library retrieval and design contribution",
+    "real-data estimator validity",
+    "external disciplinary novelty or journal suitability"
+  ],
+  "output_files": [
+    "review.md",
+    "findings.json"
+  ]
+}

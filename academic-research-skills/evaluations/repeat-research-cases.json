@@ -1,0 +1,14 @@
+{
+  "schema": "quality-evaluation-cases-1",
+  "scope": "sealed fixed synthetic evaluation cases; not research outputs",
+  "cases": [
+    {
+      "id": "research-judgement",
+      "skill": "topic-novelty",
+      "prompt": "Improve this weak research plan using the supplied study profiles. Deliver a justified comparison of plausible research routes and choose the next discriminating work. Keep the scientific objective and distinguish an idea from established knowledge. Do not conduct a new empirical study. Write judgement.md and a short operation note.",
+      "material_files": [
+        "fixtures/heldout/research-brief.md"
+      ]
+    }
+  ]
+}

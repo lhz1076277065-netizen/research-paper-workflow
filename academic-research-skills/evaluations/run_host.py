@@ -25,20 +25,43 @@ def save(p,obj):p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_tex
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8'))
 def hashfile(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
-def prepare(skills,out,comparison=None,repetitions=1):
+def prepare(skills,out,comparison=None,repetitions=1,cases_file=None):
     if repetitions<1:raise ValueError('repetitions must be positive')
+    cases=CASES
+    material_files={}
+    if cases_file:
+        base=Path(cases_file).resolve().parent;cases=load(cases_file)
+        if isinstance(cases,dict):cases=cases.get('cases')
+        if not isinstance(cases,list) or not cases:raise ValueError('cases must be a nonempty array')
+        import re
+        seen=set()
+        for i,case in enumerate(cases):
+            if not isinstance(case,dict) or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',str(case.get('id',''))) or case['id'] in seen:raise ValueError('Unique canonical case id required')
+            seen.add(case['id'])
+            if not isinstance(case.get('prompt'),str) or not case['prompt'].strip() or not isinstance(case.get('skill'),str) or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',case['skill']):raise ValueError('Case needs prompt and canonical skill name')
+            paths=case.get('material_files',[])
+            if not isinstance(paths,list) or any(not isinstance(x,str) for x in paths):raise ValueError('material_files must be an array of paths')
+            if not isinstance(case.get('material',''),str):raise ValueError('material must be text')
+            texts=[case.get('material','')];refs=[]
+            for rel in paths:
+                path=(base/rel).resolve()
+                if not path.is_relative_to(base) or not path.is_file():raise ValueError('Material missing/outside cases directory')
+                texts.append('## '+rel+'\n'+path.read_text(encoding='utf-8'));refs.append({'path':str(path),'sha256':hashfile(path)})
+            case=dict(case);case['material']='\n\n'.join(texts);material_files[case['id']]=refs
+            cases[i]=case
     root=Path(out).absolute()
     if root.exists():raise ValueError('Use a fresh evaluation directory')
     root.mkdir(parents=True)
     arms={'without-skill':None,'release':Path(skills).resolve()}
     if comparison:arms['comparison']=Path(comparison).resolve()
     jobs=[]
-    for case in CASES:
+    for case in cases:
         for arm,skillroot in arms.items():
             for rep in range(repetitions):
                 entry=skillroot/case['skill']/'SKILL.md' if skillroot else None
                 job={'case_id':case['id'],'condition':arm,'replicate':rep,'synthetic_material':True,
                      'user_prompt':case['prompt'],'material':case['material'],
+                     'material_files':material_files.get(case['id'],[]),
                      'skill_entry':str(entry) if entry else None,'skill_entry_sha256':hashfile(entry) if entry else None,
                      'initial_skill_text':entry.read_text(encoding='utf-8') if entry else '',
                      'adapter_contract':'Supply the prompt/material and the condition entry only; expose equal tools and permissions. Record additional resource reads and tool calls if the host can. Do not pass other-arm answers.'}
@@ -64,6 +87,8 @@ def run(suite,command,out,host_label,model_label,timeout=180):
     for job in suite['jobs']:
         request=Path(job['request'])
         if hashfile(request)!=job['request_sha256']:raise ValueError('Evaluation input changed: '+job['id'])
+        for ref in load(request).get('material_files',[]):
+            if hashfile(ref['path'])!=ref['sha256']:raise ValueError('Evaluation material changed: '+job['id'])
         work=root/job['id'];work.mkdir();output=work/'answer.txt'
         argv=[x.replace('{request}',str(request)).replace('{output}',str(output)) for x in command]
         start=time.monotonic()
@@ -82,11 +107,11 @@ def run(suite,command,out,host_label,model_label,timeout=180):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='action',required=True)
-    a=sub.add_parser('prepare');a.add_argument('--skills',required=True);a.add_argument('--comparison-skills');a.add_argument('--out',required=True);a.add_argument('--repetitions',type=int,default=1)
+    a=sub.add_parser('prepare');a.add_argument('--skills',required=True);a.add_argument('--comparison-skills');a.add_argument('--out',required=True);a.add_argument('--repetitions',type=int,default=1);a.add_argument('--cases')
     a=sub.add_parser('run');a.add_argument('--suite',required=True);a.add_argument('--command-json',required=True);a.add_argument('--out',required=True);a.add_argument('--host-label',required=True);a.add_argument('--model-label',required=True);a.add_argument('--timeout',type=float,default=180)
     a=p.parse_args()
     try:
-        result=prepare(a.skills,a.out,a.comparison_skills,a.repetitions) if a.action=='prepare' else run(load(a.suite),load(a.command_json),a.out,a.host_label,a.model_label,a.timeout)
+        result=prepare(a.skills,a.out,a.comparison_skills,a.repetitions,a.cases) if a.action=='prepare' else run(load(a.suite),load(a.command_json),a.out,a.host_label,a.model_label,a.timeout)
         print(json.dumps(result,ensure_ascii=False,indent=2));return 3 if any(x['status']!='answer_received' for x in result.get('runs',[])) else 0
     except (ValueError,OSError,KeyError) as exc:print(json.dumps({'status':'error','error':str(exc)},ensure_ascii=False),file=sys.stderr);return 2
 if __name__=='__main__':raise SystemExit(main())

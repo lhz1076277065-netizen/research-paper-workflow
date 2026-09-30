@@ -67,6 +67,24 @@ class Sources(unittest.TestCase):
         with self.assertRaises(u.UpstreamError):u.read_source(index,self.path,api=self.api)
     def test_missing_entry_rejected(self):
         with self.assertRaises(u.UpstreamError):u.read_source(self.index(),'old/SKILL.md',api=self.api)
+    def test_verified_read_cache_reuses_bytes_without_network(self):
+        index=self.index()
+        with tempfile.TemporaryDirectory() as t:
+            path=Path(t)/'entry.md'
+            self.assertEqual(u.read_source(index,self.path,api=self.api,cache=path),self.text)
+            self.assertEqual(u.read_source(index,self.path,api=lambda _:self.fail('cache reuse called the network'),cache=path),self.text)
+    def test_edited_cache_is_preserved_and_rejected(self):
+        index=self.index()
+        with tempfile.TemporaryDirectory() as t:
+            path=Path(t)/'entry.md';path.write_text('User edits')
+            with self.assertRaises(u.UpstreamError):u.read_source(index,self.path,api=self.api,cache=path)
+            self.assertEqual(path.read_text(),'User edits')
+    def test_cache_cannot_hide_a_changed_index_blob(self):
+        index=self.index()
+        with tempfile.TemporaryDirectory() as t:
+            path=Path(t)/'entry.md';path.write_text(self.text)
+            index['files'][self.path]['blob_sha']='c'*40
+            with self.assertRaises(u.UpstreamError):u.read_source(index,self.path,cache=path)
     def test_unsupported_binary_response(self):
         with self.assertRaises(u.UpstreamError):u.read_source(self.index(),self.path,api=lambda _: {'type':'file','encoding':'none'})
     def test_unknown_semantic_quality_not_faked(self):

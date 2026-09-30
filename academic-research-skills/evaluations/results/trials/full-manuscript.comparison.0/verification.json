@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "input/source hashes, eight table rows and intervals, arithmetic, direction, completeness, figure/render files",
+  "input_checks": [
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-20260930061350/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/manuscript.md",
+      "sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+      "match": true
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-20260930061350/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+      "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "match": true
+    }
+  ],
+  "skill_entry_sha256": "96e0fbda552a534362fc9101b645298f6156a5dc104bd46985bd74db7f08b88f",
+  "source_snapshots_checked": 19,
+  "source_row_count": 8,
+  "weighted": {
+    "reference": {
+      "A": "4.8",
+      "B": "4.36",
+      "B_minus_A": "-0.44"
+    },
+    "changed": {
+      "A": "6.6",
+      "B": "7.52",
+      "B_minus_A": "0.92"
+    }
+  },
+  "stratum_B_minus_A": {
+    "reference:S1": "-0.8",
+    "reference:S2": "1.0",
+    "changed:S1": "-0.2",
+    "changed:S2": "1.2"
+  },
+  "manuscript_pdf_pages": 5,
+  "figure_dimensions_mm": [
+    179.99999491373697,
+    115.00000033908421
+  ],
+  "minimum_figure_font_pt": 7.0,
+  "human_review": "not performed",
+  "causal_or_significance_analysis": "not performed"
+}

@@ -1,0 +1,149 @@
+{
+  "case_id": "research-judgement",
+  "condition": "comparison",
+  "replicate": 0,
+  "completed_at_utc": "2026-09-30T07:00:54.206744+00:00",
+  "material_is_synthetic": true,
+  "actual_reads": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-suite/requests/research-judgement.comparison.0.json",
+      "role": "frozen request",
+      "version": "frozen comparison replicate 0",
+      "sha256": "3c43a1800091fbbf6ce22380dbaf7ee192b3d547a77bb4bd75edd69bee73ab2e"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/research-brief.md",
+      "role": "synthetic material",
+      "version": "frozen heldout fixture; not a Skill protocol",
+      "sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/SKILL.md",
+      "role": "Skill entry",
+      "version": "3.1.0",
+      "sha256": "a50bd6aa7884fd3351abf4c1317cdf9aae27b4f44877c890e250d99244e088ae"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/references/protocol.md",
+      "role": "candidate judgement protocol",
+      "version": "3.1.0 source tree; no independent version declared",
+      "sha256": "605ed64836fbc40253b6bdbb7ede25f20e4ddc336b1a95b2bfb8f8a53be74e72"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/references/provider-policy.md",
+      "role": "source and execution policy",
+      "version": "3.1.0 source tree; no independent version declared",
+      "sha256": "18e49c0e05e0debd255ad8c0025393685f583ab42c98ed38a861c2181724ee7a"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/references/execution-handoff.md",
+      "role": "actual handoff guidance",
+      "version": "3.1.0 source tree; no independent version declared",
+      "sha256": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b"
+    }
+  ],
+  "integrity_checks": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/research-brief.md",
+      "expected_sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "actual_sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "matched": true
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/SKILL.md",
+      "expected_sha256": "a50bd6aa7884fd3351abf4c1317cdf9aae27b4f44877c890e250d99244e088ae",
+      "actual_sha256": "a50bd6aa7884fd3351abf4c1317cdf9aae27b4f44877c890e250d99244e088ae",
+      "matched": true
+    }
+  ],
+  "external_sources_read": [],
+  "source_selection": "Supplied synthetic profiles suffice for this bounded comparison. No real-literature or external professional-source claim is made; repository-sources.json was not read because no external Skill was selected.",
+  "skill_used": {
+    "name": "topic-novelty",
+    "version": "3.1.0",
+    "entry": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/SKILL.md",
+    "used_for": [
+      "candidate questions",
+      "nearest-neighbor comparison restricted to supplied fabricated profiles",
+      "falsifiable contribution and boundary claims",
+      "next-work selection",
+      "actual handoff"
+    ],
+    "scope": "local research-judgement task; no complete research project or manuscript claimed",
+    "adaptation": "Current agent performed the bounded judgement directly; candidate cards were integrated into one comparison; real-literature novelty checking and empirical feasibility work were reserved for later, as requested. No different host, local LLM, or sub-agent was used."
+  },
+  "tool_operations": [
+    {
+      "tool": "exec_command",
+      "operation": "Read the frozen request with cat."
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Read material and Skill entry with Python stdlib; calculate and print their SHA-256."
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Read three necessary relative resources with cat in independent parallel tool calls."
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Write judgement.md, operation-note.md, and execution.json inside the designated output directory; record hashes and assert requested provenance matches."
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Final reread and file/JSON/provenance/output-integrity review; update execution.json with the actual checks."
+    }
+  ],
+  "formal_outputs": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.0/judgement.md",
+      "role": "justified comparison and next discriminating work",
+      "sha256": "7f3aac436de3e8b516c49ee281a6ee5f127f9932710733b0da0a200ca459c562"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.0/operation-note.md",
+      "role": "short operation note",
+      "sha256": "c9d8831a8160db0f70a8dfd6b3b3a474a216b77cb4f56b59a98bc2d59080be64"
+    }
+  ],
+  "review": {
+    "status": "completed",
+    "scientific_checks": [
+      "scientific reliability objective preserved",
+      "each fabricated profile separated from unsupported extrapolation",
+      "four plausible routes compared with needed evidence and falsifiers",
+      "specific identifiability audit chosen with conditional pilot decision",
+      "symbolic example labeled non-empirical and limited to gain identification",
+      "no simulation, empirical result, or literature novelty claim"
+    ],
+    "file_checks": [
+      "Three expected files exist in the output directory.",
+      "Request, material, Skill entry, and three relative-resource hashes remain unchanged.",
+      "All frozen material and Skill-entry expected hashes match.",
+      "Formal-output SHA-256 hashes match saved files.",
+      "execution.json parses successfully.",
+      "All four route comparisons, falsifiers, empirical-work exclusion, and symbolic-example labels are present.",
+      "Operation note is short (under 250 whitespace-delimited words).",
+      "Unavailable token, cost, and exact model values are unknown."
+    ],
+    "scope": "Desk review of written reasoning and provenance; no empirical validation or independent reviewer claimed."
+  },
+  "not_performed": [
+    "new empirical study",
+    "simulator execution",
+    "real-literature search",
+    "external professional Skill loading",
+    "Skill-source modification",
+    "delegation"
+  ],
+  "measurement": {
+    "token_usage": "unknown",
+    "cost": "unknown",
+    "accurate_model_identifier": "unknown"
+  },
+  "limitations": [
+    "R1–R4 are fabricated profiles, not real studies.",
+    "No numeric precision ranges, observations, full acquisition models, or validated deployment diagnostics are supplied.",
+    "Real novelty, simulator outcomes, and deployment reliability remain unverified."
+  ]
+}

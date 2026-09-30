@@ -1,0 +1,302 @@
+{
+  "case_id": "main-figure",
+  "condition": "comparison",
+  "replicate": 0,
+  "synthetic_material": true,
+  "status": "complete",
+  "figure_revision": 2,
+  "request_and_local_resources_read": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-suite/requests/main-figure.comparison.0.json",
+      "sha256": "1845c87488b5ec9654a163fe2d7a0a6ea6ec1d96de3db997847273ce73743eb1",
+      "scope": "entire frozen request"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+      "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "expected_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "match": true,
+      "scope": "entire supplied material"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/figure-brief.md",
+      "sha256": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb",
+      "expected_sha256": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb",
+      "match": true,
+      "scope": "entire supplied material"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/scientific-visualization/SKILL.md",
+      "sha256": "cfeb29abb2319699bed4efbdea3d150ca3aee3054d27ad6ee3b4c06fbbbda789",
+      "expected_sha256": "cfeb29abb2319699bed4efbdea3d150ca3aee3054d27ad6ee3b4c06fbbbda789",
+      "match": true,
+      "version": "3.1.0",
+      "scope": "entire entry"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/scientific-visualization/references/figure-production.md",
+      "sha256": "89f59d774de59a9e6eee84461d8642b458e6be9c480f9a8dd8f9a9b163af1acd",
+      "version": "3.1.0",
+      "scope": "entire relevant figure resource"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/scientific-visualization/references/provider-policy.md",
+      "sha256": "18e49c0e05e0debd255ad8c0025393685f583ab42c98ed38a861c2181724ee7a",
+      "version": "3.1.0",
+      "scope": "entire relevant figure resource"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/scientific-visualization/references/execution-handoff.md",
+      "sha256": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+      "version": "3.1.0",
+      "scope": "entire relevant figure resource"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/scientific-visualization/references/protocol.md",
+      "sha256": "8ef13cd29d551c92b10f19d5e2fd16e303e62c5b802af62d6003ec2322c23238",
+      "version": "3.1.0",
+      "scope": "entire relevant figure resource"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-common/repository-sources.json",
+      "sha256": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0",
+      "scope": "designated repository list"
+    }
+  ],
+  "professional_source": {
+    "repository": "https://github.com/Haojae/scipilot-figure-skill",
+    "selected_current_branch": "main",
+    "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "declared_version": "v2.1.0 (repository overview)",
+    "source_files_read": [
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/SKILL.md",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/SKILL.md",
+        "sha256": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc",
+        "read_scope": "entire entry"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/LICENSE",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/LICENSE",
+        "sha256": "9138113e804093683aea49033b274c7ab35babce90c3acb86eae115d44585671",
+        "read_scope": "entire license"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/references/chart_selection.md",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/references/chart_selection.md",
+        "sha256": "71fe5970b4a9aee66d6c02d1e0696b367f7dafd9c7e17502ee66c56f36870852",
+        "read_scope": "entire chart selection"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/references/visual_review.md",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/references/visual_review.md",
+        "sha256": "c4ca4a28a315e7de46f67b5972b3765b979f01fe30616c0681dd2595bed554a1",
+        "read_scope": "entire visual review"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/references/publication_checklist.md",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/references/publication_checklist.md",
+        "sha256": "9e2c5f0725c57e71eee0ff66ebac61d2d89c8cec4bd9c958db0184eea4c8abf6",
+        "read_scope": "entire publication checklist"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/references/plot_recipes.md",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/references/plot_recipes.md",
+        "sha256": "3d4f47a6e320d1c0635ee2fc329484952d4e528b1fe9b552e79828b88336c002",
+        "read_scope": "general setup, section 6 error bars, section 9 multi-panel"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/references/journal_specs.md",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/references/journal_specs.md",
+        "sha256": "a8e9654f55994d692d585e69fb3a68f5618ecf766d8ce0e95fdda6d12e786263",
+        "read_scope": "cross-journal summary table only; no journal compliance claimed"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/references/viz_pitfalls.md",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/references/viz_pitfalls.md",
+        "sha256": "f103ae47611c6c7429629cb3161c5cdc8a0c9fba7f14d9f83159c96f848a9818",
+        "read_scope": "contents and relevant comparisons, interval/statistics, encoding and layout sections"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/scripts/profile_data.py",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/scripts/profile_data.py",
+        "sha256": "d8a2a72c2607c390f2d3ed1508209d515ad4fbf833fa1602ab9da519b3596ec4",
+        "read_scope": "imports/function inventory; data typing, group profiling, suggestions and profile_data entry; executed on frozen summaries"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/scripts/setup_style.py",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/scripts/setup_style.py",
+        "sha256": "d58ef81684577bb605a92733dd2ca48ade03b4f819b3d255fd62f319be7fea82",
+        "read_scope": "entire implementation; setup_style(general, en) executed"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/scripts/layout_tools.py",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/scripts/layout_tools.py",
+        "sha256": "68e1d25774148fe78f5d87035d651f5e3707382502505cb11f62f9ec7ae88e49",
+        "read_scope": "helper/label/finalization implementations; executed"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/scripts/visual_qa.py",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/scripts/visual_qa.py",
+        "sha256": "67675709e523c76e2748d50749de7bc6332f07df865379b26d024321fb40120f",
+        "read_scope": "glyph/layout/preview/report implementations; audit_layout and PDF render_preview executed"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/scripts/export_figure.py",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/scripts/export_figure.py",
+        "sha256": "40ce3bcd31dfc4b33e38a1cb180c75dc730ee6fa046f04934c79f285c6f890c1",
+        "read_scope": "export and grayscale implementations; export_figure executed with exact-size canvas"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/sources/scipilot/scripts/check_figure.py",
+        "url": "https://raw.githubusercontent.com/Haojae/scipilot-figure-skill/43098ddb9e6a6d142218540c114f9ed38922fc42/scripts/check_figure.py",
+        "sha256": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06",
+        "read_scope": "format/raster/font/SVG checks and CLI; check_figure and strict CLI executed"
+      }
+    ],
+    "web_reads": [
+      "https://github.com/Haojae/scipilot-figure-skill"
+    ],
+    "metadata_retrieval": [
+      "https://api.github.com/repos/Haojae/scipilot-figure-skill",
+      "https://api.github.com/repos/Haojae/scipilot-figure-skill/commits/main",
+      "https://api.github.com/repos/Haojae/scipilot-figure-skill/git/trees/43098ddb9e6a6d142218540c114f9ed38922fc42?recursive=1"
+    ]
+  },
+  "professional_operation": "Chart selection, fixed-summary profiling, point-interval recipe, consistent two-panel encodings, actual style/label/layout functions, preview/read/revise loop, vector export and actual file audit served this main figure. Weighted arithmetic and source-coordinate checks are task-specific code.",
+  "adapted_in_host": true,
+  "adaptations": [
+    "No target journal supplied: neutral 7.2 x 4.5 in design; no journal approval/compliance assertion.",
+    "Summary-table row counts are not sampling n; raw-distribution profiling suggestions were not used.",
+    "Profiler NumPy boolean values required JSON .item() serialization; first preview attempt failed before plotting, then rerun succeeded.",
+    "Upstream layout finalization reset the custom rectangle: round-1 title/footer overlap corrected by setting the rectangle afterward; upstream sources were not modified.",
+    "pypdf absent: upstream PDF font audit returned INFO; existing PyMuPDF independently verified actual font embedding and rasterized the final PDF.",
+    "Saved grayscale copies from exact-size PNGs rather than upstream grayscale helper, which would re-save the PNG with a tight bounding box."
+  ],
+  "tool_operations": [
+    {
+      "tool": "exec_command",
+      "operation": "Read only this request, supplied materials, v3.1.0 entry/resources, designated sources list; verify SHA-256; inspect shared Python versions."
+    },
+    {
+      "tool": "web__run",
+      "operation": "Read the designated SciPilot repository overview to discover current main and figure workflow."
+    },
+    {
+      "tool": "exec_command/Python urllib",
+      "operation": "Read GitHub metadata and retrieve only selected pinned sources into the authorized output directory."
+    },
+    {
+      "tool": "apply_patch",
+      "operation": "Create plotting source, fix local serialization/layout adapter, write caption and review; no Skill source changes."
+    },
+    {
+      "tool": "exec_command/Python",
+      "operation": "Copy frozen materials; run actual profile/style/plot/audit/preview; after round-2 visual review export PDF/SVG/PNG; run strict file checks and independent PDF/SVG checks."
+    },
+    {
+      "tool": "view_image",
+      "operation": "Six actual image inspections: round-1 color/grayscale, round-2 color/grayscale, and final PDF rasterization color/grayscale."
+    }
+  ],
+  "numeric_review": {
+    "result": "PASS",
+    "source_rows_and_intervals_checked": 8,
+    "aggregate_points_checked": 4,
+    "reference_A_B": [
+      "4.80",
+      "4.36"
+    ],
+    "changed_A_B": [
+      "6.60",
+      "7.52"
+    ],
+    "reference_B_minus_A": "-0.44",
+    "changed_B_minus_A": "+0.92",
+    "aggregate_intervals": "not supplied; not estimated"
+  },
+  "visual_review": {
+    "round_1": "FAILED visual reading despite no layout-audit issues: title/panel-title overlap; footer/tick overlap.",
+    "round_2": "PASS on eight visual criteria in color and grayscale after rectangle correction.",
+    "final_artifact_review": "PASS on final PDF rasterization and grayscale; numeric labels, glyphs, clipping, occlusion, alignment, spacing, encoding, interval visibility and shared axes inspected.",
+    "scope": "Screen review at intended 7.2 x 4.5 in rasterization (150 dpi); no physical print or color-vision simulation."
+  },
+  "formal_outputs": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/plot_main_figure.py",
+      "sha256": "61ebf4d9dc63afac533cd7f8f8e8e2291ab8e75c9c872cc88dc2904274610a91",
+      "bytes": 9366
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/main-figure.pdf",
+      "sha256": "43d7b221b2b120a60db0d5bd3f78b1bba108e888de2bd11fa5a2f9fefe9e3e47",
+      "bytes": 28989
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/main-figure.svg",
+      "sha256": "7eea251717c68dfef68b23054a844221adaba32dbd683cba32ff37032d07770e",
+      "bytes": 25732
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/main-figure.png",
+      "sha256": "4ab768110d1db4d0d2444148e010a1bbb8738c18f58adf6ae13ea0ba853c0a42",
+      "bytes": 168600
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/caption.md",
+      "sha256": "bd19acaa58be71f703bc6df15bd7c6ba707a7b1d4a7398dd82cc426d51ebea91",
+      "bytes": 1250
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/review.md",
+      "sha256": "3c95945456d2f1a2943d7d7accb343696f890bc9d532c4b206fd849eebfcf2c8",
+      "bytes": 3283
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/numeric-review.json",
+      "sha256": "cbedf62a69a11e0ea38e7af1eb3c3dd581b4486343bf9163714cea31473f2cdd",
+      "bytes": 3543
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/file-review.json",
+      "sha256": "303fe60f490c84b089c5db5d77ee48020094b06ad313be085e97c7011471f5b6",
+      "bytes": 2330
+    }
+  ],
+  "supporting_outputs": [
+    "inputs/request.json",
+    "inputs/fixed-results.csv",
+    "inputs/figure-brief.md",
+    "sources/scipilot/",
+    "data-profile.json",
+    "preview.png",
+    "preview_grayscale.png",
+    "final-pdf-preview.png",
+    "final-pdf-preview_grayscale.png",
+    "review-r1-preview.png",
+    "review-r1-preview_grayscale.png"
+  ],
+  "runtime": {
+    "python": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "python_version": "3.12.14",
+    "packages": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "Pillow": "12.3.0",
+      "PyMuPDF": "1.28.2"
+    }
+  },
+  "limits": [
+    "Manufactured fixed summaries only; sampling units/independence, interval construction and loss units unspecified.",
+    "No aggregate/difference intervals, significance tests, causal identification, mechanism or raw-data distributions inferred.",
+    "No other conditions/answers/reports/rubrics read; no delegated or alternate assistant/model host; no Skill source modified."
+  ],
+  "measurements": {
+    "exact_model_identifier": "unknown",
+    "input_tokens": "unknown",
+    "output_tokens": "unknown",
+    "total_tokens": "unknown",
+    "cost": "unknown"
+  }
+}

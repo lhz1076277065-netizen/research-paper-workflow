@@ -1,0 +1,199 @@
+{
+  "source": "<DataFrame>",
+  "n_rows": 8,
+  "n_cols": 7,
+  "columns": {
+    "condition": {
+      "type": "unknown",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "stratum": {
+      "type": "unknown",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "method": {
+      "type": "unknown",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0
+    },
+    "n": {
+      "type": "ordinal",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 8,
+      "n_unique": 2,
+      "categories": [
+        [
+          "80",
+          4
+        ],
+        [
+          "20",
+          4
+        ]
+      ],
+      "min_group_n": 4,
+      "max_group_n": 4,
+      "small_groups_flag": true
+    },
+    "loss": {
+      "type": "continuous",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 8,
+      "mean": 6.15,
+      "median": 6.0,
+      "sd": 2.169265840258931,
+      "min": 3.2,
+      "max": 9.0,
+      "skewness": -0.010800410587684592,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.575000000000002,
+      "outlier_hi": 13.225000000000001,
+      "needs_log_axis": false
+    },
+    "lo": {
+      "type": "continuous",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 8,
+      "mean": 5.7,
+      "median": 5.55,
+      "sd": 2.0901127789120446,
+      "min": 2.9,
+      "max": 8.4,
+      "skewness": -0.002464185266182313,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.9499999999999993,
+      "outlier_hi": 12.649999999999999,
+      "needs_log_axis": false
+    },
+    "hi": {
+      "type": "continuous",
+      "n_total": 8,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 8,
+      "mean": 6.6000000000000005,
+      "median": 6.45,
+      "sd": 2.2507141723715796,
+      "min": 3.5,
+      "max": 9.6,
+      "skewness": -0.02032631754225102,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.20000000000000195,
+      "outlier_hi": 13.800000000000002,
+      "needs_log_axis": false
+    }
+  },
+  "correlation": {
+    "columns": [
+      "loss",
+      "lo",
+      "hi"
+    ],
+    "matrix": {
+      "loss": {
+        "loss": 1.0,
+        "lo": 0.999,
+        "hi": 1.0
+      },
+      "lo": {
+        "loss": 0.999,
+        "lo": 1.0,
+        "hi": 0.998
+      },
+      "hi": {
+        "loss": 1.0,
+        "lo": 0.998,
+        "hi": 1.0
+      }
+    },
+    "pairs_sorted": [
+      {
+        "a": "loss",
+        "b": "hi",
+        "r": 0.9995089768139528,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "loss",
+        "b": "lo",
+        "r": 0.9994305963132849,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "lo",
+        "b": "hi",
+        "r": 0.9978826068818157,
+        "magnitude": "very strong"
+      }
+    ]
+  },
+  "group_summary": {
+    "by": [
+      "condition",
+      "stratum",
+      "method"
+    ],
+    "n_groups": 8,
+    "min_n_per_group": 1,
+    "max_n_per_group": 1,
+    "median_n_per_group": 1,
+    "small_groups_flag": true,
+    "tiny_groups_flag": true,
+    "per_group_counts": [
+      [
+        "('changed', 'S1', 'A')",
+        1
+      ],
+      [
+        "('changed', 'S1', 'B')",
+        1
+      ],
+      [
+        "('changed', 'S2', 'A')",
+        1
+      ],
+      [
+        "('changed', 'S2', 'B')",
+        1
+      ],
+      [
+        "('reference', 'S1', 'A')",
+        1
+      ],
+      [
+        "('reference', 'S1', 'B')",
+        1
+      ],
+      [
+        "('reference', 'S2', 'A')",
+        1
+      ],
+      [
+        "('reference', 'S2', 'B')",
+        1
+      ]
+    ]
+  },
+  "warnings": [
+    "列 'n' 至少有一个类别 n<10 — 小样本必须展示原始数据点，不要只画均值柱状图。"
+  ],
+  "suggestions": [
+    "分类 vs 连续，小样本（每组 n<10）→ **箱线图/小提琴图 + stripplot 叠加原始点**；**避免**只画均值柱状图，会掩盖分布。",
+    "≥3 个连续变量 → 相关性热力图（['loss', 'lo', 'hi']）或 pairplot 散点矩阵"
+  ],
+  "interpretation": "Eight supplied summary rows, not eight independent samples. Profiler group counts/correlations are not inferential evidence; supplied n defines weights."
+}

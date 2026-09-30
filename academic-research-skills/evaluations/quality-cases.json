@@ -1,0 +1,32 @@
+{
+  "schema": "quality-evaluation-cases-1",
+  "scope": "fixed synthetic development cases; initial research observation informed navigation repair, so its repeat is not an untouched holdout; not research outputs",
+  "cases": [
+    {
+      "id": "research-judgement",
+      "skill": "topic-novelty",
+      "prompt": "Improve this weak research plan using the supplied study profiles. Deliver a justified comparison of plausible research routes and choose the next discriminating work. Keep the scientific objective and distinguish an idea from established knowledge. Do not conduct a new empirical study. Write judgement.md and a short operation note.",
+      "material_files": [
+        "fixtures/heldout/research-brief.md"
+      ]
+    },
+    {
+      "id": "main-figure",
+      "skill": "scientific-visualization",
+      "prompt": "Complete the fixed main-figure request in the supplied brief using only the supplied results. Deliver editable source, vector figure, PNG preview, caption, and actual numeric/visual review with a short professional-operation note.",
+      "material_files": [
+        "fixtures/heldout/fixed-results.csv",
+        "fixtures/heldout/figure-brief.md"
+      ]
+    },
+    {
+      "id": "full-manuscript",
+      "skill": "manuscript-writing",
+      "prompt": "Revise the entire supplied synthetic manuscript to make its contribution and argument clear and forceful while preserving what its evidence supports. Use a suitable professional full-writing workflow and the designated anti-defensive source within the common library. Deliver the complete editable manuscript, a substantive factual/claim comparison and a short operation note; this is a fixed development sample, not a new research paper.",
+      "material_files": [
+        "fixtures/heldout/manuscript.md",
+        "fixtures/heldout/fixed-results.csv"
+      ]
+    }
+  ]
+}

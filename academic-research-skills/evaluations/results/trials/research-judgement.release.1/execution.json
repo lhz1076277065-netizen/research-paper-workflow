@@ -1,0 +1,131 @@
+{
+  "case_id": "research-judgement",
+  "condition": "release",
+  "replicate": 1,
+  "synthetic_material": true,
+  "recorded_at_utc": "2026-09-30T07:57:35.489492+00:00",
+  "skill": {
+    "name": "topic-novelty",
+    "version": "3.2.0-rc.1",
+    "entry": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/SKILL.md",
+    "entry_sha256_verified": true
+  },
+  "material_sha256_verified": true,
+  "files_read": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-repeat-suite/requests/research-judgement.release.1.json",
+      "sha256": "419774ebd80b4911523287f850c82809c10999b9631d5c22cbcf32316161ba76",
+      "version": "frozen request material"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/research-brief.md",
+      "sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "version": "frozen request material"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/SKILL.md",
+      "sha256": "d9703f5f5a956ee468311776bb78c12ffc2b8ab18fa6f0b5ced3fdd41293c895",
+      "version": "3.2.0-rc.1"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/references/research-quality.md",
+      "sha256": "d0ecd5f49e239ee9a22629a96eca15314623f1e837db7d722ba7ccef2626557e",
+      "version": "3.2.0-rc.1"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/references/provider-policy.md",
+      "sha256": "18e49c0e05e0debd255ad8c0025393685f583ab42c98ed38a861c2181724ee7a",
+      "version": "3.2.0-rc.1"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/references/execution-handoff.md",
+      "sha256": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+      "version": "3.2.0-rc.1"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/references/protocol.md",
+      "sha256": "605ed64836fbc40253b6bdbb7ede25f20e4ddc336b1a95b2bfb8f8a53be74e72",
+      "version": "3.2.0-rc.1"
+    }
+  ],
+  "external_sources_used": [],
+  "tools_operations": [
+    {
+      "tool": "exec_command",
+      "operation": "Read the frozen request with cat."
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Use the supplied Python interpreter and stdlib to hash-check and read the material and Skill entry; read research-quality, provider-policy, and execution-handoff references."
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Read the task-relevant protocol reference with cat."
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Write judgement.md, operation-note.md, and execution.json in the assigned output directory using Python stdlib; record actual input hashes."
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Re-read judgement.md and operation-note.md; verify output SHA-256, unchanged input hashes, exact output inventory, and unavailable model metadata."
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Clarify the identifiability decision criterion and separation of development labels from sealed evaluation truth; finalize the execution record and verify hashes and JSON readability."
+    }
+  ],
+  "application_scope": [
+    "Research problem framing",
+    "Profile-bound knowledge and novelty limits",
+    "Comparison of three plausible research routes",
+    "Falsification and next discriminating work",
+    "Prospective validation and claim boundaries"
+  ],
+  "adaptation": {
+    "execution_host": "Current Codex agent and existing model",
+    "additional_host_or_model_dispatch": false,
+    "external_professional_skill_selection": "Not required for this fixed synthetic planning task",
+    "full_empirical_workflow": "Not invoked; the request prohibits a new empirical study"
+  },
+  "formal_outputs": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.release.1/judgement.md",
+      "sha256": "7d6bcaa469298d4c10aee8a0cffb51bb7e23adc56813c23c0b7c245775cd5b23"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.release.1/operation-note.md",
+      "sha256": "70ab7fc865ac33a3742cbecf956a87d8c199c079e7b61992ae22c08034f449fa"
+    }
+  ],
+  "review": {
+    "status": "Completed content self-review and post-write artifact checks",
+    "checks": [
+      "R1–R4 claims remain bounded to supplied profiles",
+      "Research objective is reliability of apparent gains",
+      "Routes have distinct contributions and decisive evidence",
+      "Next work includes explicit decision branches and fallback",
+      "No empirical results or real-literature novelty claimed",
+      "Output files re-read after writing",
+      "Input and Skill hashes still match",
+      "Development-label access distinguished from sealed evaluation truth",
+      "Generated files match recorded hashes and execution.json parses",
+      "Output inventory contains only the three requested artifacts"
+    ]
+  },
+  "limitations": [
+    "Only fabricated summaries supplied; no original equations, effect sizes, loss definitions, or precision thresholds",
+    "No empirical study or simulator execution",
+    "No real-literature novelty verification",
+    "Self-review only; no external expert evaluation"
+  ],
+  "measurements": {
+    "actual_model_identifier": "unknown",
+    "input_tokens": "unknown",
+    "output_tokens": "unknown",
+    "total_tokens": "unknown",
+    "cost": "unknown"
+  },
+  "no_subagents": true,
+  "skill_sources_modified": false
+}

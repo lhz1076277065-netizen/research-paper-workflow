@@ -1,0 +1,273 @@
+{
+  "schema_version": "execution-1",
+  "case_id": "full-manuscript",
+  "condition": "release",
+  "replicate": 0,
+  "synthetic_material": true,
+  "completed_at_utc": "2026-09-30T08:01:20.698001+00:00",
+  "host": "current Codex desktop host",
+  "agent": "/root/manuscript_candidate_v32",
+  "model_id": "unknown",
+  "token_usage": "unknown",
+  "cost": "unknown",
+  "total_elapsed_seconds": "unknown",
+  "delegation": "none",
+  "assistant_host_or_model_changed": false,
+  "skill": {
+    "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/manuscript-writing/SKILL.md",
+    "version": "3.2.0-rc.1",
+    "sha256": "b28256342c0d611818178a3582196af331469aaf034aa1d9ce5768d459a67e73",
+    "checked": true,
+    "scope": "Complete supplied synthetic manuscript; no real research or submission performed"
+  },
+  "local_files_read": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-suite/requests/full-manuscript.release.0.json",
+      "role": "assigned frozen request",
+      "sha256": "d6cc356c929ddd547d26523ed2632dea0d50701a0461fd583a71f71c7b64765e"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/manuscript.md",
+      "role": "frozen manuscript material",
+      "sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+      "expected_hash_matched": true
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+      "role": "frozen manuscript material",
+      "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "expected_hash_matched": true
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/manuscript-writing/SKILL.md",
+      "role": "requested skill entry",
+      "sha256": "b28256342c0d611818178a3582196af331469aaf034aa1d9ce5768d459a67e73",
+      "expected_hash_matched": true
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/manuscript-writing/references/protocol.md",
+      "role": "requested-version relative reference",
+      "sha256": "e979bd6af0f926e4987801b89266c6760b31e9d0cffd33488d91c4daa8789213"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/manuscript-writing/references/final-expression.md",
+      "role": "requested-version relative reference",
+      "sha256": "985b3a4b8a82b81ba6976fb2ae47cd40c97ed41cb89cd933c1cd77d55689f8bf"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/manuscript-writing/references/provider-policy.md",
+      "role": "requested-version relative reference",
+      "sha256": "18e49c0e05e0debd255ad8c0025393685f583ab42c98ed38a861c2181724ee7a"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/manuscript-writing/references/execution-handoff.md",
+      "role": "requested-version relative reference",
+      "sha256": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-common/repository-sources.json",
+      "role": "shared permitted external library",
+      "sha256": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0"
+    }
+  ],
+  "external_sources": [
+    {
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "commit": "65d6e786832e2c52832713117bbbf5096b56f77f",
+      "entry": "skills/scientific-writing/SKILL.md",
+      "version": "2.1",
+      "used": "Full evidence outline, complete section drafting, numeric/method/result/citation/declaration reconciliation and post-expression factual review",
+      "adaptation": "In-host agent review for a fixed synthetic development sample; no named human verifier, journal compliance, authorship approval or submission gate claimed"
+    },
+    {
+      "repository": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill",
+      "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "entry": "skills/anti-defensive-writing-en/SKILL.md",
+      "version": "not declared; pinned commit",
+      "used": "Actual final-expression pass across complete manuscript argument; revised title, abstract, Introduction, Discussion and Conclusion; fidelity review of Methods, Results, table, figure caption and declarations",
+      "adaptation": "Contribution-first, direct evidence-bound prose; preserve adverse S2 results, changed-average reversal, the original metric, uncertainty and non-causal scope rather than omitting or reframing inconvenient evidence"
+    },
+    {
+      "repository": "https://github.com/Haojae/scipilot-figure-skill",
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "entry": "SKILL.md",
+      "version": "not declared in entry; references describe v2.1",
+      "used": "Actual summary profiling, dot/interval chart selection, style setup, layout audit, preview/visual review, exact-size vector/raster export and compliance inspection",
+      "adaptation": "Summary-row profiler counts/correlations are not scientific sample inference; general format without journal claims; original intervals preserved; no tests; grayscale generated without the upstream helper that would overwrite the exact-size PNG"
+    },
+    {
+      "repository": "https://github.com/Yuan1z0825/nature-skills",
+      "commit": "84880815fb37317b3766bff2c2abba395b8993c3",
+      "entry": "skills/nature-figure/SKILL.md",
+      "version": "2.8.0 (manifest)",
+      "used": "Read-only figure-contract/design inspection and saved-backend lookup",
+      "adaptation": "Backend lookup returned exit 1 with no backend. No Nature Figure rendering or native QA claimed; the permitted SciPilot route was selected for actual execution"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.00065",
+      "version": "v2; revised 2026-09-02",
+      "used": "Checked title, five authors, year, preprint status and DOI for editorial-workflow attribution; not benchmark evidence"
+    }
+  ],
+  "source_snapshots": {
+    "manifest": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/source-manifest.json",
+    "snapshot_count": 22,
+    "hashes_checked": true,
+    "read_extent": "Selected entries and requested references read; plot_recipes used the errorbar section plus inspected excerpts; scripts reviewed and invoked only as recorded"
+  },
+  "tool_operations": [
+    {
+      "tool": "exec_command",
+      "operation": "Read assigned request, exact material files, requested entry and four related version-specific references; verify three provided SHA-256 values; read shared repository allowlist",
+      "result": "all supplied checksums matched"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Search installed skill filename inventories for matching scientific-writing/anti-defensive/figure entries",
+      "result": "no matches; no other project condition or version read"
+    },
+    {
+      "tool": "web.run and exec_command/urllib",
+      "operation": "Open permitted GitHub repositories; discover HEAD trees, pin commits and fetch only selected entries/references/scripts into this output directory; open arXiv metadata",
+      "result": "source-discovery.json and source-manifest.json preserve versions and file hashes"
+    },
+    {
+      "tool": "load_workspace_dependencies and exec_command",
+      "operation": "Locate bundled runtimes; inspect installed package versions and LibreOffice wrapper; use existing packages without installation",
+      "result": "common Python 3.12.14, matplotlib 3.11.2, pandas 3.0.6, NumPy 2.5.3, Pillow 12.3.0, PyMuPDF 1.28.2; bundled python-docx 1.2.0"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Decimal arithmetic over all eight rows; generate evidence outline, professional full draft, final-expression revision, substantive comparison and diffs",
+      "result": "reference A/B 4.8/4.36 and −0.44; changed 6.6/7.52 and +0.92; four stratum differences verified"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Run SciPilot profile/style/layout/preview through plot_figure.py; after visual review export PDF/SVG/PNG and source-data CSV",
+      "result": "layout audit has no issues; exact 6.3 × 4.7-inch PDF/PNG; embedded Type0 fonts, minimum 8 pt; 300-dpi raster; all source values retained"
+    },
+    {
+      "tool": "view_image",
+      "operation": "Inspect actual figure preview and grayscale image",
+      "result": "complete data, interval distinction, legibility and redundant method markers reviewed"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Export full editable DOCX via python-docx, render it through bundled LibreOffice to PDF",
+      "result": "real DOCX and four-page PDF produced; LibreOffice exit 0"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "Run verify_deliverables.py and inspect PDF page boxes",
+      "result": "PASS: 95 editable text/table units match complete Markdown; input and source hashes unchanged; eight original rows/intervals and aggregate arithmetic match; all sections and decisive numbers present in PDF"
+    },
+    {
+      "tool": "view_image",
+      "operation": "Inspect four individual rendered manuscript pages and complete contact sheet",
+      "result": "full document and table/figure/caption/reference layout reviewed by current agent"
+    }
+  ],
+  "repairs_and_caveats": [
+    {
+      "issue": "Initial profile JSON serialization failed because upstream profiler returned a NumPy boolean",
+      "repair": "Convert NumPy scalar values using .item() in the local caller; leave upstream Skill/source snapshots unchanged",
+      "verified": "Preview and export subsequently completed"
+    },
+    {
+      "issue": "SciPilot check_figure could not inspect PDF fonts because optional pypdf/PyPDF2 is absent",
+      "repair": "Existing PyMuPDF independently confirmed embedded fonts, no Type3 font, no PDF raster image and minimum 8-pt figure text",
+      "verified": "Recorded in process/verification.json; no claim that the skipped upstream font check ran"
+    },
+    {
+      "issue": "LibreOffice emitted font-cache configuration warnings",
+      "result": "Nonfatal; actual PDF opened, text extracted, page bounds and all four rendered pages inspected"
+    }
+  ],
+  "formal_outputs": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/manuscript.md",
+      "sha256": "541891e2e8d841ea1aaf89d36a9fbdd423a3aa45f22e047418af33e8fdd48121",
+      "bytes": 10859
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/manuscript.docx",
+      "sha256": "3ed9c03770ac78e7f8af291e95214c05f108048f9b0cd66bd24702bbe95ffc3d",
+      "bytes": 162573
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/manuscript.pdf",
+      "sha256": "1c72864e39b9f1f2617cc3b1f1f4c06f8a0a26507c3eb890b207fd4a527954c1",
+      "bytes": 313971
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/factual_claim_comparison.md",
+      "sha256": "ca8bd18cd49f34c18fa26e1fff97df66e0a9f8f94ef3f46678d597954676bb05",
+      "bytes": 9391
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/operation_note.md",
+      "sha256": "aac8d858be3df24b65ed15b75ad37af2c59f7fd3b45ad1b5d38aae752c8b9421",
+      "bytes": 2841
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/manuscript_changes.diff",
+      "sha256": "7910b27e954e97bde7dfc1dc3987014d405b25e7235c9f50c0c2c70382db2c0f",
+      "bytes": 17115
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/figure1.pdf",
+      "sha256": "4b85f8a42090f0305a61ef2280b8901bc1ad7953074030e51f82ff8ae5848c3b",
+      "bytes": 24233
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/figure1.svg",
+      "sha256": "02f238183dad9441e11040160c480188814db428db46907a611daf648fe225ad",
+      "bytes": 18550
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/figure1.png",
+      "sha256": "d883302a8a6ab184531ba601cdde74e8ee39a8c36a3825f363e8cafc241c162b",
+      "bytes": 136297
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/figure1_source_data.csv",
+      "sha256": "1a347d7010db438cfb4656eba63fc5c0d1a6f954c77b899650a2c981cc0d2e55",
+      "bytes": 614
+    }
+  ],
+  "review": {
+    "subjects": [
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/manuscript.md",
+        "sha256": "541891e2e8d841ea1aaf89d36a9fbdd423a3aa45f22e047418af33e8fdd48121"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/manuscript.docx",
+        "sha256": "3ed9c03770ac78e7f8af291e95214c05f108048f9b0cd66bd24702bbe95ffc3d"
+      },
+      {
+        "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/manuscript.pdf",
+        "sha256": "1c72864e39b9f1f2617cc3b1f1f4c06f8a0a26507c3eb890b207fd4a527954c1"
+      }
+    ],
+    "factual_claim_comparison": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/factual_claim_comparison.md",
+    "numeric_and_file_check": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/process/verification.json",
+    "final_expression_review": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/process/final-expression_review.json",
+    "visual_review": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/process/visual_review.json",
+    "status": "completed in current agent",
+    "human_peer_review": "not performed"
+  },
+  "completed_scope": "Whole manuscript revision with actual editable Markdown/DOCX, rendered PDF, actual Figure 1 and source values, substantive factual/claim comparison, short operation note and execution provenance.",
+  "limitations": [
+    "Fixed synthetic sample; no new empirical research, raw observations, causal acquisition experiment, aggregate uncertainty estimate or significance test.",
+    "E2–E4 retained as supplied internal descriptions; separate full memos were not available.",
+    "External human verification, journal submission and real robustness validation were not performed.",
+    "Exact model identity, token usage and cost were not exposed; recorded unknown without estimation."
+  ],
+  "isolation": {
+    "other_condition_requests_or_answers_read": false,
+    "parent_reports_or_scoring_criteria_read": false,
+    "skill_source_modified": false,
+    "intentional_outputs_outside_assigned_directory": false
+  }
+}

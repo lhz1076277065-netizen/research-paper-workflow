@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "subject": "manuscript.md",
+  "subject_sha256": "541891e2e8d841ea1aaf89d36a9fbdd423a3aa45f22e047418af33e8fdd48121",
+  "checks": {
+    "frozen_input_and_entry_hashes": "matched",
+    "eight_rows_intervals_weights_and_aggregates": "matched; no aggregate intervals",
+    "docx_complete_text_and_table_parity": {
+      "matched_units": 95,
+      "embedded_figures": 1
+    },
+    "figure_export": {
+      "inches": [
+        6.3,
+        4.7
+      ],
+      "pixels": [
+        1890,
+        1410
+      ],
+      "dpi": 300,
+      "fonts": [
+        {
+          "name": "VKKBEM+DejaVuSans-Bold",
+          "type": "Type0",
+          "embedded_bytes": 8232
+        },
+        {
+          "name": "EBIISW+DejaVuSans",
+          "type": "Type0",
+          "embedded_bytes": 15760
+        }
+      ],
+      "minimum_font_pt": 8.0,
+      "pdf_raster_images": 0
+    },
+    "manuscript_pdf": {
+      "pages": 4,
+      "extracted_characters": 10761,
+      "all_main_sections": "present"
+    },
+    "public_source_snapshot_hashes": "matched"
+  },
+  "scope": "File and arithmetic verification; agent semantic/visual review is separate; no empirical or human-peer-review claim."
+}

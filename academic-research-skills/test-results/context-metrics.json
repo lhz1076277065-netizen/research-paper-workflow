@@ -1,0 +1,36 @@
+{
+  "version": "3.2.0-rc.1",
+  "entry_characters": {
+    "manuscript-writing": 711,
+    "publication-stewardship": 601,
+    "manuscript-review": 678,
+    "robustness-reproducibility": 603,
+    "research-design": 653,
+    "topic-novelty": 662,
+    "analysis-execution": 617,
+    "literature-discovery": 612,
+    "data-preparation": 609,
+    "data-discovery": 604,
+    "citation-audit": 592,
+    "paper-deep-reading": 599,
+    "journal-intelligence": 620,
+    "peer-review-response": 661,
+    "scientific-visualization": 674,
+    "research-intake": 602,
+    "ethics-protocol": 592,
+    "submission-packaging": 602,
+    "research-paper-workflow": 770
+  },
+  "entry_total_characters": 12062,
+  "entry_min_characters": 592,
+  "entry_max_characters": 770,
+  "meaning": "File characters only, not exact effective model context, tokens, repeated display volume or cost",
+  "live_source_cache": {
+    "entry_characters": 6391,
+    "offline_reuse_observed": true,
+    "scientific_workflow_executed_by_this_cache_probe": false
+  },
+  "per_trial_tokens": "unknown",
+  "repeated_effective_context": "unknown",
+  "cost_change": "unknown"
+}

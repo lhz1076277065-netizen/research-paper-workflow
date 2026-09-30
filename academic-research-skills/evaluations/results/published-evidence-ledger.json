@@ -1,0 +1,1223 @@
+{
+  "scope": "Reviewable copies. Text workspace paths redacted; original receipts remain outside distribution. Raw request/subject hashes refer to originals when copies differ. Reprepare requests for a new run. No vendor checkout, dependency cache, fonts or assistant credentials included.",
+  "files": [
+    {
+      "published_path": "blind/figure/review.md",
+      "original_path": "blind-figure/review.md",
+      "original_sha256": "b2257308b16257b76deefa171f12218688864c4c8fc6b878aea459ab3e490c4b",
+      "published_sha256": "b2257308b16257b76deefa171f12218688864c4c8fc6b878aea459ab3e490c4b",
+      "path_redacted": false
+    },
+    {
+      "published_path": "blind/figure/findings.json",
+      "original_path": "blind-figure/findings.json",
+      "original_sha256": "1fd21db5cfd777c7bc35d406e15ebe57c87a53334da9ff7d4ca1e45245e97c09",
+      "published_sha256": "5d7a9fbdf5caf3da65ad86160be817f9becda58119f5fd323aa345815ac82ee5",
+      "path_redacted": true
+    },
+    {
+      "published_path": "blind/figure/mapping.json",
+      "original_path": "blind-figure-mapping.json",
+      "original_sha256": "83393413e2386d2555e7dbf1cff480f0e61e62344116d026f52362613fef9c24",
+      "published_sha256": "83393413e2386d2555e7dbf1cff480f0e61e62344116d026f52362613fef9c24",
+      "path_redacted": false
+    },
+    {
+      "published_path": "blind/manuscript/review.md",
+      "original_path": "blind-manuscript/review.md",
+      "original_sha256": "5f12c53e6e95d421a35b0e1c44e19fb72f43f6b0de4f823a4fe0afdbdb4a5250",
+      "published_sha256": "5f12c53e6e95d421a35b0e1c44e19fb72f43f6b0de4f823a4fe0afdbdb4a5250",
+      "path_redacted": false
+    },
+    {
+      "published_path": "blind/manuscript/findings.json",
+      "original_path": "blind-manuscript/findings.json",
+      "original_sha256": "a26b541b01a61b8bf8fc51b0ee7cf8085dc02874c4f18d7de9ef7bd17b178b49",
+      "published_sha256": "fc2e6c335cd78273460dffa2dbd56e29b62bddb93bea1d7da17fc93a4c0632e7",
+      "path_redacted": true
+    },
+    {
+      "published_path": "blind/manuscript/mapping.json",
+      "original_path": "blind-manuscript-mapping.json",
+      "original_sha256": "a7a7638b653e118b113d1291c285aa7c92fc9fb965b6af94bbadd7bdd08d309f",
+      "published_sha256": "a7a7638b653e118b113d1291c285aa7c92fc9fb965b6af94bbadd7bdd08d309f",
+      "path_redacted": false
+    },
+    {
+      "published_path": "blind/research/review.md",
+      "original_path": "blind-research/review.md",
+      "original_sha256": "2b6ccc4ea6bd4b0a21cbceab53008a692a3bd0139d1a0cf213755f6088e325dd",
+      "published_sha256": "2b6ccc4ea6bd4b0a21cbceab53008a692a3bd0139d1a0cf213755f6088e325dd",
+      "path_redacted": false
+    },
+    {
+      "published_path": "blind/research/findings.json",
+      "original_path": "blind-research/findings.json",
+      "original_sha256": "ede562ec3dff22dcccf64a52e9033d77f6f316797b70304a982399210d64937b",
+      "published_sha256": "41b7a2a6c87a54180bd2d424b2b02657fc02b01129701f09bddfa3ffa42f3a29",
+      "path_redacted": true
+    },
+    {
+      "published_path": "blind/research/mapping.json",
+      "original_path": "blind-research-mapping.json",
+      "original_sha256": "51a205563fc1a3530c739d495f52c6b04a80681ede177adbf00ee2556c066bfc",
+      "published_sha256": "51a205563fc1a3530c739d495f52c6b04a80681ede177adbf00ee2556c066bfc",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.release.0/execution.json",
+      "original_path": "evaluation-trials/research-judgement.release.0/execution.json",
+      "original_sha256": "f27e493a9e9603212942b2005cce6f18d80177306d279b72389c3e04323e09bf",
+      "published_sha256": "64c2ec6851046806268d3326dcc9e36bc14ffe65ff0dc2851c5c0d6f9d19fcf9",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/research-judgement.release.0/judgement.md",
+      "original_path": "evaluation-trials/research-judgement.release.0/judgement.md",
+      "original_sha256": "a245a57a36cc4bc24aabd077e7918fa45d389532777895a503979a39c4ea18b6",
+      "published_sha256": "a245a57a36cc4bc24aabd077e7918fa45d389532777895a503979a39c4ea18b6",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.release.0/operation-note.md",
+      "original_path": "evaluation-trials/research-judgement.release.0/operation-note.md",
+      "original_sha256": "61f4b89c819533626d9a45861440a985931044bd7c624c4c8aacd7d6e372205f",
+      "published_sha256": "61f4b89c819533626d9a45861440a985931044bd7c624c4c8aacd7d6e372205f",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.comparison.0/execution.json",
+      "original_path": "evaluation-trials/research-judgement.comparison.0/execution.json",
+      "original_sha256": "86acf43193ab39655c389de9e4a31fbc2875978f11e5c249f436ed0bc32da8b5",
+      "published_sha256": "ec167fd5bd715ee6d631b4bc78edb1141a212b0ce791a86c95d2a1e1b58dbceb",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/research-judgement.comparison.0/judgement.md",
+      "original_path": "evaluation-trials/research-judgement.comparison.0/judgement.md",
+      "original_sha256": "7f3aac436de3e8b516c49ee281a6ee5f127f9932710733b0da0a200ca459c562",
+      "published_sha256": "7f3aac436de3e8b516c49ee281a6ee5f127f9932710733b0da0a200ca459c562",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.comparison.0/operation-note.md",
+      "original_path": "evaluation-trials/research-judgement.comparison.0/operation-note.md",
+      "original_sha256": "c9d8831a8160db0f70a8dfd6b3b3a474a216b77cb4f56b59a98bc2d59080be64",
+      "published_sha256": "c9d8831a8160db0f70a8dfd6b3b3a474a216b77cb4f56b59a98bc2d59080be64",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.without-skill.0/execution.json",
+      "original_path": "evaluation-trials/research-judgement.without-skill.0/execution.json",
+      "original_sha256": "20f2791c607051b82cb6cbcf8f74fe34da5e0a13af742555aee497a8bba40940",
+      "published_sha256": "e4cd1d493e3149455caadf6f44ce92c99b3026f6baadcb0c25657d45b4563d97",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/research-judgement.without-skill.0/judgement.md",
+      "original_path": "evaluation-trials/research-judgement.without-skill.0/judgement.md",
+      "original_sha256": "6220bdd9d3150c7c9eab6e3295d3c100f9b040d53367e020a2f36323544ea191",
+      "published_sha256": "6220bdd9d3150c7c9eab6e3295d3c100f9b040d53367e020a2f36323544ea191",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.without-skill.0/operation-note.md",
+      "original_path": "evaluation-trials/research-judgement.without-skill.0/operation-note.md",
+      "original_sha256": "3f6acca5cff990e80e81803477ac595fef67d46704768fe6f44c485e74f9d759",
+      "published_sha256": "3f6acca5cff990e80e81803477ac595fef67d46704768fe6f44c485e74f9d759",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.without-skill.0/verify_outputs.py",
+      "original_path": "evaluation-trials/research-judgement.without-skill.0/verify_outputs.py",
+      "original_sha256": "50307f79351a1cd542baff02f5f43f7469678202065d8307c6091a477b12a1c5",
+      "published_sha256": "9d9068259d0b49dc88817212d3c9cf7f1905f9725aeb27809383e78b273fed24",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/main-figure.release.0/caption.md",
+      "original_path": "evaluation-trials/main-figure.release.0/caption.md",
+      "original_sha256": "183060a2223e53b0069e9f19d21da1aaa161e24f1ad598b060adc648eb4bb576",
+      "published_sha256": "183060a2223e53b0069e9f19d21da1aaa161e24f1ad598b060adc648eb4bb576",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/execution.json",
+      "original_path": "evaluation-trials/main-figure.release.0/execution.json",
+      "original_sha256": "ff2647adb27b9734f30a1fd89394c296796d2aa324def079e68db09ccc64774b",
+      "published_sha256": "489e6390f07225b0c89ddde7360143c3e84b57785b2078936fe341753c29c573",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/main-figure.release.0/figure-brief.md",
+      "original_path": "evaluation-trials/main-figure.release.0/figure-brief.md",
+      "original_sha256": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb",
+      "published_sha256": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/fixed-results.csv",
+      "original_path": "evaluation-trials/main-figure.release.0/fixed-results.csv",
+      "original_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "published_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/format-review.json",
+      "original_path": "evaluation-trials/main-figure.release.0/format-review.json",
+      "original_sha256": "ec663edb34bb7c5f4517dd94f36d4619a61ce0c81f510e0c8f3e53af287e046e",
+      "published_sha256": "e32657900c548ebd8d673268bb479c9d4266eb000bf59faf1741a1177f48689f",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/main-figure.release.0/independent-format-review.json",
+      "original_path": "evaluation-trials/main-figure.release.0/independent-format-review.json",
+      "original_sha256": "86e84a6b93651bbec2ea26792cd77957572f647b2154e9342f677506c420fa9f",
+      "published_sha256": "ab0e3de0df808370fb25b8a44431570fef1fc81f4b580026a9a8aaf3870a977c",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/main-figure.release.0/layout-review.json",
+      "original_path": "evaluation-trials/main-figure.release.0/layout-review.json",
+      "original_sha256": "ab4b052c0452a22decfc6d3f5b47f8d4f5f1981c081fe0872f9ece22e3a42d24",
+      "published_sha256": "ab4b052c0452a22decfc6d3f5b47f8d4f5f1981c081fe0872f9ece22e3a42d24",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/main-figure-grayscale.png",
+      "original_path": "evaluation-trials/main-figure.release.0/main-figure-grayscale.png",
+      "original_sha256": "56876671204b4b441f0ab98144d234e975bd249924ada711d23ae8446d482b26",
+      "published_sha256": "56876671204b4b441f0ab98144d234e975bd249924ada711d23ae8446d482b26",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/main-figure-pdf-render.png",
+      "original_path": "evaluation-trials/main-figure.release.0/main-figure-pdf-render.png",
+      "original_sha256": "cec5b9402daaadbc0320607663adcde9efc34b87348b703b97c9c924af96cbf9",
+      "published_sha256": "cec5b9402daaadbc0320607663adcde9efc34b87348b703b97c9c924af96cbf9",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/main-figure.pdf",
+      "original_path": "evaluation-trials/main-figure.release.0/main-figure.pdf",
+      "original_sha256": "3eea812bf0bd76c05ea7d54ae5b96aab851e6ab3a1e38a7d63781e5c24f5d3e6",
+      "published_sha256": "3eea812bf0bd76c05ea7d54ae5b96aab851e6ab3a1e38a7d63781e5c24f5d3e6",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/main-figure.png",
+      "original_path": "evaluation-trials/main-figure.release.0/main-figure.png",
+      "original_sha256": "cf40df672cc8a48628671c60a8c368e9b93f5b3cbdb536de9285448a2638f09b",
+      "published_sha256": "cf40df672cc8a48628671c60a8c368e9b93f5b3cbdb536de9285448a2638f09b",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/main-figure.svg",
+      "original_path": "evaluation-trials/main-figure.release.0/main-figure.svg",
+      "original_sha256": "5bc63caef8e41feac74575bc1fd7f6f82c7c42c35f9d2d742e8966a07aa7c952",
+      "published_sha256": "5bc63caef8e41feac74575bc1fd7f6f82c7c42c35f9d2d742e8966a07aa7c952",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/numeric-review.json",
+      "original_path": "evaluation-trials/main-figure.release.0/numeric-review.json",
+      "original_sha256": "901580f020c733ef4d6790201a806a7782447802b52291153d787c47236e4aef",
+      "published_sha256": "901580f020c733ef4d6790201a806a7782447802b52291153d787c47236e4aef",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/operation-review.md",
+      "original_path": "evaluation-trials/main-figure.release.0/operation-review.md",
+      "original_sha256": "fc336cb688e32ea414d4e4b301c608c890a0fbf1552440c79b1b7e503c2d5420",
+      "published_sha256": "2db190400fc7c0d625ae21436c4fcc01f5bfbbec78c8c4a25506cb99d7bca793",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/main-figure.release.0/plot_main_figure.py",
+      "original_path": "evaluation-trials/main-figure.release.0/plot_main_figure.py",
+      "original_sha256": "fb9c5516d76dddd96b739e82a174bb69c70d14663ea1be7808641d3f246959a2",
+      "published_sha256": "fb9c5516d76dddd96b739e82a174bb69c70d14663ea1be7808641d3f246959a2",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/plotted-row-review.json",
+      "original_path": "evaluation-trials/main-figure.release.0/plotted-row-review.json",
+      "original_sha256": "3fd35ebbb15f03819c6b58280eb11aeaa6cd7a818eebc39cf0a4f11e1c517b21",
+      "published_sha256": "3fd35ebbb15f03819c6b58280eb11aeaa6cd7a818eebc39cf0a4f11e1c517b21",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/provider-data-profile.json",
+      "original_path": "evaluation-trials/main-figure.release.0/provider-data-profile.json",
+      "original_sha256": "9112fdb3323252bbe74b230e42cde72c303933e85c01abb6579665c23ec6db00",
+      "published_sha256": "9112fdb3323252bbe74b230e42cde72c303933e85c01abb6579665c23ec6db00",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/review-preview-grayscale.png",
+      "original_path": "evaluation-trials/main-figure.release.0/review-preview-grayscale.png",
+      "original_sha256": "d05cf199a39ca8a0ad854dcb5ec4c18e3f98abe702ffdb690799cd9ba8c206dc",
+      "published_sha256": "d05cf199a39ca8a0ad854dcb5ec4c18e3f98abe702ffdb690799cd9ba8c206dc",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/review-preview.png",
+      "original_path": "evaluation-trials/main-figure.release.0/review-preview.png",
+      "original_sha256": "508003b0259c05c42425679e965b54397ccb89c6cb37e795a12597b091f6fc13",
+      "published_sha256": "508003b0259c05c42425679e965b54397ccb89c6cb37e795a12597b091f6fc13",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/weighted-summaries.csv",
+      "original_path": "evaluation-trials/main-figure.release.0/weighted-summaries.csv",
+      "original_sha256": "fcf6712fc89015b1ddbdbc885e30e9477373c2366c5f827c2c4c8aeb033bf551",
+      "published_sha256": "fcf6712fc89015b1ddbdbc885e30e9477373c2366c5f827c2c4c8aeb033bf551",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.release.0/provider/source-manifest.json",
+      "original_path": "evaluation-trials/main-figure.release.0/provider/source-manifest.json",
+      "original_sha256": "0bddbad20772128938b16dbf3be501a9d0cf3397e2ad2bc3fdf7cb30b0048c22",
+      "published_sha256": "403e51eb48e0abeb3fcb98065f3254b1cb61b2ad7bba6096a2b4e0eba770bbe7",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/caption.md",
+      "original_path": "evaluation-trials/main-figure.comparison.0/caption.md",
+      "original_sha256": "bd19acaa58be71f703bc6df15bd7c6ba707a7b1d4a7398dd82cc426d51ebea91",
+      "published_sha256": "bd19acaa58be71f703bc6df15bd7c6ba707a7b1d4a7398dd82cc426d51ebea91",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/data-profile.json",
+      "original_path": "evaluation-trials/main-figure.comparison.0/data-profile.json",
+      "original_sha256": "a62161f63eeb93e827f62e4eb152c74d27fb4ca0d8057974ea265cddfc366a1a",
+      "published_sha256": "a62161f63eeb93e827f62e4eb152c74d27fb4ca0d8057974ea265cddfc366a1a",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/execution.json",
+      "original_path": "evaluation-trials/main-figure.comparison.0/execution.json",
+      "original_sha256": "3ed672bc2540fac85ab7da08013d2dc19e77c6069ab3cf22d5728d6e6ac70353",
+      "published_sha256": "06dc0e9e961e0a41aefe341e5a17e94c6262e072e350a8082393986623f6f10e",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/file-review.json",
+      "original_path": "evaluation-trials/main-figure.comparison.0/file-review.json",
+      "original_sha256": "303fe60f490c84b089c5db5d77ee48020094b06ad313be085e97c7011471f5b6",
+      "published_sha256": "2e2b735b97ca9e4123497f66b5346f5891bc4414dcaf1bf89376570f1702d858",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/final-pdf-preview.png",
+      "original_path": "evaluation-trials/main-figure.comparison.0/final-pdf-preview.png",
+      "original_sha256": "54f05e60b182e385905fe7e41f3f229d0d4e8a9fe896efc92ad48e60f0772936",
+      "published_sha256": "54f05e60b182e385905fe7e41f3f229d0d4e8a9fe896efc92ad48e60f0772936",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/final-pdf-preview_grayscale.png",
+      "original_path": "evaluation-trials/main-figure.comparison.0/final-pdf-preview_grayscale.png",
+      "original_sha256": "0d791a3180fc3d9046e0fe87f6c894509d1df2db366f7a583e39924bfccab258",
+      "published_sha256": "0d791a3180fc3d9046e0fe87f6c894509d1df2db366f7a583e39924bfccab258",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/main-figure.pdf",
+      "original_path": "evaluation-trials/main-figure.comparison.0/main-figure.pdf",
+      "original_sha256": "43d7b221b2b120a60db0d5bd3f78b1bba108e888de2bd11fa5a2f9fefe9e3e47",
+      "published_sha256": "43d7b221b2b120a60db0d5bd3f78b1bba108e888de2bd11fa5a2f9fefe9e3e47",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/main-figure.png",
+      "original_path": "evaluation-trials/main-figure.comparison.0/main-figure.png",
+      "original_sha256": "4ab768110d1db4d0d2444148e010a1bbb8738c18f58adf6ae13ea0ba853c0a42",
+      "published_sha256": "4ab768110d1db4d0d2444148e010a1bbb8738c18f58adf6ae13ea0ba853c0a42",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/main-figure.svg",
+      "original_path": "evaluation-trials/main-figure.comparison.0/main-figure.svg",
+      "original_sha256": "7eea251717c68dfef68b23054a844221adaba32dbd683cba32ff37032d07770e",
+      "published_sha256": "7eea251717c68dfef68b23054a844221adaba32dbd683cba32ff37032d07770e",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/main-figure_grayscale.png",
+      "original_path": "evaluation-trials/main-figure.comparison.0/main-figure_grayscale.png",
+      "original_sha256": "ad29c6bb9c194c97fea3a26279ff9feb81965e5aa8ef05b82ff9d4788ca65fb0",
+      "published_sha256": "ad29c6bb9c194c97fea3a26279ff9feb81965e5aa8ef05b82ff9d4788ca65fb0",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/numeric-review.json",
+      "original_path": "evaluation-trials/main-figure.comparison.0/numeric-review.json",
+      "original_sha256": "cbedf62a69a11e0ea38e7af1eb3c3dd581b4486343bf9163714cea31473f2cdd",
+      "published_sha256": "cbedf62a69a11e0ea38e7af1eb3c3dd581b4486343bf9163714cea31473f2cdd",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/plot_main_figure.py",
+      "original_path": "evaluation-trials/main-figure.comparison.0/plot_main_figure.py",
+      "original_sha256": "61ebf4d9dc63afac533cd7f8f8e8e2291ab8e75c9c872cc88dc2904274610a91",
+      "published_sha256": "61ebf4d9dc63afac533cd7f8f8e8e2291ab8e75c9c872cc88dc2904274610a91",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/preview.png",
+      "original_path": "evaluation-trials/main-figure.comparison.0/preview.png",
+      "original_sha256": "85b07b17f2f83b0a99df515a35dc3fe33d0860385d14ecafe32d299983708e4f",
+      "published_sha256": "85b07b17f2f83b0a99df515a35dc3fe33d0860385d14ecafe32d299983708e4f",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/preview_grayscale.png",
+      "original_path": "evaluation-trials/main-figure.comparison.0/preview_grayscale.png",
+      "original_sha256": "566cf03a91ef8e4868f989f8f9fc61f8ddc3342247007f82da50400233d6c181",
+      "published_sha256": "566cf03a91ef8e4868f989f8f9fc61f8ddc3342247007f82da50400233d6c181",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/review-r1-preview.png",
+      "original_path": "evaluation-trials/main-figure.comparison.0/review-r1-preview.png",
+      "original_sha256": "34377be1e1a76eb54aea96893746810fde8ea438695fd21d257376f0a11f1d07",
+      "published_sha256": "34377be1e1a76eb54aea96893746810fde8ea438695fd21d257376f0a11f1d07",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/review-r1-preview_grayscale.png",
+      "original_path": "evaluation-trials/main-figure.comparison.0/review-r1-preview_grayscale.png",
+      "original_sha256": "1fb596675ca032a3c42a6e5af1927245c42b70d97cf0a63d6ae4f19aeaec9975",
+      "published_sha256": "1fb596675ca032a3c42a6e5af1927245c42b70d97cf0a63d6ae4f19aeaec9975",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.comparison.0/review.md",
+      "original_path": "evaluation-trials/main-figure.comparison.0/review.md",
+      "original_sha256": "3c95945456d2f1a2943d7d7accb343696f890bc9d532c4b206fd849eebfcf2c8",
+      "published_sha256": "3c95945456d2f1a2943d7d7accb343696f890bc9d532c4b206fd849eebfcf2c8",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/caption.md",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/caption.md",
+      "original_sha256": "0eeb39d30d9412e842695440bbc77158f951e51557c893460a68bb338dec0c88",
+      "published_sha256": "0eeb39d30d9412e842695440bbc77158f951e51557c893460a68bb338dec0c88",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/execution.json",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/execution.json",
+      "original_sha256": "608dd1c8757806b5038657c5e4acdfc933dd69608d99254f57037c9a60aaa1d9",
+      "published_sha256": "9e4e169d13a2bd9953137b6103ac20e34072e7315b2b9aef4c351d23f50ac735",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/figure-brief.md",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/figure-brief.md",
+      "original_sha256": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb",
+      "published_sha256": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/fixed-results.csv",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/fixed-results.csv",
+      "original_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "published_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/main-figure.pdf",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/main-figure.pdf",
+      "original_sha256": "2eb79b87e178b80f85d125df2e831bb85339270e2598cc6d5d5c939f9f3da075",
+      "published_sha256": "2eb79b87e178b80f85d125df2e831bb85339270e2598cc6d5d5c939f9f3da075",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/main-figure.png",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/main-figure.png",
+      "original_sha256": "75f62d7416cb3595380063c73653891bfbe47912fc852f5537ee8afde669220e",
+      "published_sha256": "75f62d7416cb3595380063c73653891bfbe47912fc852f5537ee8afde669220e",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/main-figure.svg",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/main-figure.svg",
+      "original_sha256": "c9b2d7a8f1111869313d41f4c0539f0613ae09f37a902587ccae2a774a65fc15",
+      "published_sha256": "c9b2d7a8f1111869313d41f4c0539f0613ae09f37a902587ccae2a774a65fc15",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/numeric-review.json",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/numeric-review.json",
+      "original_sha256": "0a08489a3cd66faca1e98067616d736b7cdae920fc82b56a52c806bcd560c010",
+      "published_sha256": "0a08489a3cd66faca1e98067616d736b7cdae920fc82b56a52c806bcd560c010",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/operation-review.md",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/operation-review.md",
+      "original_sha256": "55a21975e078fed10e6ff39f6c1a5de7b953ee3809209c770da6861f09af132c",
+      "published_sha256": "55a21975e078fed10e6ff39f6c1a5de7b953ee3809209c770da6861f09af132c",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/plot_main_figure.py",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/plot_main_figure.py",
+      "original_sha256": "41486b2b25cf859c3063f1d98aaa74a2332b638c631821ddbb9326909d7c835b",
+      "published_sha256": "41486b2b25cf859c3063f1d98aaa74a2332b638c631821ddbb9326909d7c835b",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/main-figure.without-skill.0/source-provenance.json",
+      "original_path": "evaluation-trials/main-figure.without-skill.0/source-provenance.json",
+      "original_sha256": "ec2dfbf109f1f1ce7e4955f22b3fe9902549ea5e051f06d8e641ea95641fc69e",
+      "published_sha256": "b7d432e9c885e18aa1bd12214a77327db9740bf4f6dcec85278f3a6cfbc89767",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/execution.json",
+      "original_path": "evaluation-trials/full-manuscript.release.0/execution.json",
+      "original_sha256": "cf5510e2d293732d341963d0d8a2fdd77e904cbbe7af900a2d21ec93ce3c845b",
+      "published_sha256": "3c935f4feca694a6a33748ce664947053a11227f5fb691ac35d0ec05c343be4e",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/export_document.py",
+      "original_path": "evaluation-trials/full-manuscript.release.0/export_document.py",
+      "original_sha256": "b5d02d9680c88ce00bfd90f416974566a631e391b12f647e590f2f6d875aeeae",
+      "published_sha256": "b5d02d9680c88ce00bfd90f416974566a631e391b12f647e590f2f6d875aeeae",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/factual_claim_comparison.md",
+      "original_path": "evaluation-trials/full-manuscript.release.0/factual_claim_comparison.md",
+      "original_sha256": "ca8bd18cd49f34c18fa26e1fff97df66e0a9f8f94ef3f46678d597954676bb05",
+      "published_sha256": "ca8bd18cd49f34c18fa26e1fff97df66e0a9f8f94ef3f46678d597954676bb05",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/figure1.pdf",
+      "original_path": "evaluation-trials/full-manuscript.release.0/figure1.pdf",
+      "original_sha256": "4b85f8a42090f0305a61ef2280b8901bc1ad7953074030e51f82ff8ae5848c3b",
+      "published_sha256": "4b85f8a42090f0305a61ef2280b8901bc1ad7953074030e51f82ff8ae5848c3b",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/figure1.png",
+      "original_path": "evaluation-trials/full-manuscript.release.0/figure1.png",
+      "original_sha256": "d883302a8a6ab184531ba601cdde74e8ee39a8c36a3825f363e8cafc241c162b",
+      "published_sha256": "d883302a8a6ab184531ba601cdde74e8ee39a8c36a3825f363e8cafc241c162b",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/figure1.svg",
+      "original_path": "evaluation-trials/full-manuscript.release.0/figure1.svg",
+      "original_sha256": "02f238183dad9441e11040160c480188814db428db46907a611daf648fe225ad",
+      "published_sha256": "02f238183dad9441e11040160c480188814db428db46907a611daf648fe225ad",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/figure1_source_data.csv",
+      "original_path": "evaluation-trials/full-manuscript.release.0/figure1_source_data.csv",
+      "original_sha256": "1a347d7010db438cfb4656eba63fc5c0d1a6f954c77b899650a2c981cc0d2e55",
+      "published_sha256": "1a347d7010db438cfb4656eba63fc5c0d1a6f954c77b899650a2c981cc0d2e55",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/input-checks.json",
+      "original_path": "evaluation-trials/full-manuscript.release.0/input-checks.json",
+      "original_sha256": "d5a87dac0a603add7055ab909678a67768b5b78f194e38c11075dca47c50132e",
+      "published_sha256": "c171248960b1ad1fbf0f875eb293461eec64c954aef071c54baa1e327ec7bab9",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/manuscript.docx",
+      "original_path": "evaluation-trials/full-manuscript.release.0/manuscript.docx",
+      "original_sha256": "3ed9c03770ac78e7f8af291e95214c05f108048f9b0cd66bd24702bbe95ffc3d",
+      "published_sha256": "3ed9c03770ac78e7f8af291e95214c05f108048f9b0cd66bd24702bbe95ffc3d",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/manuscript.md",
+      "original_path": "evaluation-trials/full-manuscript.release.0/manuscript.md",
+      "original_sha256": "541891e2e8d841ea1aaf89d36a9fbdd423a3aa45f22e047418af33e8fdd48121",
+      "published_sha256": "541891e2e8d841ea1aaf89d36a9fbdd423a3aa45f22e047418af33e8fdd48121",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/manuscript.pdf",
+      "original_path": "evaluation-trials/full-manuscript.release.0/manuscript.pdf",
+      "original_sha256": "1c72864e39b9f1f2617cc3b1f1f4c06f8a0a26507c3eb890b207fd4a527954c1",
+      "published_sha256": "1c72864e39b9f1f2617cc3b1f1f4c06f8a0a26507c3eb890b207fd4a527954c1",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/manuscript_changes.diff",
+      "original_path": "evaluation-trials/full-manuscript.release.0/manuscript_changes.diff",
+      "original_sha256": "7910b27e954e97bde7dfc1dc3987014d405b25e7235c9f50c0c2c70382db2c0f",
+      "published_sha256": "7910b27e954e97bde7dfc1dc3987014d405b25e7235c9f50c0c2c70382db2c0f",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/operation_note.md",
+      "original_path": "evaluation-trials/full-manuscript.release.0/operation_note.md",
+      "original_sha256": "aac8d858be3df24b65ed15b75ad37af2c59f7fd3b45ad1b5d38aae752c8b9421",
+      "published_sha256": "aac8d858be3df24b65ed15b75ad37af2c59f7fd3b45ad1b5d38aae752c8b9421",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/plot_figure.py",
+      "original_path": "evaluation-trials/full-manuscript.release.0/plot_figure.py",
+      "original_sha256": "32747c4e64925a637926aacbccbe4f07463a39f8ab2f90306805e3e2207e439d",
+      "published_sha256": "32747c4e64925a637926aacbccbe4f07463a39f8ab2f90306805e3e2207e439d",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/source-discovery.json",
+      "original_path": "evaluation-trials/full-manuscript.release.0/source-discovery.json",
+      "original_sha256": "4af31aec2ae1d116531c83cc2843f6150450a7019b4f16036853125958e7e8e1",
+      "published_sha256": "4af31aec2ae1d116531c83cc2843f6150450a7019b4f16036853125958e7e8e1",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/source-manifest.json",
+      "original_path": "evaluation-trials/full-manuscript.release.0/source-manifest.json",
+      "original_sha256": "a37eab2443331340398750b73b3e593e823bff8d22f48e9cf3d8c0377410fd86",
+      "published_sha256": "7147ea682c9d5d68577a1310c0b6dd0b69b8070e3f98ee64888bf9794fa9253b",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/verified-values.json",
+      "original_path": "evaluation-trials/full-manuscript.release.0/verified-values.json",
+      "original_sha256": "87913058d3d67e03e62bd4bc2be8cc7afb6e459f68f5d354b73766826d81d9f6",
+      "published_sha256": "87913058d3d67e03e62bd4bc2be8cc7afb6e459f68f5d354b73766826d81d9f6",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/verify_deliverables.py",
+      "original_path": "evaluation-trials/full-manuscript.release.0/verify_deliverables.py",
+      "original_sha256": "057aa496be0a1c8cc147853ceacdd2916def6108e8808c5be0d7a9a0fbfb08e0",
+      "published_sha256": "057aa496be0a1c8cc147853ceacdd2916def6108e8808c5be0d7a9a0fbfb08e0",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/process/verification.json",
+      "original_path": "evaluation-trials/full-manuscript.release.0/process/verification.json",
+      "original_sha256": "1da36202684a4321e24376d484a494910f5df7ae31fbbb59bae0bc1ca315193b",
+      "published_sha256": "1da36202684a4321e24376d484a494910f5df7ae31fbbb59bae0bc1ca315193b",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/process/final-expression_review.json",
+      "original_path": "evaluation-trials/full-manuscript.release.0/process/final-expression_review.json",
+      "original_sha256": "82acd6d04b625bfafaab6f6aca76edcffafbad1657f563e14bc6b18f72251edf",
+      "published_sha256": "82acd6d04b625bfafaab6f6aca76edcffafbad1657f563e14bc6b18f72251edf",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.release.0/process/visual_review.json",
+      "original_path": "evaluation-trials/full-manuscript.release.0/process/visual_review.json",
+      "original_sha256": "0dd33ec14093d5c1699a3cea5e3ca68319aca5c9c842e5ff6a43b88f893be928",
+      "published_sha256": "0dd33ec14093d5c1699a3cea5e3ca68319aca5c9c842e5ff6a43b88f893be928",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/claim-comparison.md",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/claim-comparison.md",
+      "original_sha256": "7331826ec8491386abae90e2c78c3f1f1fad90d5e71a9a3c0716167c7ff37ed1",
+      "published_sha256": "7331826ec8491386abae90e2c78c3f1f1fad90d5e71a9a3c0716167c7ff37ed1",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/execution.json",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/execution.json",
+      "original_sha256": "21957cc2a59d413f94e2815ba5b82913ad0df6d975b105ca31029c883b941e70",
+      "published_sha256": "689f9f88487b8df4c58c783431c1fe96f9c13c08272b7e1b2369b20936d80e47",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure-1.pdf",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure-1.pdf",
+      "original_sha256": "fe93a010d0d2a8ba97ada58442b6dd66fe893dd67903bbe35e91d4f1a5dd020a",
+      "published_sha256": "fe93a010d0d2a8ba97ada58442b6dd66fe893dd67903bbe35e91d4f1a5dd020a",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure-1.png",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure-1.png",
+      "original_sha256": "9a726dca2f6ee0869734a26980f1f7893212126654d036632dee9673e544bc7a",
+      "published_sha256": "9a726dca2f6ee0869734a26980f1f7893212126654d036632dee9673e544bc7a",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure-1.svg",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure-1.svg",
+      "original_sha256": "954ff27aec8043b021db4e0f0e5cc2afd09263bd0d3a9943c11e8f657618ba09",
+      "published_sha256": "954ff27aec8043b021db4e0f0e5cc2afd09263bd0d3a9943c11e8f657618ba09",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure-collision-audit.json",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure-collision-audit.json",
+      "original_sha256": "d52787d8425f19346c67b0e14e1368882e348ad91f0fcf62d2780f90f3ceb8af",
+      "published_sha256": "a066b2e911d7590e7abb8fbfd2c5512e30a5d16e3644a8789700b0787e6f97a4",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure-collision.log",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure-collision.log",
+      "original_sha256": "ad173f225425b8d43ea93f255d72403ff1c9955f6ae170dbbe0f4f39131a024a",
+      "published_sha256": "2dc88745ca46a9c1f4181959977fddec3cdfd6314ffcf7cfabe8c1e2d24b6834",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure-contract.md",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure-contract.md",
+      "original_sha256": "d9b6b9e2ae54373fd4cb0508730b28b5e86687bfafa48b1526952b0e590d4e2a",
+      "published_sha256": "d9b6b9e2ae54373fd4cb0508730b28b5e86687bfafa48b1526952b0e590d4e2a",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure-pdf-text-audit.json",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure-pdf-text-audit.json",
+      "original_sha256": "bbb82cb1ccab62552339087af68a32264223c3dd5cdf6936db9b08769fc0bc6a",
+      "published_sha256": "53717aeaeac1dc64ebd0bfd94d45e4d6cab3990a270be2dcef8c7d4c78a7de26",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure-run.log",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure-run.log",
+      "original_sha256": "a5ec625c37773b2b45ee177b8b5938a564b21e5e52d913a4cc84a2d41173130b",
+      "published_sha256": "a5ec625c37773b2b45ee177b8b5938a564b21e5e52d913a4cc84a2d41173130b",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure-source-preflight.json",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure-source-preflight.json",
+      "original_sha256": "16828e11c6e02cd7d54357c9929c89f3b593289bf52628ad5f980b755641a290",
+      "published_sha256": "ce1d36a3214ab498ef17fe79d73b7aa2c3e930d072fd2eca335102ed5ad9eebf",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure.alignment.json",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure.alignment.json",
+      "original_sha256": "f4a162e4ac3c92399d415cd7c30f19976d9b403af1a5d0ee94b1de900df20fa5",
+      "published_sha256": "f4a162e4ac3c92399d415cd7c30f19976d9b403af1a5d0ee94b1de900df20fa5",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/figure.py",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/figure.py",
+      "original_sha256": "8e832b5fe88359d32a6ddc3eb582eb2ab4e679921426c0059dc9dd2c2728683e",
+      "published_sha256": "8e832b5fe88359d32a6ddc3eb582eb2ab4e679921426c0059dc9dd2c2728683e",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/fixed-results.csv",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/fixed-results.csv",
+      "original_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "published_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/manuscript-preview.png",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/manuscript-preview.png",
+      "original_sha256": "7ba807566082f9ef6b251c3f3387c89e4f3df63eb70019d1ee39b45631c00b15",
+      "published_sha256": "7ba807566082f9ef6b251c3f3387c89e4f3df63eb70019d1ee39b45631c00b15",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/manuscript.diff",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/manuscript.diff",
+      "original_sha256": "93d8a04cf3962f83ca756be5e25ed62118340e60b4f0371e73353bb2a3f8b779",
+      "published_sha256": "93d8a04cf3962f83ca756be5e25ed62118340e60b4f0371e73353bb2a3f8b779",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/manuscript.html",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/manuscript.html",
+      "original_sha256": "1588337d5ff8f6d3f90fa8f531c1e480ac86ad90efe1ce63b2a2f507d30af765",
+      "published_sha256": "1588337d5ff8f6d3f90fa8f531c1e480ac86ad90efe1ce63b2a2f507d30af765",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/manuscript.md",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/manuscript.md",
+      "original_sha256": "664a4a918a013f97bfb455b094798889bb425acf6c77cd4f1530c8b838397eba",
+      "published_sha256": "664a4a918a013f97bfb455b094798889bb425acf6c77cd4f1530c8b838397eba",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/manuscript.pdf",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/manuscript.pdf",
+      "original_sha256": "c58f3760bae24ee7bf806e8943e36cddb0e3248f60211e09a4b9f1dfa6e0c0d8",
+      "published_sha256": "c58f3760bae24ee7bf806e8943e36cddb0e3248f60211e09a4b9f1dfa6e0c0d8",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/operation-note.md",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/operation-note.md",
+      "original_sha256": "d8d8ecf472108473e2f9a50004717ed768a225bc20c6276fbee4c7191b5fdf69",
+      "published_sha256": "d8d8ecf472108473e2f9a50004717ed768a225bc20c6276fbee4c7191b5fdf69",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/render-review.json",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/render-review.json",
+      "original_sha256": "abb1076717d928575ce9d769f0f4b69fd6afe193cf0724251521f4582056cdf8",
+      "published_sha256": "abb1076717d928575ce9d769f0f4b69fd6afe193cf0724251521f4582056cdf8",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/render.log",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/render.log",
+      "original_sha256": "f17f3b6b5e180ab52040613292c9ca98faeea9edfe919d3490698ea8f95d073a",
+      "published_sha256": "f17f3b6b5e180ab52040613292c9ca98faeea9edfe919d3490698ea8f95d073a",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/render.mjs",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/render.mjs",
+      "original_sha256": "dd4fab0a0b6f9851a248b4a5458142bcf8acb00e4c632bb1baf1dfcf127ee596",
+      "published_sha256": "aa078173e7d44bd45d662901dc7db4f06cbe724a489306d88bd605f1332b9bd5",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/source-read-manifest.json",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/source-read-manifest.json",
+      "original_sha256": "c6817a6761095d3ed93818ecfbc1945ddac884cc49658ddbe3df7a3ca4d41213",
+      "published_sha256": "c6817a6761095d3ed93818ecfbc1945ddac884cc49658ddbe3df7a3ca4d41213",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/verification.json",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/verification.json",
+      "original_sha256": "1244fd1a2eb67d8b0ec2390b9c5f1b44e1959ce78100fdd54bd294cd6bc02775",
+      "published_sha256": "d9e91bbf2c2175598d2e58fe16a01f7d507ae9aca599aebefc5ad27e44a9d48f",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.comparison.0/verify_outputs.py",
+      "original_path": "evaluation-trials/full-manuscript.comparison.0/verify_outputs.py",
+      "original_sha256": "dc930ec16d40dfed44f9d96bd658723b8700e47fd73ad1518c57e35bc411a54b",
+      "published_sha256": "5d05ab0ed0ee71b853deb6c0b6c72d43230614a2966c1cb71cdc8ac89a6fa5cd",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/build_and_check.py",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/build_and_check.py",
+      "original_sha256": "c43713dd7b2d734a97a4093d8a96bc4da66b1b0e6ae638ecc11d1973351fe794",
+      "published_sha256": "ac01501871c1366054647b4ba4fb841537efbeef3d510e20700b73671fca527e",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/execution.json",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/execution.json",
+      "original_sha256": "e05d215a9ad3afa68c2cf3ed01ae060cff48629835f180584444d7c9ce4d01d6",
+      "published_sha256": "bd248b35cca03b624b903fec2f973281b0e92eae300271b7707c95af3187e556",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/factual_claim_comparison.md",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/factual_claim_comparison.md",
+      "original_sha256": "c7a30b76360c09a6f76e7b490f239247b383e1e01a6e147e87bae84aa84f382e",
+      "published_sha256": "c7a30b76360c09a6f76e7b490f239247b383e1e01a6e147e87bae84aa84f382e",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/figure1.pdf",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/figure1.pdf",
+      "original_sha256": "a46250f64de721a603740bf1b0a85722c050b316743882815d101dac70c693e7",
+      "published_sha256": "a46250f64de721a603740bf1b0a85722c050b316743882815d101dac70c693e7",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/figure1.png",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/figure1.png",
+      "original_sha256": "a042f6b40566ebd961e2b55bfc355c419d23181007d8e67f108d82cd4603db43",
+      "published_sha256": "a042f6b40566ebd961e2b55bfc355c419d23181007d8e67f108d82cd4603db43",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/figure1.svg",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/figure1.svg",
+      "original_sha256": "b3741b84b1fdfe26015b061d06767fa1a0ee37592d41918742648c19cf7b6cfc",
+      "published_sha256": "b3741b84b1fdfe26015b061d06767fa1a0ee37592d41918742648c19cf7b6cfc",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/manuscript.docx",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/manuscript.docx",
+      "original_sha256": "61776aabbc7bf3ec14b321e03eaa385029afb0378c93fb0d2a8e054b6b4ccf58",
+      "published_sha256": "61776aabbc7bf3ec14b321e03eaa385029afb0378c93fb0d2a8e054b6b4ccf58",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/manuscript.md",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/manuscript.md",
+      "original_sha256": "f4c2e2c966289e6261a02226b91672ccd9d00f0434471983fa9099ee75f6be3d",
+      "published_sha256": "f4c2e2c966289e6261a02226b91672ccd9d00f0434471983fa9099ee75f6be3d",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/operation_note.md",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/operation_note.md",
+      "original_sha256": "73ac608f4a771f9ca9dc30e1b72237e00c7acfa662eefb74c83252d796d12bfc",
+      "published_sha256": "73ac608f4a771f9ca9dc30e1b72237e00c7acfa662eefb74c83252d796d12bfc",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/verification.json",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/verification.json",
+      "original_sha256": "feaa55e605b8e63c945c8f0754e26f283ee099eb2fe7da9992497d6c9c87f77a",
+      "published_sha256": "bc76e279455010460d06b44a9af500e7ed2c64d93512d510247b7728631b6350",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/sources/source-ledger.json",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/sources/source-ledger.json",
+      "original_sha256": "9e810b8cbcbda94a3c36090302be96ad92444070a7f8395a94850c337b3bae75",
+      "published_sha256": "f2bbaca094f9702ed05b6208c683d75d66aa1cb88bf68d1824651d942b7ee7c1",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/review/pdf-review.json",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/review/pdf-review.json",
+      "original_sha256": "217422a9fccdfec9ab8a4c16626c11bd15104b9f1c48e4b307327e6a3c980321",
+      "published_sha256": "217422a9fccdfec9ab8a4c16626c11bd15104b9f1c48e4b307327e6a3c980321",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/full-manuscript.without-skill.0/review/manuscript.pdf",
+      "original_path": "evaluation-trials/full-manuscript.without-skill.0/review/manuscript.pdf",
+      "original_sha256": "b6e1f200fc0ff7f9df7beb7299090269e612c074b76700bf28de9f3fb397b8f7",
+      "published_sha256": "b6e1f200fc0ff7f9df7beb7299090269e612c074b76700bf28de9f3fb397b8f7",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.release.1/execution.json",
+      "original_path": "evaluation-trials/research-judgement.release.1/execution.json",
+      "original_sha256": "7ceac391296ed822136aa5f803cec7c6cf0c6b9a7564aa042ef67d3fc5930c5a",
+      "published_sha256": "70f17aca7ee1ce4f6966809e417f6e1b8566457b0d505c34e63bc3e78967d62f",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/research-judgement.release.1/judgement.md",
+      "original_path": "evaluation-trials/research-judgement.release.1/judgement.md",
+      "original_sha256": "7d6bcaa469298d4c10aee8a0cffb51bb7e23adc56813c23c0b7c245775cd5b23",
+      "published_sha256": "7d6bcaa469298d4c10aee8a0cffb51bb7e23adc56813c23c0b7c245775cd5b23",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.release.1/operation-note.md",
+      "original_path": "evaluation-trials/research-judgement.release.1/operation-note.md",
+      "original_sha256": "70ab7fc865ac33a3742cbecf956a87d8c199c079e7b61992ae22c08034f449fa",
+      "published_sha256": "70ab7fc865ac33a3742cbecf956a87d8c199c079e7b61992ae22c08034f449fa",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.comparison.1/execution.json",
+      "original_path": "evaluation-trials/research-judgement.comparison.1/execution.json",
+      "original_sha256": "1493a852be873a104e0ffa148139cb47db453934e874b0d9e93179a3a750d77e",
+      "published_sha256": "5b8114cf20f62951ee7b50f9ba243ac26d87757ed29296b8349ca2bc1e025793",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/research-judgement.comparison.1/judgement.md",
+      "original_path": "evaluation-trials/research-judgement.comparison.1/judgement.md",
+      "original_sha256": "a17622155b5b0eeed05ba5cb57b8a310f4f9d1c1a01d9a68fc68c12b4bff20bb",
+      "published_sha256": "a17622155b5b0eeed05ba5cb57b8a310f4f9d1c1a01d9a68fc68c12b4bff20bb",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.comparison.1/operation-note.md",
+      "original_path": "evaluation-trials/research-judgement.comparison.1/operation-note.md",
+      "original_sha256": "d205c97efef57a484f91c93f71a92138c5c41ca11a2408866b008f29a01dc561",
+      "published_sha256": "753921f342d3e6d2ed3e8773df793c22ddc7b8f935264ea98757dda01f726f16",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/research-judgement.comparison.1/verify.py",
+      "original_path": "evaluation-trials/research-judgement.comparison.1/verify.py",
+      "original_sha256": "8c491cbfbc5340ceb39773779e1f8991d258dd17338a4d5d61bcffca0262892d",
+      "published_sha256": "8c491cbfbc5340ceb39773779e1f8991d258dd17338a4d5d61bcffca0262892d",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.without-skill.1/execution.json",
+      "original_path": "evaluation-trials/research-judgement.without-skill.1/execution.json",
+      "original_sha256": "69dbdc0399172a9c71a60a50c1f24e0175275dcf2e521342297b27c9acc6d8b0",
+      "published_sha256": "ba4167a2b283a1ff4d8614a2a40d1bf96a570eb86719f0a8c0d37e213d2feb05",
+      "path_redacted": true
+    },
+    {
+      "published_path": "trials/research-judgement.without-skill.1/judgement.md",
+      "original_path": "evaluation-trials/research-judgement.without-skill.1/judgement.md",
+      "original_sha256": "4cb5a10791ac5e81f7e541ca71b2c9673e226cd333a74ce9950a45561e85c418",
+      "published_sha256": "4cb5a10791ac5e81f7e541ca71b2c9673e226cd333a74ce9950a45561e85c418",
+      "path_redacted": false
+    },
+    {
+      "published_path": "trials/research-judgement.without-skill.1/operation-note.md",
+      "original_path": "evaluation-trials/research-judgement.without-skill.1/operation-note.md",
+      "original_sha256": "78cf06e4e6251d39884504e4a4abad87355b30588afdf09e58e409106cffe40e",
+      "published_sha256": "30b543b4321aea61360eda0b70fd27f7182a334db2a5387a1bfad0ff566ff13a",
+      "path_redacted": true
+    },
+    {
+      "published_path": "checks/mechanical-fixed-result-check.json",
+      "original_path": "mechanical-fixed-result-check.json",
+      "original_sha256": "9b9a54a9a98d53f91e5c8bbcbd52bce540bee9cbb9438e76234e2c743c477b0e",
+      "published_sha256": "9b9a54a9a98d53f91e5c8bbcbd52bce540bee9cbb9438e76234e2c743c477b0e",
+      "path_redacted": false
+    },
+    {
+      "published_path": "checks/mechanical-figure-check.json",
+      "original_path": "mechanical-figure-check.json",
+      "original_sha256": "0345db941eebb8fe88c9c4b598505b41932b66d15fb0f6e27b10ca17ffa5123e",
+      "published_sha256": "0345db941eebb8fe88c9c4b598505b41932b66d15fb0f6e27b10ca17ffa5123e",
+      "path_redacted": false
+    },
+    {
+      "published_path": "checks/mechanical-manuscript-check.json",
+      "original_path": "mechanical-manuscript-check.json",
+      "original_sha256": "8d999c8713ccbecc4d2192fe02269c292ef59c74db8828346daada72d37db1e3",
+      "published_sha256": "8d999c8713ccbecc4d2192fe02269c292ef59c74db8828346daada72d37db1e3",
+      "path_redacted": false
+    },
+    {
+      "published_path": "checks/evaluation-dispatch.json",
+      "original_path": "evaluation-dispatch.json",
+      "original_sha256": "46e4811c83721c7c23b30b12698a64eea3343173dbace0f3ff7a777a3149f859",
+      "published_sha256": "46e4811c83721c7c23b30b12698a64eea3343173dbace0f3ff7a777a3149f859",
+      "path_redacted": false
+    },
+    {
+      "published_path": "checks/preservation-check.json",
+      "original_path": "preservation-check.json",
+      "original_sha256": "7dae1c18930d0681b20950872b6c8e310a1d50cd293f3fd0a40ffafb1c178fc1",
+      "published_sha256": "7dae1c18930d0681b20950872b6c8e310a1d50cd293f3fd0a40ffafb1c178fc1",
+      "path_redacted": false
+    },
+    {
+      "published_path": "resume/route-board.md",
+      "original_path": "resume-probe/route-board.md",
+      "original_sha256": "49e1664c9ecc7bae33855e225454a5d1aa1f9742213b4015006e1b672bf5d4c8",
+      "published_sha256": "49e1664c9ecc7bae33855e225454a5d1aa1f9742213b4015006e1b672bf5d4c8",
+      "path_redacted": false
+    },
+    {
+      "published_path": "resume/before.json",
+      "original_path": "resume-probe/before.json",
+      "original_sha256": "6be05c423fe24d9dca243ec5099d1455fc5b7d7b4b4b94178118684a70e28ad7",
+      "published_sha256": "6be05c423fe24d9dca243ec5099d1455fc5b7d7b4b4b94178118684a70e28ad7",
+      "path_redacted": false
+    },
+    {
+      "published_path": "resume/parent-review.json",
+      "original_path": "resume-probe/parent-review.json",
+      "original_sha256": "50209e4f1f00f7a8755af8fd1b5ac1f7758e2c2632d38b9b3f787bc84e3e8a8f",
+      "published_sha256": "50209e4f1f00f7a8755af8fd1b5ac1f7758e2c2632d38b9b3f787bc84e3e8a8f",
+      "path_redacted": false
+    },
+    {
+      "published_path": "resume/outputs/caption.md",
+      "original_path": "resume-probe/outputs/caption.md",
+      "original_sha256": "557223445dbd889b4dce3a8a9857c508c4f4f56940bf22b27a92e7bc4b7a575e",
+      "published_sha256": "557223445dbd889b4dce3a8a9857c508c4f4f56940bf22b27a92e7bc4b7a575e",
+      "path_redacted": false
+    },
+    {
+      "published_path": "resume/outputs/affected-review.md",
+      "original_path": "resume-probe/outputs/affected-review.md",
+      "original_sha256": "39e1446d029ab0360ac5d4cd0350f76efcadf3b28bd90f29b093b3acfee90358",
+      "published_sha256": "39e1446d029ab0360ac5d4cd0350f76efcadf3b28bd90f29b093b3acfee90358",
+      "path_redacted": false
+    },
+    {
+      "published_path": "resume/outputs/execution-resume.json",
+      "original_path": "resume-probe/outputs/execution-resume.json",
+      "original_sha256": "7e07ed52d08b95ef0b6d9f9d5b30d206da8a10d38cf478dcd718c5e7cbd124d4",
+      "published_sha256": "e0b5c7de8a300716fc0a7c87ae1c66cff3e455979fcbab1e1c6e4e7a8449a415",
+      "path_redacted": true
+    },
+    {
+      "published_path": "routing/candidate/routes.json",
+      "original_path": "routing-evaluation/candidate-output/routes.json",
+      "original_sha256": "bafa884f7b2e1d74d6194ae1a0a818bbfc78933c43676abf677f10f3a84e4a08",
+      "published_sha256": "bafa884f7b2e1d74d6194ae1a0a818bbfc78933c43676abf677f10f3a84e4a08",
+      "path_redacted": false
+    },
+    {
+      "published_path": "routing/candidate/execution.json",
+      "original_path": "routing-evaluation/candidate-output/execution.json",
+      "original_sha256": "6b7ac081ab6b4e403c9b0b1678c7749e0861e4e89053391781e89589e2f35572",
+      "published_sha256": "325aa610bd5d11e675d7dae6d123170c489cadf4fb09719215c5347aa2cac0cd",
+      "path_redacted": true
+    },
+    {
+      "published_path": "routing/candidate-input.json",
+      "original_path": "routing-evaluation/candidate.json",
+      "original_sha256": "49c29f4ed869bdc58b99c455aed1b04eed9e5275cff2b39583c259b7a8001603",
+      "published_sha256": "49c29f4ed869bdc58b99c455aed1b04eed9e5275cff2b39583c259b7a8001603",
+      "path_redacted": false
+    },
+    {
+      "published_path": "routing/v310/routes.json",
+      "original_path": "routing-evaluation/v310-output/routes.json",
+      "original_sha256": "98ffd4bfcf65d0509e0393772994b5fe9cda855599869164f0176ac94a74ebb9",
+      "published_sha256": "98ffd4bfcf65d0509e0393772994b5fe9cda855599869164f0176ac94a74ebb9",
+      "path_redacted": false
+    },
+    {
+      "published_path": "routing/v310/execution.json",
+      "original_path": "routing-evaluation/v310-output/execution.json",
+      "original_sha256": "7b1d117f2f3aa67e16e5c9b17c108d94595a69bf86c35e6f6dae134dc8883b24",
+      "published_sha256": "a1e4423a0f23c1881e8e178ff2d9e6fa4cf216ad6e5bae5b82140a75e83466e0",
+      "path_redacted": true
+    },
+    {
+      "published_path": "routing/v310-input.json",
+      "original_path": "routing-evaluation/v310.json",
+      "original_sha256": "3a7ac20e064407c1bcc7ab39d1692562279a45545319bdae2a1d5cd3a474edf8",
+      "published_sha256": "3a7ac20e064407c1bcc7ab39d1692562279a45545319bdae2a1d5cd3a474edf8",
+      "path_redacted": false
+    },
+    {
+      "published_path": "development-observation/initial-topic-entry.md",
+      "original_path": "evaluation-snapshots/candidate-initial/topic-novelty.SKILL.md",
+      "original_sha256": "ccb66466fe9bd0bf3ccc3c761d18cf6c97c6c67ba924927c8ece68df0f8b21b8",
+      "published_sha256": "ccb66466fe9bd0bf3ccc3c761d18cf6c97c6c67ba924927c8ece68df0f8b21b8",
+      "path_redacted": false
+    },
+    {
+      "published_path": "development-observation/change-note.json",
+      "original_path": "evaluation-snapshots/candidate-initial/change-note.json",
+      "original_sha256": "32d2d7278b9415106c6fbdb5c5802eb3bd23aca722642fdd16c9aac942340033",
+      "published_sha256": "32d2d7278b9415106c6fbdb5c5802eb3bd23aca722642fdd16c9aac942340033",
+      "path_redacted": false
+    },
+    {
+      "published_path": "engineering/v311-targeted-probes.json",
+      "original_path": "v311-probes/targeted-probes.json",
+      "original_sha256": "15507668665bf7961d726ab5709cc159363a17423455c6c8c16125b2fc63d23f",
+      "published_sha256": "15507668665bf7961d726ab5709cc159363a17423455c6c8c16125b2fc63d23f",
+      "path_redacted": false
+    },
+    {
+      "published_path": "engineering/candidate-scientific-smoke.json",
+      "original_path": "v32-final-smoke/selftest.json",
+      "original_sha256": "bf8b519ccfd85d2bac4490ba7d9fc9f40d838cd998b703a8852cc5067eaa69da",
+      "published_sha256": "e5d4c28866877399265da5bcaed397331a8abe120c3dd81b6946c582b7ced65f",
+      "path_redacted": true
+    },
+    {
+      "published_path": "engineering/v32-final-regression.json",
+      "original_path": "logs/v32-final-regression.json",
+      "original_sha256": "a314385b24ed604b20c150d261dc999fb96bf3328ddbd8655460efb0f82abf0b",
+      "published_sha256": "ad223fc1e304d4f92df5d15bc102bb5a6fcccba02729d5a83608deb2205a36ce",
+      "path_redacted": true
+    },
+    {
+      "published_path": "engineering/v32-final-regression.stdout",
+      "original_path": "logs/v32-final-regression.stdout",
+      "original_sha256": "e6d7f2d512bdb8b1140051ab0ab5ee4956a3af45f7c7ae103581d22645310a04",
+      "published_sha256": "e6d7f2d512bdb8b1140051ab0ab5ee4956a3af45f7c7ae103581d22645310a04",
+      "path_redacted": false
+    },
+    {
+      "published_path": "engineering/v32-final-regression.stderr",
+      "original_path": "logs/v32-final-regression.stderr",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path_redacted": false
+    },
+    {
+      "published_path": "engineering/v32-final-scientific-smoke.json",
+      "original_path": "logs/v32-final-scientific-smoke.json",
+      "original_sha256": "db708622ce85e4c2c0c8be748d9240cc79c345766e5bde9c5bce823f1ce24219",
+      "published_sha256": "a869dd5bda86af370eddc4c35d7144ff7fb20e321213372eb1fe851715932357",
+      "path_redacted": true
+    },
+    {
+      "published_path": "engineering/v32-final-scientific-smoke.stdout",
+      "original_path": "logs/v32-final-scientific-smoke.stdout",
+      "original_sha256": "bf8b519ccfd85d2bac4490ba7d9fc9f40d838cd998b703a8852cc5067eaa69da",
+      "published_sha256": "e5d4c28866877399265da5bcaed397331a8abe120c3dd81b6946c582b7ced65f",
+      "path_redacted": true
+    },
+    {
+      "published_path": "engineering/v32-final-scientific-smoke.stderr",
+      "original_path": "logs/v32-final-scientific-smoke.stderr",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path_redacted": false
+    },
+    {
+      "published_path": "engineering/v32-final-build-check.json",
+      "original_path": "logs/v32-final-build-check.json",
+      "original_sha256": "dac5b40e9d9fa0118c351640ccca6487d0eace9c858d5a68a039023748f17419",
+      "published_sha256": "4a7350962e083e0a01cf8628146950a7852f4e4312a554ca28f5fd1e61e40be3",
+      "path_redacted": true
+    },
+    {
+      "published_path": "engineering/v32-final-build-check.stdout",
+      "original_path": "logs/v32-final-build-check.stdout",
+      "original_sha256": "1788ad5655d6923d9b059261104eda17b41f0648c9985e5b856bd87ce79d7497",
+      "published_sha256": "1788ad5655d6923d9b059261104eda17b41f0648c9985e5b856bd87ce79d7497",
+      "path_redacted": false
+    },
+    {
+      "published_path": "engineering/v32-final-build-check.stderr",
+      "original_path": "logs/v32-final-build-check.stderr",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path_redacted": false
+    },
+    {
+      "published_path": "engineering/v32-live-cache-read.json",
+      "original_path": "logs/v32-live-cache-read.json",
+      "original_sha256": "57d7f3f81d97fb8b6469adc95592b2d1babf78140b76a43c500a74d5ad4f6fd4",
+      "published_sha256": "2c0dfe5147962bbf491f1c6bb53095a9e900077e71c119f8e94480d365deec95",
+      "path_redacted": true
+    },
+    {
+      "published_path": "engineering/v32-live-cache-read.stdout",
+      "original_path": "logs/v32-live-cache-read.stdout",
+      "original_sha256": "eea40db01368595601fd228f8e21305f28343842e6e06a9bf8e1a708d1e09c8b",
+      "published_sha256": "0f24f830ec5cf9054d0e4717ff68a8e0eeadaf8978fbd630e568784b097f0ccd",
+      "path_redacted": true
+    },
+    {
+      "published_path": "engineering/v32-live-cache-read.stderr",
+      "original_path": "logs/v32-live-cache-read.stderr",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path_redacted": false
+    },
+    {
+      "published_path": "engineering/v32-live-cache-offline.json",
+      "original_path": "logs/v32-live-cache-offline.json",
+      "original_sha256": "9082f181818eb67e1004f3c7713e23f9658eed5bb1c5392d103b34cd08f4b8ca",
+      "published_sha256": "bd6fb175f5ccaa16ff8e5c2e453e128ee6c718d6502b3dc9c442e915ac6d249d",
+      "path_redacted": true
+    },
+    {
+      "published_path": "engineering/v32-live-cache-offline.stdout",
+      "original_path": "logs/v32-live-cache-offline.stdout",
+      "original_sha256": "ff9fe28b73c5fdb14a3f5ddeae877b4c0330129996698282341d0e3922e11999",
+      "published_sha256": "bc77e514b51215a8c44c52cfe486449314f82e61ebd1459427fe8640de754760",
+      "path_redacted": true
+    },
+    {
+      "published_path": "engineering/v32-live-cache-offline.stderr",
+      "original_path": "logs/v32-live-cache-offline.stderr",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path_redacted": false
+    }
+  ]
+}

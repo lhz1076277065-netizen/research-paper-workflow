@@ -1,0 +1,103 @@
+{
+  "task": "fixed_synthetic_skill_development_caption_only_resume",
+  "recorded_at_utc": "2026-09-30T08:16:31.528970+00:00",
+  "host_context": "same_host_independent_context",
+  "actual_reads": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/resume-probe/route-board.md",
+      "resolved_path": "LOCAL_EVIDENCE_ROOT/resume-probe/route-board.md",
+      "bytes": 489,
+      "sha256": "49e1664c9ecc7bae33855e225454a5d1aa1f9742213b4015006e1b672bf5d4c8",
+      "purpose": "续接范围与待办"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/resume-probe/before.json",
+      "resolved_path": "LOCAL_EVIDENCE_ROOT/resume-probe/before.json",
+      "bytes": 1990,
+      "sha256": "6be05c423fe24d9dca243ec5099d1455fc5b7d7b4b4b94178118684a70e28ad7",
+      "purpose": "既有版本身份"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/scientific-visualization/SKILL.md",
+      "resolved_path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/scientific-visualization/SKILL.md",
+      "bytes": 1490,
+      "sha256": "85893ffa990afd245fbb6f9be85bc6e1b2ee50c864c4f2600f5478525f7fb136",
+      "purpose": "当前入口与局部任务规则"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/caption.md",
+      "resolved_path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/caption.md",
+      "bytes": 1238,
+      "sha256": "183060a2223e53b0069e9f19d21da1aaa161e24f1ad598b060adc648eb4bb576",
+      "purpose": "实际图注与受影响内容"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/operation-review.md",
+      "resolved_path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/operation-review.md",
+      "bytes": 6001,
+      "sha256": "fc336cb688e32ea414d4e4b301c608c890a0fbf1552440c79b1b7e503c2d5420",
+      "purpose": "既有专业来源、完成范围与限制"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/scientific-visualization/references/execution-handoff.md",
+      "resolved_path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/scientific-visualization/references/execution-handoff.md",
+      "bytes": 360,
+      "sha256": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+      "purpose": "实际交接记录规则"
+    }
+  ],
+  "prior_evidence": {
+    "caption_baseline_match": true,
+    "operation_review_baseline_match": true,
+    "completed_figure_and_analysis": "Carried forward from the current operation-review.md; not re-executed or newly claimed.",
+    "prior_professional_source": "SciPilot main commit 43098ddb9e6a6d142218540c114f9ed38922fc42, documented in operation-review.md; not installed or invoked in this continuation."
+  },
+  "action": {
+    "type": "append_exact_independent_line",
+    "path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/caption.md",
+    "line": "本图仅用于通用 Skill 开发验收。",
+    "before": {
+      "path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/caption.md",
+      "resolved_path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/caption.md",
+      "bytes": 1238,
+      "sha256": "183060a2223e53b0069e9f19d21da1aaa161e24f1ad598b060adc648eb4bb576"
+    },
+    "after": {
+      "path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/caption.md",
+      "resolved_path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/caption.md",
+      "bytes": 1282,
+      "sha256": "557223445dbd889b4dce3a8a9857c508c4f4f56940bf22b27a92e7bc4b7a575e"
+    },
+    "original_bytes_preserved": true,
+    "appended_bytes": 44
+  },
+  "actual_written_paths": [
+    "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/caption.md",
+    "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/affected-review.md",
+    "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/execution-resume.json"
+  ],
+  "affected_review": {
+    "path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/affected-review.md",
+    "resolved_path": "LOCAL_EVIDENCE_ROOT/resume-probe/outputs/affected-review.md",
+    "bytes": 563,
+    "sha256": "39e1446d029ab0360ac5d4cd0350f76efcadf3b28bd90f29b093b3acfee90358"
+  },
+  "verification": {
+    "exact_original_prefix_preserved": true,
+    "exact_single_line_suffix": true,
+    "caption_content_review": "Only the development-acceptance note is appended; existing numeric claims and limits are preserved."
+  },
+  "scope_limits": {
+    "writes_confined_to": "LOCAL_EVIDENCE_ROOT/resume-probe",
+    "delegation_performed": false,
+    "other_assistants_or_hosts_used": false,
+    "other_test_groups_read": false,
+    "figure_redrawn": false,
+    "analysis_recomputed": false,
+    "sources_installed_or_invoked": false,
+    "full_numeric_visual_format_checks_repeated": false,
+    "new_empirical_project_conducted": false,
+    "all_prior_artifacts_rehashed": false,
+    "token_usage_fees_exact_model_identity": "unknown"
+  }
+}

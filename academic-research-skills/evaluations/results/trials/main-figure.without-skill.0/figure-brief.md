@@ -1,0 +1,5 @@
+# Fixed synthetic main-figure task
+
+Compare methods A and B using the accompanying fixed result table. Lower loss is better. The change in acquisition condition changes stratum weights. The current draft claim is "B is a better estimator overall." There is no causal identification, no raw sample data, no significance test, and no mechanism experiment. The supplied intervals belong to each row; an interval for a weighted aggregate is not supplied.
+
+Produce or substantively revise a main figure suitable for discussing the evidence and the claim, with an editable plotting source, vector output and a preview. Use a suitable professional implementation from the same designated source library available to every arm, and explain the meaningful design choice it contributed. Select the needed resources and current branch yourself. Read-only source retrieval is allowed; do not start a field study or invent observations. Return the actual figure, a caption and a brief operation/review note. Existing results are fixed.

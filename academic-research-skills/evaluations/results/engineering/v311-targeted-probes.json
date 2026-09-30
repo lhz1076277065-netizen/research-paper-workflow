@@ -1,0 +1,98 @@
+{
+  "source": "candidate source with the documented version-bound fixture migration",
+  "research31_sha256": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
+  "scope": "Targeted software probes; no actual scientific quality evaluation",
+  "original_quality_suite_rerun": {
+    "tests": 68,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true
+  },
+  "probe_count": 6,
+  "probes": [
+    {
+      "id": "control_complete_synthetic_record",
+      "changes": {
+        "none": true
+      },
+      "returned_status": "ready_for_content_review",
+      "record_errors": [],
+      "next_actions": [],
+      "scientific_quality_certified": false
+    },
+    {
+      "id": "string_false_is_treated_as_true",
+      "changes": {
+        "facts_rechecked": "false",
+        "type": "str",
+        "expected_behavior": "Reject non-boolean or treat as unchecked, not as true"
+      },
+      "returned_status": "record_error",
+      "record_errors": [
+        "facts_rechecked must be a boolean"
+      ],
+      "next_actions": [
+        "Recheck claims, numbers, comparisons and important counterevidence after rewriting"
+      ],
+      "scientific_quality_certified": false
+    },
+    {
+      "id": "post_expression_review_has_no_subject_version_binding",
+      "changes": {
+        "old_manuscript_sha256": "ae7296769ac98a2909bdc67474c3d3e9f7e863acc32b3a9efb77d30227790dc8",
+        "new_manuscript_sha256": "ebd1ea2ae895e9c12819a7f80bfa22a22601e598296fc3b9d0eebf9d31bf83c2",
+        "review_unchanged_after_subject_change": true,
+        "expected_behavior": "Flag post-expression review stale until linked to new subject version"
+      },
+      "returned_status": "research_in_progress",
+      "record_errors": [],
+      "next_actions": [
+        "Bind the post-expression review to this final manuscript version; repeat affected review after changes"
+      ],
+      "scientific_quality_certified": false
+    },
+    {
+      "id": "ordinary_unenumerated_host_action_rejected",
+      "changes": {
+        "host_scope": "current_host",
+        "host_action": "verify_citations",
+        "expected_behavior": "Recognize an ordinary local action or report unclassified; not infer another assistant was requested"
+      },
+      "returned_status": "ready_for_content_review",
+      "record_errors": [],
+      "next_actions": [],
+      "scientific_quality_certified": false
+    },
+    {
+      "id": "literature_use_not_bound_to_current_prior_art",
+      "changes": {
+        "prior_art_document_updated": true,
+        "prior_literature_and_novelty_use_unchanged": true,
+        "expected_behavior": "Match relevant task/material/source identities instead of only role labels"
+      },
+      "returned_status": "research_in_progress",
+      "record_errors": [],
+      "next_actions": [
+        "Complete a library-guided literature operation on this research, or resolve its specific applicability",
+        "Complete a library-guided reading operation on this research, or resolve its specific applicability",
+        "Complete a library-guided novelty operation on this research, or resolve its specific applicability"
+      ],
+      "scientific_quality_certified": false
+    },
+    {
+      "id": "protocol_article_ignores_applicability_and_demands_results",
+      "changes": {
+        "requested_article_type": "protocol-design",
+        "completed_results_not_applicable": true,
+        "expected_behavior": "Distinguish completed protocol deliverable from completed empirical research, without requiring future results"
+      },
+      "returned_status": "ready_for_content_review",
+      "record_errors": [],
+      "next_actions": [],
+      "scientific_quality_certified": false
+    }
+  ],
+  "source_modified": false,
+  "full_489_suite_rerun": false
+}

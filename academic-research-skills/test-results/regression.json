@@ -1,7 +1,7 @@
 {
-  "version": "3.1.1",
-  "generated_at": "2026-09-30T06:26:06.999733+00:00",
-  "tests_run": 503,
+  "version": "3.2.0-rc.1",
+  "generated_at": "2026-09-30T08:13:38.857503+00:00",
+  "tests_run": 509,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
@@ -9,10 +9,10 @@
   "groups": {
     "test_architecture": 86,
     "test_integration": 78,
-    "test_lean": 51,
+    "test_lean": 54,
     "test_portability": 50,
     "test_quality31": 68,
-    "test_release": 49,
+    "test_release": 52,
     "test_suite": 121
   },
   "platform": "Darwin",
@@ -772,6 +772,10 @@
       "status": "passed"
     },
     {
+      "id": "test_lean.Sources.test_cache_cannot_hide_a_changed_index_blob",
+      "status": "passed"
+    },
+    {
       "id": "test_lean.Sources.test_compact_display_preserves_full_index",
       "status": "passed"
     },
@@ -793,6 +797,10 @@
     },
     {
       "id": "test_lean.Sources.test_dynamic_native_handoff_without_review_form",
+      "status": "passed"
+    },
+    {
+      "id": "test_lean.Sources.test_edited_cache_is_preserved_and_rejected",
       "status": "passed"
     },
     {
@@ -877,6 +885,10 @@
     },
     {
       "id": "test_lean.Sources.test_unsupported_binary_response",
+      "status": "passed"
+    },
+    {
+      "id": "test_lean.Sources.test_verified_read_cache_reuses_bytes_without_network",
       "status": "passed"
     },
     {
@@ -1405,6 +1417,18 @@
     },
     {
       "id": "test_release.EnvironmentRecovery.test_managed_package_can_resume_without_network_or_wheelhouse",
+      "status": "passed"
+    },
+    {
+      "id": "test_release.EvaluationHarness.test_changed_material_stops_adapter_before_execution",
+      "status": "passed"
+    },
+    {
+      "id": "test_release.EvaluationHarness.test_custom_cases_keep_raw_material_equal_without_scoring_leak",
+      "status": "passed"
+    },
+    {
+      "id": "test_release.EvaluationHarness.test_custom_material_path_and_duplicate_case_rejected",
       "status": "passed"
     },
     {

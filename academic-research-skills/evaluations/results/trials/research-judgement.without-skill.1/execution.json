@@ -1,0 +1,162 @@
+{
+  "schema_version": "trial-execution-1",
+  "case_id": "research-judgement",
+  "condition": "without-skill",
+  "replicate": 1,
+  "completed_at_utc": "2026-09-30T08:06:31.824097+00:00",
+  "status": "completed_requested_reasoning_deliverables",
+  "synthetic_material": true,
+  "runtime": {
+    "execution_context": "current same-host agent; no alternate assistant or local LLM",
+    "python_requested": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "python_executable_reported": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "exact_model_identifier": "unknown",
+    "token_usage": "unknown",
+    "cost": "unknown",
+    "peak_context": "unknown"
+  },
+  "skill": {
+    "entry": null,
+    "entry_sha256": null,
+    "loaded": false,
+    "source_version": "none loaded",
+    "reason": "Frozen request skill_entry is null; no project or external Skill was read."
+  },
+  "source_versions": {
+    "request": "frozen evaluation-repeat-suite request; byte identity recorded in files_read",
+    "study_profiles": "fixed heldout synthetic research-brief.md; v3.2.0-rc.1 appears in fixture container path only and does not denote a loaded Skill",
+    "common_source_table_schema": "repository-sources-1",
+    "external_repository_versions": "not accessed",
+    "real_literature": "not accessed"
+  },
+  "files_read": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-repeat-suite/requests/research-judgement.without-skill.1.json",
+      "sha256": "94bcf83f44ce28b061a04d04158c1706c403f50b0f07664d2227564c989fb52d",
+      "expected_sha256": null,
+      "verification": "computed; not supplied for request",
+      "purpose": "frozen prompt, material manifest and condition"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/research-brief.md",
+      "sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "expected_sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "verification": "matched",
+      "purpose": "fixed synthetic study profiles and weak draft"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-common/repository-sources.json",
+      "sha256": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0",
+      "expected_sha256": null,
+      "verification": "computed; no expected digest supplied",
+      "purpose": "common permitted-source table metadata only"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.1/judgement.md",
+      "sha256": "4cb5a10791ac5e81f7e541ca71b2c9673e226cd333a74ce9950a45561e85c418",
+      "expected_sha256": null,
+      "verification": "nonempty UTF-8 output read back",
+      "purpose": "deliverable verification"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.1/operation-note.md",
+      "sha256": "78cf06e4e6251d39884504e4a4abad87355b30588afdf09e58e409106cffe40e",
+      "expected_sha256": null,
+      "verification": "nonempty UTF-8 output read back",
+      "purpose": "deliverable verification"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.1/execution.json",
+      "sha256": "not self-hashed",
+      "expected_sha256": null,
+      "verification": "JSON read-back check performed after creation",
+      "purpose": "execution record validation"
+    }
+  ],
+  "tools_used": [
+    "functions.exec",
+    "exec_command",
+    "apply_patch",
+    "Python stdlib: pathlib, hashlib, json, sys, datetime"
+  ],
+  "tool_operations": [
+    {
+      "sequence": 1,
+      "tool": "exec_command",
+      "action": "cat frozen request"
+    },
+    {
+      "sequence": 2,
+      "tool": "exec_command via parallel read-only orchestration",
+      "action": "compute request/material SHA-256; assert material match; read material"
+    },
+    {
+      "sequence": 3,
+      "tool": "exec_command via parallel read-only orchestration",
+      "action": "compute common source table SHA-256 and read its JSON"
+    },
+    {
+      "sequence": 4,
+      "tool": "apply_patch",
+      "action": "create judgement.md and operation-note.md only in assigned output directory"
+    },
+    {
+      "sequence": 5,
+      "tool": "exec_command",
+      "action": "record Python runtime; recheck frozen input hashes and embedded-material parity; read and hash outputs; write and parse execution.json"
+    }
+  ],
+  "adaptations": [
+    "Executed the frozen English user_prompt using the current agent with no Skill entry.",
+    "Used the supplied common Python solely for hashes, JSON, runtime metadata and artifact validation.",
+    "Produced an explicit symbolic identifiability task and an unrun manufactured pilot design, preserving the reliability objective.",
+    "Read the permitted-source list without fetching its repositories because no additional Skill or real literature was needed for this fixed synthetic judgement."
+  ],
+  "results": {
+    "judgement": "Supported-scope table; four justified routes; prioritized acquisition reliability boundary with identifiability check; conditional next-work design and decision branches.",
+    "operation_note": "Short completion, isolation, limits and repeatable material hash check.",
+    "empirical_study_conducted": false,
+    "simulator_executed": false,
+    "new_empirical_findings": false,
+    "external_claims_verified": false,
+    "scoring_performed": false
+  },
+  "verification": {
+    "material_sha256_matches": true,
+    "request_inline_material_matches_file": true,
+    "condition_is_without_skill": true,
+    "markdown_outputs_read_back_and_hashed": true,
+    "execution_json_read_back": true,
+    "manual_review": "Checked objective preservation, faithful treatment of R1-R4, separation of synthetic support from ideas, alternative explanations, discriminating work and lack of invented findings.",
+    "scope_of_verification": "Input integrity and requested artifact completeness; not a scientific-validity score or empirical validation."
+  },
+  "isolation": {
+    "delegation": false,
+    "alternate_assistant_or_local_llm_used": false,
+    "other_conditions_or_answers_read": false,
+    "parent_reports_or_scores_read": false,
+    "memory_files_read": false,
+    "external_messages_sent": false,
+    "writes_confined_to": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.1"
+  },
+  "outputs": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.1/judgement.md",
+      "sha256": "4cb5a10791ac5e81f7e541ca71b2c9673e226cd333a74ce9950a45561e85c418",
+      "bytes": 12941
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.1/operation-note.md",
+      "sha256": "78cf06e4e6251d39884504e4a4abad87355b30588afdf09e58e409106cffe40e",
+      "bytes": 1549
+    }
+  ],
+  "limitations": [
+    "R1-R4 are fabricated profiles with no authors, DOI, publication priority, raw data, effect sizes or estimator equations.",
+    "No actual observations, empirical study, simulator execution, trained model or field generalization were produced.",
+    "Identifiability construction and simulator contrasts are proposed next work; no theorem or diagnostic validity is claimed.",
+    "Exact model identifier, tokens, fees and peak context were not exposed and are recorded as unknown.",
+    "Only the source table schema and frozen bytes were available as source-version evidence; no external repository commit was retrieved."
+  ]
+}

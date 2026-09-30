@@ -1,0 +1,210 @@
+{
+  "case_id": "main-figure",
+  "condition": "release",
+  "replicate": 0,
+  "synthetic_material": true,
+  "status": "completed",
+  "completed_at_utc": "2026-09-30T07:22:07.384679+00:00",
+  "executor": {
+    "agent": "/root/figure_candidate_v32",
+    "host": "Codex desktop",
+    "exact_model_identifier": "unknown",
+    "token_use": "unknown",
+    "fees": "unknown",
+    "other_host_or_local_LLM_used": false,
+    "subagents_used": false
+  },
+  "actual_local_reads": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-suite/requests/main-figure.release.0.json",
+      "sha256": "3987da9e6e9e8e9324a20cf00381662313332b71923911b4e1dcb7f6fd51634f",
+      "scope": "Frozen request only"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+      "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "matches_request": true,
+      "scope": "Full fixed input"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/figure-brief.md",
+      "sha256": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb",
+      "matches_request": true,
+      "scope": "Full fixed input"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/scientific-visualization/SKILL.md",
+      "sha256": "85893ffa990afd245fbb6f9be85bc6e1b2ee50c864c4f2600f5478525f7fb136",
+      "matches_request": true,
+      "version": "3.2.0-rc.1",
+      "scope": "Full assigned entry"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/scientific-visualization/references/figure-production.md",
+      "sha256": "2dbe62c305bf47b82fee0258391a5aaf8c461e829adee1403969a8a45310c6c2",
+      "scope": "Full task-relevant reference"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/scientific-visualization/references/provider-policy.md",
+      "sha256": "18e49c0e05e0debd255ad8c0025393685f583ab42c98ed38a861c2181724ee7a",
+      "scope": "Full task-relevant reference"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/scientific-visualization/references/execution-handoff.md",
+      "sha256": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+      "scope": "Full task-relevant reference"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-common/repository-sources.json",
+      "sha256": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0",
+      "scope": "Designated source list"
+    }
+  ],
+  "professional_source": {
+    "repository": "https://github.com/Haojae/scipilot-figure-skill",
+    "selected_current_branch": "main",
+    "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "commit_date": "2026-06-15T03:40:49Z",
+    "reported_version": "2.1.0 (current GitHub README)",
+    "read_manifest": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/provider/source-manifest.json",
+    "all_retrieved_upstream_files_unmodified": true,
+    "web_read": "https://github.com/Haojae/scipilot-figure-skill"
+  },
+  "tool_operations": [
+    "exec_command: read only the assigned request; SHA-256 checked two material files and the assigned Skill entry; read their full content.",
+    "exec_command: read the three relevant assigned Skill references and shared designated-source list; checked existing Python packages.",
+    "web.run: opened designated SciPilot repository. urllib GitHub API: discovered default main branch, current commit, and repository tree.",
+    "exec_command/urllib: retrieved selected entry, license, documentation and implementation at the pinned commit into this output directory; inspected relevant sections.",
+    "apply_patch: wrote the final editable plotting source inside this output directory. Copied the frozen CSV/brief unchanged.",
+    "Python: ran provider profile_data on a comment-header-aware DataFrame and exact Decimal numeric assertions. First profile JSON output required NumPy native scalar serialization.",
+    "Python: used provider style, errorbar recipe, layout and labels for the actual figure. Initial layout audit warned of top-label clipping; corrected the custom layout rectangle and reran.",
+    "Python/view_image: generated and opened pre-export color and grayscale PNGs; actual visual checklist passed before vector export.",
+    "Python: added actual artist endpoint assertions, then exported final PDF/SVG/PNG at exact 180x132 mm and 300 dpi; ran provider layout and format audits.",
+    "view_image: reopened final color PNG, grayscale PNG and independent PDF rendering.",
+    "Poppler pdffonts/pdfinfo plus PyMuPDF: independently checked actual PDF size, fonts and vector content; parsed actual SVG for editable text and no image objects.",
+    "apply_patch/exec_command: wrote caption and operation/review note; verified input/source preservation and final artifact hashes; recorded execution."
+  ],
+  "use_and_adaptation": {
+    "status": "adapted_in_host",
+    "scope": "Argument planning, summary-data profiling, chart selection, actual production, exact numeric/artist checks, pre-export and final visual review, export and format verification. Current agent/model only.",
+    "meaningful_design": "Condition facets share loss scale; methods use color plus circle/square; all supplied row intervals are shown; observed mix is explicit; aggregate difference points include a fixed-reference-weight sensitivity row without invented intervals.",
+    "adaptations": [
+      "Summary rows are not raw data: profiler group-row counts/distribution suggestions were excluded from sample-level inference.",
+      "DataFrame input handles the supplied CSV comment header; original fixed data unchanged.",
+      "Recipe SEM simulation replaced with supplied interval endpoints; new weighted values are descriptive calculations only.",
+      "General dimensions/font preset selected without a target journal; no journal compliance claimed.",
+      "Upstream grayscale helper not used because it changes PNG tight cropping; exact-size grayscale generated from final PNG separately.",
+      "Provider optional pypdf audit unavailable; existing Poppler and PyMuPDF verified fonts and physical dimensions instead."
+    ],
+    "source_code_modified": false
+  },
+  "environment": {
+    "python_executable": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "python_version": "3.12.14",
+    "libraries": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "pillow": "12.3.0",
+      "PyMuPDF": "1.28.2"
+    },
+    "new_dependencies_installed": false
+  },
+  "formal_outputs": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/plot_main_figure.py",
+      "sha256": "fb9c5516d76dddd96b739e82a174bb69c70d14663ea1be7808641d3f246959a2",
+      "bytes": 12614
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/main-figure.pdf",
+      "sha256": "3eea812bf0bd76c05ea7d54ae5b96aab851e6ab3a1e38a7d63781e5c24f5d3e6",
+      "bytes": 28338
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/main-figure.svg",
+      "sha256": "5bc63caef8e41feac74575bc1fd7f6f82c7c42c35f9d2d742e8966a07aa7c952",
+      "bytes": 37204
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/main-figure.png",
+      "sha256": "cf40df672cc8a48628671c60a8c368e9b93f5b3cbdb536de9285448a2638f09b",
+      "bytes": 194600
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/main-figure-grayscale.png",
+      "sha256": "56876671204b4b441f0ab98144d234e975bd249924ada711d23ae8446d482b26",
+      "bytes": 97510
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/caption.md",
+      "sha256": "183060a2223e53b0069e9f19d21da1aaa161e24f1ad598b060adc648eb4bb576",
+      "bytes": 1238
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/operation-review.md",
+      "sha256": "fc336cb688e32ea414d4e4b301c608c890a0fbf1552440c79b1b7e503c2d5420",
+      "bytes": 6001
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/numeric-review.json",
+      "sha256": "901580f020c733ef4d6790201a806a7782447802b52291153d787c47236e4aef",
+      "bytes": 1761
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/plotted-row-review.json",
+      "sha256": "3fd35ebbb15f03819c6b58280eb11aeaa6cd7a818eebc39cf0a4f11e1c517b21",
+      "bytes": 1351
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/weighted-summaries.csv",
+      "sha256": "fcf6712fc89015b1ddbdbc885e30e9477373c2366c5f827c2c4c8aeb033bf551",
+      "bytes": 295
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/layout-review.json",
+      "sha256": "ab4b052c0452a22decfc6d3f5b47f8d4f5f1981c081fe0872f9ece22e3a42d24",
+      "bytes": 293
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/format-review.json",
+      "sha256": "ec663edb34bb7c5f4517dd94f36d4619a61ce0c81f510e0c8f3e53af287e046e",
+      "bytes": 1135
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/independent-format-review.json",
+      "sha256": "86e84a6b93651bbec2ea26792cd77957572f647b2154e9342f677506c420fa9f",
+      "bytes": 2646
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/provider-data-profile.json",
+      "sha256": "9112fdb3323252bbe74b230e42cde72c303933e85c01abb6579665c23ec6db00",
+      "bytes": 5629
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/main-figure-pdf-render.png",
+      "sha256": "cec5b9402daaadbc0320607663adcde9efc34b87348b703b97c9c924af96cbf9",
+      "bytes": 82267
+    }
+  ],
+  "review": {
+    "numeric": "All eight actual point/interval artists match frozen inputs; exact weighted A/B/delta values are 4.80/4.36/-0.44, 6.60/7.52/+0.92, 5.40/5.48/+0.08; four stratum contrasts checked.",
+    "visual": "Opened pre-export color/grayscale and final color/grayscale plus PDF render. Eight checklist items passed; actual observations in operation-review.md.",
+    "formats": "PDF and SVG vector; 180x132 mm; all PDF fonts embedded CID TrueType; no raster images; SVG has 68 editable text elements; PNG 2125x1559 at 300 dpi.",
+    "provider_layout_issues": [],
+    "provider_optional_audit_limitation": "pypdf absent, independently resolved by Poppler/PyMuPDF."
+  },
+  "limits": [
+    "Fixed synthetic summary results only; no actual research project.",
+    "No raw samples, significance tests, aggregate/difference intervals, causal identification or mechanism experiment.",
+    "Reference-weight sensitivity does not define a target population or isolate a causal effect.",
+    "No target-journal specification or print-proof evaluation was supplied.",
+    "Exact model identifier, token use and fees unavailable; recorded unknown."
+  ],
+  "scope_guards": {
+    "other_condition_requests_or_answers_read": false,
+    "parent_reports_or_scoring_criteria_read": false,
+    "project_skill_source_modified": false,
+    "outputs_written_outside_assigned_directory": false
+  }
+}

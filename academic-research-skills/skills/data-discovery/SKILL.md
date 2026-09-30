@@ -1,8 +1,8 @@
 ---
 name: data-discovery
-description: "支持研究问题的数据与材料获取"
+description: "当研究需要定位数据、材料、语料或资源并核查覆盖和许可时使用；根据科学问题选择来源，不将易下载当作研究价值。"
 metadata:
-  version: "3.1.1"
+  version: "3.2.0-rc.1"
 ---
 
 # 支持研究问题的数据与材料获取

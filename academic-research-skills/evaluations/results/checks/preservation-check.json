@@ -1,0 +1,121 @@
+{
+  "original_zip_identities": [
+    {
+      "file": "academic-research-skills-v3.0.0-source.zip",
+      "sha256": "8d1d931d4d5b21cce37e2a19dfc0cd0896781cea5681403584e4a2a2abdad1d7",
+      "bytes": 2095889
+    },
+    {
+      "file": "academic-research-skills-v3.1.0-source.zip",
+      "sha256": "74d4d6803d772cb6eea9f5b5480365625aef2cfb968c382765f990b143ca84e9",
+      "bytes": 2516445
+    },
+    {
+      "file": "academic-research-skills-v3.1.0.zip",
+      "sha256": "9835d9344c71e860f8bfae71d933efffd4630ae99473a3ad4612945c8c336538",
+      "bytes": 1961566
+    }
+  ],
+  "detailed_protocols": [
+    {
+      "capability": "analysis-execution",
+      "sha256": "f0ac83fef80c047ffd63169dad0344681c3cf71b3b73d29d6fa16293cf1fe92e",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "citation-audit",
+      "sha256": "cc83a88ac6869d57aa4826009d7de6d43ebf74008b2490f68a3350f153cd1edb",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "data-discovery",
+      "sha256": "7697fab5989f7c1add8475515e5adbfae8d64d965d6e2cc53f12c6ae842e3e2b",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "data-preparation",
+      "sha256": "21f2fbc66b8a6f917b971844b8aa5c029ac20cafd830fb9bddc088b93d2e350d",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "ethics-protocol",
+      "sha256": "fe7700c02133f08de0aade843f1eb724b1101666f53c058cf966efbdedfe1753",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "journal-intelligence",
+      "sha256": "f264b870a90a0c60f130416fdfa692c4183b5fce7ad633c3114978dc13003816",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "literature-discovery",
+      "sha256": "b07118b08582c87d4d823a1f0d3af78d979c39493718038fc2070fa5cc749ff5",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "manuscript-review",
+      "sha256": "c6ac325b7741bd4b96ed6d44cc955069212ccab7e1a013dc2aaddf1135d126ca",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "manuscript-writing",
+      "sha256": "e979bd6af0f926e4987801b89266c6760b31e9d0cffd33488d91c4daa8789213",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "paper-deep-reading",
+      "sha256": "631897cd5b5c307c422bf9622fe92d85e732d4f6313378aa5a4e0159bdd89971",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "peer-review-response",
+      "sha256": "32e1feccf47be5012282da0932e9e80411d6df6b802b03c0ca8edabfd667c703",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "publication-stewardship",
+      "sha256": "e14dc2c4029585e4011116a76d12063acc5ad7af5953660d557e97e76d9c6136",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "research-design",
+      "sha256": "3c62e1196eab2a7664aa021518215c8cb4e33026e7c15455179caafa9e6e1db4",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "research-intake",
+      "sha256": "5e4fc90edbc98e495e326dde66537318806a777c63f1c72b2056a6d4d8fcbb63",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "research-paper-workflow",
+      "sha256": "ed4aebe8c94148de3a5cd158b8ffd9e9cf1f5c3cd6e24509dc83baed40596be2",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "robustness-reproducibility",
+      "sha256": "d9acfe107bd88f3781ca6d8d3368129132c0dc39a3d339c7919fa665b197e886",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "scientific-visualization",
+      "sha256": "8ef13cd29d551c92b10f19d5e2fd16e303e62c5b802af62d6003ec2322c23238",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "submission-packaging",
+      "sha256": "c16eb4153e49345e0c878542846337ed04c08f4d26b5b809c938e70f0984df3c",
+      "unchanged_from_v310": true
+    },
+    {
+      "capability": "topic-novelty",
+      "sha256": "605ed64836fbc40253b6bdbb7ede25f20e4ddc336b1a95b2bfb8f8a53be74e72",
+      "unchanged_from_v310": true
+    }
+  ],
+  "profiles": 16,
+  "default_profile": "general",
+  "source_repositories": 13,
+  "capabilities": 19,
+  "extensions_allowed": true
+}

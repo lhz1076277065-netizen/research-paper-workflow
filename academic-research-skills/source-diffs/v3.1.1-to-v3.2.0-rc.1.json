@@ -1,0 +1,347 @@
+{
+  "scope": "Authoritative maintenance source, tests and documentation; generated copies and run evidence omitted, complete release source retains them.",
+  "changes": [
+    {
+      "path": "CHANGELOG.md",
+      "status": "modified",
+      "before_sha256": "54bf2287de96f3faa3a412e969819de71f7364e7aea1ad3d02217edd2931d65e",
+      "after_sha256": "2e9ea0b583ba32d397901af0a9cda0a6ea32f96e0f08db30cd038b1d4bafb92d"
+    },
+    {
+      "path": "GENERATED-FILES.json",
+      "status": "modified",
+      "before_sha256": "c9f0f6b27a310f5a99957b8e9eba7e7400f6f3bc0ded9680c62f96a4caac6447",
+      "after_sha256": "a9b8b4de1365eb47df27dfd7014489d14d6402e59979fa8e0be4fd8ff48d4815"
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "before_sha256": "1c7c92e2a0f36e88835898e7dfb6f0804b7d6bba134df18c724280bb07758c12",
+      "after_sha256": "407219018f91673490d3bf8269754cb16dd1902f0f99ac662f9d2c2560717606"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "status": "modified",
+      "before_sha256": "43d152dcca9b84a96687debfb2c7b65bbaec8d5b6667d453e9766a26051a270a",
+      "after_sha256": "0477b1580029bfd0078f18c4bfd7d4a40f0450da8ec536738d4cccdbacbaa984"
+    },
+    {
+      "path": "UPDATE_REPORT.zh-CN.md",
+      "status": "modified",
+      "before_sha256": "f88ca336b77134402ce600581a9ba2f68f6bc8ad83b670871480715c77afc75a",
+      "after_sha256": "b3c27407e823a78a6225996104d1d422789a2544769af20cb3a029d5ae007eb0"
+    },
+    {
+      "path": "VERSION",
+      "status": "modified",
+      "before_sha256": "6dc3b2dc3139b7d421b6fc26a7f853389a9b035ea4f2e9047b9516050dd6ac73",
+      "after_sha256": "87cd45a5857dc58e0b13cef601569d6f60c1393b15b2e94dcd21a46661104b53"
+    },
+    {
+      "path": "docs/COMPATIBILITY.zh-CN.md",
+      "status": "modified",
+      "before_sha256": "c020c8fac34bda7249873f10827cbc6d503fb8f13b2fae5e92c57bae6dd4be2f",
+      "after_sha256": "fa89ba7e263c5b744bee947fb27135bba0f8ce4cf2ac105de17c145fb66b4104"
+    },
+    {
+      "path": "docs/figure-production.md",
+      "status": "modified",
+      "before_sha256": "89f59d774de59a9e6eee84461d8642b458e6be9c480f9a8dd8f9a9b163af1acd",
+      "after_sha256": "2dbe62c305bf47b82fee0258391a5aaf8c461e829adee1403969a8a45310c6c2"
+    },
+    {
+      "path": "docs/final-expression.md",
+      "status": "modified",
+      "before_sha256": "c76cca06f2b44a6680a436e8142ca808ec71456d6cf58f5c27690c2a1fa78d68",
+      "after_sha256": "985b3a4b8a82b81ba6976fb2ae47cd40c97ed41cb89cd933c1cd77d55689f8bf"
+    },
+    {
+      "path": "docs/provider-catalog.json",
+      "status": "modified",
+      "before_sha256": "679b75d87f3fb7fe442da659e21d2776d6af7623e034d6ea03d49d326b471fca",
+      "after_sha256": "2bbb1b001dca874c31297234847a8343eac02b9b9866ade27ccf8920ccd25a27"
+    },
+    {
+      "path": "docs/provider-usage.md",
+      "status": "modified",
+      "before_sha256": "dc9fdf312a4f989da223e3c84e94dbd52b0c652909af6c0a08a5c0c0f540ae2f",
+      "after_sha256": "ce28930c150a857f22aecdfa9f5c4b8c38f8a8d8b07dbb383fd3e82042780ada"
+    },
+    {
+      "path": "docs/research-lifecycle.md",
+      "status": "modified",
+      "before_sha256": "4dae707bfbb11f2ae30d6f47463fc22ac67f117a1761acad946d20d41b875c90",
+      "after_sha256": "c12f1d2fe75bc7ab84b8fdbc4f397dbefa55482985d4beb8a47c8c244a4475d4"
+    },
+    {
+      "path": "docs/research-quality.md",
+      "status": "modified",
+      "before_sha256": "f4950064835f76d4bd08fc23b51818baeba14ae000e7dac83f03ed55824685c9",
+      "after_sha256": "d0ecd5f49e239ee9a22629a96eca15314623f1e837db7d722ba7ccef2626557e"
+    },
+    {
+      "path": "evaluations/README.md",
+      "status": "modified",
+      "before_sha256": "2b5b90db1cbe559f53939f3f806b6a9460601d5b274019299df0de6c68e95908",
+      "after_sha256": "5026177853ea952d5264c4acb488165aca372d407262615c4e78338ea5e52587"
+    },
+    {
+      "path": "evaluations/fixtures/heldout/figure-brief.md",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb"
+    },
+    {
+      "path": "evaluations/fixtures/heldout/fixed-results.csv",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884"
+    },
+    {
+      "path": "evaluations/fixtures/heldout/manuscript.md",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b"
+    },
+    {
+      "path": "evaluations/fixtures/heldout/research-brief.md",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c"
+    },
+    {
+      "path": "evaluations/quality-cases.json",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "880048fa33f72dd7ee60fff2df320aff776fb7873485c659de4994e9aff8635e"
+    },
+    {
+      "path": "evaluations/repeat-research-cases.json",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "6a542fa40a9e5e2829fe6dbd33eb01f971d5b62ecdaa9eaaba5a9ed858befc2d"
+    },
+    {
+      "path": "evaluations/reserved-cases.json",
+      "status": "added",
+      "before_sha256": null,
+      "after_sha256": "b128845650df28977d4d253c317fdf998e92889d8010171b8ba143fb6e921264"
+    },
+    {
+      "path": "evaluations/run_host.py",
+      "status": "modified",
+      "before_sha256": "93be71a200982473bf7443db168917546974d6a754e8237caf8198413252a5f1",
+      "after_sha256": "ef8604980dd6705582fac2f5660d63e5548a414d866117a26efe4e438d0e58dd"
+    },
+    {
+      "path": "release/make_package.py",
+      "status": "modified",
+      "before_sha256": "dee1eb83a8287641149c96d5ee121c87edba5c879a9759ddcd8eaed0256341e7",
+      "after_sha256": "05cbabb45153f91f8e66c863e7966464603021cbc9876261de57cec46d9cc1e5"
+    },
+    {
+      "path": "src/common/assets/environment-profiles.json",
+      "status": "modified",
+      "before_sha256": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
+      "after_sha256": "3a60cd94750ab99d098a321d6e5aafe1d5f592e3f3e59c2db1870c1e61d04ee4"
+    },
+    {
+      "path": "src/common/assets/research-profiles.json",
+      "status": "modified",
+      "before_sha256": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
+      "after_sha256": "6a7762e0268ec2c17f0c063f23a1490b09f7e3274ae83d58a54c0faa10c981e7"
+    },
+    {
+      "path": "src/common/assets/research31-policy.json",
+      "status": "modified",
+      "before_sha256": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
+      "after_sha256": "907a701d957da6cf7ae3c761664170acd060a4ce0e20462842fb3af7d32a9140"
+    },
+    {
+      "path": "src/common/references/figure-production.md",
+      "status": "modified",
+      "before_sha256": "89f59d774de59a9e6eee84461d8642b458e6be9c480f9a8dd8f9a9b163af1acd",
+      "after_sha256": "2dbe62c305bf47b82fee0258391a5aaf8c461e829adee1403969a8a45310c6c2"
+    },
+    {
+      "path": "src/common/references/final-expression.md",
+      "status": "modified",
+      "before_sha256": "c76cca06f2b44a6680a436e8142ca808ec71456d6cf58f5c27690c2a1fa78d68",
+      "after_sha256": "985b3a4b8a82b81ba6976fb2ae47cd40c97ed41cb89cd933c1cd77d55689f8bf"
+    },
+    {
+      "path": "src/common/references/provider-usage.md",
+      "status": "modified",
+      "before_sha256": "dc9fdf312a4f989da223e3c84e94dbd52b0c652909af6c0a08a5c0c0f540ae2f",
+      "after_sha256": "ce28930c150a857f22aecdfa9f5c4b8c38f8a8d8b07dbb383fd3e82042780ada"
+    },
+    {
+      "path": "src/common/references/research-lifecycle.md",
+      "status": "modified",
+      "before_sha256": "4dae707bfbb11f2ae30d6f47463fc22ac67f117a1761acad946d20d41b875c90",
+      "after_sha256": "c12f1d2fe75bc7ab84b8fdbc4f397dbefa55482985d4beb8a47c8c244a4475d4"
+    },
+    {
+      "path": "src/common/references/research-quality.md",
+      "status": "modified",
+      "before_sha256": "f4950064835f76d4bd08fc23b51818baeba14ae000e7dac83f03ed55824685c9",
+      "after_sha256": "d0ecd5f49e239ee9a22629a96eca15314623f1e837db7d722ba7ccef2626557e"
+    },
+    {
+      "path": "src/common/scripts/environment.py",
+      "status": "modified",
+      "before_sha256": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
+      "after_sha256": "34f64796878d31063a4b6af2f5beb7828f9dc71f71f4804683ea3e879c4b7601"
+    },
+    {
+      "path": "src/common/scripts/provider_runtime.py",
+      "status": "modified",
+      "before_sha256": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
+      "after_sha256": "694f9b7ba25128f401bb711cac3bd9b3a4ec775d95fde2790c842ba1adefc56d"
+    },
+    {
+      "path": "src/common/scripts/selftest.py",
+      "status": "modified",
+      "before_sha256": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
+      "after_sha256": "33ed2d67da210ef373bc719a42286760a649fe0a7be282792dba1c41c9a910d4"
+    },
+    {
+      "path": "src/common/scripts/upstream.py",
+      "status": "modified",
+      "before_sha256": "b8e41e15cd998e56a84484d762f4acb4c26a61bda39d1dbcb496492b1e3e17b6",
+      "after_sha256": "3dfa7aafe0c3b75491efe79e6a7695c52587558be83644056d2025d13e06de7d"
+    },
+    {
+      "path": "src/common/scripts/validate_run.py",
+      "status": "modified",
+      "before_sha256": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
+      "after_sha256": "0a85311dc6ff0668ae06c59d29f2a42d129a05fb6d0e46739d3567f4cd1923c5"
+    },
+    {
+      "path": "src/quality31/payload/skills/analysis-execution/SKILL.md",
+      "status": "modified",
+      "before_sha256": "6cb3972d538a81924f1fbde1f03b7c4994f8ccfe1daecdc45105a95b9ab8c120",
+      "after_sha256": "3bdc6280187ce838dd7fa723be1b4372ec59e45634cbaf70dec998a51fe92afc"
+    },
+    {
+      "path": "src/quality31/payload/skills/citation-audit/SKILL.md",
+      "status": "modified",
+      "before_sha256": "685973759bd15f51721e0a2793a9f5878f78668505778e69378b9c427f30759e",
+      "after_sha256": "276a478d97eaae9ae9a48282e494a023858dca07a5d9f7109e33a8bc2f3efa86"
+    },
+    {
+      "path": "src/quality31/payload/skills/data-discovery/SKILL.md",
+      "status": "modified",
+      "before_sha256": "5931dc7f2abb04d4354a9c20e1453cfb66fb72fed254b434f4c45f82fbb2d254",
+      "after_sha256": "92b32112cb71916aecaad947b9927f9d4473c52dced596e61dc30cbc03593dd6"
+    },
+    {
+      "path": "src/quality31/payload/skills/data-preparation/SKILL.md",
+      "status": "modified",
+      "before_sha256": "bd2c9f60858894641d787d07dcef92549ebc62b5919292c66c69c182ca8df891",
+      "after_sha256": "01969f2641b731828e1d7e5f596dd9bc450dde19d01d4788c2aedda0253e029b"
+    },
+    {
+      "path": "src/quality31/payload/skills/ethics-protocol/SKILL.md",
+      "status": "modified",
+      "before_sha256": "fa7ee0aa4bf9f40a90d6aff67b0ab63aeb7d896e5ec3b79126bb3d0c8b6cdd32",
+      "after_sha256": "60f0a85fb951e76f04958f31aaad89fae3a34cbedefdc2d73f41100997b00793"
+    },
+    {
+      "path": "src/quality31/payload/skills/journal-intelligence/SKILL.md",
+      "status": "modified",
+      "before_sha256": "0d8f9f5e78121b465dccc4cb9d47eff090820501314b2e56aa9207b76d133f20",
+      "after_sha256": "b2fdcb1993c24bc5a434143054008cc4d9715435c89c9184d2f4b04720148017"
+    },
+    {
+      "path": "src/quality31/payload/skills/literature-discovery/SKILL.md",
+      "status": "modified",
+      "before_sha256": "b104e1ee04b66f6f3de54a1d42600c28f45668f8a933ee4648ab190989a54802",
+      "after_sha256": "1b8a39638935ad22fcbe5143e935ab7e8ccbc3fec4ab9fef3ae868e190dd5bad"
+    },
+    {
+      "path": "src/quality31/payload/skills/manuscript-review/SKILL.md",
+      "status": "modified",
+      "before_sha256": "ea77c7fe84593d64301b6beb0f07d10fa5c4d3385f6f80ae30f72f7aced1c1be",
+      "after_sha256": "951077c7bd715a5f0af071e6f2c29247087164d0ea7c4817d9957e2c8bd90330"
+    },
+    {
+      "path": "src/quality31/payload/skills/manuscript-writing/SKILL.md",
+      "status": "modified",
+      "before_sha256": "01d09d4df2a7f6b48626cc3d5b673cec50ae49970e07a5b26b71a825e16e94b4",
+      "after_sha256": "b28256342c0d611818178a3582196af331469aaf034aa1d9ce5768d459a67e73"
+    },
+    {
+      "path": "src/quality31/payload/skills/paper-deep-reading/SKILL.md",
+      "status": "modified",
+      "before_sha256": "2312347381fa7cf5b10394cfa7df26a8a702b9e3c5e8badd64dc9e83c95621da",
+      "after_sha256": "20ee390e7163d81441c701751114f0a35b41a289ea527e9c8726479aa0ba89ef"
+    },
+    {
+      "path": "src/quality31/payload/skills/peer-review-response/SKILL.md",
+      "status": "modified",
+      "before_sha256": "67f419c3ec0d79d7decc5a68feeeca356917c7746755d2e157599a39117a9d7c",
+      "after_sha256": "9410c663622eb1fa6e3bbb82b0ba01f8cd9aa4cbd54f8aeb433f2c668fff2519"
+    },
+    {
+      "path": "src/quality31/payload/skills/publication-stewardship/SKILL.md",
+      "status": "modified",
+      "before_sha256": "b973b94a50a43c30f161895c2f2be601d5a46693d6f5bc1a3f726e503b641802",
+      "after_sha256": "2b1e929884a4cef31c3e57aeb86fefe4eedf773d65eb71283b9d5df4ec0fb861"
+    },
+    {
+      "path": "src/quality31/payload/skills/research-design/SKILL.md",
+      "status": "modified",
+      "before_sha256": "a2184724fd6b499d3fff878e4a80807a7cb0bc23423f91484329181623ba9278",
+      "after_sha256": "7c70f810941fd45f0c87f4f89c8341cbf59e2906d4f111637acd6b43440a4270"
+    },
+    {
+      "path": "src/quality31/payload/skills/research-intake/SKILL.md",
+      "status": "modified",
+      "before_sha256": "d71fc479863fc966a71f1a981cb545526172179e5f7df1bf8c13999bc914c911",
+      "after_sha256": "19fe2c3b80564857b240416ffde9ad7bd2d5a6f74d37e7b9e9d9f7b022087b25"
+    },
+    {
+      "path": "src/quality31/payload/skills/research-paper-workflow/SKILL.md",
+      "status": "modified",
+      "before_sha256": "f93bbee4bba6ec35628c5fb4637f0d99568825e2c0e5eff298586ebaf0e65658",
+      "after_sha256": "73c37fa48f2928ba35ddb45bf527b93a9472569dd3e5008a8b2f41b9d91e9627"
+    },
+    {
+      "path": "src/quality31/payload/skills/robustness-reproducibility/SKILL.md",
+      "status": "modified",
+      "before_sha256": "d2ff3d7e2eaa6b0ebfc775e2080a56ef9f2db038f7d29509222770e457f40912",
+      "after_sha256": "56eda62a95f4a0713f2bb92fb4de28ef66ff24591a3d165233ba98bb1aa5d0d3"
+    },
+    {
+      "path": "src/quality31/payload/skills/scientific-visualization/SKILL.md",
+      "status": "modified",
+      "before_sha256": "8fd960ed60c38b10deacf3bf7bed83dbb3af4b94f6d8d82f09a548f77ac3a899",
+      "after_sha256": "85893ffa990afd245fbb6f9be85bc6e1b2ee50c864c4f2600f5478525f7fb136"
+    },
+    {
+      "path": "src/quality31/payload/skills/submission-packaging/SKILL.md",
+      "status": "modified",
+      "before_sha256": "bb8c11188b855aa6c322fad3d86d6af338539a712e28d1881c6d2e992df871d2",
+      "after_sha256": "b6aacb01eac097a5bfadd580ca4714209b0ae3fd41477564c99625f9d0ca3222"
+    },
+    {
+      "path": "src/quality31/payload/skills/topic-novelty/SKILL.md",
+      "status": "modified",
+      "before_sha256": "d51705276b575826c61180f4828e62edcb475977130761cf7747f543aecaf2f8",
+      "after_sha256": "d9703f5f5a956ee468311776bb78c12ffc2b8ab18fa6f0b5ced3fdd41293c895"
+    },
+    {
+      "path": "tests/test_lean.py",
+      "status": "modified",
+      "before_sha256": "76bb9c75ee9477a5a58ddb39b70208689327748ab2296d8c03a93db399147272",
+      "after_sha256": "b5baf42205e5ece555a1b18ac52ac77cd1e88127429b29251007cf7a102ceb2b"
+    },
+    {
+      "path": "tests/test_release.py",
+      "status": "modified",
+      "before_sha256": "72a70495d326c8e5a1b773f5f52a2a7cf3d2838f7d0061ca1a3e904badcc2d53",
+      "after_sha256": "a90b89c6319359001527551bfad042a0332bce95ee3af2ca39c1cac36c7c0eed"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "method": "metadata-only semantic routing observation, not platform auto-discovery",
+  "routes": [
+    {
+      "id": "title",
+      "primary_capability": "manuscript-review",
+      "rationale": "只改善现有研究标题的表达清晰度，最接近目录中的表达审查。",
+      "requested_scope": "改写一个标题，保留原研究含义；不寻找新选题，也不扩展为全文写作。"
+    },
+    {
+      "id": "gap",
+      "primary_capability": "topic-novelty",
+      "rationale": "识别近邻工作留下的知识缺口并提出区分解释的验证，符合重要问题与可验证创新。",
+      "requested_scope": "依据一个研究方向和五份近邻工作摘录，指出尚缺的知识并选择最能区分候选解释的验证；不实际执行验证。"
+    },
+    {
+      "id": "label",
+      "primary_capability": "scientific-visualization",
+      "rationale": "修改现有图的轴标签并输出更新图，属于图表生产范围。",
+      "requested_scope": "补全现有图纵轴单位中缺少的字母并交付更新图；数据和分析保持原样。"
+    },
+    {
+      "id": "review-response",
+      "primary_capability": "peer-review-response",
+      "rationale": "根据审稿意见和已有补充结果逐条回应并修订稿段，直接对应审稿意见驱动的修订与回应。",
+      "requested_scope": "利用附上的审稿意见和已有补充结果逐条撰写回复，修改对应稿段；不自行补做实验或编造结果。"
+    },
+    {
+      "id": "skill-development",
+      "primary_capability": null,
+      "rationale": "请求交付 Skill 软件源码包，目录中的能力描述面向学术研究与成果处理，没有 Skill 开发能力。",
+      "requested_scope": "修复通用学术 Skill 的脚本与触发描述，交付完整新 Skill 文件夹。"
+    },
+    {
+      "id": "theory",
+      "primary_capability": "analysis-execution",
+      "rationale": "完成不等式证明并检查等号条件属于实际推导。",
+      "requested_scope": "针对用户提供的有限实数序列不等式给出完整证明，并验证等号条件。"
+    },
+    {
+      "id": "journal",
+      "primary_capability": "journal-intelligence",
+      "rationale": "根据摘要选择期刊并核对官方范围，直接对应投稿期刊匹配。",
+      "requested_scope": "仅依据所给摘要找三个合适期刊，核对各期刊当前官方范围；不修改稿件或开展实验。"
+    },
+    {
+      "id": "prospective",
+      "primary_capability": "research-design",
+      "rationale": "尚未收集数据，所需成果是研究方案与区分解释的设计，直接对应问题导向的研究设计。",
+      "requested_scope": "形成完整研究方案稿并设计能够区分候选解释的研究；明确尚未采集数据，不编写未来结果。"
+    }
+  ]
+}

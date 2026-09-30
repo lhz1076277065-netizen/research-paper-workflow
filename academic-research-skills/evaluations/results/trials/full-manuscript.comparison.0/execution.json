@@ -1,0 +1,298 @@
+{
+  "case_id": "full-manuscript",
+  "condition": "comparison",
+  "replicate": 0,
+  "synthetic_material": true,
+  "request_path": "LOCAL_EVIDENCE_ROOT/evaluation-suite/requests/full-manuscript.comparison.0.json",
+  "request_sha256": "4dda79ef4f4e09cf4b77afe227ae9eda3546943c732f53b4048f2afe965b2642",
+  "recorded_at_utc": "2026-09-30T07:52:34.587910+00:00",
+  "host": "current Codex desktop agent",
+  "exact_model_id": "unknown",
+  "tokens": "unknown",
+  "cost": "unknown",
+  "whole_execution_elapsed_time": "unknown",
+  "delegation": "none",
+  "other_assistant_hosts_or_local_llm": "not used",
+  "other_conditions_or_scoring_material": "not read",
+  "skill": {
+    "entry": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/SKILL.md",
+    "version": "3.1.0",
+    "sha256": "96e0fbda552a534362fc9101b645298f6156a5dc104bd46985bd74db7f08b88f",
+    "expected_sha256": "96e0fbda552a534362fc9101b645298f6156a5dc104bd46985bd74db7f08b88f",
+    "hash_match": true,
+    "applied_resources": [
+      "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/references/provider-policy.md",
+      "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/references/protocol.md",
+      "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/references/final-expression.md",
+      "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/references/execution-handoff.md"
+    ]
+  },
+  "material_hash_checks": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/manuscript.md",
+      "sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+      "match": true
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+      "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "match": true
+    }
+  ],
+  "actual_read_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-suite/requests/full-manuscript.comparison.0.json",
+      "sha256": "4dda79ef4f4e09cf4b77afe227ae9eda3546943c732f53b4048f2afe965b2642",
+      "role": "frozen_request"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/manuscript.md",
+      "sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+      "role": "material"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+      "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "role": "material"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/SKILL.md",
+      "sha256": "96e0fbda552a534362fc9101b645298f6156a5dc104bd46985bd74db7f08b88f",
+      "role": "specified_skill_resource"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/references/provider-policy.md",
+      "sha256": "18e49c0e05e0debd255ad8c0025393685f583ab42c98ed38a861c2181724ee7a",
+      "role": "specified_skill_resource"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/references/protocol.md",
+      "sha256": "e979bd6af0f926e4987801b89266c6760b31e9d0cffd33488d91c4daa8789213",
+      "role": "specified_skill_resource"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/references/final-expression.md",
+      "sha256": "c76cca06f2b44a6680a436e8142ca808ec71456d6cf58f5c27690c2a1fa78d68",
+      "role": "specified_skill_resource"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/manuscript-writing/references/execution-handoff.md",
+      "sha256": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+      "role": "specified_skill_resource"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-common/repository-sources.json",
+      "sha256": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0",
+      "role": "common_source_index"
+    }
+  ],
+  "external_sources": [
+    {
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "commit": "65d6e786832e2c52832713117bbbf5096b56f77f",
+      "entry": "skills/scientific-writing/SKILL.md",
+      "version": "2.1",
+      "status": "adapted_in_host",
+      "actual_scope": "full section drafting and evidence outline; complete method/result, numeric, uncertainty, claim and declaration reconciliation; fixture-specific comparison/check files instead of bundled scaffold/registry CLI suite; agent checks without claimed human verification"
+    },
+    {
+      "repository": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill",
+      "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "entry": "skills/anti-defensive-writing-en/SKILL.md",
+      "version": "unknown (commit recorded)",
+      "status": "adapted_in_host",
+      "actual_scope": "title, abstract, introduction, discussion, conclusion and whole argument: direct contribution, conditional claim, reduced self-weakening/repeated defense. Retained original loss metric, baseline, S2 counterexample and changed-condition reversal under v3.1.0 evidence-preserving adaptation"
+    },
+    {
+      "repository": "https://github.com/Yuan1z0825/nature-skills",
+      "commit": "84880815fb37317b3766bff2c2abba395b8993c3",
+      "entry": "skills/nature-figure/SKILL.md",
+      "version": "2.8.0",
+      "status": "adapted_in_host",
+      "actual_scope": "figure contract, two complementary evidence panels, complete row uncertainty, Python/matplotlib editable exports and source/alignment/PDF text/collision checks. No global backend preference set: get returned exit 1; fixed-task available Python selected locally. No native unmodified-workflow or journal-production claim"
+    }
+  ],
+  "web_reads": [
+    {
+      "url": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill",
+      "purpose": "discover English entry"
+    },
+    {
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "purpose": "discover complete scientific-writing workflow"
+    },
+    {
+      "url": "https://github.com/Yuan1z0825/nature-skills",
+      "purpose": "discover figure route"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.00065",
+      "purpose": "check production-resource citation metadata only",
+      "observed_version": "v2, revised 2026-09-02",
+      "verified_by": "current agent; no human verification claimed"
+    }
+  ],
+  "tool_operations": [
+    {
+      "tool": "exec_command/common Python",
+      "operation": "read exact request; hash/print material and specified entry; read four relevant v3.1.0 resources and common source index"
+    },
+    {
+      "tool": "web__run and exec_command",
+      "operation": "open permitted repositories; local rg for matching installed names returned no files; discover current commits and matching paths through GitHub API; retrieve only selected pinned entries/resources/scripts into output sources/; first repository-info URL with trailing slash returned 404, corrected URL succeeded"
+    },
+    {
+      "tool": "mcp__codex_app__load_workspace_dependencies",
+      "operation": "locate bundled Node/Python runtime libraries; no installation performed"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "probe matplotlib/fitz and bundled marked/Playwright; Nature backend preference get returned exit 1, no preference changed"
+    },
+    {
+      "tool": "apply_patch and exec_command",
+      "operation": "write complete manuscript, substantive claim comparison, figure contract, code and operation note; preserve original text/data; generate unified diff; outputs confined to specified trial directory"
+    },
+    {
+      "tool": "exec_command/source scripts",
+      "operation": "run Nature Figure source preflight, render-time strict alignment, PDF glyph audit and collision audit. Source heuristic initially missed dynamic export filenames; changed to literal SVG/PDF/PNG exports and explicit inch dimensions. Initial alignment lacked detectable label anchors; moved both labels into audited range, then reran final checks"
+    },
+    {
+      "tool": "exec_command/Node marked + Playwright + Chrome",
+      "operation": "render complete HTML and five-page PDF from final Markdown; DOM checks confirm 8+2 table rows, loaded SVG, no page errors or horizontal overflow; refresh after final wording edit"
+    },
+    {
+      "tool": "view_image + exec_command/fitz",
+      "operation": "inspect actual full figure and all five PDF-page renders; regenerate final page rasters after final disclosure/alt-text clarification"
+    },
+    {
+      "tool": "exec_command/verify_outputs.py",
+      "operation": "run one runnable check against frozen hashes, all table/figure rows/endpoints, weighted and stratum differences, section completeness, source snapshots and rendered outputs; PASS"
+    }
+  ],
+  "tool_versions": {
+    "python": "3.12.14",
+    "matplotlib": "3.11.2",
+    "PyMuPDF": "1.28.2",
+    "bundled_runtime": "26.909.12148"
+  },
+  "review": {
+    "verification_status": "PASS",
+    "all_eight_rows_preserved": true,
+    "no_original_input_modified": true,
+    "weighted_difference_reference": "-0.44",
+    "weighted_difference_changed": "+0.92",
+    "stratum_B_minus_A": {
+      "reference:S1": "-0.80",
+      "reference:S2": "+1.00",
+      "changed:S1": "-0.20",
+      "changed:S2": "+1.20"
+    },
+    "source_preflight": {
+      "fail": 0,
+      "warn": 1,
+      "accepted_warning": "PNG preview provided; no TIFF submission raster because no submission target"
+    },
+    "alignment": "PASS, strict, 1.5 pt tolerance",
+    "collision": "PASS, 0 FAIL, 0 WARN",
+    "minimum_figure_glyph_pt": 7.0,
+    "visual_review": "actual figure panels and complete five-page manuscript PDF inspected by current agent",
+    "human_scientific_review": "not performed",
+    "facts_and_claims": "conditional improvement preserved; both adverse S2 comparisons and changed average retained; no new empirical, causal, significance or novelty result"
+  },
+  "formal_outputs": [
+    {
+      "file": "manuscript.md",
+      "sha256": "664a4a918a013f97bfb455b094798889bb425acf6c77cd4f1530c8b838397eba"
+    },
+    {
+      "file": "manuscript.html",
+      "sha256": "1588337d5ff8f6d3f90fa8f531c1e480ac86ad90efe1ce63b2a2f507d30af765"
+    },
+    {
+      "file": "manuscript.pdf",
+      "sha256": "c58f3760bae24ee7bf806e8943e36cddb0e3248f60211e09a4b9f1dfa6e0c0d8"
+    },
+    {
+      "file": "claim-comparison.md",
+      "sha256": "7331826ec8491386abae90e2c78c3f1f1fad90d5e71a9a3c0716167c7ff37ed1"
+    },
+    {
+      "file": "operation-note.md",
+      "sha256": "d8d8ecf472108473e2f9a50004717ed768a225bc20c6276fbee4c7191b5fdf69"
+    },
+    {
+      "file": "manuscript.diff",
+      "sha256": "93d8a04cf3962f83ca756be5e25ed62118340e60b4f0371e73353bb2a3f8b779"
+    },
+    {
+      "file": "figure-1.svg",
+      "sha256": "954ff27aec8043b021db4e0f0e5cc2afd09263bd0d3a9943c11e8f657618ba09"
+    },
+    {
+      "file": "figure-1.pdf",
+      "sha256": "fe93a010d0d2a8ba97ada58442b6dd66fe893dd67903bbe35e91d4f1a5dd020a"
+    },
+    {
+      "file": "figure-1.png",
+      "sha256": "9a726dca2f6ee0869734a26980f1f7893212126654d036632dee9673e544bc7a"
+    },
+    {
+      "file": "figure.py",
+      "sha256": "8e832b5fe88359d32a6ddc3eb582eb2ab4e679921426c0059dc9dd2c2728683e"
+    },
+    {
+      "file": "fixed-results.csv",
+      "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884"
+    },
+    {
+      "file": "verify_outputs.py",
+      "sha256": "dc930ec16d40dfed44f9d96bd658723b8700e47fd73ad1518c57e35bc411a54b"
+    },
+    {
+      "file": "verification.json",
+      "sha256": "1244fd1a2eb67d8b0ec2390b9c5f1b44e1959ce78100fdd54bd294cd6bc02775"
+    },
+    {
+      "file": "render-review.json",
+      "sha256": "abb1076717d928575ce9d769f0f4b69fd6afe193cf0724251521f4582056cdf8"
+    },
+    {
+      "file": "figure-data.json",
+      "sha256": "69d98a45660c516d03f89f9ef5caf2dc156410a18325513c4c51a1f7aeab69a7"
+    },
+    {
+      "file": "figure.alignment.json",
+      "sha256": "f4a162e4ac3c92399d415cd7c30f19976d9b403af1a5d0ee94b1de900df20fa5"
+    },
+    {
+      "file": "figure-pdf-text-audit.json",
+      "sha256": "bbb82cb1ccab62552339087af68a32264223c3dd5cdf6936db9b08769fc0bc6a"
+    },
+    {
+      "file": "figure-collision-audit.json",
+      "sha256": "d52787d8425f19346c67b0e14e1368882e348ad91f0fcf62d2780f90f3ceb8af"
+    },
+    {
+      "file": "figure-source-preflight.json",
+      "sha256": "16828e11c6e02cd7d54357c9929c89f3b593289bf52628ad5f980b755641a290"
+    },
+    {
+      "file": "source-read-manifest.json",
+      "sha256": "c6817a6761095d3ed93818ecfbc1945ddac884cc49658ddbe3df7a3ca4d41213"
+    }
+  ],
+  "limitations": [
+    "Separate full E1–E4 memos were not supplied; retained labels supported only by fixture descriptions.",
+    "No raw observations or interval dependence: no aggregate interval, significance analysis or causal mechanism.",
+    "No new experiment or validation performed; proposed mixture/acquisition separation remains prospective.",
+    "No journal target, submission or human scientific review.",
+    "Tokens, fee and exact model ID unavailable; recorded unknown."
+  ],
+  "submission_ready": false,
+  "external_resource_read_manifest": {
+    "path": "source-read-manifest.json",
+    "entries_read_or_executed": 19,
+    "contains": "exact source paths, repository commits, URLs, snapshot locations and SHA-256 values"
+  }
+}

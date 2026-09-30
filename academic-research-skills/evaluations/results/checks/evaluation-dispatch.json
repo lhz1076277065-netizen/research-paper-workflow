@@ -1,0 +1,46 @@
+{
+  "host": "Codex native same-host independent contexts",
+  "model": "inherited parent; exact ID unknown",
+  "controls": [
+    "frozen same synthetic materials",
+    "common professional-source library",
+    "same tools and shared Python environment",
+    "fork_turns=none",
+    "no cross-arm responses",
+    "no external assistant host"
+  ],
+  "limitations": [
+    "This project Skill was withheld in the baseline; system-wide skills were not disabled.",
+    "Exact sampling controls, token/cost and peak context unavailable.",
+    "Execution scheduling is task-blocked; prepared requests were shuffled with seed 7."
+  ],
+  "first_trial_agents": {
+    "research-judgement.release.0": "/root/judgement_candidate",
+    "research-judgement.comparison.0": "/root/judgement_v310",
+    "research-judgement.without-skill.0": "/root/judgement_plain",
+    "main-figure.release.0": "/root/figure_candidate_v32",
+    "main-figure.comparison.0": "/root/figure_v310",
+    "main-figure.without-skill.0": "/root/figure_plain",
+    "full-manuscript.release.0": "/root/manuscript_candidate_v32",
+    "full-manuscript.comparison.0": "/root/manuscript_v310",
+    "full-manuscript.without-skill.0": "/root/manuscript_plain"
+  },
+  "recorded_at_unix": 1790751979.787622,
+  "research_repeat_agents": {
+    "research-judgement.release.1": "/root/judgement_candidate_repeat",
+    "research-judgement.comparison.1": "/root/judgement_v310_repeat",
+    "research-judgement.without-skill.1": "/root/judgement_plain_repeat"
+  },
+  "research_repeat_note": "Only replicate 1 in repeat suite was dispatched. Candidate navigation changed after initial observation; repeat is not same-version stability evidence.",
+  "blind_review_agents": {
+    "figure": "/root/blind_figure_review",
+    "manuscript": "/root/blind_manuscript_review",
+    "research": "/root/blind_research_review"
+  },
+  "metadata_routing_agents": {
+    "candidate": "/root/routing_candidate",
+    "v310": "/root/routing_v310"
+  },
+  "updated_at_unix": 1790755709.7851121,
+  "resume_agent": "/root/focused_resume"
+}

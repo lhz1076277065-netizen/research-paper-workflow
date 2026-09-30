@@ -23,7 +23,7 @@ import tempfile
 import time
 import uuid
 
-VERSION='3.1.1'
+VERSION='3.2.0-rc.1'
 SPEC=re.compile(r'^([A-Za-z0-9][A-Za-z0-9._-]*)(?:(>=|==)([0-9]+(?:\.[0-9]+)*))?$')
 MODULE=re.compile(r'^[A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)*$')
 TEXT_SERVICES={'read','extract','translate','draft','revise','review','figure-review','figure-plan','method-plan','landscape','matching','journal-match','ideate','novelty-check','synthesize','derive','prove','interpret','source-criticism'}

@@ -1,8 +1,8 @@
 ---
 name: submission-packaging
-description: "真实研究稿的投稿准备"
+description: "当已有稿件需要整理投稿文件、格式、声明与期刊清单时使用；核对实际产物和官方要求，正式提交按用户授权执行。"
 metadata:
-  version: "3.1.1"
+  version: "3.2.0-rc.1"
 ---
 
 # 真实研究稿的投稿准备

@@ -1,8 +1,8 @@
 ---
 name: literature-discovery
-description: "检索、筛选与证据地图"
+description: "当需要定向或系统检索学术文献、核对来源和综合相关证据时使用；建立可追溯覆盖，不将一次搜索命中当作完成综述。"
 metadata:
-  version: "3.1.1"
+  version: "3.2.0-rc.1"
 ---
 
 # 检索、筛选与证据地图

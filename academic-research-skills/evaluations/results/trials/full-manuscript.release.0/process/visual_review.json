@@ -1,0 +1,17 @@
+{
+  "reviewer": "current Codex agent; multimodal inspection, not external human review",
+  "images_opened": [
+    "process/figure1.preview.png",
+    "process/figure1.grayscale.png",
+    "process/manuscript_contact_sheet.png",
+    "process/rendered-pages/page-01.png",
+    "process/rendered-pages/page-02.png",
+    "process/rendered-pages/page-03.png",
+    "process/rendered-pages/page-04.png"
+  ],
+  "figure_findings": "All eight summary points and supplied row intervals visible; four average points have no interval; method markers distinguish A and B in color and grayscale; S2 counterexamples and aggregate reversal remain legible; no labels or data clipped.",
+  "document_findings": "Four pages inspected; title/abstract, all sections, formula, editable eight-row table, figure/caption, internal references and editorial provenance present. Ordinary paragraphs continue across pages; headings and figure caption remain usable.",
+  "geometry_check": "All four pages are 612 × 792 pt; first/last text and page headers/footers are within page boxes.",
+  "subject_sha256": "541891e2e8d841ea1aaf89d36a9fbdd423a3aa45f22e047418af33e8fdd48121",
+  "status": "agent_review_completed"
+}

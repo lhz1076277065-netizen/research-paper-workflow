@@ -1,8 +1,8 @@
 ---
 name: robustness-reproducibility
-description: "关键结论的验证与复现"
+description: "当需要复算、独立验证、敏感性、失败诊断或整理可复现材料时使用；检查与主张有关的脆弱处，保存关键反例。"
 metadata:
-  version: "3.1.1"
+  version: "3.2.0-rc.1"
 ---
 
 # 关键结论的验证与复现

@@ -1,0 +1,178 @@
+{
+  "input_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+  "weighted_formula": "sum(n_stratum * loss_stratum) / sum(n_stratum), within each condition and method",
+  "drawn_source_rows": [
+    {
+      "condition": "reference",
+      "stratum": "S1",
+      "method": "A",
+      "plotted_loss_lo_hi": [
+        4.0,
+        3.7,
+        4.3
+      ],
+      "n": 80
+    },
+    {
+      "condition": "reference",
+      "stratum": "S1",
+      "method": "B",
+      "plotted_loss_lo_hi": [
+        3.2,
+        2.9,
+        3.5
+      ],
+      "n": 80
+    },
+    {
+      "condition": "reference",
+      "stratum": "S2",
+      "method": "A",
+      "plotted_loss_lo_hi": [
+        8.0,
+        7.5,
+        8.5
+      ],
+      "n": 20
+    },
+    {
+      "condition": "reference",
+      "stratum": "S2",
+      "method": "B",
+      "plotted_loss_lo_hi": [
+        9.0,
+        8.4,
+        9.6
+      ],
+      "n": 20
+    },
+    {
+      "condition": "changed",
+      "stratum": "S1",
+      "method": "A",
+      "plotted_loss_lo_hi": [
+        5.0,
+        4.5,
+        5.5
+      ],
+      "n": 20
+    },
+    {
+      "condition": "changed",
+      "stratum": "S1",
+      "method": "B",
+      "plotted_loss_lo_hi": [
+        4.8,
+        4.3,
+        5.3
+      ],
+      "n": 20
+    },
+    {
+      "condition": "changed",
+      "stratum": "S2",
+      "method": "A",
+      "plotted_loss_lo_hi": [
+        7.0,
+        6.6,
+        7.4
+      ],
+      "n": 80
+    },
+    {
+      "condition": "changed",
+      "stratum": "S2",
+      "method": "B",
+      "plotted_loss_lo_hi": [
+        8.2,
+        7.7,
+        8.7
+      ],
+      "n": 80
+    }
+  ],
+  "aggregates": [
+    {
+      "condition": "reference",
+      "method": "A",
+      "weighted_loss": "4.8",
+      "total_n_per_method": 100,
+      "S1_weight": "0.8",
+      "S2_weight": "0.2",
+      "interval": "not supplied; not estimated"
+    },
+    {
+      "condition": "reference",
+      "method": "B",
+      "weighted_loss": "4.36",
+      "total_n_per_method": 100,
+      "S1_weight": "0.8",
+      "S2_weight": "0.2",
+      "interval": "not supplied; not estimated"
+    },
+    {
+      "condition": "changed",
+      "method": "A",
+      "weighted_loss": "6.6",
+      "total_n_per_method": 100,
+      "S1_weight": "0.2",
+      "S2_weight": "0.8",
+      "interval": "not supplied; not estimated"
+    },
+    {
+      "condition": "changed",
+      "method": "B",
+      "weighted_loss": "7.52",
+      "total_n_per_method": 100,
+      "S1_weight": "0.2",
+      "S2_weight": "0.8",
+      "interval": "not supplied; not estimated"
+    }
+  ],
+  "stratum_difference_B_minus_A": [
+    {
+      "condition": "reference",
+      "stratum": "S1",
+      "difference": "-0.8"
+    },
+    {
+      "condition": "reference",
+      "stratum": "S2",
+      "difference": "1.0"
+    },
+    {
+      "condition": "changed",
+      "stratum": "S1",
+      "difference": "-0.2"
+    },
+    {
+      "condition": "changed",
+      "stratum": "S2",
+      "difference": "1.2"
+    }
+  ],
+  "aggregate_difference_B_minus_A": [
+    {
+      "condition": "reference",
+      "difference": "-0.44"
+    },
+    {
+      "condition": "changed",
+      "difference": "0.92"
+    }
+  ],
+  "assertions": "PASS: supplied endpoints, all eight point values, all four aggregates, weights and reversal",
+  "layout_issues": [],
+  "style": {
+    "journal": "general",
+    "lang": "en",
+    "sciplots_used": false,
+    "cjk_font": null,
+    "constrained_layout": true
+  },
+  "figure_size_inches": [
+    7.2,
+    4.5
+  ],
+  "smallest_font_pt": 8.0
+}

@@ -186,12 +186,14 @@ test_writing_no_per_paragraph_paperwork (test_lean.LeanDefaults.test_writing_no_
 test_arbitrary_repo_not_in_13_sources (test_lean.Sources.test_arbitrary_repo_not_in_13_sources) ... ok
 test_bad_url_rejected (test_lean.Sources.test_bad_url_rejected) ... ok
 test_blob_mismatch_rejected (test_lean.Sources.test_blob_mismatch_rejected) ... ok
+test_cache_cannot_hide_a_changed_index_blob (test_lean.Sources.test_cache_cannot_hide_a_changed_index_blob) ... ok
 test_compact_display_preserves_full_index (test_lean.Sources.test_compact_display_preserves_full_index) ... ok
 test_credentials_in_url_rejected (test_lean.Sources.test_credentials_in_url_rejected) ... ok
 test_default_branch_is_detected (test_lean.Sources.test_default_branch_is_detected) ... ok
 test_discovered_entry_changed_requires_new_source (test_lean.Sources.test_discovered_entry_changed_requires_new_source) ... ok
 test_duplicate_conflicting_paths_rejected (test_lean.Sources.test_duplicate_conflicting_paths_rejected) ... ok
 test_dynamic_native_handoff_without_review_form (test_lean.Sources.test_dynamic_native_handoff_without_review_form) ... ok
+test_edited_cache_is_preserved_and_rejected (test_lean.Sources.test_edited_cache_is_preserved_and_rejected) ... ok
 test_fresh_discovery_sees_new_commit_and_path (test_lean.Sources.test_fresh_discovery_sees_new_commit_and_path) ... ok
 test_function_interface_uses_discovered_path (test_lean.Sources.test_function_interface_uses_discovered_path) ... ok
 test_missing_entry_rejected (test_lean.Sources.test_missing_entry_rejected) ... ok
@@ -213,6 +215,7 @@ test_truncated_tree_falls_back_to_subtrees (test_lean.Sources.test_truncated_tre
 test_unknown_function_interface_not_invented (test_lean.Sources.test_unknown_function_interface_not_invented) ... ok
 test_unknown_semantic_quality_not_faked (test_lean.Sources.test_unknown_semantic_quality_not_faked) ... ok
 test_unsupported_binary_response (test_lean.Sources.test_unsupported_binary_response) ... ok
+test_verified_read_cache_reuses_bytes_without_network (test_lean.Sources.test_verified_read_cache_reuses_bytes_without_network) ... ok
 test_failed_install_prevents_research_script (test_portability.InstallTests.test_failed_install_prevents_research_script) ... ok
 test_managed_marker_required (test_portability.InstallTests.test_managed_marker_required) ... ok
 test_missing_binary_blocks_install (test_portability.InstallTests.test_missing_binary_blocks_install) ... ok
@@ -345,6 +348,9 @@ test_support_must_exist_in_index (test_release.DynamicCheckout.test_support_must
 test_timeout_is_passed_to_git (test_release.DynamicCheckout.test_timeout_is_passed_to_git) ... ok
 test_interrupted_owned_venv_creation_is_repairable (test_release.EnvironmentRecovery.test_interrupted_owned_venv_creation_is_repairable) ... ok
 test_managed_package_can_resume_without_network_or_wheelhouse (test_release.EnvironmentRecovery.test_managed_package_can_resume_without_network_or_wheelhouse) ... ok
+test_changed_material_stops_adapter_before_execution (test_release.EvaluationHarness.test_changed_material_stops_adapter_before_execution) ... ok
+test_custom_cases_keep_raw_material_equal_without_scoring_leak (test_release.EvaluationHarness.test_custom_cases_keep_raw_material_equal_without_scoring_leak) ... ok
+test_custom_material_path_and_duplicate_case_rejected (test_release.EvaluationHarness.test_custom_material_path_and_duplicate_case_rejected) ... ok
 test_fixture_command_not_reported_as_model_performance (test_release.EvaluationHarness.test_fixture_command_not_reported_as_model_performance) ... ok
 test_paired_material_identical_and_no_quality_claim (test_release.EvaluationHarness.test_paired_material_identical_and_no_quality_claim) ... ok
 test_unconfigured_command_not_used (test_release.EvaluationHarness.test_unconfigured_command_not_used) ... ok
@@ -503,6 +509,6 @@ test_wrong_contract (test_suite.ValidatorNegativeTests.test_wrong_contract) ... 
 test_wrong_output_artifact (test_suite.ValidatorNegativeTests.test_wrong_output_artifact) ... ok
 
 ----------------------------------------------------------------------
-Ran 503 tests in 21.162s
+Ran 509 tests in 50.499s
 
 OK

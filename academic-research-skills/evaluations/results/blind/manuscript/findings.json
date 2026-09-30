@@ -1,0 +1,973 @@
+{
+  "schema_version": "1.0",
+  "review_type": "anonymous_full_markdown_content_review",
+  "reviewer_kind": "AI_content_review",
+  "scope": {
+    "root": "LOCAL_EVIDENCE_ROOT/blind-manuscript",
+    "input_files": [
+      {
+        "file": "materials/manuscript.md",
+        "lines": 39,
+        "fully_read": true
+      },
+      {
+        "file": "materials/fixed-results.csv",
+        "lines": 10,
+        "fully_read": true
+      },
+      {
+        "file": "M1/manuscript.md",
+        "lines": 91,
+        "fully_read": true
+      },
+      {
+        "file": "M2/manuscript.md",
+        "lines": 91,
+        "fully_read": true
+      },
+      {
+        "file": "M3/manuscript.md",
+        "lines": 106,
+        "fully_read": true
+      }
+    ],
+    "material_kind": "explicit fixed synthetic Skill-development fixture, not empirical research",
+    "other_task_inputs_read": false,
+    "mapping_or_versions_inferred": false,
+    "workflow_attribution_used_as_scientific_evidence": false,
+    "independent_E1_E4_full_text_available": false,
+    "images_opened": false,
+    "word_pdf_checked": false,
+    "independent_human_scientific_review_performed": false
+  },
+  "method": {
+    "full_text_compared_with_original": true,
+    "numeric_assertions_used": true,
+    "unified_total_score": false,
+    "forbidden_word_counts_used_for_judgment": false
+  },
+  "fixed_baseline": {
+    "lower_loss_is_better": true,
+    "difference_definition": "B minus A within the same condition and aggregation level",
+    "weighted_comparisons": [
+      {
+        "condition": "reference",
+        "weights": {
+          "S1": 80,
+          "S2": 20
+        },
+        "A": 4.8,
+        "B": 4.36,
+        "B_minus_A": -0.44
+      },
+      {
+        "condition": "changed",
+        "weights": {
+          "S1": 20,
+          "S2": 80
+        },
+        "A": 6.6,
+        "B": 7.52,
+        "B_minus_A": 0.92
+      }
+    ],
+    "stratum_differences": [
+      {
+        "condition": "reference",
+        "stratum": "S1",
+        "B_minus_A": -0.8
+      },
+      {
+        "condition": "reference",
+        "stratum": "S2",
+        "B_minus_A": 1
+      },
+      {
+        "condition": "changed",
+        "stratum": "S1",
+        "B_minus_A": -0.2
+      },
+      {
+        "condition": "changed",
+        "stratum": "S2",
+        "B_minus_A": 1.2
+      }
+    ],
+    "row_intervals": "supplied individual-row 95% intervals; not aggregate or difference intervals",
+    "causal_acquisition_contrast_available": false,
+    "future_validation_completed": false
+  },
+  "numeric_verification": {
+    "groups": [
+      {
+        "group": "M1",
+        "row_count": 8,
+        "all_counts_losses_and_interval_endpoints_equal_csv": true
+      },
+      {
+        "group": "M2",
+        "row_count": 8,
+        "all_counts_losses_and_interval_endpoints_equal_csv": true
+      },
+      {
+        "group": "M3",
+        "row_count": 8,
+        "all_counts_losses_and_interval_endpoints_equal_csv": true
+      }
+    ],
+    "weighted_averages_checked": 4,
+    "weighted_method_differences_checked": 2,
+    "stratum_method_differences_checked": 4,
+    "assert_check_passed": true,
+    "runnable_python_check": "from pathlib import Path\nfrom decimal import Decimal as D\nimport csv, re\n\nbase = Path(\"LOCAL_EVIDENCE_ROOT/blind-manuscript\")\nrows = list(csv.DictReader((base/\"materials/fixed-results.csv\").read_text().splitlines()[1:]))\nexpected = [(r[\"condition\"],r[\"stratum\"],r[\"method\"],*(D(r[k]) for k in (\"n\",\"loss\",\"lo\",\"hi\"))) for r in rows]\npattern = re.compile(r\"^\\| (Reference|Changed) \\| (S[12]) \\| ([AB]) \\| (\\d+) \\| ([\\d.]+) \\| \\[([\\d.]+), ([\\d.]+)\\] \\|$\",re.M)\nfor group in (\"M1\",\"M2\",\"M3\"):\n    text = (base/group/\"manuscript.md\").read_text()\n    actual = [(m[0].lower(),m[1],m[2],*(D(x) for x in m[3:])) for m in pattern.findall(text)]\n    assert actual == expected, group\nweighted = {}\nfor condition in (\"reference\",\"changed\"):\n    weighted[condition] = {}\n    for method in (\"A\",\"B\"):\n        cells = [r for r in rows if r[\"condition\"]==condition and r[\"method\"]==method]\n        total = sum(D(r[\"n\"]) for r in cells)\n        assert total == 100\n        weighted[condition][method] = sum(D(r[\"n\"])*D(r[\"loss\"]) for r in cells)/total\nassert weighted == {\"reference\":{\"A\":D(\"4.80\"),\"B\":D(\"4.36\")},\"changed\":{\"A\":D(\"6.60\"),\"B\":D(\"7.52\")}}\nassert weighted[\"reference\"][\"B\"]-weighted[\"reference\"][\"A\"] == D(\"-0.44\")\nassert weighted[\"changed\"][\"B\"]-weighted[\"changed\"][\"A\"] == D(\"0.92\")\nfor c,s,v in ((\"reference\",\"S1\",\"-0.80\"),(\"reference\",\"S2\",\"1.00\"),(\"changed\",\"S1\",\"-0.20\"),(\"changed\",\"S2\",\"1.20\")):\n    losses = {r[\"method\"]:D(r[\"loss\"]) for r in rows if r[\"condition\"]==c and r[\"stratum\"]==s}\n    assert losses[\"B\"]-losses[\"A\"] == D(v)\nprint(\"PASS: 24 Markdown rows, 4 weighted averages, 2 weighted differences and 4 stratum differences\")\n"
+  },
+  "assessments": [
+    {
+      "group": "M1",
+      "no_material_numeric_comparator_or_inferential_violation_found": true,
+      "dimensions": [
+        {
+          "id": "contribution_and_question",
+          "judgment": "更清楚",
+          "note": "明确参考平均收益是否覆盖两层并延续到changed，贡献限定为报告区分。",
+          "evidence": [
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                1,
+                15
+              ],
+              "evidence_summary": "reference-average gain is conditional; shared by both strata and retained under the changed condition"
+            }
+          ]
+        },
+        {
+          "id": "argument_focus",
+          "judgment": "较集中",
+          "note": "收益、同条件反例、另一条件反转、支持的判断相连；保留S1正面证据。",
+          "evidence": [
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                35,
+                39
+              ],
+              "evidence_summary": "favorable average ... worse B result in S2"
+            },
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                62,
+                66
+              ],
+              "evidence_summary": "Neither pattern alone is a universal verdict on B"
+            }
+          ]
+        },
+        {
+          "id": "full_manuscript_coverage",
+          "judgment": "主要内容完整覆盖",
+          "note": "全部主要章节、固定表、方法、推断边界与未来验证保留；只评价图示文字。",
+          "evidence": [
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                21,
+                29
+              ],
+              "evidence_summary": "All rows are retained"
+            },
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                45,
+                87
+              ],
+              "evidence_summary": "all fixed rows; prospective studies; declarations and references"
+            }
+          ]
+        },
+        {
+          "id": "numbers_and_comparators",
+          "judgment": "保真",
+          "note": "各8行全部字段与CSV一致，四个平均正确；同条件A/B比较、fixture权重清楚。",
+          "evidence": [
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                21,
+                27
+              ],
+              "evidence_summary": "fixture counts used as weights"
+            },
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                35,
+                52
+              ],
+              "evidence_summary": "4.80,4.36,-0.44;6.60,7.52,+0.92"
+            }
+          ]
+        },
+        {
+          "id": "scope_causality_significance",
+          "judgment": "边界明确",
+          "note": "原始观测与依赖缺失直接披露；无总体/差值区间，不由重叠或分离推显著性，无机制识别。",
+          "evidence": [
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                7,
+                27
+              ],
+              "evidence_summary": "raw observations ... unavailable; no significance test"
+            },
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                66,
+                76
+              ],
+              "evidence_summary": "conditional average improvement in this fixture"
+            }
+          ]
+        },
+        {
+          "id": "S2_counterexample_and_condition_reversal",
+          "judgment": "完整可见",
+          "note": "参考S2 8→9，changed S2 7→8.2，平均-0.44转+0.92贯穿全文。",
+          "evidence": [
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                7,
+                7
+              ],
+              "evidence_summary": "higher S2 loss in both settings"
+            },
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                35,
+                39
+              ],
+              "evidence_summary": "S2 counterexample; changed-condition reversal"
+            },
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                62,
+                76
+              ],
+              "evidence_summary": "S2 loss is higher for B in both settings"
+            }
+          ]
+        },
+        {
+          "id": "citations_originals_future_validation",
+          "judgment": "未包装完成研究；E1披露可更清楚",
+          "note": "E1–E4内部合成标签，未来明确未做；E1数值可核CSV，却无独立全文。工作流归因不作科学证据。",
+          "evidence": [
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                72,
+                72
+              ],
+              "evidence_summary": "not been conducted here"
+            },
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                82,
+                91
+              ],
+              "evidence_summary": "E2–E4 separate memos not supplied; editorial assistance, not evidence"
+            }
+          ]
+        },
+        {
+          "id": "anti_defensive_expression",
+          "judgment": "具体且范围受控",
+          "note": "自我怀疑转为具体比较与边界；boundary testable未称已检验，establishes仅指fixture内算术。",
+          "evidence": [
+            {
+              "file": "materials/manuscript.md",
+              "lines": [
+                7,
+                14
+              ],
+              "evidence_summary": "perhaps very tentatively; sufficiently interesting"
+            },
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                15,
+                15
+              ],
+              "evidence_summary": "boundary testable"
+            },
+            {
+              "file": "M1/manuscript.md",
+              "lines": [
+                62,
+                76
+              ],
+              "evidence_summary": "main finding; this fixture"
+            }
+          ]
+        }
+      ],
+      "improvements": [
+        {
+          "id": "M1_E1_disclosure",
+          "severity": "minor",
+          "note": "E1 supported here; only E2-E4 explicitly lack separate full memos",
+          "evidence": {
+            "file": "M1/manuscript.md",
+            "lines": [
+              82,
+              82
+            ],
+            "evidence_summary": "E1 supported here; only E2-E4 explicitly lack separate full memos"
+          },
+          "recommendation": "明确E1–E4独立全文均未提供，E1仅数值部分由CSV核验。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        },
+        {
+          "id": "M1_causal_vs_descriptive",
+          "severity": "minor",
+          "note": "joint contrast cannot isolate whether mixture weights account for reversal",
+          "evidence": {
+            "file": "M1/manuscript.md",
+            "lines": [
+              66,
+              66
+            ],
+            "evidence_summary": "joint contrast cannot isolate whether mixture weights account for reversal"
+          },
+          "recommendation": "限定为不能识别因果解释，避免被理解为无法作任何描述性重加权；无需新分析。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        },
+        {
+          "id": "M1_repetition",
+          "severity": "minor",
+          "note": "conditional average advantage repeated",
+          "evidence": {
+            "file": "M1/manuscript.md",
+            "lines": [
+              62,
+              76
+            ],
+            "evidence_summary": "conditional average advantage repeated"
+          },
+          "recommendation": "Discussion可更快进入解释与验证要求，保留关键反例及推断边界。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        }
+      ]
+    },
+    {
+      "group": "M2",
+      "no_material_numeric_comparator_or_inferential_violation_found": true,
+      "dimensions": [
+        {
+          "id": "contribution_and_question",
+          "judgment": "更清楚",
+          "note": "问题为参考平均能否支持更广稳健性，贡献限定于固定合成例的描述性边界。",
+          "evidence": [
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                7,
+                15
+              ],
+              "evidence_summary": "supports a broader robustness claim; descriptive boundary"
+            }
+          ]
+        },
+        {
+          "id": "argument_focus",
+          "judgment": "层级与算术紧密",
+          "note": "先分平均/层内，展开四个计算，合并解释反转，再说明报告与推断含义。",
+          "evidence": [
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                13,
+                13
+              ],
+              "evidence_summary": "compare A and B at two levels"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                39,
+                47
+              ],
+              "evidence_summary": "weighted comparison changes direction"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                72,
+                78
+              ],
+              "evidence_summary": "reporting implication"
+            }
+          ]
+        },
+        {
+          "id": "full_manuscript_coverage",
+          "judgment": "主要内容完整覆盖",
+          "note": "所有主要章节、八行表、无新研究、区间限制、非干预、未来设计保留；reference S1区间也直接列出。",
+          "evidence": [
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                21,
+                33
+              ],
+              "evidence_summary": "eight manufactured summaries"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                41,
+                41
+              ],
+              "evidence_summary": "reference S1 intervals"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                53,
+                91
+              ],
+              "evidence_summary": "complete table; discussion; conclusion; references"
+            }
+          ]
+        },
+        {
+          "id": "numbers_and_comparators",
+          "judgment": "保真且易核算",
+          "note": "各8行全部字段一致；39与45行四个加权计算正确；favors A by 0.92与B-A方向一致。",
+          "evidence": [
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                39,
+                45
+              ],
+              "evidence_summary": "4.80,4.36,-0.44;6.60,7.52,+0.92"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                53,
+                60
+              ],
+              "evidence_summary": "8 fixed rows"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                72,
+                72
+              ],
+              "evidence_summary": "favors A by 0.92"
+            }
+          ]
+        },
+        {
+          "id": "scope_causality_significance",
+          "judgment": "边界保留；可更显式",
+          "note": "所有比较描述性、非干预，没有统计或因果升级；原始观测缺失、分离区间不可推显著可补明。",
+          "evidence": [
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                29,
+                33
+              ],
+              "evidence_summary": "All comparisons are descriptive; infer significance from overlap"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                47,
+                47
+              ],
+              "evidence_summary": "not a significance result"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                76,
+                78
+              ],
+              "evidence_summary": "not empirical generalization"
+            }
+          ]
+        },
+        {
+          "id": "S2_counterexample_and_condition_reversal",
+          "judgment": "完整可见",
+          "note": "参考S2和changed平均反转贯穿，S1两条件有利也保留，避免B普遍劣势结论。",
+          "evidence": [
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                7,
+                15
+              ],
+              "evidence_summary": "S2 disadvantage"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                39,
+                47
+              ],
+              "evidence_summary": "reference favors B; changed favors A"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                74,
+                82
+              ],
+              "evidence_summary": "not universally inferior"
+            }
+          ]
+        },
+        {
+          "id": "citations_originals_future_validation",
+          "judgment": "透明且未包装完成",
+          "note": "E1–E4内部标签，独立全文未提供，只用原稿与CSV；未来验证未做。",
+          "evidence": [
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                76,
+                76
+              ],
+              "evidence_summary": "not been conducted"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                86,
+                91
+              ],
+              "evidence_summary": "Separate memo documents were not supplied"
+            }
+          ]
+        },
+        {
+          "id": "anti_defensive_expression",
+          "judgment": "具体且无已发现夸大",
+          "note": "先说支持什么再说报告决定与限制作用，保留条件、层别及非普遍性。",
+          "evidence": [
+            {
+              "file": "materials/manuscript.md",
+              "lines": [
+                14,
+                14
+              ],
+              "evidence_summary": "may have many weaknesses"
+            },
+            {
+              "file": "M2/manuscript.md",
+              "lines": [
+                72,
+                78
+              ],
+              "evidence_summary": "boundaries constrain interpretation while leaving comparisons intact"
+            }
+          ]
+        }
+      ],
+      "improvements": [
+        {
+          "id": "M2_raw_observations",
+          "severity": "minor",
+          "note": "fixed summaries and missing interval construction/dependence",
+          "evidence": {
+            "file": "M2/manuscript.md",
+            "lines": [
+              21,
+              33
+            ],
+            "evidence_summary": "fixed summaries and missing interval construction/dependence"
+          },
+          "recommendation": "直接补充raw observations were not supplied，覆盖原稿明确的原始观测缺失。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        },
+        {
+          "id": "M2_interval_separation",
+          "severity": "minor",
+          "note": "infer significance from their overlap",
+          "evidence": {
+            "file": "M2/manuscript.md",
+            "lines": [
+              33,
+              33
+            ],
+            "evidence_summary": "infer significance from their overlap"
+          },
+          "recommendation": "改为overlap or separation；现文没有显著性误判，此为减少误读。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        },
+        {
+          "id": "M2_causal_vs_descriptive",
+          "severity": "minor",
+          "note": "determine the separate roles of mixture weights",
+          "evidence": {
+            "file": "M2/manuscript.md",
+            "lines": [
+              76,
+              76
+            ],
+            "evidence_summary": "determine the separate roles of mixture weights"
+          },
+          "recommendation": "限定为因果作用识别，区别固定表上的描述性标准化；无需新增分析。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        }
+      ]
+    },
+    {
+      "group": "M3",
+      "no_material_numeric_comparator_or_inferential_violation_found": true,
+      "dimensions": [
+        {
+          "id": "contribution_and_question",
+          "judgment": "更清楚并区分两种扩张",
+          "note": "平均收益与跨层/跨条件稳健性分开，贡献为报告教训，未称新实证结果。",
+          "evidence": [
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                1,
+                15
+              ],
+              "evidence_summary": "reference-average gain does not establish robustness"
+            }
+          ]
+        },
+        {
+          "id": "argument_focus",
+          "judgment": "反例的分工明确",
+          "note": "S2约束跨层，changed平均约束跨设置；替换方法仍要求更多证据。",
+          "evidence": [
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                41,
+                49
+              ],
+              "evidence_summary": "stratum counterexample; changed average favors A"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                83,
+                85
+              ],
+              "evidence_summary": "changed-condition average separately prevents robustness reading"
+            }
+          ]
+        },
+        {
+          "id": "full_manuscript_coverage",
+          "judgment": "主要内容完整覆盖",
+          "note": "全部主要章节、行表、加权汇总、公式、区间规则、非干预、未来设计和缺全文披露保留；汇总表不新增数据。",
+          "evidence": [
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                21,
+                35
+              ],
+              "evidence_summary": "No new metric, fitted model or experiment"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                57,
+                79
+              ],
+              "evidence_summary": "row and weighted summary tables"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                87,
+                104
+              ],
+              "evidence_summary": "proposal; declarations; references"
+            }
+          ]
+        },
+        {
+          "id": "numbers_and_comparators",
+          "judgment": "保真",
+          "note": "全部行字段、汇总值和四个层内差正确，80%对应80/100，n为fixture权重。",
+          "evidence": [
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                41,
+                49
+              ],
+              "evidence_summary": "-0.80,+1.00,-0.20,+1.20"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                57,
+                75
+              ],
+              "evidence_summary": "4.80,4.36,-0.44;6.60,7.52,+0.92"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                79,
+                79
+              ],
+              "evidence_summary": "not empirical replicate count"
+            }
+          ]
+        },
+        {
+          "id": "scope_causality_significance",
+          "judgment": "边界明确且保留设计假设",
+          "note": "不由重叠/分离推显著性，不造总体区间；描述性非干预无新研究；未来设计不保证无需假设的识别。 原始观测未提供可同M2补明。",
+          "evidence": [
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                31,
+                33
+              ],
+              "evidence_summary": "overlap or separation; descriptive arithmetic"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                75,
+                79
+              ],
+              "evidence_summary": "no aggregate interval"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                87,
+                89
+              ],
+              "evidence_summary": "not a guarantee of identification without further design assumptions"
+            }
+          ]
+        },
+        {
+          "id": "S2_counterexample_and_condition_reversal",
+          "judgment": "完整且解释作用清楚",
+          "note": "两条件S2更差和平均反转贯穿；83行解释分别约束跨层与跨设置。",
+          "evidence": [
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                7,
+                7
+              ],
+              "evidence_summary": "higher S2 loss in both conditions"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                41,
+                49
+              ],
+              "evidence_summary": "weighted advantage does not persist"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                83,
+                93
+              ],
+              "evidence_summary": "decisive within-stratum counterexample"
+            }
+          ]
+        },
+        {
+          "id": "citations_originals_future_validation",
+          "judgment": "缺全文和未完成状态明确",
+          "note": "E1–E4全文未提供，E1数值由CSV，E2–E4仅原稿描述；未来proposal未完成，生产资源非科学证据。",
+          "evidence": [
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                87,
+                87
+              ],
+              "evidence_summary": "proposal, not completed validation"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                97,
+                99
+              ],
+              "evidence_summary": "no independent human review; full separate memo documents not supplied"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                106,
+                106
+              ],
+              "evidence_summary": "production resources, not scientific support"
+            }
+          ]
+        },
+        {
+          "id": "anti_defensive_expression",
+          "judgment": "较强措辞受fixture限定",
+          "note": "established和decisive指固定算术及全层命题反例，未称总体显著；限制转为不能推广的具体理由。",
+          "evidence": [
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                7,
+                7
+              ],
+              "evidence_summary": "established result"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                83,
+                89
+              ],
+              "evidence_summary": "descriptive reporting lesson"
+            },
+            {
+              "file": "M3/manuscript.md",
+              "lines": [
+                93,
+                93
+              ],
+              "evidence_summary": "in this fixed synthetic fixture"
+            }
+          ]
+        }
+      ],
+      "improvements": [
+        {
+          "id": "M3_how_much",
+          "severity": "minor",
+          "note": "do not identify how much mixture changes contribute",
+          "evidence": {
+            "file": "M3/manuscript.md",
+            "lines": [
+              87,
+              87
+            ],
+            "evidence_summary": "do not identify how much mixture changes contribute"
+          },
+          "recommendation": "限定不能识别causal contributions；已知权重和行损失可按约定作描述性标准化，却不能证明机制；无需新分析。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        },
+        {
+          "id": "M3_decision_scope",
+          "severity": "minor",
+          "note": "answers the decision question; reporting lesson",
+          "evidence": {
+            "file": "M3/manuscript.md",
+            "lines": [
+              15,
+              89
+            ],
+            "evidence_summary": "answers the decision question; reporting lesson"
+          },
+          "recommendation": "稳定将decision question限定为固定材料支持何种报告/比较主张，保留synthetic/descriptive；现文未发生实证夸大。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        },
+        {
+          "id": "M3_declaration_length",
+          "severity": "minor",
+          "note": "unasserted author, registration and funding metadata",
+          "evidence": {
+            "file": "M3/manuscript.md",
+            "lines": [
+              97,
+              97
+            ],
+            "evidence_summary": "unasserted author, registration and funding metadata"
+          },
+          "recommendation": "未推断元数据可合并一句，保留合成、无新实证、非投稿完成品及无独立人类审查。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        },
+        {
+          "id": "M3_raw_observations",
+          "severity": "minor",
+          "note": "Fixed manufactured summaries and missing interval construction/dependence already stated; raw-observation absence is implicit.",
+          "evidence": {
+            "file": "M3/manuscript.md",
+            "lines": [
+              21,
+              33
+            ],
+            "evidence_summary": "manufactured summaries; interval construction and dependence not provided; descriptive arithmetic"
+          },
+          "recommendation": "与M2相同，可明确补充raw observations were not supplied；现文未虚构原始数据。",
+          "material_error_found": false,
+          "additional_analysis_required": false
+        }
+      ]
+    }
+  ],
+  "cross_group_findings": [
+    {
+      "id": "fixed_values_preserved",
+      "status": "verified",
+      "finding": "三组各8行全部字段与固定CSV一致；四个平均、两个平均差、四个层内差正确。"
+    },
+    {
+      "id": "counterexamples_retained",
+      "status": "observed_in_full_markdown",
+      "finding": "参考S2、changed S2、平均反转和S1正面结果均贯穿全文。"
+    },
+    {
+      "id": "no_empirical_or_completed_validation_inflation_found",
+      "status": "bounded_content_judgment",
+      "finding": "未发现固定合成被称实测、未来验证称已完成、行区间称总体显著或因果机制识别。"
+    },
+    {
+      "id": "causal_vs_descriptive_precision",
+      "status": "minor_wording_improvement",
+      "finding": "共同宜区别因果机制不可识别与描述性重加权的可计算性；无需新增分析。"
+    }
+  ],
+  "limitations": [
+    "只读指定五份输入，未读映射、Skill、日志、其他组或父任务报告，未猜版本。",
+    "仅评完整Markdown与固定合成算术，不认证真实数据性能或发表新颖性。",
+    "E1–E4无独立全文；CSV只核验数值，不代表完整原文核验。",
+    "工作流归因视为生产资源，未核验外部书目元数据或实际执行。",
+    "未打开图件，未检查Word/PDF。",
+    "AI内容评审，不是独立人类科学审查。",
+    "无统一总分、禁词数量判断或版本排名。"
+  ]
+}

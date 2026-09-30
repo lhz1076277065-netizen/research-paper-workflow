@@ -1,0 +1,71 @@
+{
+  "pdffonts": {
+    "command": [
+      "/opt/homebrew/bin/pdffonts",
+      "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-20260930061350/evaluation-trials/main-figure.release.0/main-figure.pdf"
+    ],
+    "output": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBHPUCF+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     15  0\nERZCQC+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     22  0\nDQIFZV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     29  0\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "pdfinfo": {
+    "command": [
+      "/opt/homebrew/bin/pdfinfo",
+      "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-20260930061350/evaluation-trials/main-figure.release.0/main-figure.pdf"
+    ],
+    "output": "Creator:         Matplotlib v3.11.2, https://matplotlib.org\nProducer:        Matplotlib pdf backend v3.11.2\nCreationDate:    Wed Sep 30 15:13:58 2026 CST\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           1\nEncrypted:       no\nPage size:       510.236 x 374.173 pts\nPage rot:        0\nFile size:       28338 bytes\nOptimized:       no\nPDF version:     1.4\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "pdf_independent_audit": {
+    "size_points": [
+      0.0,
+      0.0,
+      510.2362060546875,
+      374.1732177734375
+    ],
+    "fonts": [
+      {
+        "xref": 15,
+        "name": "BHPUCF+DejaVuSans-Bold",
+        "extension": "ttf",
+        "type": "Type0",
+        "embedded_bytes": 4960
+      },
+      {
+        "xref": 22,
+        "name": "ERZCQC+DejaVuSans",
+        "extension": "ttf",
+        "type": "Type0",
+        "embedded_bytes": 16660
+      },
+      {
+        "xref": 29,
+        "name": "DQIFZV+DejaVuSans",
+        "extension": "ttf",
+        "type": "Type0",
+        "embedded_bytes": 4040
+      }
+    ],
+    "image_count": 0,
+    "vector_drawing_count": 97,
+    "preview": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-20260930061350/evaluation-trials/main-figure.release.0/main-figure-pdf-render.png"
+  },
+  "svg_audit": {
+    "width": "510.23622pt",
+    "height": "374.173228pt",
+    "viewBox": "0 0 510.23622 374.173228",
+    "image_elements": 0,
+    "editable_text_elements": 68
+  },
+  "png_audit": {
+    "pixels": [
+      2125,
+      1559
+    ],
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  }
+}

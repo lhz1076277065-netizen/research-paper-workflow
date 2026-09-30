@@ -1,0 +1,22 @@
+[
+  {
+    "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/manuscript.md",
+    "expected_sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+    "actual_sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+    "match": true,
+    "frozen_copy": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/inputs/manuscript.md"
+  },
+  {
+    "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+    "expected_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+    "actual_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+    "match": true,
+    "frozen_copy": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.release.0/inputs/fixed-results.csv"
+  },
+  {
+    "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/manuscript-writing/SKILL.md",
+    "expected_sha256": "b28256342c0d611818178a3582196af331469aaf034aa1d9ce5768d459a67e73",
+    "actual_sha256": "b28256342c0d611818178a3582196af331469aaf034aa1d9ce5768d459a67e73",
+    "match": true
+  }
+]

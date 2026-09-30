@@ -1,0 +1,45 @@
+[
+  {
+    "file": "main-figure.pdf",
+    "issues": [
+      [
+        "INFO",
+        "pypdf / PyPDF2 未安装，跳过字体嵌入类型检查。pip install pypdf 后可启用。"
+      ]
+    ],
+    "info": {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/main-figure.pdf",
+      "ext": "pdf",
+      "size_bytes": 28338,
+      "category": "vector"
+    }
+  },
+  {
+    "file": "main-figure.svg",
+    "issues": [],
+    "info": {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/main-figure.svg",
+      "ext": "svg",
+      "size_bytes": 37204,
+      "category": "vector"
+    }
+  },
+  {
+    "file": "main-figure.png",
+    "issues": [],
+    "info": {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.release.0/main-figure.png",
+      "ext": "png",
+      "size_bytes": 194600,
+      "category": "raster",
+      "size_px": [
+        2125,
+        1559
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    }
+  }
+]

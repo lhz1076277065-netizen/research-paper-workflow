@@ -1,0 +1,85 @@
+{
+  "rows": [
+    {
+      "condition": "reference",
+      "stratum": "S1",
+      "method": "A",
+      "point": 4.0,
+      "interval": [
+        3.7,
+        4.3
+      ]
+    },
+    {
+      "condition": "reference",
+      "stratum": "S2",
+      "method": "A",
+      "point": 8.0,
+      "interval": [
+        7.5,
+        8.5
+      ]
+    },
+    {
+      "condition": "reference",
+      "stratum": "S1",
+      "method": "B",
+      "point": 3.2,
+      "interval": [
+        2.9,
+        3.5
+      ]
+    },
+    {
+      "condition": "reference",
+      "stratum": "S2",
+      "method": "B",
+      "point": 9.0,
+      "interval": [
+        8.4,
+        9.6
+      ]
+    },
+    {
+      "condition": "changed",
+      "stratum": "S1",
+      "method": "A",
+      "point": 5.0,
+      "interval": [
+        4.5,
+        5.5
+      ]
+    },
+    {
+      "condition": "changed",
+      "stratum": "S2",
+      "method": "A",
+      "point": 7.0,
+      "interval": [
+        6.6,
+        7.4
+      ]
+    },
+    {
+      "condition": "changed",
+      "stratum": "S1",
+      "method": "B",
+      "point": 4.8,
+      "interval": [
+        4.3,
+        5.3
+      ]
+    },
+    {
+      "condition": "changed",
+      "stratum": "S2",
+      "method": "B",
+      "point": 8.2,
+      "interval": [
+        7.7,
+        8.7
+      ]
+    }
+  ],
+  "all_8_actual_artists_match_input": true
+}

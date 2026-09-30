@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "review_type": "local agent checks, not human scientific approval",
+  "material_sha256": [
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-20260930061350/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/manuscript.md",
+      "sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+      "actual_sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+      "matches": true
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/\u5b66\u672fskill/iteration-20260930061350/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+      "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "actual_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "matches": true
+    }
+  ],
+  "row_count": 8,
+  "row_values_counts_intervals_preserved": true,
+  "weighted_losses": {
+    "reference": {
+      "A": "4.8",
+      "B": "4.36"
+    },
+    "changed": {
+      "A": "6.6",
+      "B": "7.52"
+    }
+  },
+  "differences_B_minus_A": {
+    "reference": "-0.44",
+    "changed": "0.92"
+  },
+  "condition_method_denominators": {
+    "reference": {
+      "A": 100,
+      "B": 100
+    },
+    "changed": {
+      "A": 100,
+      "B": 100
+    }
+  },
+  "all_manuscript_sections_present": true,
+  "docx_markdown_text_and_table_parity": true,
+  "figure_inputs_match_csv": true,
+  "aggregate_intervals_created": false,
+  "image_alt_text_present": true,
+  "script_runtime": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]"
+}

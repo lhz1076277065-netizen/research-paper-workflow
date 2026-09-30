@@ -1,0 +1,21 @@
+{
+  "input": "LOCAL_EVIDENCE_ROOT/routing-evaluation/v310.json",
+  "input_sha256": "3a7ac20e064407c1bcc7ab39d1692562279a45545319bdae2a1d5cd3a474edf8",
+  "actual_read_scope": {
+    "files": [
+      "LOCAL_EVIDENCE_ROOT/routing-evaluation/v310.json"
+    ],
+    "range": "完整 UTF-8 文件；task、catalog 的 19 个 name/description、requests 的 8 个 id/request、method。",
+    "input_read_count": 1
+  },
+  "route_count": 8,
+  "basis": "仅依据所给 catalog 描述与 requests 进行语义判断。",
+  "note": "仅描述语义观察，非平台自动触发测试",
+  "academic_work_executed": false,
+  "skill_bodies_or_other_inputs_read": false,
+  "delegation_or_external_assistants_used": false,
+  "outputs": [
+    "routes.json",
+    "execution.json"
+  ]
+}

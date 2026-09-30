@@ -1,0 +1,10 @@
+# Manufactured evaluation results; lower loss is better; intervals are supplied 95% intervals, not to be re-estimated.
+condition,stratum,method,n,loss,lo,hi
+reference,S1,A,80,4.0,3.7,4.3
+reference,S1,B,80,3.2,2.9,3.5
+reference,S2,A,20,8.0,7.5,8.5
+reference,S2,B,20,9.0,8.4,9.6
+changed,S1,A,20,5.0,4.5,5.5
+changed,S1,B,20,4.8,4.3,5.3
+changed,S2,A,80,7.0,6.6,7.4
+changed,S2,B,80,8.2,7.7,8.7

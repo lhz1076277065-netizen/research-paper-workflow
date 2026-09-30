@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "id": "title",
+      "primary_capability": "manuscript-writing",
+      "rationale": "请求只改写既有标题，属于指定范围的学术稿件改写。",
+      "requested_scope": "仅提高标题清晰度并保留研究意思，不寻找新选题。"
+    },
+    {
+      "id": "gap",
+      "primary_capability": "topic-novelty",
+      "rationale": "请求依据方向和近邻工作识别知识缺口并选择决定性验证，直接对应知识增量、最近邻比较和竞争解释验证。",
+      "requested_scope": "基于所给方向和五份近邻摘录判断知识缺口，并指出最能区分候选解释的验证。"
+    },
+    {
+      "id": "label",
+      "primary_capability": "scientific-visualization",
+      "rationale": "请求修改已有图的局部标签并交付更新图，描述明确覆盖局部标签修改。",
+      "requested_scope": "仅补齐纵轴单位缺失的字母并给出更新后的图，保持数据和分析不变。"
+    },
+    {
+      "id": "review-response",
+      "primary_capability": "peer-review-response",
+      "rationale": "已有真实审稿意见和补充结果，需要逐点回复及对应稿段修订。",
+      "requested_scope": "依据所附审稿意见和已有补充结果逐条写回复，并修改对应稿段。"
+    },
+    {
+      "id": "skill-development",
+      "primary_capability": null,
+      "rationale": "请求开发通用 Skill 源码、脚本和触发描述，超出该学术研究能力库的适用范围。",
+      "requested_scope": "修复源码包中的脚本与触发描述，交付完整的新 Skill 文件夹。"
+    },
+    {
+      "id": "theory",
+      "primary_capability": "analysis-execution",
+      "rationale": "请求实际完成理论证明并核查等号条件，直接对应理论推导或证明。",
+      "requested_scope": "证明所给关于所有有限实数序列的不等式，并检查等号成立条件。"
+    },
+    {
+      "id": "journal",
+      "primary_capability": "journal-intelligence",
+      "rationale": "请求仅选刊并核对当前官方范围，直接符合只做期刊匹配和要求核查的描述。",
+      "requested_scope": "根据所给摘要选出三个合适期刊并核对当前官方范围，不改稿或做实验。"
+    },
+    {
+      "id": "prospective",
+      "primary_capability": "research-design",
+      "rationale": "尚未收集数据而需要完整方案稿和能区分解释的设计，直接对应方法规划与方案稿制作。",
+      "requested_scope": "为尚未收数据的研究制作完整方案稿和区分候选解释的设计，不编造未来结果。"
+    }
+  ]
+}

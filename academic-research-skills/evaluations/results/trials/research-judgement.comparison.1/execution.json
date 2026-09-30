@@ -1,0 +1,301 @@
+{
+  "schema_version": "execution-1",
+  "case_id": "research-judgement",
+  "condition": "comparison",
+  "replicate": 1,
+  "synthetic_material": true,
+  "empirical_study_conducted": false,
+  "status": "completed",
+  "recorded_at_utc": "2026-09-30T08:13:31.548885+00:00",
+  "request": {
+    "path": "LOCAL_EVIDENCE_ROOT/evaluation-repeat-suite/requests/research-judgement.comparison.1.json",
+    "sha256": "542ae9730e631cd74d389247138bbfc9cfb5356e83d8ecf8650588b87a1c1d03"
+  },
+  "user_prompt": "Improve this weak research plan using the supplied study profiles. Deliver a justified comparison of plausible research routes and choose the next discriminating work. Keep the scientific objective and distinguish an idea from established knowledge. Do not conduct a new empirical study. Write judgement.md and a short operation note.",
+  "execution_record_path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/execution.json",
+  "agent": {
+    "context": "independent child-agent context for this frozen request",
+    "host": "current Codex desktop host",
+    "delegation_used": false,
+    "other_assistants_or_local_llms_used": false
+  },
+  "model": {
+    "exact_identifier": "unknown",
+    "system_reported_family": "GPT-6",
+    "token_usage": "unknown",
+    "cost": "unknown",
+    "peak_context": "unknown"
+  },
+  "runtime": {
+    "python_path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "added_dependencies": []
+  },
+  "source_versions": [
+    {
+      "name": "topic-novelty",
+      "version": "3.1.0",
+      "entry_path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/SKILL.md",
+      "entry_sha256": "a50bd6aa7884fd3351abf4c1317cdf9aae27b4f44877c890e250d99244e088ae",
+      "git_commit": "unknown",
+      "version_evidence": "entry frontmatter"
+    },
+    {
+      "name": "ResearchStudio Idea Spark",
+      "repository": "https://github.com/microsoft/ResearchStudio",
+      "default_branch_at_discovery": "main",
+      "commit": "063f10088af49909e1a4a7ea8d29efe19633f34e",
+      "entry": "ResearchStudio-Idea/skills/idea_spark/SKILL.md",
+      "entry_sha256": "faac4554739140da5acae879ac570cc31386a4282f671ba6d99a392d66f9f951",
+      "selected_from": "common permitted repository manifest",
+      "upstream_pipeline_executed": false,
+      "application": "Assumption/observability audit and matched diagnostic plan applied in judgement.md."
+    }
+  ],
+  "file_reads": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-repeat-suite/requests/research-judgement.comparison.1.json",
+      "sha256": "542ae9730e631cd74d389247138bbfc9cfb5356e83d8ecf8650588b87a1c1d03",
+      "bytes": 4617,
+      "role": "frozen request"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/research-brief.md",
+      "sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "bytes": 2031,
+      "role": "frozen synthetic material"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/SKILL.md",
+      "sha256": "a50bd6aa7884fd3351abf4c1317cdf9aae27b4f44877c890e250d99244e088ae",
+      "bytes": 1259,
+      "role": "condition skill entry"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/references/protocol.md",
+      "sha256": "605ed64836fbc40253b6bdbb7ede25f20e4ddc336b1a95b2bfb8f8a53be74e72",
+      "bytes": 3040,
+      "role": "topic novelty protocol"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/references/provider-policy.md",
+      "sha256": "18e49c0e05e0debd255ad8c0025393685f583ab42c98ed38a861c2181724ee7a",
+      "bytes": 2192,
+      "role": "source and host policy"
+    },
+    {
+      "path": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/academic-research-skills-v3.1.0-source/skills/topic-novelty/references/execution-handoff.md",
+      "sha256": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+      "bytes": 360,
+      "role": "execution record guidance"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-common/repository-sources.json",
+      "sha256": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0",
+      "bytes": 2185,
+      "role": "common permitted repository manifest"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/idea_spark.SKILL.md",
+      "sha256": "faac4554739140da5acae879ac570cc31386a4282f671ba6d99a392d66f9f951",
+      "bytes": 11619,
+      "role": "external ideation entry"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/host-runbook.md",
+      "sha256": "1c3f73dca33f785712ae2d62f130f23a0109a632a41fa1af4887cfcf7d8bc9a3",
+      "bytes": 19567,
+      "role": "external host rules; adapted"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/controlled_diagnostic_design.md",
+      "sha256": "6eb00c3e1536238e9e7120479a156b73fcf649c8b20b7615069a463225dbf7c5",
+      "bytes": 12147,
+      "role": "matched conditions and independent validation design"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/assumption_audit_and_pivot.md",
+      "sha256": "09e166f1511831bae513bd7c25cc63440c5f14110a88430af8b9c5d157aa5cc3",
+      "bytes": 13046,
+      "role": "load-bearing assumptions and identifiability boundaries"
+    }
+  ],
+  "network_reads": [
+    {
+      "url": "https://github.com/microsoft/ResearchStudio",
+      "tool": "web__run.open",
+      "purpose": "primary repository discovery",
+      "sha256": "unknown",
+      "retained": "web tool response only"
+    },
+    {
+      "url": "https://api.github.com/repos/microsoft/ResearchStudio",
+      "tool": "urllib.request",
+      "purpose": "default branch metadata",
+      "sha256": "unknown"
+    },
+    {
+      "url": "https://api.github.com/repos/microsoft/ResearchStudio/commits/main",
+      "tool": "urllib.request",
+      "purpose": "pin current source commit",
+      "sha256": "unknown"
+    },
+    {
+      "url": "https://api.github.com/repos/microsoft/ResearchStudio/git/trees/063f10088af49909e1a4a7ea8d29efe19633f34e?recursive=1",
+      "tool": "urllib.request",
+      "purpose": "discover skill paths; tree not truncated",
+      "sha256": "unknown",
+      "evaluation_content_opened": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/ResearchStudio/063f10088af49909e1a4a7ea8d29efe19633f34e/ResearchStudio-Idea/skills/idea_spark/SKILL.md",
+      "tool": "urllib.request",
+      "sha256": "faac4554739140da5acae879ac570cc31386a4282f671ba6d99a392d66f9f951",
+      "saved_path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/idea_spark.SKILL.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/ResearchStudio/063f10088af49909e1a4a7ea8d29efe19633f34e/ResearchStudio-Idea/skills/idea_spark/references/host-runbook.md",
+      "tool": "urllib.request",
+      "sha256": "1c3f73dca33f785712ae2d62f130f23a0109a632a41fa1af4887cfcf7d8bc9a3",
+      "saved_path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/host-runbook.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/ResearchStudio/063f10088af49909e1a4a7ea8d29efe19633f34e/ResearchStudio-Idea/skills/idea_spark/references/ideation-patterns/controlled_diagnostic_design.md",
+      "tool": "urllib.request",
+      "sha256": "6eb00c3e1536238e9e7120479a156b73fcf649c8b20b7615069a463225dbf7c5",
+      "saved_path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/controlled_diagnostic_design.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/ResearchStudio/063f10088af49909e1a4a7ea8d29efe19633f34e/ResearchStudio-Idea/skills/idea_spark/references/ideation-patterns/assumption_audit_and_pivot.md",
+      "tool": "urllib.request",
+      "sha256": "09e166f1511831bae513bd7c25cc63440c5f14110a88430af8b9c5d157aa5cc3",
+      "saved_path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/assumption_audit_and_pivot.md"
+    }
+  ],
+  "tools": {
+    "functions.exec": {
+      "calls": 10,
+      "role": "orchestration, including one failed invocation before nested tools ran"
+    },
+    "exec_command": {
+      "calls": 8,
+      "role": "read/hash inputs, discover/retain pinned resources, write record, run integrity/arithmetic check"
+    },
+    "web__run": {
+      "calls": 1,
+      "role": "open permitted primary repository"
+    },
+    "apply_patch": {
+      "calls": 1,
+      "role": "write judgement, operation note, runnable check"
+    },
+    "python_subprocess": {
+      "calls": 1,
+      "role": "run verify.py with common Python; no model subprocess"
+    },
+    "call_sequence": [
+      "Read and hash frozen request.",
+      "Verify frozen material/skill hashes; read local protocol/policy/handoff and common manifest.",
+      "Open permitted GitHub repository and independently query repository/commit/tree metadata in parallel.",
+      "Fetch and retain pinned external entry.",
+      "Fetch and retain host runbook and two selected reasoning resources; combined tool output was truncated.",
+      "Reread controlled-diagnostic resource fully; attempted host tail beyond line count returned no lines.",
+      "Reread host runbook tail from line 120, covering missing ending.",
+      "Write judgement, operation note and runnable check.",
+      "Record-writing invocation failed before any nested tool ran: Python spelling False was used for a JavaScript tool-argument boolean.",
+      "Correct boolean spelling; recheck hashes, write record, run verify.py, update check receipt."
+    ]
+  },
+  "adaptations": [
+    {
+      "status": "adapted_in_host",
+      "from": "native navigator, isolated stage contexts and model routing",
+      "to": "current agent/context using relevant reasoning resources",
+      "reason": "Frozen task forbids delegation and other assistants and requires supplied-profile comparison rather than full card generation."
+    },
+    {
+      "status": "adapted_in_host",
+      "from": "real-literature grounding and novelty/collision searches",
+      "to": "compare R1-R4 as nearest supplied synthetic profiles",
+      "reason": "Profiles have no real identities; no real publication-novelty claim is supported."
+    },
+    {
+      "status": "adapted_in_host",
+      "from": "empirical execution and native validation/rendering",
+      "to": "prospective design, exact illustrative arithmetic and artifact integrity checks",
+      "reason": "No new empirical study is authorized; native validators and independent review were not executed."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/judgement.md",
+      "sha256": "a17622155b5b0eeed05ba5cb57b8a310f4f9d1c1a01d9a68fc68c12b4bff20bb",
+      "bytes": 15383
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/operation-note.md",
+      "sha256": "d205c97efef57a484f91c93f71a92138c5c41ca11a2408866b008f29a01dc561",
+      "bytes": 2769
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/verify.py",
+      "sha256": "8c491cbfbc5340ceb39773779e1f8991d258dd17338a4d5d61bcffca0262892d",
+      "bytes": 1830
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/idea_spark.SKILL.md",
+      "sha256": "faac4554739140da5acae879ac570cc31386a4282f671ba6d99a392d66f9f951",
+      "bytes": 11619
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/host-runbook.md",
+      "sha256": "1c3f73dca33f785712ae2d62f130f23a0109a632a41fa1af4887cfcf7d8bc9a3",
+      "bytes": 19567
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/controlled_diagnostic_design.md",
+      "sha256": "6eb00c3e1536238e9e7120479a156b73fcf649c8b20b7615069a463225dbf7c5",
+      "bytes": 12147
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/source-resources/assumption_audit_and_pivot.md",
+      "sha256": "09e166f1511831bae513bd7c25cc63440c5f14110a88430af8b9c5d157aa5cc3",
+      "bytes": 13046
+    }
+  ],
+  "execution_self_hash": "omitted to avoid self-reference; can be computed externally",
+  "result_checks": {
+    "status": "passed",
+    "command": [
+      "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+      "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.comparison.1/verify.py"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: provenance, artifact integrity, JSON, and exact two-world arithmetic; no empirical validation.",
+    "stderr": "",
+    "meaning": "Mechanical provenance, artifact integrity, JSON parsing, frozen-text equivalence, exact toy arithmetic only; no scientific/evaluation verdict."
+  },
+  "manual_review": [
+    "Profile claims remain confined to fabricated evidence; proxy causation and universal robustness are not asserted.",
+    "Three routes compare mechanisms, nearest-profile overlap, falsification, feasibility and negative-result value.",
+    "Priority preserves reliability of gains; symbolic ambiguity does not replace the broader objective.",
+    "Prospective design seals truth from fitting and diagnostics and states how outcomes change priority.",
+    "Toy limitation is restricted to the constructed two-world class, not claimed as a general impossibility theorem."
+  ],
+  "limitations": [
+    "No observations, simulator experiments, fitting, manuscript, field findings or real literature novelty verification.",
+    "Profiles omit complete equations, acquisition logs, precision values and sample sizes; simulator rules remain prospective.",
+    "Exact toy arithmetic checks a logical possibility, not deployment performance or R4 mechanism equivalence.",
+    "No native Idea Spark completion, source-native validators, independent review or evaluation score is claimed.",
+    "Precise model identifier, tokens, cost and peak context are unknown.",
+    "Repository/API metadata hashes are unknown because raw responses were not retained; selected raw resources were retained and hashed."
+  ],
+  "scope_control": {
+    "other_arm_answers_read": false,
+    "scores_read": false,
+    "parent_report_read": false,
+    "other_project_skill_versions_loaded": false,
+    "writes_outside_trial_directory": false,
+    "memory_used": false
+  }
+}

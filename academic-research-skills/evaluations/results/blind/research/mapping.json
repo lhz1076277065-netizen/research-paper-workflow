@@ -1,0 +1,38 @@
+{
+  "J1": {
+    "trial": "research-judgement.release.0",
+    "original_sha256": "a245a57a36cc4bc24aabd077e7918fa45d389532777895a503979a39c4ea18b6",
+    "anonymous_sha256": "a245a57a36cc4bc24aabd077e7918fa45d389532777895a503979a39c4ea18b6",
+    "redaction": "explicit project version and workspace path strings only; full judgement retained"
+  },
+  "J2": {
+    "trial": "research-judgement.without-skill.0",
+    "original_sha256": "6220bdd9d3150c7c9eab6e3295d3c100f9b040d53367e020a2f36323544ea191",
+    "anonymous_sha256": "6220bdd9d3150c7c9eab6e3295d3c100f9b040d53367e020a2f36323544ea191",
+    "redaction": "explicit project version and workspace path strings only; full judgement retained"
+  },
+  "J3": {
+    "trial": "research-judgement.without-skill.1",
+    "original_sha256": "4cb5a10791ac5e81f7e541ca71b2c9673e226cd333a74ce9950a45561e85c418",
+    "anonymous_sha256": "4cb5a10791ac5e81f7e541ca71b2c9673e226cd333a74ce9950a45561e85c418",
+    "redaction": "explicit project version and workspace path strings only; full judgement retained"
+  },
+  "J4": {
+    "trial": "research-judgement.comparison.1",
+    "original_sha256": "a17622155b5b0eeed05ba5cb57b8a310f4f9d1c1a01d9a68fc68c12b4bff20bb",
+    "anonymous_sha256": "a17622155b5b0eeed05ba5cb57b8a310f4f9d1c1a01d9a68fc68c12b4bff20bb",
+    "redaction": "explicit project version and workspace path strings only; full judgement retained"
+  },
+  "J5": {
+    "trial": "research-judgement.comparison.0",
+    "original_sha256": "7f3aac436de3e8b516c49ee281a6ee5f127f9932710733b0da0a200ca459c562",
+    "anonymous_sha256": "7f3aac436de3e8b516c49ee281a6ee5f127f9932710733b0da0a200ca459c562",
+    "redaction": "explicit project version and workspace path strings only; full judgement retained"
+  },
+  "J6": {
+    "trial": "research-judgement.release.1",
+    "original_sha256": "7d6bcaa469298d4c10aee8a0cffb51bb7e23adc56813c23c0b7c245775cd5b23",
+    "anonymous_sha256": "7d6bcaa469298d4c10aee8a0cffb51bb7e23adc56813c23c0b7c245775cd5b23",
+    "redaction": "explicit project version and workspace path strings only; full judgement retained"
+  }
+}

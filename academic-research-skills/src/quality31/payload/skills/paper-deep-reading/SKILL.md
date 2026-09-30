@@ -1,8 +1,8 @@
 ---
 name: paper-deep-reading
-description: "顶刊问题、模型和图表精读"
+description: "当给定论文、摘要或图表需要精读、解释方法和证据时使用；按已取得原文定位，摘要任务不补造全文细节。"
 metadata:
-  version: "3.1.1"
+  version: "3.2.0-rc.1"
 ---
 
 # 顶刊问题、模型和图表精读

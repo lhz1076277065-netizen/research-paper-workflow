@@ -1,0 +1,4 @@
+label,condition,weight_source,S1_weight,S2_weight,A_loss,B_loss,B_minus_A,interval
+Reference; observed 80:20,reference,reference,0.8,0.2,4.80,4.36,-0.44,
+Changed; observed 20:80,changed,changed,0.2,0.8,6.60,7.52,0.92,
+Changed; fixed reference 80:20,changed,reference,0.8,0.2,5.40,5.48,0.08,

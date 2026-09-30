@@ -1,0 +1,410 @@
+{
+  "scope": "Parent direct table/section and file-identity checks; not semantic claim or render review",
+  "input_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+  "trials": [
+    {
+      "trial": "full-manuscript.release.0",
+      "all_eight_table_rows_matched": true,
+      "complete_sections_present": true,
+      "row_checks": [
+        {
+          "row": [
+            "reference",
+            "S1",
+            "A"
+          ],
+          "values": [
+            80.0,
+            4.0,
+            3.7,
+            4.3
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "reference",
+            "S1",
+            "B"
+          ],
+          "values": [
+            80.0,
+            3.2,
+            2.9,
+            3.5
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "reference",
+            "S2",
+            "A"
+          ],
+          "values": [
+            20.0,
+            8.0,
+            7.5,
+            8.5
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "reference",
+            "S2",
+            "B"
+          ],
+          "values": [
+            20.0,
+            9.0,
+            8.4,
+            9.6
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S1",
+            "A"
+          ],
+          "values": [
+            20.0,
+            5.0,
+            4.5,
+            5.5
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S1",
+            "B"
+          ],
+          "values": [
+            20.0,
+            4.8,
+            4.3,
+            5.3
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S2",
+            "A"
+          ],
+          "values": [
+            80.0,
+            7.0,
+            6.6,
+            7.4
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S2",
+            "B"
+          ],
+          "values": [
+            80.0,
+            8.2,
+            7.7,
+            8.7
+          ],
+          "matched": true
+        }
+      ],
+      "outputs": [
+        {
+          "file": "manuscript.md",
+          "bytes": 10859,
+          "sha256": "541891e2e8d841ea1aaf89d36a9fbdd423a3aa45f22e047418af33e8fdd48121"
+        },
+        {
+          "file": "manuscript.docx",
+          "bytes": 162573,
+          "sha256": "3ed9c03770ac78e7f8af291e95214c05f108048f9b0cd66bd24702bbe95ffc3d"
+        },
+        {
+          "file": "manuscript.pdf",
+          "bytes": 313971,
+          "sha256": "1c72864e39b9f1f2617cc3b1f1f4c06f8a0a26507c3eb890b207fd4a527954c1"
+        }
+      ]
+    },
+    {
+      "trial": "full-manuscript.comparison.0",
+      "all_eight_table_rows_matched": true,
+      "complete_sections_present": true,
+      "row_checks": [
+        {
+          "row": [
+            "reference",
+            "S1",
+            "A"
+          ],
+          "values": [
+            80.0,
+            4.0,
+            3.7,
+            4.3
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "reference",
+            "S1",
+            "B"
+          ],
+          "values": [
+            80.0,
+            3.2,
+            2.9,
+            3.5
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "reference",
+            "S2",
+            "A"
+          ],
+          "values": [
+            20.0,
+            8.0,
+            7.5,
+            8.5
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "reference",
+            "S2",
+            "B"
+          ],
+          "values": [
+            20.0,
+            9.0,
+            8.4,
+            9.6
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S1",
+            "A"
+          ],
+          "values": [
+            20.0,
+            5.0,
+            4.5,
+            5.5
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S1",
+            "B"
+          ],
+          "values": [
+            20.0,
+            4.8,
+            4.3,
+            5.3
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S2",
+            "A"
+          ],
+          "values": [
+            80.0,
+            7.0,
+            6.6,
+            7.4
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S2",
+            "B"
+          ],
+          "values": [
+            80.0,
+            8.2,
+            7.7,
+            8.7
+          ],
+          "matched": true
+        }
+      ],
+      "outputs": [
+        {
+          "file": "manuscript.md",
+          "bytes": 13545,
+          "sha256": "664a4a918a013f97bfb455b094798889bb425acf6c77cd4f1530c8b838397eba"
+        },
+        {
+          "file": "manuscript.pdf",
+          "bytes": 247639,
+          "sha256": "c58f3760bae24ee7bf806e8943e36cddb0e3248f60211e09a4b9f1dfa6e0c0d8"
+        },
+        {
+          "file": "manuscript.html",
+          "bytes": 15977,
+          "sha256": "1588337d5ff8f6d3f90fa8f531c1e480ac86ad90efe1ce63b2a2f507d30af765"
+        }
+      ]
+    },
+    {
+      "trial": "full-manuscript.without-skill.0",
+      "all_eight_table_rows_matched": true,
+      "complete_sections_present": true,
+      "row_checks": [
+        {
+          "row": [
+            "reference",
+            "S1",
+            "A"
+          ],
+          "values": [
+            80.0,
+            4.0,
+            3.7,
+            4.3
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "reference",
+            "S1",
+            "B"
+          ],
+          "values": [
+            80.0,
+            3.2,
+            2.9,
+            3.5
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "reference",
+            "S2",
+            "A"
+          ],
+          "values": [
+            20.0,
+            8.0,
+            7.5,
+            8.5
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "reference",
+            "S2",
+            "B"
+          ],
+          "values": [
+            20.0,
+            9.0,
+            8.4,
+            9.6
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S1",
+            "A"
+          ],
+          "values": [
+            20.0,
+            5.0,
+            4.5,
+            5.5
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S1",
+            "B"
+          ],
+          "values": [
+            20.0,
+            4.8,
+            4.3,
+            5.3
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S2",
+            "A"
+          ],
+          "values": [
+            80.0,
+            7.0,
+            6.6,
+            7.4
+          ],
+          "matched": true
+        },
+        {
+          "row": [
+            "changed",
+            "S2",
+            "B"
+          ],
+          "values": [
+            80.0,
+            8.2,
+            7.7,
+            8.7
+          ],
+          "matched": true
+        }
+      ],
+      "outputs": [
+        {
+          "file": "manuscript.md",
+          "bytes": 10235,
+          "sha256": "f4c2e2c966289e6261a02226b91672ccd9d00f0434471983fa9099ee75f6be3d"
+        },
+        {
+          "file": "manuscript.docx",
+          "bytes": 163661,
+          "sha256": "61776aabbc7bf3ec14b321e03eaa385029afb0378c93fb0d2a8e054b6b4ccf58"
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

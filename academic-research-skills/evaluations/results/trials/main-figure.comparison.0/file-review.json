@@ -1,0 +1,88 @@
+{
+  "main-figure.pdf": {
+    "issues": [
+      [
+        "INFO",
+        "pypdf / PyPDF2 未安装，跳过字体嵌入类型检查。pip install pypdf 后可启用。"
+      ]
+    ],
+    "info": {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/main-figure.pdf",
+      "ext": "pdf",
+      "size_bytes": 28989,
+      "category": "vector"
+    },
+    "sha256": "43d7b221b2b120a60db0d5bd3f78b1bba108e888de2bd11fa5a2f9fefe9e3e47"
+  },
+  "main-figure.svg": {
+    "issues": [],
+    "info": {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/main-figure.svg",
+      "ext": "svg",
+      "size_bytes": 25732,
+      "category": "vector"
+    },
+    "sha256": "7eea251717c68dfef68b23054a844221adaba32dbd683cba32ff37032d07770e"
+  },
+  "main-figure.png": {
+    "issues": [],
+    "info": {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/main-figure.comparison.0/main-figure.png",
+      "ext": "png",
+      "size_bytes": 168600,
+      "category": "raster",
+      "size_px": [
+        2160,
+        1350
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    "sha256": "4ab768110d1db4d0d2444148e010a1bbb8738c18f58adf6ae13ea0ba853c0a42"
+  },
+  "independent_pdf_check": {
+    "pages": 1,
+    "size_points": [
+      518.4000244140625,
+      324.0
+    ],
+    "fonts": [
+      {
+        "name": "MTDXLX+DejaVuSans-Bold",
+        "type": "Type0",
+        "extension": "ttf",
+        "embedded_bytes": 8404
+      },
+      {
+        "name": "EOTPSU+DejaVuSans",
+        "type": "Type0",
+        "extension": "ttf",
+        "embedded_bytes": 15836
+      },
+      {
+        "name": "CPUQYB+DejaVuSans",
+        "type": "Type0",
+        "extension": "ttf",
+        "embedded_bytes": 3844
+      }
+    ],
+    "raster_images": 0,
+    "expected_numeric_labels": "all present",
+    "result": "PASS (PyMuPDF; upstream pypdf check unavailable)"
+  },
+  "independent_svg_check": {
+    "width": "518.4pt",
+    "height": "324pt",
+    "editable_text_nodes": 47,
+    "raster_images": 0
+  },
+  "package_versions": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "Pillow": "12.3.0",
+    "PyMuPDF": "1.28.2"
+  }
+}

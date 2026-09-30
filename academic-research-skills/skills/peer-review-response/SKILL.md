@@ -1,8 +1,8 @@
 ---
 name: peer-review-response
-description: "审稿意见驱动的修订与回应"
+description: "当给定真实审稿或编辑意见需要逐点回应和修订稿件时使用；定位改动与证据，保留不接受意见的有据说明。"
 metadata:
-  version: "3.1.1"
+  version: "3.2.0-rc.1"
 ---
 
 # 审稿意见驱动的修订与回应

@@ -1,0 +1,359 @@
+{
+  "case_id": "full-manuscript",
+  "condition": "without-skill",
+  "replicate": 0,
+  "status": "completed",
+  "synthetic_material": true,
+  "completed_utc": "2026-09-30T07:36:42.821391+00:00",
+  "execution_context": {
+    "host": "same Codex desktop host",
+    "agent_and_model": "retained; no alternate assistant host or local LLM used",
+    "precise_model_identifier": "unknown",
+    "delegation": "none",
+    "project_skill_entry": null,
+    "project_skill_or_protocol_loaded": false
+  },
+  "request": {
+    "path": "LOCAL_EVIDENCE_ROOT/evaluation-suite/requests/full-manuscript.without-skill.0.json",
+    "sha256": "78383d8357c7611982ae87a122b6eba77ec80a135c6652cb7d7f0650001b8968"
+  },
+  "common_library": {
+    "path": "LOCAL_EVIDENCE_ROOT/evaluation-common/repository-sources.json",
+    "schema_version": "repository-sources-1",
+    "sha256": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0"
+  },
+  "material_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/manuscript.md",
+      "sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+      "actual_sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+      "matches": true
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+      "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "actual_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+      "matches": true
+    }
+  ],
+  "external_source_reads": [
+    {
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/65d6e786832e2c52832713117bbbf5096b56f77f/skills/scientific-writing/SKILL.md",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "65d6e786832e2c52832713117bbbf5096b56f77f",
+      "path": "skills/scientific-writing/SKILL.md",
+      "local": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/sources/scientific-writing-SKILL.md",
+      "sha256": "f6026e7d79cd3133e9343a7d6e6c5e06f4ad061888efb6a73fcb95e073eebf67",
+      "retrieved_utc": "2026-09-30T07:19:36.678795+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Adkid-Zephyr/anti-defensive-writing-Skill/102c8b21acf5eda3a0aef3d9779a65db646c8980/skills/anti-defensive-writing-en/SKILL.md",
+      "repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "path": "skills/anti-defensive-writing-en/SKILL.md",
+      "local": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/sources/anti-defensive-writing-en-SKILL.md",
+      "sha256": "49705a92677d06b1be9f78be5be4f966b1d30c4ed72a3b97c86a973d06683b9b",
+      "retrieved_utc": "2026-09-30T07:19:38.973857+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/65d6e786832e2c52832713117bbbf5096b56f77f/skills/scientific-writing/references/evidence_workflow.md",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "65d6e786832e2c52832713117bbbf5096b56f77f",
+      "path": "skills/scientific-writing/references/evidence_workflow.md",
+      "local": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/sources/evidence_workflow.md",
+      "sha256": "c7db56a223978307f9f43921eb393d87fef8c051a492c3d7e3c016c62b9e1409",
+      "retrieved_utc": "2026-09-30T07:20:34.802986+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/65d6e786832e2c52832713117bbbf5096b56f77f/skills/scientific-writing/references/writing_principles.md",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "65d6e786832e2c52832713117bbbf5096b56f77f",
+      "path": "skills/scientific-writing/references/writing_principles.md",
+      "local": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/sources/writing_principles.md",
+      "sha256": "58d4b32f63446c0b082f163314fdcf0d41a50568ad392d34ba992e24fadae764",
+      "retrieved_utc": "2026-09-30T07:20:35.533346+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/65d6e786832e2c52832713117bbbf5096b56f77f/skills/scientific-writing/references/imrad_structure.md",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "65d6e786832e2c52832713117bbbf5096b56f77f",
+      "path": "skills/scientific-writing/references/imrad_structure.md",
+      "local": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/sources/imrad_structure.md",
+      "sha256": "8a1201f8e58a045736a5bc65a47f239c894be6946716e969c0b77aa90a7e8e39",
+      "retrieved_utc": "2026-09-30T07:20:36.975901+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/65d6e786832e2c52832713117bbbf5096b56f77f/skills/scientific-writing/references/figures_tables.md",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "65d6e786832e2c52832713117bbbf5096b56f77f",
+      "path": "skills/scientific-writing/references/figures_tables.md",
+      "local": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/sources/figures_tables.md",
+      "sha256": "212d10f3e7a01325d2518c4aab54a4fc04a67e4aa94e959cead199c425a0f4d6",
+      "retrieved_utc": "2026-09-30T07:20:37.788719+00:00"
+    }
+  ],
+  "additional_external_discovery": [
+    {
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "purpose": "discover the selected scientific-writing entry"
+    },
+    {
+      "url": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill",
+      "purpose": "discover the designated English anti-defensive entry"
+    },
+    {
+      "service": "GitHub REST API",
+      "repositories": [
+        "K-Dense-AI/scientific-agent-skills",
+        "Adkid-Zephyr/anti-defensive-writing-Skill"
+      ],
+      "endpoints": [
+        "repository metadata",
+        "default-branch commit",
+        "recursive commit tree"
+      ],
+      "purpose": "pin commits and enumerate available relative source resources; no external evaluation answers or scoring files read"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.00065",
+      "record_version": "v2, last revised 2026-09-02",
+      "purpose": "verify workflow attribution metadata, not scientific benchmark support"
+    }
+  ],
+  "additional_local_reads": [
+    "sources/scientific-agent-skills.repository.json",
+    "sources/anti-defensive-writing-Skill.repository.json",
+    "sources/source-ledger.json",
+    "manuscript.md",
+    "build_and_check.py",
+    "manuscript.docx",
+    "display-data.json",
+    "verification.json",
+    "review/manuscript.pdf",
+    "review/pdf-review.json",
+    "figure1.png",
+    "review/page-1.png",
+    "review/page-2.png",
+    "review/page-3.png",
+    "review/page-4.png"
+  ],
+  "tool_operations": [
+    {
+      "tool": "exec_command",
+      "operation": "read frozen request, open both material files and verify their SHA-256 against request; read common repository allowlist"
+    },
+    {
+      "tool": "web__run",
+      "operation": "open the two chosen primary GitHub repositories and current arXiv attribution record"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "use urllib for GitHub metadata, pinned source entries and four writing references; save source hashes locally"
+    },
+    {
+      "tool": "mcp__codex_app__load_workspace_dependencies",
+      "operation": "resolve existing bundled document runtime; bundle version 26.909.12148"
+    },
+    {
+      "tool": "apply_patch",
+      "operation": "write complete revised manuscript, substantive factual/claim comparison, short operation note and runnable build/check script only under this trial directory"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "shared Python generates source-bound PNG/SVG/PDF figure; bundled Python exports editable DOCX and performs decimal-arithmetic, eight-row, display-data and full text/table parity checks"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "bundled soffice converts DOCX to local PDF; pypdf checks pagination and pypdfium2 renders every page"
+    },
+    {
+      "tool": "view_image",
+      "operation": "inspect figure and all final PDF page images; fix an orphaned table note and stray Markdown markers, then rerun export, checks and visual review"
+    },
+    {
+      "tool": "exec_command",
+      "operation": "write execution log and output checksums"
+    }
+  ],
+  "workflow_application": {
+    "scientific_writing": {
+      "version": "2.1",
+      "commit": "65d6e786832e2c52832713117bbbf5096b56f77f",
+      "used": [
+        "evidence intake and freeze",
+        "claim boundary and section restructuring",
+        "complete Methods/Results reconciliation",
+        "source-bound display and editable output audit"
+      ],
+      "adapted": [
+        "compact factual/claim comparison and one fixture check in place of five publication registries",
+        "internal synthetic fixture rather than journal-specific empirical reporting or submission preparation"
+      ],
+      "bundled_workflow_cli_run": false,
+      "human_verification_or_submission_approval_claimed": false
+    },
+    "anti_defensive_writing": {
+      "declared_version": "unknown",
+      "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "used": [
+        "explicit contribution",
+        "direct evidence-matched language",
+        "full title/abstract/introduction/results/discussion/conclusion restructuring",
+        "removal of generic self-undermining and repeated caveats"
+      ],
+      "not_applied": [
+        "delete, hide or downplay evidence unfavorable to B",
+        "invent a favorable trade-off or mechanism"
+      ],
+      "reason": "frozen request requires preservation of what all evidence supports"
+    }
+  },
+  "actual_completion_scope": [
+    "entire supplied synthetic manuscript revised in English",
+    "complete editable Word text and data table plus Markdown",
+    "actual main figure from all eight source rows and existing weighted averages",
+    "substantive factual/claim comparison",
+    "short source-attributed operation note",
+    "reproducible check and full local render review"
+  ],
+  "formal_outputs": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/manuscript.docx",
+      "sha256": "61776aabbc7bf3ec14b321e03eaa385029afb0378c93fb0d2a8e054b6b4ccf58",
+      "bytes": 163661
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/manuscript.md",
+      "sha256": "f4c2e2c966289e6261a02226b91672ccd9d00f0434471983fa9099ee75f6be3d",
+      "bytes": 10235
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/factual_claim_comparison.md",
+      "sha256": "c7a30b76360c09a6f76e7b490f239247b383e1e01a6e147e87bae84aa84f382e",
+      "bytes": 7110
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/operation_note.md",
+      "sha256": "73ac608f4a771f9ca9dc30e1b72237e00c7acfa662eefb74c83252d796d12bfc",
+      "bytes": 2552
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/figure1.svg",
+      "sha256": "b3741b84b1fdfe26015b061d06767fa1a0ee37592d41918742648c19cf7b6cfc",
+      "bytes": 25041
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/figure1.png",
+      "sha256": "a042f6b40566ebd961e2b55bfc355c419d23181007d8e67f108d82cd4603db43",
+      "bytes": 143050
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/figure1.pdf",
+      "sha256": "a46250f64de721a603740bf1b0a85722c050b316743882815d101dac70c693e7",
+      "bytes": 33144
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/build_and_check.py",
+      "sha256": "c43713dd7b2d734a97a4093d8a96bc4da66b1b0e6ae638ecc11d1973351fe794",
+      "bytes": 12983
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/display-data.json",
+      "sha256": "6fe8e0e88afa499edd99e2a915d5043c1d08968a138a29c29a6b6591e7cbf443",
+      "bytes": 1654
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/verification.json",
+      "sha256": "feaa55e605b8e63c945c8f0754e26f283ee099eb2fe7da9992497d6c9c87f77a",
+      "bytes": 1623
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/review/manuscript.pdf",
+      "sha256": "b6e1f200fc0ff7f9df7beb7299090269e612c074b76700bf28de9f3fb397b8f7",
+      "bytes": 267573
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/full-manuscript.without-skill.0/review/pdf-review.json",
+      "sha256": "217422a9fccdfec9ab8a4c16626c11bd15104b9f1c48e4b307327e6a3c980321",
+      "bytes": 1583
+    }
+  ],
+  "review": {
+    "numeric_and_artifact_checks": {
+      "status": "passed",
+      "review_type": "local agent checks, not human scientific approval",
+      "material_sha256": [
+        {
+          "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/manuscript.md",
+          "sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+          "actual_sha256": "675117e83bad49706fae0e17726369d1ac050dc8d96c2d0111674ba5ce9b961b",
+          "matches": true
+        },
+        {
+          "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/fixed-results.csv",
+          "sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+          "actual_sha256": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+          "matches": true
+        }
+      ],
+      "row_count": 8,
+      "row_values_counts_intervals_preserved": true,
+      "weighted_losses": {
+        "reference": {
+          "A": "4.8",
+          "B": "4.36"
+        },
+        "changed": {
+          "A": "6.6",
+          "B": "7.52"
+        }
+      },
+      "differences_B_minus_A": {
+        "reference": "-0.44",
+        "changed": "0.92"
+      },
+      "condition_method_denominators": {
+        "reference": {
+          "A": 100,
+          "B": 100
+        },
+        "changed": {
+          "A": 100,
+          "B": 100
+        }
+      },
+      "all_manuscript_sections_present": true,
+      "docx_markdown_text_and_table_parity": true,
+      "figure_inputs_match_csv": true,
+      "aggregate_intervals_created": false,
+      "image_alt_text_present": true,
+      "script_runtime": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]"
+    },
+    "visual_review": "agent inspected all four final rendered pages and standalone figure; no visible clipping or orphaned table note; figure and caption share a page",
+    "final_preview_pages": 4,
+    "source_inputs_unchanged": true,
+    "external_writing_sources_are_scientific_evidence": false
+  },
+  "limitations": [
+    "no raw observations, new experiments, inferential tests, aggregate uncertainty or causal mechanism",
+    "E1-E4 separate memo documents not supplied; retained only as manuscript-defined internal labels",
+    "no accountable human scientific approval or publication/submission certification",
+    "token usage, cost and exact underlying model identifier unavailable"
+  ],
+  "runtime_versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "python_docx": "1.2.0",
+    "pypdf": "6.10.0",
+    "pypdfium2": "5.13.0",
+    "workspace_bundle": "26.909.12148",
+    "shared_plotting_python": "3.12.14"
+  },
+  "metrics": {
+    "input_tokens": "unknown",
+    "output_tokens": "unknown",
+    "total_tokens": "unknown",
+    "cost": "unknown",
+    "wall_time_seconds": "unknown",
+    "precise_model_identifier": "unknown"
+  }
+}

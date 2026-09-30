@@ -1,0 +1,10 @@
+{
+  "input_path": "LOCAL_EVIDENCE_ROOT/routing-evaluation/candidate.json",
+  "input_sha256": "49c29f4ed869bdc58b99c455aed1b04eed9e5275cff2b39583c259b7a8001603",
+  "actual_read_scope": "完整读取 candidate.json，共 6147 字节；依据其中 task、catalog 的名称与描述、8 条 requests 和 method。未读取其他文件、Skill 正文、其他版本、映射或答案。",
+  "method": "仅描述语义观察，非平台自动触发测试",
+  "requests_routed": 8,
+  "academic_work_executed": false,
+  "external_assistants_used": false,
+  "delegation_used": false
+}

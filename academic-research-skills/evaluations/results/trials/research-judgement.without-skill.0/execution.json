@@ -1,0 +1,115 @@
+{
+  "case_id": "research-judgement",
+  "condition": "without-skill",
+  "replicate": 0,
+  "synthetic_material": true,
+  "completed_at_utc": "2026-09-30T07:04:24.379498+00:00",
+  "status": "completed",
+  "sources_read": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-suite/requests/research-judgement.without-skill.0.json",
+      "version": "assigned frozen request",
+      "sha256": "53df8ed45453340576deea164dca9db986c5ed51ae914118ff111d8e32d40de3"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/research-brief.md",
+      "version": "frozen synthetic research brief",
+      "sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "expected_sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "hash_match": true
+    }
+  ],
+  "additional_reads": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.0/judgement.md",
+      "purpose": "review own deliverable or runnable check"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.0/operation-note.md",
+      "purpose": "review own deliverable or runnable check"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.0/verify_outputs.py",
+      "purpose": "review own deliverable or runnable check"
+    }
+  ],
+  "skill": {
+    "entry": null,
+    "loaded": false,
+    "version": "none",
+    "adaptation": "none"
+  },
+  "external_sources_used": [],
+  "common_repository_sources_read": false,
+  "tools_operations": [
+    {
+      "tool": "functions.exec / exec_command",
+      "operation": "Read assigned request with cat."
+    },
+    {
+      "tool": "functions.exec / exec_command; Python stdlib",
+      "operation": "Read supplied material; verify SHA-256 and embedded text parity."
+    },
+    {
+      "tool": "functions.exec / apply_patch",
+      "operation": "Create judgement.md, operation-note.md, and verify_outputs.py; correct math formatting after own-output review."
+    },
+    {
+      "tool": "functions.exec / exec_command",
+      "operation": "Run exact symbolic/output check and read own output files; check and review calls were batched independently."
+    },
+    {
+      "tool": "functions.exec / exec_command; Python stdlib",
+      "operation": "Rerun final check, hash deliverables, write and parse execution.json."
+    }
+  ],
+  "runtime": {
+    "interpreter": "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "exact_model_identifier": "unknown",
+    "token_usage": "unknown",
+    "cost": "unknown"
+  },
+  "use_scope": "Improve the supplied generic reliability plan; compare acquisition identifiability, precision boundaries, and clean-input capacity; select analytical identifiability work and outline a conditional pilot.",
+  "formal_outputs": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.0/judgement.md",
+      "sha256": "6220bdd9d3150c7c9eab6e3295d3c100f9b040d53367e020a2f36323544ea191"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.0/operation-note.md",
+      "sha256": "3f6acca5cff990e80e81803477ac595fef67d46704768fe6f44c485e74f9d759"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.0/verify_outputs.py",
+      "sha256": "50307f79351a1cd542baff02f5f43f7469678202065d8307c6091a477b12a1c5"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.0/execution.json",
+      "role": "execution provenance; self-hash omitted"
+    }
+  ],
+  "review": {
+    "input_hashes": "passed",
+    "embedded_material_parity": "passed",
+    "symbolic_check": {
+      "command": [
+        "LOCAL_USER_ROOT/Documents/ChatGPT/学术skill/acceptance-20260930-091827/environment/.venv/bin/python",
+        "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.without-skill.0/verify_outputs.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: frozen inputs; equal observables/opposite gains; requested deliverables",
+      "stderr": ""
+    },
+    "manual_review": "Reviewed full own judgement, operation note, and check. Profile claims remain fictional; routes and failure implications are separated; symbolic illustration is labeled as invented and has bounded conclusions."
+  },
+  "limits": [
+    "No Skill or project protocol loaded; no other condition, answer, parent report, or scoring standard read.",
+    "No empirical study, simulator execution, generated observations, or model fitting.",
+    "The profiles lack mathematical procedures and precision units; no faithful reproduction or publication novelty established.",
+    "No external-source corroboration was necessary for this supplied-premise judgement.",
+    "Token usage, cost, and exact model identity are unknown."
+  ],
+  "writes_outside_output_directory": false,
+  "subagents_delegated": false
+}

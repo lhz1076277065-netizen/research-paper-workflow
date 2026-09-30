@@ -1,0 +1,12 @@
+{
+  "schema": "quality-evaluation-cases-1",
+  "scope": "Reserved synthetic case, not executed or used to tune this release. Public after distribution; not a secret benchmark or passed test.",
+  "cases": [
+    {
+      "id": "reserved-conflicting-evidence",
+      "skill": "topic-novelty",
+      "prompt": "Using only these fabricated profiles, improve the weak plan and compare plausible knowledge contributions. Choose a discriminating next action, preserve the original objective and distinguish proposed work from established findings. Do not run a new research project.",
+      "material": "Fixed synthetic Skill-development material. Objective: understand which assumptions make a procedure's claimed stability defensible. P1 reports stable averages in one setting without examining its assumptions. P2 proves stability under sufficient condition C but does not show necessity. P3 constructs one failure when C is removed; it does not establish that every violation fails. P4 reproduces stable behavior under one different setting, with no proof that C holds. The supplied draft proposes renaming the procedure and adding more settings, then claiming general stability. No numerical data, complete proofs, source papers or empirical findings are supplied."
+    }
+  ]
+}

@@ -250,6 +250,33 @@ class WorkgraphAutonomy(Work):
 class EvaluationHarness(Work):
     def tool(self):
         spec=importlib.util.spec_from_file_location('host_eval',ROOT/'evaluations/run_host.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+    def cases(self):
+        (self.root/'material.md').write_text('Fixed synthetic material, not empirical evidence.\n')
+        path=self.root/'cases.json';path.write_text(json.dumps({'cases':[
+            {'id':name,'skill':skill,'prompt':'Complete this synthetic case.','material_files':['material.md'],'private_expected':'Do not expose the scoring answer'}
+            for name,skill in [('judgement','topic-novelty'),('figure','scientific-visualization'),('manuscript','manuscript-writing')]]}))
+        return path
+    def test_custom_cases_keep_raw_material_equal_without_scoring_leak(self):
+        m=self.tool();suite=m.prepare(ROOT/'skills',self.root/'suite',ROOT/'skills',cases_file=self.cases())
+        self.assertEqual(len(suite['jobs']),9);grouped={}
+        for job in suite['jobs']:
+            request=m.load(job['request']);grouped.setdefault(request['case_id'],[]).append(request)
+            self.assertNotIn('private_expected',request);self.assertNotIn('Do not expose',json.dumps(request))
+            self.assertEqual(request['material_files'][0]['sha256'],m.hashfile(self.root/'material.md'))
+        for rows in grouped.values():
+            self.assertEqual(len(rows),3)
+            self.assertEqual({row['material'] for row in rows},{rows[0]['material']})
+    def test_custom_material_path_and_duplicate_case_rejected(self):
+        m=self.tool();path=self.cases();cases=m.load(path)
+        cases['cases'][0]['material_files']=['../outside.md'];m.save(path,cases)
+        with self.assertRaisesRegex(ValueError,'outside'):m.prepare(ROOT/'skills',self.root/'bad-path',cases_file=path)
+        cases['cases'][0]['material_files']=['material.md'];cases['cases'][1]['id']=cases['cases'][0]['id'];m.save(path,cases)
+        with self.assertRaisesRegex(ValueError,'Unique'):m.prepare(ROOT/'skills',self.root/'bad-id',cases_file=path)
+    def test_changed_material_stops_adapter_before_execution(self):
+        m=self.tool();suite=m.prepare(ROOT/'skills',self.root/'suite',cases_file=self.cases())
+        (self.root/'material.md').write_text('Changed after requests were frozen')
+        with self.assertRaisesRegex(ValueError,'Evaluation material changed'):
+            m.run(suite,['unused-adapter','{request}','{output}'],self.root/'runs','fixture','no-model')
     def test_paired_material_identical_and_no_quality_claim(self):
         m=self.tool();suite=m.prepare(ROOT/'skills',self.root/'suite')
         self.assertEqual(len(suite['jobs']),10);self.assertEqual(suite['status'],'prepared_not_run')

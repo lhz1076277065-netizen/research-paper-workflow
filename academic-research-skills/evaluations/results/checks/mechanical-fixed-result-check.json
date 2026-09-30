@@ -1,0 +1,53 @@
+{
+  "reference": {
+    "A": {
+      "n": 100,
+      "weighted_loss": 4.8
+    },
+    "B": {
+      "n": 100,
+      "weighted_loss": 4.36
+    },
+    "difference_B_minus_A": -0.44
+  },
+  "changed": {
+    "A": {
+      "n": 100,
+      "weighted_loss": 6.6
+    },
+    "B": {
+      "n": 100,
+      "weighted_loss": 7.52
+    },
+    "difference_B_minus_A": 0.92
+  },
+  "stratum_differences": [
+    {
+      "condition": "reference",
+      "stratum": "S1",
+      "difference_B_minus_A": -0.8
+    },
+    {
+      "condition": "reference",
+      "stratum": "S2",
+      "difference_B_minus_A": 1.0
+    },
+    {
+      "condition": "changed",
+      "stratum": "S1",
+      "difference_B_minus_A": -0.2
+    },
+    {
+      "condition": "changed",
+      "stratum": "S2",
+      "difference_B_minus_A": 1.2
+    }
+  ],
+  "scope": "Independent arithmetic on fixed synthetic development rows; no aggregate interval, significance or causal inference.",
+  "changed_at_reference_weights": {
+    "A": 5.4,
+    "B": 5.48,
+    "difference_B_minus_A": 0.08,
+    "scope": "A derived point comparison with fixed reference weights; no estimated interval or causal attribution."
+  }
+}

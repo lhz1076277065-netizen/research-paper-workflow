@@ -1,0 +1,13 @@
+row_type,condition,stratum,method,n,loss,lo,hi
+supplied_summary,reference,S1,A,80,4.0,3.7,4.3
+supplied_summary,reference,S1,B,80,3.2,2.9,3.5
+supplied_summary,reference,S2,A,20,8.0,7.5,8.5
+supplied_summary,reference,S2,B,20,9.0,8.4,9.6
+supplied_summary,changed,S1,A,20,5.0,4.5,5.5
+supplied_summary,changed,S1,B,20,4.8,4.3,5.3
+supplied_summary,changed,S2,A,80,7.0,6.6,7.4
+supplied_summary,changed,S2,B,80,8.2,7.7,8.7
+weighted_average,reference,average,A,100,4.8,,
+weighted_average,reference,average,B,100,4.36,,
+weighted_average,changed,average,A,100,6.6,,
+weighted_average,changed,average,B,100,7.52,,

@@ -1,0 +1,116 @@
+{
+  "task": "Choose one primary capability for each user request using only the supplied catalog descriptions; choose null if this library is not applicable. Give a short rationale and requested scope. Do not execute academic work or read Skill bodies.",
+  "catalog": [
+    {
+      "name": "analysis-execution",
+      "description": "实际分析、实验、仿真与推导"
+    },
+    {
+      "name": "citation-audit",
+      "description": "引用真实性与论断支持核验"
+    },
+    {
+      "name": "data-discovery",
+      "description": "支持研究问题的数据与材料获取"
+    },
+    {
+      "name": "data-preparation",
+      "description": "真实材料整理与可复现处理"
+    },
+    {
+      "name": "ethics-protocol",
+      "description": "研究权限与真实披露"
+    },
+    {
+      "name": "journal-intelligence",
+      "description": "标杆学习与投稿期刊匹配"
+    },
+    {
+      "name": "literature-discovery",
+      "description": "检索、筛选与证据地图"
+    },
+    {
+      "name": "manuscript-review",
+      "description": "科学贡献、证据与表达审查"
+    },
+    {
+      "name": "manuscript-writing",
+      "description": "证据与贡献驱动的完整论文写作"
+    },
+    {
+      "name": "paper-deep-reading",
+      "description": "顶刊问题、模型和图表精读"
+    },
+    {
+      "name": "peer-review-response",
+      "description": "审稿意见驱动的修订与回应"
+    },
+    {
+      "name": "publication-stewardship",
+      "description": "校样、版本与发表后维护"
+    },
+    {
+      "name": "research-design",
+      "description": "问题导向的研究设计"
+    },
+    {
+      "name": "research-intake",
+      "description": "研究目标与科学价值定位"
+    },
+    {
+      "name": "research-paper-workflow",
+      "description": "实际学术研究到完整成果的当前Agent总控"
+    },
+    {
+      "name": "robustness-reproducibility",
+      "description": "关键结论的验证与复现"
+    },
+    {
+      "name": "scientific-visualization",
+      "description": "正式论文图表的专业生产"
+    },
+    {
+      "name": "submission-packaging",
+      "description": "真实研究稿的投稿准备"
+    },
+    {
+      "name": "topic-novelty",
+      "description": "重要问题与可验证创新"
+    }
+  ],
+  "requests": [
+    {
+      "id": "title",
+      "request": "只把这个标题改得清楚些，保留研究意思，不帮我找新选题。"
+    },
+    {
+      "id": "gap",
+      "request": "我们只有一个方向和五份近邻工作摘录，想知道仍缺什么知识，以及哪项验证最能区分候选解释。"
+    },
+    {
+      "id": "label",
+      "request": "现成图里的纵轴单位少了一个字母，请改标签并给我更新后的图，数据和分析不用变。"
+    },
+    {
+      "id": "review-response",
+      "request": "审稿人说关键对照缺失，我附上他的意见和已有补充结果，请逐条写回复并修改对应稿段。"
+    },
+    {
+      "id": "skill-development",
+      "request": "这是一个通用学术 Skill 的源码包，请修复脚本和触发描述，交付完整新 Skill 文件夹。"
+    },
+    {
+      "id": "theory",
+      "request": "我提供了一个关于所有有限实数序列的不等式，请给出完整证明、检查等号条件。"
+    },
+    {
+      "id": "journal",
+      "request": "只根据这份摘要找三个合适的期刊并核对当前官方范围，不改稿或做实验。"
+    },
+    {
+      "id": "prospective",
+      "request": "这个方案还没收数据，我需要完整的研究方案稿和能区分解释的设计，不要编未来结果。"
+    }
+  ],
+  "method": "metadata-only semantic routing observation, not platform auto-discovery"
+}

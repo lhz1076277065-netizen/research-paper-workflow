@@ -1,0 +1,7 @@
+# Operation note
+
+Read the single assigned frozen request and its one listed material file. The material's SHA-256 matches `49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c`; the file text also matches the request's embedded study brief. `skill_entry` is null, so no project Skill, protocol, other condition, answer, parent report, or scoring document was loaded. No external sources were required: all profile claims remain explicitly fictional premises.
+
+Produced `judgement.md`: a revised scientific question, bounded gain definition, profile evidence limits, comparison of three research routes, choice of acquisition identifiability as the next discriminating work, and a conditional simulator plan. An exact finite-world counterexample illustrates why a truth-free gain diagnostic needs identifying information; it is not an empirical result or a reproduction of a supplied method.
+
+Ran `verify_outputs.py` with the provided common Python interpreter. It checks input integrity, equality of observable distributions and opposite gain signs in the analytical illustration, plus presence of the requested deliverables. No manufactured measurement simulator, new observations, model fitting, or empirical study was run. No Skill source was modified. Execution provenance and final file hashes are recorded in `execution.json`. Token usage, cost, and exact model identity are unavailable and recorded as `unknown`.

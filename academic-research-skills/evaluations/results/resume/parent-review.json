@@ -1,0 +1,62 @@
+{
+  "scope": "Parent before/after file digest and exact append verification; not complete lifecycle proof",
+  "original_file_count": 21,
+  "changed_original_files": [
+    "caption.md"
+  ],
+  "all_other_original_files_unchanged": true,
+  "caption_original_prefix_bytes": 1238,
+  "caption_exact_appended_sentence": "本图仅用于通用 Skill 开发验收。",
+  "added_files": [
+    "execution-resume.json",
+    "affected-review.md",
+    ".runtime"
+  ],
+  "before": {
+    "numeric-review.json": "901580f020c733ef4d6790201a806a7782447802b52291153d787c47236e4aef",
+    "main-figure.png": "cf40df672cc8a48628671c60a8c368e9b93f5b3cbdb536de9285448a2638f09b",
+    "main-figure-grayscale.png": "56876671204b4b441f0ab98144d234e975bd249924ada711d23ae8446d482b26",
+    "main-figure.pdf": "3eea812bf0bd76c05ea7d54ae5b96aab851e6ab3a1e38a7d63781e5c24f5d3e6",
+    "provider-data-profile.json": "9112fdb3323252bbe74b230e42cde72c303933e85c01abb6579665c23ec6db00",
+    "review-preview-grayscale.png": "d05cf199a39ca8a0ad854dcb5ec4c18e3f98abe702ffdb690799cd9ba8c206dc",
+    "main-figure-pdf-render.png": "cec5b9402daaadbc0320607663adcde9efc34b87348b703b97c9c924af96cbf9",
+    "caption.md": "183060a2223e53b0069e9f19d21da1aaa161e24f1ad598b060adc648eb4bb576",
+    "weighted-summaries.csv": "fcf6712fc89015b1ddbdbc885e30e9477373c2366c5f827c2c4c8aeb033bf551",
+    "layout-review.json": "ab4b052c0452a22decfc6d3f5b47f8d4f5f1981c081fe0872f9ece22e3a42d24",
+    "review-preview.png": "508003b0259c05c42425679e965b54397ccb89c6cb37e795a12597b091f6fc13",
+    "operation-review.md": "fc336cb688e32ea414d4e4b301c608c890a0fbf1552440c79b1b7e503c2d5420",
+    "main-figure.svg": "5bc63caef8e41feac74575bc1fd7f6f82c7c42c35f9d2d742e8966a07aa7c952",
+    "figure-brief.md": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb",
+    "format-review.json": "ec663edb34bb7c5f4517dd94f36d4619a61ce0c81f510e0c8f3e53af287e046e",
+    "plotted-row-review.json": "3fd35ebbb15f03819c6b58280eb11aeaa6cd7a818eebc39cf0a4f11e1c517b21",
+    "independent-format-review.json": "86e84a6b93651bbec2ea26792cd77957572f647b2154e9342f677506c420fa9f",
+    "plot_main_figure.py": "fb9c5516d76dddd96b739e82a174bb69c70d14663ea1be7808641d3f246959a2",
+    "execution.json": "ff2647adb27b9734f30a1fd89394c296796d2aa324def079e68db09ccc64774b",
+    "fixed-results.csv": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+    ".runtime/matplotlib/fontlist-v3.11.0.json": "ce5dc47f9b1af82d3a8791da38d201b90ab54d1c60931b1b349f3cdf50f70dfc"
+  },
+  "after": {
+    "numeric-review.json": "901580f020c733ef4d6790201a806a7782447802b52291153d787c47236e4aef",
+    "main-figure.png": "cf40df672cc8a48628671c60a8c368e9b93f5b3cbdb536de9285448a2638f09b",
+    "main-figure-grayscale.png": "56876671204b4b441f0ab98144d234e975bd249924ada711d23ae8446d482b26",
+    "main-figure.pdf": "3eea812bf0bd76c05ea7d54ae5b96aab851e6ab3a1e38a7d63781e5c24f5d3e6",
+    "provider-data-profile.json": "9112fdb3323252bbe74b230e42cde72c303933e85c01abb6579665c23ec6db00",
+    "review-preview-grayscale.png": "d05cf199a39ca8a0ad854dcb5ec4c18e3f98abe702ffdb690799cd9ba8c206dc",
+    "main-figure-pdf-render.png": "cec5b9402daaadbc0320607663adcde9efc34b87348b703b97c9c924af96cbf9",
+    "caption.md": "557223445dbd889b4dce3a8a9857c508c4f4f56940bf22b27a92e7bc4b7a575e",
+    "weighted-summaries.csv": "fcf6712fc89015b1ddbdbc885e30e9477373c2366c5f827c2c4c8aeb033bf551",
+    "layout-review.json": "ab4b052c0452a22decfc6d3f5b47f8d4f5f1981c081fe0872f9ece22e3a42d24",
+    "review-preview.png": "508003b0259c05c42425679e965b54397ccb89c6cb37e795a12597b091f6fc13",
+    "operation-review.md": "fc336cb688e32ea414d4e4b301c608c890a0fbf1552440c79b1b7e503c2d5420",
+    "main-figure.svg": "5bc63caef8e41feac74575bc1fd7f6f82c7c42c35f9d2d742e8966a07aa7c952",
+    "figure-brief.md": "71730afc423d36cd9675eb137170a790ad021193db02a0f89cf10dc8ac6adadb",
+    "format-review.json": "ec663edb34bb7c5f4517dd94f36d4619a61ce0c81f510e0c8f3e53af287e046e",
+    "plotted-row-review.json": "3fd35ebbb15f03819c6b58280eb11aeaa6cd7a818eebc39cf0a4f11e1c517b21",
+    "independent-format-review.json": "86e84a6b93651bbec2ea26792cd77957572f647b2154e9342f677506c420fa9f",
+    "plot_main_figure.py": "fb9c5516d76dddd96b739e82a174bb69c70d14663ea1be7808641d3f246959a2",
+    "execution.json": "ff2647adb27b9734f30a1fd89394c296796d2aa324def079e68db09ccc64774b",
+    "fixed-results.csv": "a3b1fcc3f32705955e861c529c915845b5ceac0b84f50037fd9f5dcaf1764884",
+    ".runtime/matplotlib/fontlist-v3.11.0.json": "ce5dc47f9b1af82d3a8791da38d201b90ab54d1c60931b1b349f3cdf50f70dfc"
+  },
+  "passed": true
+}

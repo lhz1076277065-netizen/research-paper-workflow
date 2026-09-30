@@ -1,0 +1,116 @@
+{
+  "task": "Choose one primary capability for each user request using only the supplied catalog descriptions; choose null if this library is not applicable. Give a short rationale and requested scope. Do not execute academic work or read Skill bodies.",
+  "catalog": [
+    {
+      "name": "analysis-execution",
+      "description": "当需要实际统计分析、数值计算、模型评价、理论推导或证明时使用；按研究类型执行并核查结果，基础证明无需安装统计环境。"
+    },
+    {
+      "name": "citation-audit",
+      "description": "当需要核查引文、参考文献、来源身份或论断与出处的对应关系时使用；区分实际取得的正文证据与尚未核实的信息。"
+    },
+    {
+      "name": "data-discovery",
+      "description": "当研究需要定位数据、材料、语料或资源并核查覆盖和许可时使用；根据科学问题选择来源，不将易下载当作研究价值。"
+    },
+    {
+      "name": "data-preparation",
+      "description": "当已有研究数据或材料需要清理、整合、转换和质量检查时使用；保留来源与处理记录，避免改变目标量或泄漏验证信息。"
+    },
+    {
+      "name": "ethics-protocol",
+      "description": "当研究涉及伦理、许可、参与者、敏感材料或方案准备时使用；依据实际研究和现行要求准备材料，不声称已获批准。"
+    },
+    {
+      "name": "journal-intelligence",
+      "description": "当用户只要求选刊、比较目标期刊或核对投稿适配时使用；按主题、方法、贡献、读者和当前官方要求给候选，不启动实验或整稿重写。"
+    },
+    {
+      "name": "literature-discovery",
+      "description": "当需要定向或系统检索学术文献、核对来源和综合相关证据时使用；建立可追溯覆盖，不将一次搜索命中当作完成综述。"
+    },
+    {
+      "name": "manuscript-review",
+      "description": "当需要科学内容审查、论证诊断或稿件一致性检查时使用；指出影响结论的缺口和可执行修订，不自动重建研究。"
+    },
+    {
+      "name": "manuscript-writing",
+      "description": "当需要起草、整合或改写学术稿件时使用；完整稿按证据组织全文并终审，单段或摘要请求只处理指定范围。"
+    },
+    {
+      "name": "paper-deep-reading",
+      "description": "当给定论文、摘要或图表需要精读、解释方法和证据时使用；按已取得原文定位，摘要任务不补造全文细节。"
+    },
+    {
+      "name": "peer-review-response",
+      "description": "当给定真实审稿或编辑意见需要逐点回应和修订稿件时使用；定位改动与证据，保留不接受意见的有据说明。"
+    },
+    {
+      "name": "publication-stewardship",
+      "description": "当论文进入校样、发表、归档、更正或版本维护时使用；处理实际状态和文件，不伪造尚未发生的发表流程。"
+    },
+    {
+      "name": "research-design",
+      "description": "当需要选择方法、比较方案、规划能区分解释的验证或制作方案稿时使用；由问题和材料决定设计，不编造未来结果。"
+    },
+    {
+      "name": "research-intake",
+      "description": "当研究材料零散、目标或已有进展需要整理时使用；识别当前请求、可复用成果与真正缺口，形成可续接的任务边界。"
+    },
+    {
+      "name": "research-paper-workflow",
+      "description": "当用户要求跨阶段开展学术研究或完成整篇研究成果时协调问题、设计、证据、图稿与交付；单项请求直接用对应能力，更新Skill本身不启动论文研究。"
+    },
+    {
+      "name": "robustness-reproducibility",
+      "description": "当需要复算、独立验证、敏感性、失败诊断或整理可复现材料时使用；检查与主张有关的脆弱处，保存关键反例。"
+    },
+    {
+      "name": "scientific-visualization",
+      "description": "当需要规划、制作、审查或实质修改论文图表时使用；让关键比较与反例可读，交付正式图和核查，局部标签请求只改当前范围。"
+    },
+    {
+      "name": "submission-packaging",
+      "description": "当已有稿件需要整理投稿文件、格式、声明与期刊清单时使用；核对实际产物和官方要求，正式提交按用户授权执行。"
+    },
+    {
+      "name": "topic-novelty",
+      "description": "当需要从方向、文献或已有结果提出有知识增量的选题，或判断方案是否已被完成时使用；比较最近邻、竞争路线与决定性验证。"
+    }
+  ],
+  "requests": [
+    {
+      "id": "title",
+      "request": "只把这个标题改得清楚些，保留研究意思，不帮我找新选题。"
+    },
+    {
+      "id": "gap",
+      "request": "我们只有一个方向和五份近邻工作摘录，想知道仍缺什么知识，以及哪项验证最能区分候选解释。"
+    },
+    {
+      "id": "label",
+      "request": "现成图里的纵轴单位少了一个字母，请改标签并给我更新后的图，数据和分析不用变。"
+    },
+    {
+      "id": "review-response",
+      "request": "审稿人说关键对照缺失，我附上他的意见和已有补充结果，请逐条写回复并修改对应稿段。"
+    },
+    {
+      "id": "skill-development",
+      "request": "这是一个通用学术 Skill 的源码包，请修复脚本和触发描述，交付完整新 Skill 文件夹。"
+    },
+    {
+      "id": "theory",
+      "request": "我提供了一个关于所有有限实数序列的不等式，请给出完整证明、检查等号条件。"
+    },
+    {
+      "id": "journal",
+      "request": "只根据这份摘要找三个合适的期刊并核对当前官方范围，不改稿或做实验。"
+    },
+    {
+      "id": "prospective",
+      "request": "这个方案还没收数据，我需要完整的研究方案稿和能区分解释的设计，不要编未来结果。"
+    }
+  ],
+  "method": "metadata-only semantic routing observation, not platform auto-discovery"
+}

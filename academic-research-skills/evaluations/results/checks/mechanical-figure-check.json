@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "scope": "Independent fixed-row arithmetic plus final image inspection; no empirical or statistical significance claim.",
+  "trials": [
+    {
+      "trial": "main-figure.release.0",
+      "numerical_review_matches_independent_arithmetic": true,
+      "editable_and_vector_raster_outputs_present": true,
+      "final_png_actually_viewed_by_root": true,
+      "figure_sha256": "cf40df672cc8a48628671c60a8c368e9b93f5b3cbdb536de9285448a2638f09b"
+    },
+    {
+      "trial": "main-figure.comparison.0",
+      "numerical_review_matches_independent_arithmetic": true,
+      "editable_and_vector_raster_outputs_present": true,
+      "final_png_actually_viewed_by_root": true,
+      "figure_sha256": "4ab768110d1db4d0d2444148e010a1bbb8738c18f58adf6ae13ea0ba853c0a42"
+    },
+    {
+      "trial": "main-figure.without-skill.0",
+      "numerical_review_matches_independent_arithmetic": true,
+      "editable_and_vector_raster_outputs_present": true,
+      "final_png_actually_viewed_by_root": true,
+      "figure_sha256": "75f62d7416cb3595380063c73653891bfbe47912fc852f5537ee8afde669220e"
+    }
+  ],
+  "root_visual_observations": "All three figures show the S2 counterexample, the changed aggregation context and reversed weighted ranking. The candidate adds a correctly computed fixed-reference-weight point comparison, without an invented interval. Layout/detail tradeoffs are reserved for blinded review."
+}

@@ -1,0 +1,1191 @@
+--- before/CHANGELOG.md
++++ after/CHANGELOG.md
+@@ -1,3 +1,9 @@
++# Changelog
++
++## 3.1.1
++
++Fix five reproduced record semantics: strict factual-review booleans; manuscript-bound review subjects; assistant scope separate from research action names; task/prior-art bindings for literature, reading and novelty; prospective protocol delivery applicability. Preserve 19 capabilities and focused-task autonomy.
++
+ # 3.1.0
+ 
+ 完整通用学术Skill迭代：保留19个独立能力与详细专业协议，补充重要问题/知识增量/决定性证据的研究路线，明确局部任务与Skill开发更新的边界；不绑定任何具体学科。
+--- before/GENERATED-FILES.json
++++ after/GENERATED-FILES.json
+@@ -1,7 +1,7 @@
+ {
+-  "version": "3.1.0",
++  "version": "3.1.1",
+   "generated_files": {
+-    "docs/provider-catalog.json": "9b23ee01b422a06f764c3db333cbd03cce857a953a9ef80a1fe5afcc1392d218",
++    "docs/provider-catalog.json": "679b75d87f3fb7fe442da659e21d2776d6af7623e034d6ea03d49d326b471fca",
+     "skills/analysis-execution/scripts/init_run.py": "88d122bb337ec11685059057a24f69d3faa721ddaff6bcc2c0784324ded02bf7",
+     "skills/citation-audit/scripts/init_run.py": "88d122bb337ec11685059057a24f69d3faa721ddaff6bcc2c0784324ded02bf7",
+     "skills/data-discovery/scripts/init_run.py": "88d122bb337ec11685059057a24f69d3faa721ddaff6bcc2c0784324ded02bf7",
+@@ -21,66 +21,66 @@
+     "skills/scientific-visualization/scripts/init_run.py": "88d122bb337ec11685059057a24f69d3faa721ddaff6bcc2c0784324ded02bf7",
+     "skills/submission-packaging/scripts/init_run.py": "88d122bb337ec11685059057a24f69d3faa721ddaff6bcc2c0784324ded02bf7",
+     "skills/topic-novelty/scripts/init_run.py": "88d122bb337ec11685059057a24f69d3faa721ddaff6bcc2c0784324ded02bf7",
+-    "scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/analysis-execution/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/citation-audit/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/data-discovery/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/data-preparation/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/ethics-protocol/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/journal-intelligence/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/literature-discovery/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/manuscript-review/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/manuscript-writing/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/paper-deep-reading/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/peer-review-response/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/publication-stewardship/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/research-design/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/research-intake/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/research-paper-workflow/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/robustness-reproducibility/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/scientific-visualization/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/submission-packaging/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "skills/topic-novelty/scripts/research31.py": "cd941f034ca6c913e5dc6d7f6f4f917e8c54d40a17d7c976901abbd2a46b4d66",
+-    "scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/analysis-execution/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/citation-audit/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/data-discovery/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/data-preparation/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/ethics-protocol/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/journal-intelligence/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/literature-discovery/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/manuscript-review/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/manuscript-writing/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/paper-deep-reading/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/peer-review-response/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/publication-stewardship/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/research-design/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/research-intake/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/research-paper-workflow/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/robustness-reproducibility/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/scientific-visualization/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/submission-packaging/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "skills/topic-novelty/scripts/provider_runtime.py": "ae37c64d224ee01ffa1831a7db458f0c5933bc15acdd0f01f462d49dec08938d",
+-    "scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/analysis-execution/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/citation-audit/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/data-discovery/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/data-preparation/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/ethics-protocol/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/journal-intelligence/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/literature-discovery/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/manuscript-review/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/manuscript-writing/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/paper-deep-reading/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/peer-review-response/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/publication-stewardship/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/research-design/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/research-intake/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/research-paper-workflow/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/robustness-reproducibility/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/scientific-visualization/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/submission-packaging/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
+-    "skills/topic-novelty/scripts/selftest.py": "74d068036232d2e7110fb58af764e9bca1855272adbedf92a326a7311941330a",
++    "scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/analysis-execution/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/citation-audit/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/data-discovery/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/data-preparation/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/ethics-protocol/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/journal-intelligence/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/literature-discovery/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/manuscript-review/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/manuscript-writing/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/paper-deep-reading/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/peer-review-response/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/publication-stewardship/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/research-design/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/research-intake/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/research-paper-workflow/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/robustness-reproducibility/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/scientific-visualization/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/submission-packaging/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "skills/topic-novelty/scripts/research31.py": "6373bcceee77c10863ba4b5d713f28df586d40b095b678c001906d34fe6522f7",
++    "scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/analysis-execution/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/citation-audit/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/data-discovery/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/data-preparation/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/ethics-protocol/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/journal-intelligence/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/literature-discovery/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/manuscript-review/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/manuscript-writing/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/paper-deep-reading/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/peer-review-response/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/publication-stewardship/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/research-design/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/research-intake/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/research-paper-workflow/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/robustness-reproducibility/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/scientific-visualization/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/submission-packaging/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "skills/topic-novelty/scripts/provider_runtime.py": "0e8fd8317ec2734cb4f3971b63c575ac5e701f01e522cb5ec6c84c5bb4214698",
++    "scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/analysis-execution/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/citation-audit/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/data-discovery/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/data-preparation/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/ethics-protocol/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/journal-intelligence/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/literature-discovery/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/manuscript-review/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/manuscript-writing/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/paper-deep-reading/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/peer-review-response/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/publication-stewardship/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/research-design/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/research-intake/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/research-paper-workflow/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/robustness-reproducibility/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/scientific-visualization/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/submission-packaging/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
++    "skills/topic-novelty/scripts/selftest.py": "a519692f7db5e8873670855b40dfa9fd6fb2b6b7e55b747210751dc84e031e46",
+     "scripts/provider_worker.py": "1e6e45852067eb4953dbf2c9443fc95c88230af18d8cae0af064b44c4b194500",
+     "skills/analysis-execution/scripts/provider_worker.py": "1e6e45852067eb4953dbf2c9443fc95c88230af18d8cae0af064b44c4b194500",
+     "skills/citation-audit/scripts/provider_worker.py": "1e6e45852067eb4953dbf2c9443fc95c88230af18d8cae0af064b44c4b194500",
+@@ -101,26 +101,26 @@
+     "skills/scientific-visualization/scripts/provider_worker.py": "1e6e45852067eb4953dbf2c9443fc95c88230af18d8cae0af064b44c4b194500",
+     "skills/submission-packaging/scripts/provider_worker.py": "1e6e45852067eb4953dbf2c9443fc95c88230af18d8cae0af064b44c4b194500",
+     "skills/topic-novelty/scripts/provider_worker.py": "1e6e45852067eb4953dbf2c9443fc95c88230af18d8cae0af064b44c4b194500",
+-    "scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/analysis-execution/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/citation-audit/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/data-discovery/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/data-preparation/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/ethics-protocol/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/journal-intelligence/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/literature-discovery/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/manuscript-review/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/manuscript-writing/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/paper-deep-reading/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/peer-review-response/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/publication-stewardship/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/research-design/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/research-intake/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/research-paper-workflow/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/robustness-reproducibility/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/scientific-visualization/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/submission-packaging/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
+-    "skills/topic-novelty/scripts/environment.py": "0ffe35d178b401406a9f1f865d1504ac6fabac32977449c6d296a5d552bbbfe1",
++    "scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/analysis-execution/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/citation-audit/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/data-discovery/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/data-preparation/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/ethics-protocol/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/journal-intelligence/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/literature-discovery/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/manuscript-review/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/manuscript-writing/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/paper-deep-reading/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/peer-review-response/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/publication-stewardship/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/research-design/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/research-intake/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/research-paper-workflow/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/robustness-reproducibility/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/scientific-visualization/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/submission-packaging/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
++    "skills/topic-novelty/scripts/environment.py": "5b150d509193ab55112cf770c602b2e09176a0bc3ee9601c3133e6de046950e9",
+     "skills/analysis-execution/scripts/register_artifact.py": "f3f67ca521a55dfce2a1a6bff58b14dc1fa7f13441a00373cd463ebba18d745c",
+     "skills/citation-audit/scripts/register_artifact.py": "f3f67ca521a55dfce2a1a6bff58b14dc1fa7f13441a00373cd463ebba18d745c",
+     "skills/data-discovery/scripts/register_artifact.py": "f3f67ca521a55dfce2a1a6bff58b14dc1fa7f13441a00373cd463ebba18d745c",
+@@ -160,25 +160,25 @@
+     "skills/scientific-visualization/scripts/upstream.py": "b8e41e15cd998e56a84484d762f4acb4c26a61bda39d1dbcb496492b1e3e17b6",
+     "skills/submission-packaging/scripts/upstream.py": "b8e41e15cd998e56a84484d762f4acb4c26a61bda39d1dbcb496492b1e3e17b6",
+     "skills/topic-novelty/scripts/upstream.py": "b8e41e15cd998e56a84484d762f4acb4c26a61bda39d1dbcb496492b1e3e17b6",
+-    "skills/analysis-execution/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/citation-audit/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/data-discovery/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/data-preparation/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/ethics-protocol/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/journal-intelligence/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/literature-discovery/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/manuscript-review/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/manuscript-writing/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/paper-deep-reading/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/peer-review-response/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/publication-stewardship/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/research-design/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/research-intake/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/research-paper-workflow/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/robustness-reproducibility/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/scientific-visualization/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/submission-packaging/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
+-    "skills/topic-novelty/scripts/validate_run.py": "08514eb508d63f7e288a695fd6d6c09a8512c4dab2c7f79d44c0a5b0e6bb8168",
++    "skills/analysis-execution/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/citation-audit/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/data-discovery/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/data-preparation/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/ethics-protocol/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/journal-intelligence/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/literature-discovery/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/manuscript-review/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/manuscript-writing/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/paper-deep-reading/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/peer-review-response/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/publication-stewardship/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/research-design/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/research-intake/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/research-paper-workflow/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/robustness-reproducibility/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/scientific-visualization/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/submission-packaging/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
++    "skills/topic-novelty/scripts/validate_run.py": "1875a32f23951b1f1bc305b65f6eef8a895ebba80edaf87e84a390fd04965934",
+     "scripts/research_router.py": "87da1a3cdc6324a1617fcac44cc70625c2ea32e5a0bdafc64c99db8f98f9969f",
+     "skills/analysis-execution/scripts/research_router.py": "87da1a3cdc6324a1617fcac44cc70625c2ea32e5a0bdafc64c99db8f98f9969f",
+     "skills/citation-audit/scripts/research_router.py": "87da1a3cdc6324a1617fcac44cc70625c2ea32e5a0bdafc64c99db8f98f9969f",
+@@ -559,26 +559,26 @@
+     "skills/scientific-visualization/references/environment-setup.md": "3a5924b9bda266d1bc3ce92d4781cc5e5acea66260edafb32fc4699a75ddeeb4",
+     "skills/submission-packaging/references/environment-setup.md": "3a5924b9bda266d1bc3ce92d4781cc5e5acea66260edafb32fc4699a75ddeeb4",
+     "skills/topic-novelty/references/environment-setup.md": "3a5924b9bda266d1bc3ce92d4781cc5e5acea66260edafb32fc4699a75ddeeb4",
+-    "docs/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/analysis-execution/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/citation-audit/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/data-discovery/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/data-preparation/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/ethics-protocol/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/journal-intelligence/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/literature-discovery/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/manuscript-review/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/manuscript-writing/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/paper-deep-reading/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/peer-review-response/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/publication-stewardship/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/research-design/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/research-intake/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/research-paper-workflow/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/robustness-reproducibility/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/scientific-visualization/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/submission-packaging/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
+-    "skills/topic-novelty/references/research31-usage.md": "f9b0a77785722d61556202b40e3c3db0d086be1d9778d3f47b35a72045447685",
++    "docs/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/analysis-execution/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/citation-audit/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/data-discovery/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/data-preparation/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/ethics-protocol/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/journal-intelligence/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/literature-discovery/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/manuscript-review/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/manuscript-writing/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/paper-deep-reading/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/peer-review-response/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/publication-stewardship/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/research-design/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/research-intake/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/research-paper-workflow/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/robustness-reproducibility/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/scientific-visualization/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/submission-packaging/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
++    "skills/topic-novelty/references/research31-usage.md": "2db52867c815c45ad602dea2d179959521da41ae4d91bc6e9b551227f35d0565",
+     "docs/runtime.md": "01304226707938b361e1a21f5947c465820ed69dfa925cc9b3ae98d9b737d537",
+     "skills/analysis-execution/references/runtime.md": "01304226707938b361e1a21f5947c465820ed69dfa925cc9b3ae98d9b737d537",
+     "skills/citation-audit/references/runtime.md": "01304226707938b361e1a21f5947c465820ed69dfa925cc9b3ae98d9b737d537",
+@@ -619,46 +619,46 @@
+     "skills/scientific-visualization/references/provider-usage.md": "dc9fdf312a4f989da223e3c84e94dbd52b0c652909af6c0a08a5c0c0f540ae2f",
+     "skills/submission-packaging/references/provider-usage.md": "dc9fdf312a4f989da223e3c84e94dbd52b0c652909af6c0a08a5c0c0f540ae2f",
+     "skills/topic-novelty/references/provider-usage.md": "dc9fdf312a4f989da223e3c84e94dbd52b0c652909af6c0a08a5c0c0f540ae2f",
+-    "assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/analysis-execution/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/citation-audit/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/data-discovery/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/data-preparation/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/ethics-protocol/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/journal-intelligence/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/literature-discovery/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/manuscript-review/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/manuscript-writing/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/paper-deep-reading/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/peer-review-response/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/publication-stewardship/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/research-design/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/research-intake/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/research-paper-workflow/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/robustness-reproducibility/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/scientific-visualization/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/submission-packaging/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "skills/topic-novelty/assets/research31-policy.json": "70683a3f155390b1d55282854a447ad33c6430b9a3c478e7e5b826d813fa9f6c",
+-    "assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/analysis-execution/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/citation-audit/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/data-discovery/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/data-preparation/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/ethics-protocol/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/journal-intelligence/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/literature-discovery/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/manuscript-review/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/manuscript-writing/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/paper-deep-reading/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/peer-review-response/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/publication-stewardship/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/research-design/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/research-intake/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/research-paper-workflow/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/robustness-reproducibility/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/scientific-visualization/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/submission-packaging/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
+-    "skills/topic-novelty/assets/research-profiles.json": "c61ad2926577029c28e29e426b2b48f5dcc5f84f98554577f9c38422b5918ba3",
++    "assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/analysis-execution/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/citation-audit/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/data-discovery/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/data-preparation/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/ethics-protocol/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/journal-intelligence/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/literature-discovery/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/manuscript-review/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/manuscript-writing/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/paper-deep-reading/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/peer-review-response/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/publication-stewardship/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/research-design/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/research-intake/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/research-paper-workflow/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/robustness-reproducibility/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/scientific-visualization/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/submission-packaging/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "skills/topic-novelty/assets/research31-policy.json": "a61074499057351fdb0eb173a3fd3b4516a3885d556cc0fcc6fa981352cfc6d4",
++    "assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/analysis-execution/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/citation-audit/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/data-discovery/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/data-preparation/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/ethics-protocol/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/journal-intelligence/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/literature-discovery/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/manuscript-review/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/manuscript-writing/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/paper-deep-reading/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/peer-review-response/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/publication-stewardship/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/research-design/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/research-intake/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/research-paper-workflow/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/robustness-reproducibility/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/scientific-visualization/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/submission-packaging/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
++    "skills/topic-novelty/assets/research-profiles.json": "01ae60473db47028867da7ae47a84d3db03c8dd733299a85e21b1b29e045f1f2",
+     "assets/result.schema.json": "1868a86c47adf113851c13d78e58a6e2d3a3b171efd1a9e78913d06cdcff1deb",
+     "skills/analysis-execution/assets/result.schema.json": "1868a86c47adf113851c13d78e58a6e2d3a3b171efd1a9e78913d06cdcff1deb",
+     "skills/citation-audit/assets/result.schema.json": "1868a86c47adf113851c13d78e58a6e2d3a3b171efd1a9e78913d06cdcff1deb",
+@@ -699,26 +699,26 @@
+     "skills/scientific-visualization/assets/repository-sources.json": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0",
+     "skills/submission-packaging/assets/repository-sources.json": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0",
+     "skills/topic-novelty/assets/repository-sources.json": "424742dced1ea401b37a04edacf13f90a2d99cfd20ca910ad81a771d97e5b7f0",
+-    "assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/analysis-execution/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/citation-audit/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/data-discovery/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/data-preparation/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/ethics-protocol/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/journal-intelligence/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/literature-discovery/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/manuscript-review/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/manuscript-writing/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/paper-deep-reading/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/peer-review-response/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/publication-stewardship/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/research-design/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/research-intake/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/research-paper-workflow/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/robustness-reproducibility/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/scientific-visualization/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/submission-packaging/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
+-    "skills/topic-novelty/assets/environment-profiles.json": "0d91c3e99154c7e881f98782a2a930fa2356dcc871e2fdd829a4dc4049414ecd",
++    "assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/analysis-execution/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/citation-audit/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/data-discovery/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/data-preparation/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/ethics-protocol/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/journal-intelligence/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/literature-discovery/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/manuscript-review/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/manuscript-writing/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/paper-deep-reading/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/peer-review-response/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/publication-stewardship/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/research-design/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/research-intake/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/research-paper-workflow/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/robustness-reproducibility/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/scientific-visualization/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/submission-packaging/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
++    "skills/topic-novelty/assets/environment-profiles.json": "2ae24d8022912cc6b088a7a742e1a520d18793058aef71ff620cd5dc00f01206",
+     "assets/task.schema.json": "7b82cb8340bdf723166146060d25ed4074717c3b0a4a0940ffb14084b14144dc",
+     "skills/analysis-execution/assets/task.schema.json": "7b82cb8340bdf723166146060d25ed4074717c3b0a4a0940ffb14084b14144dc",
+     "skills/citation-audit/assets/task.schema.json": "7b82cb8340bdf723166146060d25ed4074717c3b0a4a0940ffb14084b14144dc",
+@@ -739,46 +739,46 @@
+     "skills/scientific-visualization/assets/task.schema.json": "7b82cb8340bdf723166146060d25ed4074717c3b0a4a0940ffb14084b14144dc",
+     "skills/submission-packaging/assets/task.schema.json": "7b82cb8340bdf723166146060d25ed4074717c3b0a4a0940ffb14084b14144dc",
+     "skills/topic-novelty/assets/task.schema.json": "7b82cb8340bdf723166146060d25ed4074717c3b0a4a0940ffb14084b14144dc",
+-    "skills/analysis-execution/assets/providers.json": "9322063af02ce6cae3d51ce0be784a45969af1b63172e1dfc2d2ffbc72dd8b5f",
+-    "skills/citation-audit/assets/providers.json": "e06191b4ca93b74f16bc4c9c34c86aa5a1fc0de81a1d9391b7e270233ce81794",
+-    "skills/data-discovery/assets/providers.json": "5fc62fb81120f1f70ee56799802ab064a5c812aac956c748ba0fe7e588d19175",
+-    "skills/data-preparation/assets/providers.json": "e6b76463475cf2ecaaff1352306974b8a2275440762fa05af446ea2ecf60b812",
+-    "skills/ethics-protocol/assets/providers.json": "b35c1509f61c76df741501d85ddc447b2329eabf063c28e7a35f1989263fd5a0",
+-    "skills/journal-intelligence/assets/providers.json": "1950e79d7b61ecb363821250fd38d2a9f432b8544bcd23f4208825482f60dbf3",
+-    "skills/literature-discovery/assets/providers.json": "bd9ec747a8bfcf4b8209283200e01dbab1dc109f9972df4619f3a7e72a70d1b7",
+-    "skills/manuscript-review/assets/providers.json": "c0963fec461304f3ed5e05ccabb9612ac6173455f3a1db30b9f8c1958f89e025",
+-    "skills/manuscript-writing/assets/providers.json": "b92399510ceeb35df602ccdbef707df5fa6fcac094cc90ad3708655da0a1e964",
+-    "skills/paper-deep-reading/assets/providers.json": "f1162d94a996fbbdd14d91e66349bceb52c15d70fbf66f529e5c394ec30e73c8",
+-    "skills/peer-review-response/assets/providers.json": "8eea0e255fbe7686fa0a346ddbfb70ef4876a433884851f5a7762a31170211d9",
+-    "skills/publication-stewardship/assets/providers.json": "fda5f2a2eedde8b2cb26a8b00d9a7e24f1372b50d75ecad71912876029ab3c70",
+-    "skills/research-design/assets/providers.json": "8dc545649a21ca791f55a6287825ee1640f25ceee3f07f1441766a96166483cc",
+-    "skills/research-intake/assets/providers.json": "c4942f101d545af88b5b100b4dcbb36cfb707e81b28fd89e72de187f28ce4f75",
+-    "skills/research-paper-workflow/assets/providers.json": "56b60f1fa950afcd0180d3545738ade83c313490c2fdd167cc46c6e775726a7e",
+-    "skills/robustness-reproducibility/assets/providers.json": "4991ed5af6d8a982edc550ee38c8baa6a7f753ede0e14aafbf4b2d5ad6126e0e",
+-    "skills/scientific-visualization/assets/providers.json": "cb93eba04fbec54a55fd43083b9448eccb6627fe9fb4b5ae38961ae401502968",
+-    "skills/submission-packaging/assets/providers.json": "1b2a2ea527673858a1354f2449a4b47cfd18eec343370a23f84766bf009646ba",
+-    "skills/topic-novelty/assets/providers.json": "ad32b7d799913d15f4f80e0f76bb96a9d3a4342c33d0fe44be4d4caf8a2b1b19",
++    "skills/analysis-execution/assets/providers.json": "d4ca61a4de4a59033e53d6e5f560a78e84a3c4c1d9cd3689be48c5ef0e0bcde0",
++    "skills/citation-audit/assets/providers.json": "0c0d47bad103e709115b21109fdc15691053ef8beb2b269e4e0f38811ed018e9",
++    "skills/data-discovery/assets/providers.json": "e0137f3d3fae89fc8527dd6bb1d0cfb200d61aa31eec980c0d2dd2f3a6a2c334",
++    "skills/data-preparation/assets/providers.json": "eaf141e1b006d0c19a1d816e2111342de614f442f1ae09fe881ad232ff2b5ff6",
++    "skills/ethics-protocol/assets/providers.json": "976d907ecf7fde0500d0d40c9da3ab29039b3d785c3d4bd1cef71b6150a3dde8",
++    "skills/journal-intelligence/assets/providers.json": "149e2119405b11093645ab844fdbea61de9f87df14c63f42c67aded926791420",
++    "skills/literature-discovery/assets/providers.json": "c75eb1153af0cd62003954129720ea191d777b979f3400308c9c26947b4031cf",
++    "skills/manuscript-review/assets/providers.json": "64cb9e6a48fd317e269e20494c9f59aaa437ee9ff9f3deec1f3a4c13283461e6",
++    "skills/manuscript-writing/assets/providers.json": "c373361cfef6b88a8ea4250b84bf98965ff142d1aa574ce9fece759446cda43e",
++    "skills/paper-deep-reading/assets/providers.json": "13728ee1ecb5a85a64c04b056f652f2f92a743ed777a027c0d3f89a275f00aac",
++    "skills/peer-review-response/assets/providers.json": "aeffa2b9100e741be54810c7ce830fde4e1487496d353c8f6622aa27f5e0e1f2",
++    "skills/publication-stewardship/assets/providers.json": "7ab2ba4adb6b4dda5c24339e510ba2365595b335838fb82e6bf914b7cdd3e1b9",
++    "skills/research-design/assets/providers.json": "76c0f3f4e4a883394f89c7c0ce130801678ae703fb539d9a724fc439a9844b6e",
++    "skills/research-intake/assets/providers.json": "5aeeb1eda4f6b16be3ef8361c08b3e2bf4f6f4c908a113339dc461d74a3afa92",
++    "skills/research-paper-workflow/assets/providers.json": "2446bdfeac9fb8f3ac236474169f71cc64b4595f4a7fd44f6ddeb8b12438fbad",
++    "skills/robustness-reproducibility/assets/providers.json": "5d48ee67ba03ee79fed82add730261c011fd747c2d62e5b071ff1e52016470be",
++    "skills/scientific-visualization/assets/providers.json": "d45a26db83f8d5c17970397f866fc00a3a85c3d7a283c48db8a8ff0551c0bc69",
++    "skills/submission-packaging/assets/providers.json": "baf0331df51bfda9cc6f4af7c1c98c9dac218bc8be9cbf6345c351f8977a945c",
++    "skills/topic-novelty/assets/providers.json": "85544ae8b6fa09ae019a882604bc0383bcde3d32c630ee9bed7c1ea2640e39c6",
+     "skills/research-paper-workflow/scripts/workgraph.py": "c64f66c43d7e4d6fdf89571db1234eb84e8b4a007b062d0799b106f65a9c448f",
+     "START_HERE.md": "af1fb1d237d2fd9ad973af8e3d59e05713dc4a17913df90a2c8d41c74487b95b",
+-    "skills/manuscript-writing/SKILL.md": "96e0fbda552a534362fc9101b645298f6156a5dc104bd46985bd74db7f08b88f",
+-    "skills/publication-stewardship/SKILL.md": "dae97cffb3053b13547da6bf7aa05b908c0e6d29afb5491746636d226684b3b9",
+-    "skills/manuscript-review/SKILL.md": "2e6d98d70ebdcdf66e13b0d6b93f2437186ead56f2b66edc885c51579e463be6",
+-    "skills/robustness-reproducibility/SKILL.md": "b2a6f686770b8dda3d90892d7bfa76b20ec867d664046ed363da36f4fd86b99d",
+-    "skills/research-design/SKILL.md": "e842f9b68aecc4260e1d96914469f16849cb839796988aabda983c2ec9bb3e31",
+-    "skills/topic-novelty/SKILL.md": "a50bd6aa7884fd3351abf4c1317cdf9aae27b4f44877c890e250d99244e088ae",
+-    "skills/analysis-execution/SKILL.md": "ec99afb639e4c8a838d63cde3dab5e1e11d83b21cd6aa6d6baf993fde560ee03",
+-    "skills/literature-discovery/SKILL.md": "066b45ceaf6f66125784c7c85c09680af35d221b436ad34f2277074d884e98c3",
+-    "skills/data-preparation/SKILL.md": "ce34980b6840bfa205a5f7071e55e5ca9657e9ee0df10d777f76324199339a69",
+-    "skills/data-discovery/SKILL.md": "a0df9ddcc5e838f0a5942ff51fba0ab3c3e3cbf46c22fe72f038383116e30113",
+-    "skills/citation-audit/SKILL.md": "e1782fff617ebc57f12ff1fb6bb9ffa5009afb44f44ed1c5e16d86c10e3f2815",
+-    "skills/paper-deep-reading/SKILL.md": "b8d57e7823565fb9efcd625b5513817d61cbc013a915786bcd653ac8efbee87e",
+-    "skills/journal-intelligence/SKILL.md": "710b7a6b76b5866f2223ba3b7540596522fd2f27d9144ad73317a8a78b5214dd",
+-    "skills/peer-review-response/SKILL.md": "f88d9e6516b6faa635e62b41c179d1d6891fb6ebdadd64b9160a9d3e251647e9",
+-    "skills/scientific-visualization/SKILL.md": "cfeb29abb2319699bed4efbdea3d150ca3aee3054d27ad6ee3b4c06fbbbda789",
+-    "skills/research-intake/SKILL.md": "08fb64a0461e1300bd811fe3117d15cbd5dbd57417f42b7de507dbdb4089e988",
+-    "skills/ethics-protocol/SKILL.md": "97235f796f69202dec7926158bafec979809d001d7035731a85bb7326f046675",
+-    "skills/submission-packaging/SKILL.md": "b7a1a43411beb227399630a1ae11a926c714436452219aea430372a337a1e274",
+-    "skills/research-paper-workflow/SKILL.md": "080b12a0f87c1fc2472655e64c4a67e6bb05cdf034edf2f7edb1124eb90bccfc",
++    "skills/manuscript-writing/SKILL.md": "01d09d4df2a7f6b48626cc3d5b673cec50ae49970e07a5b26b71a825e16e94b4",
++    "skills/publication-stewardship/SKILL.md": "b973b94a50a43c30f161895c2f2be601d5a46693d6f5bc1a3f726e503b641802",
++    "skills/manuscript-review/SKILL.md": "ea77c7fe84593d64301b6beb0f07d10fa5c4d3385f6f80ae30f72f7aced1c1be",
++    "skills/robustness-reproducibility/SKILL.md": "d2ff3d7e2eaa6b0ebfc775e2080a56ef9f2db038f7d29509222770e457f40912",
++    "skills/research-design/SKILL.md": "a2184724fd6b499d3fff878e4a80807a7cb0bc23423f91484329181623ba9278",
++    "skills/topic-novelty/SKILL.md": "d51705276b575826c61180f4828e62edcb475977130761cf7747f543aecaf2f8",
++    "skills/analysis-execution/SKILL.md": "6cb3972d538a81924f1fbde1f03b7c4994f8ccfe1daecdc45105a95b9ab8c120",
++    "skills/literature-discovery/SKILL.md": "b104e1ee04b66f6f3de54a1d42600c28f45668f8a933ee4648ab190989a54802",
++    "skills/data-preparation/SKILL.md": "bd2c9f60858894641d787d07dcef92549ebc62b5919292c66c69c182ca8df891",
++    "skills/data-discovery/SKILL.md": "5931dc7f2abb04d4354a9c20e1453cfb66fb72fed254b434f4c45f82fbb2d254",
++    "skills/citation-audit/SKILL.md": "685973759bd15f51721e0a2793a9f5878f78668505778e69378b9c427f30759e",
++    "skills/paper-deep-reading/SKILL.md": "2312347381fa7cf5b10394cfa7df26a8a702b9e3c5e8badd64dc9e83c95621da",
++    "skills/journal-intelligence/SKILL.md": "0d8f9f5e78121b465dccc4cb9d47eff090820501314b2e56aa9207b76d133f20",
++    "skills/peer-review-response/SKILL.md": "67f419c3ec0d79d7decc5a68feeeca356917c7746755d2e157599a39117a9d7c",
++    "skills/scientific-visualization/SKILL.md": "8fd960ed60c38b10deacf3bf7bed83dbb3af4b94f6d8d82f09a548f77ac3a899",
++    "skills/research-intake/SKILL.md": "d71fc479863fc966a71f1a981cb545526172179e5f7df1bf8c13999bc914c911",
++    "skills/ethics-protocol/SKILL.md": "fa7ee0aa4bf9f40a90d6aff67b0ab63aeb7d896e5ec3b79126bb3d0c8b6cdd32",
++    "skills/submission-packaging/SKILL.md": "bb8c11188b855aa6c322fad3d86d6af338539a712e28d1881c6d2e992df871d2",
++    "skills/research-paper-workflow/SKILL.md": "f93bbee4bba6ec35628c5fb4637f0d99568825e2c0e5eff298586ebaf0e65658",
+     "skills/manuscript-writing/references/execution-handoff.md": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+     "skills/publication-stewardship/references/execution-handoff.md": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+     "skills/manuscript-review/references/execution-handoff.md": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+--- before/MIGRATION.zh-CN.md
++++ after/MIGRATION.zh-CN.md
+@@ -1,23 +1,5 @@
+-# 从3.0.0升级到3.1.0
++# v3.1.1记录迁移
+ 
+-原目录、研究数据、稿件与已经执行的记录保留。使用新的完整能力目录继续任务；不要把升级层payload直接当发行版。详细专业协议按字节保留，升级回执记录应用时的检查。
++五项补丁集中在公共research31.py，不新增Skill，也不新增日常前置。原19个能力、16类研究配置、13来源和独立复制接口保留。旧inputs/outputs/evidence及稿件角色仍有效；完整交接记录按 [记录迁移](docs/research31-usage.md)补真正已发生的任务和审查关联。缺关联给出待补动作，禁止凭空补记执行。
+ 
+-本版将正式研究的科学目标、专业主图责任和指定反防御性全文修订写入执行路线；局部任务继续直接完成。外部专业Skill来源改为用户指定13仓库，子入口和具体版本动态发现。普通科学软件和原创研究仍可使用；当前助手与现有模型保持不变。
+-
+-帮助命令不再执行测试；路径断言使用规范化后的同一路径；维护公共资源使用src/common，模块入口维护在src/quality31/payload。版本断言读取VERSION，不硬编码上一个发行号。旧失败与历史结果继续保存，不追记不存在的上游操作。
+-
+-已有依赖、缓存、分析和稿件按适用性复用。正式图稿由专业实现实质审改后继续使用；原始调用范围保持真实。软件测试通过不能替代科学内容判断。
+-
+-## 既有alpha.5到3.0.0说明（历史）
+-
+-# 从alpha.5迁移到3.0.0
+-
+-研究数据、稿件、笔记和已执行记录无需迁移。使用新的能力目录继续当前任务；旧的可选run/record契约保留。
+-
+-动态上游的fetch现在返回与bind一致的候选ID。配置键用本次 `OWNER/REPO::实际入口`；先前保存为 `selected-source` 的配置可按实际索引重建，无需删除已取得源码。干净快照可离线复用；本地修改会被保留而不是重置。
+-
+-未填写max_attempts不再隐含一次尝试。已经显式设置的预算继续生效。结构化审查可通过required_review_outputs指定产物范围；旧任务未设置该字段时保留完整覆盖语义。
+-
+-纯文本导出现在也接受没有本项目assets目录的最小标准Skill；只在指定study-type时才读取研究类型配置。安装复制保留执行权限，已有不同版本仍不覆盖。
+-
+-本版不修改上游仓库或用户全局Agent设置。切换目录后在真实宿主做一次小任务调用；新安装失败时保留旧目录和原研究资料。
++新记录区分方案稿交付与整个实证项目完成。局部任务仍直接处理。原3.1.0发行、首次探针和运行日志保留在本地开发证据中；本轮使用固定软件夹具，没有自动开展具体课题。
+--- before/README.md
++++ after/README.md
+@@ -1,4 +1,4 @@
+-# Academic Research Skills 3.1.0
++# Academic Research Skills 3.1.1
+ 
+ One optional research orchestrator and eighteen standalone specialist skills. Full research preserves the scientific question, examines nearest prior work, states the intended knowledge gain and develops a decisive test. Focused requests use the relevant specialist directly.
+ 
+--- before/README.zh-CN.md
++++ after/README.zh-CN.md
+@@ -1,4 +1,4 @@
+-# Academic Research Skills · 3.1.0
++# Academic Research Skills · 3.1.1
+ 
+ 本版由真实v3.0.0源码合并科研质量升级层，并在新副本修正实际接口与维护问题。保留1个可选总控、18个独立专业能力及全部详细专业协议；原包、已有研究材料和历史验证继续保留。
+ 
+@@ -15,3 +15,5 @@
+ 日常版可复制一个完整能力目录使用，不依赖src或相邻能力。源码版额外保留维护源、回归与历史开发材料。版本号表示本次软件迭代，不表示已验证全部学科或产出顶刊论文。
+ 
+ 本套Skill面向各学科，按实际研究类型选择专业路线，不默认绑定研究领域。开发/更新本套Skill时只完成软件与完整目录交付，不自动开展具体论文工作。
++
++本次3.1.1修复布尔复核、稿件审查版本、研究动作分类、专业记录关联和方案稿适用性；迁移见MIGRATION.zh-CN.md。
+--- before/UPDATE_REPORT.zh-CN.md
++++ after/UPDATE_REPORT.zh-CN.md
+@@ -1,87 +1,7 @@
+-# Academic Research Skills v3.1.0 通用Skill更新报告
++# v3.1.1更新记录
+ 
+-日期：2026-09-30。交付对象是完整通用学术Skill文件夹及源码，不是论文，也不指定具体学术领域。
++本次修复五项真实复现的记录语义缺口：事实复核只接受布尔true；复核报告关联被审稿件版本；正常研究动作不依赖允许词表；文献/创新/阅读操作关联当前任务与背景；方案稿交付不要求未来结果且不冒称完成整个实证项目。
+ 
+-## 1. 本轮完成的更新
++原19个能力、16研究类型、13专业来源、当前Agent和自主方法边界保留，详细协议未删减。完整日常与源码包由同一维护源生成。工程测试与当前Agent行为及科研质量评价分别记录；测试总数不是顶刊能力分数。
+ 
+-基于用户提供并已在本机验收的真实v3.0.0源码，在新副本合并v3.1.0质量升级层，再修复真实合并中发现的问题。原v3 ZIP、冻结原版与原失败记录保留；19份详细专业协议按字节保持，专业能力未被缩减。
+-
+-保留1个可选总控与18个独立能力：研究接入、选题创新、文献发现、精读、研究设计、数据发现、数据准备、分析执行、稳健复现、图表、引文、论文写作、稿件审查、选刊、伦理、投稿准备、审稿回复与发表管理。每个能力拥有自己的入口、必要参考、资产和可选工具，可单独复制读取。
+-
+-16类研究方法配置保留，默认general，允许扩展；覆盖定量、实验、因果、预测、定性、混合、综述、理论、人文等路线。研究设计与材料决定方法，不默认绑定数据集、领域、神经网络、GPU、显著性或图数。
+-
+-## 2. 入口与工作范围
+-
+-19个短入口版本统一3.1.0，长度544—716字符。局部改稿、单文/单图阅读和选刊直接处理请求；总控只协调实际跨阶段研究。工具可选，不要求先填JSON或运行工程自检才处理日常任务。
+-
+-新增明确边界：开发、更新或打包本套Skill时，交付通用Skill文件与软件验证，不自动选题、下载研究数据或撰写论文。该边界进入总控、开始说明和公共任务/质量规则。
+-
+-本轮前期将验证扩展到具体研究的工作，已按用户纠正停止；其未完成开发观察不进入Skill文件夹或发行ZIP，也不计为本轮完成证据。
+-
+-## 3. 科研能力的通用规则
+-
+-完整研究围绕重要问题、最近邻已有工作、预期知识增量与决定性证据推进，允许探索、证明、复现、零结果与混合方法。当前Agent保留判断与方法自主性，原生内部子代理可选；不寻找其他助手宿主或本地LLM作为前置。
+-
+-外部专业Skill来源按用户给定13仓库选择，仓库内入口和当前版本动态发现；本地核验版本可复用。普通文献、公开数据、科学库、数值软件和原创代码不受专业Skill来源表限制。没有把13个仓库预装为一个固定大工作流。
+-
+-本机实际使用新包装器查询了Nature与指定反防御性写作当前入口/commit，并核对读取字节；这些是来源接口证据，不宣称已完成全文写作或完整上游研究。
+-
+-## 4. 图表与全文交接
+-
+-正式主图的规则包括论断职责、选图、专业制作或实质修订、数值核对、真正打开最终图像检查，并关联实际最终文件版本。导出函数或另一测试图不能替代本稿主图流程；理论等无需图的任务不强行配图。
+-
+-完整稿件专业写作输出须关联最终稿或指定终审的输入版本。正式全文终审采用Adkid-Zephyr/anti-defensive-writing-Skill，组织清晰论证与贡献，保留事实、数字、条件和重要反证，避免事后更换指标或隐去不利证据。局部表达任务按实际范围处理，单摘要或片段记录不能替代全文完成。
+-
+-research31.py只检查记录、来源、范围和文件版本，不判断科学价值或保证顶刊成果。日常使用可只维护简短路线板。当前新增流程作为通用能力提供，本轮不制作具体论文或主图。
+-
+-## 5. 实际修复的问题
+-
+-| 问题 | 根因与修复 | 验证 |
+-|---|---|---|
+-| macOS路径别名断言 | 将两侧路径resolve后比较；保留原断言语义 | 原435项保留通过 |
+-| 测试--help写结果 | 保存原runner，用argparse只读帮助包装 | 帮助退出0，结果目录哈希未变 |
+-| 版本目录/脚本仍旧号 | 更新当前元数据，构建同步；版本测试读取VERSION | 489项通过，797生成文件0漂移 |
+-| 两份公共维护源覆盖 | src/common唯一维护公共资源；模块入口/handoff仍在src/quality31/payload | 构建漂移与写入恢复用例通过 |
+-| 入口遗漏自主/工具可选声明 | 恢复自主实现、真实证据、可选工具；明确局部范围 | 原入口检查与新质量检查通过 |
+-| focused单图触发全主图前置 | 按任务模式分流；局部任务仍校验实际文件版本 | 局部正确/改后错误版本双向检查 |
+-| 合法--repo= / --index=拒绝 | 支持等号形式、重复和缺值仍拒绝 | 正/负例；实时--index=读取通过 |
+-| 错误记录类型导致traceback | 共享输入边界给具体JSON诊断 | documents=[]等坏类型和真实CLI检查 |
+-| 无关稿件/片段占全文角色 | 专业写作→终审输入/最终稿版本链；全文终审scope要求 | 无关输出、单摘要负例与完整链正例 |
+-| smoke测试仍强调任意Skill来源 | 使用实际13来源策略，验证库外拒绝 | 最终basic4/4及scientific7/7 |
+-| 日常版夹带开发历史 | 打包过滤src/tests/evaluations/history/previous-release/release及开发回执 | 两种包内容/逐文件哈希校验 |
+-
+-初次真实合并435项为431通过、4失败，日志已归档；没有删失败用例或用历史通过数字覆盖失败。
+-
+-## 6. 验证结果与实际范围
+-
+-- 最终真实合并回归：489/489通过，0失败、0错误、0跳过。其中原435个用例保留，当前质量检查54项。
+-- 提供的升级层本机复测：59/59通过，安装部分仍用明确合成底包；未与489相加制造不同用例数。
+-- 最终basic4/4、scientific7/7。scientific使用解析夹具，验证科学库计算/绘图/输出交接的软件接口。
+-- 构建：797生成文件、0漂移。19个独立能力入口/目录解析成功；19份详细protocol与原版完全一致。
+-- 单完整能力目录的来源查询与短文本导出通过。初次导出参数误用--skill-dir已保留，按实际--source接口修正；这是验证调用问题。
+-- --help只读检查通过，原结果文件未变。
+-- 16类型、general默认与扩展能力保留；13来源一致。通用入口没有具体领域默认对象。
+-
+-Mac本机、真实项目解释器的版本只进入验证记录。软件结果不等于原生自动触发、所有学科实际科研能力或顶刊成果认证；本轮目标是Skill软件迭代与完整目录交付。
+-
+-## 7. 文件夹结构与使用
+-
+-日常版包含完整skills、公共docs/assets/scripts、中英文开始说明、版本、迁移说明、更新报告、摘要和包清单。每个skills/<能力名>是完整独立能力目录。源码版另含src、tests、release工具、原始回归和清楚标注的开发历史。
+-
+-读取START_HERE.md或直接读取所需能力SKILL.md即可。完整研究读取research-paper-workflow；局部任务读取相应专业能力。需要脚本时使用Python>=3.10并先查看--help。无需开发源码才能运行日常版或一个独立能力目录。
+-
+-维护公共资源改src/common，维护短入口及专属handoff改src/quality31/payload；用scripts/build_release.py --write同步副本，--check检查漂移。源码回归入口tests/run_all.py；release/make_package.py生成两种ZIP和逐文件清单。
+-
+-## 8. 本轮实际使用的开发Skill与工具
+-
+-使用skill-creator指导短入口、渐进资源、任务范围与有意义验证；Ponytail会话规则指导复用既有工具和标准库。内部工程分支独立复现三项接口问题，修复由主代理整合。论文相关验证分支已停止，不计为发行通过证据。
+-
+-实际工程工具是项目Python、stdlib、已有unittest、构建/打包脚本、Git/公开GitHub接口和现有科学库；未新增依赖框架、其他助手模型或系统服务。提供的升级层被保留为输入，真实底包和原专业内容作为权威来源。
+-
+-## 9. 交付与证据
+-
+-完整日常使用文件夹：academic-research-skills-v3.1.0。
+-完整源码文件夹：academic-research-skills-v3.1.0-source。
+-同时提供同名日常/源码ZIP、SHA256SUMS.txt及本报告；所有目录来自实际校验的发行内容。
+-
+-原日志、首次失败、独立工程审查、最小源代码diff及最终软件核验在upgrade-20260930-121737保留。发布文件夹不包含具体课题材料、研究数据、稿件或未完成研究产物。具体文件数、ZIP SHA和解压校验结果见delivery-checks.json。
++回归、针对性探针与最终发行校验见test-results中的本版摘要；记录迁移见docs/research31-usage.md。所有开发场景明确为固定样例，不是科研成果。
+--- before/VERSION
++++ after/VERSION
+@@ -1 +1 @@
+-3.1.0
++3.1.1
+--- before/docs/provider-catalog.json
++++ after/docs/provider-catalog.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "runtime-providers-1",
+-  "package_version": "3.1.0",
++  "package_version": "3.1.1",
+   "capabilities": [
+     "analysis-execution",
+     "citation-audit",
+--- before/docs/research31-usage.md
++++ after/docs/research31-usage.md
+@@ -17,3 +17,16 @@
+ 完整稿件写作的provider_use标scope=full_manuscript；摘要适配只能记录abstract，不满足整稿角色。所有字段描述实际已做的工作，不通过编造字段使记录“完整”。
+ 
+ 完整全文角色还关联本稿文件：专业writing输出须是最终稿或反防御性修订的输入；末次final_expression标scope=full_manuscript。focused单图/图注任务核对其文件版本，不追加整份论文的主图设计前置。
++
++
++## 从3.1.0迁移记录
++
++只有需要机器核对交接时才补这些关联；单段修改、读单篇、找期刊不需要完整研究记录。
++
++- `facts_rechecked`使用JSON布尔值`true`或`false`；字符串不是已完成复核。
++- `final_expression.review`继续使用原报告的`path`与`sha256`，另加`subjects`数组，定位它真正审查的稿件版本（也可列必要的表格/证据版本）。最终稿改变后，复核受影响内容再更新审查对象；只更新稿件输出哈希不能使旧审查自动有效。
++- literature、reading、novelty操作的`document_bindings`关联当前`research_brief`与`prior_art`的path/SHA-256。它说明操作服务哪个任务与知识背景，不声称语义审查已通过。相关旧产物可以复用；换了研究问题或关键背景后核对关联和必要重新检索，不拿另一个测试的角色标签补齐。原inputs、outputs、evidence字段继续保留。
++- 普通`host_actions`字符串仍可用，新的研究动词不因没列入词表就被禁止。需要描述执行者范围时用对象，例如`{"action":"verify_citations","actor_scope":"current_host"}`；`assistant_target`只描述拟切换的执行助手，不是研究中训练的模型。检查器不决定动作的所有语义，也不授予其他权限。
++- 方案稿可声明`research_context.article_type`为`study-protocol`、`protocol-design`或`registered-report-stage1`；可明确`requested_deliverable: protocol`，已有study_types继续用于方法选择。交付仍须有问题、背景、设计、完整稿件与适用审查，但不编造未来results/validation。结果标明delivery_scope=protocol，不能据此声称整个实证项目完成。明确的empirical_paper请求不能靠修改文章标签跳过研究；applicability理由本身不豁免普通实证证据。
++
++3.1.0记录缺少新关联时返回具体下一步，保留原文件；不假造subjects、bindings或已复核标记以凑齐记录。
+--- before/src/common/assets/environment-profiles.json
++++ after/src/common/assets/environment-profiles.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "environment-profiles-1",
+-  "version": "3.1.0",
++  "version": "3.1.1",
+   "python_minimum": [
+     3,
+     10
+--- before/src/common/assets/research-profiles.json
++++ after/src/common/assets/research-profiles.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "research-profiles-1",
+-  "version": "3.1.0",
++  "version": "3.1.1",
+   "profiles": {
+     "quantitative-observational": {
+       "title": "定量观察研究",
+--- before/src/common/assets/research31-policy.json
++++ after/src/common/assets/research31-policy.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "research31-policy-1",
+-  "version": "3.1.0",
++  "version": "3.1.1",
+   "host_scope": "current_host",
+   "external_skill_scope": "user_designated_repositories",
+   "native_subagents": "optional_same_host",
+--- before/src/common/references/research31-usage.md
++++ after/src/common/references/research31-usage.md
+@@ -17,3 +17,16 @@
+ 完整稿件写作的provider_use标scope=full_manuscript；摘要适配只能记录abstract，不满足整稿角色。所有字段描述实际已做的工作，不通过编造字段使记录“完整”。
+ 
+ 完整全文角色还关联本稿文件：专业writing输出须是最终稿或反防御性修订的输入；末次final_expression标scope=full_manuscript。focused单图/图注任务核对其文件版本，不追加整份论文的主图设计前置。
++
++
++## 从3.1.0迁移记录
++
++只有需要机器核对交接时才补这些关联；单段修改、读单篇、找期刊不需要完整研究记录。
++
++- `facts_rechecked`使用JSON布尔值`true`或`false`；字符串不是已完成复核。
++- `final_expression.review`继续使用原报告的`path`与`sha256`，另加`subjects`数组，定位它真正审查的稿件版本（也可列必要的表格/证据版本）。最终稿改变后，复核受影响内容再更新审查对象；只更新稿件输出哈希不能使旧审查自动有效。
++- literature、reading、novelty操作的`document_bindings`关联当前`research_brief`与`prior_art`的path/SHA-256。它说明操作服务哪个任务与知识背景，不声称语义审查已通过。相关旧产物可以复用；换了研究问题或关键背景后核对关联和必要重新检索，不拿另一个测试的角色标签补齐。原inputs、outputs、evidence字段继续保留。
++- 普通`host_actions`字符串仍可用，新的研究动词不因没列入词表就被禁止。需要描述执行者范围时用对象，例如`{"action":"verify_citations","actor_scope":"current_host"}`；`assistant_target`只描述拟切换的执行助手，不是研究中训练的模型。检查器不决定动作的所有语义，也不授予其他权限。
++- 方案稿可声明`research_context.article_type`为`study-protocol`、`protocol-design`或`registered-report-stage1`；可明确`requested_deliverable: protocol`，已有study_types继续用于方法选择。交付仍须有问题、背景、设计、完整稿件与适用审查，但不编造未来results/validation。结果标明delivery_scope=protocol，不能据此声称整个实证项目完成。明确的empirical_paper请求不能靠修改文章标签跳过研究；applicability理由本身不豁免普通实证证据。
++
++3.1.0记录缺少新关联时返回具体下一步，保留原文件；不假造subjects、bindings或已复核标记以凑齐记录。
+--- before/src/common/scripts/environment.py
++++ after/src/common/scripts/environment.py
+@@ -23,7 +23,7 @@
+ import time
+ import uuid
+ 
+-VERSION='3.1.0'
++VERSION='3.1.1'
+ SPEC=re.compile(r'^([A-Za-z0-9][A-Za-z0-9._-]*)(?:(>=|==)([0-9]+(?:\.[0-9]+)*))?$')
+ MODULE=re.compile(r'^[A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)*$')
+ TEXT_SERVICES={'read','extract','translate','draft','revise','review','figure-review','figure-plan','method-plan','landscape','matching','journal-match','ideate','novelty-check','synthesize','derive','prove','interpret','source-criticism'}
+--- before/src/common/scripts/provider_runtime.py
++++ after/src/common/scripts/provider_runtime.py
+@@ -19,7 +19,7 @@
+ import time
+ from datetime import datetime, timezone
+ 
+-VERSION = '3.1.0'
++VERSION = '3.1.1'
+ 
+ class ContractError(ValueError):
+     pass
+--- before/src/common/scripts/research31.py
++++ after/src/common/scripts/research31.py
+@@ -46,8 +46,17 @@
+     return approved[repo.lower()]
+ 
+ def host_action(action):
+-    ordinary={'read_skill','fetch_skill_source','search_literature','download_research_data','prepare_dependencies','run_research_code','native_subagent','write_manuscript','review_figures'}
+-    return {'action':action,'permitted_by_project_scope':action in ordinary,
++    details=action if isinstance(action,dict) else {'action':action}
++    name=details.get('action')
++    if not isinstance(name,str) or not name.strip():raise ResearchError('host_actions requires a nonempty action name')
++    target=details.get('assistant_target')
++    if target is not None and not isinstance(target,str):raise ResearchError('assistant_target must be a string or null')
++    # Scope concerns the executing assistant, not a vocabulary of research verbs.
++    switches={'launch_other_host','discover_local_llm','switch_assistant','discover_assistant_endpoint'}
++    outside=details.get('actor_scope','current_host')!='current_host' or target not in {None,'current_host'} or name in switches
++    return {'action':name,'permitted_by_project_scope':not outside,
++            'action_classification':'assistant_scope_change' if outside else 'current_host_operation',
++            'action_semantics_verified':False,
+             'host_scope':'current_host','os_sandbox_enforced':False,
+             'note':'Scientific computation may use justified models; this does not authorize discovery or switching of the executing assistant.'}
+ 
+@@ -81,21 +90,31 @@
+     if not re.fullmatch('[0-9a-f]{64}',str(ref.get('sha256',''))) or sha(path)!=ref['sha256']:raise ResearchError('Artifact version mismatch: '+ref['path'])
+     return {'path':ref['path'],'sha256':ref['sha256']}
+ 
++def same_artifact(a,b):
++    return isinstance(a,dict) and isinstance(b,dict) and all(a.get(k)==b.get(k) for k in ['path','sha256'])
++
+ def assess(state,root,config=None):
+     config=config or policy();problems=[];next_steps=[];verified={};uses={}
+     if not isinstance(state,dict):raise ResearchError('state must be an object')
+-    for key in ['documents','research_goal','final_expression']:
++    for key in ['documents','research_goal','final_expression','research_context','applicability']:
+         if not isinstance(state.get(key,{}),dict):raise ResearchError(key+' must be an object')
+     def sequence(obj,key,item_type):
+         value=obj.get(key,[])
+         if not isinstance(value,list) or any(not isinstance(x,item_type) for x in value):
+             raise ResearchError(key+' must be a list of '+('objects' if item_type is dict else 'strings'))
+         return value
+-    for key in ['host_actions','additional_skill_roles']:sequence(state,key,str)
++    sequence(state,'additional_skill_roles',str)
++    actions=state.get('host_actions',[])
++    if not isinstance(actions,list) or any(not isinstance(x,(str,dict)) for x in actions):raise ResearchError('host_actions must be a list of action names or objects')
++    sequence(state.get('research_context',{}),'study_types',str)
+     for key in ['provider_uses','figures']:sequence(state,key,dict)
+     for use in state.get('provider_uses',[]):
+         for key in ['roles','steps']:sequence(use,key,str)
+         for key in ['inputs','outputs','evidence']:sequence(use,key,dict)
++        if not isinstance(use.get('document_bindings',{}),dict):raise ResearchError('document_bindings must be an object')
++    for role,choice in state.get('applicability',{}).items():
++        if not isinstance(choice,dict) or type(choice.get('applicable')) is not bool or not isinstance(choice.get('reason'),str) or not choice['reason'].strip():
++            raise ResearchError('applicability '+role+' requires a boolean applicable and a reason')
+     mode=state.get('mode','publication_research')
+     if mode not in {'focused','publication_research','smoke','engineering_audit'}:raise ResearchError('Unknown mode')
+     stage=state.get('stage','planning')
+@@ -125,22 +144,34 @@
+         if not receipts:missing(uid+': attach actual operation/input/output evidence')
+         for ref in receipts:check_ref(ref,uid+' evidence')
+         for ref in use.get('inputs',[])+use.get('outputs',[]):check_ref(ref,uid+' material')
++        for role,ref in use.get('document_bindings',{}).items():check_ref(ref,uid+' document binding '+role)
+         if use.get('mode')=='adapted_in_host' and not use.get('adaptation'):missing(uid+': describe the actual adaptation once')
++    context=state.get('research_context',{})
++    protocol=context.get('article_type') in {'protocol-design','study-protocol','registered-report-stage1'}
++    requested=state.get('requested_deliverable','protocol' if protocol else 'research_manuscript')
++    if not isinstance(requested,str) or not requested.strip():raise ResearchError('requested_deliverable must be a nonempty string')
++    if protocol and requested not in {'protocol','registered_report_stage1'}:
++        problems.append('Protocol article type conflicts with the requested empirical/research deliverable')
++        protocol=False
+     if mode=='publication_research':
+         ambition=state.get('research_goal',{})
+         for name in ['problem','importance','knowledge_delta','decisive_test']:
+             if not isinstance(ambition.get(name),str) or not ambition[name].strip():missing('Develop the research goal: '+name)
+         required=['research_brief','prior_art','design']
+-        if stage in {'research','delivery'}:required+=['research_results','validation']
++        if stage in {'research','delivery'} and not protocol:required+=['research_results','validation']
+         if stage=='delivery':required+=['manuscript','scientific_review','journal_fit']
+         for role in required:
+             if not verified.get(role):missing('Produce and inspect '+role+' for the actual scientific question')
+-        if stage=='delivery' and state.get('scope_achievement')!='main_research':missing('Pilot/smoke output cannot finish the original publication-research objective')
++        if stage=='delivery' and not protocol and state.get('scope_achievement')!='main_research':missing('Pilot/smoke output cannot finish the original publication-research objective')
+         if stage=='delivery':
+             # Coverage is stated per applicable research route; no all-19 invocation quota.
+             roles=list(dict.fromkeys(['literature','reading','novelty','writing']+state.get('additional_skill_roles',[])))
+             for role in roles:
+                 matching=[x for x in uses.values() if role in x.get('roles',[]) and x.get('status')=='executed' and x.get('mode') in {'native_in_host','adapted_in_host'} and x.get('evidence')]
++                if role in {'literature','reading','novelty'}:
++                    # A version-bound association permits reuse; a role label alone does not.
++                    expected={k:verified.get(k) for k in ['research_brief','prior_art']}
++                    matching=[x for x in matching if all(same_artifact(x.get('document_bindings',{}).get(k),ref) for k,ref in expected.items())]
+                 if role=='writing':
+                     end_use=uses.get(state.get('final_expression',{}).get('provider_use'),{})
+                     manuscript_versions=[verified.get('manuscript')]+end_use.get('inputs',[])
+@@ -174,15 +205,22 @@
+             if not use.get('inputs'):missing('Retain the pre-expression manuscript')
+             main=verified.get('manuscript')
+             if main and (main['path'],main['sha256']) not in [(x.get('path'),x.get('sha256')) for x in use.get('outputs',[])]:missing('Expression pass must cover this final manuscript version')
+-            if not end.get('facts_rechecked'):missing('Recheck claims, numbers, comparisons and important counterevidence after rewriting')
++            if 'facts_rechecked' in end and type(end['facts_rechecked']) is not bool:problems.append('facts_rechecked must be a boolean')
++            if end.get('facts_rechecked') is not True:missing('Recheck claims, numbers, comparisons and important counterevidence after rewriting')
+             review=check_ref(end.get('review'),'post-expression factual review') if end.get('review') else None
+             if not review:missing('Provide the actual post-expression review result')
++            else:
++                subjects=sequence(end['review'],'subjects',dict)
++                checked=[check_ref(ref,'post-expression reviewed subject') for ref in subjects]
++                if not main or main not in checked:missing('Bind the post-expression review to this final manuscript version; repeat affected review after changes')
+     if mode in {'smoke','engineering_audit'}:
+         missing('Engineering outcome only; publication-research completion is not evaluated')
+     return {'status':'record_error' if problems else 'research_in_progress' if next_steps else 'ready_for_content_review',
+             'record_errors':problems,'next_actions':next_steps,'verified_documents':verified,
+             'scientific_quality_certified':False,'top_journal_ready':None,
+             'semantic_review_performed_by_this_tool':False,'host_scope':'current_host',
++            'delivery_scope':'protocol' if protocol else requested,
++            'empirical_research_completion_evaluated':not protocol and mode=='publication_research',
+             'note':'This checks records and artifact identity; current-agent scientific and visual judgements still require actual evidence.'}
+ 
+ def main(argv=None):
+--- before/src/common/scripts/selftest.py
++++ after/src/common/scripts/selftest.py
+@@ -78,7 +78,7 @@
+             if checks[-1]['status']=='passed':
+                 check('actual_output_handoff',lambda: output_handoff(b,out))
+     passed=all(c['status']=='passed' for c in checks)
+-    result={'version':'3.1.0','checked_at':datetime.now(timezone.utc).isoformat(),
++    result={'version':'3.1.1','checked_at':datetime.now(timezone.utc).isoformat(),
+             'platform':platform.system(),'architecture':platform.machine(),'python':sys.version.split()[0],
+             'passed':passed,'checks':checks,'scientific_smoke_requested':scientific_smoke,
+             'native_host_activation_tested':False,'model_ability_measured':False,
+--- before/src/common/scripts/validate_run.py
++++ after/src/common/scripts/validate_run.py
+@@ -112,7 +112,7 @@
+     errors: list[str] = []
+     warnings: list[str] = []
+     report: dict[str, Any] = {
+-        'validator': 'academic-run-structural-checker', 'version': '3.1.0',
++        'validator': 'academic-run-structural-checker', 'version': '3.1.1',
+         'run_directory': str(root.resolve()), 'checks': [
+             'bundled_schema_subset', 'file_existence_and_hashes',
+             'local_reference_resolution', 'declared_gate_and_output_consistency'],
+--- before/src/quality31/payload/skills/analysis-execution/SKILL.md
++++ after/src/quality31/payload/skills/analysis-execution/SKILL.md
+@@ -2,7 +2,7 @@
+ name: analysis-execution
+ description: "实际分析、实验、仿真与推导"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 实际分析、实验、仿真与推导
+--- before/src/quality31/payload/skills/citation-audit/SKILL.md
++++ after/src/quality31/payload/skills/citation-audit/SKILL.md
+@@ -2,7 +2,7 @@
+ name: citation-audit
+ description: "引用真实性与论断支持核验"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 引用真实性与论断支持核验
+--- before/src/quality31/payload/skills/data-discovery/SKILL.md
++++ after/src/quality31/payload/skills/data-discovery/SKILL.md
+@@ -2,7 +2,7 @@
+ name: data-discovery
+ description: "支持研究问题的数据与材料获取"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 支持研究问题的数据与材料获取
+--- before/src/quality31/payload/skills/data-preparation/SKILL.md
++++ after/src/quality31/payload/skills/data-preparation/SKILL.md
+@@ -2,7 +2,7 @@
+ name: data-preparation
+ description: "真实材料整理与可复现处理"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 真实材料整理与可复现处理
+--- before/src/quality31/payload/skills/ethics-protocol/SKILL.md
++++ after/src/quality31/payload/skills/ethics-protocol/SKILL.md
+@@ -2,7 +2,7 @@
+ name: ethics-protocol
+ description: "研究权限与真实披露"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 研究权限与真实披露
+--- before/src/quality31/payload/skills/journal-intelligence/SKILL.md
++++ after/src/quality31/payload/skills/journal-intelligence/SKILL.md
+@@ -2,7 +2,7 @@
+ name: journal-intelligence
+ description: "标杆学习与投稿期刊匹配"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 标杆学习与投稿期刊匹配
+--- before/src/quality31/payload/skills/literature-discovery/SKILL.md
++++ after/src/quality31/payload/skills/literature-discovery/SKILL.md
+@@ -2,7 +2,7 @@
+ name: literature-discovery
+ description: "检索、筛选与证据地图"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 检索、筛选与证据地图
+--- before/src/quality31/payload/skills/manuscript-review/SKILL.md
++++ after/src/quality31/payload/skills/manuscript-review/SKILL.md
+@@ -2,7 +2,7 @@
+ name: manuscript-review
+ description: "科学贡献、证据与表达审查"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 科学贡献、证据与表达审查
+--- before/src/quality31/payload/skills/manuscript-writing/SKILL.md
++++ after/src/quality31/payload/skills/manuscript-writing/SKILL.md
+@@ -2,7 +2,7 @@
+ name: manuscript-writing
+ description: "证据与贡献驱动的完整论文写作"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 证据与贡献驱动的完整论文写作
+--- before/src/quality31/payload/skills/paper-deep-reading/SKILL.md
++++ after/src/quality31/payload/skills/paper-deep-reading/SKILL.md
+@@ -2,7 +2,7 @@
+ name: paper-deep-reading
+ description: "顶刊问题、模型和图表精读"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 顶刊问题、模型和图表精读
+--- before/src/quality31/payload/skills/peer-review-response/SKILL.md
++++ after/src/quality31/payload/skills/peer-review-response/SKILL.md
+@@ -2,7 +2,7 @@
+ name: peer-review-response
+ description: "审稿意见驱动的修订与回应"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 审稿意见驱动的修订与回应
+--- before/src/quality31/payload/skills/publication-stewardship/SKILL.md
++++ after/src/quality31/payload/skills/publication-stewardship/SKILL.md
+@@ -2,7 +2,7 @@
+ name: publication-stewardship
+ description: "校样、版本与发表后维护"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 校样、版本与发表后维护
+--- before/src/quality31/payload/skills/research-design/SKILL.md
++++ after/src/quality31/payload/skills/research-design/SKILL.md
+@@ -2,7 +2,7 @@
+ name: research-design
+ description: "问题导向的研究设计"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 问题导向的研究设计
+--- before/src/quality31/payload/skills/research-intake/SKILL.md
++++ after/src/quality31/payload/skills/research-intake/SKILL.md
+@@ -2,7 +2,7 @@
+ name: research-intake
+ description: "研究目标与科学价值定位"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 研究目标与科学价值定位
+--- before/src/quality31/payload/skills/research-paper-workflow/SKILL.md
++++ after/src/quality31/payload/skills/research-paper-workflow/SKILL.md
+@@ -2,7 +2,7 @@
+ name: research-paper-workflow
+ description: "实际学术研究到完整成果的当前Agent总控"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 实际学术研究到完整成果的当前Agent总控
+--- before/src/quality31/payload/skills/robustness-reproducibility/SKILL.md
++++ after/src/quality31/payload/skills/robustness-reproducibility/SKILL.md
+@@ -2,7 +2,7 @@
+ name: robustness-reproducibility
+ description: "关键结论的验证与复现"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 关键结论的验证与复现
+--- before/src/quality31/payload/skills/scientific-visualization/SKILL.md
++++ after/src/quality31/payload/skills/scientific-visualization/SKILL.md
+@@ -2,7 +2,7 @@
+ name: scientific-visualization
+ description: "正式论文图表的专业生产"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 正式论文图表的专业生产
+--- before/src/quality31/payload/skills/submission-packaging/SKILL.md
++++ after/src/quality31/payload/skills/submission-packaging/SKILL.md
+@@ -2,7 +2,7 @@
+ name: submission-packaging
+ description: "真实研究稿的投稿准备"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 真实研究稿的投稿准备
+--- before/src/quality31/payload/skills/topic-novelty/SKILL.md
++++ after/src/quality31/payload/skills/topic-novelty/SKILL.md
+@@ -2,7 +2,7 @@
+ name: topic-novelty
+ description: "重要问题与可验证创新"
+ metadata:
+-  version: "3.1.0"
++  version: "3.1.1"
+ ---
+ 
+ # 重要问题与可验证创新
+--- before/tests/test_quality31.py
++++ after/tests/test_quality31.py
+@@ -64,12 +64,15 @@
+         s['provider_uses'].append(x);return x
+     def complete(self):
+         s=self.state()
+-        self.use(s,'literature','microsoft/ResearchStudio',['literature','novelty'])
+-        self.use(s,'reading','Yuan1z0825/nature-skills',['reading'])
++        literature=self.use(s,'literature','microsoft/ResearchStudio',['literature','novelty'])
++        reading=self.use(s,'reading','Yuan1z0825/nature-skills',['reading'])
++        for use in [literature,reading]:
++            use['document_bindings']={k:dict(s['documents'][k]) for k in ['research_brief','prior_art']}
+         writing=self.use(s,'writing','Yuan1z0825/nature-skills',['writing'])
+         expression=self.use(s,'expression',POL['final_expression_repository'],['final_expression'],[s['documents']['manuscript']])
+         expression['inputs']=writing['outputs']
+-        s['final_expression']={'provider_use':'expression','facts_rechecked':True,'review':self.artifact('expression-review.md')}
++        review=self.artifact('expression-review.md');review['subjects']=[dict(s['documents']['manuscript'])]
++        s['final_expression']={'provider_use':'expression','facts_rechecked':True,'review':review}
+         return s
+     def assess(self,s):return Q.assess(s,self.root,POL)
+     def test_pilot_not_main_completion(self):
+@@ -133,6 +136,62 @@
+         s=self.complete();s['provider_uses'][0]['actor_scope']='other_host';self.assertEqual(self.assess(s)['status'],'record_error')
+     def test_unauthorized_endpoint_action_reported(self):
+         s=self.complete();s['host_actions']=['discover_local_llm'];self.assertEqual(self.assess(s)['status'],'record_error')
++    def test_boolean_string_does_not_pass_fact_review(self):
++        for value in ['false','true',1,[],{}]:
++            s=self.complete();s['final_expression']['facts_rechecked']=value
++            self.assertEqual(self.assess(s)['status'],'record_error')
++    def test_review_subject_changes_are_not_hidden_by_updated_outputs(self):
++        s=self.complete();new=self.artifact('revised-manuscript.md','SYNTHETIC revised statement')
++        s['documents']['manuscript']=new;s['provider_uses'][-1]['outputs']=[new]
++        self.assertTrue(any('review' in a for a in self.assess(s)['next_actions']))
++        s['final_expression']['review']['subjects']=[new]
++        self.assertEqual(self.assess(s)['status'],'ready_for_content_review')
++    def test_legacy_unbound_review_requests_migration_not_silent_readiness(self):
++        s=self.complete();s['final_expression']['review'].pop('subjects')
++        self.assertTrue(any('Bind the post-expression' in a for a in self.assess(s)['next_actions']))
++    def test_new_current_host_research_verb_is_permitted(self):
++        s={'mode':'focused','host_actions':['verify_citations','derive_counterexample','a_future_research_action']}
++        self.assertEqual(self.assess(s)['status'],'ready_for_content_review')
++    def test_explicit_external_assistant_target_is_rejected_for_any_verb(self):
++        s={'mode':'focused','host_actions':[{'action':'verify_citations','assistant_target':'other_assistant'}]}
++        self.assertEqual(self.assess(s)['status'],'record_error')
++    def test_explicit_external_actor_is_rejected(self):
++        s={'mode':'focused','host_actions':[{'action':'verify_citations','actor_scope':'another_host'}]}
++        self.assertEqual(self.assess(s)['status'],'record_error')
++    def test_changed_prior_art_invalidates_only_related_coverage(self):
++        s=self.complete();s['documents']['prior_art']=self.artifact('new-prior-art.md','SYNTHETIC different sources')
++        result=self.assess(s)
++        self.assertTrue(any('literature' in a for a in result['next_actions']))
++        self.assertTrue(any('novelty' in a for a in result['next_actions']))
++        self.assertFalse(any('writing operation' in a for a in result['next_actions']))
++    def test_related_version_bound_prior_work_can_be_reused(self):
++        s=self.complete()
++        self.assertEqual(self.assess(s)['status'],'ready_for_content_review')
++    def test_unrelated_task_brief_cannot_cover_literature(self):
++        s=self.complete();s['provider_uses'][0]['document_bindings']['research_brief']=self.artifact('other-task.md')
++        self.assertTrue(any('literature' in a for a in self.assess(s)['next_actions']))
++    def test_legacy_role_labels_need_associations(self):
++        s=self.complete();s['provider_uses'][0].pop('document_bindings')
++        self.assertTrue(any('novelty' in a for a in self.assess(s)['next_actions']))
++    def test_protocol_delivery_does_not_require_future_results(self):
++        s=self.complete();s['research_context']={'article_type':'registered-report-stage1','study_types':['protocol-design']}
++        s['requested_deliverable']='protocol';s['scope_achievement']='protocol_deliverable'
++        for role in ['research_results','validation']:s['documents'].pop(role)
++        result=self.assess(s);self.assertEqual(result['status'],'ready_for_content_review')
++        self.assertEqual(result['delivery_scope'],'protocol');self.assertFalse(result['empirical_research_completion_evaluated'])
++    def test_empirical_request_cannot_be_relabelled_protocol(self):
++        s=self.complete();s['research_context']={'article_type':'registered-report-stage1','study_types':['protocol-design']}
++        s['requested_deliverable']='empirical_paper';s['documents'].pop('research_results')
++        self.assertEqual(self.assess(s)['status'],'record_error')
++    def test_not_applicable_flag_does_not_waive_empirical_results(self):
++        s=self.complete();s['documents'].pop('research_results')
++        s['applicability']={'research_results':{'applicable':False,'reason':'SYNTHETIC attempt to omit required evidence'}}
++        self.assertTrue(any('research_results' in a for a in self.assess(s)['next_actions']))
++    def test_protocol_review_and_design_still_required(self):
++        s=self.complete();s['research_context']={'article_type':'study-protocol','study_types':['protocol-design']}
++        s['documents'].pop('design');s['documents'].pop('scientific_review')
++        result=self.assess(s);self.assertTrue(any('design' in a for a in result['next_actions']))
++        self.assertTrue(any('scientific_review' in a for a in result['next_actions']))
+     def add_figure(self,s):
+         f=self.artifact('main-figure.svg','<svg><!-- synthetic test figure --></svg>')
+         x=self.use(s,'figure','Haojae/scipilot-figure-skill',['figure'],[f]);x['steps']=['plan','select','produce','numeric_review','visual_review']

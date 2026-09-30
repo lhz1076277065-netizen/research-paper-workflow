@@ -1,0 +1,126 @@
+{
+  "case_id": "research-judgement",
+  "condition": "release",
+  "replicate": 0,
+  "synthetic_material": true,
+  "agent": "/root/judgement_candidate",
+  "model_identifier": "unknown",
+  "token_usage": "unknown",
+  "cost": "unknown",
+  "completed_at_utc": "2026-09-30T07:00:54.401346+00:00",
+  "material_hash_verification": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/research-brief.md",
+      "expected_sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "actual_sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "matched": true
+    }
+  ],
+  "skill_entry_hash_matched": true,
+  "actual_read_files": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-suite/requests/research-judgement.release.0.json",
+      "sha256": "eaaebbc8466d45b5bfb3e90c6c8d056a8625854bdbdb0eb17ddad5458d2fa986",
+      "version": "frozen release replicate 0 request"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/evaluations/fixtures/heldout/research-brief.md",
+      "sha256": "49052a376b9338fb8e2d2325f0ebc87bf2d7911f24962d95f5119c1b89c8aa5c",
+      "version": "frozen synthetic fixture"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/SKILL.md",
+      "sha256": "ccb66466fe9bd0bf3ccc3c761d18cf6c97c6c67ba924927c8ece68df0f8b21b8",
+      "version": "3.2.0-rc.1"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/references/protocol.md",
+      "sha256": "605ed64836fbc40253b6bdbb7ede25f20e4ddc336b1a95b2bfb8f8a53be74e72",
+      "version": "3.2.0-rc.1"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/references/provider-policy.md",
+      "sha256": "18e49c0e05e0debd255ad8c0025393685f583ab42c98ed38a861c2181724ee7a",
+      "version": "3.2.0-rc.1"
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/work/academic-research-skills-v3.2.0-rc.1/skills/topic-novelty/references/execution-handoff.md",
+      "sha256": "f92f1ca6ea7a8c861dd90e37b27b8ccf275c2279b0fc9267dd07f0e68072190b",
+      "version": "3.2.0-rc.1"
+    }
+  ],
+  "external_sources": [],
+  "tools_operations": [
+    {
+      "tool": "functions.exec -> exec_command",
+      "action": "Read the single frozen request with cat."
+    },
+    {
+      "tool": "functions.exec -> exec_command -> Python standard library",
+      "action": "Read the designated fixture and skill entry; compute and assert their SHA-256 matches."
+    },
+    {
+      "tool": "functions.exec -> exec_command",
+      "action": "Read only topic-novelty protocol.md, provider-policy.md and execution-handoff.md; the three independent reads were batched."
+    },
+    {
+      "tool": "functions.exec -> exec_command -> Python standard library",
+      "action": "Write judgement.md, operation-note.md and execution.json exclusively within the assigned output directory; record source hashes and output receipts."
+    },
+    {
+      "tool": "functions.exec -> exec_command -> Python standard library",
+      "action": "Final read-back verification of JSON, source hashes, output existence/content and output hashes; results recorded below."
+    },
+    {
+      "tool": "functions.exec -> exec_command -> Python standard library",
+      "action": "Refine one sentence to distinguish a dependence-status counterexample from a gain-sign counterexample; reread and verify source/output hashes and refresh output receipts."
+    }
+  ],
+  "skill_use": {
+    "name": "topic-novelty",
+    "version": "3.2.0-rc.1",
+    "scope": "Compared supplied synthetic profiles, candidate routes, possible contributions, falsifiers and next discriminating work. Used the execution handoff for this actual delivery.",
+    "adaptation": "Nearest-neighbour comparison is limited to fabricated R1-R4; no literature novelty or empirical findings claimed. Executed in current host with no delegation or host/model switching.",
+    "external_professional_skills_used": []
+  },
+  "formal_outputs": [
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.release.0/judgement.md",
+      "sha256": "a245a57a36cc4bc24aabd077e7918fa45d389532777895a503979a39c4ea18b6",
+      "bytes": 13415
+    },
+    {
+      "path": "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.release.0/operation-note.md",
+      "sha256": "61f4b89c819533626d9a45861440a985931044bd7c624c4c8aacd7d6e372205f",
+      "bytes": 1415
+    }
+  ],
+  "review": {
+    "status": "passed final read-back and integrity checks",
+    "substantive_review": "Objective preserved; stipulated profile findings separated from conjectures; four routes compared with counterevidence; next action and contingent follow-up specified; acquisition dependence versus gain identifiability distinguished; simulator experiments explicitly unexecuted.",
+    "empirical_study_conducted": false,
+    "new_observations_or_fitted_models": false,
+    "skill_source_modified": false,
+    "other_condition_requests_or_answers_read": false,
+    "delegation_used": false,
+    "limitations": [
+      "Synthetic profiles only; original correction/calibration formulas unavailable.",
+      "No real-literature novelty verification, structural proof, simulation results or deployment validation.",
+      "Exact model identifier, token usage and cost unavailable."
+    ],
+    "checks_passed": [
+      "Frozen material and skill SHA-256 matches",
+      "All recorded source hashes unchanged",
+      "Exactly three requested delivery/log files present",
+      "Judgement and operation note decode as nonempty UTF-8",
+      "Formal output SHA-256 and byte receipts match read-back",
+      "Execution JSON parses successfully"
+    ],
+    "read_back_files": [
+      "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.release.0/judgement.md",
+      "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.release.0/operation-note.md",
+      "LOCAL_EVIDENCE_ROOT/evaluation-trials/research-judgement.release.0/execution.json"
+    ],
+    "reviewed_at_utc": "2026-09-30T07:02:35.512576+00:00"
+  }
+}
