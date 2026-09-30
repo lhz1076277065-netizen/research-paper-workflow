@@ -1,0 +1,26 @@
+{
+  "capability": "analysis-execution",
+  "task_sha256": "8e09f49a2e63f776c44b4ba69ae1ee31b7b82d26b9e14fc5be2c5328d12d0864",
+  "provider_id": "host_fallback",
+  "execution_mode": "host_fallback",
+  "execution_status": "executed",
+  "outputs": [
+    {
+      "role": "results",
+      "path": "results.json",
+      "sha256": "8f422d8208eba6c5a97830137f3d56770bec0fcb273b23e0b962d4bb81041dae"
+    },
+    {
+      "role": "figure",
+      "path": "figure.svg",
+      "sha256": "1a6ef04f9afd46401caff114755ca04f5a8be8adf8fb2f57f0db55af3592e404"
+    },
+    {
+      "role": "report",
+      "path": "report.md",
+      "sha256": "509ddae0d174ca0d0dcc5c36c3c2ea0b10b96dca4e26a098a60c687b2ad17b77"
+    }
+  ],
+  "reviews": [],
+  "evidence_checks": []
+}

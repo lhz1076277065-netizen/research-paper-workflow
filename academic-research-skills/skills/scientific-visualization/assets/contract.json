@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "scientific-visualization",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "visual_records.jsonl",
+  "output_roles": [
+    "figure_table_plan.md",
+    "figure_manifest.json",
+    "table_manifest.json",
+    "visual_qa.md"
+  ],
+  "gates": [
+    "values_trace_to_results",
+    "appropriate_visual_encoding",
+    "original_evidence_not_generated",
+    "readability_and_accessibility",
+    "caption_and_callouts_consistent"
+  ]
+}

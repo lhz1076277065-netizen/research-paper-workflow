@@ -1,0 +1,42 @@
+{
+  "baseline": {
+    "entry_files": 19,
+    "entry_characters": 34846,
+    "entry_max_characters": 1896,
+    "entry_max_lines": 44,
+    "active_module_markdown_characters": 519642
+  },
+  "current": {
+    "entry_files": 19,
+    "entry_characters": 10920,
+    "entry_max_characters": 637,
+    "entry_max_lines": 19,
+    "active_module_markdown_characters": 255679
+  },
+  "entry_character_reduction_percent": 68.66,
+  "default_manuscript_export": {
+    "alpha4": {
+      "characters": 13786,
+      "included_resources": [
+        "SKILL.md",
+        "references/host-portability.md",
+        "references/environment-setup.md",
+        "references/research-types.md",
+        "references/integrity.md",
+        "references/protocol.md"
+      ]
+    },
+    "alpha5": {
+      "characters": 691,
+      "included_resources": [
+        "SKILL.md"
+      ]
+    }
+  },
+  "export_character_reduction_percent": 94.99,
+  "measure": "Unicode characters including whitespace, not tokenizer counts or model performance",
+  "professional_sections_preserved": 147,
+  "professional_modules": 19,
+  "manuscript_reference_items": 30,
+  "research_profiles": 16
+}

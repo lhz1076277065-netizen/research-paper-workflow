@@ -1,0 +1,78 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "scientific-visualization",
+  "run_id": "RUN-template",
+  "created_at": "2026-09-29T00:00:00+00:00",
+  "updated_at": "2026-09-29T00:00:00+00:00",
+  "request": "",
+  "scope": "",
+  "status": "draft",
+  "inputs": [],
+  "sources": [],
+  "artifacts": [],
+  "outputs": [
+    {
+      "role": "figure_table_plan.md",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "figure_manifest.json",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "table_manifest.json",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "visual_qa.md",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    }
+  ],
+  "gates": [
+    {
+      "id": "values_trace_to_results",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "appropriate_visual_encoding",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "original_evidence_not_generated",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "readability_and_accessibility",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "caption_and_callouts_consistent",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    }
+  ],
+  "unknowns": [],
+  "external_dependencies": [],
+  "next_actions": []
+}

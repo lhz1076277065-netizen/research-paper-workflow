@@ -1,0 +1,50 @@
+{
+  "scope": "Real upstream helper, manufactured analytic inputs; not an upstream full-Skill or paper evaluation",
+  "source_git_blob": "a3a4df7580f8d4275d822424a11aaa9f6f36df11",
+  "source_sha256": "40ce3bcd31dfc4b33e38a1cb180c75dc730ee6fa046f04934c79f285c6f890c1",
+  "platform": "Linux",
+  "python": "3.13.5",
+  "selected_route": {
+    "tight": false,
+    "grayscale_preview": false,
+    "formats": [
+      "svg",
+      "png"
+    ]
+  },
+  "selected_route_passed": true,
+  "png_size": [
+    900,
+    600
+  ],
+  "expected_size": [
+    900,
+    600
+  ],
+  "files": [
+    {
+      "path": "verified.svg",
+      "sha256": "17e43a82d2704d0cf1d9b02ec3aeb792d23c2b42e5dda16efededb6150a0e925"
+    },
+    {
+      "path": "verified.png",
+      "sha256": "37cb3040d62c0cd516c45fdfe7350347f3ad099f5a9432048f8fb23bed083656"
+    }
+  ],
+  "exploratory_option_check": {
+    "grayscale_preview": true,
+    "png_size": [
+      801,
+      586
+    ],
+    "original_size_preserved": false,
+    "finding": "This snapshot redraws the main PNG with a tight bounding box when a grayscale preview is requested. Exact-size export uses grayscale_preview=False; make any preview from a separate copy."
+  },
+  "visual_inspection": "not_claimed_by_script",
+  "full_upstream_skill_tested": false,
+  "repository": "Haojae/scipilot-figure-skill",
+  "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+  "source_path": "scripts/export_figure.py",
+  "source_acquisition": "GitHub connector full text copied byte-for-byte; Git blob identity verified locally",
+  "source_file_redistributed": false
+}

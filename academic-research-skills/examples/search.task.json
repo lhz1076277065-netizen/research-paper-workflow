@@ -1,0 +1,11 @@
+{
+  "capability": "literature-discovery",
+  "request": "按当前研究问题查文献，顶刊标杆与广泛相关证据分开记录。",
+  "requested_outputs": [
+    "search_log.jsonl",
+    "screening_log.jsonl",
+    "literature_map.md"
+  ],
+  "facts": {},
+  "inputs": []
+}

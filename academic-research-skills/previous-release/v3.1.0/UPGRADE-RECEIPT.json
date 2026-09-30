@@ -1,0 +1,45 @@
+{
+  "status": "merged_and_locally_software_validated",
+  "base_version": "3.0.0",
+  "target_version": "3.1.0",
+  "base": "LOCAL_EVIDENCE_ROOT/acceptance-20260930-091827/packages/v3-original/academic-research-skills-v3.0.0",
+  "out": "LOCAL_EVIDENCE_ROOT/upgrade-20260930-121737/academic-research-skills-v3.1.0",
+  "entry_hashes_matched": 19,
+  "payload_source_files": 55,
+  "original_unchanged": true,
+  "base_tests_rerun": true,
+  "native_agent_execution_tested": false,
+  "fixes": {
+    "canonical_test_path": "applied_exact_match",
+    "help": "wrapper_applied_original_retained",
+    "build": "layered_generator_installed"
+  },
+  "professional_protocols_preserved": 19,
+  "preserved_protocols": {
+    "skills/manuscript-writing/references/protocol.md": "e979bd6af0f926e4987801b89266c6760b31e9d0cffd33488d91c4daa8789213",
+    "skills/publication-stewardship/references/protocol.md": "e14dc2c4029585e4011116a76d12063acc5ad7af5953660d557e97e76d9c6136",
+    "skills/manuscript-review/references/protocol.md": "c6ac325b7741bd4b96ed6d44cc955069212ccab7e1a013dc2aaddf1135d126ca",
+    "skills/robustness-reproducibility/references/protocol.md": "d9acfe107bd88f3781ca6d8d3368129132c0dc39a3d339c7919fa665b197e886",
+    "skills/research-design/references/protocol.md": "3c62e1196eab2a7664aa021518215c8cb4e33026e7c15455179caafa9e6e1db4",
+    "skills/topic-novelty/references/protocol.md": "605ed64836fbc40253b6bdbb7ede25f20e4ddc336b1a95b2bfb8f8a53be74e72",
+    "skills/analysis-execution/references/protocol.md": "f0ac83fef80c047ffd63169dad0344681c3cf71b3b73d29d6fa16293cf1fe92e",
+    "skills/literature-discovery/references/protocol.md": "b07118b08582c87d4d823a1f0d3af78d979c39493718038fc2070fa5cc749ff5",
+    "skills/data-preparation/references/protocol.md": "21f2fbc66b8a6f917b971844b8aa5c029ac20cafd830fb9bddc088b93d2e350d",
+    "skills/data-discovery/references/protocol.md": "7697fab5989f7c1add8475515e5adbfae8d64d965d6e2cc53f12c6ae842e3e2b",
+    "skills/citation-audit/references/protocol.md": "cc83a88ac6869d57aa4826009d7de6d43ebf74008b2490f68a3350f153cd1edb",
+    "skills/paper-deep-reading/references/protocol.md": "631897cd5b5c307c422bf9622fe92d85e732d4f6313378aa5a4e0159bdd89971",
+    "skills/journal-intelligence/references/protocol.md": "f264b870a90a0c60f130416fdfa692c4183b5fce7ad633c3114978dc13003816",
+    "skills/peer-review-response/references/protocol.md": "32e1feccf47be5012282da0932e9e80411d6df6b802b03c0ca8edabfd667c703",
+    "skills/scientific-visualization/references/protocol.md": "8ef13cd29d551c92b10f19d5e2fd16e303e62c5b802af62d6003ec2322c23238",
+    "skills/research-intake/references/protocol.md": "5e4fc90edbc98e495e326dde66537318806a777c63f1c72b2056a6d4d8fcbb63",
+    "skills/ethics-protocol/references/protocol.md": "fe7700c02133f08de0aade843f1eb724b1101666f53c058cf966efbdedfe1753",
+    "skills/submission-packaging/references/protocol.md": "c16eb4153e49345e0c878542846337ed04c08f4d26b5b809c938e70f0984df3c",
+    "skills/research-paper-workflow/references/protocol.md": "ed4aebe8c94148de3a5cd158b8ffd9e9cf1f5c3cd6e24509dc83baed40596be2"
+  },
+  "created_at": "2026-09-30T04:38:09.164806+00:00",
+  "local_verification": {
+    "regression": "test-results/regression.json",
+    "summary": "test-results/SUMMARY.json",
+    "retained_professional_protocols": 19
+  }
+}

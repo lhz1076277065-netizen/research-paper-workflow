@@ -1,0 +1,71 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "paper-deep-reading",
+  "run_id": "RUN-template",
+  "created_at": "2026-09-29T00:00:00+00:00",
+  "updated_at": "2026-09-29T00:00:00+00:00",
+  "request": "",
+  "scope": "",
+  "status": "draft",
+  "inputs": [],
+  "sources": [],
+  "artifacts": [],
+  "outputs": [
+    {
+      "role": "paper_dossiers.md",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "cross_paper_synthesis.md",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "transfer_patterns.md",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    }
+  ],
+  "gates": [
+    {
+      "id": "actual_reading_evidence",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "methods_not_inferred_from_abstract",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "visuals_actually_inspected",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "source_inference_separated",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "transfer_limits_documented",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    }
+  ],
+  "unknowns": [],
+  "external_dependencies": [],
+  "next_actions": []
+}

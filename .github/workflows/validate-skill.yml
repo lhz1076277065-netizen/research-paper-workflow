@@ -23,6 +23,12 @@ jobs:
           tests/fixtures/complete-project
           --profile auto
           --report validation-report.json
+      - name: Check complete library build consistency
+        run: python academic-research-skills/scripts/build_release.py --check
+      - name: Run complete library regression
+        run: python -m unittest discover -s academic-research-skills/tests -v
+      - name: Run portable basic smoke
+        run: python academic-research-skills/scripts/selftest.py --out "${{ runner.temp }}/academic-skill-smoke"
       - name: Upload validation report
         uses: actions/upload-artifact@v7
         with:

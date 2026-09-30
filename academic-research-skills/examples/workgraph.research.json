@@ -1,0 +1,56 @@
+{
+  "schema_version": "workgraph-1",
+  "revision": 0,
+  "note": "结构示例，不是实际研究。只有明确授权范围才创建这些节点；已有结果可作为绑定输入。",
+  "tasks": [
+    {
+      "id": "results",
+      "capability": "analysis-execution",
+      "status": "pending",
+      "depends_on": [],
+      "write_paths": [
+        "outputs/results"
+      ],
+      "attempts": 0,
+      "max_attempts": 2
+    },
+    {
+      "id": "figures",
+      "capability": "scientific-visualization",
+      "status": "pending",
+      "depends_on": [
+        "results"
+      ],
+      "write_paths": [
+        "outputs/figures"
+      ],
+      "attempts": 0,
+      "max_attempts": 2
+    },
+    {
+      "id": "manuscript",
+      "capability": "manuscript-writing",
+      "status": "pending",
+      "depends_on": [
+        "results",
+        "figures"
+      ],
+      "write_paths": [
+        "outputs/manuscript"
+      ],
+      "attempts": 0,
+      "max_attempts": 2
+    },
+    {
+      "id": "venue-landscape",
+      "capability": "journal-intelligence",
+      "status": "pending",
+      "depends_on": [],
+      "write_paths": [
+        "outputs/venues"
+      ],
+      "attempts": 0,
+      "max_attempts": 1
+    }
+  ]
+}

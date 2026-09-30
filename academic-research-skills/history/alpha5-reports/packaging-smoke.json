@@ -1,0 +1,31 @@
+{
+  "version": "3.0.0-alpha.5",
+  "generated_at": "2026-09-29T16:42:23.577768+00:00",
+  "checks": [
+    {
+      "scope": "runtime-root",
+      "exit_code": 0,
+      "passed": true,
+      "checks": 4,
+      "native_agent_test": false,
+      "source_and_developer_fixtures_absent": true
+    },
+    {
+      "scope": "runtime-standalone-journal",
+      "exit_code": 0,
+      "passed": true,
+      "checks": 4,
+      "native_agent_test": false,
+      "source_and_developer_fixtures_absent": true
+    },
+    {
+      "scope": "isolated-single-skill-scientific-smoke",
+      "passed": true,
+      "checks": 7,
+      "inputs": "manufactured analytic test data",
+      "native_agent_test": false
+    }
+  ],
+  "source_tests_not_counted_again": true,
+  "macos_native_tested": false
+}

@@ -1,0 +1,52 @@
+{
+  "version": "3.1.1",
+  "scope": "five record-semantic fixes; complete general Skill library",
+  "regression": {
+    "version": "3.1.1",
+    "generated_at": "2026-09-30T06:26:06.999733+00:00",
+    "tests_run": 503,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "groups": {
+      "test_architecture": 86,
+      "test_integration": 78,
+      "test_lean": 51,
+      "test_portability": 50,
+      "test_quality31": 68,
+      "test_release": 49,
+      "test_suite": 121
+    },
+    "platform": "Darwin",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "scope": "Local software regression. HTTP/source responses are synthetic fixtures unless separately reported.",
+    "native_agent_behavior_evaluated": false,
+    "real_paper_lifecycle_tested": false,
+    "macos_native_tested": true
+  },
+  "retained_v310_cases": 489,
+  "new_bug_regressions": 14,
+  "targeted_probe_outcomes": [
+    "ready_for_content_review",
+    "record_error",
+    "research_in_progress",
+    "ready_for_content_review",
+    "research_in_progress",
+    "ready_for_content_review"
+  ],
+  "original_source_unchanged": true,
+  "independent_capabilities": 19,
+  "external_skill_sources": 13,
+  "research_profiles": 16,
+  "default_profile": "general",
+  "empirical_research_or_manuscript_produced": false,
+  "native_agent_quality_gain_established": false,
+  "smoke": {
+    "basic": 4,
+    "scientific": 7,
+    "passed": true,
+    "manufactured_inputs": true
+  }
+}

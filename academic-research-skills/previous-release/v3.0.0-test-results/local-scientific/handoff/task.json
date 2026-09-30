@@ -1,0 +1,19 @@
+{
+  "capability": "analysis-execution",
+  "service": "analyze",
+  "request": "Manufactured analytic smoke test only",
+  "facts": {
+    "has_data": true
+  },
+  "inputs": [
+    {
+      "path": "/mnt/data/final_iteration/academic-research-skills-v3.0.0/test-results/local-scientific/analytic-input.csv"
+    }
+  ],
+  "requested_outputs": [
+    "results",
+    "figure",
+    "report"
+  ],
+  "operation": "execute"
+}

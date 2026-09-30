@@ -1,0 +1,22 @@
+{
+  "capability": "analysis-execution",
+  "service": "interpret",
+  "operation": "execute",
+  "request": "对已提供原始史料做来源批判与论证；不要补造材料。",
+  "facts": {
+    "has_primary_sources": true
+  },
+  "research_context": {
+    "discipline": "history",
+    "article_type": "research",
+    "study_types": [
+      "humanities-interpretive"
+    ],
+    "evidence_basis": [
+      "primary-sources"
+    ]
+  },
+  "runtime": {
+    "backend": "host"
+  }
+}

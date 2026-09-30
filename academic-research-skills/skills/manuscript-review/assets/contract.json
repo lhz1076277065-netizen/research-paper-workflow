@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "manuscript-review",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "review_findings.jsonl",
+  "output_roles": [
+    "internal_review.md",
+    "revision_log.json",
+    "reviewed_manuscript",
+    "readiness_report.json"
+  ],
+  "gates": [
+    "scientific_issues_addressed",
+    "numbers_and_crossrefs_consistent",
+    "language_not_detector_game",
+    "repair_verified",
+    "readiness_scope_honest"
+  ]
+}

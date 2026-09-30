@@ -1,0 +1,78 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "research-paper-workflow",
+  "run_id": "RUN-template",
+  "created_at": "2026-09-29T00:00:00+00:00",
+  "updated_at": "2026-09-29T00:00:00+00:00",
+  "request": "",
+  "scope": "",
+  "status": "draft",
+  "inputs": [],
+  "sources": [],
+  "artifacts": [],
+  "outputs": [
+    {
+      "role": "research_plan.md",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "research_state.json",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "delivery_index.md",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "primary_research_deliverable",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    }
+  ],
+  "gates": [
+    {
+      "id": "scope_and_resources",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "evidence_traceability",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "applicable_stage_gates",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "requested_deliverables",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "human_authorization_boundaries",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    }
+  ],
+  "unknowns": [],
+  "external_dependencies": [],
+  "next_actions": []
+}

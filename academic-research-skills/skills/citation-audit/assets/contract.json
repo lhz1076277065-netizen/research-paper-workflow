@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "citation-audit",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "citation_checks.jsonl",
+  "output_roles": [
+    "citation_audit.md",
+    "reference_corrections.json",
+    "claim_citation_map.json"
+  ],
+  "gates": [
+    "bibliographic_accuracy",
+    "semantic_support",
+    "versions_and_status_checked",
+    "intext_reference_bijection",
+    "unverified_explicit"
+  ]
+}

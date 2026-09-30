@@ -1,0 +1,9 @@
+{
+  "capability": "journal-intelligence",
+  "service": "matching",
+  "operation": "review",
+  "request": "根据所提供摘要匹配期刊；不重写稿件，不重新分析。",
+  "runtime": {
+    "backend": "host"
+  }
+}

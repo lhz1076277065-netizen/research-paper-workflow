@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "稳健性、敏感性与独立重跑：任务记录",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "robustness-reproducibility"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "observed",
+        "assessed",
+        "unverified",
+        "not_applicable"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+      },
+      "uniqueItems": true
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+      },
+      "uniqueItems": true
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "claim_id": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "test_purpose": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "prespecified_or_posthoc": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "perturbation_or_reproduction": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "input_versions": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "execution_evidence": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "outcome": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "tolerance": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "conclusion_impact": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "unresolved_dependencies": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "claim_id",
+        "test_purpose",
+        "prespecified_or_posthoc",
+        "perturbation_or_reproduction",
+        "input_versions",
+        "execution_evidence",
+        "outcome",
+        "tolerance",
+        "conclusion_impact",
+        "unresolved_dependencies"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "id",
+    "record_type",
+    "status",
+    "created_at",
+    "source_refs",
+    "artifact_refs",
+    "fields"
+  ],
+  "additionalProperties": false
+}

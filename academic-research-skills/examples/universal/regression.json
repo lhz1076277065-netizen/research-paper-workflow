@@ -1,0 +1,15 @@
+{
+  "capability": "analysis-execution",
+  "service": "analyze",
+  "operation": "execute",
+  "request": "执行已确定的回归计划并报告诊断和不确定性。",
+  "research_context": {
+    "study_types": [
+      "quantitative-observational"
+    ],
+    "method_family": "regression"
+  },
+  "runtime": {
+    "backend": "python"
+  }
+}

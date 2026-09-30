@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "审稿意见处理与逐点回复：任务记录",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "peer-review-response"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "observed",
+        "assessed",
+        "unverified",
+        "not_applicable"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+      },
+      "uniqueItems": true
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+      },
+      "uniqueItems": true
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "comment_id": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "comment_text_or_authorized_excerpt": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "request_type": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "response_strategy": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "required_work": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "actual_change": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "new_evidence": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "manuscript_location": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "response_text": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "verification": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "comment_id",
+        "comment_text_or_authorized_excerpt",
+        "request_type",
+        "response_strategy",
+        "required_work",
+        "actual_change",
+        "new_evidence",
+        "manuscript_location",
+        "response_text",
+        "verification",
+        "status"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "id",
+    "record_type",
+    "status",
+    "created_at",
+    "source_refs",
+    "artifact_refs",
+    "fields"
+  ],
+  "additionalProperties": false
+}

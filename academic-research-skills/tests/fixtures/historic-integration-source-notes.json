@@ -1,0 +1,23 @@
+{
+  "basis": "User 14 source pointers and actual GitHub entry/script inspection; local design marked separately.",
+  "api_mismatch": {
+    "repo": "microsoft/ResearchStudio",
+    "skill_blob": "e840090d3a87d08c7ea2a6772673fe4bf4bccb38",
+    "script_blob": "1bb3d2ca452d743db2c266ba8de9fe03225e1270",
+    "observed": "SKILL requires --json; current argparse lacks --json; search_papers function returns dict."
+  },
+  "scipilot_function": {
+    "script_blob": "7bf54ec4ceb438974f4238e4b4ed4a13cd09ba67",
+    "signature": "profile_data(source, group_cols=None)"
+  },
+  "standards_checked": [
+    {
+      "url": "https://agentskills.io/specification",
+      "role": "Folder packaging / progressive disclosure, not scientific validity"
+    },
+    {
+      "url": "https://developers.openai.com/codex/skills",
+      "role": "Host installation details only; no universal call_skill API promised"
+    }
+  ]
+}

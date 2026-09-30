@@ -1,0 +1,19 @@
+{
+  "schema_version": "workgraph-1",
+  "revision": 0,
+  "note": "演示单项结构，不代表已执行选刊",
+  "tasks": [
+    {
+      "id": "journal-match",
+      "capability": "journal-intelligence",
+      "service": "matching",
+      "status": "pending",
+      "depends_on": [],
+      "write_paths": [
+        "outputs/journal"
+      ],
+      "attempts": 0,
+      "max_attempts": 1
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "capability": "research-intake",
+  "service": "method-plan",
+  "operation": "plan",
+  "request": "安装版本检查依赖，作为软件安装测试而非科研。",
+  "runtime": {
+    "backend": "python",
+    "python_groups": [
+      "validation"
+    ]
+  }
+}

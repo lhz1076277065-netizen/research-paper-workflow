@@ -1,0 +1,18 @@
+{
+  "capability": "scientific-visualization",
+  "service": "figure-review",
+  "operation": "review",
+  "request": "审查我提供的现有图，指出图型、误差含义和可读性问题；不重新分析数据。",
+  "facts": {
+    "has_figure": true
+  },
+  "requested_outputs": [
+    "visual_review.md"
+  ],
+  "required_reviews": [],
+  "inputs": [],
+  "constraints": {
+    "private_uploads_allowed": false
+  },
+  "example_note": "实际任务填写 inputs 中的真实图像路径；本文件不是已经完成的审查。"
+}

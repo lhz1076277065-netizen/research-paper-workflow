@@ -1,0 +1,31 @@
+{
+  "schema_version": "runtime-providers-1",
+  "package_version": "3.1.1",
+  "capabilities": [
+    "analysis-execution",
+    "citation-audit",
+    "data-discovery",
+    "data-preparation",
+    "ethics-protocol",
+    "journal-intelligence",
+    "literature-discovery",
+    "manuscript-review",
+    "manuscript-writing",
+    "paper-deep-reading",
+    "peer-review-response",
+    "publication-stewardship",
+    "research-design",
+    "research-intake",
+    "research-paper-workflow",
+    "robustness-reproducibility",
+    "scientific-visualization",
+    "submission-packaging",
+    "topic-novelty",
+    "presentation",
+    "dissemination",
+    "workbench"
+  ],
+  "providers": [],
+  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "capability": "research-paper-workflow"
+}

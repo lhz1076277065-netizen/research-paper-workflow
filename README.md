@@ -1,92 +1,35 @@
-# Research Paper Workflow Skill
+# Academic Research Skills
 
-A discipline-neutral Codex skill that directs an agent to create a complete, evidence-based scholarly paper. It moves from specialist knowledge acquisition and recent high-impact literature through current data, method-matched advanced analysis, publication-grade figures, full manuscript writing, language purification, and final validation.
+Version **3.1.1** is a complete, discipline-neutral library: one optional research orchestrator and eighteen independently usable specialist Skills. It preserves sixteen extensible research profiles, a `general` default and the user's thirteen external professional source repositories. Use a focused Skill for a focused request; developing this library produces Skill files and validation, without starting a research project.
 
-Version 2 adds machine-readable project templates, nine article-type profiles, citation and result consistency checks, figure and DOCX inspection, bilingual language auditing, a unified readiness validator, and GitHub Actions verification.
+The complete source lives in [academic-research-skills/](academic-research-skills/). Runtime and source ZIPs are published in [GitHub Releases](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases). Start with its [中文说明](academic-research-skills/README.zh-CN.md), [English guide](academic-research-skills/README.md), or the chosen `skills/<capability>/SKILL.md`.
 
 ## Install
 
-Install from this GitHub repository with the Codex skill installer:
+Use the existing Codex installer to install one capability from this repository:
 
 ```bash
-python "$CODEX_HOME/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --path research-paper-workflow
+python "$CODEX_HOME/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --path academic-research-skills/skills/research-paper-workflow
 ```
 
-On Windows PowerShell:
+Replace the path's final name with the capability you need, for example `journal-intelligence` or `scientific-visualization`. Installing all nineteen is optional. Restart Codex to refresh its native Skill catalog. Other Agents may load a selected folder or use the library's documented export tools; file loading is distinct from native automatic routing.
 
-```powershell
-python "$env:CODEX_HOME\skills\.system\skill-installer\scripts\install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --path research-paper-workflow
+The previous installation path `research-paper-workflow/` also contains the current complete orchestrator. Its old v2 helpers, nine legacy validator profiles and project experiments are preserved for existing consumers; [LEGACY_HELPERS.md](research-paper-workflow/LEGACY_HELPERS.md) explains their separate scope. Avoid installing both copies of the same orchestrator name.
+
+## Use and verification
+
+Ask `$journal-intelligence` to match journals, `$manuscript-writing` to edit the supplied text, or `$research-paper-workflow` to pursue a complete authorized research project. The current Agent uses its existing model, chooses necessary professional implementations and preserves the actual scientific objective. Native internal delegation is optional. Optional record checkers verify artifact identity and applicable completion; they do not certify scientific quality.
+
+v3.1.1 fixes five reproduced record issues: factual-review types, reviewed manuscript version, assistant scope versus ordinary action names, literature/reading/novelty input association and prospective protocol delivery. See [MIGRATION.zh-CN.md](academic-research-skills/MIGRATION.zh-CN.md) and [UPDATE_REPORT.md](academic-research-skills/UPDATE_REPORT.md).
+
+```bash
+python academic-research-skills/scripts/build_release.py --check
+python -m unittest discover -s academic-research-skills/tests -v
+python academic-research-skills/scripts/selftest.py --out /tmp/academic-skill-smoke
 ```
 
-Restart Codex after installation.
-
-## Use
-
-Invoke the skill with:
-
-```text
-Use $research-paper-workflow to produce a complete paper with current data, top literature, advanced analysis, publication-grade figures, and final audit.
-```
-
-The primary output is the actual editable manuscript and its supporting artifacts, not only a review, plan, or readiness report.
-
-Initialize and validate a research project:
-
-```powershell
-python research-paper-workflow\scripts\init_research_project.py --profile empirical-general --dest my-paper
-python research-paper-workflow\scripts\validate_research_package.py my-paper --profile auto --report my-paper\validation\report.json
-```
-
-## What It Does
-
-- Inspect and organize real project materials.
-- Retrieve literature and execute feasible analyses or experiments needed by the claims.
-- Prioritize directly relevant literature from the rolling five-year window and verify WoS Core Collection and JCR Q1/Q2 status.
-- Audit data freshness, source coverage, integration quality, bias and frozen-release provenance.
-- Build a domain knowledge map from standards, authoritative reviews, primary studies and official technical sources.
-- Use SmartPLS or AMOS when the study genuinely requires PLS-SEM or CB-SEM, with complete measurement and structural-model diagnostics.
-- Produce publication-grade vector or high-resolution figures instead of raw software screenshots.
-- Write the complete title, abstract, main text, declarations, captions, and references.
-- Generate and connect figures, tables, supplements, and reproducibility artifacts.
-- Revise the manuscript directly until the evidence, argument, and files are consistent.
-- Detect and rewrite formulaic AI-style phrasing, conversational explanation, promotional language, drafting notes, and other non-academic residue.
-- Scan Markdown, text, LaTeX, HTML, and DOCX manuscript sources before final acceptance.
-- Build a claim-evidence ledger for all major claims.
-- Require traceable evidence, data sufficiency rationale, experimental validity, uncertainty, limitations, and reproducibility.
-- Prevent fabricated evidence and unsupported claims.
-- Run final acceptance only after the manuscript has been produced.
-- Reject readiness automatically when evidence, data, citations, results, figures, DOCX integrity, language, profile requirements, or reproducibility artifacts fail.
-
-## Repository Layout
-
-```text
-research-paper-workflow/
-  SKILL.md
-  agents/
-    openai.yaml
-  references/
-    artifact-contracts.md
-    article-type-routing.md
-    research-quality-gates.md
-    experiment-workflow.md
-    literature-evidence-workflow.md
-    data-currency-and-coverage.md
-    domain-knowledge-integration.md
-    advanced-analysis-and-figures.md
-    manuscript-workflow.md
-    manuscript-language-audit.md
-    final-acceptance-checklist.md
-  scripts/
-    audit_manuscript_language.py
-    init_research_project.py
-    refresh_literature_metadata.py
-    validate_research_package.py
-    research_validation/
-  assets/
-    templates/
-    profiles/
-```
+Local v3.1.1 regression: **503 passed**, plus four basic and seven manufactured scientific smoke checks. Read the [actual test summary](academic-research-skills/test-results/SUMMARY.json) for scope and limitations. Native behavior and content quality require separate evidence. Existing root tests and CI retain the legacy helpers and additionally check the complete library; the unrelated experiment trigger is unchanged.
 
 ## License
 
-MIT License.
+MIT. External professional sources retain their own licenses and are discovered on demand; their complete code is not bundled here.

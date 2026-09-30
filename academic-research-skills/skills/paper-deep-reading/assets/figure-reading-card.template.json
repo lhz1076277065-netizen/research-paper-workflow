@@ -1,0 +1,59 @@
+{
+  "template_name": "figure-reading-card",
+  "template_status": "unfilled_not_evidence",
+  "schema_version": "3.0-alpha.1",
+  "instructions": "依据实际阅读或研究填写；保留 unknown/null 与原因；模板不是事实或默认结论。",
+  "figure_id": null,
+  "paper_id": null,
+  "source_url_or_file": null,
+  "page": null,
+  "figure_number": null,
+  "panel": null,
+  "visual_reading_evidence": {
+    "status": "not_attempted",
+    "render_or_image_locator": null,
+    "inspected_at": null
+  },
+  "scientific_question": null,
+  "argument_role": null,
+  "chart_type": null,
+  "x_axis": {
+    "variable": null,
+    "unit": null,
+    "scale": null,
+    "limits": null
+  },
+  "y_axis": {
+    "variable": null,
+    "unit": null,
+    "scale": null,
+    "limits": null
+  },
+  "grouping_and_encoding": {
+    "color": null,
+    "shape": null,
+    "size": null,
+    "line_style": null
+  },
+  "sample_unit_and_n": null,
+  "uncertainty_definition": null,
+  "statistical_annotations": null,
+  "caption_meaning": null,
+  "linked_methods": [],
+  "linked_results": [],
+  "graphical_inference_limits": [],
+  "software": {
+    "reported_name": null,
+    "evidence_locator": null,
+    "status": "unknown",
+    "possible_reimplementation_not_original": null
+  },
+  "transferable_pattern": null,
+  "conditions_for_use": [],
+  "original_redesign_plan": null,
+  "reuse_permissions": {
+    "license": null,
+    "allowed_use": null,
+    "redistribution_authorized": false
+  }
+}

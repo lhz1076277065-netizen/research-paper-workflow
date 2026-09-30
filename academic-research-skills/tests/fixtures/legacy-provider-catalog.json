@@ -1,0 +1,1613 @@
+{
+  "schema_version": "provider-catalog-2",
+  "package_version": "3.0.0-alpha.4",
+  "source_count": 14,
+  "unique_repo_count": 13,
+  "default_phases": [
+    1
+  ],
+  "policy": "Prefer fit, available, compatible project-source providers; never run all candidates. No fixed host/model/team.",
+  "providers": [
+    {
+      "id": "researchstudio.paper-search",
+      "repo": "microsoft/ResearchStudio",
+      "entrypoint": "ResearchStudio-Idea/skills/paper_search/SKILL.md",
+      "capabilities": [
+        "literature-discovery"
+      ],
+      "purpose": "多来源论文检索；复用原 search_papers 函数，不重写数据库连接器。",
+      "phase": 1,
+      "mode": "script-adapter",
+      "default_candidate": true,
+      "requires_host": [
+        "python",
+        "network"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "ResearchStudio-Idea/skills/paper_search/SKILL.md",
+        "ResearchStudio-Idea/skills/paper_search/scripts/search_papers.py",
+        "ResearchStudio-Idea/skills/paper_search/scripts/_http_runtime.py",
+        "ResearchStudio-Idea/skills/paper_search/scripts/source_worker.py"
+      ],
+      "entry_git_blob_sha": "e840090d3a87d08c7ea2a6772673fe4bf4bccb38",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "SKILL 要求 --json，但当前 CLI 未声明该参数；函数真实返回分源字典。调用后还需按用户原始问题阅读摘要筛选。",
+      "adaptations": [
+        "调用上游 Python 函数后本地序列化；不是声称完整原生 Skill 已执行。",
+        "仅将实时来源写入 retrieved；模型回忆放入待核实线索，不视作检索结果。",
+        "原始结果和 stderr 保留；零条不自动解释为无相关研究。"
+      ],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/microsoft/ResearchStudio/blob/HEAD/ResearchStudio-Idea/skills/paper_search/SKILL.md",
+      "script": {
+        "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers.py",
+        "git_blob_sha": "1bb3d2ca452d743db2c266ba8de9fe03225e1270",
+        "adapter": "researchstudio-search",
+        "network": true
+      },
+      "integration_wave": 1,
+      "services": {
+        "search": {
+          "capabilities": [
+            "literature-discovery"
+          ],
+          "requires_host": [
+            "python",
+            "network"
+          ],
+          "requires_facts": [],
+          "mode": "script-adapter"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "nature.reader",
+      "repo": "Yuan1z0825/nature-skills",
+      "entrypoint": "skills/nature-reader/SKILL.md",
+      "capabilities": [
+        "paper-deep-reading"
+      ],
+      "purpose": "全文/摘录/问答与图文公式来源映射。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": true,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/nature-reader/SKILL.md",
+        "skills/nature-reader/manifest.yaml",
+        "skills/nature-shared/core/terminology-ledger.md"
+      ],
+      "entry_git_blob_sha": "cf8d3cbe6917d962fbb43de9218d4fad5c01e89f",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "载入 manifest 所列核心和匹配格式片段；图表精读另需视觉能力。问答不强制全文双语翻译。",
+      "adaptations": [],
+      "license_label_observed": "Apache-2.0",
+      "source_url": "https://github.com/Yuan1z0825/nature-skills/blob/HEAD/skills/nature-reader/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "read": {
+          "capabilities": [
+            "paper-deep-reading"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        },
+        "extract": {
+          "capabilities": [
+            "paper-deep-reading"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        },
+        "translate": {
+          "capabilities": [
+            "paper-deep-reading"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "researchstudio.scoop-check",
+      "repo": "microsoft/ResearchStudio",
+      "entrypoint": "ResearchStudio-Idea/skills/scoop_check/SKILL.md",
+      "capabilities": [
+        "topic-novelty"
+      ],
+      "purpose": "对具体问题与贡献拆轴检索、摘要初筛、正文比对。",
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": true,
+      "requires_host": [
+        "web"
+      ],
+      "requires_facts": [
+        "has_novelty_claim"
+      ],
+      "required_paths": [
+        "ResearchStudio-Idea/skills/scoop_check/SKILL.md",
+        "ResearchStudio-Idea/skills/paper_search/SKILL.md"
+      ],
+      "entry_git_blob_sha": "f45532d96d539eeb3d22d651a11e1eb0bd1ab77f",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "TaskCreate 和固定 .claude 路径不是本项目依赖；原版需要时由宿主提供等价任务记录。摘要重合数只作线索。",
+      "adaptations": [
+        "以宿主能力解析路径/记录任务，不要求指定 API。",
+        "不把 3–7 篇预算上限当作创新已经证实；超出范围明确限制并按重要性扩展。",
+        "模型回忆必须外部核验；原文未读时不下全文已证实结论。"
+      ],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/microsoft/ResearchStudio/blob/HEAD/ResearchStudio-Idea/skills/scoop_check/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "novelty-check": {
+          "capabilities": [
+            "topic-novelty"
+          ],
+          "requires_host": [
+            "web"
+          ],
+          "requires_facts": [
+            "has_novelty_claim"
+          ],
+          "mode": "adapted-protocol"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "researchstudio.idea-spark",
+      "repo": "microsoft/ResearchStudio",
+      "entrypoint": "ResearchStudio-Idea/skills/idea_spark/SKILL.md",
+      "capabilities": [
+        "topic-novelty"
+      ],
+      "purpose": "基于文献的具体研究想法与可否证方案。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "python",
+        "web",
+        "isolated-contexts"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "ResearchStudio-Idea/skills/idea_spark/SKILL.md"
+      ],
+      "entry_git_blob_sha": "63689fc66f53a471bd84f30d59faa7f54f7cc650",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "以 ML 会议语料归纳为起点，不泛化为所有顶刊标准；独立上下文是上游前提，缺少时换实现而非伪造审查。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/microsoft/ResearchStudio/blob/HEAD/ResearchStudio-Idea/skills/idea_spark/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "ideate": {
+          "capabilities": [
+            "topic-novelty"
+          ],
+          "requires_host": [
+            "python",
+            "web",
+            "isolated-contexts"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "scholar.research-ideation",
+      "repo": "Galaxy-Dawn/claude-scholar",
+      "entrypoint": "skills/research-ideation/SKILL.md",
+      "capabilities": [
+        "research-intake",
+        "topic-novelty",
+        "research-design"
+      ],
+      "purpose": "问题卡、证据需要、假设与可否证条件。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": true,
+      "requires_host": [
+        "web"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/research-ideation/SKILL.md"
+      ],
+      "entry_git_blob_sha": "c389b2d2717207b99646f880db033d103d8512c1",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "Zotero/Obsidian 只有已配置且授权时才使用；不要求用户先安装整套 Scholar。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/Galaxy-Dawn/claude-scholar/blob/HEAD/skills/research-ideation/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "ideate": {
+          "capabilities": [
+            "research-intake",
+            "topic-novelty",
+            "research-design"
+          ],
+          "requires_host": [
+            "web"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "kdense.database-lookup",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/database-lookup/SKILL.md",
+      "capabilities": [
+        "data-discovery"
+      ],
+      "purpose": "按指定权威数据库复用端点、筛选、分页和溯源指南。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": true,
+      "requires_host": [
+        "web"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/database-lookup/SKILL.md"
+      ],
+      "entry_git_blob_sha": "84f0f798b726378c5f79e641b76a98cd2b8848ec",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "只查当前任务涉及的数据库；具体服务的授权、调用限制、版本和数量需实核。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/HEAD/skills/database-lookup/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "lookup": {
+          "capabilities": [
+            "data-discovery"
+          ],
+          "requires_host": [
+            "web"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        },
+        "acquire": {
+          "capabilities": [
+            "data-discovery"
+          ],
+          "requires_host": [
+            "web"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "kdense.statistical-analysis",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/statistical-analysis/SKILL.md",
+      "capabilities": [
+        "research-design",
+        "analysis-execution"
+      ],
+      "purpose": "方法选择、效应量、功效与诊断，低层实现按具体方法再加载。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": true,
+      "requires_host": [
+        "python"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/statistical-analysis/SKILL.md"
+      ],
+      "entry_git_blob_sha": "6f6d0fa886b5f5825618af731ca77e76daea4a24",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "选择表是候选建议，不代替抽样/目标量/依赖结构判断；p 值不证明效应存在，非显著不等价。按实际软件版本核对 API。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/HEAD/skills/statistical-analysis/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "method-plan": {
+          "capabilities": [
+            "research-design",
+            "analysis-execution"
+          ],
+          "requires_host": [],
+          "requires_facts": [],
+          "mode": "native"
+        },
+        "analyze": {
+          "capabilities": [
+            "analysis-execution"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_data"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "kdense.statsmodels",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/statsmodels/SKILL.md",
+      "capabilities": [
+        "analysis-execution"
+      ],
+      "purpose": "回归、广义模型和时间序列的低层实现",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "python"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/statsmodels/SKILL.md"
+      ],
+      "entry_git_blob_sha": null,
+      "source_review_status": "catalogued_requires_entry_review",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "本轮登记目录候选，使用前重新确认实际入口、依赖与目标版本；未运行该工具。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/HEAD/skills/statsmodels/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "analyze": {
+          "capabilities": [
+            "analysis-execution"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_data"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "catalogued_requires_entry_review",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "kdense.pymc",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/pymc/SKILL.md",
+      "capabilities": [
+        "analysis-execution"
+      ],
+      "purpose": "贝叶斯模型与诊断",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "python"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/pymc/SKILL.md"
+      ],
+      "entry_git_blob_sha": null,
+      "source_review_status": "catalogued_requires_entry_review",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "本轮登记目录候选，使用前重新确认实际入口、依赖与目标版本；未运行该工具。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/HEAD/skills/pymc/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "analyze": {
+          "capabilities": [
+            "analysis-execution"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_data"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "catalogued_requires_entry_review",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "kdense.scikit-learn",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/scikit-learn/SKILL.md",
+      "capabilities": [
+        "analysis-execution"
+      ],
+      "purpose": "预测模型和验证管线",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "python"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/scikit-learn/SKILL.md"
+      ],
+      "entry_git_blob_sha": null,
+      "source_review_status": "catalogued_requires_entry_review",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "本轮登记目录候选，使用前重新确认实际入口、依赖与目标版本；未运行该工具。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/HEAD/skills/scikit-learn/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "analyze": {
+          "capabilities": [
+            "analysis-execution"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_data"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "catalogued_requires_entry_review",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "kdense.exploratory-data-analysis",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/exploratory-data-analysis/SKILL.md",
+      "capabilities": [
+        "data-preparation"
+      ],
+      "purpose": "数据概况与预处理线索",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "python"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/exploratory-data-analysis/SKILL.md"
+      ],
+      "entry_git_blob_sha": null,
+      "source_review_status": "catalogued_requires_entry_review",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "本轮登记目录候选，使用前重新确认实际入口、依赖与目标版本；未运行该工具。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/HEAD/skills/exploratory-data-analysis/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "profile": {
+          "capabilities": [
+            "data-preparation"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_data"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "catalogued_requires_entry_review",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "scipilot.figure",
+      "repo": "Haojae/scipilot-figure-skill",
+      "entrypoint": "SKILL.md",
+      "capabilities": [
+        "scientific-visualization",
+        "data-preparation"
+      ],
+      "purpose": "纯数据图的选图、绘制和视觉检查；不负责示意图。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": true,
+      "requires_host": [
+        "python"
+      ],
+      "requires_facts": [
+        "has_data"
+      ],
+      "required_paths": [
+        "SKILL.md",
+        "scripts/profile_data.py",
+        "references/chart_selection.md",
+        "references/visual_review.md"
+      ],
+      "entry_git_blob_sha": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "profile_data 是分析步骤，不是整套绘图；完整交付仍需实际图像、源数据绑定与视觉检查。期刊预设和图型禁忌按任务核验，不当普适政策。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/Haojae/scipilot-figure-skill/blob/HEAD/SKILL.md",
+      "script": {
+        "path": "scripts/profile_data.py",
+        "git_blob_sha": "7bf54ec4ceb438974f4238e4b4ed4a13cd09ba67",
+        "adapter": "scipilot-profile",
+        "network": false
+      },
+      "integration_wave": 1,
+      "services": {
+        "profile": {
+          "capabilities": [
+            "scientific-visualization",
+            "data-preparation"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_data"
+          ],
+          "mode": "script-adapter"
+        },
+        "plot": {
+          "capabilities": [
+            "scientific-visualization"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_data"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "nature.figure",
+      "repo": "Yuan1z0825/nature-skills",
+      "entrypoint": "skills/nature-figure/SKILL.md",
+      "capabilities": [
+        "scientific-visualization"
+      ],
+      "purpose": "Python/R 数据图、多面板证据结构与渲染 QA。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": true,
+      "requires_host": [
+        "vision"
+      ],
+      "requires_facts": [
+        "has_data",
+        "plot_backend_chosen"
+      ],
+      "required_paths": [
+        "skills/nature-figure/SKILL.md",
+        "skills/nature-figure/manifest.yaml",
+        "skills/nature-shared/core/nature-results-discussion.md"
+      ],
+      "entry_git_blob_sha": "d06042393f72dce88f2716f4dd05d73c27f0b117",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "任务给定 Python/R 可复用，无需重复问；未给定则尊重原版一次性选择边界。生成式图只在明确请求且合规时作为示意，不能替代结果。",
+      "adaptations": [],
+      "license_label_observed": "Apache-2.0",
+      "source_url": "https://github.com/Yuan1z0825/nature-skills/blob/HEAD/skills/nature-figure/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "plot": {
+          "capabilities": [
+            "scientific-visualization"
+          ],
+          "requires_host": [
+            "vision"
+          ],
+          "requires_facts": [
+            "has_data",
+            "plot_backend_chosen"
+          ],
+          "mode": "native"
+        },
+        "figure-review": {
+          "capabilities": [
+            "scientific-visualization"
+          ],
+          "requires_host": [
+            "vision"
+          ],
+          "requires_facts": [
+            "has_figure"
+          ],
+          "mode": "native"
+        },
+        "figure-plan": {
+          "capabilities": [
+            "scientific-visualization"
+          ],
+          "requires_host": [],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "scholar.publication-chart",
+      "repo": "Galaxy-Dawn/claude-scholar",
+      "entrypoint": "skills/publication-chart-skill/SKILL.md",
+      "capabilities": [
+        "scientific-visualization"
+      ],
+      "purpose": "pubfig/pubtab 的图表生产、表格导出和 QA。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": true,
+      "requires_host": [
+        "python"
+      ],
+      "requires_facts": [
+        "has_data"
+      ],
+      "required_paths": [
+        "skills/publication-chart-skill/SKILL.md"
+      ],
+      "entry_git_blob_sha": "ad883c152bbab4d412c09415678e0fd88856a7ca",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "原版输出最小值可仅为命令/建议；本项目请求实际文件时必须继续执行。安装仅在授权环境发生。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/Galaxy-Dawn/claude-scholar/blob/HEAD/skills/publication-chart-skill/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "plot": {
+          "capabilities": [
+            "scientific-visualization"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_data"
+          ],
+          "mode": "native"
+        },
+        "table": {
+          "capabilities": [
+            "scientific-visualization"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_data"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "nature.writing",
+      "repo": "Yuan1z0825/nature-skills",
+      "entrypoint": "skills/nature-writing/SKILL.md",
+      "capabilities": [
+        "manuscript-writing",
+        "submission-packaging"
+      ],
+      "purpose": "按文章类型/章节/期刊调用写作片段；保留本项目 30 步交付要求。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": true,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/nature-writing/SKILL.md",
+        "skills/nature-writing/manifest.yaml",
+        "skills/nature-shared/core/reader-workflow.md",
+        "skills/nature-shared/core/paper-type-taxonomy.md",
+        "skills/nature-shared/core/ethics.md",
+        "skills/nature-shared/core/terminology-ledger.md",
+        "skills/nature-writing/static/core/stance.md",
+        "skills/nature-writing/static/core/workflow.md",
+        "skills/nature-writing/static/core/output-format.md"
+      ],
+      "entry_git_blob_sha": "15824495c1ff934b12c1f2ba65ccf4296f8a563a",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "期刊轴默认 generic；补全事实/研究缺口不能靠润色。现有稿件不是自动核实的结果。",
+      "adaptations": [],
+      "license_label_observed": "Apache-2.0",
+      "source_url": "https://github.com/Yuan1z0825/nature-skills/blob/HEAD/skills/nature-writing/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "draft": {
+          "capabilities": [
+            "manuscript-writing"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        },
+        "revise": {
+          "capabilities": [
+            "manuscript-writing"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        },
+        "submission-package": {
+          "capabilities": [
+            "submission-packaging"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "kdense.scientific-writing",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/scientific-writing/SKILL.md",
+      "capabilities": [
+        "manuscript-writing",
+        "citation-audit",
+        "ethics-protocol"
+      ],
+      "purpose": "证据绑定、报告规范与一致性检查。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [
+        "human_sources_verified"
+      ],
+      "required_paths": [
+        "skills/scientific-writing/SKILL.md"
+      ],
+      "entry_git_blob_sha": "bb4741e7264302bc5cee6cc1a42e521117728b2a",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "原版明确要求人类核验来源；默认自主模式不可伪造这项前提。可单独评估其离线工具，不宣称完成原生流程。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/HEAD/skills/scientific-writing/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "draft": {
+          "capabilities": [
+            "manuscript-writing"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [
+            "human_sources_verified"
+          ],
+          "mode": "native"
+        },
+        "citation-check": {
+          "capabilities": [
+            "citation-audit"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [
+            "human_sources_verified"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "kdense.literature-review",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/literature-review/SKILL.md",
+      "capabilities": [
+        "literature-discovery"
+      ],
+      "purpose": "系统性综合候选。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "web"
+      ],
+      "requires_facts": [
+        "generated_schematics_requested"
+      ],
+      "required_paths": [
+        "skills/literature-review/SKILL.md"
+      ],
+      "entry_git_blob_sha": "2f85676f1a06fd71d7f9c6ebfa6d2670c099a2e1",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "原版强制额外生成式示意图且依赖其他技能。普通搜索不默认选择；需要适配时单独记录差异。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/HEAD/skills/literature-review/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "synthesize": {
+          "capabilities": [
+            "literature-discovery"
+          ],
+          "requires_host": [
+            "web"
+          ],
+          "requires_facts": [
+            "generated_schematics_requested"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "ars.deep-research",
+      "repo": "Imbad0202/academic-research-skills",
+      "entrypoint": "deep-research/SKILL.md",
+      "capabilities": [
+        "literature-discovery"
+      ],
+      "purpose": "文献综合与引导式研究候选。",
+      "phase": 1,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "web",
+        "subagents"
+      ],
+      "requires_facts": [
+        "guided_checkpoints_accepted"
+      ],
+      "required_paths": [
+        "deep-research/SKILL.md"
+      ],
+      "entry_git_blob_sha": "833093159fc177a41875667d7834eb589b325396",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "原版包含固定代理配置和共享依赖；不嵌套 academic-pipeline。许可和宿主适配应单独处理。",
+      "adaptations": [],
+      "license_label_observed": "CC-BY-NC-4.0",
+      "source_url": "https://github.com/Imbad0202/academic-research-skills/blob/HEAD/deep-research/SKILL.md",
+      "integration_wave": 1,
+      "services": {
+        "synthesize": {
+          "capabilities": [
+            "literature-discovery"
+          ],
+          "requires_host": [
+            "web",
+            "subagents"
+          ],
+          "requires_facts": [
+            "guided_checkpoints_accepted"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "aris.experiment-bridge",
+      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "entrypoint": "skills/experiment-bridge/SKILL.md",
+      "capabilities": [
+        "analysis-execution"
+      ],
+      "purpose": "已有计划到实际代码、基线和实验结果。",
+      "phase": 2,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "python"
+      ],
+      "requires_facts": [
+        "has_experiment_plan",
+        "budget_defined",
+        "stop_conditions_defined"
+      ],
+      "required_paths": [
+        "skills/experiment-bridge/SKILL.md"
+      ],
+      "entry_git_blob_sha": "dd8d595df77f4481cb828d7c3a2583e7e499c7c9",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "仅在计算型研究需要时接入；不固定模型/GPU数，不默认付费部署。",
+      "adaptations": [
+        "将模型、MCP 和并行常量交还宿主；科学检查要求保留。",
+        "原 AUTO_DEPLOY 默认值不授予本项目外部部署权限。"
+      ],
+      "license_label_observed": "upstream-check-required",
+      "source_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/HEAD/skills/experiment-bridge/SKILL.md",
+      "integration_wave": 2,
+      "services": {
+        "experiment": {
+          "capabilities": [
+            "analysis-execution"
+          ],
+          "requires_host": [
+            "python"
+          ],
+          "requires_facts": [
+            "has_experiment_plan",
+            "budget_defined",
+            "stop_conditions_defined"
+          ],
+          "mode": "adapted-protocol"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "autoresearch.bounded-loop",
+      "repo": "karpathy/autoresearch",
+      "entrypoint": "program.md",
+      "capabilities": [
+        "analysis-execution"
+      ],
+      "purpose": "固定评价、预算和回退的专用训练优化循环。",
+      "phase": 2,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "python",
+        "compute"
+      ],
+      "requires_facts": [
+        "has_experiment_plan",
+        "budget_defined",
+        "stop_conditions_defined",
+        "frozen_evaluator"
+      ],
+      "required_paths": [
+        "program.md"
+      ],
+      "entry_git_blob_sha": "dea9bcc0174f1502d0ba64000b94b81ba605855b",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "专用训练环境，非通用统计/研究系统。",
+      "adaptations": [
+        "有界运行，不继承 LOOP FOREVER 或取消权限。",
+        "保留失败/撤回实验记录，崩溃指标为 null 而非零分。",
+        "评价集不能反复当最终测试；最终主张另做独立检验。"
+      ],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/karpathy/autoresearch/blob/HEAD/program.md",
+      "integration_wave": 2,
+      "services": {
+        "optimize": {
+          "capabilities": [
+            "analysis-execution"
+          ],
+          "requires_host": [
+            "python",
+            "compute"
+          ],
+          "requires_facts": [
+            "has_experiment_plan",
+            "budget_defined",
+            "stop_conditions_defined",
+            "frozen_evaluator"
+          ],
+          "mode": "adapted-protocol"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "aris.experiment-audit",
+      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "entrypoint": "skills/experiment-audit/SKILL.md",
+      "capabilities": [
+        "robustness-reproducibility"
+      ],
+      "purpose": "第二批专业审计候选，按实际任务范围读取。",
+      "phase": 2,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/experiment-audit/SKILL.md"
+      ],
+      "entry_git_blob_sha": null,
+      "source_review_status": "catalogued_requires_entry_review",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "须先核验具体入口和独立审查能力；不得把多模型一致当科学事实。",
+      "adaptations": [],
+      "license_label_observed": "upstream-license-check-required",
+      "source_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/HEAD/skills/experiment-audit/SKILL.md",
+      "integration_wave": 2,
+      "services": {
+        "experiment-review": {
+          "capabilities": [
+            "robustness-reproducibility"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "catalogued_requires_entry_review",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "aris.citation-audit",
+      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "entrypoint": "skills/citation-audit/SKILL.md",
+      "capabilities": [
+        "citation-audit"
+      ],
+      "purpose": "第二批专业审计候选，按实际任务范围读取。",
+      "phase": 2,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/citation-audit/SKILL.md"
+      ],
+      "entry_git_blob_sha": null,
+      "source_review_status": "catalogued_requires_entry_review",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "须先核验具体入口和独立审查能力；不得把多模型一致当科学事实。",
+      "adaptations": [],
+      "license_label_observed": "upstream-license-check-required",
+      "source_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/HEAD/skills/citation-audit/SKILL.md",
+      "integration_wave": 2,
+      "services": {
+        "citation-check": {
+          "capabilities": [
+            "citation-audit"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "catalogued_requires_entry_review",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "aris.paper-claim-audit",
+      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "entrypoint": "skills/paper-claim-audit/SKILL.md",
+      "capabilities": [
+        "manuscript-review"
+      ],
+      "purpose": "第二批专业审计候选，按实际任务范围读取。",
+      "phase": 2,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/paper-claim-audit/SKILL.md"
+      ],
+      "entry_git_blob_sha": null,
+      "source_review_status": "catalogued_requires_entry_review",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "须先核验具体入口和独立审查能力；不得把多模型一致当科学事实。",
+      "adaptations": [],
+      "license_label_observed": "upstream-license-check-required",
+      "source_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/HEAD/skills/paper-claim-audit/SKILL.md",
+      "integration_wave": 2,
+      "services": {
+        "review": {
+          "capabilities": [
+            "manuscript-review"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "catalogued_requires_entry_review",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "anti-defensive.expression",
+      "repo": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "entrypoint": "skills/anti-defensive-writing/SKILL.md",
+      "capabilities": [
+        "manuscript-writing",
+        "manuscript-review"
+      ],
+      "purpose": "仅借鉴去冗余道歉、突出有证据贡献的表达。",
+      "phase": 1,
+      "mode": "reference-only",
+      "default_candidate": false,
+      "requires_host": [],
+      "requires_facts": [],
+      "required_paths": [
+        "skills/anti-defensive-writing/SKILL.md"
+      ],
+      "entry_git_blob_sha": "59879391d4e7eda0d0017cff89f1ecf0b2566b8c",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "不得原样启用改变指标/隐藏负结果规则；这里只作有边界的表达参考。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/HEAD/skills/anti-defensive-writing/SKILL.md",
+      "integration_wave": 1,
+      "services": {},
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "reference"
+    },
+    {
+      "id": "rougier.examples",
+      "repo": "rougier/scientific-visualization-book",
+      "entrypoint": "README.md",
+      "capabilities": [
+        "scientific-visualization"
+      ],
+      "purpose": "按需学习可视化原理与示例，不是原生 Skill。",
+      "phase": 1,
+      "mode": "reference-only",
+      "default_candidate": false,
+      "requires_host": [],
+      "requires_facts": [],
+      "required_paths": [
+        "README.md"
+      ],
+      "entry_git_blob_sha": "015656850f4881bba60f3a106656fc30fa1df0e2",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "书籍、代码、字体许可分别核验；不随本包分发全文/图片/字体。",
+      "adaptations": [],
+      "license_label_observed": "book-CC-BY-NC-SA-4.0; check each code file",
+      "source_url": "https://github.com/rougier/scientific-visualization-book/blob/HEAD/README.md",
+      "integration_wave": 1,
+      "services": {},
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "reference"
+    },
+    {
+      "id": "open-design.academic-deck",
+      "repo": "nexu-io/open-design",
+      "entrypoint": "plugins/_official/examples/hps-academic-paper/SKILL.md",
+      "capabilities": [
+        "presentation"
+      ],
+      "purpose": "按已核实研究制作 HTML 学术演示。",
+      "phase": 3,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "browser"
+      ],
+      "requires_facts": [
+        "presentation_requested"
+      ],
+      "required_paths": [
+        "plugins/_official/examples/hps-academic-paper/SKILL.md",
+        "plugins/_official/examples/hps-academic-paper/example.html"
+      ],
+      "entry_git_blob_sha": "81870bf259c9dafe7bb6f1ddfd389c0938440acc",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "模板示例数据不能进入研究；无需把整个设计系统加入论文主线。",
+      "adaptations": [],
+      "license_label_observed": "upstream/component-check-required",
+      "source_url": "https://github.com/nexu-io/open-design/blob/HEAD/plugins/_official/examples/hps-academic-paper/SKILL.md",
+      "integration_wave": 3,
+      "services": {
+        "present": {
+          "capabilities": [
+            "presentation"
+          ],
+          "requires_host": [
+            "browser"
+          ],
+          "requires_facts": [
+            "presentation_requested"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "codex-ppt.image-deck",
+      "repo": "ningzimu/codex-ppt-skill",
+      "entrypoint": "skills/codex-ppt/SKILL.md",
+      "capabilities": [
+        "presentation"
+      ],
+      "purpose": "整页图像式 PPT。",
+      "phase": 3,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "image-generation",
+        "subagents"
+      ],
+      "requires_facts": [
+        "presentation_requested",
+        "image_slides_accepted",
+        "guided_checkpoints_accepted"
+      ],
+      "required_paths": [
+        "skills/codex-ppt/SKILL.md"
+      ],
+      "entry_git_blob_sha": "1cbcd9a82532e4214d591f217a12e5525d3d7b92",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "原版存在固定委派和确认要求；不适合每个元素须可编辑的 PPT。缺少前提换实现，不假装原版允许静默跳过。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/ningzimu/codex-ppt-skill/blob/HEAD/skills/codex-ppt/SKILL.md",
+      "integration_wave": 3,
+      "services": {
+        "present": {
+          "capabilities": [
+            "presentation"
+          ],
+          "requires_host": [
+            "image-generation",
+            "subagents"
+          ],
+          "requires_facts": [
+            "presentation_requested",
+            "image_slides_accepted",
+            "guided_checkpoints_accepted"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    },
+    {
+      "id": "paperspine.workbench",
+      "repo": "WUBING2023/PaperSpine",
+      "entrypoint": "dist/codex/skills/paper-spine/SKILL.md",
+      "capabilities": [
+        "workbench"
+      ],
+      "purpose": "可选完整论文工作台，不作为子总控自动嵌套。",
+      "phase": 3,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "browser",
+        "paperspine-runtime"
+      ],
+      "requires_facts": [
+        "workbench_requested",
+        "guided_checkpoints_accepted"
+      ],
+      "required_paths": [
+        "dist/codex/skills/paper-spine/SKILL.md"
+      ],
+      "entry_git_blob_sha": "3c46bf599ce7aef5e6d85806b57b713e9aeae679",
+      "source_review_status": "entry_inspected",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "自身有更新、Web配置、状态与运行时；使用时明确单一工作流控制权和更新授权。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/WUBING2023/PaperSpine/blob/HEAD/dist/codex/skills/paper-spine/SKILL.md",
+      "integration_wave": 3,
+      "services": {
+        "workbench": {
+          "capabilities": [
+            "workbench"
+          ],
+          "requires_host": [
+            "browser",
+            "paperspine-runtime"
+          ],
+          "requires_facts": [
+            "workbench_requested",
+            "guided_checkpoints_accepted"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "entry_inspected",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "workbench"
+    },
+    {
+      "id": "researchstudio.reel",
+      "repo": "microsoft/ResearchStudio",
+      "entrypoint": "ResearchStudio-Reel/README.md",
+      "capabilities": [
+        "dissemination"
+      ],
+      "purpose": "已成稿到海报/视频/传播材料的可选工作流。",
+      "phase": 3,
+      "mode": "native",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [
+        "dissemination_requested"
+      ],
+      "required_paths": [
+        "ResearchStudio-Reel/README.md"
+      ],
+      "entry_git_blob_sha": null,
+      "source_review_status": "catalogued_requires_entry_review",
+      "inspection_date": "2026-09-29",
+      "upstream_runtime_tested": false,
+      "notes": "目录级候选，使用前查实际子入口；不是本轮已经集成的渲染后端。",
+      "adaptations": [],
+      "license_label_observed": "MIT",
+      "source_url": "https://github.com/microsoft/ResearchStudio/blob/HEAD/ResearchStudio-Reel/README.md",
+      "integration_wave": 3,
+      "services": {
+        "disseminate": {
+          "capabilities": [
+            "dissemination"
+          ],
+          "requires_host": [
+            "local-files"
+          ],
+          "requires_facts": [
+            "dissemination_requested"
+          ],
+          "mode": "native"
+        }
+      },
+      "support_status": {
+        "source_review": "catalogued_requires_entry_review",
+        "local_smoke": "not_run",
+        "native_agent_evaluation": "not_run"
+      },
+      "provider_kind": "skill"
+    }
+  ],
+  "version": "3.0.0-alpha.3",
+  "notes": "Integration wave is release planning, NOT the scientific study stage. Services are routing hints, not scientific readiness.",
+  "capabilities": [
+    "citation-audit",
+    "literature-discovery",
+    "ethics-protocol",
+    "peer-review-response",
+    "analysis-execution",
+    "publication-stewardship",
+    "submission-packaging",
+    "research-paper-workflow",
+    "research-intake",
+    "manuscript-review",
+    "research-design",
+    "manuscript-writing",
+    "robustness-reproducibility",
+    "topic-novelty",
+    "scientific-visualization",
+    "data-discovery",
+    "data-preparation",
+    "paper-deep-reading",
+    "journal-intelligence",
+    "presentation",
+    "dissemination",
+    "workbench"
+  ]
+}

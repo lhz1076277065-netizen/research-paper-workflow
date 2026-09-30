@@ -1,0 +1,14 @@
+{
+  "repository": "Haojae/scipilot-figure-skill",
+  "retrieval": "live connected GitHub GET calls",
+  "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+  "tree": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64",
+  "tree_truncated": false,
+  "skill_path_observed": "SKILL.md",
+  "script_path_observed": "scripts/profile_data.py",
+  "script_blob": "7bf54ec4ceb438974f4238e4b4ed4a13cd09ba67",
+  "source_excerpt_read": true,
+  "upstream_code_executed": false,
+  "http_cli_network_probe": "DNS resolution failed for api.github.com and pypi.org",
+  "note": "Connected reading is distinct from running this package HTTP client. No current upstream body is embedded as runtime instructions."
+}

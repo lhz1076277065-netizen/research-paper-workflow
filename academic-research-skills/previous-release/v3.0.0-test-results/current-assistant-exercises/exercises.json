@@ -1,0 +1,43 @@
+{
+  "scope": "Three current-session task exercises, not a controlled model experiment; not counted as regression tests",
+  "cases": [
+    {
+      "case_id": "formal-proof",
+      "skill": "analysis-execution",
+      "entry_sha256": "51d19d88e502dc8fa9065fb4d785510c265b3609352a610d2d2ca6f1ada7f462",
+      "request": "证明S(a)=sum_i(x_i-a)^2在n>=1的有限实数样本上由均值唯一最小化；给完整推导，不要求数据下载。",
+      "answer": "formal-proof.md",
+      "answer_sha256": "c44e0559e233b88968adf2a8d0c1569ecad78bb0e8a17b9c32f45a175b41b287",
+      "execution": "authored_by_current_assistant_after_reading_entry",
+      "native_skill_activation": false,
+      "independent_context": false,
+      "blind_scored": false
+    },
+    {
+      "case_id": "local-edit",
+      "skill": "manuscript-writing",
+      "entry_sha256": "a8e84144fe477c41a283a6fb03ef863dabd65647bff6237c017b816700f21e70",
+      "request": "合成测试材料：120条独立记录，调整后关联估计0.24，95%CI 0.10到0.38。仅润色过度防御的结果句，不增加数值或因果主张。",
+      "answer": "local-edit.md",
+      "answer_sha256": "3bccba6022292758687cab0dfe29fa4d7e437a21bdf0839179326a8e8343e0e8",
+      "execution": "authored_by_current_assistant_after_reading_entry",
+      "native_skill_activation": false,
+      "independent_context": false,
+      "blind_scored": false
+    },
+    {
+      "case_id": "abstract-only",
+      "skill": "paper-deep-reading",
+      "entry_sha256": "9c247522fad13ccb15bbedd5d3ff6c212fadc67bb3fbc57bcb7ef56c67cb8b4a",
+      "request": "合成摘要：比较两种河流温度预测方法，在三个站点采用按年份划分的外部时段评价，方法B平均绝对误差低于方法A。仅据此提取研究信息，没有正文图表。",
+      "answer": "abstract-only.md",
+      "answer_sha256": "a23d735fd35cd7f7ba80ba109f365017f86554a9cb9a5a8872ebb30b149a1434",
+      "execution": "authored_by_current_assistant_after_reading_entry",
+      "native_skill_activation": false,
+      "independent_context": false,
+      "blind_scored": false
+    }
+  ],
+  "ability_improvement_established": false,
+  "without_skill_control_run": false
+}

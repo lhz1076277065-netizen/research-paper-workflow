@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "paper-deep-reading",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "paper_cards.jsonl",
+  "output_roles": [
+    "paper_dossiers.md",
+    "cross_paper_synthesis.md",
+    "transfer_patterns.md"
+  ],
+  "gates": [
+    "actual_reading_evidence",
+    "methods_not_inferred_from_abstract",
+    "visuals_actually_inspected",
+    "source_inference_separated",
+    "transfer_limits_documented"
+  ]
+}

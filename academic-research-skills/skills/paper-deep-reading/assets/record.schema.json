@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "顶刊论文精读与图表、模型拆解：任务记录",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "paper-deep-reading"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "observed",
+        "assessed",
+        "unverified",
+        "not_applicable"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+      },
+      "uniqueItems": true
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+      },
+      "uniqueItems": true
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "paper_id": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "bibliography": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "read_coverage": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "abstract_anatomy": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "problem_and_gap": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "theory_and_mechanism": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "design_and_data": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "model_details": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "validation_design": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "reported_results": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "figure_and_table_links": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "limitations": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "author_claim_vs_assessment": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "transfer_conditions": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "paper_id",
+        "bibliography",
+        "read_coverage",
+        "abstract_anatomy",
+        "problem_and_gap",
+        "theory_and_mechanism",
+        "design_and_data",
+        "model_details",
+        "validation_design",
+        "reported_results",
+        "figure_and_table_links",
+        "limitations",
+        "author_claim_vs_assessment",
+        "transfer_conditions"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "id",
+    "record_type",
+    "status",
+    "created_at",
+    "source_refs",
+    "artifact_refs",
+    "fields"
+  ],
+  "additionalProperties": false
+}

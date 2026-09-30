@@ -1,0 +1,29 @@
+{
+  "template_name": "research-state",
+  "template_status": "unfilled_not_evidence",
+  "schema_version": "3.0-alpha.1",
+  "instructions": "依据实际阅读或研究填写；保留 unknown/null 与原因；模板不是事实或默认结论。",
+  "project_id": null,
+  "revision": 0,
+  "request_scope": null,
+  "article_profile": null,
+  "stages": [],
+  "artifact_registry": [],
+  "decisions": [],
+  "external_dependencies": [],
+  "state_values": [
+    "not_started",
+    "in_progress",
+    "completed",
+    "blocked",
+    "redesign",
+    "not_applicable"
+  ],
+  "readiness": {
+    "structural": "not_checked",
+    "scientific": "not_checked",
+    "submission": "not_checked"
+  },
+  "authorization_records": [],
+  "history": []
+}

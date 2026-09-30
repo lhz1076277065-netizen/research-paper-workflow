@@ -1,0 +1,11 @@
+{
+  "performed_by": "current assistant using container image viewer",
+  "image": "figure.png",
+  "image_sha256": "128268859153ac0b37fd6de6bdb304f63d456e2cec64325f71ead08cc4a9e2f3",
+  "checks": [
+    "Title, axes, ticks and legend legible; no visible clipping",
+    "Legend does not obscure the line",
+    "Line endpoints at (-2,-3) and (2,5) agree with analytic signal"
+  ],
+  "scope": "Visual observation of this small software smoke-test image only; not a scientific figure certification"
+}

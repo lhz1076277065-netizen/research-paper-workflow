@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "submission-packaging",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "submission_checks.jsonl",
+  "output_roles": [
+    "submission_inventory.json",
+    "cover_letter.md",
+    "journal_checklist.md",
+    "submission_ready_report.md"
+  ],
+  "gates": [
+    "current_author_guidelines",
+    "correct_files_and_anonymity",
+    "declarations_confirmed",
+    "files_rendered_and_links_checked",
+    "submission_requires_authorization"
+  ]
+}

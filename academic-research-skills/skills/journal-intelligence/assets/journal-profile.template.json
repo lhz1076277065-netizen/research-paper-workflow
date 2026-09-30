@@ -1,0 +1,101 @@
+{
+  "template_name": "journal-profile",
+  "template_status": "unfilled_not_evidence",
+  "schema_version": "3.0-alpha.1",
+  "instructions": "依据实际阅读或研究填写；保留 unknown/null 与原因；模板不是事实或默认结论。",
+  "name": null,
+  "issn": null,
+  "publisher": null,
+  "official_home": null,
+  "checked_at": null,
+  "scope_evidence": [],
+  "article_types": [],
+  "benchmark_rationale": null,
+  "metrics": [
+    {
+      "metric": null,
+      "year": null,
+      "category": null,
+      "value": null,
+      "official_source": null,
+      "status": "unverified"
+    }
+  ],
+  "representative_articles": [],
+  "observed_patterns_not_policy": [],
+  "policies": {
+    "word_limit": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    },
+    "figure_limit": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    },
+    "open_access": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    },
+    "apc": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    },
+    "data_code": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    },
+    "ai_use": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    },
+    "preprint": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    },
+    "anonymity": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    },
+    "copyright": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    },
+    "submission_url": {
+      "value": null,
+      "official_source": null,
+      "checked_at": null,
+      "status": "unverified"
+    }
+  },
+  "fit": {
+    "scope": null,
+    "article_type": null,
+    "method": null,
+    "contribution": null,
+    "audience": null,
+    "evidence_strength": null,
+    "practical_constraints": null
+  },
+  "hard_exclusions": [],
+  "mismatches": [],
+  "required_adaptations": [],
+  "uncertainties": []
+}

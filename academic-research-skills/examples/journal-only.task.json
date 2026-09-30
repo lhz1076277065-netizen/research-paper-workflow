@@ -1,0 +1,11 @@
+{
+  "capability": "journal-intelligence",
+  "request": "只为这篇已完成论文寻找高度匹配的期刊，不重新做实验或写全文。",
+  "requested_outputs": [
+    "journal_match_report.md"
+  ],
+  "facts": {
+    "has_manuscript": true
+  },
+  "inputs": []
+}

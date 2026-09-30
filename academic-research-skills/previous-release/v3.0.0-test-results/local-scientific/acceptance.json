@@ -1,0 +1,36 @@
+{
+  "schema_version": "result-acceptance-1",
+  "status": "checked_for_handoff",
+  "passed": true,
+  "errors": [],
+  "pending": [],
+  "artifacts": [
+    {
+      "role": "results",
+      "path": "results.json",
+      "sha256": "8f422d8208eba6c5a97830137f3d56770bec0fcb273b23e0b962d4bb81041dae"
+    },
+    {
+      "role": "figure",
+      "path": "figure.svg",
+      "sha256": "1a6ef04f9afd46401caff114755ca04f5a8be8adf8fb2f57f0db55af3592e404"
+    },
+    {
+      "role": "report",
+      "path": "report.md",
+      "sha256": "509ddae0d174ca0d0dcc5c36c3c2ea0b10b96dca4e26a098a60c687b2ad17b77"
+    }
+  ],
+  "task_sha256": "8e09f49a2e63f776c44b4ba69ae1ee31b7b82d26b9e14fc5be2c5328d12d0864",
+  "checked_at": "2026-09-29T17:14:25.050115+00:00",
+  "checks_performed_here": [
+    "task/input/provider version",
+    "file identity",
+    "declared evidence constraints",
+    "review report binding"
+  ],
+  "scientific_validity_certified": false,
+  "semantic_review_performed_here": false,
+  "visual_review_performed_here": false,
+  "native_execution_observed_by_this_script": false
+}

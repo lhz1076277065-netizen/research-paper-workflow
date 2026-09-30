@@ -1,0 +1,23 @@
+{
+  "kind": "reading",
+  "records": [
+    {
+      "id": "PAPER-example-only",
+      "source_access": "abstract-only",
+      "claimed_inspected": [
+        "abstract"
+      ],
+      "coverage": {
+        "abstract": {
+          "inspected": true,
+          "locator": "EXAMPLE: abstract passage"
+        },
+        "full_text": {
+          "inspected": false,
+          "locator": null
+        }
+      }
+    }
+  ],
+  "is_synthetic_example": true
+}

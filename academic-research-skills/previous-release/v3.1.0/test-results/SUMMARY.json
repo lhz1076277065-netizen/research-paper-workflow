@@ -1,0 +1,53 @@
+{
+  "version": "3.1.0",
+  "status": "passed_for_software_release",
+  "checked_at": "2026-09-30T05:12:46.043262+00:00",
+  "scope": "Complete discipline-neutral Skill library upgrade; no manuscript or domain research is a deliverable.",
+  "regression": {
+    "tests_run": 489,
+    "retained_v300_cases": 435,
+    "current_quality_cases": 54,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "platform": "Darwin",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "result": "regression.json"
+  },
+  "original_merge_first_run": {
+    "tests_run": 435,
+    "failures": 4,
+    "archive": "previous-release/local-first-run/regression.json",
+    "failures_not_removed": true
+  },
+  "provided_layer_local_retest": {
+    "tests_run": 59,
+    "passed": true,
+    "synthetic_base_used": true,
+    "counts_not_added_to_merged_regression": true
+  },
+  "smoke": {
+    "basic_passed": 4,
+    "basic_total": 4,
+    "scientific_passed": 7,
+    "scientific_total": 7,
+    "manufactured_inputs": true
+  },
+  "build": {
+    "generated_files": 797,
+    "drift": 0
+  },
+  "independent_capabilities": 19,
+  "professional_protocols_preserved": 19,
+  "research_profiles": 16,
+  "default_profile": "general",
+  "profile_extensions_allowed": true,
+  "external_skill_sources": 13,
+  "current_agent_and_existing_model_only": true,
+  "paper_task_development_boundary_explicit": true,
+  "native_auto_activation_of_new_release_verified": false,
+  "all_disciplines_scientifically_validated": false,
+  "top_journal_quality_certified": false,
+  "scope_limits": "Software contracts and package integrity; tests do not certify model decisions or scientific results."
+}

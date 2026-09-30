@@ -1,0 +1,120 @@
+{
+  "template_name": "paper-reading-card",
+  "template_status": "unfilled_not_evidence",
+  "schema_version": "3.0-alpha.1",
+  "instructions": "依据实际阅读或研究填写；保留 unknown/null 与原因；模板不是事实或默认结论。",
+  "paper_id": null,
+  "doi_or_identifier": null,
+  "version": null,
+  "title": null,
+  "journal": null,
+  "read_coverage": {
+    "metadata": {
+      "status": "not_attempted",
+      "source_locator": null,
+      "inspected_at": null,
+      "limitation": null
+    },
+    "abstract": {
+      "status": "not_attempted",
+      "source_locator": null,
+      "inspected_at": null,
+      "limitation": null
+    },
+    "full_text": {
+      "status": "not_attempted",
+      "source_locator": null,
+      "inspected_at": null,
+      "limitation": null
+    },
+    "figures": {
+      "status": "not_attempted",
+      "source_locator": null,
+      "inspected_at": null,
+      "limitation": null
+    },
+    "tables": {
+      "status": "not_attempted",
+      "source_locator": null,
+      "inspected_at": null,
+      "limitation": null
+    },
+    "supplement": {
+      "status": "not_attempted",
+      "source_locator": null,
+      "inspected_at": null,
+      "limitation": null
+    },
+    "code_read": {
+      "status": "not_attempted",
+      "source_locator": null,
+      "inspected_at": null,
+      "limitation": null
+    },
+    "code_executed": {
+      "status": "not_attempted",
+      "source_locator": null,
+      "inspected_at": null,
+      "limitation": null
+    }
+  },
+  "abstract_anatomy": {
+    "context": null,
+    "unresolved_problem": null,
+    "objective": null,
+    "approach": null,
+    "sample_or_material": null,
+    "primary_result": null,
+    "claim_boundary": null
+  },
+  "problem": {
+    "why_important": null,
+    "what_prior_work_cannot_answer": null,
+    "exact_question": null,
+    "theory": null,
+    "mechanism": null,
+    "alternative_explanations": null,
+    "type_of_contribution": null
+  },
+  "design": {
+    "unit_of_analysis": null,
+    "population": null,
+    "sampling": null,
+    "data_source_and_version": null,
+    "variables_and_measurement": null,
+    "time_space_coverage": null,
+    "ethics_and_access": null
+  },
+  "methods": {
+    "model_family": null,
+    "mathematical_specification": null,
+    "assumptions": null,
+    "identification": null,
+    "estimation": null,
+    "hyperparameters": null,
+    "software_as_reported": null,
+    "software_evidence_locator": null,
+    "baseline": null,
+    "validation_split": null,
+    "leakage_controls": null,
+    "uncertainty": null,
+    "robustness": null
+  },
+  "findings": [],
+  "figure_ids": [],
+  "table_ids": [],
+  "limitations": [],
+  "attribution": {
+    "authors_claims": [],
+    "direct_observations": [],
+    "our_inferences": [],
+    "not_verifiable": []
+  },
+  "transfer": {
+    "potentially_reusable_logic": [],
+    "prerequisites": [],
+    "nontransferable_elements": [],
+    "replication_cost": null,
+    "next_literature_links": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "robustness-reproducibility",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "validation_records.jsonl",
+  "output_roles": [
+    "robustness_report.md",
+    "reproduction_report.md",
+    "claim_boundary_updates.json"
+  ],
+  "gates": [
+    "tests_answer_threats",
+    "no_significance_chasing",
+    "reproduction_scope_honest",
+    "null_results_valid",
+    "claims_updated"
+  ]
+}

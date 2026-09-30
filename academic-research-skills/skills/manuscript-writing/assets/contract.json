@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "manuscript-writing",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "manuscript_records.jsonl",
+  "output_roles": [
+    "manuscript_source",
+    "manuscript_render",
+    "section_evidence_map.json",
+    "writing_completion_report.md"
+  ],
+  "gates": [
+    "requested_text_actually_written",
+    "claim_evidence_alignment",
+    "methods_results_consistency",
+    "references_and_declarations",
+    "rendered_document_inspected"
+  ]
+}

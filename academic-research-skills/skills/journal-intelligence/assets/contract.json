@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "journal-intelligence",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "journal_profiles.jsonl",
+  "output_roles": [
+    "journal_report.md",
+    "journal_shortlist.json",
+    "venue_requirements.md"
+  ],
+  "gates": [
+    "venue_identity_verified",
+    "benchmark_basis_explicit",
+    "scope_article_type_fit",
+    "policies_checked_or_unknown",
+    "matching_not_acceptance_probability"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "capability": "research-intake",
+  "service": "method-plan",
+  "operation": "plan",
+  "request": "准备基础环境并验证 Python；不联网下载科学数据。",
+  "runtime": {
+    "backend": "python",
+    "python_groups": [
+      "core"
+    ]
+  }
+}

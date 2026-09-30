@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "literature-discovery",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "literature_records.jsonl",
+  "output_roles": [
+    "search_log.jsonl",
+    "screening_log.jsonl",
+    "literature_map.md"
+  ],
+  "gates": [
+    "search_reproducible",
+    "duplicates_and_versions_resolved",
+    "coverage_and_contradictions",
+    "reading_level_honest",
+    "search_limitations_recorded"
+  ]
+}

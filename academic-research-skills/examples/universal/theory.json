@@ -1,0 +1,22 @@
+{
+  "capability": "analysis-execution",
+  "service": "derive",
+  "operation": "execute",
+  "request": "根据已提供定义和命题检查证明；未知环节明确列出。",
+  "facts": {
+    "has_formal_statement": true
+  },
+  "research_context": {
+    "discipline": "mathematics",
+    "article_type": "theoretical",
+    "study_types": [
+      "theory-proof"
+    ],
+    "evidence_basis": [
+      "formal-statements"
+    ]
+  },
+  "runtime": {
+    "backend": "host"
+  }
+}

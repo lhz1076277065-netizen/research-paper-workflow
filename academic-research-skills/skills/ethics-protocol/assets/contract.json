@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "ethics-protocol",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "governance_records.jsonl",
+  "output_roles": [
+    "governance_report.md",
+    "protocol_snapshot.md",
+    "disclosure_register.json"
+  ],
+  "gates": [
+    "sensitive_activity_screened",
+    "permissions_not_fabricated",
+    "registration_timing_honest",
+    "human_approval_boundaries",
+    "ai_and_confidentiality_recorded"
+  ]
+}

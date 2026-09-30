@@ -1,0 +1,27 @@
+{
+  "template_name": "work-unit-contract",
+  "template_status": "unfilled_not_evidence",
+  "schema_version": "3.0-alpha.1",
+  "instructions": "依据实际阅读或研究填写；保留 unknown/null 与原因；模板不是事实或默认结论。",
+  "task_id": null,
+  "objective": null,
+  "scope": null,
+  "readonly_inputs": [],
+  "base_revision": null,
+  "allowed_output_root": null,
+  "deliverable_roles": [],
+  "acceptance_criteria": [],
+  "resource_limits": {
+    "cost": null,
+    "compute": null,
+    "storage": null,
+    "network": null
+  },
+  "authorization_boundaries": [],
+  "blocked_report": null,
+  "integration": {
+    "proposed_updates": [],
+    "conflicts": [],
+    "evidence_precedence": null
+  }
+}

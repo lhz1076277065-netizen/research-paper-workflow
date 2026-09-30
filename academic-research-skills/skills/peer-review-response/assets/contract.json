@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "peer-review-response",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "reviewer_response_records.jsonl",
+  "output_roles": [
+    "response_to_reviewers.md",
+    "revised_manuscript",
+    "changes.diff",
+    "revision_summary.md"
+  ],
+  "gates": [
+    "all_comments_addressed",
+    "new_work_actually_done",
+    "response_diff_consistency",
+    "scientific_disagreement_reasoned",
+    "clean_and_marked_versions_match"
+  ]
+}

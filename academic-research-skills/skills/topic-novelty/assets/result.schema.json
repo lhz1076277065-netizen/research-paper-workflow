@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Host result envelope v1",
+  "type": "object",
+  "required": [
+    "capability",
+    "task_sha256",
+    "provider_id",
+    "execution_mode",
+    "execution_status",
+    "outputs"
+  ],
+  "properties": {
+    "capability": {
+      "type": "string"
+    },
+    "task_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "provider_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "execution_mode": {
+      "enum": [
+        "native",
+        "script-adapter",
+        "adapted-protocol",
+        "host_fallback"
+      ]
+    },
+    "execution_status": {
+      "enum": [
+        "executed",
+        "partial",
+        "failed",
+        "blocked",
+        "timeout"
+      ]
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "reviews": {
+      "type": "array"
+    },
+    "evidence_checks": {
+      "type": "array"
+    }
+  },
+  "description": "Actual file identity and report linkage are checked by accept-result; statements about human/AI work must be true and cannot be proven by this schema."
+}

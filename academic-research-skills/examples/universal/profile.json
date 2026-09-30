@@ -1,0 +1,12 @@
+{
+  "capability": "data-preparation",
+  "service": "profile",
+  "operation": "execute",
+  "request": "用已有工具剖析本地数据，不改原文件。",
+  "runtime": {
+    "backend": "python",
+    "python_groups": [
+      "tabular"
+    ]
+  }
+}

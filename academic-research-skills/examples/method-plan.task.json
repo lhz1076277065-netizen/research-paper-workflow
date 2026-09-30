@@ -1,0 +1,11 @@
+{
+  "capability": "analysis-execution",
+  "service": "method-plan",
+  "operation": "plan",
+  "request": "根据研究问题和抽样结构评估方法，不实际运行数据分析。",
+  "facts": {},
+  "requested_outputs": [
+    "method_plan.md"
+  ],
+  "required_reviews": []
+}

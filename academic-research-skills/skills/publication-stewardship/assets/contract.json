@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "publication-stewardship",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "publication_records.jsonl",
+  "output_roles": [
+    "proof_report.md",
+    "archive_plan.md",
+    "publication_record.json",
+    "correction_assessment.md"
+  ],
+  "gates": [
+    "proof_values_and_metadata",
+    "versions_linked",
+    "license_and_embargo_respected",
+    "archive_or_pending_honest",
+    "corrections_not_concealed"
+  ]
+}

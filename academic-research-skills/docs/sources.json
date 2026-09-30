@@ -1,0 +1,66 @@
+[
+  {
+    "id": "S01",
+    "title": "Agent Skills specification",
+    "organization": "Agent Skills",
+    "url": "https://agentskills.io/specification",
+    "supports": "文件夹封装、SKILL.md 元数据、渐进加载；不代表所有宿主都自动递归发现 Skill。",
+    "checked_on": "2026-09-29"
+  },
+  {
+    "id": "S02",
+    "title": "San Francisco Declaration on Research Assessment",
+    "organization": "DORA",
+    "url": "https://sfdora.org/read/",
+    "supports": "不能用期刊级指标替代单篇研究质量判断。",
+    "checked_on": "2026-09-29"
+  },
+  {
+    "id": "S03",
+    "title": "Reporting guidelines library",
+    "organization": "EQUATOR Network",
+    "url": "https://www.equator-network.org/reporting-guidelines/",
+    "supports": "健康研究按设计查找报告规范；具体版本与扩展须在任务执行时确认。",
+    "checked_on": "2026-09-29"
+  },
+  {
+    "id": "S04",
+    "title": "Welcome to Registrations",
+    "organization": "OSF",
+    "url": "https://help.osf.io/article/330-welcome-to-registrations",
+    "supports": "预注册是与研究时间顺序相关的登记；本地计划不等同于已完成外部注册。",
+    "checked_on": "2026-09-29"
+  },
+  {
+    "id": "S05",
+    "title": "Retraction Watch data",
+    "organization": "Crossref",
+    "url": "https://www.crossref.org/documentation/retrieve-metadata/retraction-watch/",
+    "supports": "可作为出版状态核查来源之一；未检出记录不能认证论文不存在问题。",
+    "checked_on": "2026-09-29"
+  },
+  {
+    "id": "S06",
+    "title": "CRediT Contributor Role Taxonomy",
+    "organization": "NISO CRediT",
+    "url": "https://credit.niso.org/",
+    "supports": "结构化贡献角色；不能替作者决定署名资格。",
+    "checked_on": "2026-09-29"
+  },
+  {
+    "id": "S07",
+    "title": "FAIR principles",
+    "organization": "GO FAIR Foundation",
+    "url": "https://www.gofair.foundation/fair-principles",
+    "supports": "可发现、可获取、可互操作、可复用；不自动解除数据访问限制。",
+    "checked_on": "2026-09-29"
+  },
+  {
+    "id": "S08",
+    "title": "Artificial intelligence editorial policy",
+    "organization": "Nature Portfolio",
+    "url": "https://www.nature.com/nature-portfolio/editorial-policies/ai",
+    "supports": "实质 AI 使用的透明性与人类责任；不同期刊政策须实时核查，不外推为统一规定。",
+    "checked_on": "2026-09-29"
+  }
+]

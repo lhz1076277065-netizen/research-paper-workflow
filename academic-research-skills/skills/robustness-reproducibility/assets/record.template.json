@@ -1,0 +1,20 @@
+{
+  "id": "REC-template",
+  "record_type": "robustness-reproducibility",
+  "status": "draft",
+  "created_at": "2026-09-29T00:00:00+00:00",
+  "source_refs": [],
+  "artifact_refs": [],
+  "fields": {
+    "claim_id": null,
+    "test_purpose": null,
+    "prespecified_or_posthoc": null,
+    "perturbation_or_reproduction": null,
+    "input_versions": null,
+    "execution_evidence": null,
+    "outcome": null,
+    "tolerance": null,
+    "conclusion_impact": null,
+    "unresolved_dependencies": null
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "provider-decision-1",
+  "capability": "analysis-execution",
+  "request": "Manufactured analytic smoke test only",
+  "status": "fallback_needed",
+  "selected_provider": null,
+  "mode": "host_fallback",
+  "service": "analyze",
+  "operation": "execute",
+  "selection_basis": "task service and prerequisites; registry order is only a tie-breaker; no quality score",
+  "script_adapter_available": false,
+  "preferred_provider_unavailable": false,
+  "considered": [],
+  "evidence_blocks": [],
+  "notices": [],
+  "fallback": "Use another compatible existing tool/provider in this capability; retain unmet evidence/permission boundaries.",
+  "subagents_required_by_this_bridge": false,
+  "executed": false,
+  "scientific_validity_certified": false
+}

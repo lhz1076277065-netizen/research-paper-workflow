@@ -1,0 +1,65 @@
+{
+  "version": "3.0.0-alpha.5",
+  "checked_at": "2026-09-29T16:30:16.419067+00:00",
+  "platform": "Linux",
+  "architecture": "x86_64",
+  "python": "3.13.5",
+  "passed": true,
+  "checks": [
+    {
+      "name": "local_python_scripts",
+      "status": "passed",
+      "detail": {
+        "files": 9
+      }
+    },
+    {
+      "name": "empty_default_provider_registry",
+      "status": "passed",
+      "detail": "dynamic source selection enabled"
+    },
+    {
+      "name": "arbitrary_github_repository_supported",
+      "status": "passed",
+      "detail": "any-team/any-research-skill"
+    },
+    {
+      "name": "focused_environment_needs_no_statistical_stack",
+      "status": "passed",
+      "detail": "no packages needed"
+    },
+    {
+      "name": "scientific_imports",
+      "status": "passed",
+      "detail": {
+        "status": "environment_verified",
+        "python": "/opt/pyvenv/bin/python"
+      }
+    },
+    {
+      "name": "analytic_compute_plot_report",
+      "status": "passed",
+      "detail": {
+        "material_kind": "manufactured analytic verification; not empirical research",
+        "n": 21,
+        "slope": 2.0,
+        "intercept": 1.0,
+        "integral_sin_0_pi": 2.0,
+        "quadrature_error_estimate": 2.220446049250313e-14
+      }
+    },
+    {
+      "name": "actual_output_handoff",
+      "status": "passed",
+      "detail": {
+        "status": "checked_for_handoff",
+        "semantic_or_visual_review_performed_here": false
+      }
+    }
+  ],
+  "scientific_smoke_requested": true,
+  "native_host_activation_tested": false,
+  "model_ability_measured": false,
+  "real_paper_lifecycle_tested": false,
+  "output_directory": "/mnt/data/work_alpha5/scientific-smoke"
+}

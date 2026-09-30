@@ -1,0 +1,21 @@
+{
+  "kind": "experiments",
+  "is_synthetic_example": true,
+  "all_attempts": [
+    {
+      "id": "BASELINE-example",
+      "status": "keep",
+      "metric": 0.5
+    },
+    {
+      "id": "FAILED-example",
+      "status": "crash",
+      "metric": null
+    }
+  ],
+  "retained_attempt_ids": [
+    "BASELINE-example",
+    "FAILED-example"
+  ],
+  "selected_attempt_id": "BASELINE-example"
+}

@@ -1,0 +1,129 @@
+{
+  "scope": "Released runtime without src/tests, and 19 copied independent capability folders",
+  "checks": [
+    {
+      "name": "runtime-root",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "analysis-execution",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "citation-audit",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "data-discovery",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "data-preparation",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "ethics-protocol",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "journal-intelligence",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "literature-discovery",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "manuscript-review",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "manuscript-writing",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": true
+    },
+    {
+      "name": "paper-deep-reading",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "peer-review-response",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "publication-stewardship",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "research-design",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "research-intake",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "research-paper-workflow",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "robustness-reproducibility",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "scientific-visualization",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "submission-packaging",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    },
+    {
+      "name": "topic-novelty",
+      "returncode": 0,
+      "passed": true,
+      "scientific_smoke": false
+    }
+  ],
+  "all_passed": true,
+  "native_host_activation_tested": false,
+  "regression_count_includes_these": false,
+  "runtime_manifest_file_digests_verified": 879
+}

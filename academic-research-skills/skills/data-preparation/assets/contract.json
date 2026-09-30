@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "data-preparation",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "transformation_records.jsonl",
+  "output_roles": [
+    "data_quality_report.md",
+    "data_dictionary.json",
+    "sample_flow.json",
+    "release_manifest.json"
+  ],
+  "gates": [
+    "raw_immutable",
+    "schema_units_join_valid",
+    "exclusions_traceable",
+    "leakage_prevented",
+    "analysis_release_frozen"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "status": "not_run",
+  "controls": [
+    "same host without skill",
+    "same host alpha4",
+    "same host alpha5"
+  ],
+  "hold_constant": [
+    "model/version",
+    "tools and permissions",
+    "inputs",
+    "time and compute budget",
+    "sampling settings when exposed"
+  ],
+  "tasks": [
+    "Direct revision of a supplied results paragraph",
+    "Novel cross-disciplinary proposal without claiming results",
+    "A checkable formal derivation without datasets",
+    "Journal matching from an abstract without launching experiments",
+    "Analysis and figures from supplied data",
+    "Deep reading of supplied papers including actual figures"
+  ],
+  "metrics": [
+    "requested artifact completion",
+    "substantive correctness with source support",
+    "fabricated execution or citations",
+    "unnecessary questions and administrative work",
+    "actual loaded context and tool calls",
+    "novelty/usefulness rated blind to condition"
+  ],
+  "method": "Repeat matched cases; evaluate artifacts and execution traces, report all attempts and uncertainty. Never infer ability gains from prompt length alone."
+}
