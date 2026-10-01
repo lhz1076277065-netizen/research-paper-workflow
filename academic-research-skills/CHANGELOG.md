@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0-rc.2
+
+Promote novelty checking to contribution search, map each core claim to its strongest applicable competitor and decisive evidence, and make execution a discovery loop. Feed weak manuscript claims back into research; require evidence-supported core contributions before full original manuscript production. Preserve focused editing, protocols/registered reports, nineteen Skills and the existing professional source pool. Engineering checks and bounded behavioral tests do not certify general originality or publication.
+
 ## 3.3.0-rc.1
 
 Problem-led topic development connects cross-paper journal learning, real needs, scientific unknowns, data/scales and testable use consequences. Add optional Orchestra ideation/novelty discovery and K-Dense ideation hints while retaining every prior source. Preserve independent Skills, detailed writing protocols and the existing runtime interfaces. This is a capability candidate; behavioral observations and engineering checks are reported separately.

@@ -11,7 +11,10 @@ def chosen(kind):
         rel=f.relative_to(ROOT)
         if f.is_symlink() or not f.is_file() or set(rel.parts)&EXCLUDED or f.suffix in FONTS or f.suffix=='.pyc' or f.name=='.DS_Store' or rel.as_posix()=='PACKAGE-MANIFEST.json':continue
         if kind=='runtime':
-            reports={'evaluations/v3.2.0/VALIDATION.zh-CN.md','evaluations/v3.2.0/PR_REVIEW.zh-CN.md',
+            reports={'evaluations/v3.3.0-rc.2/VALIDATION.zh-CN.md',
+                     'evaluations/v3.3.0-rc.2/BEHAVIOR.zh-CN.md',
+                     'evaluations/v3.3.0-rc.2/ORCHESTRATOR.md',
+                     'evaluations/v3.2.0/VALIDATION.zh-CN.md','evaluations/v3.2.0/PR_REVIEW.zh-CN.md',
                      'evaluations/v3.3.0-rc.1/VALIDATION.zh-CN.md',
                      'evaluations/v3.3.0-rc.1/BEHAVIOR.zh-CN.md',
                      'evaluations/v3.3.0-rc.1/context-metrics.json',

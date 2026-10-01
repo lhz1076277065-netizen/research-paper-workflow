@@ -1,6 +1,6 @@
 # Start research in the current agent
 
-For full research, read skills/research-paper-workflow/SKILL.md with the real scientific objective and available materials. Establish the important problem, nearest prior art, expected knowledge gain and decisive evidence. Keep a concise visible research board and continue the highest-information work. Focused requests use only the applicable specialist.
+For full research, read skills/research-paper-workflow/SKILL.md with the real scientific objective and available materials. Search for an important unresolved problem and test contributions against the strongest applicable prior work. Develop new hypotheses/methods/designs from actual findings; lock evidence-supported core contributions before full original manuscript writing. Feed weak manuscript claims back into research. Keep a concise visible research board and continue the highest-information work. Focused requests use only the applicable specialist.
 
 The current agent coordinates as executor; native subagents are optional. A research_model may run, train and be evaluated locally using free tools and suitable licensing. Choose numerical software for the scientific design.
 

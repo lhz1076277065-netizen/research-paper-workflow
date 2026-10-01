@@ -1,0 +1,7 @@
+policy,actions,misses,realized_cost,input_forecast_expected_cost,deployable_comparator
+cost_rule,9,1,222.0,272.0,True
+probability_0.5,5,3,440.0,356.5,True
+classical_bayes,9,1,222.0,272.0,True
+act_all,12,0,297.0,297.0,True
+act_none,0,7,560.0,434.5,True
+outcome_oracle,7,0,172.0,316.0,False

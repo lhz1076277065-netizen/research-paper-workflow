@@ -1,0 +1,57 @@
+{
+  "task": "仅改写指定的中文结果段落",
+  "read_scope": [
+    {
+      "path": "{ITERATION_ROOT}/local-edit-prompt.txt",
+      "range": "全文",
+      "purpose": "读取独立任务与预算"
+    },
+    {
+      "path": "{ITERATION_ROOT}/library/manuscript-writing/SKILL.md",
+      "range": "全文",
+      "purpose": "按局部改稿范围应用指定技能"
+    },
+    {
+      "path": "{ITERATION_ROOT}/local-edit/answer.md",
+      "range": "全文",
+      "purpose": "保存后核对"
+    },
+    {
+      "path": "{ITERATION_ROOT}/local-edit/operations.json",
+      "range": "全文",
+      "purpose": "保存后核对JSON与预算记录"
+    }
+  ],
+  "budget": {
+    "unit": "底层工具调用（exec_command）",
+    "limit": 4,
+    "used": 3,
+    "remaining": 1,
+    "first_read_included": true,
+    "save_included": true,
+    "calls": [
+      {
+        "number": 1,
+        "operation": "完整读取local-edit-prompt.txt"
+      },
+      {
+        "number": 2,
+        "operation": "完整读取指定manuscript-writing/SKILL.md"
+      },
+      {
+        "number": 3,
+        "operation": "保存answer.md与operations.json，并在同一次调用中读取核对自己的输出"
+      }
+    ]
+  },
+  "completion_scope": {
+    "completed": "改写指定单段，保留相同12个案例、总模拟成本212与363、既定成本假设以及未评估真实部署效果的边界；以总模拟成本较低取代泛化的表现较好。",
+    "skill_applied": "{ITERATION_ROOT}/library/manuscript-writing/SKILL.md",
+    "additional_references_read": [],
+    "research_performed": false,
+    "data_added": false,
+    "network_used": false,
+    "agents_delegated": false,
+    "other_tasks_or_repository_read": false
+  }
+}

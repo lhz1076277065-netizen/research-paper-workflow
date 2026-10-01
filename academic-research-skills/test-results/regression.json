@@ -1,10 +1,10 @@
 {
-  "version": "3.3.0-rc.1",
-  "generated_at": "2026-10-01T15:58:14.160715+00:00",
+  "version": "3.3.0-rc.2",
+  "generated_at": "2026-10-01T19:46:52.349686+00:00",
   "tests_run": 610,
   "failures": 0,
   "errors": 0,
-  "skipped": 0,
+  "skipped": 1,
   "passed": true,
   "groups": {
     "test_architecture": 86,
@@ -966,7 +966,8 @@
     },
     {
       "id": "test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary",
-      "status": "passed"
+      "status": "skipped",
+      "reason": "pypdf is not installed"
     },
     {
       "id": "test_portability.InstallTests.test_failed_install_prevents_research_script",

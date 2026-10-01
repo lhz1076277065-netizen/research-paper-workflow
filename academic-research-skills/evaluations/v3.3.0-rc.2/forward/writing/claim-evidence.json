@@ -1,0 +1,42 @@
+[
+  {
+    "result_id": "R1",
+    "claim": "fixed packet costs222/440; Bayes222; all297/none560/oracle172",
+    "files": [
+      "results.json",
+      "policy_results.csv",
+      "case_results.csv"
+    ],
+    "scope": "12 fixed synthetic cases"
+  },
+  {
+    "result_id": "R2",
+    "claim": "best outcome-selected common threshold292 at[.1,.15)",
+    "files": [
+      "threshold_results.csv",
+      "results.json"
+    ],
+    "scope": "optimistic post-hoc constrained benchmark"
+  },
+  {
+    "result_id": "R3",
+    "claim": "box margin zero at149/1080; input expected gain84.5",
+    "files": [
+      "sensitivity_results.csv",
+      "case_results.csv",
+      "analyze.py",
+      "manuscript.md"
+    ],
+    "scope": "fixed policy pair, per-case hypothetical marginal bounds; no independence needed"
+  },
+  {
+    "result_id": "R4",
+    "claim": "4096 outcome vectors,144 reversal assignments,3-flip counterexample",
+    "files": [
+      "results.json",
+      "analyze.py",
+      "manuscript.md"
+    ],
+    "scope": "constructed combinatorial counterexamples; not probabilities"
+  }
+]

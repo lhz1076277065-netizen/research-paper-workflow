@@ -1,6 +1,6 @@
 {
   "schema_version": "research31-policy-1",
-  "version": "3.2.0-rc.1",
+  "version": "3.3.0-rc.2",
   "host_scope": "current_host",
   "external_skill_scope": "user_designated_repositories",
   "native_subagents": "optional_same_host",
@@ -30,7 +30,9 @@
         "data",
         "methods",
         "analysis",
-        "writing"
+        "writing",
+        "ideation",
+        "novelty"
       ]
     },
     {
@@ -98,6 +100,13 @@
       "roles": [
         "workbench"
       ]
+    },
+    {
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "roles": [
+        "ideation",
+        "novelty"
+      ]
     }
   ],
   "source_aliases": {
@@ -105,5 +114,36 @@
   },
   "final_expression_repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
   "literature_data_and_scientific_software_unrestricted_by_skill_list": true,
-  "note": "Source roles are retrieval hints, not an exhaustive scientific-method whitelist. This file neither calls a model nor implements an OS sandbox."
+  "note": "Source roles are retrieval hints, not an exhaustive scientific-method whitelist. This file neither calls a model nor implements an OS sandbox.",
+  "execution_mode": "computational-autonomous",
+  "executor": {
+    "role": "executor",
+    "actor_scope": "current_host",
+    "assistant_switch": false
+  },
+  "research_model": {
+    "role": "research_model",
+    "allowed": "Local free open-source research objects/algorithms with verified research license, source, revision and task purpose; does not replace executor"
+  },
+  "role_selection": {
+    "criteria": [
+      "domain",
+      "task",
+      "materials",
+      "outputs",
+      "dependencies",
+      "current_availability"
+    ],
+    "primary": "One matching implementation; prefer an installed matching source",
+    "complements": [
+      "complementary_coverage",
+      "independent_evaluation",
+      "fallback"
+    ],
+    "progress_fields": [
+      "guidance_read",
+      "research_work_done",
+      "functions_run"
+    ]
+  }
 }

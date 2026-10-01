@@ -233,7 +233,7 @@ test_commit_binding_excludes_ignored_files_and_rejects_changes (test_package_ide
 test_one_click_refuses_preexisting_output (test_package_identity.PackageIdentity.test_one_click_refuses_preexisting_output) ... ok
 test_runtime_keeps_update_report_local_targets (test_package_identity.PackageIdentity.test_runtime_keeps_update_report_local_targets) ... ok
 test_pdftotext_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pdftotext_actual_pdf_and_malformed_boundary) ... ok
-test_pypdf_only_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary) ... ok
+test_pypdf_only_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary) ... skipped 'pypdf is not installed'
 test_failed_install_prevents_research_script (test_portability.InstallTests.test_failed_install_prevents_research_script) ... ok
 test_managed_marker_required (test_portability.InstallTests.test_managed_marker_required) ... ok
 test_missing_binary_blocks_install (test_portability.InstallTests.test_missing_binary_blocks_install) ... ok
@@ -610,6 +610,6 @@ test_wrong_contract (test_suite.ValidatorNegativeTests.test_wrong_contract) ... 
 test_wrong_output_artifact (test_suite.ValidatorNegativeTests.test_wrong_output_artifact) ... ok
 
 ----------------------------------------------------------------------
-Ran 610 tests in 28.760s
+Ran 610 tests in 36.493s
 
-OK
+OK (skipped=1)

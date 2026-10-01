@@ -1,0 +1,48 @@
+{
+  "commit": "ed4cea6cb24b0588f144264125e255ce8ce43f66",
+  "downloaded_bytes": 2180975,
+  "requests": [
+    {
+      "url": "https://api.github.com/repos/K-Dense-AI/scientific-agent-skills/commits/main",
+      "file": "{ITERATION_ROOT}/repair/sources/provider-commit.json",
+      "bytes": 954626,
+      "sha256": "d892f1bd1da392be04786b290a7d3571fe9166eaea252d229a392c0452b2e2e0",
+      "status": "saved"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/ed4cea6cb24b0588f144264125e255ce8ce43f66/skills/scientific-critical-thinking/SKILL.md",
+      "file": "{ITERATION_ROOT}/repair/sources/scientific-critical-thinking-SKILL.md",
+      "bytes": 13146,
+      "sha256": "563af70571b7dcd6a96bf2e303bedfdcba623b4e9f082d58f04aacbc961fdae4",
+      "status": "saved"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/scientific-agent-skills/ed4cea6cb24b0588f144264125e255ce8ce43f66/skills/scientific-brainstorming/SKILL.md",
+      "file": "{ITERATION_ROOT}/repair/sources/scientific-brainstorming-SKILL.md",
+      "bytes": 14658,
+      "sha256": "06f73b71556356a7f488c369b9445d7943543a3f14d159b2168fd3f621d6f8a9",
+      "status": "saved"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2202.06841",
+      "file": "{ITERATION_ROOT}/repair/sources/hermelin2022.pdf",
+      "bytes": 467422,
+      "sha256": "3be8cabc1523d1e3bf49ca4d560804b5b088f498e8a63cb14568fc1baf1879c9",
+      "status": "saved"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2602.02748",
+      "file": "{ITERATION_ROOT}/repair/sources/goldberg2026.pdf",
+      "bytes": 391068,
+      "sha256": "b4efcc5888b883c3215e95d18b82d6276c8891eb2a5b778ddf3cf7fd0b98f85d",
+      "status": "saved"
+    },
+    {
+      "url": "https://optimization-online.org/wp-content/uploads/2019/08/7344.pdf",
+      "file": "{ITERATION_ROOT}/repair/sources/tan2019.pdf",
+      "bytes": 340055,
+      "sha256": "517effefb7bf89d7afd3f08bcd0d2928f68835d5e8972948b4c7906764748782",
+      "status": "saved"
+    }
+  ]
+}

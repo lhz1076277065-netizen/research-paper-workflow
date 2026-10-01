@@ -1,0 +1,166 @@
+{
+  "baseline_commit": "494a7021285e502345683a09be6429b982c8f8ce",
+  "candidate_version": "3.3.0-rc.2",
+  "canonical_and_summary_changes": [
+    {
+      "path": "academic-research-skills/README.md",
+      "before_sha256": "305603eb1f01375006a81ac25060b5f167faab7a065be701dd438e2af7060fd3",
+      "after_sha256": "117b77f37134b113822b347d507200b6291f4bf357a0db2df7fe0f35befc2039",
+      "before_chars": 2589,
+      "after_chars": 2673
+    },
+    {
+      "path": "academic-research-skills/README.zh-CN.md",
+      "before_sha256": "6f763f0422f04e87a08f2bae90fb2036826b054c68a2264b0bb811950fd7f42b",
+      "after_sha256": "a639f9684e2403db3fe06c9bab6a2a7eb197e6070d89fdf0346a5ff0f73cc0f6",
+      "before_chars": 1116,
+      "after_chars": 1148
+    },
+    {
+      "path": "academic-research-skills/UPDATE_REPORT.zh-CN.md",
+      "before_sha256": "9988f179b2acef2fc4fd2e787407394b5d11d9e78bd416a33ff910ef7aa19777",
+      "after_sha256": "91dbfb8fadabb0084a6a1e8c053f1e83c3f6cc7129d755979ab146a783c3f000",
+      "before_chars": 2138,
+      "after_chars": 1325
+    },
+    {
+      "path": "academic-research-skills/INSTALLATION.zh-CN.md",
+      "before_sha256": "c53fcf0373ef1bab77d2a6a5741bcc363585fff5d918bc5c71c5b87bc46133e5",
+      "after_sha256": "4ebe5290e18c20f0e988766592c5dacb98bfb6a7cef93b2a5ae297ec04a972e5",
+      "before_chars": 6006,
+      "after_chars": 6008
+    },
+    {
+      "path": "academic-research-skills/src/common/references/research-quality.md",
+      "before_sha256": "eaaec08bf3fb0e881b6f949733f95ea38d977a047f70388ed4aea6bc24f472e0",
+      "after_sha256": "b16b4ffec40a5fc73020bb52993f779a8bb4b3ff1c7d806e3cb972e6dbab453c",
+      "before_chars": 1876,
+      "after_chars": 2801
+    },
+    {
+      "path": "academic-research-skills/src/common/references/research-lifecycle.md",
+      "before_sha256": "1dede360e525a75b43d801d5257e03fe60374f1d1c26d49b58dd29bcdd4e4b97",
+      "after_sha256": "a9609152a4846e65afd6dc9fc504ecd0083a384b7ab27184c4d0dd476774c087",
+      "before_chars": 1557,
+      "after_chars": 1697
+    },
+    {
+      "path": "academic-research-skills/src/common/references/problem-led-topics.md",
+      "before_sha256": "6684966ab668219a031279255411a463b7381c9c6868b6b3b071af64d963e878",
+      "after_sha256": "3775dc6471d2006e4bd1290682fbd51afb172bf469a6a30f6d1eb5b0243b6f7f",
+      "before_chars": 2058,
+      "after_chars": 2198
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/topic-novelty/SKILL.md",
+      "before_sha256": "8faa50e1074acc67f87b91c56a039c52c662a682d7b266ab95c85a3f343c5db7",
+      "after_sha256": "121fed0ea1ae3c6a05c78a7c0aad1029e4db7675db34d0c85e54803a1df9af60",
+      "before_chars": 718,
+      "after_chars": 714
+    },
+    {
+      "path": "academic-research-skills/skills/topic-novelty/references/protocol.md",
+      "before_sha256": "77f6bd5960dd665cd36d415d6d7a4f028dbaa41b220693af158e747c6263b178",
+      "after_sha256": "46f1cf431e7e0d63b565bcdf9c84243acc774da15094b320dc5722eb9b83aa7d",
+      "before_chars": 1474,
+      "after_chars": 1930
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/research-design/SKILL.md",
+      "before_sha256": "8d6c2567e04d6232565d0b43f715e2d77733a5f9994a5244e9f7587e3c2fbaf0",
+      "after_sha256": "e3e86ea2ec39f187651a0e3b5cfe6bc5c9f4f1e2c41187a7c18f56940fbf8256",
+      "before_chars": 693,
+      "after_chars": 697
+    },
+    {
+      "path": "academic-research-skills/skills/research-design/references/protocol.md",
+      "before_sha256": "b9c74ccf77ddcba09b8945fcb83c860e10012a3f459fbd942ceb18442729b89b",
+      "after_sha256": "d1d292a756f0d20e95a63bb34e1a96c0f0faab0e2b35a5e2a8b3aa2b646c1ea3",
+      "before_chars": 1698,
+      "after_chars": 1990
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/analysis-execution/SKILL.md",
+      "before_sha256": "373d2990fbbbd2be08904e6304a55f0a70d49b9077171efe0efb6445db722953",
+      "after_sha256": "b2c060f762fc8d2277012f6a51113926723edc0003b717f5b61c7b98625fdcc0",
+      "before_chars": 653,
+      "after_chars": 709
+    },
+    {
+      "path": "academic-research-skills/skills/analysis-execution/references/protocol.md",
+      "before_sha256": "4eb7ddab7725354732f5622d4ea8c75f5543c7daad7822eaab934e5057f6e020",
+      "after_sha256": "b3377ae8ce64974dd930811257716476a4b26002238193a402e9cb72728a950e",
+      "before_chars": 1535,
+      "after_chars": 1917
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/manuscript-writing/SKILL.md",
+      "before_sha256": "e165c17ae09bc8c9c1e1a93a0108b3ef5f9abcc194e9a18e29aca58b71de685a",
+      "after_sha256": "98f476a1f3c12d2f3d5b6cab54f5af9951dcf0a361c67985230a5645e3d8be18",
+      "before_chars": 719,
+      "after_chars": 727
+    },
+    {
+      "path": "academic-research-skills/skills/manuscript-writing/references/protocol.md",
+      "before_sha256": "374cadcb0686052d06286efc637e98db93ffee81c0b7a9f4d209ebf584d7836d",
+      "after_sha256": "833477e233e373aa17ea055a1df339c72411baa46b849eae61efc0468cac0f97",
+      "before_chars": 4021,
+      "after_chars": 4374
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/manuscript-review/SKILL.md",
+      "before_sha256": "5cc0c61691fe687fcaccdaf306102ce679a3d173e109364c76bb395fbd0ff214",
+      "after_sha256": "3417c15f39a6e1672652a7564356bdc9d3d25b638661da61df0a0d497ea3447e",
+      "before_chars": 699,
+      "after_chars": 702
+    },
+    {
+      "path": "academic-research-skills/skills/manuscript-review/references/protocol.md",
+      "before_sha256": "abe3b450269c9867f07d06fd6d53e8fc2cc529cdc47196a46c006e6e051ad01f",
+      "after_sha256": "e698ba0ab3d2b491408f9b1886cf42e8447db3bae7403c141dea38a5286a9d94",
+      "before_chars": 1170,
+      "after_chars": 1379
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/research-paper-workflow/SKILL.md",
+      "before_sha256": "a8bcb63db422a9e1168c4e9fadfc2a2825df786887f83f4ac0ef432751a0caa9",
+      "after_sha256": "da7bb878f72412989879bb1878c30dce1d2f928ad1bc7a129912e23a704af950",
+      "before_chars": 795,
+      "after_chars": 796
+    },
+    {
+      "path": "academic-research-skills/skills/research-paper-workflow/references/protocol.md",
+      "before_sha256": "304684bc8ab0d3ad56c8c40b2c9381e0097ce08f23dd54888d5368ec774a37d5",
+      "after_sha256": "0c4ba04f1c5b6506bac59846b0633b96e25519c3ce37f31c7ff1fc6a715c730c",
+      "before_chars": 1876,
+      "after_chars": 2111
+    }
+  ],
+  "entry_chars": {
+    "manuscript-writing": 727,
+    "publication-stewardship": 645,
+    "manuscript-review": 702,
+    "robustness-reproducibility": 647,
+    "research-design": 697,
+    "topic-novelty": 714,
+    "analysis-execution": 709,
+    "literature-discovery": 645,
+    "data-preparation": 643,
+    "data-discovery": 651,
+    "citation-audit": 638,
+    "paper-deep-reading": 641,
+    "journal-intelligence": 655,
+    "peer-review-response": 691,
+    "scientific-visualization": 713,
+    "research-intake": 650,
+    "ethics-protocol": 640,
+    "submission-packaging": 647,
+    "research-paper-workflow": 796
+  },
+  "max_entry_chars": 796,
+  "generated_files": 977,
+  "original_protocol_headings_preserved": true,
+  "writing_steps_preserved": 30,
+  "canonical_professional_sources_unchanged": true,
+  "scope": "Maintained-source identities and software/protocol preservation; not a behavioral or originality score."
+}

@@ -1,0 +1,290 @@
+{
+  "density": {
+    "value": 352,
+    "jobs": [
+      "d12",
+      "d9",
+      "d2",
+      "d13",
+      "d7",
+      "d6",
+      "d10",
+      "d4",
+      "d3"
+    ],
+    "completions": [
+      {
+        "job": "d12",
+        "completion": 1.0,
+        "deadline": 23,
+        "reward": 50
+      },
+      {
+        "job": "d9",
+        "completion": 2.0,
+        "deadline": 17,
+        "reward": 27
+      },
+      {
+        "job": "d2",
+        "completion": 3.0,
+        "deadline": 9,
+        "reward": 21
+      },
+      {
+        "job": "d13",
+        "completion": 6.0,
+        "deadline": 18,
+        "reward": 54
+      },
+      {
+        "job": "d7",
+        "completion": 11.0,
+        "deadline": 14,
+        "reward": 69
+      },
+      {
+        "job": "d6",
+        "completion": 16.0,
+        "deadline": 29,
+        "reward": 59
+      },
+      {
+        "job": "d10",
+        "completion": 20.0,
+        "deadline": 34,
+        "reward": 44
+      },
+      {
+        "job": "d4",
+        "completion": 22.0,
+        "deadline": 35,
+        "reward": 19
+      },
+      {
+        "job": "d3",
+        "completion": 30.0,
+        "deadline": 34,
+        "reward": 9
+      }
+    ],
+    "seconds": 2.7207999664824456e-05,
+    "gap": 0.13513513513513514
+  },
+  "insertion": {
+    "value": 405,
+    "jobs": [
+      "d2",
+      "d7",
+      "d11",
+      "d9",
+      "d13",
+      "d12",
+      "d6",
+      "d10",
+      "d4"
+    ],
+    "completions": [
+      {
+        "job": "d2",
+        "completion": 1.0,
+        "deadline": 9,
+        "reward": 21
+      },
+      {
+        "job": "d7",
+        "completion": 6.0,
+        "deadline": 14,
+        "reward": 69
+      },
+      {
+        "job": "d11",
+        "completion": 12.0,
+        "deadline": 17,
+        "reward": 62
+      },
+      {
+        "job": "d9",
+        "completion": 13.0,
+        "deadline": 17,
+        "reward": 27
+      },
+      {
+        "job": "d13",
+        "completion": 16.0,
+        "deadline": 18,
+        "reward": 54
+      },
+      {
+        "job": "d12",
+        "completion": 17.0,
+        "deadline": 23,
+        "reward": 50
+      },
+      {
+        "job": "d6",
+        "completion": 22.0,
+        "deadline": 29,
+        "reward": 59
+      },
+      {
+        "job": "d10",
+        "completion": 26.0,
+        "deadline": 34,
+        "reward": 44
+      },
+      {
+        "job": "d4",
+        "completion": 28.0,
+        "deadline": 35,
+        "reward": 19
+      }
+    ],
+    "seconds": 2.3582993890158832e-05,
+    "gap": 0.004914004914004914
+  },
+  "hybrid": {
+    "value": 405,
+    "jobs": [
+      "d2",
+      "d7",
+      "d11",
+      "d9",
+      "d13",
+      "d12",
+      "d6",
+      "d10",
+      "d4"
+    ],
+    "completions": [
+      {
+        "job": "d2",
+        "completion": 1.0,
+        "deadline": 9,
+        "reward": 21
+      },
+      {
+        "job": "d7",
+        "completion": 6.0,
+        "deadline": 14,
+        "reward": 69
+      },
+      {
+        "job": "d11",
+        "completion": 12.0,
+        "deadline": 17,
+        "reward": 62
+      },
+      {
+        "job": "d9",
+        "completion": 13.0,
+        "deadline": 17,
+        "reward": 27
+      },
+      {
+        "job": "d13",
+        "completion": 16.0,
+        "deadline": 18,
+        "reward": 54
+      },
+      {
+        "job": "d12",
+        "completion": 17.0,
+        "deadline": 23,
+        "reward": 50
+      },
+      {
+        "job": "d6",
+        "completion": 22.0,
+        "deadline": 29,
+        "reward": 59
+      },
+      {
+        "job": "d10",
+        "completion": 26.0,
+        "deadline": 34,
+        "reward": 44
+      },
+      {
+        "job": "d4",
+        "completion": 28.0,
+        "deadline": 35,
+        "reward": 19
+      }
+    ],
+    "seconds": 5.704199429601431e-05,
+    "gap": 0.004914004914004914
+  },
+  "exact": {
+    "value": 407,
+    "jobs": [
+      "d2",
+      "d14",
+      "d7",
+      "d9",
+      "d13",
+      "d12",
+      "d6",
+      "d10",
+      "d4"
+    ],
+    "completions": [
+      {
+        "job": "d2",
+        "completion": 1.0,
+        "deadline": 9,
+        "reward": 21
+      },
+      {
+        "job": "d14",
+        "completion": 9.0,
+        "deadline": 14,
+        "reward": 64
+      },
+      {
+        "job": "d7",
+        "completion": 14.0,
+        "deadline": 14,
+        "reward": 69
+      },
+      {
+        "job": "d9",
+        "completion": 15.0,
+        "deadline": 17,
+        "reward": 27
+      },
+      {
+        "job": "d13",
+        "completion": 18.0,
+        "deadline": 18,
+        "reward": 54
+      },
+      {
+        "job": "d12",
+        "completion": 19.0,
+        "deadline": 23,
+        "reward": 50
+      },
+      {
+        "job": "d6",
+        "completion": 24.0,
+        "deadline": 29,
+        "reward": 59
+      },
+      {
+        "job": "d10",
+        "completion": 28.0,
+        "deadline": 34,
+        "reward": 44
+      },
+      {
+        "job": "d4",
+        "completion": 30.0,
+        "deadline": 35,
+        "reward": 19
+      }
+    ],
+    "seconds": 2.591600059531629e-05,
+    "gap": 0.0
+  }
+}

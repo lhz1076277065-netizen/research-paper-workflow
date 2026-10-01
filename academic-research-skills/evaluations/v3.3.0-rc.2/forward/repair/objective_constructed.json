@@ -1,0 +1,277 @@
+{
+  "origin": "post-hoc constructive follow-up to 1500 null random instances with p<=10",
+  "epsilon": "1/5",
+  "proposition": "For A=(a,a,w), B=(b,d_B,w), if a(1+epsilon)+b<=d_B<b(1+epsilon), advance-guaranteed optimum is 0 while Gamma=1 minimax reward is w. The interval exists when b/a>(1+epsilon)/epsilon.",
+  "boundary_checks": [
+    {
+      "b": 10,
+      "duration_ratio": 2.0,
+      "jobs": [
+        [
+          "A",
+          5,
+          5,
+          1
+        ],
+        [
+          "B",
+          10,
+          16,
+          1
+        ]
+      ],
+      "advance_optimum": 1,
+      "minimax_optimum": 1,
+      "minimax_plan": [
+        [
+          "B",
+          10,
+          16,
+          1
+        ]
+      ],
+      "scenario_evaluation": {
+        "minimum_total_reward": 1,
+        "jobwise_guaranteed_reward": 1,
+        "guaranteed_jobs": [
+          "B"
+        ],
+        "scenario_count": 2
+      },
+      "all_subset_orders_examined": 5
+    },
+    {
+      "b": 20,
+      "duration_ratio": 4.0,
+      "jobs": [
+        [
+          "A",
+          5,
+          5,
+          1
+        ],
+        [
+          "B",
+          20,
+          26,
+          1
+        ]
+      ],
+      "advance_optimum": 1,
+      "minimax_optimum": 1,
+      "minimax_plan": [
+        [
+          "B",
+          20,
+          26,
+          1
+        ]
+      ],
+      "scenario_evaluation": {
+        "minimum_total_reward": 1,
+        "jobwise_guaranteed_reward": 1,
+        "guaranteed_jobs": [
+          "B"
+        ],
+        "scenario_count": 2
+      },
+      "all_subset_orders_examined": 5
+    },
+    {
+      "b": 29,
+      "duration_ratio": 5.8,
+      "jobs": [
+        [
+          "A",
+          5,
+          5,
+          1
+        ],
+        [
+          "B",
+          29,
+          35,
+          1
+        ]
+      ],
+      "advance_optimum": 1,
+      "minimax_optimum": 1,
+      "minimax_plan": [
+        [
+          "B",
+          29,
+          35,
+          1
+        ]
+      ],
+      "scenario_evaluation": {
+        "minimum_total_reward": 1,
+        "jobwise_guaranteed_reward": 1,
+        "guaranteed_jobs": [
+          "B"
+        ],
+        "scenario_count": 2
+      },
+      "all_subset_orders_examined": 5
+    },
+    {
+      "b": 30,
+      "duration_ratio": 6.0,
+      "jobs": [
+        [
+          "A",
+          5,
+          5,
+          1
+        ],
+        [
+          "B",
+          30,
+          36,
+          1
+        ]
+      ],
+      "advance_optimum": 1,
+      "minimax_optimum": 1,
+      "minimax_plan": [
+        [
+          "B",
+          30,
+          36,
+          1
+        ]
+      ],
+      "scenario_evaluation": {
+        "minimum_total_reward": 1,
+        "jobwise_guaranteed_reward": 1,
+        "guaranteed_jobs": [
+          "B"
+        ],
+        "scenario_count": 2
+      },
+      "all_subset_orders_examined": 5
+    },
+    {
+      "b": 31,
+      "duration_ratio": 6.2,
+      "jobs": [
+        [
+          "A",
+          5,
+          5,
+          1
+        ],
+        [
+          "B",
+          31,
+          37,
+          1
+        ]
+      ],
+      "advance_optimum": 0,
+      "minimax_optimum": 1,
+      "minimax_plan": [
+        [
+          "A",
+          5,
+          5,
+          1
+        ],
+        [
+          "B",
+          31,
+          37,
+          1
+        ]
+      ],
+      "scenario_evaluation": {
+        "minimum_total_reward": 1,
+        "jobwise_guaranteed_reward": 0,
+        "guaranteed_jobs": [],
+        "scenario_count": 3
+      },
+      "all_subset_orders_examined": 5
+    },
+    {
+      "b": 100,
+      "duration_ratio": 20.0,
+      "jobs": [
+        [
+          "A",
+          5,
+          5,
+          1
+        ],
+        [
+          "B",
+          100,
+          106,
+          1
+        ]
+      ],
+      "advance_optimum": 0,
+      "minimax_optimum": 1,
+      "minimax_plan": [
+        [
+          "A",
+          5,
+          5,
+          1
+        ],
+        [
+          "B",
+          100,
+          106,
+          1
+        ]
+      ],
+      "scenario_evaluation": {
+        "minimum_total_reward": 1,
+        "jobwise_guaranteed_reward": 0,
+        "guaranteed_jobs": [],
+        "scenario_count": 3
+      },
+      "all_subset_orders_examined": 5
+    }
+  ],
+  "example": {
+    "jobs": [
+      [
+        "A",
+        5,
+        5,
+        1
+      ],
+      [
+        "B",
+        100,
+        112,
+        1
+      ]
+    ],
+    "advance_optimum": 0,
+    "minimax_optimum": 1,
+    "minimax_plan": [
+      [
+        "A",
+        5,
+        5,
+        1
+      ],
+      [
+        "B",
+        100,
+        112,
+        1
+      ]
+    ],
+    "scenarios": {
+      "minimum_total_reward": 1,
+      "jobwise_guaranteed_reward": 0,
+      "guaranteed_jobs": [],
+      "scenario_count": 3
+    },
+    "all_subset_orders_examined": 5
+  },
+  "novelty": "self-contained constructive result; broad objective distinction already present in 2026 nearest-neighbor Remark 1; originality of this particular boundary is unknown"
+}
