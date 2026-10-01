@@ -1,0 +1,132 @@
+{
+  "capability": "manuscript-writing",
+  "task_sha256": "90272088f3c8caf3ebac0281b97e56ce80d10879e227a6bb01f19da5c23f5d80",
+  "provider_id": "host_fallback",
+  "execution_mode": "host_fallback",
+  "execution_status": "executed",
+  "outputs": [
+    {
+      "path": "draft.md",
+      "sha256": "bc765ff92071c52e65b19bdbee949a6ece16353523ac7a855e2c04d0d2489c5a",
+      "role": "draft"
+    }
+  ],
+  "result_links": {
+    "kind": "result-links",
+    "sources": [
+      {
+        "id": "frozen",
+        "path": "results.json",
+        "versions": {
+          "data": {
+            "path": "measurements.json",
+            "sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf"
+          },
+          "code": {
+            "path": "compute.py",
+            "sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63"
+          },
+          "execution": {
+            "path": "execution.json",
+            "sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29"
+          }
+        },
+        "sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4"
+      },
+      {
+        "id": "repeated",
+        "path": "repeated.json",
+        "sha256": "7d904b3a2d0e6807c41311427204f7647736a09540b2cd25f7dc80ee2d13f5b4"
+      }
+    ],
+    "links": [
+      {
+        "result_id": "R-latency",
+        "source_id": "frozen",
+        "role": "body",
+        "artifact": {
+          "path": "draft.md",
+          "sha256": "bc765ff92071c52e65b19bdbee949a6ece16353523ac7a855e2c04d0d2489c5a"
+        },
+        "locator": {
+          "line": 1
+        },
+        "semantics": {
+          "unit": {
+            "value": "ms",
+            "text": "ms"
+          },
+          "direction": {
+            "value": "decrease",
+            "text": "lower"
+          },
+          "denominator": {
+            "value": 4,
+            "text": "n=4"
+          },
+          "outcome": {
+            "value": "latency",
+            "text": "latency"
+          },
+          "population": {
+            "value": "digital instances",
+            "text": "digital instances"
+          },
+          "time": {
+            "value": "one run",
+            "text": "one run"
+          },
+          "comparison": {
+            "value": "Solver baseline",
+            "text": "Solver baseline"
+          },
+          "model": {
+            "value": "solver-a",
+            "text": "Solver A"
+          },
+          "implementation": {
+            "value": "loop",
+            "text": "loop"
+          },
+          "split": {
+            "value": "holdout",
+            "text": "holdout"
+          },
+          "uncertainty": {
+            "value": "95% CI",
+            "text": "95% CI"
+          },
+          "effect_type": {
+            "value": "absolute mean",
+            "text": "absolute mean"
+          }
+        },
+        "numeric": [
+          {
+            "field": "value",
+            "decimals": 1,
+            "text": "410.0",
+            "recomputed": {
+              "source_id": "repeated"
+            },
+            "tolerance": {
+              "abs": 0,
+              "rel": 0
+            }
+          },
+          {
+            "field": "lower",
+            "decimals": 1,
+            "text": "390.0"
+          },
+          {
+            "field": "upper",
+            "decimals": 1,
+            "text": "430.0"
+          }
+        ]
+      }
+    ],
+    "claims": []
+  }
+}

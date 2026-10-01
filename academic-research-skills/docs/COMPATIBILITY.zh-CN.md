@@ -1,9 +1,11 @@
-# 3.2.0-rc.4 验证范围
+# 3.2.0-rc.5 验证范围
 
-保留1个可选总控、18个独立能力、16个可扩展画像、general默认与13个指定来源。执行模式独立于学科/文章/证据，默认 computational-autonomous。旧任务与完成封装继续兼容；旧模型禁用表述已替换为当前executor与可本地研究的research_model。
+保留1个可选总控、18个独立能力、16个画像、14条计算路线及13个指定来源。公共修补仍从唯一维护源生成；既有入口正文、专业协议和根UI配置保留。详细推演分成三个按需参考文件。
 
-587项工程回归、30项根仓库既有测试、19项结构检查、7项科学smoke通过；877个生成文件无漂移。实际公开数据、条件推导、C优化、专业API、依赖安装与后端校准都有输入/代码/日志/结果。四格式8处结果链接、5类错配、导出过期和重建，内置LaTeX编译及PDF视觉检查分别记录。
+本机Python 3.12.14执行608项完整工程回归，失败、错误和跳过均为0；937个生成文件无漂移。19个能力实际复制到隔离目录并分别运行，共76项基本检查通过。独立复核覆盖20个实际文件探针与四个审计入口，四个发现的假通过已修复。真实pdftotext和只有pypdf的提取均执行，旧PDF定位用例、坏PDF及越界页均有报告。
 
-rc.3/rc.4各1个新原生上下文、8个共享子例与1次独立匿名审阅。实做成果和缺件如实表达，观察表现混合；不称16独立重复、普遍创新提升、正式新论文或原生自动发现已认证。读量是字符/file尺寸，token、费用、精确模型修订未知。
+研究比较包含rc.4/rc.5各两个独立原生上下文，同任务、数据、工具及40次开发评分预算。方法冻结后共同评价480条新构造数据流；三种修订改善各自基线，一种变差，两种小优势的探索区间包含0。独立匿名审阅检查方法内容、近邻文献与原始评分材料。不能由工程通过或有限比较认定论文新颖性、普遍研究质量增益。
 
-[完整验证](../evaluations/rc4/VALIDATION.zh-CN.md)、[原生比较](../evaluations/rc4/native/COMPARISON.zh-CN.md)和[实际汇总](../test-results/SUMMARY.json)提供覆盖与限制。旧rc.3报告在history/rc3-reports，实际发行commit/tag/ZIP摘要、提取和隔离安装、远程CI在发行页外部receipt核验。
+实际指导读取输出字符合计减少20.9%，不是token或费用。研究汇总由真实构建行生成Markdown、DOCX、PDF的24处结果链接；数字/源语义、关系、角色与全稿覆盖分别报告，PDF另有实际视觉检查。程序只检查声明位置，复杂关系保留定位pending。
+
+[完整验收](../evaluations/rc5/VALIDATION.zh-CN.md)、[研究比较](../evaluations/rc5/paired-study/COMPARISON.zh-CN.md)、[工程复核](../evaluations/rc5/engineering/INDEPENDENT_REVIEW.zh-CN.md)和[当前汇总](../test-results/SUMMARY.json)提供证据。rc.4记录保留在history/rc4-reports及evaluations/rc4。实际commit/tag、ZIP摘要、提取安装与远程CI由同次发行外部receipt记录，避免自引用。

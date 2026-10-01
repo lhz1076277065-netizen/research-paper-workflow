@@ -1,0 +1,28 @@
+[
+  {
+    "name": "both-backends-final",
+    "argv": [
+      "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-m",
+      "unittest",
+      "test_pdf_extract",
+      "test_result_links.Links.test_actual_pdf_page_line",
+      "-v"
+    ],
+    "path": "/Users/luca/Library/Android/sdk/cmdline-tools/latest/bin:/Users/luca/Library/Android/sdk/emulator:/Users/luca/Library/Android/sdk/platform-tools:/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home/bin:/opt/homebrew/opt/ruby@3.3/bin:/opt/homebrew/opt/node@24/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Applications/ChatGPT.app/Contents/Resources/codex-cli/codex-path:/Users/luca/.codex/tmp/arg0/codex-arg0aZA64w:/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/luca/.mtplx/bin:/Users/luca/.local/bin:/Users/luca/.omlx/bin:/Users/luca/Library/Android/sdk/cmdline-tools/latest/bin:/Users/luca/Library/Android/sdk/emulator:/Users/luca/Library/Android/sdk/platform-tools:/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home/bin:/opt/homebrew/opt/ruby@3.3/bin:/opt/homebrew/opt/node@24/bin:/opt/homebrew/sbin:/Users/luca/AI/minimax-h3/bin:/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS",
+    "returncode": 0
+  },
+  {
+    "name": "pypdf-only-final",
+    "argv": [
+      "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc5-20261001/pdf-acceptance/pypdf-only-env/bin/python",
+      "-m",
+      "unittest",
+      "test_pdf_extract",
+      "test_result_links.Links.test_actual_pdf_page_line",
+      "-v"
+    ],
+    "path": "",
+    "returncode": 0
+  }
+]

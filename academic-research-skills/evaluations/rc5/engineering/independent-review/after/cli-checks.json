@@ -1,0 +1,53 @@
+[
+  {
+    "case": "exact_tolerance_high_precision_json_literal",
+    "argv": [
+      "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/src/common/scripts/provider_runtime.py",
+      "--registry",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/after/exact_tolerance_high_precision_json_literal/cli-registry.json",
+      "audit",
+      "--input",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/after/exact_tolerance_high_precision_json_literal/payload.json",
+      "--root",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/after/exact_tolerance_high_precision_json_literal"
+    ],
+    "returncode": 2,
+    "passed": false,
+    "stdout_json_parsed": true
+  },
+  {
+    "case": "equal_high_precision_json_literals",
+    "argv": [
+      "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/src/common/scripts/provider_runtime.py",
+      "--registry",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/after/equal_high_precision_json_literals/cli-registry.json",
+      "audit",
+      "--input",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/after/equal_high_precision_json_literals/payload.json",
+      "--root",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/after/equal_high_precision_json_literals"
+    ],
+    "returncode": 0,
+    "passed": true,
+    "stdout_json_parsed": true
+  },
+  {
+    "case": "numeric_semantic_time_uncertainty_scalars",
+    "argv": [
+      "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/src/common/scripts/provider_runtime.py",
+      "--registry",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/after/numeric_semantic_time_uncertainty_scalars/cli-registry.json",
+      "audit",
+      "--input",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/after/numeric_semantic_time_uncertainty_scalars/payload.json",
+      "--root",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/after/numeric_semantic_time_uncertainty_scalars"
+    ],
+    "returncode": 0,
+    "passed": true,
+    "stdout_json_parsed": true
+  }
+]

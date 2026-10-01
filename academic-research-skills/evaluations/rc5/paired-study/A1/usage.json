@@ -1,0 +1,101 @@
+{
+  "elapsed_seconds": 946.0973784923553,
+  "elapsed_scope": "Observed wall time from first recorded assigned-library read (file creation) through final artifact/usage write; preceding TASK/harness inspection excluded.",
+  "start_utc": "2026-10-01T08:59:34.145497+00:00",
+  "artifact_freeze_utc": "2026-10-01T09:15:20.242889+00:00",
+  "validation_calls": {
+    "total": 40,
+    "dev": 40,
+    "train": 0,
+    "by_stage": {
+      "baseline": 16,
+      "initial": 12,
+      "refined_proposals": 11,
+      "refined_ablation": 1
+    },
+    "unique_parameter_configurations": 40,
+    "limits": {
+      "baseline_max": 16,
+      "initial_max": 12,
+      "refined_stage_max": 12
+    },
+    "limits_satisfied": true,
+    "records": "score-events.jsonl; one full row report per call"
+  },
+  "validation_score_runtime_seconds_total": 3.4012886720001916,
+  "guidance": {
+    "assigned_library": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-rc5-20261001/frozen/old/academic-research-skills/skills/analysis-execution",
+    "files_read": 5,
+    "actual_characters_emitted": 7325,
+    "actual_bytes": 19413,
+    "read_records": "read-events.jsonl",
+    "guidance_read": true,
+    "research_work_done": [
+      "baseline tuning",
+      "initial-method experiment",
+      "structured-burst-deletion implementation",
+      "paired diagnostics and ablation",
+      "causal and known-case checks",
+      "manuscript results and limits"
+    ],
+    "attached_skill_functions_run": false,
+    "external_specialist_guidance": "Not loaded: task restricts skill guidance to assigned library.",
+    "research_quality_selfcheck": "quality-selfcheck.json",
+    "research_quality_reading_changed_method": false,
+    "research_quality_reading_changed_interpretation": true
+  },
+  "tools_used": [
+    "Native functions.exec orchestration",
+    "Native exec_command for supplied Python and file writes",
+    "web.run primary-source search/open",
+    "clock.curr_time"
+  ],
+  "dependencies": {
+    "python_executable": "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "packages": "Python standard library only: statistics, math, collections, pathlib, json, csv, argparse, itertools, random, hashlib, time, platform, shutil, subprocess, datetime",
+    "new_installs": [],
+    "compute_backend": "CPU; no GPU/Metal kernel used",
+    "research_model": null,
+    "delegation": false
+  },
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "logical_cpu_count": 18,
+    "memory_bytes": 137438953472,
+    "output_disk_free_bytes": 2005074587648
+  },
+  "data_sha256": {
+    "train": "b89b87c1833a281f7d27be46811495b513beafc143b30cbb763a6e4f060254f2",
+    "dev": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f"
+  },
+  "frozen_file_sha256": {
+    "methods.py": "dc7789ff60232f0165672c988f5f47a84a22fc346b5d6caa16820b8485262b6e",
+    "frozen.json": "71c4120cc65c60746c2518faccd3510cfbe53ce691fa00aeb1bd62f94f62f2ad",
+    "run_dev.py": "f279a40427b34fa17bd82a3e4008f4b6a5b73e03759a9e1f0e039526f36506c3",
+    "checks.py": "cdd9746e3549cc30eee0f09f60d4dd8479b28682639e3ea14c46a976ec0fcf36",
+    "summarize.py": "137b003c0f571a6a304f2a8680c2684ac4316df21a7a2f63cba27ddd5a907f8e",
+    "research.md": "0b4e0851d496a3a16b522100b6358993788411095b3a6d267d47d2aa8f4c24a2",
+    "quality-selfcheck.json": "6253797d910a32467a85207e172db9db8c1f136ffe718d70eafdde4e25131bde"
+  },
+  "causal_check_records": "checks.json",
+  "holdout_accessed": false,
+  "generator_accessed": false,
+  "other_participants_accessed": false,
+  "independent_evaluation": "Not performed; coordinator will evaluate after freezing. No independent-review claim.",
+  "cost": {
+    "token_usage": null,
+    "token_cost": null,
+    "reason": "Not exposed for this isolated study; not estimated."
+  },
+  "limits": [
+    "Dev-selected configurations, no independent test result",
+    "Focused nearest-primary-work review, no publication originality claim",
+    "Single-burst protection requires interval budget and nonpositive outside evidence",
+    "Matched ablation not independently retuned",
+    "Single-call runtimes are descriptive",
+    "Elapsed clock omits initial TASK/harness reads",
+    "Final self-check identifies a data-adaptive threshold alternative; a retuned scan comparison remains unperformed."
+  ]
+}

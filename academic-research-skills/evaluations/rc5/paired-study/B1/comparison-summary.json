@@ -1,0 +1,256 @@
+{
+  "result_id": "dev-frozen-001",
+  "n": 120,
+  "target_n": 60,
+  "comparisons": {
+    "baseline": {
+      "mean_paired_loss_difference": 0.18333333333333332,
+      "bootstrap_percentile_95": [
+        -3.558333333333333,
+        4.275
+      ],
+      "improved_cases": 36,
+      "tied_cases": 67,
+      "worsened_cases": 17,
+      "bootstrap_seed": 774091,
+      "resamples": 10000,
+      "status": "descriptive after development selection; selection uncertainty omitted"
+    },
+    "initial": {
+      "mean_paired_loss_difference": -2.825,
+      "bootstrap_percentile_95": [
+        -5.95,
+        -0.1
+      ],
+      "improved_cases": 43,
+      "tied_cases": 66,
+      "worsened_cases": 11,
+      "bootstrap_seed": 774091,
+      "resamples": 10000,
+      "status": "descriptive after development selection; selection uncertainty omitted"
+    },
+    "ablation": {
+      "mean_paired_loss_difference": -26.333333333333332,
+      "bootstrap_percentile_95": [
+        -34.11666666666667,
+        -18.741666666666667
+      ],
+      "improved_cases": 43,
+      "tied_cases": 39,
+      "worsened_cases": 38,
+      "bootstrap_seed": 774091,
+      "resamples": 10000,
+      "status": "descriptive after development selection; selection uncertainty omitted"
+    }
+  },
+  "methods": {
+    "baseline": {
+      "name": "baseline-05",
+      "params": {
+        "clip": 1.5,
+        "k": 0.5,
+        "h": 12.0
+      },
+      "mean_loss": 19.658333333333335,
+      "false_alarms": 1,
+      "hits": 49,
+      "runtime_seconds": 0.006880666999677487,
+      "data_sha256": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f",
+      "groups": {
+        "bursts": {
+          "n": 30,
+          "false_alarms": 0,
+          "hits": 12,
+          "mean_loss": 19.6
+        },
+        "clean": {
+          "n": 30,
+          "false_alarms": 0,
+          "hits": 10,
+          "mean_loss": 23.766666666666666
+        },
+        "gaps": {
+          "n": 30,
+          "false_alarms": 0,
+          "hits": 13,
+          "mean_loss": 19.033333333333335
+        },
+        "heavy": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 14,
+          "mean_loss": 16.233333333333334
+        }
+      }
+    },
+    "initial": {
+      "name": "initial-09",
+      "params": {
+        "clip": 2.5,
+        "k": 0.35,
+        "h": 10.0,
+        "confirm": 12,
+        "mean": 0.65,
+        "timeout": 24
+      },
+      "mean_loss": 22.666666666666668,
+      "false_alarms": 11,
+      "hits": 54,
+      "runtime_seconds": 0.006137458000011975,
+      "data_sha256": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f",
+      "groups": {
+        "bursts": {
+          "n": 30,
+          "false_alarms": 2,
+          "hits": 14,
+          "mean_loss": 22.933333333333334
+        },
+        "clean": {
+          "n": 30,
+          "false_alarms": 3,
+          "hits": 12,
+          "mean_loss": 21.966666666666665
+        },
+        "gaps": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 14,
+          "mean_loss": 19.733333333333334
+        },
+        "heavy": {
+          "n": 30,
+          "false_alarms": 5,
+          "hits": 14,
+          "mean_loss": 26.033333333333335
+        }
+      }
+    },
+    "refined": {
+      "name": "refined-01",
+      "params": {
+        "clip": 2.0,
+        "window": 24,
+        "burst": 6,
+        "threshold": 3.0,
+        "coverage": 0.6
+      },
+      "mean_loss": 19.841666666666665,
+      "false_alarms": 9,
+      "hits": 51,
+      "runtime_seconds": 0.12496899999996458,
+      "data_sha256": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f",
+      "groups": {
+        "bursts": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 13,
+          "mean_loss": 19.3
+        },
+        "clean": {
+          "n": 30,
+          "false_alarms": 3,
+          "hits": 12,
+          "mean_loss": 20.633333333333333
+        },
+        "gaps": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 13,
+          "mean_loss": 18.7
+        },
+        "heavy": {
+          "n": 30,
+          "false_alarms": 4,
+          "hits": 13,
+          "mean_loss": 20.733333333333334
+        }
+      }
+    },
+    "ablation": {
+      "name": "ablation-no-excision",
+      "params": {
+        "clip": 2.0,
+        "window": 24,
+        "burst": 0,
+        "threshold": 3.0,
+        "coverage": 0.6
+      },
+      "mean_loss": 46.175,
+      "false_alarms": 52,
+      "hits": 38,
+      "runtime_seconds": 0.11306316699983654,
+      "data_sha256": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f",
+      "groups": {
+        "bursts": {
+          "n": 30,
+          "false_alarms": 12,
+          "hits": 10,
+          "mean_loss": 45.666666666666664
+        },
+        "clean": {
+          "n": 30,
+          "false_alarms": 9,
+          "hits": 10,
+          "mean_loss": 34.96666666666667
+        },
+        "gaps": {
+          "n": 30,
+          "false_alarms": 13,
+          "hits": 10,
+          "mean_loss": 47.2
+        },
+        "heavy": {
+          "n": 30,
+          "false_alarms": 18,
+          "hits": 8,
+          "mean_loss": 56.86666666666667
+        }
+      }
+    },
+    "no_coverage": {
+      "name": "ablation-no-coverage",
+      "params": {
+        "clip": 2.0,
+        "window": 24,
+        "burst": 6,
+        "threshold": 3.0,
+        "coverage": 0.01
+      },
+      "mean_loss": 19.841666666666665,
+      "false_alarms": 9,
+      "hits": 51,
+      "runtime_seconds": 0.12860187500018583,
+      "data_sha256": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f",
+      "groups": {
+        "bursts": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 13,
+          "mean_loss": 19.3
+        },
+        "clean": {
+          "n": 30,
+          "false_alarms": 3,
+          "hits": 12,
+          "mean_loss": 20.633333333333333
+        },
+        "gaps": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 13,
+          "mean_loss": 18.7
+        },
+        "heavy": {
+          "n": 30,
+          "false_alarms": 4,
+          "hits": 13,
+          "mean_loss": 20.733333333333334
+        }
+      }
+    }
+  },
+  "diagnostic_false_alarms": {
+    "initial": 11,
+    "below_refined_excision_threshold_at_initial_alarm": 9
+  }
+}

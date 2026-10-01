@@ -1,0 +1,60 @@
+{
+  "elapsed_seconds": 760.5446469783783,
+  "elapsed_clock_scope": "Wall time from first recorded assigned-library read until final artifact audit; excludes initial TASK/harness reading.",
+  "started_utc": "2026-10-01T09:20:51.095237+00:00",
+  "finished_utc": "2026-10-01T09:33:31.639884+00:00",
+  "validation_call_counts": {
+    "baseline": 16,
+    "initial": 12,
+    "refined_main": 11,
+    "matched_refined_ablation": 1,
+    "refined_total": 12,
+    "total": 40,
+    "train": 0,
+    "dev": 40
+  },
+  "validation_stream_evaluations": 4800,
+  "validation_budget": {
+    "baseline_configurations_max": 16,
+    "initial_configurations_max": 12,
+    "refined_configurations_max": 12
+  },
+  "skill_read_events": 3,
+  "skill_characters_emitted": 5341,
+  "research_quality_read": true,
+  "research_quality_effect": "Changed evidence interpretation and novelty scope; no post-freeze method revision.",
+  "tools_used": [
+    "functions.exec/exec_command for native Python and filesystem work",
+    "web.run search/open/find for primary literature",
+    "collaboration.send_message for status to parent; no delegation"
+  ],
+  "web_tool_calls": 6,
+  "dependencies": "Python standard library only; no installations, model training, GPU, or extra plotting libraries.",
+  "python_executable": "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "python_version": "3.12.14",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "data_sha256": {
+    "train.json": "b89b87c1833a281f7d27be46811495b513beafc143b30cbb763a6e4f060254f2",
+    "dev.json": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f"
+  },
+  "source_sha256": {
+    "methods.py": "7a5f68ea5814b0268382a3c801d54122d497c72019faea3ab3e657e1b864db79",
+    "run_dev.py": "1bfff8a81e9ca745503ecb1819af66cefa8676353bdd378f301ec42dfa9f8fca",
+    "check.py": "c9f6e85174801bfc7cc629df89b856c7ddea04f10baeab611c27578247bb7a2b",
+    "diagnose.py": "04ef274e80a7f62ed238780716e2d4b44a9bd21e5a0ab560ed216e49f4b3c5fa",
+    "frozen.json": "24bce578367bcabbbcc936773c1d8c4bf3b4f7346909844c80a4f0c4163a9e62"
+  },
+  "selected_runtime_seconds": {
+    "baseline": 0.007191999999577092,
+    "initial": 0.007916792000287387,
+    "refined": 0.009098124999582069,
+    "ablation": 0.009710709000046336
+  },
+  "checks": "Known cases and 1,980 causal prefixes passed; all 40 validation reports reconcile with scorer log.",
+  "limitations": [
+    "Dev is selection-exposed; no independent inference or post-holdout adjustment.",
+    "Negative study of a finite grid; does not exclude all confirmation algorithms.",
+    "Focused primary-source review; publication novelty unestablished.",
+    "No holdout data or generator source read; no independent-review or fabricated token-cost claims."
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "schema_version": "environment-profiles-1",
+  "version": "3.2.0-rc.4",
+  "python_minimum": [
+    3,
+    10
+  ],
+  "groups": {
+    "core": [],
+    "tabular": [
+      {
+        "spec": "numpy>=1.24",
+        "import": "numpy"
+      },
+      {
+        "spec": "pandas>=2.0",
+        "import": "pandas"
+      }
+    ],
+    "statistics": [
+      {
+        "spec": "numpy>=1.24",
+        "import": "numpy"
+      },
+      {
+        "spec": "pandas>=2.0",
+        "import": "pandas"
+      },
+      {
+        "spec": "scipy>=1.10",
+        "import": "scipy"
+      },
+      {
+        "spec": "statsmodels>=0.14",
+        "import": "statsmodels"
+      }
+    ],
+    "prediction": [
+      {
+        "spec": "numpy>=1.24",
+        "import": "numpy"
+      },
+      {
+        "spec": "pandas>=2.0",
+        "import": "pandas"
+      },
+      {
+        "spec": "scikit-learn>=1.3",
+        "import": "sklearn"
+      }
+    ],
+    "bayesian": [
+      {
+        "spec": "pymc>=5.0",
+        "import": "pymc"
+      },
+      {
+        "spec": "arviz>=0.16",
+        "import": "arviz"
+      }
+    ],
+    "plotting": [
+      {
+        "spec": "numpy>=1.24",
+        "import": "numpy"
+      },
+      {
+        "spec": "matplotlib>=3.7",
+        "import": "matplotlib"
+      }
+    ],
+    "scipilot-plot": [
+      {
+        "spec": "matplotlib>=3.7",
+        "import": "matplotlib"
+      },
+      {
+        "spec": "seaborn>=0.13",
+        "import": "seaborn"
+      },
+      {
+        "spec": "plotly>=5.18",
+        "import": "plotly"
+      },
+      {
+        "spec": "Pillow>=10.0",
+        "import": "PIL"
+      },
+      {
+        "spec": "numpy>=1.24",
+        "import": "numpy"
+      },
+      {
+        "spec": "pandas>=2.0",
+        "import": "pandas"
+      },
+      {
+        "spec": "scipy>=1.10",
+        "import": "scipy"
+      }
+    ],
+    "pdf-text": [
+      {
+        "spec": "pypdf>=4.0",
+        "import": "pypdf"
+      }
+    ],
+    "docx": [
+      {
+        "spec": "python-docx>=1.1",
+        "import": "docx"
+      }
+    ],
+    "symbolic": [
+      {
+        "spec": "sympy>=1.12",
+        "import": "sympy"
+      }
+    ],
+    "http": [
+      {
+        "spec": "requests>=2.31",
+        "import": "requests"
+      }
+    ],
+    "validation": [
+      {
+        "spec": "packaging>=23.0",
+        "import": "packaging"
+      }
+    ],
+    "numerical": [
+      {
+        "spec": "numpy>=1.24",
+        "import": "numpy"
+      },
+      {
+        "spec": "scipy>=1.10",
+        "import": "scipy"
+      }
+    ],
+    "molecular": [
+      {
+        "spec": "rdkit>=2024.3",
+        "import": "rdkit"
+      }
+    ],
+    "optimization": [
+      {
+        "spec": "ortools>=9.10",
+        "import": "ortools"
+      }
+    ],
+    "simulation": [
+      {
+        "spec": "gymnasium>=1.0",
+        "import": "gymnasium"
+      }
+    ],
+    "torch": [
+      {
+        "spec": "torch",
+        "import": "torch"
+      }
+    ],
+    "mlx": [
+      {
+        "spec": "mlx",
+        "import": "mlx"
+      }
+    ]
+  },
+  "not_a_lockfile": true,
+  "note": "Minimal project-selected dependency groups, not complete upstream requirements. Resolve actual provider manifests; record exact resolved distributions after installation.",
+  "sources": [
+    {
+      "id": "scipilot-plot",
+      "repository": "Haojae/scipilot-figure-skill",
+      "path": "requirements.txt",
+      "git_blob_sha": "7f194bb3314bf45682386d5a6a65b677bc14ef55",
+      "checked_at": "2026-09-29",
+      "scope": "required packages for plot; optional enhancements excluded"
+    }
+  ],
+  "backend_selection": "Probe current resources and selected framework availability; explicitly calibrate actual backend, operators and precision before scaling. Groups are opt-in and do not select a GPU.",
+  "tool_execution": "Explicit argv, project cwd and selected interpreter/PATH; external project environments retain their own package manager and lock."
+}

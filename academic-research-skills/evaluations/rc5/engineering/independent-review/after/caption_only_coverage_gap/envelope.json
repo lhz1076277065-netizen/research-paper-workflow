@@ -1,0 +1,74 @@
+{
+  "capability": "manuscript-writing",
+  "task_sha256": "90272088f3c8caf3ebac0281b97e56ce80d10879e227a6bb01f19da5c23f5d80",
+  "provider_id": "host_fallback",
+  "execution_mode": "host_fallback",
+  "execution_status": "executed",
+  "outputs": [
+    {
+      "path": "draft.md",
+      "sha256": "e6a304ed3b7b69af231ad769409221f92d04a73e594c7764335e51f392a1bd8d",
+      "role": "draft"
+    }
+  ],
+  "result_links": {
+    "kind": "result-links",
+    "sources": [
+      {
+        "id": "frozen",
+        "path": "results.json",
+        "versions": {
+          "data": {
+            "path": "measurements.json",
+            "sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf"
+          },
+          "code": {
+            "path": "compute.py",
+            "sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63"
+          },
+          "execution": {
+            "path": "execution.json",
+            "sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29"
+          }
+        },
+        "sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4"
+      }
+    ],
+    "links": [
+      {
+        "result_id": "R-latency",
+        "source_id": "frozen",
+        "role": "caption",
+        "artifact": {
+          "path": "draft.md",
+          "sha256": "e6a304ed3b7b69af231ad769409221f92d04a73e594c7764335e51f392a1bd8d"
+        },
+        "locator": {
+          "line": 2
+        },
+        "semantics": {
+          "unit": {
+            "value": "ms",
+            "text": "ms"
+          },
+          "outcome": {
+            "value": "latency",
+            "text": "latency"
+          },
+          "model": {
+            "value": "solver-a",
+            "text": "Solver A"
+          }
+        },
+        "numeric": [
+          {
+            "field": "value",
+            "decimals": 1,
+            "text": "410.0"
+          }
+        ]
+      }
+    ],
+    "claims": []
+  }
+}

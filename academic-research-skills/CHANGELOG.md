@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.2.0-rc.5
+
+- Compare recomputed result identities before tolerances and convert compatible dimensions; explicit implementation equivalence is frozen in result sources.
+- Check ordered intervals, value/subject relationships and scoped negation; distinguish located semantic review, occurrence roles and manuscript coverage. Build links from current build rows.
+- Run real pdftotext and pypdf-only extraction in CI, save new-library regression and result-link reports.
+- Preserve detailed examples in three focused reference fragments and evaluate actual reads in paired method-development studies.
+
 ## 3.2.0-rc.4
 
 - Default computer-closed original research with six separate dimensions and fourteen on-demand routes; retain all sixteen legacy research profiles and one optional orchestrator plus eighteen capabilities.

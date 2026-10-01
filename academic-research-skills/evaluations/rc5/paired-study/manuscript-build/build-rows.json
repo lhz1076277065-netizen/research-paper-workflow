@@ -1,0 +1,450 @@
+[
+  {
+    "path": "manuscript-build/study.md",
+    "locator": {
+      "line": 3
+    },
+    "result_id": "A1refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.docx",
+    "locator": {
+      "paragraph": 2
+    },
+    "result_id": "A1refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.pdf",
+    "locator": {
+      "page": 1,
+      "line_start": 4,
+      "line_end": 7
+    },
+    "result_id": "A1refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.md",
+    "locator": {
+      "line": 4
+    },
+    "result_id": "A1refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.docx",
+    "locator": {
+      "paragraph": 3
+    },
+    "result_id": "A1refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.pdf",
+    "locator": {
+      "page": 1,
+      "line_start": 8,
+      "line_end": 9
+    },
+    "result_id": "A1refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.md",
+    "locator": {
+      "line": 5
+    },
+    "result_id": "B1refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.docx",
+    "locator": {
+      "paragraph": 4
+    },
+    "result_id": "B1refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.pdf",
+    "locator": {
+      "page": 1,
+      "line_start": 10,
+      "line_end": 13
+    },
+    "result_id": "B1refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.md",
+    "locator": {
+      "line": 6
+    },
+    "result_id": "B1refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.docx",
+    "locator": {
+      "paragraph": 5
+    },
+    "result_id": "B1refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.pdf",
+    "locator": {
+      "page": 1,
+      "line_start": 14,
+      "line_end": 15
+    },
+    "result_id": "B1refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.md",
+    "locator": {
+      "line": 7
+    },
+    "result_id": "B2refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.docx",
+    "locator": {
+      "paragraph": 6
+    },
+    "result_id": "B2refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.pdf",
+    "locator": {
+      "page": 1,
+      "line_start": 16,
+      "line_end": 19
+    },
+    "result_id": "B2refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.md",
+    "locator": {
+      "line": 8
+    },
+    "result_id": "B2refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.docx",
+    "locator": {
+      "paragraph": 7
+    },
+    "result_id": "B2refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.pdf",
+    "locator": {
+      "page": 1,
+      "line_start": 20,
+      "line_end": 21
+    },
+    "result_id": "B2refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.md",
+    "locator": {
+      "line": 9
+    },
+    "result_id": "A2refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.docx",
+    "locator": {
+      "paragraph": 8
+    },
+    "result_id": "A2refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.pdf",
+    "locator": {
+      "page": 1,
+      "line_start": 22,
+      "line_end": 25
+    },
+    "result_id": "A2refined",
+    "role": "body",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      },
+      {
+        "field": "lower",
+        "decimals": 2
+      },
+      {
+        "field": "upper",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.md",
+    "locator": {
+      "line": 10
+    },
+    "result_id": "A2refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.docx",
+    "locator": {
+      "paragraph": 9
+    },
+    "result_id": "A2refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  },
+  {
+    "path": "manuscript-build/study.pdf",
+    "locator": {
+      "page": 1,
+      "line_start": 26,
+      "line_end": 31
+    },
+    "result_id": "A2refined",
+    "role": "caption",
+    "numeric": [
+      {
+        "field": "value",
+        "decimals": 2
+      }
+    ]
+  }
+]

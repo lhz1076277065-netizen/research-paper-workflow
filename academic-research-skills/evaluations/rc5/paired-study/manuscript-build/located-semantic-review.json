@@ -1,0 +1,23 @@
+{
+  "scope": "Actual 24 declared body/caption occurrences, not complete scientific claim discovery or publication review",
+  "source_report": "result-links-report.json",
+  "PDF_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+  "PNG_sha256": "32fc6fe9af1c753d9922bec9f6af49fa5c3b7a65ce61bc28b350b0c66307b6e3",
+  "visual_pages_inspected": [
+    1
+  ],
+  "visual_observations": [
+    "All four estimates and exploratory intervals readable",
+    "No clipped lines or overlapping text",
+    "Header/footer readable; one-page diagnostic report"
+  ],
+  "semantic_review": {
+    "values_match_frozen_holdout": true,
+    "denominator_480_is_independent_constructed_streams": true,
+    "time_360_is_simulated_step_horizon": true,
+    "direction_is_loss_change_vs_each_own_baseline": true,
+    "caption_scope_does_not_repeat_full_design": true,
+    "no_publication_novelty_claim": true
+  },
+  "coverage_truth_certified": false
+}

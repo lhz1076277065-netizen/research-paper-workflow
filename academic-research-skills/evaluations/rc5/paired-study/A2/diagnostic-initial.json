@@ -1,0 +1,117 @@
+{
+  "method": "dev-initial-01",
+  "question": "Does excursion age guarantee recent evidence?",
+  "false_alarm_rows": [
+    {
+      "id": "65109-clean-15",
+      "condition": "clean",
+      "alarm": 109,
+      "tau": 209,
+      "direction": -1,
+      "energy": 12.336440353841487,
+      "excursion_observed_age": 28,
+      "last_8_oriented_clipped_mean": 0.788065705804114
+    },
+    {
+      "id": "65109-clean-26",
+      "condition": "clean",
+      "alarm": 95,
+      "tau": null,
+      "direction": 1,
+      "energy": 12.09791004071602,
+      "excursion_observed_age": 31,
+      "last_8_oriented_clipped_mean": 0.6441795937822835
+    },
+    {
+      "id": "65109-clean-28",
+      "condition": "clean",
+      "alarm": 230,
+      "tau": null,
+      "direction": 1,
+      "energy": 12.625073630898997,
+      "excursion_observed_age": 76,
+      "last_8_oriented_clipped_mean": 0.8845020295890881
+    },
+    {
+      "id": "65109-bursts-22",
+      "condition": "bursts",
+      "alarm": 173,
+      "tau": null,
+      "direction": -1,
+      "energy": 13.251565761290093,
+      "excursion_observed_age": 20,
+      "last_8_oriented_clipped_mean": 0.9922241167417944
+    },
+    {
+      "id": "65109-gaps-19",
+      "condition": "gaps",
+      "alarm": 146,
+      "tau": 152,
+      "direction": 1,
+      "energy": 12.924921523179885,
+      "excursion_observed_age": 53,
+      "last_8_oriented_clipped_mean": 0.9116203130167498
+    },
+    {
+      "id": "65109-gaps-20",
+      "condition": "gaps",
+      "alarm": 155,
+      "tau": null,
+      "direction": -1,
+      "energy": 12.470503901936802,
+      "excursion_observed_age": 21,
+      "last_8_oriented_clipped_mean": 0.7296922418525003
+    },
+    {
+      "id": "65109-heavy-0",
+      "condition": "heavy",
+      "alarm": 255,
+      "tau": null,
+      "direction": -1,
+      "energy": 12.65236229364261,
+      "excursion_observed_age": 20,
+      "last_8_oriented_clipped_mean": 0.705636934861694
+    },
+    {
+      "id": "65109-heavy-6",
+      "condition": "heavy",
+      "alarm": 177,
+      "tau": null,
+      "direction": 1,
+      "energy": 14.53203139693375,
+      "excursion_observed_age": 20,
+      "last_8_oriented_clipped_mean": 0.5929751134481468
+    },
+    {
+      "id": "65109-heavy-13",
+      "condition": "heavy",
+      "alarm": 130,
+      "tau": 170,
+      "direction": 1,
+      "energy": 13.168238603178592,
+      "excursion_observed_age": 34,
+      "last_8_oriented_clipped_mean": 1.710747567987302
+    },
+    {
+      "id": "65109-heavy-15",
+      "condition": "heavy",
+      "alarm": 122,
+      "tau": 208,
+      "direction": 1,
+      "energy": 12.099633246280058,
+      "excursion_observed_age": 24,
+      "last_8_oriented_clipped_mean": 1.0061254505537298
+    },
+    {
+      "id": "65109-heavy-21",
+      "condition": "heavy",
+      "alarm": 143,
+      "tau": 153,
+      "direction": -1,
+      "energy": 12.044712068243804,
+      "excursion_observed_age": 55,
+      "last_8_oriented_clipped_mean": 1.027286122745148
+    }
+  ],
+  "false_alarms_with_last8_mean_below_0.4": 0
+}

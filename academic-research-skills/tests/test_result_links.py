@@ -104,7 +104,7 @@ class Links(unittest.TestCase):
         self.payload['links'][0]['numeric'] = self.payload['links'][0]['numeric'][1:]
         result = self.result()
         self.assertFalse(result['passed'])
-        self.assertIn('Missing numeric occurrence: value', str(result['errors']))
+        self.assertTrue(any('value' in gap['fields'] for gap in result['coverage_gaps']))
         self.assertTrue(result['coverage']['bytes'])
         self.assertTrue(result['coverage']['declared_semantic'])
         self.assertFalse(result['semantic_truth_certified'])
@@ -128,7 +128,7 @@ class Links(unittest.TestCase):
         self.payload['links'][0].update(artifact=self.artifact('draft.docx'), locator={'table': 1, 'row': 1, 'cell': 1})
         self.assertTrue(self.result()['passed'])
 
-    @unittest.skipUnless(shutil.which('pdftotext'), 'actual PDF extraction requires pdftotext')
+    @unittest.skipUnless(shutil.which('pdftotext') or importlib.util.find_spec('pypdf'), 'actual PDF extraction requires pdftotext or pypdf')
     def test_actual_pdf_page_line(self):
         (self.root / 'draft.pdf').write_bytes(pdf_bytes(self.TEXT))
         self.payload['links'][0].update(artifact=self.artifact('draft.pdf'), locator={'page': 1, 'line': 1})
@@ -185,7 +185,7 @@ class Links(unittest.TestCase):
         self.assertTrue(self.result()['passed'], self.result())
 
     def test_recomputation_tolerance_does_not_relax_display_rounding(self):
-        (self.root / 'recomputed.json').write_text(json.dumps({'R1': {'value': .12345600001}}))
+        (self.root / 'recomputed.json').write_text(json.dumps({'R1': dict(self.record,value=.12345600001)}))
         self.payload['sources'].append(dict(self.artifact('recomputed.json'), id='recomputed'))
         link = self.payload['links'][0]
         link['source_id'] = 'frozen'
@@ -196,7 +196,7 @@ class Links(unittest.TestCase):
         self.assertFalse(self.result()['passed'])
 
     def test_recomputation_outside_tolerance_fails(self):
-        (self.root / 'recomputed.json').write_text(json.dumps({'R1': {'value': .124}}))
+        (self.root / 'recomputed.json').write_text(json.dumps({'R1': dict(self.record,value=.124)}))
         self.payload['sources'].append(dict(self.artifact('recomputed.json'), id='recomputed'))
         self.payload['links'][0]['source_id'] = 'frozen'
         self.payload['links'][0]['numeric'][0].update(recomputed={'source_id': 'recomputed'}, tolerance={'abs': 1e-9})
@@ -266,7 +266,9 @@ class Links(unittest.TestCase):
         self.payload['sources'][0].update(self.artifact('results.csv'))
         self.payload['links'][0]['numeric'] = self.payload['links'][0]['numeric'][:1]
         self.payload['links'][0]['semantics'] = {'unit': {'value': 'percent', 'text': '%'}}
-        self.assertTrue(self.result()['passed'])
+        result=self.result()
+        self.assertTrue(result['coverage']['numeric'])
+        self.assertTrue(any(item.get('reason')=='primary_subject_unbound' for item in result['pending'] if isinstance(item,dict)))
 
     def test_theory_proposition_conditions_and_actual_proof(self):
         (self.root / 'proof.md').write_text('Proof: summing nonnegative terms gives the bound.\n')
@@ -370,6 +372,264 @@ class Links(unittest.TestCase):
             '--registry', str(self.root / 'registry.json'), 'audit', '--input', str(self.root / 'payload.json'),
             '--root', str(self.root)], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
+
+
+class Rc5Relations(unittest.TestCase):
+    """Fresh computed latency material, independent of the rc4 wine/export packet."""
+    TEXT=('Solver A latency was 410.0 ms (95% CI 390.0 ms-430.0 ms), lower than Solver baseline '
+          'on digital instances (n=4), holdout at one run; absolute mean; loop.')
+
+    def setUp(self):
+        self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name)
+        (self.root/'measurements.json').write_text('["0.40", "0.42", "0.41", "0.41"]')
+        code=self.root/'compute.py'
+        code.write_text('import json,sys\nfrom pathlib import Path\nfrom decimal import Decimal\nx=json.loads(Path(sys.argv[1]).read_text())\nprint(json.dumps({"value":str(sum(map(Decimal,x))/len(x))}))\n')
+        run=subprocess.run([sys.executable,str(code),str(self.root/'measurements.json')],capture_output=True,text=True,check=True)
+        (self.root/'execution.json').write_text(run.stdout)
+        self.record={'value':json.loads(run.stdout)['value'],'unit':'s','lower':'0.39','upper':'0.43',
+            'model':{'value':'solver-a','labels':['Solver A'],'equivalent_values':['solver-a-fast']},
+            'implementation':{'value':'loop','labels':['loop'],'equivalent_values':['vectorized']},
+            'outcome':'latency','direction':'decrease','population':'digital instances','denominator':4,
+            'comparison':'Solver baseline','split':'holdout','time':'one run','effect_type':'absolute mean','uncertainty':'95% CI'}
+        self.records={'R-latency':self.record}
+        self.sources=[{'id':'frozen','path':'results.json','versions':{name:{'path':path} for name,path in [
+            ('data','measurements.json'),('code','compute.py'),('execution','execution.json')]}}]
+        self.rows=[{'path':'draft.md','result_id':'R-latency','role':'body','locator':{'line':1},'unit':'ms',
+                    'numeric':[{'field':field,'decimals':1} for field in ('value','lower','upper')]}]
+        self.text=self.TEXT;self.save()
+
+    def tearDown(self):self.temp.cleanup()
+
+    def save(self):
+        (self.root/'results.json').write_text(json.dumps(self.records))
+        (self.root/'draft.md').write_text(self.text+'\n')
+
+    def payload(self):return audit.build_links(self.root,self.sources,self.rows)
+
+    def result(self):return audit.audit_links(self.payload(),self.root)
+
+    def recomputation(self,other):
+        (self.root/'repeated.json').write_text(json.dumps({'R-latency':other}))
+        data=self.payload();data['sources'].append({'id':'repeated','path':'repeated.json','sha256':audit._sha(self.root/'repeated.json')})
+        data['links'][0]['numeric'][0].update(recomputed={'source_id':'repeated'},tolerance={'abs':0,'rel':0})
+        return audit.audit_links(data,self.root)
+
+    def test_actual_build_rows_reuse_frozen_semantics_and_display(self):
+        data=self.payload();report=audit.audit_links(data,self.root)
+        self.assertEqual(data['links'][0]['numeric'][0]['text'],'410.0')
+        self.assertTrue(report['passed'],report)
+        self.assertTrue(report['coverage']['relationships'])
+        self.assertFalse(report['semantic_truth_certified'])
+
+    def test_recomputed_true_unit_equivalence_not_equal_bare_numbers(self):
+        other=copy.deepcopy(self.record);other.update(unit='ms',value='410',lower='390',upper='430')
+        result=self.recomputation(other)
+        self.assertTrue(result['passed'],result)
+        self.assertEqual(result['coverage']['numeric'][0]['recomputation']['converted_value'],'0.410')
+        other['value']='0.41'
+        self.assertIn('exceeds tolerance',str(self.recomputation(other)['errors']))
+        other['unit']='g'
+        self.assertIn('dimensions differ',str(self.recomputation(other)['errors']))
+
+    def test_recomputed_context_and_field_roles_must_agree(self):
+        for field in ('split','time','outcome','population','comparison','effect_type'):
+            with self.subTest(field=field):
+                other=copy.deepcopy(self.record);other[field]='another '+field
+                self.assertIn('identity mismatch: '+field,str(self.recomputation(other)['errors']))
+        data=self.payload();data['sources'].append({'id':'repeated','path':'results.json','sha256':audit._sha(self.root/'results.json')})
+        data['links'][0]['numeric'][0]['recomputed']={'source_id':'repeated','field':'lower'}
+        self.assertIn('field role differs',str(audit.audit_links(data,self.root)['errors']))
+
+    def test_only_frozen_scientific_equivalence_aliases_authorize_models(self):
+        other=copy.deepcopy(self.record);other['model']['value']='solver-a-fast';other['implementation']['value']='vectorized'
+        self.assertTrue(self.recomputation(other)['passed'])
+        other['model']['value']='Solver A'  # A display label is not scientific equivalence.
+        self.assertIn('identity mismatch: model',str(self.recomputation(other)['errors']))
+        other['model']['value']='solver-a-fast';self.record['model'].pop('equivalent_values');self.save()
+        self.assertIn('identity mismatch: model',str(self.recomputation(other)['errors']))
+
+    def test_missing_recomputation_identity_remains_located_pending(self):
+        self.record.pop('split');self.save();other=copy.deepcopy(self.record)
+        report=self.recomputation(other)
+        self.assertFalse(report['passed']);self.assertFalse(report['errors'])
+        self.assertTrue(any(item.get('reason')=='recomputation_identity_unbound' and item['locator']=={'line':1} for item in report['pending']))
+
+    def test_swapped_intervals_fail_but_explicit_upper_lower_labels_are_valid(self):
+        self.text=self.TEXT.replace('390.0 ms-430.0 ms','430.0 ms-390.0 ms');self.save()
+        self.assertIn('endpoints are reversed',str(self.result()['errors']))
+        self.text=self.TEXT.replace('390.0 ms-430.0 ms','upper: 430.0 ms, lower: 390.0 ms');self.save()
+        self.assertTrue(self.result()['passed'],self.result())
+
+    def test_range_separator_does_not_hide_a_negative_primary_value(self):
+        self.text=self.TEXT.replace('was 410.0 ms','was -410.0 ms');self.save()
+        self.assertIn('Numeric token absent',str(self.result()['errors']))
+        self.text=self.TEXT.replace('was 410.0 ms','was −410.0 ms');self.save()
+        self.assertIn('Numeric token absent',str(self.result()['errors']))
+
+    def test_known_wrong_subject_and_paragraph_cooccurrence_cannot_pass(self):
+        other=copy.deepcopy(self.record);other['model']={'value':'solver-b','labels':['Solver B']}
+        self.records['R-other']=other
+        self.text=self.TEXT.replace('Solver A latency was 410.0 ms','Solver A latency was 500.0 ms; Solver B latency was 410.0 ms');self.save()
+        self.assertIn('different model',str(self.result()['errors']))
+        self.text=self.TEXT.replace('Solver A latency was','Solver A is background. An unknown method latency was');self.save()
+        result=self.result()
+        self.assertFalse(result['passed'])
+        self.assertTrue(any(item.get('reason')=='primary_subject_relationship_unresolved' for item in result['pending']))
+
+    def test_unknown_connectors_are_review_pending_not_certified(self):
+        for connector in ('was reported incorrectly as','contrasted with unknown B at'):
+            with self.subTest(connector=connector):
+                self.text=self.TEXT.replace('latency was','latency '+connector);self.save()
+                result=self.result()
+                self.assertFalse(result['passed']);self.assertFalse(result['errors'])
+                self.assertTrue(any(item.get('reason')=='primary_subject_connector_unresolved' for item in result['pending']))
+
+    def test_comparison_threshold_cannot_be_an_exact_primary_value(self):
+        for comparison in ('lower than','higher than','at least','below','<'):
+            with self.subTest(comparison=comparison):
+                self.text=self.TEXT.replace('was 410.0','was '+comparison+' 410.0');self.save()
+                result=self.result();self.assertFalse(result['passed']);self.assertFalse(result['errors'],result)
+                self.assertTrue(any(item.get('reason')=='primary_value_is_comparison_threshold' for item in result['pending']))
+                self.assertFalse(any(item['relationship']=='primary_subject' for item in result['coverage']['relationships']))
+
+    def test_independent_unit_locator_still_checks_the_actual_number(self):
+        self.text=self.TEXT.replace('was 410.0 ms','was 410.0 g')+'\nms';self.save()
+        data=self.payload();data['links'][0]['semantics']['unit']={'value':'ms','text':'ms','locator':{'line':2}}
+        self.assertIn('Actual numeric unit differs',str(audit.audit_links(data,self.root)['errors']))
+        self.text=self.TEXT.replace('was 410.0 ms','was 410.0')+'\nms';self.save()
+        data=self.payload();data['links'][0]['semantics']['unit']={'value':'ms','text':'ms','locator':{'line':2}}
+        result=audit.audit_links(data,self.root);self.assertFalse(result['passed']);self.assertFalse(result['errors'],result)
+        self.assertTrue(any(item.get('reason')=='numeric_unit_relationship_unresolved' for item in result['pending']))
+        self.text=self.TEXT+'\nms';self.save()
+        data=self.payload();data['links'][0]['semantics']['unit']={'value':'ms','text':'ms','locator':{'line':2}}
+        self.assertTrue(audit.audit_links(data,self.root)['passed'])
+
+    def test_fake_table_coordinates_and_mixed_locators_are_rejected(self):
+        original=self.payload();data=copy.deepcopy(original);link=data['links'][0]
+        link['locator'].update(table=1,row=2,cell=2)
+        link['semantics']['model']['locator']={'line':1,'table':1,'row':2,'cell':1}
+        self.assertIn('inapplicable locator',str(audit.audit_links(data,self.root)['errors']))
+        for locator in ({'line':1,'paragraph':1},{'line':1,'page':1},{'line':1,'line_start':1},{'table':1,'row':1,'cell':1}):
+            with self.subTest(locator=locator):
+                data=copy.deepcopy(original);data['links'][0]['locator']=locator
+                self.assertIn('inapplicable locator',str(audit.audit_links(data,self.root)['errors']))
+        data=copy.deepcopy(original);data['links'][0]['semantics']['model']['locator']={'line':1,'table':1,'row':2,'cell':1}
+        self.assertIn('inapplicable locator',str(audit.audit_links(data,self.root)['errors']))
+        for extension,locator in [('tex',{'line':1,'paragraph':1}),('pdf',{'page':1,'line':1,'table':1,'row':2,'cell':2}),
+                                  ('docx',{'paragraph':1,'table':1,'row':2,'cell':2})]:
+            with self.subTest(extension=extension):
+                path=self.root/('draft.'+extension)
+                if extension=='pdf':path.write_bytes(pdf_bytes(self.TEXT))
+                elif extension=='docx':
+                    with zipfile.ZipFile(path,'w') as archive:
+                        archive.writestr('word/document.xml','<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body><w:p><w:r><w:t>'+self.TEXT+'</w:t></w:r></w:p></w:body></w:document>')
+                else:path.write_text(self.TEXT)
+                data=copy.deepcopy(original);data['links'][0].update(artifact={'path':path.name,'sha256':audit._sha(path)},locator=locator)
+                self.assertIn('inapplicable locator',str(audit.audit_links(data,self.root)['errors']))
+
+    def test_zero_tolerance_preserves_all_decimal_digits_during_conversion(self):
+        for unit,value in [('s','0.41000000000000000000000000001'),
+                           ('ms','410.00000000000000000000000001')]:
+            with self.subTest(unit=unit):
+                other=copy.deepcopy(self.record);other.update(unit=unit,value=value)
+                self.assertIn('exceeds tolerance',str(self.recomputation(other)['errors']))
+        other=copy.deepcopy(self.record);other['value']='0.41000000000000000000000000001'
+        data=self.payload();(self.root/'repeated.json').write_text(json.dumps({'R-latency':other}))
+        data['sources'].append({'id':'repeated','path':'repeated.json','sha256':audit._sha(self.root/'repeated.json')})
+        data['links'][0]['numeric'][0].update(recomputed={'source_id':'repeated'},tolerance={'abs':1e-29,'rel':0})
+        self.assertTrue(audit.audit_links(data,self.root)['passed'])
+        data['links'][0]['numeric'][0]['tolerance']['abs']=1e-30
+        self.assertIn('exceeds tolerance',str(audit.audit_links(data,self.root)['errors']))
+        # JSON numeric literals must preserve precision just as string-valued raw outputs do.
+        numeric_json=json.dumps({'R-latency':other}).replace('"'+other['value']+'"',other['value'])
+        (self.root/'repeated.json').write_text(numeric_json)
+        data['sources'][-1]['sha256']=audit._sha(self.root/'repeated.json')
+        data['links'][0]['numeric'][0]['tolerance']['abs']=0
+        self.assertIn('exceeds tolerance',str(audit.audit_links(data,self.root)['errors']))
+
+    def test_numeric_semantic_json_remains_serializable_through_actual_cli(self):
+        self.record['time']=0.5;self.text=self.TEXT.replace('one run','0.5');self.save()
+        payload=self.payload()
+        encoded=json.dumps(payload,allow_nan=False)
+        self.assertEqual(payload['links'][0]['semantics']['time']['value'],'0.5')
+        report=audit.audit_links(payload,self.root);self.assertTrue(report['passed'],report)
+        json.dumps(report,allow_nan=False)
+        manifest=self.root/'links.json';manifest.write_text(encoded)
+        registry=self.root/'registry.json';registry.write_text('{"providers":[]}')
+        execution=subprocess.run([sys.executable,str(ROOT/'src/common/scripts/provider_runtime.py'),
+            '--registry',str(registry),'audit','--input',str(manifest),'--root',str(self.root)],capture_output=True,text=True)
+        self.assertEqual(execution.returncode,0,execution.stderr+execution.stdout)
+        returned=json.loads(execution.stdout)
+        self.assertTrue(returned['passed'],returned)
+        self.assertEqual(next(item['source_value'] for item in returned['coverage']['declared_semantic'] if item['field']=='time'),'0.5')
+
+    def test_negation_scope_direct_nonlocal_and_unrelated(self):
+        self.text=self.TEXT.replace('was 410.0','was not 410.0');self.save()
+        self.assertIn('Negated actual occurrence',str(self.result()['errors']))
+        self.text='It is not true that '+self.TEXT;self.save()
+        result=self.result();self.assertFalse(result['passed'])
+        self.assertTrue(any(item.get('reason')=='negation_scope_unresolved' for item in result['pending']))
+        self.text='No values were excluded. '+self.TEXT;self.save()
+        self.assertTrue(self.result()['passed'],self.result())
+
+    def test_separate_semantic_locator_cannot_hide_negated_direction(self):
+        self.record['direction']='increase';self.text=self.TEXT.replace('lower','increased')+'\nThis is not an increase.';self.save()
+        data=self.payload();data['links'][0]['semantics']['direction']={'value':'increase','text':'increase','locator':{'line':2}}
+        self.assertIn('Negated actual occurrence',str(audit.audit_links(data,self.root)['errors']))
+        self.text=self.TEXT.replace('lower','increased')+'\nIt is not known whether this is an increase.';self.save()
+        data=self.payload();data['links'][0]['semantics']['direction']={'value':'increase','text':'increase','locator':{'line':2}}
+        report=audit.audit_links(data,self.root)
+        self.assertTrue(any(item.get('reason')=='semantic_negation_scope_unresolved' for item in report['pending']))
+
+    def test_local_caption_and_whole_manuscript_coverage_are_separate(self):
+        self.text=self.TEXT+'\nSolver A latency was 410.0 ms.';self.save()
+        caption={'path':'draft.md','result_id':'R-latency','role':'caption','locator':{'line':2},'unit':'ms',
+                 'numeric':[{'field':'value','decimals':1}]}
+        self.rows.append(caption);report=self.result()
+        self.assertTrue(report['passed'],report)
+        self.assertTrue(report['coverage']['occurrences'][1]['fields_not_in_this_occurrence'])
+        self.assertFalse(report['coverage_gaps'])
+        self.rows=[caption];report=self.result()
+        self.assertFalse(report['passed']);self.assertFalse(report['errors']);self.assertTrue(report['coverage_gaps'])
+        self.assertIn('lower',report['coverage_gaps'][0]['fields'])
+
+    def test_actual_table_subject_cell_and_header_have_limited_coverage(self):
+        ns='http://schemas.openxmlformats.org/wordprocessingml/2006/main'
+        rows=[['Model (ms)','latency (ms)'],['Solver A','410.0'],['Solver A','410.0']]
+        xml='<w:document xmlns:w="'+ns+'"><w:body><w:tbl>'
+        for row in rows:
+            xml+='<w:tr>'+''.join('<w:tc><w:p><w:r><w:t>'+cell+'</w:t></w:r></w:p></w:tc>' for cell in row)+'</w:tr>'
+        xml+='</w:tbl></w:body></w:document>'
+        with zipfile.ZipFile(self.root/'table.docx','w') as archive:archive.writestr('word/document.xml',xml)
+        self.rows=[{'path':'table.docx','result_id':'R-latency','role':'table','locator':{'table':1,'row':2,'cell':2},'unit':'ms',
+            'numeric':[{'field':'value','decimals':1}], 'subject_field':'model',
+            'semantics':{'model':{'value':'solver-a','text':'Solver A','locator':{'table':1,'row':2,'cell':1}},
+                         'outcome':{'value':'latency','text':'latency','locator':{'table':1,'row':1,'cell':2}},
+                         'unit':{'value':'ms','text':'ms','locator':{'table':1,'row':1,'cell':2}}}}]
+        report=self.result()
+        self.assertFalse(report['errors'],report)
+        self.assertEqual(report['coverage']['numeric'][0]['unit_binding'],'same-column-header')
+        self.assertTrue(any(item['relationship']=='table_subject_coordinates' for item in report['coverage']['relationships']))
+        self.assertTrue(report['coverage_gaps'])  # This table does not bind the full study design.
+        self.rows[0]['subject_field']='outcome';report=self.result()
+        self.assertTrue(any(item.get('field')=='outcome' for item in report['coverage']['relationships']))
+        self.rows[0]['subject_field']='model'
+        self.rows[0]['semantics']['model']['locator']['row']=3
+        report=self.result();self.assertFalse(report['errors'],report)
+        self.assertTrue(any(item.get('reason')=='primary_subject_relationship_unresolved' for item in report['pending']))
+        self.rows[0]['semantics']['model']['locator']['row']=2
+        self.rows[0]['semantics']['unit']['locator']['cell']=1
+        report=self.result();self.assertFalse(report['errors'],report)
+        self.assertTrue(any(item.get('reason')=='numeric_unit_relationship_unresolved' for item in report['pending']))
+        self.rows[0]['semantics']['unit']['locator']['cell']=2
+        with zipfile.ZipFile(self.root/'table.docx','w') as archive:
+            archive.writestr('word/document.xml',xml.replace('410.0','410.0 g'))
+        self.assertIn('Actual numeric unit differs',str(self.result()['errors']))
+
+    def test_build_preserves_pinned_source_identity(self):
+        self.sources[0]['sha256']=audit._sha(self.root/'results.json')
+        self.record['value']='0.42';self.save()
+        with self.assertRaisesRegex(ValueError,'version mismatch'):self.payload()
 
 
 class Renders(unittest.TestCase):

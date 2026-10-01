@@ -1,0 +1,110 @@
+{
+  "elapsed_seconds": 735.0303511619568,
+  "elapsed_definition": "Wall time from the first Python runtime/data-inventory command to artifact finalization. Prior task/harness/skill reading was not timestamped and is excluded; total session elapsed is unknown here.",
+  "measurement_start_epoch": 1790845646.410493,
+  "finalization_epoch": 1790846381.440844,
+  "validation_call_counts": {
+    "total": 43,
+    "dev": 40,
+    "train": 3,
+    "baseline_dev": 16,
+    "initial_dev": 12,
+    "refined_dev": 10,
+    "refined_ablation_dev": 2
+  },
+  "unique_configuration_counts": {
+    "baseline": 16,
+    "initial": 12,
+    "refined_including_ablations": 12
+  },
+  "limits": {
+    "baseline_configurations": 16,
+    "initial_configurations": 12,
+    "refined_configurations": 12,
+    "within_limits": true,
+    "time_limit_advisory": true
+  },
+  "validation_runtime_seconds_sum": 1.8928210030007904,
+  "skill_reads": {
+    "files": 5,
+    "actual_emitted_characters": 6002,
+    "events": "read-events.jsonl",
+    "only_assigned_library": true
+  },
+  "executor": "Assigned native agent; no delegation or external LLM execution",
+  "guidance_read": [
+    "SKILL.md",
+    "references/protocol.md",
+    "references/provider-policy.md",
+    "references/execution-handoff.md",
+    "references/research-quality.md"
+  ],
+  "research_work_done": [
+    "Implemented and retained initial detector",
+    "Implemented contiguous-excision refinement",
+    "Bounded common-dev tuning through supplied scorer",
+    "Paired all 120 dev cases",
+    "Computed post-selection descriptive bootstrap",
+    "Independent direct-deletion and causal prefix checks",
+    "Derived and checked noiseless burst guarantee and weak-shift blind region",
+    "Frozen parameter maps and manuscript result paragraph"
+  ],
+  "functions_run": [
+    "harness.score (43 calls)",
+    "detect_initial",
+    "detect_refined",
+    "check.py",
+    "analyze.py",
+    "run_dev.py --tune"
+  ],
+  "guidance_effect": {
+    "research_quality_changed_interpretation": true,
+    "research_quality_changed_detector_or_parameters": false,
+    "detail": "Added a proved sensitivity ceiling and executable counterexample, and framed a negative/boundary result; no retuning."
+  },
+  "tools_used": [
+    "functions.exec with native exec_command",
+    "web.run primary-paper search/open/find",
+    "collaboration.send_message to parent for progress only"
+  ],
+  "dependencies": {
+    "python_executable": "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "additional_packages_installed": [],
+    "runtime_packages_used": "Python standard library only; supplied harness imported"
+  },
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "architecture": "arm64",
+    "cpu_count": 18,
+    "accelerator_used": null,
+    "memory_peak": null,
+    "memory_peak_reason": "Not measured; no claim made."
+  },
+  "randomness": {
+    "detectors": "deterministic",
+    "bootstrap_seed": 774091,
+    "bootstrap_resamples": 10000
+  },
+  "data_sha256": {
+    "train": "b89b87c1833a281f7d27be46811495b513beafc143b30cbb763a6e4f060254f2",
+    "dev": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f"
+  },
+  "artifact_sha256": {
+    "methods.py": "5248280537727988b4b1798244443ef9bd562b2d371eeebcbf5c4c313d52ae05",
+    "frozen.json": "211a312c9e1e6981880ca32a364f11a8ebc6397d1c263b2c13a1674ff7b99835",
+    "run_dev.py": "86f9b84f194f3bf42380be49b5568d6e9651a774086336f312929a43ed329115",
+    "check.py": "e9081e2004d51accb1e2ee2aff4c68d0f45b33a82a9974bfdc325e44ef9cec29",
+    "analyze.py": "ea4102ba3c741a1e2ed355ca27abcf43bfef13d7c27893fcd4ae31195ece9b35",
+    "research.md": "14d6a08a4243af758c1026ce691596ba7def2f1b40c087f16a4316cd6e0248c8",
+    "paired-cases.csv": "ad0f101aab384db598d66338d3cb57937a37dc5df1b28818521979976ea12293",
+    "comparison-summary.json": "1f51fc6f6330afab3399c227fa61ca53f080d8b39f8b00d2da387ae1a654fc0f"
+  },
+  "holdout_accessed": false,
+  "generator_source_accessed": false,
+  "other_participant_content_accessed": false,
+  "independent_review": "Not conducted by this executor; parent will commission separate review after freezing.",
+  "token_usage": null,
+  "monetary_cost": null,
+  "cost_reason": "No authoritative per-agent token/cost meter available; not estimated."
+}

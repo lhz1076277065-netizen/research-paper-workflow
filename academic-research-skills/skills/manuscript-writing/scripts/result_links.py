@@ -19,7 +19,8 @@ import zipfile
 from xml.etree import ElementTree as ET
 
 SEMANTICS = ('unit', 'direction', 'denominator', 'outcome', 'population', 'sample',
-             'time', 'comparison', 'model', 'split', 'uncertainty', 'effect_type')
+             'time', 'comparison', 'model', 'implementation', 'split', 'uncertainty', 'effect_type')
+IDENTITY = ('outcome', 'population', 'comparison', 'split', 'time', 'effect_type')
 DIRECTIONS = {'increase': ('increase', 'increased', 'increases', 'higher', 'positive'),
               'decrease': ('decrease', 'decreased', 'decreases', 'lower', 'negative'),
               'no-change': ('no-change', 'no change', 'unchanged')}
@@ -111,14 +112,28 @@ def _pdf_pages(path):
         return result.stdout.decode('utf-8').split('\f')
     try:
         from pypdf import PdfReader
+        from pypdf.errors import PyPdfError
     except ImportError:
         raise ValueError('PDF extraction needs installed pdftotext or pypdf; no PDF occurrence was checked') from None
-    return [page.extract_text() or '' for page in PdfReader(str(path)).pages]
+    try:
+        return [page.extract_text() or '' for page in PdfReader(str(path)).pages]
+    except PyPdfError as error:
+        raise ValueError('PDF text extraction failed: ' + path.name + ': ' + str(error)) from error
 
 
 def _located(path, locator, cache):
     locator = _object(locator, 'locator')
     extension = path.suffix.lower()
+    if extension in {'.md', '.markdown', '.tex', '.txt', '.pdf'}:
+        allowed = {'line', 'line_start', 'line_end'} | ({'page'} if extension == '.pdf' else set())
+        valid = not (set(locator) - allowed) and (('line' in locator) != ('line_start' in locator))
+        valid = valid and (extension != '.pdf' or 'page' in locator)
+    elif extension == '.docx':
+        valid = set(locator) == {'paragraph'} or set(locator) == {'table', 'row', 'cell'}
+    else:
+        raise ValueError('Occurrence format must be Markdown, LaTeX, text, DOCX or PDF')
+    if not valid:
+        raise ValueError('Mixed or inapplicable locator coordinates for ' + extension)
     if path not in cache:
         if extension == '.pdf':
             cache[path] = _pdf_pages(path)
@@ -191,6 +206,13 @@ def _number(value, label):
     return number
 
 
+def _precision(*values):
+    """Keep all finite decimal digits across conversion, subtraction and tolerance products."""
+    return max(50, sum(len(value.as_tuple().digits) for value in values)
+               + max(value.adjusted() for value in values)
+               - min(value.as_tuple().exponent for value in values) + 10)
+
+
 def _records(path):
     if path.suffix.lower() == '.csv':
         with path.open(encoding='utf-8-sig', newline='') as handle:
@@ -201,7 +223,7 @@ def _records(path):
             if any(None in row or any(v is None for v in row.values()) for row in data):
                 raise ValueError('CSV rows must match header width')
     elif path.suffix.lower() == '.json':
-        data = json.loads(path.read_text(encoding='utf-8-sig'))
+        data = json.loads(path.read_text(encoding='utf-8-sig'), parse_float=Decimal)
         if isinstance(data, dict) and isinstance(data.get('results'), list):
             data = data['results']
     else:
@@ -243,7 +265,7 @@ def _value_and_labels(expected):
         value, labels = expected, [str(expected)]
     if value is None or isinstance(value, (dict, list, bool)) or any(not isinstance(s, str) or not s.strip() for s in labels):
         raise ValueError('Source semantic values must be scalar with nonempty source-defined labels')
-    return value, labels
+    return str(value) if isinstance(value, Decimal) else value, labels
 
 
 def _unit(value):
@@ -251,30 +273,92 @@ def _unit(value):
     return UNITS.get(normal, (normal, Decimal(1)))
 
 
-def _semantics(record, link, text, path, cache, coverage):
+def _direction(value):
+    return next((key for key, words in DIRECTIONS.items() if _normal(value) in words), _normal(value))
+
+
+def _recomputed(record, other, field, other_field, pending, location):
+    """Compare a declared scientific identity before comparing converted raw values."""
+    if other.get('type', 'numeric') != 'numeric':
+        raise ValueError('Recomputed result must be numeric')
+    if field != other_field and {field, other_field} != {'value', 'estimate'}:
+        raise ValueError('Recomputed numeric field role differs')
+    original, repeated = _semantic_source(record), _semantic_source(other)
+    if 'unit' not in original or 'unit' not in repeated:
+        raise ValueError('Recomputed result must declare its unit')
+    source_unit = _unit(_value_and_labels(original['unit'])[0])
+    other_unit = _unit(_value_and_labels(repeated['unit'])[0])
+    if source_unit[0] != other_unit[0]:
+        raise ValueError('Recomputed unit dimensions differ')
+    checked = []
+    for name in sorted((set(original) | set(repeated)) - {'unit'}):
+        if name not in original or name not in repeated:
+            raise ValueError('Recomputed semantic identity missing: ' + name)
+        value = _value_and_labels(original[name])[0]
+        actual = _value_and_labels(repeated[name])[0]
+        equal = (_number(value, name) == _number(actual, name)) if name == 'denominator' else (
+            _direction(value) == _direction(actual) if name == 'direction' else _normal(value) == _normal(actual))
+        if not equal and name in {'model', 'implementation'} and isinstance(original[name], dict):
+            aliases = _list(original[name].get('equivalent_values', []), 'frozen equivalent_values')
+            equal = _normal(actual) in {_normal(_string(alias, 'equivalent value')) for alias in aliases}
+        if not equal:
+            raise ValueError('Recomputed semantic identity mismatch: ' + name)
+        checked.append(name)
+    missing = sorted(set(IDENTITY) - set(original))
+    if missing:
+        pending.append(dict(location, reason='recomputation_identity_unbound', fields=missing,
+                            action='Bind applicable scientific identity in both frozen results, including explicit not-applicable values'))
+    value = _number(other.get(other_field), 'recomputed value')
+    with localcontext() as context:
+        context.prec = _precision(value, other_unit[1], source_unit[1])
+        factor = other_unit[1] / source_unit[1]
+        if factor != 1:
+            value = value * factor
+    return value, sorted(checked), str(factor)
+
+
+def _negated(token, scoped):
+    for match in re.finditer(re.escape(_normal(token)), _normal(scoped)):
+        prefix = _normal(scoped)[:match.start()]
+        if re.search(r"(?:\b(?:not|never|no|without)\b|n't)\s+(?:(?:a|an|the|significantly|statistically|necessarily|actually|clearly)\s+){0,3}$", prefix):
+            raise ValueError('Negated actual occurrence: ' + str(token))
+
+
+def _unresolved_negation(scoped, tokens):
+    remainder=_normal(scoped)
+    for token in tokens:
+        token=_normal(token)
+        if re.search(r'\b(?:not|no|without)\b',token):remainder=remainder.replace(token,'')
+    remainder=re.sub(r'\bno missing (?:data|values|observations)\b','',remainder)
+    return re.search(r"\b(?:not|never|no|without|neither|nor|cannot)\b|\b\w+n['’]t\b|不是|并非|未",remainder) is not None
+
+
+def _semantics(record, link, text, path, cache, coverage, pending):
     expected = _semantic_source(record)
     mapped = _object(link.get('semantics', {}), 'link semantics')
     if set(mapped) - set(expected):
         raise ValueError('Semantic mapping lacks source meaning: ' + ','.join(sorted(set(mapped) - set(expected))))
-    missing = set(expected) - set(mapped)
-    if missing:
-        raise ValueError('Missing semantic occurrence mappings: ' + ','.join(sorted(missing)))
-    for field, original in expected.items():
+    # A caption can cover a point value while another occurrence covers its design.
+    for field, mapping in mapped.items():
+        original = expected[field]
         value, labels = _value_and_labels(original)
-        mapping = _object(mapped[field], field + ' mapping')
+        mapping = _object(mapping, field + ' mapping')
         token = _string(mapping.get('text'), field + ' text')
         actual = mapping.get('value')
         scoped = _located(path, mapping['locator'], cache) if 'locator' in mapping else text
         if not _present(scoped, token):
             raise ValueError(field + ' text not found at actual locator: ' + token)
+        _negated(token,scoped)
+        if 'locator' in mapping and _unresolved_negation(scoped,[token]):
+            pending.append({'result_id':link['result_id'],'role':link['role'],'path':link['artifact']['path'],
+                'locator':mapping['locator'],'field':field,'reason':'semantic_negation_scope_unresolved',
+                'action':'Read the actual semantic scope and resolve its negation'})
         if field == 'unit':
             label_match = _normal(actual)==_normal(value) and _normal(token) in {_normal(s) for s in labels}
             if _unit(value)[0] != _unit(actual)[0] or (_unit(actual) != _unit(token) and not label_match):
                 raise ValueError('Unit mismatch or undeclared conversion')
         elif field == 'direction':
-            def canonical(item):
-                return next((key for key, words in DIRECTIONS.items() if _normal(item) in words), _normal(item))
-            if canonical(value) != canonical(actual) or canonical(token) != canonical(value):
+            if _direction(value) != _direction(actual) or _direction(token) != _direction(value):
                 raise ValueError('Direction mismatch')
         elif field == 'denominator':
             denominator = _number(value, 'source denominator')
@@ -294,14 +378,44 @@ def _semantics(record, link, text, path, cache, coverage):
     return expected, mapped
 
 
-def _numeric(record, link, text, expected, mapped, sources, coverage):
+def _numeric_unit(text, span, mapping, link, pending, location):
+    """A separate unit locator identifies text, not the number's unit relationship."""
+    before, after = _normal(text[:span[0]]), _normal(text[span[1]:])
+    def adjacent(label, prefix=False):
+        pattern = re.escape(_normal(label)).replace(r'\ ', r'\s+')
+        if prefix:
+            pattern = (r'(?<!\w)' if str(label)[0].isalnum() else '') + pattern + r'\s*$'
+            return re.search(pattern, before) is not None
+        pattern = r'^\s*' + pattern + (r'(?!\w)' if str(label)[-1].isalnum() else '')
+        return re.search(pattern, after) is not None
+    known = [unit for unit in UNITS if adjacent(unit) or (mapping.get('position') == 'prefix' and adjacent(unit, True))]
+    if any(_unit(unit) != _unit(mapping['value']) for unit in known):
+        raise ValueError('Actual numeric unit differs from mapped unit: ' + ','.join(known))
+    attached = adjacent(mapping['text'], mapping.get('position') == 'prefix')
+    if attached or known:
+        return 'attached'
+    if 'locator' not in mapping:
+        raise ValueError('Unit is not attached to the actual numeric occurrence')
+    number, unit = link['locator'], mapping['locator']
+    header = (Path(link['artifact']['path']).suffix.lower() == '.docx'
+              and number.get('table') is not None and number.get('table') == unit.get('table')
+              and number.get('cell') == unit.get('cell') and unit.get('row') == 1 and number.get('row',0) > 1)
+    if header and not re.match(r'\s*[a-z]', after):
+        return 'same-column-header'
+    pending.append(dict(location, field='unit', reason='numeric_unit_relationship_unresolved',
+                        unit_locator=unit, action='Bind the actual number unit or review its located unit relationship'))
+    return 'pending'
+
+
+def _numeric(record, link, text, expected, mapped, sources, coverage, pending):
     numbers = _list(link.get('numeric', []), 'numeric mappings', True)
     if record.get('lower') not in (None, '') and record.get('upper') not in (None, ''):
         lower, upper = _number(record['lower'], 'lower bound'), _number(record['upper'], 'upper bound')
         estimate = record.get('value', record.get('estimate'))
         if lower > upper or (estimate is not None and not lower <= _number(estimate, 'estimate') <= upper):
             raise ValueError('Source uncertainty interval is inconsistent')
-    fields = set()
+    fields, positions = set(), {}
+    location = {'result_id': link['result_id'], 'role': link['role'], 'path': link['artifact']['path'], 'locator': link['locator']}
     for mapping in numbers:
         mapping = _object(mapping, 'numeric mapping')
         field = _string(mapping.get('field'), 'numeric field')
@@ -311,8 +425,14 @@ def _numeric(record, link, text, expected, mapped, sources, coverage):
         raw = _number(record.get(field), 'source ' + field)
         token = _string(mapping.get('text'), 'numeric text')
         displayed = _number(token, 'displayed number')
-        # A range separator is not the sign of its upper endpoint; preserve offsets.
+        # A compact range separator is not the sign of its upper endpoint; preserve offsets.
         numeric_text = re.sub(r'(?<=[\d%])[-–—](?=\d)', ' ', text.replace('−', '-'))
+        unit_text = mapped.get('unit', {}).get('text')
+        if unit_text:
+            pattern = r'(?<![\w.])[+-]?\d+(?:\.\d+)?\s*' + re.escape(unit_text) + r'([-–—])(?=\d)'
+            for separator in re.finditer(pattern, numeric_text):
+                start, end = separator.span(1)
+                numeric_text = numeric_text[:start] + ' ' + numeric_text[end:]
         matches = list(re.finditer(r'(?<![\w.+-])' + re.escape(token) + r'(?![\w.])', numeric_text))
         offset = mapping.get('offset')
         if offset is not None:
@@ -320,24 +440,25 @@ def _numeric(record, link, text, expected, mapped, sources, coverage):
                 raise ValueError('Numeric offset does not locate the actual token')
         elif len(matches) != 1:
             raise ValueError('Numeric token absent or ambiguous at locator: ' + token)
+        positions[field] = next(m.span() for m in matches if offset is None or m.start()==offset)
         factor = Decimal(1)
         if 'unit' not in expected:
             raise ValueError('Numeric source must declare unit, including dimensionless')
         source_unit = _value_and_labels(expected['unit'])[0]
-        target_unit = mapped['unit']['value']
+        target_unit = mapped.get('unit', {}).get('value', source_unit)
         factor = _unit(source_unit)[1] / _unit(target_unit)[1]
-        unit_map = mapped['unit']
-        if 'locator' not in unit_map:
-            normalized = _normal(text)
-            pair = str(unit_map['text']) + ' ' + token if unit_map.get('position') == 'prefix' else token + ' ' + str(unit_map['text'])
-            if not re.search(re.escape(_normal(pair)).replace(r'\ ', r'\s*'), normalized):
-                raise ValueError('Unit is not attached to the actual numeric occurrence')
+        unit_map = mapped.get('unit')
+        unit_binding = 'pending'
+        if unit_map is None:
+            pending.append(dict(location,reason='occurrence_unit_unbound',action='Bind the displayed unit at this occurrence or its actual table header'))
+        else:
+            unit_binding = _numeric_unit(text, positions[field], unit_map, link, pending, location)
         decimals = mapping.get('decimals')
         rounding = mapping.get('rounding', 'half-even')
         if rounding not in {'half-even', 'half-up'}:
             raise ValueError('Rounding must be half-even or half-up')
         with localcontext() as context:
-            context.prec = max(50, len(raw.as_tuple().digits) + abs(raw.adjusted()) + 20)
+            context.prec = _precision(raw, factor)
             formatted = raw * factor
             if decimals is not None:
                 if type(decimals) is not int or not 0 <= decimals <= 12:
@@ -351,6 +472,8 @@ def _numeric(record, link, text, expected, mapped, sources, coverage):
             elif displayed != formatted:
                 raise ValueError('Displayed value mismatch: ' + field)
         tolerance = _object(mapping.get('tolerance', {}), 'numeric tolerance')
+        if set(tolerance)-{'abs','rel'}:
+            raise ValueError('Unknown numeric tolerance field')
         absolute = _number(tolerance.get('abs', 0), 'absolute tolerance')
         relative = _number(tolerance.get('rel', 0), 'relative tolerance')
         if absolute < 0 or relative < 0:
@@ -358,6 +481,7 @@ def _numeric(record, link, text, expected, mapped, sources, coverage):
         recomputed = mapping.get('recomputed')
         if tolerance and recomputed is None:
             raise ValueError('Tolerance belongs to a hash-bound recomputation, not manuscript display')
+        recomputation = None
         if recomputed is not None:
             recomputed = _object(recomputed, 'recomputed reference')
             source = sources.get(recomputed.get('source_id'))
@@ -366,16 +490,207 @@ def _numeric(record, link, text, expected, mapped, sources, coverage):
             other = source['records'].get(recomputed.get('result_id', link['result_id']))
             if other is None:
                 raise ValueError('Unknown recomputed result_id')
-            value = _number(other.get(recomputed.get('field', field)), 'recomputed value')
-            if abs(raw - value) > max(absolute, relative * max(abs(raw), abs(value))):
-                raise ValueError('Recomputed numeric value exceeds tolerance: ' + field)
+            value, identity, converted = _recomputed(record, other, field, recomputed.get('field', field), pending, location)
+            with localcontext() as context:
+                context.prec = _precision(raw, value, absolute, relative)
+                if abs(raw - value) > max(absolute, relative * max(abs(raw), abs(value))):
+                    raise ValueError('Recomputed numeric value exceeds tolerance: ' + field)
+            recomputation = {'identity_fields': identity, 'unit_factor_to_source': converted,
+                             'converted_value': str(value), 'absolute_tolerance_unit': str(source_unit)}
         coverage.append({'result_id': link['result_id'], 'role': link['role'], 'path': link['artifact']['path'],
                          'locator': link['locator'], 'field': field, 'source_value': str(raw),
-                         'display_text': token, 'unit_factor': str(factor), 'decimals': decimals,
-                         'rounding': rounding, 'recomputation_checked': recomputed is not None})
-    for bound in ('value', 'estimate', 'lower', 'upper'):
-        if record.get(bound) not in (None, '') and bound not in fields:
-            raise ValueError('Missing numeric occurrence: ' + bound)
+                         'display_text': token, 'unit_factor': str(factor), 'unit_binding': unit_binding, 'decimals': decimals,
+                         'rounding': rounding, 'recomputation_checked': recomputed is not None,
+                         'recomputation': recomputation})
+    return positions
+
+
+def _relations(record, link, text, positions, sources, report):
+    """Check local literal relationships, leaving unsupported language for review."""
+    # ponytail: scoped literal/English grammar only; complex phrasing goes to located review.
+    normal = _normal(text)
+    location = {'result_id': link['result_id'], 'role': link['role'],
+                'path': link['artifact']['path'], 'locator': link['locator']}
+    spans = {}
+    for mapping in link['numeric']:
+        first, last = positions[mapping['field']]
+        start = len(_normal(text[:first])) + (1 if first and text[first-1].isspace() else 0)
+        spans[mapping['field']] = (start, start + len(_normal(mapping['text'])))
+    boundaries = [0] + [m.end() for m in re.finditer(r'[.!?](?=\s|$)', normal)] + [len(normal)]
+    def statement(span):
+        return next((a,b) for a,b in zip(boundaries,boundaries[1:]) if a<=span[0]<b)
+    def pending(reason, **details):
+        report['pending'].append(dict(location,reason=reason,action='Read the actual located statement and bind this relationship',**details))
+    for field,span in spans.items():
+        a,b = statement(span)
+        _negated(normal[span[0]:span[1]], normal[a:b])
+    for field,mapping in link.get('semantics',{}).items():
+        if 'locator' not in mapping:
+            _negated(mapping['text'], normal)
+    if {'lower','upper'}.issubset(spans):
+        low, high = spans['lower'], spans['upper']
+        labels = {'lower':r'(?:lower|lower bound|下限)\s*[:=]?\s*$',
+                  'upper':r'(?:upper|upper bound|上限)\s*[:=]?\s*$'}
+        explicit = all(re.search(labels[name],normal[max(0,spans[name][0]-35):spans[name][0]]) for name in labels)
+        if high[0]<low[0] and not explicit:
+            raise ValueError('Actual uncertainty endpoints are reversed')
+        if not explicit:
+            if statement(low)!=statement(high):
+                pending('interval_relationship_unresolved')
+            else:
+                bridge=normal[low[1]:high[0]]
+                unit=link.get('semantics',{}).get('unit',{}).get('text','')
+                bridge=bridge.replace(_normal(unit),'') if unit else bridge
+                bridge=re.sub(r'\b(?:to|through|and)\b|[\s,;:()[\]{}%–—-]','',bridge)
+                if bridge:
+                    pending('interval_relationship_unresolved')
+                else:
+                    report['coverage']['relationships'].append(dict(location,relationship='interval_order',status='checked'))
+        else:
+            report['coverage']['relationships'].append(dict(location,relationship='explicit_endpoint_labels',status='checked'))
+    primary = next((name for name in ('value','estimate') if name in spans),None)
+    if primary is None:
+        return
+    a,b = statement(spans[primary]);sentence=normal[a:b]
+    mapped=link.get('semantics',{})
+    subject=link.get('subject_field',next((name for name in ('model','implementation','outcome') if name in mapped),None))
+    threshold = re.search(r'\b(?:(?:lower|higher|less|more|greater|fewer|smaller|larger)\s+than|at least|at most|below|above|under|over)\s*$|[<>≤≥]\s*$', normal[a:spans[primary][0]])
+    if threshold:
+        pending('primary_value_is_comparison_threshold',field=primary)
+    elif subject not in {'model','implementation','outcome','population'}:
+        if subject is not None:
+            raise ValueError('Unknown subject_field')
+        pending('primary_subject_unbound')
+    elif subject not in mapped:
+        pending('primary_subject_relationship_unresolved',field=subject)
+    elif 'locator' in mapped[subject]:
+        value_locator,subject_locator=link['locator'],mapped[subject]['locator']
+        same_table=value_locator.get('table') is not None and value_locator.get('table')==subject_locator.get('table')
+        same_row=same_table and value_locator.get('row')==subject_locator.get('row') and subject_locator.get('cell')==value_locator.get('cell',0)-1
+        header=same_table and value_locator.get('cell')==subject_locator.get('cell') and subject_locator.get('row')==1 and value_locator.get('row',0)>1
+        if (subject in {'model','implementation','population'} and same_row) or (subject=='outcome' and header):
+            report['coverage']['relationships'].append(dict(location,relationship='table_subject_coordinates',field=subject,status='checked'))
+        else:
+            pending('primary_subject_relationship_unresolved',field=subject)
+    else:
+        expected=_value_and_labels(_semantic_source(record)[subject])[0]
+        candidates=[]
+        for source in sources.values():
+            for row in source['records'].values():
+                source_semantics=_semantic_source(row)
+                if subject not in source_semantics:continue
+                value,labels=_value_and_labels(source_semantics[subject])
+                for label in labels:
+                    for match in re.finditer(r'(?<!\w)'+re.escape(_normal(label))+r'(?!\w)',sentence):
+                        candidates.append((match.start()+a,match.end()+a,value))
+        before=[item for item in candidates if item[1]<=spans[primary][0]]
+        selected=max(before,key=lambda item:item[1]) if before else None
+        if selected is None:
+            after=[item for item in candidates if item[0]>=spans[primary][1]
+                   and re.search(r'\b(?:using|for|from|by|of)\s*$',normal[a:item[0]])]
+            selected=min(after,key=lambda item:item[0]) if after else None
+        if selected is None:
+            pending('primary_subject_relationship_unresolved',field=subject)
+        elif _normal(selected[2])!=_normal(expected):
+            raise ValueError('Primary value belongs to a different ' + subject)
+        else:
+            first,last=(selected[1],spans[primary][0]) if selected[1]<=spans[primary][0] else (spans[primary][1],selected[0])
+            bridge=normal[first:last]
+            for name,span in spans.items():
+                if name!=primary:
+                    bridge=bridge.replace(normal[span[0]:span[1]],'')
+            for mapping in sorted(mapped.values(),key=lambda item:len(_normal(item['text'])),reverse=True):
+                bridge=bridge.replace(_normal(mapping['text']),'')
+            if re.search(r'(?<![\w.])\d+(?:\.\d+)?(?![\w.])',bridge):
+                pending('primary_subject_relationship_ambiguous',field=subject)
+            else:
+                residue=re.sub(r'\b(?:is|was|were|equals|equal|mean|estimate|estimated|of|has|had|at|to|for|using|in|on|versus|against|with|the|a|an|than|from|by|and|ci|n|bound|bounds|confidence|interval|increased|decreased|higher|lower)\b|[\s=,:;()[\]{}%–—-]','',bridge)
+                if residue:
+                    pending('primary_subject_connector_unresolved',field=subject,text=normal[first:last])
+                else:
+                    report['coverage']['relationships'].append(dict(location,relationship='primary_subject',field=subject,status='checked'))
+    # Source-defined negative metadata (e.g. "not supplied") is not a negated result.
+    if _unresolved_negation(sentence,[mapping['text'] for mapping in mapped.values()]):
+        pending('negation_scope_unresolved',text=sentence)
+
+
+def build_links(root, sources, occurrences, claims=()):
+    """Reuse manuscript build rows; do not discover claims or write another ledger.
+
+    Example after a real build (paths and locators come from that build):
+      rows = [{"path":"draft.md", "locator":{"line":1}, "result_id":"R1",
+               "role":"body", "unit":"percent",
+               "numeric":[{"field":"value", "decimals":2}]}]
+      payload = build_links(root, [{"id":"analysis", "path":"results.json",
+          "versions":{"data":{"path":"data.csv"}, "code":{"path":"run.py"},
+                      "execution":{"path":"execution.json"}}}], rows)
+      report = audit_links(payload, root)
+
+    Frozen sources define meaning. Only labels found at each actual locator are
+    linked; absent fields and uncertain relationships stay in report.pending,
+    coverage_gaps and coverage.occurrences. This does not certify claim truth.
+    An existing sha256 is checked, never silently refreshed to hide source drift.
+    """
+    root=Path(root).resolve();cache={};records={};output=[]
+    def artifact(spec):
+        spec=dict(_object(spec,'build artifact'))
+        path=_path(root,spec.get('path'))
+        spec.setdefault('sha256',_sha(path))
+        _artifact(spec,root,[])
+        return spec
+    for source in _list(sources,'sources',True):
+        source=artifact(source);sid=_string(source.get('id'),'source id')
+        if sid in records:raise ValueError('Duplicate source id: '+sid)
+        source['versions']={name:artifact(spec) for name,spec in _object(source.get('versions',{}),'source versions').items()}
+        records[sid]=_records(_path(root,source['path']));output.append(source)
+    links=[]
+    for row in _list(occurrences,'build occurrences',True):
+        row=_object(row,'build occurrence');sid=row.get('source_id',next(iter(records)) if len(records)==1 else None)
+        rid=_string(row.get('result_id'),'result_id')
+        if sid not in records or rid not in records[sid]:raise ValueError('Unknown build source_id/result_id')
+        original=records[sid][rid];source_semantics=_semantic_source(original)
+        target=artifact(row.get('artifact',{'path':row.get('path')}))
+        text=_located(_path(root,target['path']),row.get('locator'),cache)
+        link={name:row[name] for name in ('claim_id','subject_field','bindings') if name in row}
+        link.update(result_id=rid,source_id=sid,role=_string(row.get('role'),'role'),artifact=target,locator=row['locator'])
+        mapped={}
+        target_unit=row.get('unit',_value_and_labels(source_semantics['unit'])[0] if 'unit' in source_semantics else None)
+        for field,expected in source_semantics.items():
+            value,labels=_value_and_labels(expected)
+            if field=='unit':
+                value=target_unit
+                labels=[label for label in UNITS if _unit(label)==_unit(target_unit)]+(labels if _normal(value)==_normal(_value_and_labels(expected)[0]) else [])
+            elif field=='direction':
+                labels=DIRECTIONS.get(_direction(value),labels)
+            elif field=='denominator':
+                n=str(_number(value,'denominator'))
+                found=re.search(r'\b[nN]\s*=\s*'+re.escape(n)+r'(?![\w.])',text)
+                labels=[found.group()] if found else []
+            token=next((label for label in sorted(labels,key=len,reverse=True) if _present(text,label)),None)
+            if token is not None:mapped[field]={'value':value,'text':token}
+        mapped.update(_object(row.get('semantics',{}),'build semantic overrides'))
+        link['semantics']=mapped
+        if original.get('type','numeric')=='numeric':
+            numeric=[]
+            for item in _list(row.get('numeric',[{'field':row.get('field','value'),**({'decimals':row['decimals']} if 'decimals' in row else {})}]),'build numeric fields',True):
+                item=dict(_object(item,'build numeric field'));field=_string(item.get('field'),'numeric field')
+                value=_number(original.get(field),'source '+field)
+                unit=_value_and_labels(source_semantics.get('unit'))[0]
+                if _unit(unit)[0]!=_unit(target_unit)[0]:raise ValueError('Build unit dimensions differ')
+                decimals=item.get('decimals');rounding=item.get('rounding','half-even')
+                if rounding not in {'half-even','half-up'}:raise ValueError('Unknown build rounding')
+                with localcontext() as context:
+                    context.prec = _precision(value, _unit(unit)[1], _unit(target_unit)[1])
+                    value=value*_unit(unit)[1]/_unit(target_unit)[1]
+                    if decimals is not None:
+                        if type(decimals)is not int or not 0<=decimals<=12:raise ValueError('Invalid build decimals')
+                        value=value.quantize(Decimal(1).scaleb(-decimals),rounding=ROUND_HALF_EVEN if rounding=='half-even' else ROUND_HALF_UP)
+                if value.is_zero():value=abs(value)
+                item.setdefault('text',format(value,'.'+str(decimals)+'f') if decimals is not None else format(value,'f'))
+                numeric.append(item)
+            link['numeric']=numeric
+        links.append(link)
+    return {'kind':'result-links','sources':output,'links':links,'claims':list(claims)}
 
 
 def _evidence(record, root, cache, byte_coverage, semantic_coverage):
@@ -399,7 +714,8 @@ def _evidence(record, root, cache, byte_coverage, semantic_coverage):
 
 def _report(kind):
     return {'kind': kind, 'passed': False, 'errors': [], 'pending': [], 'checks': [],
-            'coverage': {'bytes': [], 'numeric': [], 'declared_semantic': []},
+            'coverage': {'bytes': [], 'numeric': [], 'declared_semantic': [], 'relationships': [], 'occurrences': []},
+            'coverage_gaps': [],
             'scientific_validity_certified': False, 'semantic_truth_certified': False,
             'actual_visual_inspection_performed': False}
 
@@ -412,7 +728,7 @@ def audit_links(data, root):
     """Audit actual occurrences; invalid mappings return diagnostics, never execute."""
     report = _report('result-links')
     root = Path(root).resolve()
-    sources, cache, checked_versions, successful = {}, {}, set(), []
+    sources, cache, checked_versions, successful, manuscript = {}, {}, set(), [], {}
     try:
         data = _object(data, 'result-links payload')
         for source in _list(data.get('sources'), 'sources', True):
@@ -436,10 +752,19 @@ def audit_links(data, root):
                 path = _artifact(dict(_object(link.get('artifact'),'artifact'),role=link.get('role')), root, report['coverage']['bytes'])
                 text = _located(path, link.get('locator'), cache)
                 _string(link.get('role'), 'occurrence role')
-                expected, mapped = _semantics(record, link, text, path, cache, report['coverage']['declared_semantic'])
+                expected, mapped = _semantics(record, link, text, path, cache, report['coverage']['declared_semantic'],report['pending'])
                 kind = record.get('type', 'numeric')
                 if kind == 'numeric':
-                    _numeric(record, link, text, expected, mapped, sources, report['coverage']['numeric'])
+                    positions = _numeric(record, link, text, expected, mapped, sources, report['coverage']['numeric'], report['pending'])
+                    _relations(record, link, text, positions, sources, report)
+                    required=set(expected)|{field for field in ('value','estimate','lower','upper') if record.get(field) not in (None,'')}
+                    covered=set(mapped)|set(positions)
+                    key=(sid,rid,link['artifact']['path'])
+                    group=manuscript.setdefault(key,{'expected':required,'covered':set(),'roles':set()})
+                    group['covered'].update(covered);group['roles'].add(link['role'])
+                    report['coverage']['occurrences'].append({'result_id':rid,'source_id':sid,'role':link['role'],
+                        'path':link['artifact']['path'],'locator':link['locator'],'covered_fields':sorted(covered),
+                        'fields_not_in_this_occurrence':sorted(required-covered)})
                 elif kind in {'theory', 'interpretive'}:
                     required = ('proposition', 'conditions') if kind == 'theory' else ('interpretation',)
                     for field in required:
@@ -471,6 +796,13 @@ def audit_links(data, root):
                 successful.append(link)
             except AUDIT_ERRORS as error:
                 report['errors'].append(label + ': ' + str(error))
+        for (sid,rid,path),group in manuscript.items():
+            missing=sorted(group['expected']-group['covered'])
+            if missing:
+                gap={'source_id':sid,'result_id':rid,'path':path,'roles':sorted(group['roles']),
+                     'reason':'manuscript_fields_uncovered','fields':missing,
+                     'action':'Link these applicable fields elsewhere in this manuscript or record a located semantic review'}
+                report['coverage_gaps'].append(gap);report['pending'].append(gap)
         claims = _list(data.get('claims', []), 'claims')
         claim_ids = set()
         for claim in claims:
@@ -496,6 +828,7 @@ def audit_links(data, root):
     except AUDIT_ERRORS as error:
         report['errors'].append(str(error))
     report['unlinked'] = [item for item in report['pending'] if isinstance(item,dict) and 'claim_id' in item]
+    report['checks'].append('Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending')
     report['checks'].append('Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification')
     report['passed'] = not report['errors'] and not report['pending']
     return report

@@ -1,0 +1,50 @@
+{
+  "baseline": {
+    "k": 0.35,
+    "h": 20.0,
+    "clip": 2.0
+  },
+  "initial": {
+    "k": 0.35,
+    "h": 10.0,
+    "clip": 2.0,
+    "guard": 4,
+    "confirm": 12,
+    "min_count": 7,
+    "mean": 0.55
+  },
+  "refined": {
+    "k": 0.2,
+    "h": 10.0,
+    "clip": 2.0,
+    "window": 32,
+    "erase": 8,
+    "min_count": 16
+  },
+  "ablation": {
+    "k": 0.2,
+    "h": 10.0,
+    "clip": 2.0,
+    "window": 48,
+    "erase": 0,
+    "min_count": 16
+  },
+  "ablation_function": "detect_refined",
+  "ablation_comparator": {
+    "k": 0.2,
+    "h": 10.0,
+    "clip": 2.0,
+    "window": 48,
+    "erase": 8,
+    "min_count": 16
+  },
+  "selection_rule": "minimum dev mean_loss, then fewer false alarms, then more hits; erasure=0 rows excluded from refinement selection",
+  "selection_records": {
+    "baseline": "baseline-05.json",
+    "initial": "initial-01.json",
+    "refined": "refined-01.json",
+    "ablation": "refined-10.json",
+    "ablation_comparator": "refined-04.json"
+  },
+  "holdout_seen": false
+}

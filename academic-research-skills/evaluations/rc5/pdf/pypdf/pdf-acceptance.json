@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-10-01T09:04:40.971311+00:00",
+  "backend": "pypdf",
+  "python": "3.12.14",
+  "platform": "macOS-26.6.2-arm64-64bit",
+  "audit_script_sha256": "b7c176ff9c73ef4e681800d50c77b49bba07d7bab134dc438fd3ed1d79f6e89e",
+  "pdftotext_path": null,
+  "pypdf_version": "6.10.0",
+  "passed": true,
+  "checks": {
+    "valid_pdf_audit": true,
+    "numeric_occurrences_checked": true,
+    "declared_semantic_occurrences_checked": true,
+    "malformed_pdf_rejected": true,
+    "missing_pdf_page_rejected": true
+  },
+  "regression": null,
+  "scope": "Actual PDF extraction and declared result-link engineering fixtures; no scientific/visual certification",
+  "execution_environment": "local",
+  "github_run_id": null
+}

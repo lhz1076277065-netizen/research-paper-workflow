@@ -1,0 +1,35 @@
+{
+  "R-latency": {
+    "value": "410",
+    "unit": "ms",
+    "lower": "390",
+    "upper": "430",
+    "model": {
+      "value": "solver-a",
+      "labels": [
+        "Solver A"
+      ],
+      "equivalent_values": [
+        "solver-a-fast"
+      ]
+    },
+    "implementation": {
+      "value": "loop",
+      "labels": [
+        "loop"
+      ],
+      "equivalent_values": [
+        "vectorized"
+      ]
+    },
+    "outcome": "latency",
+    "direction": "decrease",
+    "population": "digital instances",
+    "denominator": 4,
+    "comparison": "Solver baseline",
+    "split": "holdout",
+    "time": "one run",
+    "effect_type": "absolute mean",
+    "uncertainty": "95% CI"
+  }
+}

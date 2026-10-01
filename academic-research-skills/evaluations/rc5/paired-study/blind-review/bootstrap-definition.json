@@ -1,0 +1,8 @@
+{
+  "seed": 50973,
+  "replicates": 2000,
+  "resampling": "paired independent streams, replacement, n=480 each replicate",
+  "rng": "numpy.default_rng",
+  "interval": "numpy.quantile [0.025,0.975], default linear interpolation",
+  "scope": "exploratory fixed selected development configurations"
+}

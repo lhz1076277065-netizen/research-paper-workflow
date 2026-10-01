@@ -1,0 +1,101 @@
+{
+  "kind": "result-links",
+  "sources": [
+    {
+      "path": "results.json",
+      "sha256": "2a8e295615887274697cd44d95d222ec4a80605cc001e2ca78a4af6a869716a9",
+      "id": "frozen",
+      "versions": {
+        "data": {
+          "path": "data.csv",
+          "sha256": "023e48507d077eb0fc7b25e6fe15104be434ab4eb9aba05c556acac93e4d669f"
+        },
+        "code": {
+          "path": "analysis.py",
+          "sha256": "a87760dbd7af7022b0214c2b1e57059fffd1e497935c609d9225eef7b826a967"
+        },
+        "execution": {
+          "path": "execution.json",
+          "sha256": "6cabf397ef7479ffa0a1f62c30be52b5674091c1d135d4ce34d012a2f4085cc2"
+        }
+      }
+    }
+  ],
+  "links": [
+    {
+      "result_id": "R1",
+      "role": "body",
+      "artifact": {
+        "path": "draft.pdf",
+        "sha256": "682b0ea33afe6cfdac557ce25210c864533eb5e5cc85ded9dce9eef9e571b264"
+      },
+      "locator": {
+        "page": 1,
+        "line": 1
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "text": "12.35",
+          "decimals": 2
+        },
+        {
+          "field": "lower",
+          "text": "10.00",
+          "decimals": 2
+        },
+        {
+          "field": "upper",
+          "text": "15.00",
+          "decimals": 2
+        }
+      ],
+      "semantics": {
+        "unit": {
+          "value": "percent",
+          "text": "%"
+        },
+        "direction": {
+          "value": "increase",
+          "text": "increased"
+        },
+        "denominator": {
+          "value": 120,
+          "text": "n=120"
+        },
+        "outcome": {
+          "value": "accuracy",
+          "text": "accuracy"
+        },
+        "population": {
+          "value": "held-out cohort",
+          "text": "held-out cohort"
+        },
+        "time": {
+          "value": "6 months",
+          "text": "6 months"
+        },
+        "comparison": {
+          "value": "baseline",
+          "text": "baseline"
+        },
+        "model": {
+          "value": "M1",
+          "text": "M1"
+        },
+        "split": {
+          "value": "test",
+          "text": "test"
+        },
+        "uncertainty": {
+          "value": "95% CI",
+          "text": "95% CI"
+        },
+        "effect_type": {
+          "value": "absolute",
+          "text": "absolute"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+test_pdftotext_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pdftotext_actual_pdf_and_malformed_boundary) ... ok
+test_pypdf_only_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary) ... ERROR
+
+======================================================================
+ERROR: test_pypdf_only_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/tests/test_pdf_extract.py", line 97, in test_pypdf_only_actual_pdf_and_malformed_boundary
+    result = self.run_backend('pypdf')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/tests/test_pdf_extract.py", line 84, in run_backend
+    result = probe(root, backend)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/tests/test_pdf_extract.py", line 75, in probe
+    raise RuntimeError('Actual PDF probe failed: ' + result.stderr[-4000:])
+RuntimeError: Actual PDF probe failed: Traceback (most recent call last):
+  File "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_reader.py", line 766, in _find_startxref_pos
+    startxref = int(line)
+                ^^^^^^^^^
+ValueError: invalid literal for int() with base 10: b'not a PDF object tree'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 20, in <module>
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/src/common/scripts/result_links.py", line 437, in audit_links
+    text = _located(path, link.get('locator'), cache)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/src/common/scripts/result_links.py", line 124, in _located
+    cache[path] = _pdf_pages(path)
+                  ^^^^^^^^^^^^^^^^
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/src/common/scripts/result_links.py", line 116, in _pdf_pages
+    return [page.extract_text() or '' for page in PdfReader(str(path)).pages]
+                                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_reader.py", line 149, in __init__
+    self._initialize_stream(stream)
+  File "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_reader.py", line 171, in _initialize_stream
+    self.read(stream)
+  File "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_reader.py", line 646, in read
+    startxref = self._find_startxref_pos(stream)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pypdf/_reader.py", line 770, in _find_startxref_pos
+    raise PdfReadError("startxref not found")
+pypdf.errors.PdfReadError: startxref not found
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.131s
+
+FAILED (errors=1)

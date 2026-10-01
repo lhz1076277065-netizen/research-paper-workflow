@@ -1,0 +1,63 @@
+{
+  "n": 40,
+  "conditions": {
+    "bursts": {
+      "n": 10,
+      "targets": 5,
+      "taus": [
+        147,
+        158,
+        161,
+        162,
+        185
+      ],
+      "missing_fraction": 0.0
+    },
+    "clean": {
+      "n": 10,
+      "targets": 5,
+      "taus": [
+        144,
+        162,
+        171,
+        182,
+        203
+      ],
+      "missing_fraction": 0.0
+    },
+    "gaps": {
+      "n": 10,
+      "targets": 5,
+      "taus": [
+        151,
+        161,
+        169,
+        203,
+        209
+      ],
+      "missing_fraction": 0.08388888888888889
+    },
+    "heavy": {
+      "n": 10,
+      "targets": 5,
+      "taus": [
+        141,
+        142,
+        150,
+        183,
+        191
+      ],
+      "missing_fraction": 0.0
+    }
+  },
+  "lengths": [
+    360
+  ],
+  "case_keys": [
+    "id",
+    "condition",
+    "tau",
+    "x"
+  ],
+  "prefix_missing": 0
+}

@@ -1,0 +1,40 @@
+{
+  "baseline": {
+    "clip": 2.0,
+    "k": 0.4,
+    "h": 20.0
+  },
+  "initial": {
+    "clip": 2.0,
+    "k": 0.4,
+    "h": 20.0,
+    "min_age": 12
+  },
+  "refined": {
+    "clip": 2.0,
+    "k": 0.4,
+    "h": 10.0,
+    "block": 6,
+    "confirm_mean": 0.55,
+    "max_gap": 12,
+    "two_blocks": true
+  },
+  "ablation": {
+    "clip": 2.0,
+    "k": 0.4,
+    "h": 10.0,
+    "block": 6,
+    "confirm_mean": 0.55,
+    "max_gap": 12,
+    "two_blocks": false
+  },
+  "ablation_function": "detect_refined",
+  "selected_reports": {
+    "baseline": "dev-baseline-01.json",
+    "initial": "dev-initial-04.json",
+    "refined": "dev-refined-09.json",
+    "ablation": "dev-refined-ablation.json"
+  },
+  "selection_rule": "minimum dev task mean loss; then fewer false alarms; then earlier grid index",
+  "freeze_note": "All train/dev selections frozen before independent evaluation. Ablation is matched single pooled confirmation block, not tuned."
+}

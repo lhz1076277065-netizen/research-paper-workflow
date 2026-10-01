@@ -1,0 +1,390 @@
+{
+  "postshift_descriptive_magnitude": {
+    "initial_timely": {
+      "n": 49,
+      "mean": 1.2780713106862545,
+      "median": 1.3003140236725257
+    },
+    "initial_untimely": {
+      "n": 11,
+      "mean": 0.6906257412109663,
+      "median": 0.7232993280890653
+    }
+  },
+  "initial_untimely_refined_timely_ids": [
+    "65109-clean-13",
+    "65109-bursts-1",
+    "65109-bursts-3",
+    "65109-bursts-19",
+    "65109-bursts-25",
+    "65109-gaps-21"
+  ],
+  "initial_timely_refined_untimely_ids": [
+    "65109-bursts-17",
+    "65109-gaps-7",
+    "65109-heavy-13"
+  ],
+  "scope": "Post-label descriptive magnitude; never used as detector input. No new validation calls.",
+  "rows": [
+    {
+      "id": "65109-clean-1",
+      "absolute_postshift_clipped_mean": 1.020501814160665,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-3",
+      "absolute_postshift_clipped_mean": 0.8111690048483007,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-5",
+      "absolute_postshift_clipped_mean": 0.7513592185119081,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-7",
+      "absolute_postshift_clipped_mean": 1.748347721028974,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-9",
+      "absolute_postshift_clipped_mean": 1.582279275504935,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-11",
+      "absolute_postshift_clipped_mean": 1.0227115737529924,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-13",
+      "absolute_postshift_clipped_mean": 0.8410671609845553,
+      "initial_hit": false,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-15",
+      "absolute_postshift_clipped_mean": 0.655148953889845,
+      "initial_hit": false,
+      "refined_hit": false
+    },
+    {
+      "id": "65109-clean-17",
+      "absolute_postshift_clipped_mean": 1.3202095354744927,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-19",
+      "absolute_postshift_clipped_mean": 1.3932630839935038,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-21",
+      "absolute_postshift_clipped_mean": 1.4891772382785131,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-23",
+      "absolute_postshift_clipped_mean": 0.383960799171742,
+      "initial_hit": false,
+      "refined_hit": false
+    },
+    {
+      "id": "65109-clean-25",
+      "absolute_postshift_clipped_mean": 1.664481369411102,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-clean-27",
+      "absolute_postshift_clipped_mean": 0.5600132149373883,
+      "initial_hit": false,
+      "refined_hit": false
+    },
+    {
+      "id": "65109-clean-29",
+      "absolute_postshift_clipped_mean": 0.795460966817421,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-1",
+      "absolute_postshift_clipped_mean": 1.1888342582103135,
+      "initial_hit": false,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-3",
+      "absolute_postshift_clipped_mean": 0.6756696636910441,
+      "initial_hit": false,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-5",
+      "absolute_postshift_clipped_mean": 1.3999300642081516,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-7",
+      "absolute_postshift_clipped_mean": 0.8537897907453744,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-9",
+      "absolute_postshift_clipped_mean": 1.2650309907164123,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-11",
+      "absolute_postshift_clipped_mean": 0.8987238507132699,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-13",
+      "absolute_postshift_clipped_mean": 1.4726929240432831,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-15",
+      "absolute_postshift_clipped_mean": 1.2202868712707922,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-17",
+      "absolute_postshift_clipped_mean": 0.6785936463658886,
+      "initial_hit": true,
+      "refined_hit": false
+    },
+    {
+      "id": "65109-bursts-19",
+      "absolute_postshift_clipped_mean": 0.7810839572476257,
+      "initial_hit": false,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-21",
+      "absolute_postshift_clipped_mean": 1.2764918261363412,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-23",
+      "absolute_postshift_clipped_mean": 1.6179684369538792,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-25",
+      "absolute_postshift_clipped_mean": 0.7977682339732691,
+      "initial_hit": false,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-27",
+      "absolute_postshift_clipped_mean": 1.3848282110026238,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-bursts-29",
+      "absolute_postshift_clipped_mean": 0.07579485986629025,
+      "initial_hit": false,
+      "refined_hit": false
+    },
+    {
+      "id": "65109-gaps-1",
+      "absolute_postshift_clipped_mean": 1.4587069848809184,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-3",
+      "absolute_postshift_clipped_mean": 1.2512058231640795,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-5",
+      "absolute_postshift_clipped_mean": 1.2138913819644748,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-7",
+      "absolute_postshift_clipped_mean": 0.7648874402503245,
+      "initial_hit": true,
+      "refined_hit": false
+    },
+    {
+      "id": "65109-gaps-9",
+      "absolute_postshift_clipped_mean": 1.0175019578000797,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-11",
+      "absolute_postshift_clipped_mean": 0.9622426179177614,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-13",
+      "absolute_postshift_clipped_mean": 0.7232993280890653,
+      "initial_hit": false,
+      "refined_hit": false
+    },
+    {
+      "id": "65109-gaps-15",
+      "absolute_postshift_clipped_mean": 1.1129457371772165,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-17",
+      "absolute_postshift_clipped_mean": 1.442191554424091,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-19",
+      "absolute_postshift_clipped_mean": 1.4234168092895982,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-21",
+      "absolute_postshift_clipped_mean": 0.9142427232594912,
+      "initial_hit": false,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-23",
+      "absolute_postshift_clipped_mean": 1.3003140236725257,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-25",
+      "absolute_postshift_clipped_mean": 1.4272721615194346,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-27",
+      "absolute_postshift_clipped_mean": 1.3796429186695491,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-gaps-29",
+      "absolute_postshift_clipped_mean": 0.9804656089485536,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-1",
+      "absolute_postshift_clipped_mean": 1.388199325808766,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-3",
+      "absolute_postshift_clipped_mean": 1.6031815706964387,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-5",
+      "absolute_postshift_clipped_mean": 1.0210143544024455,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-7",
+      "absolute_postshift_clipped_mean": 1.5000494549413848,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-9",
+      "absolute_postshift_clipped_mean": 1.3695077420186863,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-11",
+      "absolute_postshift_clipped_mean": 1.1461829445918859,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-13",
+      "absolute_postshift_clipped_mean": 1.069448358340419,
+      "initial_hit": true,
+      "refined_hit": false
+    },
+    {
+      "id": "65109-heavy-15",
+      "absolute_postshift_clipped_mean": 1.7675511701312256,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-17",
+      "absolute_postshift_clipped_mean": 1.7363235108023545,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-19",
+      "absolute_postshift_clipped_mean": 1.249468092964666,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-21",
+      "absolute_postshift_clipped_mean": 0.8820600667126914,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-23",
+      "absolute_postshift_clipped_mean": 1.1039836284437246,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-25",
+      "absolute_postshift_clipped_mean": 1.3114354561313153,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-27",
+      "absolute_postshift_clipped_mean": 1.7546963721181896,
+      "initial_hit": true,
+      "refined_hit": true
+    },
+    {
+      "id": "65109-heavy-29",
+      "absolute_postshift_clipped_mean": 2.3204097419048435,
+      "initial_hit": true,
+      "refined_hit": true
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "audit_links": {
+    "kind": "result-links",
+    "passed": false,
+    "errors": [
+      "link 1 (R-latency): Negated actual occurrence: lower"
+    ],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "role": "frozen-results:frozen",
+          "expected_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "actual_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "matched": true
+        },
+        {
+          "path": "draft.md",
+          "role": "body",
+          "expected_sha256": "98e7c1433d658d398641887e6a0fe53851a6d474c3217b75aa1aa5dcf8609056",
+          "actual_sha256": "98e7c1433d658d398641887e6a0fe53851a6d474c3217b75aa1aa5dcf8609056",
+          "matched": true
+        }
+      ],
+      "numeric": [],
+      "declared_semantic": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "s",
+          "text": "ms"
+        }
+      ],
+      "relationships": [],
+      "occurrences": []
+    },
+    "coverage_gaps": [],
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "provider_runtime.audit_payload": {
+    "kind": "result-links",
+    "passed": false,
+    "errors": [
+      "link 1 (R-latency): Negated actual occurrence: lower"
+    ],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "role": "frozen-results:frozen",
+          "expected_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "actual_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "matched": true
+        },
+        {
+          "path": "draft.md",
+          "role": "body",
+          "expected_sha256": "98e7c1433d658d398641887e6a0fe53851a6d474c3217b75aa1aa5dcf8609056",
+          "actual_sha256": "98e7c1433d658d398641887e6a0fe53851a6d474c3217b75aa1aa5dcf8609056",
+          "matched": true
+        }
+      ],
+      "numeric": [],
+      "declared_semantic": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "s",
+          "text": "ms"
+        }
+      ],
+      "relationships": [],
+      "occurrences": []
+    },
+    "coverage_gaps": [],
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "research31.audit": {
+    "kind": "result-links",
+    "passed": false,
+    "errors": [
+      "link 1 (R-latency): Negated actual occurrence: lower"
+    ],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "role": "frozen-results:frozen",
+          "expected_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "actual_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "matched": true
+        },
+        {
+          "path": "draft.md",
+          "role": "body",
+          "expected_sha256": "98e7c1433d658d398641887e6a0fe53851a6d474c3217b75aa1aa5dcf8609056",
+          "actual_sha256": "98e7c1433d658d398641887e6a0fe53851a6d474c3217b75aa1aa5dcf8609056",
+          "matched": true
+        }
+      ],
+      "numeric": [],
+      "declared_semantic": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "s",
+          "text": "ms"
+        }
+      ],
+      "relationships": [],
+      "occurrences": []
+    },
+    "coverage_gaps": [],
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "provider_runtime.accept_result": {
+    "schema_version": "result-acceptance-1",
+    "status": "rejected",
+    "passed": false,
+    "errors": [
+      "link 1 (R-latency): Negated actual occurrence: lower"
+    ],
+    "pending": [],
+    "artifacts": [
+      {
+        "role": "draft",
+        "path": "draft.md",
+        "sha256": "98e7c1433d658d398641887e6a0fe53851a6d474c3217b75aa1aa5dcf8609056"
+      }
+    ],
+    "linkage_audits": [
+      {
+        "kind": "result-links",
+        "passed": false,
+        "errors": [
+          "link 1 (R-latency): Negated actual occurrence: lower"
+        ],
+        "pending": [],
+        "checks": [
+          "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+          "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+          "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+        ],
+        "coverage": {
+          "bytes": [
+            {
+              "path": "results.json",
+              "role": "frozen-results:frozen",
+              "expected_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+              "actual_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+              "matched": true
+            },
+            {
+              "path": "draft.md",
+              "role": "body",
+              "expected_sha256": "98e7c1433d658d398641887e6a0fe53851a6d474c3217b75aa1aa5dcf8609056",
+              "actual_sha256": "98e7c1433d658d398641887e6a0fe53851a6d474c3217b75aa1aa5dcf8609056",
+              "matched": true
+            }
+          ],
+          "numeric": [],
+          "declared_semantic": [
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "unit",
+              "source_value": "s",
+              "text": "ms"
+            }
+          ],
+          "relationships": [],
+          "occurrences": []
+        },
+        "coverage_gaps": [],
+        "scientific_validity_certified": false,
+        "semantic_truth_certified": false,
+        "actual_visual_inspection_performed": false,
+        "claim_inventory_complete": false,
+        "unlinked": []
+      }
+    ],
+    "task_sha256": "90272088f3c8caf3ebac0281b97e56ce80d10879e227a6bb01f19da5c23f5d80",
+    "checked_at": "2026-10-01T09:30:07.473913+00:00",
+    "checks_performed_here": [
+      "task/input/provider version",
+      "file identity",
+      "declared evidence constraints",
+      "review report binding"
+    ],
+    "scientific_validity_certified": false,
+    "semantic_review_performed_here": false,
+    "visual_review_performed_here": false,
+    "native_execution_observed_by_this_script": false
+  }
+}

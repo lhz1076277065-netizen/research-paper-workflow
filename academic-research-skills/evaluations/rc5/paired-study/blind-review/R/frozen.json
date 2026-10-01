@@ -1,0 +1,46 @@
+{
+  "baseline": {
+    "clip": 1.5,
+    "k": 0.5,
+    "h": 12.0
+  },
+  "initial": {
+    "clip": 2.5,
+    "k": 0.35,
+    "h": 10.0,
+    "confirm": 12,
+    "mean": 0.65,
+    "timeout": 24
+  },
+  "refined": {
+    "clip": 2.0,
+    "window": 24,
+    "burst": 6,
+    "threshold": 3.0,
+    "coverage": 0.6
+  },
+  "ablation": {
+    "clip": 2.0,
+    "window": 24,
+    "burst": 0,
+    "threshold": 3.0,
+    "coverage": 0.6
+  },
+  "ablation_function": "detect_refined",
+  "secondary_ablation": {
+    "clip": 2.0,
+    "window": 24,
+    "burst": 6,
+    "threshold": 3.0,
+    "coverage": 0.01
+  },
+  "selection": {
+    "baseline": "baseline-05",
+    "initial": "initial-09",
+    "refined": "refined-01"
+  },
+  "selection_rule": "Minimum development mean loss; ties use fewer false alarms, more hits, lexicographic record name.",
+  "scope": "Development-selected, frozen before external holdout; no holdout inspected.",
+  "frozen_at_utc": "2026-10-01T09:19:41.440003+00:00",
+  "method_sha256": "5248280537727988b4b1798244443ef9bd562b2d371eeebcbf5c4c313d52ae05"
+}

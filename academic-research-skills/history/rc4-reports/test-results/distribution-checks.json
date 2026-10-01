@@ -1,0 +1,32 @@
+{
+  "version": "3.2.0-rc.4",
+  "scope": "Pre-pack checked source layout; final CRC/file hashes/extraction/installer/CI external to archives",
+  "capabilities": [
+    "analysis-execution",
+    "citation-audit",
+    "data-discovery",
+    "data-preparation",
+    "ethics-protocol",
+    "journal-intelligence",
+    "literature-discovery",
+    "manuscript-review",
+    "manuscript-writing",
+    "paper-deep-reading",
+    "peer-review-response",
+    "publication-stewardship",
+    "research-design",
+    "research-intake",
+    "research-paper-workflow",
+    "robustness-reproducibility",
+    "scientific-visualization",
+    "submission-packaging",
+    "topic-novelty"
+  ],
+  "capability_count": 19,
+  "profiles": 16,
+  "default_profile": "general",
+  "professional_sources": 13,
+  "source_authoritative_diff": "source-diffs/v3.2.0-rc.3-to-v3.2.0-rc.4.patch",
+  "global_install_performed": false,
+  "active_stale_package_manifest_removed": true
+}

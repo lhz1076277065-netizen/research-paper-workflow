@@ -11,7 +11,7 @@ def chosen(kind):
         rel=f.relative_to(ROOT)
         if f.is_symlink() or not f.is_file() or set(rel.parts)&EXCLUDED or f.suffix in FONTS or f.suffix=='.pyc' or f.name=='.DS_Store' or rel.as_posix()=='PACKAGE-MANIFEST.json':continue
         if kind=='runtime':
-            reports={'evaluations/rc4/VALIDATION.zh-CN.md','evaluations/rc4/native/COMPARISON.zh-CN.md','evaluations/rc4/native/anonymous-review/review.md'}
+            reports={'evaluations/rc5/VALIDATION.zh-CN.md','evaluations/rc5/paired-study/COMPARISON.zh-CN.md','evaluations/rc5/paired-study/independent-review.md'}
             if rel.parts[0] in {'src','tests','evaluations','history','previous-release','release','source-diffs'} and rel.as_posix() not in reports:continue
             if rel.as_posix() in {'scripts/build_release.py','scripts/_v300_build_release.py','UPGRADE-RECEIPT.json','release/make_package.py','release/coverage-baseline.json','release/ci-matrix.example.yml'}:continue
             if rel.parts[0]=='test-results' and rel.name not in {'SUMMARY.json','SUMMARY.zh-CN.md','context-metrics.json','distribution-checks.json'}:continue

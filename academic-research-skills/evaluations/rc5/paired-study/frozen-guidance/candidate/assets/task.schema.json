@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional task envelope v4; independent research and execution dimensions",
+  "type": "object",
+  "required": [
+    "capability",
+    "request"
+  ],
+  "properties": {
+    "capability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request": {
+      "type": "string",
+      "minLength": 1
+    },
+    "service": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operation": {
+      "enum": [
+        "execute",
+        "produce",
+        "review",
+        "plan"
+      ]
+    },
+    "requested_outputs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required_reviews": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_waves": {
+      "type": "array",
+      "items": {
+        "enum": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "facts": {
+      "type": "object"
+    },
+    "inputs": {
+      "type": "array"
+    },
+    "constraints": {
+      "type": "object"
+    },
+    "research_context": {
+      "type": "object",
+      "properties": {
+        "discipline": {
+          "type": "string"
+        },
+        "article_type": {
+          "type": "string"
+        },
+        "study_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "method_family": {
+          "type": "string",
+          "description": "Legacy scalar method shorthand; research_methods can name multiple methods."
+        },
+        "evidence_basis": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "execution_mode": {
+          "type": "string",
+          "minLength": 1,
+          "default": "computational-autonomous",
+          "description": "Research execution scope, separate from provider execution_mode; explicit specialist modes remain representable."
+        },
+        "evidence_type": {
+          "oneOf": [
+            {"type": "string", "minLength": 1},
+            {"type": "array", "items": {"type": "string", "minLength": 1}}
+          ],
+          "description": "Evidence type(s); evidence_basis remains a compatible list alias."
+        },
+        "research_methods": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "tool_backend": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Selected research backend; must agree with runtime.backend when both are supplied."
+        },
+        "computational_routes": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "properties": {
+        "backend": {
+          "enum": [
+            "host",
+            "python",
+            "r",
+            "julia",
+            "node",
+            "latex",
+            "licensed",
+            "external"
+          ]
+        },
+        "python_groups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "packages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "spec",
+              "import"
+            ]
+          }
+        },
+        "required_binaries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "host": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "required_review_outputs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string"
+        },
+        "uniqueItems": true
+      }
+    }
+  },
+  "description": "Host classifies the actual request. Schema validity is not scientific validity. Full scope is not required for focused tasks."
+}

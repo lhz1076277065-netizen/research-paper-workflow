@@ -1,0 +1,443 @@
+{
+  "mean_loss": 12.725,
+  "false_alarms": 1,
+  "hits": 19,
+  "runtime_seconds": 0.04134424999983821,
+  "groups": {
+    "bursts": {
+      "n": 10,
+      "false_alarms": 1,
+      "hits": 5,
+      "mean_loss": 21.4
+    },
+    "clean": {
+      "n": 10,
+      "false_alarms": 0,
+      "hits": 5,
+      "mean_loss": 6.4
+    },
+    "gaps": {
+      "n": 10,
+      "false_alarms": 0,
+      "hits": 5,
+      "mean_loss": 7.9
+    },
+    "heavy": {
+      "n": 10,
+      "false_alarms": 0,
+      "hits": 4,
+      "mean_loss": 15.2
+    }
+  },
+  "rows": [
+    {
+      "id": "51321-clean-0",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-clean-1",
+      "condition": "clean",
+      "tau": 182,
+      "alarm": 196,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 14,
+      "loss": 14
+    },
+    {
+      "id": "51321-clean-2",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-clean-3",
+      "condition": "clean",
+      "tau": 203,
+      "alarm": 218,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 15,
+      "loss": 15
+    },
+    {
+      "id": "51321-clean-4",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-clean-5",
+      "condition": "clean",
+      "tau": 162,
+      "alarm": 166,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 4,
+      "loss": 4
+    },
+    {
+      "id": "51321-clean-6",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-clean-7",
+      "condition": "clean",
+      "tau": 144,
+      "alarm": 159,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 15,
+      "loss": 15
+    },
+    {
+      "id": "51321-clean-8",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-clean-9",
+      "condition": "clean",
+      "tau": 171,
+      "alarm": 187,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 16,
+      "loss": 16
+    },
+    {
+      "id": "51321-bursts-0",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-bursts-1",
+      "condition": "bursts",
+      "tau": 161,
+      "alarm": 179,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "51321-bursts-2",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 201,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "51321-bursts-3",
+      "condition": "bursts",
+      "tau": 162,
+      "alarm": 178,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 16,
+      "loss": 16
+    },
+    {
+      "id": "51321-bursts-4",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-bursts-5",
+      "condition": "bursts",
+      "tau": 147,
+      "alarm": 181,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 34,
+      "loss": 34
+    },
+    {
+      "id": "51321-bursts-6",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-bursts-7",
+      "condition": "bursts",
+      "tau": 158,
+      "alarm": 195,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 37,
+      "loss": 37
+    },
+    {
+      "id": "51321-bursts-8",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-bursts-9",
+      "condition": "bursts",
+      "tau": 185,
+      "alarm": 204,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "51321-gaps-0",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-gaps-1",
+      "condition": "gaps",
+      "tau": 169,
+      "alarm": 188,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "51321-gaps-2",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-gaps-3",
+      "condition": "gaps",
+      "tau": 161,
+      "alarm": 176,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 15,
+      "loss": 15
+    },
+    {
+      "id": "51321-gaps-4",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-gaps-5",
+      "condition": "gaps",
+      "tau": 209,
+      "alarm": 219,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 10,
+      "loss": 10
+    },
+    {
+      "id": "51321-gaps-6",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-gaps-7",
+      "condition": "gaps",
+      "tau": 151,
+      "alarm": 168,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "51321-gaps-8",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-gaps-9",
+      "condition": "gaps",
+      "tau": 203,
+      "alarm": 221,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "51321-heavy-0",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-heavy-1",
+      "condition": "heavy",
+      "tau": 141,
+      "alarm": 160,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "51321-heavy-2",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-heavy-3",
+      "condition": "heavy",
+      "tau": 191,
+      "alarm": 198,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 7,
+      "loss": 7
+    },
+    {
+      "id": "51321-heavy-4",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-heavy-5",
+      "condition": "heavy",
+      "tau": 183,
+      "alarm": 200,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "51321-heavy-6",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-heavy-7",
+      "condition": "heavy",
+      "tau": 150,
+      "alarm": 169,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "51321-heavy-8",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "51321-heavy-9",
+      "condition": "heavy",
+      "tau": 142,
+      "alarm": 351,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 209,
+      "loss": 90
+    }
+  ],
+  "name": "train-selected-refined",
+  "params": {
+    "clip": 2.0,
+    "window": 24,
+    "burst": 6,
+    "threshold": 3.0,
+    "coverage": 0.6
+  },
+  "data_sha256": "b89b87c1833a281f7d27be46811495b513beafc143b30cbb763a6e4f060254f2"
+}

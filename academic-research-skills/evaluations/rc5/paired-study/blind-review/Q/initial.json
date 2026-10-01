@@ -1,0 +1,4834 @@
+{
+  "mean_loss": 28.466666666666665,
+  "false_alarms": 32,
+  "hits": 163,
+  "runtime_seconds": 0.027913541999623703,
+  "groups": {
+    "bursts": {
+      "n": 120,
+      "false_alarms": 11,
+      "hits": 36,
+      "mean_loss": 33.68333333333333
+    },
+    "clean": {
+      "n": 120,
+      "false_alarms": 1,
+      "hits": 41,
+      "mean_loss": 23.891666666666666
+    },
+    "gaps": {
+      "n": 120,
+      "false_alarms": 10,
+      "hits": 36,
+      "mean_loss": 30.541666666666668
+    },
+    "heavy": {
+      "n": 120,
+      "false_alarms": 10,
+      "hits": 50,
+      "mean_loss": 25.75
+    }
+  },
+  "rows": [
+    {
+      "id": "104927-clean-0",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-1",
+      "condition": "clean",
+      "tau": 157,
+      "alarm": 176,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "104927-clean-2",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-3",
+      "condition": "clean",
+      "tau": 140,
+      "alarm": 164,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 24,
+      "loss": 24
+    },
+    {
+      "id": "104927-clean-4",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-5",
+      "condition": "clean",
+      "tau": 144,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-6",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-7",
+      "condition": "clean",
+      "tau": 150,
+      "alarm": 167,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "104927-clean-8",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-9",
+      "condition": "clean",
+      "tau": 159,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-10",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-11",
+      "condition": "clean",
+      "tau": 198,
+      "alarm": 311,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 113,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-12",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-13",
+      "condition": "clean",
+      "tau": 167,
+      "alarm": 293,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 126,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-14",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-15",
+      "condition": "clean",
+      "tau": 150,
+      "alarm": 189,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 39,
+      "loss": 39
+    },
+    {
+      "id": "104927-clean-16",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-17",
+      "condition": "clean",
+      "tau": 183,
+      "alarm": 205,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "104927-clean-18",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-19",
+      "condition": "clean",
+      "tau": 209,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-20",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-21",
+      "condition": "clean",
+      "tau": 200,
+      "alarm": 228,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 28,
+      "loss": 28
+    },
+    {
+      "id": "104927-clean-22",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-23",
+      "condition": "clean",
+      "tau": 140,
+      "alarm": 166,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 26,
+      "loss": 26
+    },
+    {
+      "id": "104927-clean-24",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-25",
+      "condition": "clean",
+      "tau": 182,
+      "alarm": 209,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 27,
+      "loss": 27
+    },
+    {
+      "id": "104927-clean-26",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-27",
+      "condition": "clean",
+      "tau": 186,
+      "alarm": 207,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-clean-28",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-29",
+      "condition": "clean",
+      "tau": 207,
+      "alarm": 248,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 41,
+      "loss": 41
+    },
+    {
+      "id": "104927-clean-30",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-31",
+      "condition": "clean",
+      "tau": 160,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-32",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-33",
+      "condition": "clean",
+      "tau": 201,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-34",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-35",
+      "condition": "clean",
+      "tau": 194,
+      "alarm": 318,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 124,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-36",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-37",
+      "condition": "clean",
+      "tau": 198,
+      "alarm": 215,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "104927-clean-38",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-39",
+      "condition": "clean",
+      "tau": 159,
+      "alarm": 176,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "104927-clean-40",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-41",
+      "condition": "clean",
+      "tau": 201,
+      "alarm": 219,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "104927-clean-42",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-43",
+      "condition": "clean",
+      "tau": 150,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-44",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-45",
+      "condition": "clean",
+      "tau": 146,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-46",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-47",
+      "condition": "clean",
+      "tau": 142,
+      "alarm": 161,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "104927-clean-48",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-49",
+      "condition": "clean",
+      "tau": 161,
+      "alarm": 183,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "104927-clean-50",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-51",
+      "condition": "clean",
+      "tau": 142,
+      "alarm": 200,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 58,
+      "loss": 58
+    },
+    {
+      "id": "104927-clean-52",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-53",
+      "condition": "clean",
+      "tau": 145,
+      "alarm": 169,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 24,
+      "loss": 24
+    },
+    {
+      "id": "104927-clean-54",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-55",
+      "condition": "clean",
+      "tau": 142,
+      "alarm": 216,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 74,
+      "loss": 90
+    },
+    {
+      "id": "104927-clean-56",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-57",
+      "condition": "clean",
+      "tau": 162,
+      "alarm": 183,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-clean-58",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-clean-59",
+      "condition": "clean",
+      "tau": 181,
+      "alarm": 232,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 51,
+      "loss": 51
+    },
+    {
+      "id": "104927-bursts-0",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-1",
+      "condition": "bursts",
+      "tau": 158,
+      "alarm": 201,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 43,
+      "loss": 43
+    },
+    {
+      "id": "104927-bursts-2",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-3",
+      "condition": "bursts",
+      "tau": 168,
+      "alarm": 224,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 56,
+      "loss": 56
+    },
+    {
+      "id": "104927-bursts-4",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 147,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-5",
+      "condition": "bursts",
+      "tau": 177,
+      "alarm": 344,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 167,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-6",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-7",
+      "condition": "bursts",
+      "tau": 156,
+      "alarm": 266,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 110,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-8",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-9",
+      "condition": "bursts",
+      "tau": 163,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-10",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-11",
+      "condition": "bursts",
+      "tau": 144,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-12",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-13",
+      "condition": "bursts",
+      "tau": 146,
+      "alarm": 162,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 16,
+      "loss": 16
+    },
+    {
+      "id": "104927-bursts-14",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-15",
+      "condition": "bursts",
+      "tau": 143,
+      "alarm": 169,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 26,
+      "loss": 26
+    },
+    {
+      "id": "104927-bursts-16",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-17",
+      "condition": "bursts",
+      "tau": 173,
+      "alarm": 112,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-18",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 127,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-19",
+      "condition": "bursts",
+      "tau": 162,
+      "alarm": 188,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 26,
+      "loss": 26
+    },
+    {
+      "id": "104927-bursts-20",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-21",
+      "condition": "bursts",
+      "tau": 175,
+      "alarm": 194,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "104927-bursts-22",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 199,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-23",
+      "condition": "bursts",
+      "tau": 170,
+      "alarm": 208,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 38,
+      "loss": 38
+    },
+    {
+      "id": "104927-bursts-24",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 184,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-25",
+      "condition": "bursts",
+      "tau": 171,
+      "alarm": 190,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "104927-bursts-26",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-27",
+      "condition": "bursts",
+      "tau": 187,
+      "alarm": 202,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 15,
+      "loss": 15
+    },
+    {
+      "id": "104927-bursts-28",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-29",
+      "condition": "bursts",
+      "tau": 204,
+      "alarm": 225,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-bursts-30",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-31",
+      "condition": "bursts",
+      "tau": 151,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-32",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-33",
+      "condition": "bursts",
+      "tau": 201,
+      "alarm": 222,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-bursts-34",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-35",
+      "condition": "bursts",
+      "tau": 148,
+      "alarm": 169,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-bursts-36",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-37",
+      "condition": "bursts",
+      "tau": 189,
+      "alarm": 211,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "104927-bursts-38",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-39",
+      "condition": "bursts",
+      "tau": 196,
+      "alarm": 295,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 99,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-40",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-41",
+      "condition": "bursts",
+      "tau": 186,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-42",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-43",
+      "condition": "bursts",
+      "tau": 157,
+      "alarm": 246,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 89,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-44",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-45",
+      "condition": "bursts",
+      "tau": 205,
+      "alarm": 230,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 25,
+      "loss": 25
+    },
+    {
+      "id": "104927-bursts-46",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-47",
+      "condition": "bursts",
+      "tau": 179,
+      "alarm": 216,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 37,
+      "loss": 37
+    },
+    {
+      "id": "104927-bursts-48",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-49",
+      "condition": "bursts",
+      "tau": 168,
+      "alarm": 256,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 88,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-50",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-51",
+      "condition": "bursts",
+      "tau": 193,
+      "alarm": 259,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 66,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-52",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-53",
+      "condition": "bursts",
+      "tau": 142,
+      "alarm": 153,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 11,
+      "loss": 11
+    },
+    {
+      "id": "104927-bursts-54",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-55",
+      "condition": "bursts",
+      "tau": 202,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-56",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-bursts-57",
+      "condition": "bursts",
+      "tau": 167,
+      "alarm": 242,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 75,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-58",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 282,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-bursts-59",
+      "condition": "bursts",
+      "tau": 171,
+      "alarm": 313,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 142,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-0",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-1",
+      "condition": "gaps",
+      "tau": 140,
+      "alarm": 155,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 15,
+      "loss": 15
+    },
+    {
+      "id": "104927-gaps-2",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": 242,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-3",
+      "condition": "gaps",
+      "tau": 170,
+      "alarm": 191,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-gaps-4",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": 185,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-5",
+      "condition": "gaps",
+      "tau": 165,
+      "alarm": 196,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 31,
+      "loss": 31
+    },
+    {
+      "id": "104927-gaps-6",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-7",
+      "condition": "gaps",
+      "tau": 178,
+      "alarm": 199,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-gaps-8",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-9",
+      "condition": "gaps",
+      "tau": 152,
+      "alarm": 172,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 20,
+      "loss": 20
+    },
+    {
+      "id": "104927-gaps-10",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-11",
+      "condition": "gaps",
+      "tau": 152,
+      "alarm": 181,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 29,
+      "loss": 29
+    },
+    {
+      "id": "104927-gaps-12",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-13",
+      "condition": "gaps",
+      "tau": 170,
+      "alarm": 256,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 86,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-14",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-15",
+      "condition": "gaps",
+      "tau": 177,
+      "alarm": 198,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-gaps-16",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-17",
+      "condition": "gaps",
+      "tau": 207,
+      "alarm": 229,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "104927-gaps-18",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-19",
+      "condition": "gaps",
+      "tau": 158,
+      "alarm": 280,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 122,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-20",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-21",
+      "condition": "gaps",
+      "tau": 169,
+      "alarm": 210,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 41,
+      "loss": 41
+    },
+    {
+      "id": "104927-gaps-22",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-23",
+      "condition": "gaps",
+      "tau": 187,
+      "alarm": 127,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-24",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": 204,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-25",
+      "condition": "gaps",
+      "tau": 160,
+      "alarm": 204,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 44,
+      "loss": 44
+    },
+    {
+      "id": "104927-gaps-26",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-27",
+      "condition": "gaps",
+      "tau": 210,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-28",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": 202,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-29",
+      "condition": "gaps",
+      "tau": 183,
+      "alarm": 136,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-30",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-31",
+      "condition": "gaps",
+      "tau": 186,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-32",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-33",
+      "condition": "gaps",
+      "tau": 140,
+      "alarm": 175,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 35,
+      "loss": 35
+    },
+    {
+      "id": "104927-gaps-34",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-35",
+      "condition": "gaps",
+      "tau": 199,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-36",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-37",
+      "condition": "gaps",
+      "tau": 164,
+      "alarm": 201,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 37,
+      "loss": 37
+    },
+    {
+      "id": "104927-gaps-38",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-39",
+      "condition": "gaps",
+      "tau": 145,
+      "alarm": 147,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 2,
+      "loss": 2
+    },
+    {
+      "id": "104927-gaps-40",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-41",
+      "condition": "gaps",
+      "tau": 144,
+      "alarm": 189,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 45,
+      "loss": 45
+    },
+    {
+      "id": "104927-gaps-42",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-43",
+      "condition": "gaps",
+      "tau": 164,
+      "alarm": 205,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 41,
+      "loss": 41
+    },
+    {
+      "id": "104927-gaps-44",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-45",
+      "condition": "gaps",
+      "tau": 153,
+      "alarm": 333,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 180,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-46",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-47",
+      "condition": "gaps",
+      "tau": 188,
+      "alarm": 209,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-gaps-48",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": 287,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-49",
+      "condition": "gaps",
+      "tau": 210,
+      "alarm": 300,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 90,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-50",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-51",
+      "condition": "gaps",
+      "tau": 174,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-52",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-53",
+      "condition": "gaps",
+      "tau": 193,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-gaps-54",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-55",
+      "condition": "gaps",
+      "tau": 145,
+      "alarm": 190,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 45,
+      "loss": 45
+    },
+    {
+      "id": "104927-gaps-56",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-57",
+      "condition": "gaps",
+      "tau": 149,
+      "alarm": 167,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "104927-gaps-58",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-gaps-59",
+      "condition": "gaps",
+      "tau": 147,
+      "alarm": 128,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-heavy-0",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-1",
+      "condition": "heavy",
+      "tau": 184,
+      "alarm": 207,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 23,
+      "loss": 23
+    },
+    {
+      "id": "104927-heavy-2",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-3",
+      "condition": "heavy",
+      "tau": 186,
+      "alarm": 204,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "104927-heavy-4",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-5",
+      "condition": "heavy",
+      "tau": 165,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-heavy-6",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-7",
+      "condition": "heavy",
+      "tau": 201,
+      "alarm": 227,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 26,
+      "loss": 26
+    },
+    {
+      "id": "104927-heavy-8",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-9",
+      "condition": "heavy",
+      "tau": 198,
+      "alarm": 216,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "104927-heavy-10",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-11",
+      "condition": "heavy",
+      "tau": 149,
+      "alarm": 170,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-heavy-12",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-13",
+      "condition": "heavy",
+      "tau": 163,
+      "alarm": 185,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "104927-heavy-14",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 331,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-heavy-15",
+      "condition": "heavy",
+      "tau": 141,
+      "alarm": 159,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "104927-heavy-16",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-17",
+      "condition": "heavy",
+      "tau": 205,
+      "alarm": 212,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 7,
+      "loss": 7
+    },
+    {
+      "id": "104927-heavy-18",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 300,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-heavy-19",
+      "condition": "heavy",
+      "tau": 170,
+      "alarm": 199,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 29,
+      "loss": 29
+    },
+    {
+      "id": "104927-heavy-20",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-21",
+      "condition": "heavy",
+      "tau": 208,
+      "alarm": 243,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 35,
+      "loss": 35
+    },
+    {
+      "id": "104927-heavy-22",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-23",
+      "condition": "heavy",
+      "tau": 144,
+      "alarm": 161,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "104927-heavy-24",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-25",
+      "condition": "heavy",
+      "tau": 177,
+      "alarm": 233,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 56,
+      "loss": 56
+    },
+    {
+      "id": "104927-heavy-26",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-27",
+      "condition": "heavy",
+      "tau": 183,
+      "alarm": 244,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 61,
+      "loss": 90
+    },
+    {
+      "id": "104927-heavy-28",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-29",
+      "condition": "heavy",
+      "tau": 156,
+      "alarm": 168,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 12,
+      "loss": 12
+    },
+    {
+      "id": "104927-heavy-30",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-31",
+      "condition": "heavy",
+      "tau": 187,
+      "alarm": 201,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 14,
+      "loss": 14
+    },
+    {
+      "id": "104927-heavy-32",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-33",
+      "condition": "heavy",
+      "tau": 205,
+      "alarm": 260,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 55,
+      "loss": 55
+    },
+    {
+      "id": "104927-heavy-34",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-35",
+      "condition": "heavy",
+      "tau": 188,
+      "alarm": 217,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 29,
+      "loss": 29
+    },
+    {
+      "id": "104927-heavy-36",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-37",
+      "condition": "heavy",
+      "tau": 195,
+      "alarm": 215,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 20,
+      "loss": 20
+    },
+    {
+      "id": "104927-heavy-38",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-39",
+      "condition": "heavy",
+      "tau": 181,
+      "alarm": 223,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 42,
+      "loss": 42
+    },
+    {
+      "id": "104927-heavy-40",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 307,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-heavy-41",
+      "condition": "heavy",
+      "tau": 169,
+      "alarm": 306,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 137,
+      "loss": 90
+    },
+    {
+      "id": "104927-heavy-42",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 168,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "104927-heavy-43",
+      "condition": "heavy",
+      "tau": 186,
+      "alarm": 211,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 25,
+      "loss": 25
+    },
+    {
+      "id": "104927-heavy-44",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-45",
+      "condition": "heavy",
+      "tau": 143,
+      "alarm": 182,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 39,
+      "loss": 39
+    },
+    {
+      "id": "104927-heavy-46",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-47",
+      "condition": "heavy",
+      "tau": 153,
+      "alarm": 171,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "104927-heavy-48",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-49",
+      "condition": "heavy",
+      "tau": 206,
+      "alarm": 227,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "104927-heavy-50",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-51",
+      "condition": "heavy",
+      "tau": 160,
+      "alarm": 206,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 46,
+      "loss": 46
+    },
+    {
+      "id": "104927-heavy-52",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-53",
+      "condition": "heavy",
+      "tau": 205,
+      "alarm": 231,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 26,
+      "loss": 26
+    },
+    {
+      "id": "104927-heavy-54",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-55",
+      "condition": "heavy",
+      "tau": 203,
+      "alarm": 253,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 50,
+      "loss": 50
+    },
+    {
+      "id": "104927-heavy-56",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-57",
+      "condition": "heavy",
+      "tau": 178,
+      "alarm": 194,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 16,
+      "loss": 16
+    },
+    {
+      "id": "104927-heavy-58",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "104927-heavy-59",
+      "condition": "heavy",
+      "tau": 193,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-0",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-1",
+      "condition": "clean",
+      "tau": 165,
+      "alarm": 181,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 16,
+      "loss": 16
+    },
+    {
+      "id": "838651-clean-2",
+      "condition": "clean",
+      "tau": null,
+      "alarm": 242,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-3",
+      "condition": "clean",
+      "tau": 164,
+      "alarm": 184,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 20,
+      "loss": 20
+    },
+    {
+      "id": "838651-clean-4",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-5",
+      "condition": "clean",
+      "tau": 197,
+      "alarm": 216,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "838651-clean-6",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-7",
+      "condition": "clean",
+      "tau": 196,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-8",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-9",
+      "condition": "clean",
+      "tau": 152,
+      "alarm": 176,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 24,
+      "loss": 24
+    },
+    {
+      "id": "838651-clean-10",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-11",
+      "condition": "clean",
+      "tau": 175,
+      "alarm": 208,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 33,
+      "loss": 33
+    },
+    {
+      "id": "838651-clean-12",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-13",
+      "condition": "clean",
+      "tau": 149,
+      "alarm": 174,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 25,
+      "loss": 25
+    },
+    {
+      "id": "838651-clean-14",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-15",
+      "condition": "clean",
+      "tau": 203,
+      "alarm": 271,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 68,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-16",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-17",
+      "condition": "clean",
+      "tau": 144,
+      "alarm": 212,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 68,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-18",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-19",
+      "condition": "clean",
+      "tau": 145,
+      "alarm": 161,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 16,
+      "loss": 16
+    },
+    {
+      "id": "838651-clean-20",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-21",
+      "condition": "clean",
+      "tau": 194,
+      "alarm": 210,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 16,
+      "loss": 16
+    },
+    {
+      "id": "838651-clean-22",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-23",
+      "condition": "clean",
+      "tau": 175,
+      "alarm": 193,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "838651-clean-24",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-25",
+      "condition": "clean",
+      "tau": 166,
+      "alarm": 186,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 20,
+      "loss": 20
+    },
+    {
+      "id": "838651-clean-26",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-27",
+      "condition": "clean",
+      "tau": 187,
+      "alarm": 228,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 41,
+      "loss": 41
+    },
+    {
+      "id": "838651-clean-28",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-29",
+      "condition": "clean",
+      "tau": 180,
+      "alarm": 234,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 54,
+      "loss": 54
+    },
+    {
+      "id": "838651-clean-30",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-31",
+      "condition": "clean",
+      "tau": 190,
+      "alarm": 204,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 14,
+      "loss": 14
+    },
+    {
+      "id": "838651-clean-32",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-33",
+      "condition": "clean",
+      "tau": 147,
+      "alarm": 297,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 150,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-34",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-35",
+      "condition": "clean",
+      "tau": 157,
+      "alarm": 201,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 44,
+      "loss": 44
+    },
+    {
+      "id": "838651-clean-36",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-37",
+      "condition": "clean",
+      "tau": 145,
+      "alarm": 166,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "838651-clean-38",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-39",
+      "condition": "clean",
+      "tau": 204,
+      "alarm": 228,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 24,
+      "loss": 24
+    },
+    {
+      "id": "838651-clean-40",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-41",
+      "condition": "clean",
+      "tau": 140,
+      "alarm": 179,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 39,
+      "loss": 39
+    },
+    {
+      "id": "838651-clean-42",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-43",
+      "condition": "clean",
+      "tau": 143,
+      "alarm": 161,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "838651-clean-44",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-45",
+      "condition": "clean",
+      "tau": 149,
+      "alarm": 170,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "838651-clean-46",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-47",
+      "condition": "clean",
+      "tau": 181,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-48",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-49",
+      "condition": "clean",
+      "tau": 177,
+      "alarm": 199,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "838651-clean-50",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-51",
+      "condition": "clean",
+      "tau": 178,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-52",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-53",
+      "condition": "clean",
+      "tau": 192,
+      "alarm": 210,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "838651-clean-54",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-55",
+      "condition": "clean",
+      "tau": 206,
+      "alarm": 287,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 81,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-56",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-57",
+      "condition": "clean",
+      "tau": 164,
+      "alarm": 343,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 179,
+      "loss": 90
+    },
+    {
+      "id": "838651-clean-58",
+      "condition": "clean",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-clean-59",
+      "condition": "clean",
+      "tau": 149,
+      "alarm": 182,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 33,
+      "loss": 33
+    },
+    {
+      "id": "838651-bursts-0",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-1",
+      "condition": "bursts",
+      "tau": 186,
+      "alarm": 275,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 89,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-2",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-3",
+      "condition": "bursts",
+      "tau": 154,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-4",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-5",
+      "condition": "bursts",
+      "tau": 193,
+      "alarm": 212,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 19,
+      "loss": 19
+    },
+    {
+      "id": "838651-bursts-6",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-7",
+      "condition": "bursts",
+      "tau": 149,
+      "alarm": 229,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 80,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-8",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 193,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-9",
+      "condition": "bursts",
+      "tau": 150,
+      "alarm": 165,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 15,
+      "loss": 15
+    },
+    {
+      "id": "838651-bursts-10",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-11",
+      "condition": "bursts",
+      "tau": 177,
+      "alarm": 209,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 32,
+      "loss": 32
+    },
+    {
+      "id": "838651-bursts-12",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-13",
+      "condition": "bursts",
+      "tau": 186,
+      "alarm": 212,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 26,
+      "loss": 26
+    },
+    {
+      "id": "838651-bursts-14",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-15",
+      "condition": "bursts",
+      "tau": 144,
+      "alarm": 159,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 15,
+      "loss": 15
+    },
+    {
+      "id": "838651-bursts-16",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-17",
+      "condition": "bursts",
+      "tau": 166,
+      "alarm": 193,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 27,
+      "loss": 27
+    },
+    {
+      "id": "838651-bursts-18",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-19",
+      "condition": "bursts",
+      "tau": 149,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-20",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-21",
+      "condition": "bursts",
+      "tau": 189,
+      "alarm": 337,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 148,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-22",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-23",
+      "condition": "bursts",
+      "tau": 176,
+      "alarm": 285,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 109,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-24",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 263,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-25",
+      "condition": "bursts",
+      "tau": 189,
+      "alarm": 241,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 52,
+      "loss": 52
+    },
+    {
+      "id": "838651-bursts-26",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-27",
+      "condition": "bursts",
+      "tau": 207,
+      "alarm": 231,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 24,
+      "loss": 24
+    },
+    {
+      "id": "838651-bursts-28",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-29",
+      "condition": "bursts",
+      "tau": 180,
+      "alarm": 333,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 153,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-30",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-31",
+      "condition": "bursts",
+      "tau": 189,
+      "alarm": 239,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 50,
+      "loss": 50
+    },
+    {
+      "id": "838651-bursts-32",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-33",
+      "condition": "bursts",
+      "tau": 161,
+      "alarm": 169,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 8,
+      "loss": 8
+    },
+    {
+      "id": "838651-bursts-34",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 161,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-35",
+      "condition": "bursts",
+      "tau": 186,
+      "alarm": 206,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 20,
+      "loss": 20
+    },
+    {
+      "id": "838651-bursts-36",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-37",
+      "condition": "bursts",
+      "tau": 141,
+      "alarm": 167,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 26,
+      "loss": 26
+    },
+    {
+      "id": "838651-bursts-38",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-39",
+      "condition": "bursts",
+      "tau": 196,
+      "alarm": 288,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 92,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-40",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-41",
+      "condition": "bursts",
+      "tau": 142,
+      "alarm": 163,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "838651-bursts-42",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-43",
+      "condition": "bursts",
+      "tau": 144,
+      "alarm": 176,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 32,
+      "loss": 32
+    },
+    {
+      "id": "838651-bursts-44",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-45",
+      "condition": "bursts",
+      "tau": 200,
+      "alarm": 308,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 108,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-46",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 201,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-47",
+      "condition": "bursts",
+      "tau": 176,
+      "alarm": 229,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 53,
+      "loss": 53
+    },
+    {
+      "id": "838651-bursts-48",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": 296,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-49",
+      "condition": "bursts",
+      "tau": 160,
+      "alarm": 182,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "838651-bursts-50",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-51",
+      "condition": "bursts",
+      "tau": 146,
+      "alarm": 156,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 10,
+      "loss": 10
+    },
+    {
+      "id": "838651-bursts-52",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-53",
+      "condition": "bursts",
+      "tau": 143,
+      "alarm": 201,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 58,
+      "loss": 58
+    },
+    {
+      "id": "838651-bursts-54",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-55",
+      "condition": "bursts",
+      "tau": 201,
+      "alarm": 225,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 24,
+      "loss": 24
+    },
+    {
+      "id": "838651-bursts-56",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-57",
+      "condition": "bursts",
+      "tau": 198,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-bursts-58",
+      "condition": "bursts",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-bursts-59",
+      "condition": "bursts",
+      "tau": 197,
+      "alarm": 229,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 32,
+      "loss": 32
+    },
+    {
+      "id": "838651-gaps-0",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-1",
+      "condition": "gaps",
+      "tau": 201,
+      "alarm": 263,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 62,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-2",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-3",
+      "condition": "gaps",
+      "tau": 165,
+      "alarm": 188,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 23,
+      "loss": 23
+    },
+    {
+      "id": "838651-gaps-4",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-5",
+      "condition": "gaps",
+      "tau": 205,
+      "alarm": 231,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 26,
+      "loss": 26
+    },
+    {
+      "id": "838651-gaps-6",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-7",
+      "condition": "gaps",
+      "tau": 193,
+      "alarm": 266,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 73,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-8",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-9",
+      "condition": "gaps",
+      "tau": 199,
+      "alarm": 245,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 46,
+      "loss": 46
+    },
+    {
+      "id": "838651-gaps-10",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-11",
+      "condition": "gaps",
+      "tau": 177,
+      "alarm": 230,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 53,
+      "loss": 53
+    },
+    {
+      "id": "838651-gaps-12",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-13",
+      "condition": "gaps",
+      "tau": 185,
+      "alarm": 220,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 35,
+      "loss": 35
+    },
+    {
+      "id": "838651-gaps-14",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-15",
+      "condition": "gaps",
+      "tau": 174,
+      "alarm": 197,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 23,
+      "loss": 23
+    },
+    {
+      "id": "838651-gaps-16",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-17",
+      "condition": "gaps",
+      "tau": 203,
+      "alarm": 240,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 37,
+      "loss": 37
+    },
+    {
+      "id": "838651-gaps-18",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-19",
+      "condition": "gaps",
+      "tau": 177,
+      "alarm": 199,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "838651-gaps-20",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-21",
+      "condition": "gaps",
+      "tau": 202,
+      "alarm": 223,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "838651-gaps-22",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-23",
+      "condition": "gaps",
+      "tau": 177,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-24",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-25",
+      "condition": "gaps",
+      "tau": 143,
+      "alarm": 218,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 75,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-26",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-27",
+      "condition": "gaps",
+      "tau": 186,
+      "alarm": 243,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 57,
+      "loss": 57
+    },
+    {
+      "id": "838651-gaps-28",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-29",
+      "condition": "gaps",
+      "tau": 199,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-30",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-31",
+      "condition": "gaps",
+      "tau": 186,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-32",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-33",
+      "condition": "gaps",
+      "tau": 176,
+      "alarm": 208,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 32,
+      "loss": 32
+    },
+    {
+      "id": "838651-gaps-34",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-35",
+      "condition": "gaps",
+      "tau": 158,
+      "alarm": 187,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 29,
+      "loss": 29
+    },
+    {
+      "id": "838651-gaps-36",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-37",
+      "condition": "gaps",
+      "tau": 198,
+      "alarm": 110,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-38",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-39",
+      "condition": "gaps",
+      "tau": 189,
+      "alarm": 217,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 28,
+      "loss": 28
+    },
+    {
+      "id": "838651-gaps-40",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-41",
+      "condition": "gaps",
+      "tau": 181,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-42",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-43",
+      "condition": "gaps",
+      "tau": 196,
+      "alarm": 309,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 113,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-44",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-45",
+      "condition": "gaps",
+      "tau": 196,
+      "alarm": 216,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 20,
+      "loss": 20
+    },
+    {
+      "id": "838651-gaps-46",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-47",
+      "condition": "gaps",
+      "tau": 193,
+      "alarm": 104,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-48",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-49",
+      "condition": "gaps",
+      "tau": 177,
+      "alarm": 205,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 28,
+      "loss": 28
+    },
+    {
+      "id": "838651-gaps-50",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-51",
+      "condition": "gaps",
+      "tau": 148,
+      "alarm": 160,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 12,
+      "loss": 12
+    },
+    {
+      "id": "838651-gaps-52",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-53",
+      "condition": "gaps",
+      "tau": 183,
+      "alarm": 264,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 81,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-54",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-55",
+      "condition": "gaps",
+      "tau": 209,
+      "alarm": 239,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 30,
+      "loss": 30
+    },
+    {
+      "id": "838651-gaps-56",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-57",
+      "condition": "gaps",
+      "tau": 170,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-gaps-58",
+      "condition": "gaps",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-gaps-59",
+      "condition": "gaps",
+      "tau": 142,
+      "alarm": 166,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 24,
+      "loss": 24
+    },
+    {
+      "id": "838651-heavy-0",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 185,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-1",
+      "condition": "heavy",
+      "tau": 178,
+      "alarm": 195,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "838651-heavy-2",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 219,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-3",
+      "condition": "heavy",
+      "tau": 159,
+      "alarm": 183,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 24,
+      "loss": 24
+    },
+    {
+      "id": "838651-heavy-4",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-5",
+      "condition": "heavy",
+      "tau": 209,
+      "alarm": 229,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 20,
+      "loss": 20
+    },
+    {
+      "id": "838651-heavy-6",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-7",
+      "condition": "heavy",
+      "tau": 193,
+      "alarm": 214,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 21,
+      "loss": 21
+    },
+    {
+      "id": "838651-heavy-8",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-9",
+      "condition": "heavy",
+      "tau": 206,
+      "alarm": 224,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "838651-heavy-10",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-11",
+      "condition": "heavy",
+      "tau": 142,
+      "alarm": 208,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 66,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-12",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-13",
+      "condition": "heavy",
+      "tau": 161,
+      "alarm": 195,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 34,
+      "loss": 34
+    },
+    {
+      "id": "838651-heavy-14",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-15",
+      "condition": "heavy",
+      "tau": 180,
+      "alarm": 251,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 71,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-16",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-17",
+      "condition": "heavy",
+      "tau": 167,
+      "alarm": 182,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 15,
+      "loss": 15
+    },
+    {
+      "id": "838651-heavy-18",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-19",
+      "condition": "heavy",
+      "tau": 144,
+      "alarm": 159,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 15,
+      "loss": 15
+    },
+    {
+      "id": "838651-heavy-20",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-21",
+      "condition": "heavy",
+      "tau": 156,
+      "alarm": 173,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "838651-heavy-22",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 181,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-23",
+      "condition": "heavy",
+      "tau": 151,
+      "alarm": 187,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 36,
+      "loss": 36
+    },
+    {
+      "id": "838651-heavy-24",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-25",
+      "condition": "heavy",
+      "tau": 147,
+      "alarm": 202,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 55,
+      "loss": 55
+    },
+    {
+      "id": "838651-heavy-26",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-27",
+      "condition": "heavy",
+      "tau": 177,
+      "alarm": 194,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "838651-heavy-28",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 147,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-29",
+      "condition": "heavy",
+      "tau": 204,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-30",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 280,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-31",
+      "condition": "heavy",
+      "tau": 170,
+      "alarm": 245,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 75,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-32",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-33",
+      "condition": "heavy",
+      "tau": 194,
+      "alarm": 273,
+      "false_alarm": false,
+      "hit": false,
+      "delay": 79,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-34",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-35",
+      "condition": "heavy",
+      "tau": 174,
+      "alarm": 201,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 27,
+      "loss": 27
+    },
+    {
+      "id": "838651-heavy-36",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-37",
+      "condition": "heavy",
+      "tau": 167,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-38",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-39",
+      "condition": "heavy",
+      "tau": 208,
+      "alarm": 246,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 38,
+      "loss": 38
+    },
+    {
+      "id": "838651-heavy-40",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-41",
+      "condition": "heavy",
+      "tau": 202,
+      "alarm": 216,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 14,
+      "loss": 14
+    },
+    {
+      "id": "838651-heavy-42",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-43",
+      "condition": "heavy",
+      "tau": 154,
+      "alarm": 172,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "838651-heavy-44",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-45",
+      "condition": "heavy",
+      "tau": 144,
+      "alarm": 171,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 27,
+      "loss": 27
+    },
+    {
+      "id": "838651-heavy-46",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-47",
+      "condition": "heavy",
+      "tau": 169,
+      "alarm": 187,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 18,
+      "loss": 18
+    },
+    {
+      "id": "838651-heavy-48",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": 337,
+      "false_alarm": true,
+      "hit": false,
+      "delay": null,
+      "loss": 90
+    },
+    {
+      "id": "838651-heavy-49",
+      "condition": "heavy",
+      "tau": 145,
+      "alarm": 167,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "838651-heavy-50",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-51",
+      "condition": "heavy",
+      "tau": 163,
+      "alarm": 180,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 17,
+      "loss": 17
+    },
+    {
+      "id": "838651-heavy-52",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-53",
+      "condition": "heavy",
+      "tau": 156,
+      "alarm": 178,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 22,
+      "loss": 22
+    },
+    {
+      "id": "838651-heavy-54",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-55",
+      "condition": "heavy",
+      "tau": 171,
+      "alarm": 201,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 30,
+      "loss": 30
+    },
+    {
+      "id": "838651-heavy-56",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-57",
+      "condition": "heavy",
+      "tau": 178,
+      "alarm": 198,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 20,
+      "loss": 20
+    },
+    {
+      "id": "838651-heavy-58",
+      "condition": "heavy",
+      "tau": null,
+      "alarm": -1,
+      "false_alarm": false,
+      "hit": false,
+      "delay": null,
+      "loss": 0
+    },
+    {
+      "id": "838651-heavy-59",
+      "condition": "heavy",
+      "tau": 144,
+      "alarm": 189,
+      "false_alarm": false,
+      "hit": true,
+      "delay": 45,
+      "loss": 45
+    }
+  ]
+}

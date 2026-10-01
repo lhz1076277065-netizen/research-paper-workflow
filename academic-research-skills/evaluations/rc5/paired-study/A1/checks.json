@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "bounded_interval_bruteforce_checks": 324,
+  "causal_prefix_and_suffix_checks": 6404,
+  "known_cases": {
+    "stable": {
+      "initial": -1,
+      "refined": -1,
+      "baseline": -1
+    },
+    "burst_8": {
+      "initial": -1,
+      "refined": -1,
+      "baseline": 127
+    },
+    "burst_16_limit": {
+      "initial": 134,
+      "refined": 134,
+      "baseline": 127
+    },
+    "weak_sustained": {
+      "initial": -1,
+      "refined": 151,
+      "baseline": 209
+    },
+    "positive_sustained": {
+      "initial": 145,
+      "refined": 143,
+      "baseline": 150
+    },
+    "negative_sustained": {
+      "initial": 145,
+      "refined": 143,
+      "baseline": 150
+    },
+    "shift_with_gap": {
+      "initial": 163,
+      "refined": 164,
+      "baseline": 168
+    },
+    "short": {
+      "initial": -1,
+      "refined": -1
+    },
+    "no_calibration": {
+      "initial": -1,
+      "refined": -1
+    }
+  },
+  "scope": "Synthetic exhaustive prefixes and all 40 train cases at selected cuts; no holdout or dev scoring."
+}

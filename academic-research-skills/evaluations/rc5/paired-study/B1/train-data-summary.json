@@ -1,0 +1,26 @@
+{
+  "bursts": {
+    "n": 10,
+    "targets": 5,
+    "median_postshift_z": -1.0702715350778784,
+    "missing_fraction": 0.0
+  },
+  "clean": {
+    "n": 10,
+    "targets": 5,
+    "median_postshift_z": 1.4507486891346992,
+    "missing_fraction": 0.0
+  },
+  "gaps": {
+    "n": 10,
+    "targets": 5,
+    "median_postshift_z": 1.285289317450757,
+    "missing_fraction": 0.08388888888888889
+  },
+  "heavy": {
+    "n": 10,
+    "targets": 5,
+    "median_postshift_z": 0.5521254537354501,
+    "missing_fraction": 0.0
+  }
+}

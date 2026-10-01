@@ -1,0 +1,4072 @@
+{
+  "kind": "result-links",
+  "passed": true,
+  "errors": [],
+  "pending": [],
+  "checks": [
+    "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+    "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+    "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+  ],
+  "coverage": {
+    "bytes": [
+      {
+        "path": "manuscript-build/results.json",
+        "role": "frozen-results:study",
+        "expected_sha256": "8159c764fa9123197b38b5e04f0b4e5d0f74d88f770ebad95ce000f3d1b1396f",
+        "actual_sha256": "8159c764fa9123197b38b5e04f0b4e5d0f74d88f770ebad95ce000f3d1b1396f",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.md",
+        "role": "body",
+        "expected_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "actual_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "matched": true
+      },
+      {
+        "path": "independent/holdout.json",
+        "role": "source-version:data",
+        "expected_sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa",
+        "actual_sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa",
+        "matched": true
+      },
+      {
+        "path": "independent_eval.py",
+        "role": "source-version:code",
+        "expected_sha256": "c2f15cb9a85906948e28fd9953ac71909b699c316619a27792e9c7631afc8ce2",
+        "actual_sha256": "c2f15cb9a85906948e28fd9953ac71909b699c316619a27792e9c7631afc8ce2",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/execution.json",
+        "role": "source-version:execution",
+        "expected_sha256": "535f5efb01ff5cc26ca5aaf821d8e1593c1388366a5830ed7579001f12543e17",
+        "actual_sha256": "535f5efb01ff5cc26ca5aaf821d8e1593c1388366a5830ed7579001f12543e17",
+        "matched": true
+      },
+      {
+        "path": "independent/frozen-submissions.json",
+        "role": "source-version:method_snapshots",
+        "expected_sha256": "c7344483031c1b3fc697eb6fa3602d9ce9be2b73f90f995bbc4b1389c6d1c8d4",
+        "actual_sha256": "c7344483031c1b3fc697eb6fa3602d9ce9be2b73f90f995bbc4b1389c6d1c8d4",
+        "matched": true
+      },
+      {
+        "path": "render_actual.py",
+        "role": "source-version:render",
+        "expected_sha256": "e68a805279d283d7bcc8fa453c6238a9ebcac02bcd57900c3081bb7bc0d72bc0",
+        "actual_sha256": "e68a805279d283d7bcc8fa453c6238a9ebcac02bcd57900c3081bb7bc0d72bc0",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.docx",
+        "role": "body",
+        "expected_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "actual_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.pdf",
+        "role": "body",
+        "expected_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "actual_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.md",
+        "role": "caption",
+        "expected_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "actual_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.docx",
+        "role": "caption",
+        "expected_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "actual_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.pdf",
+        "role": "caption",
+        "expected_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "actual_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.md",
+        "role": "body",
+        "expected_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "actual_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "matched": true
+      },
+      {
+        "path": "independent/holdout.json",
+        "role": "source-version:data",
+        "expected_sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa",
+        "actual_sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa",
+        "matched": true
+      },
+      {
+        "path": "independent_eval.py",
+        "role": "source-version:code",
+        "expected_sha256": "c2f15cb9a85906948e28fd9953ac71909b699c316619a27792e9c7631afc8ce2",
+        "actual_sha256": "c2f15cb9a85906948e28fd9953ac71909b699c316619a27792e9c7631afc8ce2",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/execution.json",
+        "role": "source-version:execution",
+        "expected_sha256": "535f5efb01ff5cc26ca5aaf821d8e1593c1388366a5830ed7579001f12543e17",
+        "actual_sha256": "535f5efb01ff5cc26ca5aaf821d8e1593c1388366a5830ed7579001f12543e17",
+        "matched": true
+      },
+      {
+        "path": "independent/frozen-submissions.json",
+        "role": "source-version:method_snapshots",
+        "expected_sha256": "c7344483031c1b3fc697eb6fa3602d9ce9be2b73f90f995bbc4b1389c6d1c8d4",
+        "actual_sha256": "c7344483031c1b3fc697eb6fa3602d9ce9be2b73f90f995bbc4b1389c6d1c8d4",
+        "matched": true
+      },
+      {
+        "path": "render_actual.py",
+        "role": "source-version:render",
+        "expected_sha256": "e68a805279d283d7bcc8fa453c6238a9ebcac02bcd57900c3081bb7bc0d72bc0",
+        "actual_sha256": "e68a805279d283d7bcc8fa453c6238a9ebcac02bcd57900c3081bb7bc0d72bc0",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.docx",
+        "role": "body",
+        "expected_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "actual_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.pdf",
+        "role": "body",
+        "expected_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "actual_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.md",
+        "role": "caption",
+        "expected_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "actual_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.docx",
+        "role": "caption",
+        "expected_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "actual_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.pdf",
+        "role": "caption",
+        "expected_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "actual_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.md",
+        "role": "body",
+        "expected_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "actual_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "matched": true
+      },
+      {
+        "path": "independent/holdout.json",
+        "role": "source-version:data",
+        "expected_sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa",
+        "actual_sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa",
+        "matched": true
+      },
+      {
+        "path": "independent_eval.py",
+        "role": "source-version:code",
+        "expected_sha256": "c2f15cb9a85906948e28fd9953ac71909b699c316619a27792e9c7631afc8ce2",
+        "actual_sha256": "c2f15cb9a85906948e28fd9953ac71909b699c316619a27792e9c7631afc8ce2",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/execution.json",
+        "role": "source-version:execution",
+        "expected_sha256": "535f5efb01ff5cc26ca5aaf821d8e1593c1388366a5830ed7579001f12543e17",
+        "actual_sha256": "535f5efb01ff5cc26ca5aaf821d8e1593c1388366a5830ed7579001f12543e17",
+        "matched": true
+      },
+      {
+        "path": "independent/frozen-submissions.json",
+        "role": "source-version:method_snapshots",
+        "expected_sha256": "c7344483031c1b3fc697eb6fa3602d9ce9be2b73f90f995bbc4b1389c6d1c8d4",
+        "actual_sha256": "c7344483031c1b3fc697eb6fa3602d9ce9be2b73f90f995bbc4b1389c6d1c8d4",
+        "matched": true
+      },
+      {
+        "path": "render_actual.py",
+        "role": "source-version:render",
+        "expected_sha256": "e68a805279d283d7bcc8fa453c6238a9ebcac02bcd57900c3081bb7bc0d72bc0",
+        "actual_sha256": "e68a805279d283d7bcc8fa453c6238a9ebcac02bcd57900c3081bb7bc0d72bc0",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.docx",
+        "role": "body",
+        "expected_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "actual_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.pdf",
+        "role": "body",
+        "expected_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "actual_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.md",
+        "role": "caption",
+        "expected_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "actual_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.docx",
+        "role": "caption",
+        "expected_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "actual_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.pdf",
+        "role": "caption",
+        "expected_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "actual_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.md",
+        "role": "body",
+        "expected_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "actual_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "matched": true
+      },
+      {
+        "path": "independent/holdout.json",
+        "role": "source-version:data",
+        "expected_sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa",
+        "actual_sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa",
+        "matched": true
+      },
+      {
+        "path": "independent_eval.py",
+        "role": "source-version:code",
+        "expected_sha256": "c2f15cb9a85906948e28fd9953ac71909b699c316619a27792e9c7631afc8ce2",
+        "actual_sha256": "c2f15cb9a85906948e28fd9953ac71909b699c316619a27792e9c7631afc8ce2",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/execution.json",
+        "role": "source-version:execution",
+        "expected_sha256": "535f5efb01ff5cc26ca5aaf821d8e1593c1388366a5830ed7579001f12543e17",
+        "actual_sha256": "535f5efb01ff5cc26ca5aaf821d8e1593c1388366a5830ed7579001f12543e17",
+        "matched": true
+      },
+      {
+        "path": "independent/frozen-submissions.json",
+        "role": "source-version:method_snapshots",
+        "expected_sha256": "c7344483031c1b3fc697eb6fa3602d9ce9be2b73f90f995bbc4b1389c6d1c8d4",
+        "actual_sha256": "c7344483031c1b3fc697eb6fa3602d9ce9be2b73f90f995bbc4b1389c6d1c8d4",
+        "matched": true
+      },
+      {
+        "path": "render_actual.py",
+        "role": "source-version:render",
+        "expected_sha256": "e68a805279d283d7bcc8fa453c6238a9ebcac02bcd57900c3081bb7bc0d72bc0",
+        "actual_sha256": "e68a805279d283d7bcc8fa453c6238a9ebcac02bcd57900c3081bb7bc0d72bc0",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.docx",
+        "role": "body",
+        "expected_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "actual_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.pdf",
+        "role": "body",
+        "expected_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "actual_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.md",
+        "role": "caption",
+        "expected_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "actual_sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.docx",
+        "role": "caption",
+        "expected_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "actual_sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66",
+        "matched": true
+      },
+      {
+        "path": "manuscript-build/study.pdf",
+        "role": "caption",
+        "expected_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "actual_sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b",
+        "matched": true
+      }
+    ],
+    "numeric": [
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "value",
+        "source_value": "23.68125",
+        "display_text": "23.68",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "lower",
+        "source_value": "20.981041666666666",
+        "display_text": "20.98",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "upper",
+        "source_value": "26.473177083333333",
+        "display_text": "26.47",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "value",
+        "source_value": "23.68125",
+        "display_text": "23.68",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "lower",
+        "source_value": "20.981041666666666",
+        "display_text": "20.98",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "upper",
+        "source_value": "26.473177083333333",
+        "display_text": "26.47",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "value",
+        "source_value": "23.68125",
+        "display_text": "23.68",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "lower",
+        "source_value": "20.981041666666666",
+        "display_text": "20.98",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "upper",
+        "source_value": "26.473177083333333",
+        "display_text": "26.47",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 4
+        },
+        "field": "value",
+        "source_value": "23.68125",
+        "display_text": "23.68",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 3
+        },
+        "field": "value",
+        "source_value": "23.68125",
+        "display_text": "23.68",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 8,
+          "line_end": 9
+        },
+        "field": "value",
+        "source_value": "23.68125",
+        "display_text": "23.68",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "value",
+        "source_value": "22.597916666666666",
+        "display_text": "22.60",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "lower",
+        "source_value": "19.8603125",
+        "display_text": "19.86",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "upper",
+        "source_value": "25.358645833333334",
+        "display_text": "25.36",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "value",
+        "source_value": "22.597916666666666",
+        "display_text": "22.60",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "lower",
+        "source_value": "19.8603125",
+        "display_text": "19.86",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "upper",
+        "source_value": "25.358645833333334",
+        "display_text": "25.36",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "value",
+        "source_value": "22.597916666666666",
+        "display_text": "22.60",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "lower",
+        "source_value": "19.8603125",
+        "display_text": "19.86",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "upper",
+        "source_value": "25.358645833333334",
+        "display_text": "25.36",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 6
+        },
+        "field": "value",
+        "source_value": "22.597916666666666",
+        "display_text": "22.60",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 5
+        },
+        "field": "value",
+        "source_value": "22.597916666666666",
+        "display_text": "22.60",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 14,
+          "line_end": 15
+        },
+        "field": "value",
+        "source_value": "22.597916666666666",
+        "display_text": "22.60",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "value",
+        "source_value": "22.375",
+        "display_text": "22.38",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "lower",
+        "source_value": "19.843645833333333",
+        "display_text": "19.84",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "upper",
+        "source_value": "25.05625",
+        "display_text": "25.06",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "value",
+        "source_value": "22.375",
+        "display_text": "22.38",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "lower",
+        "source_value": "19.843645833333333",
+        "display_text": "19.84",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "upper",
+        "source_value": "25.05625",
+        "display_text": "25.06",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "value",
+        "source_value": "22.375",
+        "display_text": "22.38",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "lower",
+        "source_value": "19.843645833333333",
+        "display_text": "19.84",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "upper",
+        "source_value": "25.05625",
+        "display_text": "25.06",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 8
+        },
+        "field": "value",
+        "source_value": "22.375",
+        "display_text": "22.38",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 7
+        },
+        "field": "value",
+        "source_value": "22.375",
+        "display_text": "22.38",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 20,
+          "line_end": 21
+        },
+        "field": "value",
+        "source_value": "22.375",
+        "display_text": "22.38",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "value",
+        "source_value": "25.766666666666666",
+        "display_text": "25.77",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "lower",
+        "source_value": "22.793541666666666",
+        "display_text": "22.79",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "upper",
+        "source_value": "28.80661458333333",
+        "display_text": "28.81",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "value",
+        "source_value": "25.766666666666666",
+        "display_text": "25.77",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "lower",
+        "source_value": "22.793541666666666",
+        "display_text": "22.79",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "upper",
+        "source_value": "28.80661458333333",
+        "display_text": "28.81",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "value",
+        "source_value": "25.766666666666666",
+        "display_text": "25.77",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "lower",
+        "source_value": "22.793541666666666",
+        "display_text": "22.79",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "upper",
+        "source_value": "28.80661458333333",
+        "display_text": "28.81",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 10
+        },
+        "field": "value",
+        "source_value": "25.766666666666666",
+        "display_text": "25.77",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 9
+        },
+        "field": "value",
+        "source_value": "25.766666666666666",
+        "display_text": "25.77",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 26,
+          "line_end": 31
+        },
+        "field": "value",
+        "source_value": "25.766666666666666",
+        "display_text": "25.77",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      }
+    ],
+    "declared_semantic": [
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "decrease"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "model",
+        "source_value": "A1refined",
+        "text": "A1refined"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "decrease"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "model",
+        "source_value": "A1refined",
+        "text": "A1refined"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "decrease"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "model",
+        "source_value": "A1refined",
+        "text": "A1refined"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 4
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 4
+        },
+        "field": "model",
+        "source_value": "A1refined",
+        "text": "A1refined"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 3
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 3
+        },
+        "field": "model",
+        "source_value": "A1refined",
+        "text": "A1refined"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 8,
+          "line_end": 9
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 8,
+          "line_end": 9
+        },
+        "field": "model",
+        "source_value": "A1refined",
+        "text": "A1refined"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "decrease"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "model",
+        "source_value": "B1refined",
+        "text": "B1refined"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "decrease"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "model",
+        "source_value": "B1refined",
+        "text": "B1refined"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "decrease"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "model",
+        "source_value": "B1refined",
+        "text": "B1refined"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 6
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 6
+        },
+        "field": "model",
+        "source_value": "B1refined",
+        "text": "B1refined"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 5
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 5
+        },
+        "field": "model",
+        "source_value": "B1refined",
+        "text": "B1refined"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 14,
+          "line_end": 15
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 14,
+          "line_end": 15
+        },
+        "field": "model",
+        "source_value": "B1refined",
+        "text": "B1refined"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "decrease"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "model",
+        "source_value": "B2refined",
+        "text": "B2refined"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "decrease"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "model",
+        "source_value": "B2refined",
+        "text": "B2refined"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "decrease"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "model",
+        "source_value": "B2refined",
+        "text": "B2refined"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 8
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 8
+        },
+        "field": "model",
+        "source_value": "B2refined",
+        "text": "B2refined"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 7
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 7
+        },
+        "field": "model",
+        "source_value": "B2refined",
+        "text": "B2refined"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 20,
+          "line_end": 21
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 20,
+          "line_end": 21
+        },
+        "field": "model",
+        "source_value": "B2refined",
+        "text": "B2refined"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "direction",
+        "source_value": "increase",
+        "text": "increase"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "model",
+        "source_value": "A2refined",
+        "text": "A2refined"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "direction",
+        "source_value": "increase",
+        "text": "increase"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "model",
+        "source_value": "A2refined",
+        "text": "A2refined"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "direction",
+        "source_value": "increase",
+        "text": "increase"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "denominator",
+        "source_value": 480,
+        "text": "n=480"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "outcome",
+        "source_value": "penalty loss",
+        "text": "penalty loss"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "population",
+        "source_value": "synthetic streams",
+        "text": "synthetic streams"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "time",
+        "source_value": "360 steps",
+        "text": "360 steps"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "comparison",
+        "source_value": "own tuned baseline",
+        "text": "own tuned baseline"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "model",
+        "source_value": "A2refined",
+        "text": "A2refined"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "split",
+        "source_value": "holdout",
+        "text": "holdout"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "uncertainty",
+        "source_value": "bootstrap interval",
+        "text": "bootstrap interval"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "field": "effect_type",
+        "source_value": "arithmetic mean",
+        "text": "arithmetic mean"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 10
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 10
+        },
+        "field": "model",
+        "source_value": "A2refined",
+        "text": "A2refined"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 9
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 9
+        },
+        "field": "model",
+        "source_value": "A2refined",
+        "text": "A2refined"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 26,
+          "line_end": 31
+        },
+        "field": "unit",
+        "source_value": "loss-points",
+        "text": "loss-points"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 26,
+          "line_end": 31
+        },
+        "field": "model",
+        "source_value": "A2refined",
+        "text": "A2refined"
+      }
+    ],
+    "relationships": [
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 4
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 3
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 8,
+          "line_end": 9
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 6
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 5
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B1refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 14,
+          "line_end": 15
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 8
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 7
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "B2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 20,
+          "line_end": 21
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 10
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 9
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      },
+      {
+        "result_id": "A2refined",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 26,
+          "line_end": 31
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      }
+    ],
+    "occurrences": [
+      {
+        "result_id": "A1refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 3
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "A1refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 2
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "A1refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 4,
+          "line_end": 7
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "A1refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 4
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "A1refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 3
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "A1refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 8,
+          "line_end": 9
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "B1refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 5
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "B1refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 4
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "B1refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 10,
+          "line_end": 13
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "B1refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 6
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "B1refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 5
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "B1refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 14,
+          "line_end": 15
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "B2refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 7
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "B2refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 6
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "B2refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 16,
+          "line_end": 19
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "B2refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 8
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "B2refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 7
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "B2refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 20,
+          "line_end": 21
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "A2refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 9
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "A2refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 8
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "A2refined",
+        "source_id": "study",
+        "role": "body",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 22,
+          "line_end": 25
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "A2refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.md",
+        "locator": {
+          "line": 10
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "A2refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.docx",
+        "locator": {
+          "paragraph": 9
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      },
+      {
+        "result_id": "A2refined",
+        "source_id": "study",
+        "role": "caption",
+        "path": "manuscript-build/study.pdf",
+        "locator": {
+          "page": 1,
+          "line_start": 26,
+          "line_end": 31
+        },
+        "covered_fields": [
+          "model",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "upper"
+        ]
+      }
+    ]
+  },
+  "coverage_gaps": [],
+  "scientific_validity_certified": false,
+  "semantic_truth_certified": false,
+  "actual_visual_inspection_performed": false,
+  "claim_inventory_complete": false,
+  "unlinked": []
+}

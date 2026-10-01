@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "causal_prefixes_checked": 1980,
+  "known_cases": {
+    "null": {
+      "initial": -1,
+      "refined": -1
+    },
+    "positive_shift": {
+      "initial": 76,
+      "refined": 82
+    },
+    "negative_shift": {
+      "initial": 76,
+      "refined": 82
+    },
+    "short_burst": {
+      "initial": -1,
+      "refined": -1
+    },
+    "all_missing": {
+      "initial": -1,
+      "refined": -1
+    },
+    "gap": {
+      "initial": 89,
+      "refined": 103
+    }
+  },
+  "residual_energy_counterexample_alarm": 83,
+  "short_burst_trace": [
+    {
+      "time": 70,
+      "event": "candidate",
+      "direction": 1,
+      "trigger_energy": 11.199999999999998
+    },
+    {
+      "time": 82,
+      "event": "reject",
+      "direction": 1,
+      "left_mean": 1.6666666666666667,
+      "right_mean": 0.0
+    }
+  ],
+  "shared_prefix_length": 88,
+  "indistinguishable_long_burst_alarm": 82,
+  "scope": "Synthetic cases and all their prefixes; does not establish statistical calibration."
+}

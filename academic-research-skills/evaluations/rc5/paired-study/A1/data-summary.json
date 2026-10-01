@@ -1,0 +1,78 @@
+{
+  "train": {
+    "clean": {
+      "n": 10,
+      "shift_cases": 5,
+      "lengths": [
+        360
+      ],
+      "mean_missing_fraction": 0.0,
+      "postshift_mean_z": 0.484
+    },
+    "bursts": {
+      "n": 10,
+      "shift_cases": 5,
+      "lengths": [
+        360
+      ],
+      "mean_missing_fraction": 0.0,
+      "postshift_mean_z": -0.772
+    },
+    "gaps": {
+      "n": 10,
+      "shift_cases": 5,
+      "lengths": [
+        360
+      ],
+      "mean_missing_fraction": 0.08388888888888889,
+      "postshift_mean_z": 0.46
+    },
+    "heavy": {
+      "n": 10,
+      "shift_cases": 5,
+      "lengths": [
+        360
+      ],
+      "mean_missing_fraction": 0.0,
+      "postshift_mean_z": 0.203
+    }
+  },
+  "dev": {
+    "clean": {
+      "n": 30,
+      "shift_cases": 15,
+      "lengths": [
+        360
+      ],
+      "mean_missing_fraction": 0.0,
+      "postshift_mean_z": 0.092
+    },
+    "bursts": {
+      "n": 30,
+      "shift_cases": 15,
+      "lengths": [
+        360
+      ],
+      "mean_missing_fraction": 0.0,
+      "postshift_mean_z": -0.394
+    },
+    "gaps": {
+      "n": 30,
+      "shift_cases": 15,
+      "lengths": [
+        360
+      ],
+      "mean_missing_fraction": 0.09509259259259259,
+      "postshift_mean_z": -0.034
+    },
+    "heavy": {
+      "n": 30,
+      "shift_cases": 15,
+      "lengths": [
+        360
+      ],
+      "mean_missing_fraction": 0.0,
+      "postshift_mean_z": -0.461
+    }
+  }
+}

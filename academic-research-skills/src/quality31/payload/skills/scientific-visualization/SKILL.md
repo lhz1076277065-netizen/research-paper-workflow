@@ -2,7 +2,7 @@
 name: scientific-visualization
 description: "当需要规划、制作、审查或实质修改论文图表时使用；让关键比较与反例可读，交付正式图和核查，局部标签请求只改当前范围。"
 metadata:
-  version: "3.2.0-rc.4"
+  version: "3.2.0-rc.5"
 ---
 
 # 正式论文图表的专业生产

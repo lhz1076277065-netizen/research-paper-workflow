@@ -19,40 +19,43 @@
 来源直接使用实际冻结JSON／CSV：JSON可由`result_id`作键、以`results`列表保存，或是含`result_id`的记录列表；CSV需要唯一表头和`result_id`列。下面的数值仅说明协议，不构成研究证据：
 
 ```json
-{"R1": {"value": 0.123456, "unit": "ratio", "time": "6 months"}}
+{"R1": {"value": 0.123456, "unit": "ratio", "outcome": "accuracy", "time": "6 months"}}
 ```
 
-若正文实际为`At 6 months the value was 12.35%.`，可对已有文件构造最小审计（Python需能导入同目录`result_links.py`）：
+若正文实际为`Accuracy was 12.35% at 6 months.`，可直接复用稿件构建记录（Python需能导入同目录`result_links.py`）：
 
 ```python
-import hashlib
 from pathlib import Path
-from result_links import audit_links
+from result_links import build_links, audit_links
 
 root = Path("PROJECT").resolve()
-def artifact(name):
-    return {"path": name, "sha256": hashlib.sha256((root / name).read_bytes()).hexdigest()}
-
-data = {"kind": "result-links", "sources": [{
-    "id": "frozen", **artifact("results.json"),
-    "versions": {"data": artifact("data.csv"), "code": artifact("analysis.py"),
-                 "execution": artifact("execution.json")}}],
-    "links": [{"result_id": "R1", "role": "body", "artifact": artifact("draft.md"),
-        "locator": {"line": 1},
-        "numeric": [{"field": "value", "text": "12.35", "decimals": 2}],
-        "semantics": {"unit": {"value": "percent", "text": "%"},
-                      "time": {"value": "6 months", "text": "6 months"}}}]}
+sources = [{"id": "frozen", "path": "results.json", "versions": {
+    "data": {"path": "data.csv"}, "code": {"path": "analysis.py"},
+    "execution": {"path": "execution.json"}}}]
+# Existing build rows supply locations and display rules, not another copy of results.
+rows = [{"path": "draft.md", "result_id": "R1", "role": "body",
+         "locator": {"line": 1}, "unit": "percent",
+         "numeric": [{"field": "value", "decimals": 2}]}]
+data = build_links(root, sources, rows)
 report = audit_links(data, root)
 assert report["passed"], report
 ```
 
-只在实际取得、运行或导出后冻结这些哈希；为修复失败而单独刷新哈希不会使错误文本通过。来源记录也可自带`versions`覆盖共享版本；数值来源缺少`data`、`code`或`execution`身份时报告pending，不宣称已完整绑定。
+`build_links(root, sources, occurrences, claims=())`只读已有输出，返回可交给`audit_links`的payload；不写新结果台账、不搜索全稿论断。来源清单使用`id,path,sha256?,versions?`；构建行的`path`可换成`artifact: {path,sha256?}`。缺哈希时按当前真实文件冻结，已有哈希不匹配时抛出`ValueError`，不能静默更新。构建行支持`source_id`（多来源时必需）、`role`、`locator`、`result_id`、目标`unit`，以及数值`field,decimals,rounding,text,offset,recomputed,tolerance`；省略`numeric`时生成`value`映射。`text`缺省按来源原值、单位换算及显示精度生成；显式显示文字也须经审计核对。语义仅复用源端标签并核对当前定位实际文字，表头等可用`semantics`提供独立定位。
 
-`locator`均为1起算：Markdown／LaTeX／文本使用`line`或`line_start`和`line_end`；DOCX使用XML顺序`paragraph`（含空段与表内段）或正文表格的`table,row,cell`；PDF使用`page`加提取文本的行／范围。PDF调用已安装`pdftotext`或`pypdf`，缺失、扫描页无可提取文本时清楚报告未检查。DOCX读原始XML；这些定位不证明格式或视觉质量。数字重复时用零起算字符`offset`指定当前定位文本内的那一个。
+只在实际取得、运行或导出后冻结哈希；为修复失败而单独刷新哈希不会使错误文本通过。来源记录也可自带`versions`覆盖共享版本；数值来源缺少`data`、`code`或`execution`身份时报告pending，不宣称已完整绑定。直接使用审计payload的旧调用仍可继续。
 
-来源声明的`unit,direction,denominator,outcome,population,sample,time,comparison,model,split,uncertainty,effect_type`都要对应实际文字；也可集中在来源`semantics`中。普通语义使用`{value, labels:[...]}`定义源端允许的文字，不允许目标自行发明同义关系。目标映射有自己的`locator`时可核对同一稿件的单位表头或模型说明；否则单位应紧邻数字。只自动处理明确的比例／百分数、s／ms、g／mg和m／cm／mm转换；百分比与百分点保持不同含义。分母为正整数计数，区间`lower,upper`应完整映射；区间类型用`uncertainty`或`uncertainty_type`记录。复核每个关键句子的整体语义仍由实际阅读完成。
+`locator`均为1起算：Markdown／LaTeX／文本使用`line`或`line_start`（二选一）及可选`line_end`；DOCX使用XML顺序`paragraph`（含空段与表内段）或正文表格的`table,row,cell`；PDF使用`page`加提取文本的行／范围。按实际文件格式拒绝混合或不适用坐标，给MD附加table字段不能获得表格关系。PDF调用已安装`pdftotext`或`pypdf`，缺失、扫描页无可提取文本时清楚报告未检查。DOCX读原始XML；这些定位不证明格式或视觉质量。数字重复时用零起算字符`offset`指定当前定位文本内的那一个。
 
-显示以十进制`half-even`（默认）或`half-up`及`decimals: 0..12`核对。`tolerance: {abs, rel}`只能与`recomputed: {source_id, result_id?, field?}`共同使用，对另一份真实、哈希绑定的原始输出比较；容差不放宽正文显示。`coverage.bytes`、`coverage.numeric`与`coverage.declared_semantic`分别列出实际角色、位置和版本，任何通过都不代表科学真实性或视觉验收。
+来源声明的`unit,direction,denominator,outcome,population,sample,time,comparison,model,implementation,split,uncertainty,effect_type`可放在原记录或`semantics`中。普通语义用`{value, labels:[...]}`定义源端允许的显示文字。模型／实现复算等价另用冻结源的`equivalent_values`声明；显示标签不构成科学等价授权。目标映射有自己的`locator`时仍检查该真实范围的否定。单位也须绑定实际数字：独立单位定位只有真实DOCX同列首行表头等已定义关系可自动绑定；明确错单位报错，普通另一行的说明或未确定关联进入pending。`coverage.numeric.unit_binding`报告紧邻数字、同列表头或待复核。只自动处理明确的比例／百分数、s／ms、g／mg和m／cm／mm转换；百分比与百分点保持不同含义。分母为正整数计数；区间类型用`uncertainty`或`uncertainty_type`记录。
+
+显示以十进制`half-even`（默认）或`half-up`及`decimals: 0..12`核对。`tolerance: {abs, rel}`只能与`recomputed: {source_id, result_id?, field?}`共同使用；先核另一份真实、哈希绑定输出的科学身份与量纲，再转回原来源单位比较容差。冻结JSON数值和转换／差值／容差计算保留输入精度，零容差不会因默认28位Decimal上下文而抹平差异；数值语义scalar对外用精确字符串，payload和报告仍可JSON序列化。`abs`使用原来源单位；`rel`使用换算后两个绝对值的较大者。结局、总体、比较、分区、时间、效应身份缺失时进入定位pending；其余已声明字段也必须相符，模型／实现只接受源定义的明确等价。主值／estimate可互认，不能用上下界冒充主值。容差不放宽正文显示。
+
+局部点值、摘要或图注可只映射其实际字段；不要求每次重复完整设计。`coverage.occurrences`列角色、定位、覆盖字段与该次未覆盖字段；`coverage_gaps`按同一来源、结果、稿件文件汇总缺失的主值、区间及源语义，并产生`manuscript_fields_uncovered`待补关联。遗漏主值不能靠核对端点得到全稿覆盖。源未声明的科学信息不能由脚本补成证据。
+
+`coverage.relationships`限实际可定位的局部关系：同一句内简单主值与主体连接、区间端点顺序／明确上下限标签、DOCX相邻左侧主体单元格或同列首行结局表头。可用`subject_field`选模型、实现、结局或总体；默认为本地映射的模型、实现、结局。已知主体错绑、端点交换及直接否定报错；比较阈值（如`lower than 410 ms`）不能认作精确主值，进入定位pending。主体只在另一句出现、未知连接词、复杂否定范围或无法确认的表格关系也进入pending。全段词语共现不能代替关系核对，`not an increase`也不能借独立定位变成增加。对复杂语言、因果解释、完整科学真相仍需实际阅读审查。
+
+`coverage.bytes`、`coverage.numeric`与`coverage.declared_semantic`分别列出实际角色、位置和版本；关系覆盖及语义待复核单列，任何通过都不代表科学真实性或视觉验收。
 
 理论来源`type: theory`记录`proposition`、`conditions`列表和`proof: {path,sha256,locator,text}`；目标`bindings.proposition.text`及`bindings.conditions.texts`逐项绑定。解释来源`type: interpretive`记录`interpretation`及`snippets: [{path,sha256,locator,text}]`，目标绑定`bindings.interpretation.text`。审计读取证明／片段的真实定位和版本，但不宣称证明正确或解释充分。
 
@@ -64,6 +67,9 @@ assert report["passed"], report
 
 ```python
 from result_links import audit_render
+import hashlib
+def artifact(name):
+    return {"path": name, "sha256": hashlib.sha256((root / name).read_bytes()).hexdigest()}
 render = {"kind": "render-dependencies",
     "artifacts": [{"id": "tex", **artifact("draft.tex")},
                   {"id": "pdf", **artifact("draft.pdf")}],

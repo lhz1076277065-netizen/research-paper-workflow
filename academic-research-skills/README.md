@@ -1,4 +1,4 @@
-# Academic Research Skills 3.2.0-rc.4
+# Academic Research Skills 3.2.0-rc.5
 
 One optional research orchestrator and eighteen standalone specialist skills. Full research defaults to computational-autonomous: acquire lawful free digital material, construct an original increment over nearest work and run a discriminating test with computer-executable tools. Focused requests use the relevant specialist directly.
 
@@ -12,4 +12,4 @@ This is the complete merged release. Detailed professional protocols and existin
 
 The library is discipline-neutral. Requests to develop, update or package this library produce Skill folders and software validation; they do not start a research project or manuscript.
 
-rc.4 adds independent research/execution dimensions, fourteen on-demand computational routes, resource calibration and project tool execution, result occurrence checks and render dependency rebuilding. Read [migration](MIGRATION.zh-CN.md), [change evidence](UPDATE_REPORT.zh-CN.md) and [validation](evaluations/rc4/VALIDATION.zh-CN.md).
+rc.5 repairs recomputation identity and unit conversion, occurrence relationships and manuscript coverage, and generates links from actual build rows. PDF extraction is exercised through both real backends in CI. Detailed examples are loaded in focused fragments. Read [migration](MIGRATION.zh-CN.md), [change evidence](UPDATE_REPORT.zh-CN.md) and [validation](evaluations/rc5/VALIDATION.zh-CN.md).

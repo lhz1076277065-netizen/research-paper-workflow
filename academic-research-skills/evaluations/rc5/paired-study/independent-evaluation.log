@@ -1,0 +1,5 @@
+{"participant": "A1", "loss": {"baseline": 27.702083333333334, "initial": 28.466666666666665, "refined": 23.68125, "ablation": 45.479166666666664}, "causal_prefix_checks": 18526}
+{"participant": "B1", "loss": {"baseline": 23.097916666666666, "initial": 27.485416666666666, "refined": 22.597916666666666, "ablation": 45.5125, "secondary_ablation": 22.577083333333334}, "causal_prefix_checks": 23203}
+{"participant": "B2", "loss": {"baseline": 23.4625, "initial": 25.839583333333334, "refined": 22.375, "ablation": 47.025, "ablation_comparator": 24.866666666666667}, "causal_prefix_checks": 23359}
+{"participant": "A2", "loss": {"baseline": 24.35625, "initial": 24.35625, "refined": 25.766666666666666, "ablation": 26.258333333333333}, "causal_prefix_checks": 18123}
+{"holdout_cases": 480, "common_median_mean_loss": 33.885416666666664, "post_freeze_digests_unchanged": true}

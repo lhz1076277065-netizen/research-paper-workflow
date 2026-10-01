@@ -1,0 +1,297 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "scripts": "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/evaluations/rc5/engineering/independent-review/source-at-review",
+  "script_sha256": {
+    "result_links.py": "efc12d7e5474005e96b70cb0abff1a446df4458dd82cdc7ee5da1bfe4d05003e",
+    "provider_runtime.py": "4ebe8f990a1ae58162a1b123bb0ea7326dc0070028923a9734fd5383d8cc4ff9",
+    "research31.py": "527fdfbdf23c7ba4fddb3608cd9dc8d5a33b22a5c26b2245069a0553dbff464e"
+  },
+  "cases": [
+    {
+      "case": "baseline",
+      "desired_passed": true,
+      "actual_passed": true,
+      "caller_results": {
+        "audit_links": true,
+        "provider_runtime.audit_payload": true,
+        "research31.audit": true,
+        "provider_runtime.accept_result": true
+      },
+      "errors": [],
+      "pending": []
+    },
+    {
+      "case": "comparative_threshold",
+      "desired_passed": false,
+      "actual_passed": true,
+      "caller_results": {
+        "audit_links": true,
+        "provider_runtime.audit_payload": true,
+        "research31.audit": true,
+        "provider_runtime.accept_result": true
+      },
+      "errors": [],
+      "pending": []
+    },
+    {
+      "case": "unrelated_unit_locator",
+      "desired_passed": false,
+      "actual_passed": true,
+      "caller_results": {
+        "audit_links": true,
+        "provider_runtime.audit_payload": true,
+        "research31.audit": true,
+        "provider_runtime.accept_result": true
+      },
+      "errors": [],
+      "pending": []
+    },
+    {
+      "case": "mixed_markdown_table_locator",
+      "desired_passed": false,
+      "actual_passed": true,
+      "caller_results": {
+        "audit_links": true,
+        "provider_runtime.audit_payload": true,
+        "research31.audit": true,
+        "provider_runtime.accept_result": true
+      },
+      "errors": [],
+      "pending": []
+    },
+    {
+      "case": "exact_tolerance_precision_loss",
+      "desired_passed": false,
+      "actual_passed": true,
+      "caller_results": {
+        "audit_links": true,
+        "provider_runtime.audit_payload": true,
+        "research31.audit": true,
+        "provider_runtime.accept_result": true
+      },
+      "errors": [],
+      "pending": []
+    },
+    {
+      "case": "correct_unit_conversion",
+      "desired_passed": true,
+      "actual_passed": true,
+      "caller_results": {
+        "audit_links": true,
+        "provider_runtime.audit_payload": true,
+        "research31.audit": true,
+        "provider_runtime.accept_result": true
+      },
+      "errors": [],
+      "pending": []
+    },
+    {
+      "case": "equal_bare_number_wrong_unit_scale",
+      "desired_passed": false,
+      "actual_passed": false,
+      "caller_results": {
+        "audit_links": false,
+        "provider_runtime.audit_payload": false,
+        "research31.audit": false,
+        "provider_runtime.accept_result": false
+      },
+      "errors": [
+        "link 1 (R-latency): Recomputed numeric value exceeds tolerance: value"
+      ],
+      "pending": []
+    },
+    {
+      "case": "different_scientific_split",
+      "desired_passed": false,
+      "actual_passed": false,
+      "caller_results": {
+        "audit_links": false,
+        "provider_runtime.audit_payload": false,
+        "research31.audit": false,
+        "provider_runtime.accept_result": false
+      },
+      "errors": [
+        "link 1 (R-latency): Recomputed semantic identity mismatch: split"
+      ],
+      "pending": []
+    },
+    {
+      "case": "display_label_is_not_equivalence",
+      "desired_passed": false,
+      "actual_passed": false,
+      "caller_results": {
+        "audit_links": false,
+        "provider_runtime.audit_payload": false,
+        "research31.audit": false,
+        "provider_runtime.accept_result": false
+      },
+      "errors": [
+        "link 1 (R-latency): Recomputed semantic identity mismatch: model"
+      ],
+      "pending": []
+    },
+    {
+      "case": "frozen_model_implementation_equivalence",
+      "desired_passed": true,
+      "actual_passed": true,
+      "caller_results": {
+        "audit_links": true,
+        "provider_runtime.audit_payload": true,
+        "research31.audit": true,
+        "provider_runtime.accept_result": true
+      },
+      "errors": [],
+      "pending": []
+    },
+    {
+      "case": "independent_locator_direct_negation",
+      "desired_passed": false,
+      "actual_passed": false,
+      "caller_results": {
+        "audit_links": false,
+        "provider_runtime.audit_payload": false,
+        "research31.audit": false,
+        "provider_runtime.accept_result": false
+      },
+      "errors": [
+        "link 1 (R-latency): Negated actual occurrence: lower"
+      ],
+      "pending": []
+    },
+    {
+      "case": "unknown_subject_connector",
+      "desired_passed": false,
+      "actual_passed": false,
+      "caller_results": {
+        "audit_links": false,
+        "provider_runtime.audit_payload": false,
+        "research31.audit": false,
+        "provider_runtime.accept_result": false
+      },
+      "errors": [],
+      "pending": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "reason": "primary_subject_connector_unresolved",
+          "action": "Read the actual located statement and bind this relationship",
+          "field": "model",
+          "text": " latency was reported incorrectly as "
+        }
+      ]
+    },
+    {
+      "case": "reversed_interval",
+      "desired_passed": false,
+      "actual_passed": false,
+      "caller_results": {
+        "audit_links": false,
+        "provider_runtime.audit_payload": false,
+        "research31.audit": false,
+        "provider_runtime.accept_result": false
+      },
+      "errors": [
+        "link 1 (R-latency): Actual uncertainty endpoints are reversed"
+      ],
+      "pending": []
+    },
+    {
+      "case": "explicit_upper_lower_labels",
+      "desired_passed": true,
+      "actual_passed": true,
+      "caller_results": {
+        "audit_links": true,
+        "provider_runtime.audit_payload": true,
+        "research31.audit": true,
+        "provider_runtime.accept_result": true
+      },
+      "errors": [],
+      "pending": []
+    },
+    {
+      "case": "subject_in_background_sentence",
+      "desired_passed": false,
+      "actual_passed": false,
+      "caller_results": {
+        "audit_links": false,
+        "provider_runtime.audit_payload": false,
+        "research31.audit": false,
+        "provider_runtime.accept_result": false
+      },
+      "errors": [],
+      "pending": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "reason": "primary_subject_relationship_unresolved",
+          "action": "Read the actual located statement and bind this relationship",
+          "field": "model"
+        }
+      ]
+    },
+    {
+      "case": "caption_and_body_coverage",
+      "desired_passed": true,
+      "actual_passed": true,
+      "caller_results": {
+        "audit_links": true,
+        "provider_runtime.audit_payload": true,
+        "research31.audit": true,
+        "provider_runtime.accept_result": true
+      },
+      "errors": [],
+      "pending": []
+    },
+    {
+      "case": "caption_only_coverage_gap",
+      "desired_passed": false,
+      "actual_passed": false,
+      "caller_results": {
+        "audit_links": false,
+        "provider_runtime.audit_payload": false,
+        "research31.audit": false,
+        "provider_runtime.accept_result": false
+      },
+      "errors": [],
+      "pending": [
+        {
+          "source_id": "frozen",
+          "result_id": "R-latency",
+          "path": "draft.md",
+          "roles": [
+            "caption"
+          ],
+          "reason": "manuscript_fields_uncovered",
+          "fields": [
+            "comparison",
+            "denominator",
+            "direction",
+            "effect_type",
+            "implementation",
+            "lower",
+            "population",
+            "split",
+            "time",
+            "uncertainty",
+            "upper"
+          ],
+          "action": "Link these applicable fields elsewhere in this manuscript or record a located semantic review"
+        }
+      ]
+    }
+  ],
+  "unexpected": [
+    "comparative_threshold",
+    "unrelated_unit_locator",
+    "mixed_markdown_table_locator",
+    "exact_tolerance_precision_loss"
+  ]
+}

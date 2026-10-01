@@ -1,0 +1,59 @@
+{
+  "libraries_unchanged": true,
+  "participants": {
+    "A1": {
+      "reading_events": 5,
+      "characters_emitted": 7325,
+      "read_paths": [
+        "SKILL.md",
+        "references/provider-policy.md",
+        "references/execution-handoff.md",
+        "references/protocol.md",
+        "references/research-quality.md"
+      ],
+      "score_events": 40,
+      "dev_score_events": 40,
+      "elapsed_seconds": 946.0973784923553
+    },
+    "B1": {
+      "reading_events": 5,
+      "characters_emitted": 6002,
+      "read_paths": [
+        "SKILL.md",
+        "references/provider-policy.md",
+        "references/protocol.md",
+        "references/execution-handoff.md",
+        "references/research-quality.md"
+      ],
+      "score_events": 43,
+      "dev_score_events": 40,
+      "elapsed_seconds": 735.0303511619568
+    },
+    "B2": {
+      "reading_events": 3,
+      "characters_emitted": 4018,
+      "read_paths": [
+        "SKILL.md",
+        "references/protocol.md",
+        "references/research-quality.md"
+      ],
+      "score_events": 40,
+      "dev_score_events": 40,
+      "elapsed_seconds": 758.6678309440613
+    },
+    "A2": {
+      "reading_events": 3,
+      "characters_emitted": 5341,
+      "read_paths": [
+        "SKILL.md",
+        "references/protocol.md",
+        "references/research-quality.md"
+      ],
+      "score_events": 40,
+      "dev_score_events": 40,
+      "elapsed_seconds": 760.5446469783783
+    }
+  },
+  "reading_scope": "Actual supplied-reader emitted Unicode characters; not token cost, hidden model context or mental comprehension.",
+  "elapsed_scope": "Participant timestamp boundaries differ and are reported in their usage files; not normalized full-session cost."
+}

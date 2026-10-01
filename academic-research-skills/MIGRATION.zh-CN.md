@@ -1,13 +1,15 @@
-# v3.2.0-rc.4 迁移
+# v3.2.0-rc.5 迁移
 
-用本版完整能力目录替换选定的rc.3目录；1个可选总控与18个独立能力不变，任一能力无需src或邻居目录。保留项目数据、原始结果和已有专业适配。维护源仍为src/common、src/quality31/payload和各能力protocol.md；维护后运行build_release.py --write，再用--check核对。
+用本版完整能力目录替换选定的rc.4目录；仍为1个可选总控与18个独立能力。维护源仍为src/common、src/quality31/payload与各能力protocol.md，运行build_release.py --write后用--check检查；项目材料与原始输出保留。
 
-默认执行模式是computational-autonomous，独立于学科、文章类型、证据类型、研究方法和工具后端。原study_types、method_family、evidence_basis与runtime.backend继续接受；新字段为research_context.execution_mode、evidence_type、research_methods、tool_backend、computational_routes。未提供数据先发现和实际取得适配材料；原人工采集路线转到公开数字资源、模型或理论，并明确改变的问题及证据范围。
+旧result-links封装继续接受。复算先核双方结果的单位量纲和科学身份，再把复算值换成原始结果单位使用容差。结局、总体、比较、分区、时间、效应类型等身份未绑定时进入有定位的pending；不适用字段可在冻结源明确声明。模型/实现的等价值只由冻结源semantics中的equivalent_values授权，labels仅作显示别名。正文舍入保持独立，容差不能放宽显示。
 
-executor保留当前宿主；research_model是本地研究对象或算法，可训练、加载和评价。按实际任务复用免费工具、项目环境和已有授权软件。environment.py的doctor/plan不安装；ensure按项目选定依赖准备；exec以argv、项目cwd、日志和文件回执运行任意已准备的专业工具；calibrate实际检查候选后端的小任务。
+局部图注或表格不必重复全部设计字段：coverage.occurrences按角色列出当地覆盖与缺字段，coverage_gaps按同来源、结果与稿件汇总尚未覆盖的字段。主值归属、区间顺序、直接否定和有限表格坐标关系按已定义规则检查；复杂句式、未知否定范围或无法确定的关系进入pending。程序不发现全部论断，也不代替对关键句子科学含义的实际阅读。旧的词共现映射可能因此需要补关系定位。
 
-现有result envelope与figure-values检查兼容。需要跨稿件关联时追加result-links检查，绑定实际冻结结果、版本和具体出现位置；明确舍入和复算容差。render-dependencies独立记录源、图表、引用与输出依赖，源改动后按rebuild_order重建。旧记录缺少关联时显示待关联范围，不冒充全面语义核查。
+比较阈值不能作为精确主值。独立单位定位仍核数字旁的实际单位；只有真正DOCX同列首行表头支持自动关联。定位须使用该文件格式的坐标，不能用Markdown上的伪表格坐标绕过主体检查。冻结JSON原值、换算与容差保留完整Decimal精度，零容差不会抹去高精度差异；数值语义scalar在公开payload中用精确字符串保持JSON可序列化。
 
-科研、成果与external_items分别推进。provider_uses可追加guidance_read、research_work_done、functions_run三种进度；实际版本与所用入口继续记录。外部作者确认待办不阻止独立研究与成果工作，但仍不能宣称已正式提交。
+复用真实稿件构建行调用result_links.build_links(root, sources, occurrences, claims=())，由已有result_id、角色、文件、定位与显示精度生成链接和当前哈希，减少重复填表。已提供的哈希会校验，不会为消除错误而刷新。实际API示例和边界见docs/runtime.md与docs/integrity.md。
 
-rc.3迁移、更新和目录清单存入history/rc3-reports。本轮软件、真实数字执行、原生行为和视觉检查分列报告；接口通过不代表原创性、科学正确性或期刊录用。
+详细推演保留在inference-examples.md、interpretive-examples.md和computation-examples.md，通过研究质量主线与原路线锚点按需到达。三个文件随每个独立模块生成，不要求新增总控、安装工具清单或更换执行模型。
+
+CI分别运行实际pdftotext与仅pypdf的后端，旧PDF定位用例在两条路径都需通过；只缺对侧后端时，其专属用例可以明确跳过。CI上传新库完整回归与实际结果链接报告。rc.4报告保留在history/rc4-reports及evaluations/rc4；rc.5属于候选版本，研究比较的实测改进与文献原创性分别评价。

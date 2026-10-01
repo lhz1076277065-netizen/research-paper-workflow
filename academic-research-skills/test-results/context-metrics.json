@@ -1,93 +1,92 @@
 {
-  "version": "3.2.0-rc.4",
-  "scope": "Static Unicode character count, not tokens, billed context, or mandatory simultaneous loading",
+  "version": "3.2.0-rc.5",
+  "scope": "Static Unicode counts and actual reader-emitted text, not tokens/cost or mental comprehension.",
   "entries": {
-    "manuscript-writing": {
-      "before_characters": 711,
-      "after_characters": 720
+    "analysis-execution": {
+      "before_characters": 654,
+      "after_characters": 654
     },
-    "publication-stewardship": {
-      "before_characters": 601,
+    "citation-audit": {
+      "before_characters": 639,
+      "after_characters": 639
+    },
+    "data-discovery": {
+      "before_characters": 652,
+      "after_characters": 652
+    },
+    "data-preparation": {
+      "before_characters": 644,
+      "after_characters": 644
+    },
+    "ethics-protocol": {
+      "before_characters": 641,
+      "after_characters": 641
+    },
+    "journal-intelligence": {
+      "before_characters": 656,
+      "after_characters": 656
+    },
+    "literature-discovery": {
+      "before_characters": 646,
       "after_characters": 646
     },
     "manuscript-review": {
-      "before_characters": 678,
+      "before_characters": 700,
       "after_characters": 700
     },
-    "robustness-reproducibility": {
-      "before_characters": 603,
-      "after_characters": 648
-    },
-    "research-design": {
-      "before_characters": 653,
-      "after_characters": 694
-    },
-    "topic-novelty": {
-      "before_characters": 662,
-      "after_characters": 694
-    },
-    "analysis-execution": {
-      "before_characters": 617,
-      "after_characters": 654
-    },
-    "literature-discovery": {
-      "before_characters": 612,
-      "after_characters": 646
-    },
-    "data-preparation": {
-      "before_characters": 609,
-      "after_characters": 644
-    },
-    "data-discovery": {
-      "before_characters": 604,
-      "after_characters": 652
-    },
-    "citation-audit": {
-      "before_characters": 592,
-      "after_characters": 639
+    "manuscript-writing": {
+      "before_characters": 720,
+      "after_characters": 720
     },
     "paper-deep-reading": {
-      "before_characters": 599,
+      "before_characters": 642,
       "after_characters": 642
     },
-    "journal-intelligence": {
-      "before_characters": 620,
-      "after_characters": 656
-    },
     "peer-review-response": {
-      "before_characters": 661,
+      "before_characters": 692,
       "after_characters": 692
     },
-    "scientific-visualization": {
-      "before_characters": 674,
-      "after_characters": 714
+    "publication-stewardship": {
+      "before_characters": 646,
+      "after_characters": 646
+    },
+    "research-design": {
+      "before_characters": 694,
+      "after_characters": 694
     },
     "research-intake": {
-      "before_characters": 602,
+      "before_characters": 651,
       "after_characters": 651
     },
-    "ethics-protocol": {
-      "before_characters": 592,
-      "after_characters": 641
+    "research-paper-workflow": {
+      "before_characters": 798,
+      "after_characters": 798
     },
-    "submission-packaging": {
-      "before_characters": 602,
+    "robustness-reproducibility": {
+      "before_characters": 648,
       "after_characters": 648
     },
-    "research-paper-workflow": {
-      "before_characters": 770,
-      "after_characters": 798
+    "scientific-visualization": {
+      "before_characters": 714,
+      "after_characters": 714
+    },
+    "submission-packaging": {
+      "before_characters": 648,
+      "after_characters": 648
+    },
+    "topic-novelty": {
+      "before_characters": 694,
+      "after_characters": 694
     }
   },
-  "core_reference_example": {
-    "paths": [
-      "skills/research-paper-workflow/SKILL.md",
-      "docs/research-lifecycle.md",
-      "docs/research-quality.md"
-    ],
-    "before_characters": 4760,
-    "after_characters": 5493
+  "quality_core_before": 3152,
+  "quality_core_after": 1829,
+  "on_demand_example_shards": 3,
+  "actual_reading": {
+    "old_emitted_characters": 12666,
+    "candidate_emitted_characters": 10020,
+    "reduction_fraction": 0.2089057318806253,
+    "scope": "Actual supplied-reader emitted Unicode characters; not token cost, hidden model context or mental comprehension."
   },
-  "on_demand_routes_characters": 4518,
   "token_cost_measured": false
 }
