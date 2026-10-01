@@ -1,0 +1,93 @@
+[
+  {
+    "id": "Wakefield2004",
+    "title": "Ecological inference for 2 × 2 tables",
+    "authors": "Jon Wakefield",
+    "year": 2004,
+    "doi": "10.1111/j.1467-985x.2004.02046_1.x",
+    "url": "https://www.stat.purdue.edu/~chuanhai/teaching/Stat598A/Wakefield_Ecology.pdf",
+    "local": "sources/wakefield.pdf",
+    "level": "abstract plus key full-text sections 3.7/Table3, hierarchical assumptions and individual-survey design discussion",
+    "definition": "series of 2x2 tables for same individual population; fixed predictor margin and response totals; distinguishes finite-population fractions from probability parameters",
+    "use": "known bounds and identifying extra information; no novel theory claimed"
+  },
+  {
+    "id": "Rosenthal2014",
+    "title": "Intra-urban vulnerability to heat-related mortality in New York City, 1997–2006",
+    "authors": "Joyce Klein Rosenthal; Patrick L Kinney; Kristina B Metzger",
+    "year": 2014,
+    "doi": "10.1016/j.healthplace.2014.07.014",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4348023/",
+    "local": "sources/rosenthal.html",
+    "level": "abstract, full methods and limitations; selected discussion",
+    "definition": "65+ natural mortality extremely hot (maximum heat index >=100F) versus warm-season days, 1997–2006, 59CD/42UHF",
+    "use": "nearest NYC regional application, ecological interpretation boundary"
+  },
+  {
+    "id": "Romitti2022",
+    "title": "Inequality in the availability of residential air conditioning across 115 US metropolitan areas",
+    "authors": "Yasmin Romitti et al.",
+    "year": 2022,
+    "doi": "10.1093/pnasnexus/pgac210",
+    "url": "https://academic.oup.com/pnasnexus/article/1/4/pgac210/6713629",
+    "local": "sources/romitti.html",
+    "level": "abstract/context, full materials/methods, equations, limitations and data availability; supplementary validation not read",
+    "definition": "AHS AC presence, ACS tract predictions, correlations with SUHI/SVI; not usage or joint accessible shade",
+    "use": "nearest spatial disaggregation alternative; transfer and input conditions"
+  },
+  {
+    "id": "Madrigano2015",
+    "title": "A Case-Only Study of Vulnerability to Heat Wave–Related Mortality in New York City (2000–2011)",
+    "authors": "Jaime Madrigano et al.",
+    "year": 2015,
+    "doi": "10.1289/ehp.1408178",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4492264/",
+    "local": "sources/PMC4492264.xml",
+    "level": "abstract, full methods and discussion",
+    "definition": "adult nonexternal mortality May–September; heat-wave case-only odds; modifiers by tract; one modifier at a time",
+    "use": "alternative mortality design, cannot answer target household resource inequality"
+  },
+  {
+    "id": "Schuessler1999",
+    "title": "Ecological inference",
+    "authors": "Alexander A Schuessler",
+    "year": 1999,
+    "doi": "10.1073/pnas.96.19.10578",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC33746/",
+    "local": "sources/ecological-inference.html",
+    "level": "key full-text bounds and assumptions discussion",
+    "use": "method context, not substitute for Wakefield original method"
+  },
+  {
+    "id": "NYCHVS2023",
+    "title": "2023 NYCHVS Public Use File User Guide and Codebook",
+    "url": "https://www.nyc.gov/assets/hpd/downloads/pdfs/about/2023-nychvs-puf-user-guide-codebook.pdf",
+    "level": "key PDF pages32,83,84,318 via web",
+    "use": "functioning AC versus cost-restricted use; did not fetch microdata"
+  },
+  {
+    "id": "DuncanDavis1953",
+    "title": "An Alternative to Ecological Correlation",
+    "authors": "Otis Dudley Duncan; Beverly Davis",
+    "year": 1953,
+    "doi": "10.2307/2088122",
+    "url": "https://www.jstor.org/stable/2088122",
+    "level": "bibliography only; full text unavailable",
+    "use": "historical predecessor; bounds verified in Wakefield original full text"
+  },
+  {
+    "id": "Gelman2001",
+    "title": "Models, assumptions and model checking in ecological regressions",
+    "url": "https://sites.stat.columbia.edu/gelman/research/published/ecological.pdf",
+    "level": "PDF obtained by web but text garbled; not substantively read",
+    "use": "not used as evidence"
+  },
+  {
+    "id": "MacFaden2012",
+    "title": "High-resolution tree canopy mapping for New York City using LIDAR and object-based image analysis",
+    "doi": "10.1117/1.JRS.6.063567",
+    "url": "https://doi.org/10.1117/1.JRS.6.063567",
+    "level": "official metadata and discovery; original full text not obtained",
+    "use": "source lineage only; not a household access validation"
+  }
+]

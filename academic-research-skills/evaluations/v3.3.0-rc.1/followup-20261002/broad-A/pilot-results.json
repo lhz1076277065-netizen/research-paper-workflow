@@ -1,0 +1,206 @@
+{
+  "raw_rows": 7962,
+  "raw_first": "2025-01-01T00:00:00",
+  "raw_last": "2025-08-26T06:59:00",
+  "local_timezone": "UTC-7; Arizona no DST",
+  "sample": "All FM-15 quality-passed July 2025 Sundays; no interpolation",
+  "observations": 95,
+  "expected_hour_bins": 96,
+  "missing_hour_bins": [
+    "2025-07-13T19:00(local hour)"
+  ],
+  "closed_22_to_24_observations": [
+    {
+      "utc": "2025-07-07T05:51:00",
+      "local": "2025-07-06T22:51:00",
+      "temp_c": 37.2,
+      "qc": "5",
+      "report_type": "FM-15"
+    },
+    {
+      "utc": "2025-07-07T06:51:00",
+      "local": "2025-07-06T23:51:00",
+      "temp_c": 37.2,
+      "qc": "5",
+      "report_type": "FM-15"
+    },
+    {
+      "utc": "2025-07-14T05:51:00",
+      "local": "2025-07-13T22:51:00",
+      "temp_c": 37.2,
+      "qc": "5",
+      "report_type": "FM-15"
+    },
+    {
+      "utc": "2025-07-14T06:51:00",
+      "local": "2025-07-13T23:51:00",
+      "temp_c": 37.8,
+      "qc": "5",
+      "report_type": "FM-15"
+    },
+    {
+      "utc": "2025-07-21T05:51:00",
+      "local": "2025-07-20T22:51:00",
+      "temp_c": 32.8,
+      "qc": "5",
+      "report_type": "FM-15"
+    },
+    {
+      "utc": "2025-07-21T06:51:00",
+      "local": "2025-07-20T23:51:00",
+      "temp_c": 32.2,
+      "qc": "5",
+      "report_type": "FM-15"
+    },
+    {
+      "utc": "2025-07-28T05:51:00",
+      "local": "2025-07-27T22:51:00",
+      "temp_c": 36.7,
+      "qc": "5",
+      "report_type": "FM-15"
+    },
+    {
+      "utc": "2025-07-28T06:51:00",
+      "local": "2025-07-27T23:51:00",
+      "temp_c": 35.0,
+      "qc": "5",
+      "report_type": "FM-15"
+    }
+  ],
+  "comparison": [
+    {
+      "threshold_c": 32,
+      "scenario": "actual_library_12_22",
+      "stay_minutes": 0,
+      "hot_observations": 85,
+      "eligible_arrivals": 39
+    },
+    {
+      "threshold_c": 32,
+      "scenario": "actual_library_12_22",
+      "stay_minutes": 70,
+      "hot_observations": 85,
+      "eligible_arrivals": 31
+    },
+    {
+      "threshold_c": 32,
+      "scenario": "actual_library_12_22",
+      "stay_minutes": 120,
+      "hot_observations": 85,
+      "eligible_arrivals": 31
+    },
+    {
+      "threshold_c": 32,
+      "scenario": "equal_hours_shift_14_24",
+      "stay_minutes": 0,
+      "hot_observations": 85,
+      "eligible_arrivals": 39
+    },
+    {
+      "threshold_c": 32,
+      "scenario": "equal_hours_shift_14_24",
+      "stay_minutes": 70,
+      "hot_observations": 85,
+      "eligible_arrivals": 31
+    },
+    {
+      "threshold_c": 32,
+      "scenario": "equal_hours_shift_14_24",
+      "stay_minutes": 120,
+      "hot_observations": 85,
+      "eligible_arrivals": 31
+    },
+    {
+      "threshold_c": 35,
+      "scenario": "actual_library_12_22",
+      "stay_minutes": 0,
+      "hot_observations": 50,
+      "eligible_arrivals": 29
+    },
+    {
+      "threshold_c": 35,
+      "scenario": "actual_library_12_22",
+      "stay_minutes": 70,
+      "hot_observations": 50,
+      "eligible_arrivals": 23
+    },
+    {
+      "threshold_c": 35,
+      "scenario": "actual_library_12_22",
+      "stay_minutes": 120,
+      "hot_observations": 50,
+      "eligible_arrivals": 23
+    },
+    {
+      "threshold_c": 35,
+      "scenario": "equal_hours_shift_14_24",
+      "stay_minutes": 0,
+      "hot_observations": 50,
+      "eligible_arrivals": 29
+    },
+    {
+      "threshold_c": 35,
+      "scenario": "equal_hours_shift_14_24",
+      "stay_minutes": 70,
+      "hot_observations": 50,
+      "eligible_arrivals": 23
+    },
+    {
+      "threshold_c": 35,
+      "scenario": "equal_hours_shift_14_24",
+      "stay_minutes": 120,
+      "hot_observations": 50,
+      "eligible_arrivals": 23
+    },
+    {
+      "threshold_c": 38,
+      "scenario": "actual_library_12_22",
+      "stay_minutes": 0,
+      "hot_observations": 30,
+      "eligible_arrivals": 28
+    },
+    {
+      "threshold_c": 38,
+      "scenario": "actual_library_12_22",
+      "stay_minutes": 70,
+      "hot_observations": 30,
+      "eligible_arrivals": 23
+    },
+    {
+      "threshold_c": 38,
+      "scenario": "actual_library_12_22",
+      "stay_minutes": 120,
+      "hot_observations": 30,
+      "eligible_arrivals": 23
+    },
+    {
+      "threshold_c": 38,
+      "scenario": "equal_hours_shift_14_24",
+      "stay_minutes": 0,
+      "hot_observations": 30,
+      "eligible_arrivals": 22
+    },
+    {
+      "threshold_c": 38,
+      "scenario": "equal_hours_shift_14_24",
+      "stay_minutes": 70,
+      "hot_observations": 30,
+      "eligible_arrivals": 22
+    },
+    {
+      "threshold_c": 38,
+      "scenario": "equal_hours_shift_14_24",
+      "stay_minutes": 120,
+      "hot_observations": 30,
+      "eligible_arrivals": 22
+    }
+  ],
+  "counterexample": {
+    "hourly_point_coverage_equal": true,
+    "one_site_70min_start_minutes": 531,
+    "two_sites_70min_start_minutes": 462,
+    "minute_grid": "12:00 through 21:59 inclusive",
+    "note": "Constructed schedule, not observed city network; rest interrupted by any outdoor transfer"
+  },
+  "interpretation": "Arrival opportunity conditional on site reachability and admission. Thresholds are descriptive, not clinical. No occupancy, paths, visits or health effects estimated."
+}

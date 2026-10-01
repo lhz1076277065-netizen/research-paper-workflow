@@ -1,0 +1,95 @@
+{
+  "failure": "Initial P reading-and-limits.json retained restrictions.allowed_roots with v3.2.0 path; original reviewer interrupted; do not treat its scientific judgment as blind",
+  "initial_metadata": {
+    "P": {
+      "sha256": "d37ea17d4be5a7b2dd0e2af3283f2605ce40e3e088c567428bfc0f2ef9cfc4db",
+      "content": {
+        "budget": {
+          "limits": {
+            "web__run": 18,
+            "other_underlying_calls": 18
+          },
+          "used": {
+            "web__run": 8,
+            "other_underlying_calls": 15
+          },
+          "final_check_reserved": 0,
+          "functions_exec_wrappers_counted": false,
+          "internal_http_requests_in_exec": "listed as acquisitions; one exec_command call counts once under task rule",
+          "remaining": {
+            "web__run": 10,
+            "other_underlying_calls": 3
+          }
+        },
+        "reading_levels": {
+          "prompt": "full",
+          "input_README_manifest_LICENSE": "README and manifest full; LICENSE read by hash verification, contents not legally summarized",
+          "input_metadata": "full",
+          "input_JSONs": "all rows parsed computationally; dictionary matched by types/IDs",
+          "skill_tree_inventory": "paths only; truncated output",
+          "papers": "see sources.json"
+        },
+        "scope": {
+          "actual": "official area-level comparisons; conditional mathematical bounds; labelled hypothetical joint constructions",
+          "not_completed": "real household joint measurement; effects of interventions; contemporary priority ranking; publication novelty claim"
+        },
+        "limits": [
+          "literature discovery is targeted, not systematic review",
+          "UHF has no AC confidence intervals in provided files",
+          "incompatible land and household supports",
+          "2014 canopy vs 2017 vegetation confounds time with construct",
+          "hypothetical tables do not reconstruct every published geography",
+          "borough household denominators recovered from rounded estimates",
+          "no raw geocoded household data or validated canopy-to-access calibration"
+        ],
+        "restrictions": {
+          "allowed_read_roots": [
+            "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0",
+            "{ACCEPTANCE_ROOT}/method-input",
+            "{ACCEPTANCE_ROOT}/method-A"
+          ],
+          "public_external_sources": "allowed",
+          "specified_python": "{PYTHON_ENV}",
+          "other_acceptance_outputs_read": false,
+          "root_research_read": false,
+          "agents_contacted": false,
+          "model_changed": false,
+          "dependencies_added": false
+        },
+        "model": {
+          "model_id": "unknown",
+          "sampling_parameters": "unknown",
+          "reason": "tool未披露，不由提示或环境命名推断"
+        }
+      }
+    },
+    "Q": {
+      "sha256": "c82fb7730321574a2d9b7037d3187d5f4862a9d93d839959141c201bf86a5229",
+      "content": {
+        "budget": {
+          "web_max": 18,
+          "other_max": 18,
+          "web_actual": 6,
+          "other_actual_including_final_check": 16,
+          "functions_exec_wrappers_counted": false,
+          "first_prompt_read_counted": true,
+          "failed_tool_calls_counted": true,
+          "script_http_requests_are_not_extra_underlying_tool_calls": true,
+          "other_actual": 16
+        }
+      }
+    }
+  },
+  "repair": "Removed non-scientific restrictions/model context fields; preserved scientific content, data, scripts and reported reading/budget limitations",
+  "literal_version_path_scan_after_repair": "passed across both blind packs",
+  "interrupted_reviewer_report": {
+    "web_calls": 7,
+    "other_bottom_calls": 9,
+    "version_clue_seen": true,
+    "mapping_opened": false,
+    "review_saved": false,
+    "judgment_used": false,
+    "count_provenance": "reviewer self-report after interruption, not a full independent raw tool trace",
+    "actual_work": "two script reruns and stable payload/8 CSV comparison; definitions/year/joins checked; formal identities recomputed; one wrong assumption that UHF contained measure 1045 corrected after KeyError; source fulltext failures retained; no scientific comparison used"
+  }
+}

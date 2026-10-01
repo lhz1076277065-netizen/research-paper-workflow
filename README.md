@@ -6,6 +6,8 @@ The complete source lives in [academic-research-skills/](academic-research-skill
 
 This candidate connects journal and cross-paper learning to real needs, scientific unknowns, data/scales and decisive research actions. Orchestra is an optional ideation source. See [behavioral observations](academic-research-skills/evaluations/v3.3.0-rc.1/BEHAVIOR.zh-CN.md); this release does not establish a general increase in creativity.
 
+The [follow-up scientific acceptance](academic-research-skills/evaluations/v3.3.0-rc.1/followup-20261002/REPORT.zh-CN.md) includes an actual data comparison, frozen broad-field and method-bottleneck trials, independent reviews, and reproducible research evidence.
+
 ## Install
 
 ### 一句话让 AI Agent 安装

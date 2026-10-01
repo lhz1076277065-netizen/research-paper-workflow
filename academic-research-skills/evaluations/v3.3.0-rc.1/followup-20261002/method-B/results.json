@@ -1,0 +1,122 @@
+{
+  "design": "exploratory regional screening and conditional identification construction; no causal or new-method claim",
+  "official_AC_and_vegetation_year": 2017,
+  "temperature_date": "2018-07-17",
+  "tree_canopy_year_available": 2014,
+  "regional_unit": "UHF42; 42 regions, not 42 independent household samples",
+  "correlations": {
+    "noAC_vs_vegetation_spearman": 0.0535243644573455,
+    "noAC_vs_surface_temp_spearman": 0.16160797835480983
+  },
+  "criteria": {
+    "screen_0.500": {
+      "thresholds": {
+        "no_ac_pct_min": 8.199999999999996,
+        "vegetation_land_pct_max": 29.0,
+        "surface_temperature_F_min": 97.63465
+      },
+      "GeoIDs": [
+        106,
+        107,
+        203,
+        204,
+        206,
+        211
+      ]
+    },
+    "screen_0.600": {
+      "thresholds": {
+        "no_ac_pct_min": 8.860000000000001,
+        "vegetation_land_pct_max": 28.400000000000002,
+        "surface_temperature_F_min": 98.17242
+      },
+      "GeoIDs": [
+        106,
+        107,
+        203,
+        211
+      ]
+    },
+    "screen_0.667": {
+      "thresholds": {
+        "no_ac_pct_min": 10.0,
+        "vegetation_land_pct_max": 24.666666666666668,
+        "surface_temperature_F_min": 98.5924
+      },
+      "GeoIDs": [
+        106,
+        107,
+        211
+      ]
+    }
+  },
+  "robust_material_acquisition_candidates": [
+    {
+      "GeoID": 106,
+      "Name": "High Bridge - Morrisania",
+      "no_ac_pct": 17.599999999999994,
+      "vegetation_land_pct": 21.0,
+      "surface_temperature_F": 99.4396
+    },
+    {
+      "GeoID": 107,
+      "Name": "Hunts Point - Mott Haven",
+      "no_ac_pct": 16.700000000000003,
+      "vegetation_land_pct": 18.0,
+      "surface_temperature_F": 100.6503
+    },
+    {
+      "GeoID": 211,
+      "Name": "Williamsburg - Bushwick",
+      "no_ac_pct": 11.0,
+      "vegetation_land_pct": 18.0,
+      "surface_temperature_F": 100.5914
+    }
+  ],
+  "representative_worlds": [
+    {
+      "GeoID": 107,
+      "Name": "Hunts Point - Mott Haven",
+      "world": "noAC_all_adequate",
+      "constructed_N": 1000,
+      "constructed_q": 0.5,
+      "observed_noAC_share": 0.16700000000000004,
+      "A1Y1": 0,
+      "A1Y0": 167,
+      "A0Y1": 500,
+      "A0Y0": 333,
+      "r_noAC": 0.0,
+      "r_AC": 0.6002400960384153,
+      "risk_difference": -0.6002400960384153,
+      "status": "hypothetical_not_measured"
+    },
+    {
+      "GeoID": 107,
+      "Name": "Hunts Point - Mott Haven",
+      "world": "noAC_all_inadequate",
+      "constructed_N": 1000,
+      "constructed_q": 0.5,
+      "observed_noAC_share": 0.16700000000000004,
+      "A1Y1": 167,
+      "A1Y0": 0,
+      "A0Y1": 333,
+      "A0Y0": 500,
+      "r_noAC": 1.0,
+      "r_AC": 0.3997599039615846,
+      "risk_difference": 0.6002400960384153,
+      "status": "hypothetical_not_measured"
+    }
+  ],
+  "conditional_bound_cases": 210,
+  "LP_solves": 468,
+  "checks": "hashes, schema lengths, unique keys, percent ranges, one-to-one join, 84 exact synthetic tables, sharp formula vs independent LP; PASS",
+  "runtime_seconds": 0.4046178749995306,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "no_confidence_interval": "No UHF AC SE/CI or household weights in the starting materials; no population inference p-values computed."
+}

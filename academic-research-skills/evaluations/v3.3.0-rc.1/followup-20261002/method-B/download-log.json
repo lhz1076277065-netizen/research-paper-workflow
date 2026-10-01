@@ -1,0 +1,32 @@
+[
+  {
+    "name": "wakefield2001.pdf",
+    "url": "https://csss.uw.edu/Papers/2001/wp12.pdf",
+    "status": "failed",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  {
+    "name": "glynn2010.html",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2885825/",
+    "bytes": 237203,
+    "sha256": "f1542d7977a004a4069ff47240274966b3285644bbafa984eb190ee8942c0082",
+    "status": "saved",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "name": "li2024.html",
+    "url": "https://www.nature.com/articles/s41467-024-51355-0",
+    "bytes": 610283,
+    "sha256": "3f961acbcdf28b1d83d3db4ec4e58fa40c2ebc38a8e2c914a6bcb6bed1886b7c",
+    "status": "saved",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "name": "rosenthal2014.html",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4348023/",
+    "bytes": 336895,
+    "sha256": "80476b76c5bb7835779711743d1c902a32316601903652ad0a169bbde0b37900",
+    "status": "saved",
+    "content_type": "text/html; charset=utf-8"
+  }
+]

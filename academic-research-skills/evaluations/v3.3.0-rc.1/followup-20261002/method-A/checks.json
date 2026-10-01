@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "Han_characters": 2198,
+  "districts": 42,
+  "hypothetical_joint_tables": 84,
+  "LP_endpoint_checks": 84,
+  "table_margins": "passed",
+  "frontiers": {
+    "2014": 1,
+    "2017": 6
+  },
+  "actual_calls": {
+    "web__run": 8,
+    "exec_command": 15
+  },
+  "limits": {
+    "web__run": 18,
+    "other": 18
+  },
+  "script_hash": "0a8e8aec37860b08b24d665325b593d76d9f3f7f73e3a991c9ab9746f9815ffd",
+  "answer_hash": "a0ac60d3aa2ed9bd750c51b9ea8c441ffdb1699647d218568cc85b187d0fc80c",
+  "scientific_status": "area screen and conditional bounds only; not household observational or causal results"
+}

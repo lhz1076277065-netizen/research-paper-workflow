@@ -1,0 +1,513 @@
+{
+  "task": "broad-B: 城市气候适应宽泛选题",
+  "executor": "当前宿主继承模型；具体模型名/采样参数/温度/top_p/seed未知",
+  "isolation": "仅自己的指定B冻结库、公开外部资料、自己的broad-B输出；未读其他条件/先前试验/诊断/父代理研究输出",
+  "tools": [
+    {
+      "sequence": 1,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "读取独立完整任务broad-B-prompt.txt，计入预算",
+      "status": "completed"
+    },
+    {
+      "sequence": 2,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "读取指定冻结research-paper-workflow/SKILL.md",
+      "status": "completed"
+    },
+    {
+      "sequence": 3,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "读取research-lifecycle/research-quality/provider-policy/execution-handoff，计算SHA256",
+      "status": "completed"
+    },
+    {
+      "sequence": 4,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "读取problem-led-topics与research31-policy，列冻结库入口",
+      "status": "completed"
+    },
+    {
+      "sequence": 5,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "读取topic-provider-selection以及literature-discovery/paper-deep-reading/journal-intelligence/topic-novelty入口与SHA256",
+      "status": "completed"
+    },
+    {
+      "sequence": 6,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "4查询：Nature城市气候适应/热洪公平/避暑时间可达性/NYC官方材料；自主缩小领域",
+      "status": "completed"
+    },
+    {
+      "sequence": 7,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "打开AccessiCity、全球绿地、81城和CDC MMWR；81城PMC返回reCAPTCHA",
+      "status": "completed"
+    },
+    {
+      "sequence": 8,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "4查询：Orchestra入口/避暑停留时长/开放时间优化/连续可达；打开论文方法与CDC；2个Nature ref失败",
+      "status": "completed"
+    },
+    {
+      "sequence": 9,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "打开Orchestra原始SKILL.md、2篇Nature论文指定段、纽约Comptroller、IBO；Nature两篇cookie失败",
+      "status": "completed"
+    },
+    {
+      "sequence": 10,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "AccessiCity PDF/图4/期刊导航/绿地PDF点击，以及IBO2024与方法/data availability定位；图链接、绿地链接与2find失败",
+      "status": "completed"
+    },
+    {
+      "sequence": 11,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "尝试Nature PDF和npj范围以及PDF data availability/fig4/capacity；全部cookie或定位失败",
+      "status": "completed"
+    },
+    {
+      "sequence": 12,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "创建路线板；下载2论文PDF/IBO/LL85/Orchestra入口与路径commit，抽取PDF文本；异步session65106",
+      "status": "completed"
+    },
+    {
+      "sequence": 13,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "4查询：uninterrupted/continuous hours/recovery/optimization exposure；打开Fraser与CDC PDF；发现EHP实验及2025综述",
+      "status": "completed"
+    },
+    {
+      "sequence": 14,
+      "kind": "other",
+      "tool": "write_stdin",
+      "purpose": "回收session65106下载及PDF抽取结果",
+      "status": "completed"
+    },
+    {
+      "sequence": 15,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "打开EHP/2025综述/81城PDF/npj范围；EHP403，PMC与Nature失败；综述实际摘要及全文方法/结果可读",
+      "status": "completed"
+    },
+    {
+      "sequence": 16,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "4查询：EHP11651 PMC/minimum stay/duration optimization/AccessiCity GitHub；定位直接作者仓库与全文",
+      "status": "completed"
+    },
+    {
+      "sequence": 17,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "阅读AccessiCity关键PDF页3—7及12—13/绿地摘要和方法线索/LL85文本；渲染时首次选到page4图2，未当作图4阅读",
+      "status": "completed"
+    },
+    {
+      "sequence": 18,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "打开PubMed37262028、AccessiCity作者GitHub、NComms与npj范围；PubMed只有footer，NComms失败；npj正式范围成功",
+      "status": "completed"
+    },
+    {
+      "sequence": 19,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "取得作者仓库tree和EHP EuropePMC书目/XML，读AccessiCity完整页7算法/公式与页12限制、绿地页8方法；渲染正确page6；异步session20279",
+      "status": "completed"
+    },
+    {
+      "sequence": 20,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "4查询：EHP PMC/stay duration/closing arrival/NYC2026 plan；打开ScienceDirect与ORNL；ScienceDirect失败；获得2026官方公告与Finder当前缺失",
+      "status": "completed"
+    },
+    {
+      "sequence": 21,
+      "kind": "other",
+      "tool": "write_stdin",
+      "purpose": "回收session20279；实际获得EHP全文XML、仓库树和方法输出",
+      "status": "completed"
+    },
+    {
+      "sequence": 22,
+      "kind": "other",
+      "tool": "view_image",
+      "purpose": "实际查看AccessiCity page6图4与5；观察周均夏季下降和18—19时第二峰，不把图注误当热图",
+      "status": "completed"
+    },
+    {
+      "sequence": 23,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "打开Nature data availability/PMC EHP/纽约July公告/MAG资源；PMC reCAPTCHA；读AccessiCity研究限制和数据代码声明",
+      "status": "completed"
+    },
+    {
+      "sequence": 24,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "打开并读取AccessiCity补充、NComms范围/EHP范围，定位纽约小时与MAG标准；EHP范围失败；官方新增8站12—24时间窗改变判断",
+      "status": "completed"
+    },
+    {
+      "sequence": 25,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "4查询：time windows optimization/continuous stay/arrival time/duration-aware；打开补充城市表和MAG站点标准；无直接匹配新增成果，不据此声称首次",
+      "status": "completed"
+    },
+    {
+      "sequence": 26,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "实际读EHP Methods/Results和图1/2文本说明；下载作者代码与补充、纽约公告；MAG下载403；提取24条公告记录；写core_compare.py；异步session72343",
+      "status": "completed"
+    },
+    {
+      "sequence": 27,
+      "kind": "other",
+      "tool": "write_stdin",
+      "purpose": "回收session72343，读EHP结果与图说明和真实下载/失败情况",
+      "status": "completed"
+    },
+    {
+      "sequence": 28,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "运行stdlib核心比较及断言，保存core-results.json；同预算排名反转在0/10/15分钟保持",
+      "status": "completed"
+    },
+    {
+      "sequence": 29,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "实际读取MAG2026标准页2—3、2025综述讨论、Fraser摘要引言、作者functions.py；核对两小时例外及研究边界",
+      "status": "completed"
+    },
+    {
+      "sequence": 30,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "写入answer.md/operations.json/routeboard与阅读综合说明；本调用",
+      "status": "completed"
+    },
+    {
+      "sequence": 31,
+      "kind": "web",
+      "tool": "web__run",
+      "purpose": "核对全球绿地论文作者Yuxiang Li、发表日期2024-09-02与摘要，cookie bypass成功",
+      "status": "completed"
+    },
+    {
+      "sequence": 32,
+      "kind": "other",
+      "tool": "exec_command",
+      "purpose": "最终核对24条公告、8地点、日期与公告状态，核心结果JSON与指导SHA256；去除冗余抽取文本和误选图片，写最终预算及manifest；本调用",
+      "status": "completed"
+    }
+  ],
+  "budget": {
+    "limits": {
+      "web__run": 24,
+      "other_bottom_tools": 16
+    },
+    "wrapper_functions_exec_not_counted": true,
+    "shell_batched_reads_downloads_counted_per_exec_command": true,
+    "used_actual": {
+      "web__run": 16,
+      "other_bottom_tools": 16
+    }
+  },
+  "guidance": [
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/SKILL.md",
+      "sha256": "a8bcb63db422a9e1168c4e9fadfc2a2825df786887f83f4ac0ef432751a0caa9",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/research-lifecycle.md",
+      "sha256": "1dede360e525a75b43d801d5257e03fe60374f1d1c26d49b58dd29bcdd4e4b97",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/research-quality.md",
+      "sha256": "eaaec08bf3fb0e881b6f949733f95ea38d977a047f70388ed4aea6bc24f472e0",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/provider-policy.md",
+      "sha256": "0b9a41493258edaaf64c338f58ab49aaf9ee9caeef0ab948f6d0c717710a83af",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/execution-handoff.md",
+      "sha256": "98414d5f5046936def93af9fb6607fcb7f1264adf589b28b33d02ecbe9a00d3c",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/problem-led-topics.md",
+      "sha256": "6684966ab668219a031279255411a463b7381c9c6868b6b3b071af64d963e878",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/assets/research31-policy.json",
+      "sha256": "8b8bdf5c681411cf44dd03f29dfba57de809c63ea9fbe1f6a3b18e33ccf55697",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/topic-provider-selection.md",
+      "sha256": "1f6154db9124e7b929a538f55e0f4594288f611c9ccdc3aa36f10cce3b7af61e",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/literature-discovery/SKILL.md",
+      "sha256": "a4375135c249d43493f091310017fc42b39c23ec1f2b49fddbc42db8c89ffee6",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/paper-deep-reading/SKILL.md",
+      "sha256": "b67d6db88354a9ac332e672d95ca6bcbeb663e1025bf1eb5ed3c5a43d5bd6ac5",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/journal-intelligence/SKILL.md",
+      "sha256": "a35d59860973e4934266f0dc2e57ee8b738a653dc1d84d46320f97c57da9380d",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/B/academic-research-skills-v3.3.0-rc.1/skills/topic-novelty/SKILL.md",
+      "sha256": "8faa50e1074acc67f87b91c56a039c52c662a682d7b266ab95c85a3f343c5db7",
+      "version": "3.3.0-rc.1",
+      "guidance_read": true
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/broad-B/brainstorming-SKILL.md",
+      "url": "https://raw.githubusercontent.com/Orchestra-Research/AI-Research-SKILLs/main/21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "commit_for_entry": "68cd476430e2e60d455e8b3b66e349e7eaa6ec5a",
+      "version": "1.0.0",
+      "sha256": "8422a1a6dc0a88d05f02b9fbe0f8c2ae06a77024856d18125efa13d19d855d46",
+      "guidance_read": true,
+      "research_work_done": [
+        "problem-first:具体受益人与延时值守困境",
+        "stakeholder rotation:居民/运营者/生理证据需求",
+        "abstraction ladder:点时可达转完整停留机会",
+        "explain-it:普通语言题名和精确研究问题"
+      ],
+      "functions_run": false,
+      "adapted_in_host": "按用户自主判断要求不互动、不生成固定10—20候选、不启动其他模型；三条问题路线收敛后做核心比较"
+    }
+  ],
+  "roles": {
+    "guidance_read": true,
+    "research_work_done": [
+      "候选问题及跨篇综合",
+      "最近邻能力与边界核查",
+      "方法与关键图阅读",
+      "代表公告记录取得",
+      "原始核心反例及程序核查",
+      "问题更新与下一决定性动作"
+    ],
+    "functions_run": [
+      "core_compare.py demo; stdlib only"
+    ],
+    "anti_defensive_writing": "未调用：此为选题成果，不是完整稿件终审"
+  },
+  "actual_reading": [
+    {
+      "source": "Nature Communications 2024 s41467-024-51355-0",
+      "level": "真实摘要/引言关键论证/全文Methods第8页；并非通篇精读",
+      "change": "供给/受益量分开，地表温度与健康收益不混同"
+    },
+    {
+      "source": "AccessiCity npj Urban Sustainability 2026",
+      "level": "真实摘要，PDF关键页3—7与12—13，式1—4/算法1/数据代码声明；补充表首页及GitHub README/functions.py",
+      "figures_visual": "PDF第6页图4和5像素实际查看",
+      "figure_file": "accessicity-fig4-5-page6.png",
+      "change": "否决开放时间自身的创新，改为同址连续停留机会；64/65不一致待核对",
+      "author_code_tree_sha": "6e6e02a7026ab07ec64cde41c6ffcc2f21896cac",
+      "author_code_file_sha256": "a7eb98b721b54c7bc836170dcea5406f6dd5b661de028a27476f86133a09a723"
+    },
+    {
+      "source": "EHP11651 Meade 2023",
+      "level": "摘要检索记录；EuropePMC原始全文XML Methods和Results；图1/2说明及可访问描述文本",
+      "figures_visual": false,
+      "change": "2h为可检验场景，不是有效剂量阈值；返回热环境后作用消退；40招募/38完成/非随机/健康64—79岁"
+    },
+    {
+      "source": "81城2023覆盖研究",
+      "level": "真实摘要及检索呈现讨论，PMC直接全文访问失败",
+      "change": "覆盖为潜在可达性，不等于使用或健康效果"
+    },
+    {
+      "source": "Fraser2017 Household accessibility",
+      "level": "真实摘要/引言；本次未完整读取方法公式",
+      "change": "需考虑家庭AC与替代制冷资源"
+    },
+    {
+      "source": "Dearman2025 systematic review",
+      "level": "真实摘要、全文Eligibility/Methods/Results/Narrative synthesis及Discussion",
+      "change": "收紧健康主张，强调效应证据有限；检索截至2024，不能当作2026全覆盖"
+    },
+    {
+      "source": "NYC IBO2025",
+      "level": "真实报告关键页1—3、7—9、17—21、27文本；图19未像素查看",
+      "change": "2024工作日与周末差异是历史状态，不能冒充当前"
+    },
+    {
+      "source": "NYC 2026-07-01 announcement",
+      "level": "官方全文主要服务措施段；保存HTML并人工抽取8地点×3日=24CSV行",
+      "record_status": "announced_not_observed",
+      "change": "新至午夜安排要求核对临时激活，不能照用旧断言"
+    },
+    {
+      "source": "MAG2026 site standards",
+      "level": "真实PDF文字第1—3页，实际read web；本地下载403",
+      "change": "允许2h但关闭/容量例外"
+    }
+  ],
+  "failures": [
+    "Nature cookie redirects/部分ref/find失败，改用本地公开PDF及cookie bypass查询",
+    "PMC浏览验证与PubMed空页，EHP改用EuropePMC全文XML",
+    "ScienceDirect正文失败，仅使用检索呈现摘要",
+    "EHP期刊范围403/空页面，不声称官网核验其范围",
+    "NYC LL85 PDF为图像，常规文本抽取无记录，未OCR或假造时表",
+    "Finder当前未激活/无法加载，未取得历史全量激活时表",
+    "MAG标准本地下载403；web已成功读文字",
+    "首个figure页选择命中图2页4，未使用；随后显式page6并实际view"
+  ],
+  "downloads": [
+    {
+      "file": "accessicity.pdf",
+      "url": "https://www.nature.com/articles/s42949-026-00356-7.pdf",
+      "bytes": 4124576,
+      "sha256": "64865833c3f40d74bbd209771d90188d7a38516eaad941cc23036276533ee037"
+    },
+    {
+      "file": "green-cooling.pdf",
+      "url": "https://www.nature.com/articles/s41467-024-51355-0.pdf",
+      "bytes": 3639026,
+      "sha256": "2085f64723e5e85120d3f979174acc8e0b294ca7553907f94e47e08de9804c68"
+    },
+    {
+      "file": "nyc-ibo-2025.pdf",
+      "url": "https://www.ibo.nyc.gov/assets/ibo/downloads/pdf/environment/2025/2025-october-cooling-centers-how-nyc-beats-the-heat.pdf",
+      "bytes": 2620408,
+      "sha256": "639f37b41f35f4150b266ac8e4b780e4d2127b6bebbb9145ec7929e67a768610"
+    },
+    {
+      "file": "nyc-ll85-2025.pdf",
+      "url": "https://www.nyc.gov/assets/em/downloads/pdf/local_law_reports/ll85_cooling_center_report_2025_V1.pdf",
+      "bytes": 6970567,
+      "sha256": "acf492f16917d1e99aab5cf22bb9eed6b9b3c883c000f3b6b842a7f0ae295de8"
+    },
+    {
+      "file": "brainstorming-SKILL.md",
+      "url": "https://raw.githubusercontent.com/Orchestra-Research/AI-Research-SKILLs/main/21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "bytes": 19150,
+      "sha256": "8422a1a6dc0a88d05f02b9fbe0f8c2ae06a77024856d18125efa13d19d855d46"
+    },
+    {
+      "file": "orchestra-entry-version.json",
+      "url": "https://api.github.com/repos/Orchestra-Research/AI-Research-SKILLs/commits?path=21-research-ideation/brainstorming-research-ideas/SKILL.md&per_page=1",
+      "bytes": 3712,
+      "sha256": "dde8cec81d74a62b11823790dc55322cba808fdd400443cb4e2f83ba5476130c"
+    },
+    {
+      "file": "accessicity-tree.json",
+      "url": "https://api.github.com/repos/ADivassonJ/AccessiCity/git/trees/main?recursive=1",
+      "bytes": 2967,
+      "sha256": "9cd315f4cf19879e15ebe77bb246c6865a36c2756500244660e9ba1f67d07617"
+    },
+    {
+      "file": "ehp-search.json",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:37262028&format=json",
+      "bytes": 1149,
+      "sha256": "65dac9c38843eb899f56385f7b6dfc2f52462166cc3001ccb623f528aaa35edc"
+    },
+    {
+      "file": "ehp-fulltext.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10234508/fullTextXML",
+      "bytes": 261472,
+      "sha256": "8e3e2ace21aacc2f39d18318cafd1dc7759631aab6a969d1ffb471ce4dd524f7"
+    },
+    {
+      "file": "accessicity-functions.py",
+      "url": "https://raw.githubusercontent.com/ADivassonJ/AccessiCity/6e6e02a7026ab07ec64cde41c6ffcc2f21896cac/Codes/functions.py",
+      "bytes": 19891,
+      "sha256": "a7eb98b721b54c7bc836170dcea5406f6dd5b661de028a27476f86133a09a723"
+    },
+    {
+      "file": "accessicity-supplement.pdf",
+      "url": "https://media.springernature.com/original/springer-static/esm/art:10.1038%2Fs42949-026-00356-7/MediaObjects/42949_2026_356_MOESM1_ESM.pdf",
+      "bytes": 95229,
+      "sha256": "2a2ca68a8216096259236300a2d4e08bf90eadc82ac9c71ae7ec1d07e8015acc"
+    },
+    {
+      "file": "nyc-2026-july-announcement.html",
+      "url": "https://home4.nyc.gov/site/em/about/press-releases/20260701_pr_NYCEM-Mayor-Mamdani-Expands-Emergency-Heat-Measures.page",
+      "bytes": 37817,
+      "sha256": "fa57d780ade76e61442ed1fa80430243dadd2e89bb7e8170c88bce6a12dbcbf9"
+    },
+    {
+      "file": "mag-site-standards-2026.pdf",
+      "url": "https://azmag.gov/portals/0/Heat-Relief/2026/Site-Standards-Expectations-(Updated-4-8-26).pdf",
+      "failure": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "download_size_note": "下载文件实际字节和SHA256另存downloads.json；当前远小于100MB；web内传输量不可取得，不假称为0",
+  "completed": "宽泛领域选题、真实论文关键阅读/至少图4与5视觉阅读、最近邻及现实需要核查、24条公告记录、已跑核心反例、更新问题；不是完整论文或正式城市效果分析",
+  "not_completed": [
+    "全城2026历史激活/关闭时表",
+    "住宅与人口路网配准",
+    "正式优化和外部留出验证",
+    "容量/实际成本/真实入场与停留",
+    "健康因果效应",
+    "完整稿件/主图/投稿"
+  ],
+  "next_action": "恢复July3—5全体邻近中心真实临时时表，校正到达的逐时基线与同址L=1/2/3小时机会比较同预算名次",
+  "scientific_result": "已证存在同预算排序反转；未证纽约网络反转或健康收益",
+  "artifact_files": "final verification将生成目录manifest；整篇第三方论文只在原始下载文件中，不复制到此操作记录",
+  "download_bytes_saved_originals": 17795964,
+  "final_verification": {
+    "completed_utc": "2026-10-01T18:24:24.940442+00:00",
+    "artifact_integrity": "passed",
+    "record_count": 24,
+    "center_count": 8,
+    "model_sampling_parameters": "unknown",
+    "scientific_scope": "selection plus constructed comparison; actual network and health claims untested",
+    "redundant_files_removed": "PDF text extracts and initially wrong figure page; original downloaded sources retained"
+  }
+}

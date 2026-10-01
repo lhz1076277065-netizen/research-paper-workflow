@@ -1,0 +1,39 @@
+{
+  "checked_at_utc": "2026-10-01T18:30:08.738936+00:00",
+  "frozen_libraries": [
+    {
+      "label": "A",
+      "version": "3.2.0",
+      "file_count": 1172,
+      "hash_mismatches": [],
+      "expected_self_excluded_manifest": [
+        "PACKAGE-MANIFEST.json"
+      ],
+      "manifest_sha256": "8d4e8501865c1f8ad2fc7926e0cdc6ada3b8580a9ec187c194168cbaa9c774e5"
+    },
+    {
+      "label": "B",
+      "version": "3.3.0-rc.1",
+      "file_count": 1218,
+      "hash_mismatches": [],
+      "expected_self_excluded_manifest": [
+        "PACKAGE-MANIFEST.json"
+      ],
+      "manifest_sha256": "5c1739aa1b41db9a3ed11bb41988379a76d67faa0b5793fd8d68053708af79fb"
+    }
+  ],
+  "method_input_files_verified": 9,
+  "root_study": {
+    "run": "analyze.py",
+    "result": "passed after preserving official small-sample notes",
+    "prior_failure": "assertion expected empty Note; found 25 of 42 AC estimates with source caution; fixed input condition and retained flags; no source data changed",
+    "other_access_failures": [
+      "Nature HTML open/find internal errors, followed by successful PDF download",
+      "2026 Moon publisher fulltext HTTP403; distinguish 2024 v2 preprint",
+      "official PDF web screenshot unresolved; no image reading claim made"
+    ],
+    "root_tool_cost": "not limited or exhaustively counted; no equal-cost claim for follow-up study",
+    "model_build_and_sampling": "unknown"
+  },
+  "verification_failure": "First library inventory assertion did not allow the expected self-excluded PACKAGE-MANIFEST.json; clarified manifest exclusion, verified all declared hashes and manifest version; no file modified"
+}

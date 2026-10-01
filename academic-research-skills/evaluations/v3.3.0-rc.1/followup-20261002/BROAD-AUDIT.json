@@ -1,0 +1,183 @@
+{
+  "at_utc": "2026-10-01T18:37:37.917772+00:00",
+  "conditions": [
+    {
+      "condition": "A",
+      "calls_recounted": {
+        "web__run": 15,
+        "other_bottom_tools": 15
+      },
+      "within_cap": true,
+      "guidance_verified": [
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/SKILL.md",
+          "sha256": "2da05a8430e2f29470179ca7c27dc33e9c6fdcd9d5e48c06373f77ffc72c64c8",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/research-lifecycle.md",
+          "sha256": "076e24247c54da5fe52ee5e46bdaa93eaa5f9ebd7384eae6c969c96677a11c4d",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/research-quality.md",
+          "sha256": "2be115bd99804b413426a96a194276afea8016960ac9ec30e2ace19a2f033019",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/provider-policy.md",
+          "sha256": "93bae0ddafd206329dfb0b8c2a1c0d822e61da33b941d59c8b9fe9daa2b11809",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/execution-handoff.md",
+          "sha256": "98414d5f5046936def93af9fb6607fcb7f1264adf589b28b33d02ecbe9a00d3c",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/skills/journal-intelligence/SKILL.md",
+          "sha256": "477580a00eaef461379fc71d017cfd8677c52e2d8956453cf3ad25d170a74705",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/skills/literature-discovery/SKILL.md",
+          "sha256": "ac1447dfd27e3eee4f49dac306cabb390ca7dcfc2417fed9df07d17f8a1ec0ef",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/skills/paper-deep-reading/SKILL.md",
+          "sha256": "1de81ea7e5ff1fdee7816e2e943b041bf2ef99714b858829585b651f987ed5a6",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/skills/research-design/SKILL.md",
+          "sha256": "19e945762325604ed95695563b3cddea044bed5cf878a713f1c759a52f567acb",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/A/academic-research-skills-v3.2.0/assets/research31-policy.json",
+          "sha256": "78aec721e6028e6977d0073f418ed35822ae514a59629a9a8b23f4099aac11fa",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "broad-A/paper-search-SKILL.md",
+          "sha256": "9249f89d84d8d6ba86419898376841e19ed531885c91ff1b5290d7c92af07159",
+          "frozen_library": false
+        },
+        {
+          "path_within_acceptance": "broad-A/nature-reader-SKILL.md",
+          "sha256": "999a5c1b116558133d0389ce6c1bbc3dc9cf5242d1be2870358789769d97a84e",
+          "frozen_library": false
+        },
+        {
+          "path_within_acceptance": "broad-A/nature-reader-grounding.md",
+          "sha256": "3e05b8f9c1a76042c993b55474ea1b19757d6aada5fb58722cbed2108119055f",
+          "frozen_library": false
+        },
+        {
+          "path_within_acceptance": "broad-A/nature-academic-search-SKILL.md",
+          "sha256": "3ed327e3e9c56cddfaa0e48ffb3503b1f9e27f917916013798ef57bf8131101a",
+          "frozen_library": false
+        },
+        {
+          "path_within_acceptance": "broad-A/search-manifest.yaml",
+          "sha256": "06ed4654398fed269f8ef95b99b867e4718f7a90889f8427484610750b41ff20",
+          "frozen_library": false
+        },
+        {
+          "path_within_acceptance": "broad-A/search-tools.md",
+          "sha256": "a279e282a66786ac6b3548058c2f49ebb2562ce753ac4cd88c94f12989abfcf9",
+          "frozen_library": false
+        },
+        {
+          "path_within_acceptance": "broad-A/search-routing.md",
+          "sha256": "3ab8e25cfc972af8e18a6929b8259ce058944212fb1fedcd536bfbc83398b54e",
+          "frozen_library": false
+        },
+        {
+          "path_within_acceptance": "broad-A/search-workflow.md",
+          "sha256": "5fdc6998651430d9d7871800b221e3e324ee237303149d7083784f44461aaccb",
+          "frozen_library": false
+        }
+      ],
+      "answer_characters": 3553
+    },
+    {
+      "condition": "B",
+      "calls_recounted": {
+        "web__run": 16,
+        "other_bottom_tools": 16
+      },
+      "within_cap": true,
+      "guidance_verified": [
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/SKILL.md",
+          "sha256": "a8bcb63db422a9e1168c4e9fadfc2a2825df786887f83f4ac0ef432751a0caa9",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/research-lifecycle.md",
+          "sha256": "1dede360e525a75b43d801d5257e03fe60374f1d1c26d49b58dd29bcdd4e4b97",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/research-quality.md",
+          "sha256": "eaaec08bf3fb0e881b6f949733f95ea38d977a047f70388ed4aea6bc24f472e0",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/provider-policy.md",
+          "sha256": "0b9a41493258edaaf64c338f58ab49aaf9ee9caeef0ab948f6d0c717710a83af",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/execution-handoff.md",
+          "sha256": "98414d5f5046936def93af9fb6607fcb7f1264adf589b28b33d02ecbe9a00d3c",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/problem-led-topics.md",
+          "sha256": "6684966ab668219a031279255411a463b7381c9c6868b6b3b071af64d963e878",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/assets/research31-policy.json",
+          "sha256": "8b8bdf5c681411cf44dd03f29dfba57de809c63ea9fbe1f6a3b18e33ccf55697",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/topic-provider-selection.md",
+          "sha256": "1f6154db9124e7b929a538f55e0f4594288f611c9ccdc3aa36f10cce3b7af61e",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/literature-discovery/SKILL.md",
+          "sha256": "a4375135c249d43493f091310017fc42b39c23ec1f2b49fddbc42db8c89ffee6",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/paper-deep-reading/SKILL.md",
+          "sha256": "b67d6db88354a9ac332e672d95ca6bcbeb663e1025bf1eb5ed3c5a43d5bd6ac5",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/journal-intelligence/SKILL.md",
+          "sha256": "a35d59860973e4934266f0dc2e57ee8b738a653dc1d84d46320f97c57da9380d",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/topic-novelty/SKILL.md",
+          "sha256": "8faa50e1074acc67f87b91c56a039c52c662a682d7b266ab95c85a3f343c5db7",
+          "frozen_library": true
+        },
+        {
+          "path_within_acceptance": "broad-B/brainstorming-SKILL.md",
+          "sha256": "8422a1a6dc0a88d05f02b9fbe0f8c2ae06a77024856d18125efa13d19d855d46",
+          "frozen_library": false
+        }
+      ],
+      "answer_characters": 3686
+    }
+  ],
+  "audit_repair": "First audit assumed every guidance file was in frozen library; external professional guidance was intentionally downloaded into own output. Classified origin correctly; all file hashes match."
+}

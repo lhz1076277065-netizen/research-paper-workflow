@@ -1,0 +1,41 @@
+{
+  "ac": {
+    "rows": 958,
+    "duplicate_keys": 1,
+    "missing_value": 60,
+    "flagged_rows": 259
+  },
+  "vegetation": {
+    "rows": 343,
+    "duplicate_keys": 0,
+    "missing_value": 0,
+    "flagged_rows": 0
+  },
+  "temperature": {
+    "rows": 295,
+    "duplicate_keys": 0,
+    "missing_value": 0,
+    "flagged_rows": 0
+  },
+  "canopy": {
+    "rows": 48,
+    "duplicate_keys": 0,
+    "missing_value": 0,
+    "flagged_rows": 0
+  },
+  "complement_check": {
+    "matched_rows": 232,
+    "max_abs_sum_minus_100_pct": 0.09999999999999432
+  },
+  "duplicate_handling": "Conflicting Subboro 31, measure 781, year 2023 values retained in audit file; 2017 UHF analysis and historical complement check unaffected; no averaging or silent deduplication.",
+  "join": {
+    "UHF42_rows_per_source": 42,
+    "joined_rows": 42,
+    "unmatched": 0,
+    "household_weights_available": false,
+    "UHF2017_empty_ci": 42,
+    "UHF2017_flagged": 25,
+    "2014_2017_are_distinct": true,
+    "area_household_marginals_interchangeable": false
+  }
+}

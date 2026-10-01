@@ -1,0 +1,260 @@
+{
+  "reviewer_role": "independent_anonymous_method_reviewer",
+  "scope": {
+    "allowed": [
+      "reviews/method-review-prompt.txt",
+      "reviews/method-blind/P",
+      "reviews/method-blind/Q",
+      "reviews/method-blind/method-input",
+      "public_sources",
+      "specified_python_runtime"
+    ],
+    "forbidden_access_performed": false,
+    "version_mapping_accessed": false,
+    "other_reviews_accessed": false,
+    "causal_version_judgement": false
+  },
+  "budget": {
+    "web_max": 8,
+    "web_actual": 8,
+    "other_max": 10,
+    "other_actual_including_final_save": 10,
+    "exec_command_calls": 9,
+    "write_stdin_calls": 1,
+    "first_prompt_read_counted": true,
+    "failed_calls_counted": true,
+    "functions_wrappers_counted": false,
+    "internal_http_requests_counted_as_separate_tools": false,
+    "internal_http_attempts": 3,
+    "final_save_is_other_call": 10
+  },
+  "other_call_log": [
+    {
+      "n": 1,
+      "operation": "Read full method-review-prompt.txt",
+      "status": "success"
+    },
+    {
+      "n": 2,
+      "operation": "rg --files inventory of blind bundle only",
+      "status": "success"
+    },
+    {
+      "n": 3,
+      "operation": "Read README, manifest, selected metadata and P/Q answer/code/log/results",
+      "status": "output_truncated"
+    },
+    {
+      "n": 4,
+      "operation": "Read P answer and code in full plus result artifacts",
+      "status": "later_csv_output_truncated; main text and code complete"
+    },
+    {
+      "n": 5,
+      "operation": "Read Q answer in full, P operation log, inspect input schema",
+      "status": "partial_success then AttributeError on TimePeriods list"
+    },
+    {
+      "n": 6,
+      "operation": "Copy blind bundle using tempfile default and run both scripts, compare all CSV outputs",
+      "status": "success; path did not satisfy literal /tmp instruction"
+    },
+    {
+      "n": 7,
+      "operation": "Copy complete bundle explicitly to /tmp, rerun both, independently verify cells/risk, city counterexample, data quality and definitions",
+      "status": "success"
+    },
+    {
+      "n": 8,
+      "operation": "Fetch three public sources: Wakefield PDF, Glynn BioC XML, official frozen GitHub tree; pdftotext installed executable",
+      "status": "running session; two HTTP successes and one429"
+    },
+    {
+      "n": 9,
+      "operation": "write_stdin completion for source fetch session",
+      "status": "success"
+    },
+    {
+      "n": 10,
+      "operation": "Read downloaded Wakefield section3.7 and assert key conditions, save METHOD-REVIEW.md and operations JSON with same-call readback check",
+      "status": "success_if_same_call_assertions_pass"
+    }
+  ],
+  "web_call_log": [
+    {
+      "n": 1,
+      "operation": "Open Wakefield, Glynn, official frozen repo, NYCHVS2023 guide",
+      "result": "Wakefield timeout; PMC captcha; repo restricted; guide PDF success"
+    },
+    {
+      "n": 2,
+      "operation": "Search direct method sources and official indicator definitions",
+      "result": "Primary Wakefield and Glynn indexed text/abstract; official story result; no exact indicator definition success yet"
+    },
+    {
+      "n": 3,
+      "operation": "Open indexed Wakefield/Glynn, Romitti, Li; find guide AC/PUMA/ACUSE",
+      "result": "Four primary body opens blocked/error; guide AC definitions retrieved; PUMA/ACUSE no matches"
+    },
+    {
+      "n": 4,
+      "operation": "Targeted primary paper search for methods",
+      "result": "Li original Methods incl equations1–4 returned; Romitti publisher abstract"
+    },
+    {
+      "n": 5,
+      "operation": "Open alternate Wakefield URL/Citeseer, official raw metadata, alternate NCBI route",
+      "result": "Wakefield URL inaccessible; Citeseer403; metadata full web index available; NCBI captcha"
+    },
+    {
+      "n": 6,
+      "operation": "Targeted search original method3.7 and surveys; find four official indicators",
+      "result": "Wakefield3.7 equations13–14 and true-fraction/model distinction returned; official indicator locations found"
+    },
+    {
+      "n": 7,
+      "operation": "Open official calculation definition passages and search guide geography/address fields",
+      "result": "Four original definitions verified; geography queries do not establish address-level public linkage"
+    },
+    {
+      "n": 8,
+      "operation": "Targeted Glynn primary sections and Council open",
+      "result": "Glynn section2 bounds and section7/table2 indexed primary text retrieved; Council body open failed"
+    }
+  ],
+  "source_reading_levels": {
+    "method-review-prompt": "full text on first call",
+    "P_answer_and_code": "full text; separate followup overcame combined-output truncation",
+    "Q_answer_and_code": "full text; Q code visible in initial output, Q answer reread fully",
+    "P_Q_results_quality_logs": "results programmatically fully compared; quality and budget logs read; P log refers sources.json absent from blind inventory, Q log contains budget only",
+    "P_Q_CSVs": "all eight parsed and row-for-row compared after rerun; not every row manually interpreted",
+    "method_input": "all files hash-verified via both scripts; input data computationally parsed in full; definition fields read; TimePeriods four used values checked; LICENSE content not legally reviewed",
+    "official_frozen_metadata": {
+      "url": "https://raw.githubusercontent.com/nychealth/EHDP-data/d3558441d122b4db4b9fd4d2011be500df6b584a/indicators/metadata/metadata_pretty.json",
+      "level": "full indexed resource available; selected four calculation-definition passages read"
+    },
+    "Wakefield2004": {
+      "url": "https://www.stat.purdue.edu/~chuanhai/teaching/Stat598A/Wakefield_Ecology.pdf",
+      "level": "PDF fetched successfully via urllib and extracted with existing pdftotext; section3.7 text checked; indexed primary section3.7 and publisher abstract read; not entire61page PDF read",
+      "local_copy": "/tmp/method-review-037i7x1h/public-sources/wakefield.pdf",
+      "export_note": "Long extracted source passage omitted from public export; original reading-level and verification records retained."
+    },
+    "GlynnWakefield2010": {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2885825/",
+      "level": "Direct webpage blocked by captcha and BioC429; primary indexed section2, abstract/introduction and section7/table2 read; exact section3 equation7 attribution not completely verified"
+    },
+    "Li2024": {
+      "url": "https://www.nature.com/articles/s41467-024-51355-0",
+      "level": "Direct open failed; original indexed Methods and equations1–4 read, selected sensitivity text read; not supplement full read"
+    },
+    "Romitti2022": {
+      "url": "https://academic.oup.com/pnasnexus/article/1/4/pgac210/6713629",
+      "level": "Direct body failed; publisher abstract read; full mixed model and limitation claims not independently verified"
+    },
+    "NYCHVS2023guide": {
+      "url": "https://www.nyc.gov/assets/hpd/downloads/pdfs/about/2023-nychvs-puf-user-guide-codebook.pdf",
+      "level": "Selected original PDF passages pp1–5,32,83,84,318 read; full guide not read; no PUF downloaded"
+    },
+    "Rosenthal2014": "Cited by both candidates; reviewer did not read full paper; detailed model/section assertion unverified",
+    "NYCCouncilHeatCoolingEquity": "Open failed; map contents not independently verified",
+    "official_repo_public_tree": "GitHub public tree fetched to locate public frozen metadata; never used to access private/original author directories"
+  },
+  "failures_and_corrections": [
+    "Combined reading output truncated; main P and Q text/code recovered separately.",
+    "Auxiliary schema print call5 raised AttributeError because TimePeriods is list; repaired by proper list inspection in call6/call7.",
+    "First reproduction copy used system temporary directory /var/folders instead of requested /tmp; fully repeated correct copy and runs in /tmp before substantive validation.",
+    "Multiple web primary page opens failed, timed out, were forbidden or captcha protected; all web calls included in budget.",
+    "Glynn BioC XML HTTP429; did not claim full-body read; primary indexed passages used.",
+    "No match for guide PUMA/ACUSE/SUBBORO/NEIGH; these searches alone do not prove geography absence."
+  ],
+  "reproduction": {
+    "interpreter": "{PYTHON_ENV}",
+    "correct_blind_copy": "/tmp/method-review-037i7x1h/method-blind",
+    "P_exit": 0,
+    "Q_exit": 0,
+    "P_results_equal": true,
+    "Q_results_equal_except_runtime_seconds": true,
+    "CSV_row_equality": {
+      "P/coverage.csv": 49,
+      "P/district_comparison.csv": 42,
+      "P/borough_context.csv": 10,
+      "P/hypothetical_joint_tables.csv": 84,
+      "Q/regional-screen.csv": 42,
+      "Q/conditional-bounds.csv": 210,
+      "Q/hypothetical-couplings.csv": 84,
+      "Q/excluded-duplicate-records.csv": 2
+    },
+    "original_blind_bundle_modified": false,
+    "independent_probability_checks": {
+      "P_Hunts_RD": [
+        -0.27564202334630306,
+        0.09534320323014811
+      ],
+      "Q_Hunts_RD": [
+        -0.6002400960384154,
+        0.6002400960384153
+      ],
+      "cell_formula_check_pairs": 6,
+      "city_counterexample": {
+        "equal_N": [
+          1,
+          1
+        ],
+        "p": [
+          0.9,
+          0.1
+        ],
+        "q": [
+          0.9,
+          0.1
+        ],
+        "city_RD_bounds": [
+          0.6,
+          1.0
+        ],
+        "each_local_RD_contains_zero": true
+      }
+    },
+    "raw_quality": {
+      "AC_rows": 958,
+      "AC_missing": 60,
+      "conflicting_Subboro31_2023_781": [
+        89.4957,
+        95.6475
+      ],
+      "UHF2014_n": 42,
+      "UHF2017_n": 42,
+      "UHF_CI_available_both": 0,
+      "UHF2014_flagged": 13,
+      "UHF2017_flagged": 25,
+      "PUMA2020_2023_n": 55,
+      "PUMA2020_2023_missing": 20,
+      "historical_AC_complement_max_abs_pct": 0.1
+    }
+  },
+  "assessment": {
+    "separate_dimensions": true,
+    "total_score": null,
+    "new_algorithm_demonstrated": {
+      "P": false,
+      "Q": false
+    },
+    "necessary_method_development_preserved": {
+      "P": true,
+      "Q": true
+    },
+    "actual_joint_household_measurement": {
+      "P": false,
+      "Q": false
+    },
+    "contemporary_intervention_priority_validated": {
+      "P": false,
+      "Q": false
+    },
+    "publication_novelty": "not established; targeted search is not exhaustive"
+  },
+  "outputs": [
+    "METHOD-REVIEW.md",
+    "method-review-operations.json"
+  ]
+}

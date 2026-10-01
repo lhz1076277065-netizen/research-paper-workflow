@@ -1,0 +1,175 @@
+{
+  "n_geographic_units": 42,
+  "independence": "42 spatial districts, not independent households; no iid p-values or intervals",
+  "time": {
+    "AC_and_vegetation": 2017,
+    "LST": "July 17, 2018 daytime Landsat spatial mean"
+  },
+  "no_ac_percent_range": [
+    2.200000000000003,
+    20.900000000000006
+  ],
+  "land_vegetation_percent_range": [
+    11.0,
+    63.0
+  ],
+  "AC_small_sample_flags": 25,
+  "AC_intervals": "none supplied; plug-in summaries do not represent survey uncertainty",
+  "sensitivity_unflagged_only": {
+    "n": 17,
+    "no_ac_vs_vegetation": 0.20949054983348953
+  },
+  "spearman_descriptive": {
+    "no_ac_vs_vegetation": 0.0535243644573455,
+    "no_ac_vs_one_day_LST": 0.16160797835480983,
+    "vegetation_vs_one_day_LST": -0.3897277320346168
+  },
+  "top10_no_ac_fraction": [
+    {
+      "GeoID": 105,
+      "Name": "Crotona - Tremont"
+    },
+    {
+      "GeoID": 106,
+      "Name": "High Bridge - Morrisania"
+    },
+    {
+      "GeoID": 410,
+      "Name": "Rockaways"
+    },
+    {
+      "GeoID": 107,
+      "Name": "Hunts Point - Mott Haven"
+    },
+    {
+      "GeoID": 302,
+      "Name": "Central Harlem - Morningside Heights"
+    },
+    {
+      "GeoID": 303,
+      "Name": "East Harlem"
+    },
+    {
+      "GeoID": 103,
+      "Name": "Fordham - Bronx Pk"
+    },
+    {
+      "GeoID": 203,
+      "Name": "Bedford Stuyvesant - Crown Heights"
+    },
+    {
+      "GeoID": 408,
+      "Name": "Jamaica"
+    },
+    {
+      "GeoID": 102,
+      "Name": "Northeast Bronx"
+    }
+  ],
+  "top10_land_vegetation_deficit": [
+    {
+      "GeoID": 306,
+      "Name": "Chelsea - Clinton"
+    },
+    {
+      "GeoID": 307,
+      "Name": "Gramercy Park - Murray Hill"
+    },
+    {
+      "GeoID": 308,
+      "Name": "Greenwich Village - SoHo"
+    },
+    {
+      "GeoID": 201,
+      "Name": "Greenpoint"
+    },
+    {
+      "GeoID": 107,
+      "Name": "Hunts Point - Mott Haven"
+    },
+    {
+      "GeoID": 211,
+      "Name": "Williamsburg - Bushwick"
+    },
+    {
+      "GeoID": 401,
+      "Name": "Long Island City - Astoria"
+    },
+    {
+      "GeoID": 106,
+      "Name": "High Bridge - Morrisania"
+    },
+    {
+      "GeoID": 202,
+      "Name": "Downtown - Heights - Slope"
+    },
+    {
+      "GeoID": 305,
+      "Name": "Upper East Side"
+    }
+  ],
+  "top10_ecological_product_p_times_one_minus_g": [
+    {
+      "GeoID": 105,
+      "Name": "Crotona - Tremont"
+    },
+    {
+      "GeoID": 106,
+      "Name": "High Bridge - Morrisania"
+    },
+    {
+      "GeoID": 107,
+      "Name": "Hunts Point - Mott Haven"
+    },
+    {
+      "GeoID": 302,
+      "Name": "Central Harlem - Morningside Heights"
+    },
+    {
+      "GeoID": 410,
+      "Name": "Rockaways"
+    },
+    {
+      "GeoID": 303,
+      "Name": "East Harlem"
+    },
+    {
+      "GeoID": 203,
+      "Name": "Bedford Stuyvesant - Crown Heights"
+    },
+    {
+      "GeoID": 211,
+      "Name": "Williamsburg - Bushwick"
+    },
+    {
+      "GeoID": 204,
+      "Name": "East New York"
+    },
+    {
+      "GeoID": 103,
+      "Name": "Fordham - Bronx Pk"
+    }
+  ],
+  "overlap_no_ac_vs_land_deficit": 2,
+  "overlap_no_ac_vs_product": 8,
+  "world_result": "42/42 districts permit both 0 and 1 subgroup opportunity in the constructed same-household marginal scenario q=.5; q is not observed",
+  "identification": "Land-area vegetation g is not household opportunity q. Without a link between them, observed g imposes no household joint-marginal restriction. Constructed worlds prove ambiguity, not actual harm or actual exposure.",
+  "inputs": {
+    "2141.json": "022861accc1a96b72c45593c9e89621bb87b87c77523706e873eb6bd0f2c374d",
+    "2143.json": "fb41926f7482fdc9ddc1206a02beec67f1f243b307206ef429dac30799a0255f",
+    "2157.json": "eb3ab3b91cad781b3244ff853d658e96b6b45788465ebebbc6445511aea51c01",
+    "2185.json": "872f8893e455b14c2790ae1f766c99d4f30f844d729e5b0e36cb67ba13a8b4c8",
+    "GeoLookup.json": "8f90a584c4421a0b4501a7ff0de609d69f43b7aa38e2e519c5bc164f7e5c053f",
+    "TimePeriods.json": "200dde628c2d60b90b71b9624ae8af1633f59c41bcf958129da1283dcc2e885e",
+    "commit.json": "79657472c844d38f73165e19173916b380966607dd08a38b535237fcd2dcb451",
+    "metadata.json": "cfde653128a7a8b569af817bc7955ecb62372ba82ebc57d7f24e00260da2750e",
+    "repo.json": "b0a6a69fed99cd04d99be2cd65d4447893c361ba46383f434ea8feee2a11d8e4"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "checks": "20 common-household marginal cases agree with LP; joins unique, finite, complete; constructed marginals exact; monotone probability rank invariant"
+}
