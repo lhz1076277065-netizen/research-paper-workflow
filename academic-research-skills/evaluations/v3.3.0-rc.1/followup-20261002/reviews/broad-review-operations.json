@@ -1,0 +1,299 @@
+{
+  "reviewer": "independent anonymous broad reviewer",
+  "date": "2026-10-02",
+  "blind_labels": [
+    "M",
+    "N"
+  ],
+  "identity_mapping_known": false,
+  "scope": {
+    "allowed_reads": [
+      "reviews/broad-review-prompt.txt",
+      "reviews/broad-blind/M/*",
+      "reviews/broad-blind/N/*",
+      "related public sources",
+      "reviewer-created scratch verification files"
+    ],
+    "forbidden_reads_performed": false,
+    "original_author_files_modified": false,
+    "version_causal_conclusion": false,
+    "combined_score": false
+  },
+  "budget": {
+    "limits": {
+      "web__run": 8,
+      "other_bottom_tools": 10
+    },
+    "used_including_final_save": {
+      "web__run": 8,
+      "other_bottom_tools": 10
+    },
+    "functions_wrappers_counted": false,
+    "HTTP_requests_inside_shell_count_as_separate_tools": false
+  },
+  "other_operations": [
+    {
+      "n": 1,
+      "tool": "exec_command",
+      "action": "Read complete reviewer prompt"
+    },
+    {
+      "n": 2,
+      "tool": "exec_command",
+      "action": "rg --files only within broad-blind"
+    },
+    {
+      "n": 3,
+      "tool": "exec_command",
+      "action": "Read both answers/read-level declarations/scripts/results; inspect M schedules and N samples; raw NOAA schema/extent; tool display truncated middle"
+    },
+    {
+      "n": 4,
+      "tool": "exec_command",
+      "action": "Reread N answer and reading-and-limits completely after previous output truncation"
+    },
+    {
+      "n": 5,
+      "tool": "exec_command",
+      "action": "Copy M/N into own /tmp work directory; rerun scripts; compare saved outputs; fetch seven related public sources with urllib; returned running session"
+    },
+    {
+      "n": 6,
+      "tool": "write_stdin",
+      "action": "Poll existing execution session once, completed successfully"
+    },
+    {
+      "n": 7,
+      "tool": "exec_command",
+      "action": "Extract public PDFs via native PDFKit; render selected AccessiCity pages; inspect Li methods/Meade XML; verify fresh public NOAA selected records"
+    },
+    {
+      "n": 8,
+      "tool": "view_image",
+      "action": "Actually visually inspect composite of published AccessiCity page6 and reference page22"
+    },
+    {
+      "n": 9,
+      "tool": "exec_command",
+      "action": "Inspect AccessiCity method/algorithm passages omitted by earlier output truncation; fetch MAG/IBO/OUP; extract IBO historical figures; validate M schedule extent/status"
+    },
+    {
+      "n": 10,
+      "tool": "exec_command",
+      "action": "Final save of review and operation record; assert files nonempty, parse JSON and report SHA256 within same call"
+    }
+  ],
+  "web_operations": [
+    {
+      "n": 1,
+      "action": "Open AccessiCity reference/published landing, Freire institution abstract and Meade XML",
+      "outcome": "Access and XML web paths failed; Freire abstract succeeded"
+    },
+    {
+      "n": 2,
+      "action": "Open NYC/Phoenix official announcements, CDC report and EuropePMC article",
+      "outcome": "Official announcements and CDC succeeded; EuropePMC failed"
+    },
+    {
+      "n": 3,
+      "action": "Search Woo/Derakhshan/Watkins DOI and continuous-stay nearest neighbors",
+      "outcome": "Primary publisher/institution/UCLA PDF sources found; secondary sources not relied on"
+    },
+    {
+      "n": 4,
+      "action": "Open focused Phoenix and CDC sections, Dearman, MAG PDF",
+      "outcome": "Phoenix/CDC succeeded; OUP minimal page identified; MAG PDF recognized but substantive full text not displayed"
+    },
+    {
+      "n": 5,
+      "action": "Open Woo institutional repository and UCLA Derakhshan full PDF; find Dearman 2024 and MAG two",
+      "outcome": "Woo page required JS, search content available; UCLA full PDF succeeded; finds failed"
+    },
+    {
+      "n": 6,
+      "action": "Open npj aims and IBO PDF; retry MAG text; primary search of Woo weather/budget",
+      "outcome": "Aims/IBO/Woo primary text succeeded; MAG retry failed"
+    },
+    {
+      "n": 7,
+      "action": "Search publisher Dearman and MAG exact standard phrases; find case-study scope statement",
+      "outcome": "Dearman methods/results and exact journal policy exposed by primary source; MAG detail not recovered"
+    },
+    {
+      "n": 8,
+      "action": "Attempt MAG PDF page2/page3 screenshots",
+      "outcome": "Both failed, content type not resolved as PDF"
+    }
+  ],
+  "scratch_directory": "/tmp/broad-review-20261002",
+  "verified_results": {
+    "script_runs": {
+      "M": {
+        "returncode": 0,
+        "stderr": "",
+        "output_exact_match": {
+          "core-results.json": true
+        }
+      },
+      "N": {
+        "returncode": 0,
+        "stderr": "",
+        "output_exact_match": {
+          "pilot-results.json": true,
+          "july-sunday-observations.csv": true
+        }
+      }
+    },
+    "fresh_public_noaa": {
+      "swift_returncode": 0,
+      "public_noaa_rows": 7962,
+      "selected": 95,
+      "saved_samples_exact": true
+    },
+    "M_schedule": {
+      "rows": 24,
+      "centers": 8,
+      "dates": [
+        "2026-07-03",
+        "2026-07-04",
+        "2026-07-05"
+      ],
+      "hours": "12:00 to 24:00",
+      "record_status": "official_announced_not_observed"
+    },
+    "AccessiCity_visual": {
+      "published_pages": 15,
+      "reference_pages": 26,
+      "viewed_published_page": 6,
+      "viewed_reference_page": 22,
+      "figure4_and_figure5_concordant": true,
+      "historical_author_image_viewing_authenticated": false
+    },
+    "N35C": {
+      "hot_samples": 50,
+      "open_eligible": 29,
+      "stay70_eligible": 23,
+      "relative_loss": 0.20689655172413793,
+      "loss_as_share_all_hot_samples": 0.12,
+      "post22_samples": 8,
+      "post22_at_least35": 6
+    }
+  },
+  "downloads": {
+    "runs": {
+      "M": {
+        "returncode": 0,
+        "stderr": "",
+        "output_exact_match": {
+          "core-results.json": true
+        }
+      },
+      "N": {
+        "returncode": 0,
+        "stderr": "",
+        "output_exact_match": {
+          "pilot-results.json": true,
+          "july-sunday-observations.csv": true
+        }
+      }
+    },
+    "downloads": [
+      {
+        "file": "access-reference.pdf",
+        "url": "https://www.nature.com/articles/s42949-026-00356-7_reference.pdf",
+        "final_url": "https://www.nature.com/articles/s42949-026-00356-7_reference.pdf?error=cookies_not_supported&code=79ce2e20-b778-4841-b642-eb7ea62ba44a",
+        "bytes": 4294987,
+        "sha256": "ffa693a2b722a4109fc9dc2d970b50b379fdaa7826fc60ce91a0b33528e4960d",
+        "success": true
+      },
+      {
+        "file": "access-published.pdf",
+        "url": "https://www.nature.com/articles/s42949-026-00356-7.pdf",
+        "final_url": "https://www.nature.com/articles/s42949-026-00356-7.pdf?error=cookies_not_supported&code=7a942fe7-2815-43d2-85ff-d7822a0d9774",
+        "bytes": 4124576,
+        "sha256": "64865833c3f40d74bbd209771d90188d7a38516eaad941cc23036276533ee037",
+        "success": true
+      },
+      {
+        "file": "meade.xml",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10234508/fullTextXML",
+        "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10234508/fullTextXML",
+        "bytes": 261472,
+        "sha256": "8e3e2ace21aacc2f39d18318cafd1dc7759631aab6a969d1ffb471ce4dd524f7",
+        "success": true
+      },
+      {
+        "file": "nyc.html",
+        "url": "https://home4.nyc.gov/site/em/about/press-releases/20260701_pr_NYCEM-Mayor-Mamdani-Expands-Emergency-Heat-Measures.page",
+        "final_url": "https://home4.nyc.gov/site/em/about/press-releases/20260701_pr_NYCEM-Mayor-Mamdani-Expands-Emergency-Heat-Measures.page",
+        "bytes": 37807,
+        "sha256": "1e4d1995efdf0f9035580fb27988100a551cfed1f5d18afffc18880f392b73bd",
+        "success": true
+      },
+      {
+        "file": "phoenix.html",
+        "url": "https://www.phoenix.gov/newsroom/heat-news/city-of-phoenix-opens-heat-relief-locations-to-keep-residents-sa.html",
+        "final_url": "https://www.phoenix.gov/newsroom/heat-news/city-of-phoenix-opens-heat-relief-locations-to-keep-residents-sa.html",
+        "bytes": 260122,
+        "sha256": "ba47b6cadf19d4a2cedbfe6f31ed2216b86a999a157bb4301029dbbe34d2ce29",
+        "success": true
+      },
+      {
+        "file": "noaa.csv",
+        "url": "https://www.ncei.noaa.gov/data/global-hourly/access/2025/72278023183.csv",
+        "final_url": "https://www.ncei.noaa.gov/data/global-hourly/access/2025/72278023183.csv",
+        "bytes": 4330991,
+        "sha256": "588ad70bcef0393ae3e1a6c1c66bda6d37e05952c996e7a5257c2ecbd22ba56a",
+        "success": true
+      },
+      {
+        "file": "li.pdf",
+        "url": "https://www.nature.com/articles/s41467-024-51355-0.pdf",
+        "final_url": "https://www.nature.com/articles/s41467-024-51355-0.pdf?error=cookies_not_supported&code=59390a74-cbfb-4a76-9f81-d4a5539ac004",
+        "bytes": 3639026,
+        "sha256": "2085f64723e5e85120d3f979174acc8e0b294ca7553907f94e47e08de9804c68",
+        "success": true
+      }
+    ],
+    "extra_downloads": [
+      {
+        "file": "mag.pdf",
+        "url": "https://azmag.gov/portals/0/Heat-Relief/2026/Site-Standards-Expectations-%28Updated-4-8-26%29.pdf",
+        "success": false,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "file": "ibo.pdf",
+        "url": "https://www.ibo.nyc.gov/assets/ibo/downloads/pdf/environment/2025/2025-october-cooling-centers-how-nyc-beats-the-heat.pdf",
+        "final_url": "https://www.ibo.nyc.gov/assets/ibo/downloads/pdf/environment/2025/2025-october-cooling-centers-how-nyc-beats-the-heat.pdf",
+        "bytes": 2620408,
+        "success": true
+      },
+      {
+        "file": "dearman.html",
+        "url": "https://academic.oup.com/oocc/article/5/1/kgaf020/8203398",
+        "success": false,
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ]
+  },
+  "limitations": [
+    "Not a systematic exhaustive novelty search",
+    "MAG2h service-standard detail not independently confirmed",
+    "Woo/Watkins full model not reviewed",
+    "Freire abstract only",
+    "Original authors historical tool use not independently authenticated",
+    "No actual network routing, admissions, visits or causal health validation",
+    "No version mapping or sampling parameter inference"
+  ],
+  "judgments": {
+    "communication": "comparable; N CDC median-to-majority overstatement",
+    "novelty": "N nearest-neighbor localization improved; established scientific increment comparable and provisional",
+    "design": "comparable with distinct strengths; M matched-budget ranking clearer, N special-population weights unresolved",
+    "actions": "N performed evidence more informative because threshold and sampling phase constrained scheduling assumptions; next-action priority comparable"
+  },
+  "outputs": {
+    "review": "{ACCEPTANCE_ROOT}/reviews/BROAD-REVIEW.md",
+    "operations": "{ACCEPTANCE_ROOT}/reviews/broad-review-operations.json"
+  }
+}

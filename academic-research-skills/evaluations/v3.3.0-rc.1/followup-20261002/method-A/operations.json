@@ -1,0 +1,712 @@
+{
+  "task": "method-A independent acceptance",
+  "restrictions": {
+    "allowed_read_roots": [
+      "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0",
+      "{ACCEPTANCE_ROOT}/method-input",
+      "{ACCEPTANCE_ROOT}/method-A"
+    ],
+    "public_external_sources": "allowed",
+    "specified_python": "{PYTHON_ENV}",
+    "other_acceptance_outputs_read": false,
+    "root_research_read": false,
+    "agents_contacted": false,
+    "model_changed": false,
+    "dependencies_added": false
+  },
+  "model": {
+    "model_id": "unknown",
+    "sampling_parameters": "unknown",
+    "reason": "tool未披露，不由提示或环境命名推断"
+  },
+  "budget": {
+    "limits": {
+      "web__run": 18,
+      "other_underlying_calls": 18
+    },
+    "used": {
+      "web__run": 8,
+      "other_underlying_calls": 15
+    },
+    "final_check_reserved": 0,
+    "functions_exec_wrappers_counted": false,
+    "internal_http_requests_in_exec": "listed as acquisitions; one exec_command call counts once under task rule",
+    "remaining": {
+      "web__run": 10,
+      "other_underlying_calls": 3
+    }
+  },
+  "operations": [
+    {
+      "order": 1,
+      "tool": "exec_command",
+      "summary": "首次完整读取 method-A-prompt.txt",
+      "other_call": 1
+    },
+    {
+      "order": 2,
+      "tool": "exec_command",
+      "summary": "尝试冻结根目录 research-paper-workflow/SKILL.md；列出method-input文件",
+      "other_call": 2,
+      "failure": "SKILL路径不存在；随后在冻结包中定位skills子目录"
+    },
+    {
+      "order": 3,
+      "tool": "exec_command",
+      "summary": "rg --files冻结A包；读取README.md、manifest.json",
+      "other_call": 3,
+      "limitation": "包路径列表输出被截断；没有读取其中测试结果或其他验收内容"
+    },
+    {
+      "order": 4,
+      "tool": "exec_command",
+      "summary": "完整读research-paper-workflow/SKILL.md及metadata-selected.json；Python查看四数据和字典结构",
+      "other_call": 4
+    },
+    {
+      "order": 5,
+      "tool": "exec_command",
+      "summary": "读主线、质量、provider-policy及四路由SKILL；核时期、覆盖、CI、警示、Borough数据",
+      "other_call": 5
+    },
+    {
+      "order": 6,
+      "tool": "web__run",
+      "summary": "发现最近应用、生态推断原文及树冠来源",
+      "web_call": 1,
+      "arguments": {
+        "search_query": [
+          {
+            "q": "New York City heat vulnerability index air conditioning tree canopy Madrigano neighborhood heat mortality 2015 2017"
+          },
+          {
+            "q": "ecological inference bounds aggregate data Duncan Davis 1953 original paper statistical methods sociology"
+          },
+          {
+            "q": "High-resolution tree canopy mapping for New York City using LiDAR and object-based image analysis 2012 MacFaden full text"
+          }
+        ],
+        "response_length": "long"
+      }
+    },
+    {
+      "order": 7,
+      "tool": "web__run",
+      "summary": "打开应用及生态推断来源，检索Duncan-Davis与MacFaden",
+      "web_call": 2,
+      "arguments": {
+        "open": [
+          {
+            "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/4492264/"
+          },
+          {
+            "ref_id": "https://pubmed.ncbi.nlm.nih.gov/25199872/"
+          },
+          {
+            "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC33746/"
+          }
+        ],
+        "search_query": [
+          {
+            "q": "\"An Alternative to Ecological Correlation\" Duncan Davis 1953 pdf"
+          },
+          {
+            "q": "\"High-resolution tree canopy mapping\" \"063567\" pdf site:uvm.edu"
+          }
+        ],
+        "response_length": "long"
+      },
+      "failures": [
+        "PMC4492264与PMC33746返回浏览器验证码页"
+      ]
+    },
+    {
+      "order": 8,
+      "tool": "web__run",
+      "summary": "尝试全文入口；PubMed核查作者定义与PMCID",
+      "web_call": 3,
+      "arguments": {
+        "open": [
+          {
+            "ref_id": "https://europepmc.org/articles/PMC4492264"
+          },
+          {
+            "ref_id": "https://europepmc.org/articles/PMC33746"
+          },
+          {
+            "ref_id": "https://www.jstor.org/stable/2088122"
+          },
+          {
+            "ref_id": "https://gking.harvard.edu/files/ei-book.pdf"
+          },
+          {
+            "ref_id": "https://doi.org/10.1117/1.JRS.6.063567"
+          }
+        ],
+        "find": [
+          {
+            "ref_id": "turn101view1",
+            "pattern": "PMC"
+          },
+          {
+            "ref_id": "turn101view1",
+            "pattern": "Abstract"
+          }
+        ],
+        "response_length": "long"
+      },
+      "failures": [
+        "两EuropePMC、KingPDF、MacFaden DOI内部错误",
+        "JSTOR无可读正文"
+      ]
+    },
+    {
+      "order": 9,
+      "tool": "exec_command",
+      "summary": "读设计/执行/文献protocol及推导示例；建立route.md；从EuropePMC REST获取XML",
+      "other_call": 6,
+      "acquisitions": [
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4348023/fullTextXML",
+          "status": "HTTP500"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4492264/fullTextXML",
+          "status": "saved",
+          "bytes": 99547
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC33746/fullTextXML",
+          "status": "HTTP500"
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "tool": "exec_command",
+      "summary": "读method-routing、Madrigano全文方法/讨论；尝试作者PDF并获取PMC原文HTML",
+      "other_call": 7,
+      "acquisitions": [
+        {
+          "url": "https://gking.harvard.edu/files/ei-book.pdf",
+          "status": "aborted at per-request cap; not used as full text",
+          "bytes_received": 10000001
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4348023/",
+          "status": "saved",
+          "bytes": 336895
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC33746/",
+          "status": "saved",
+          "bytes": 121968
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "tool": "exec_command",
+      "summary": "stdlib解析已取HTML；读Rosenthal方法与局限、Schuessler边界；42区2014实算预览",
+      "other_call": 8
+    },
+    {
+      "order": 12,
+      "tool": "web__run",
+      "summary": "扩展AC/绿色资源最近邻与反证，核官方HPD入口",
+      "web_call": 4,
+      "arguments": {
+        "search_query": [
+          {
+            "q": "\"air conditioning\" \"tree canopy\" \"household\" \"equity\" New York study"
+          },
+          {
+            "q": "\"air conditioning\" \"green space\" \"ecological inference\" heat"
+          },
+          {
+            "q": "\"An Alternative to Ecological Correlation\" filetype:pdf -site:researchgate.net -site:scispace.com -site:upcommons.upc.edu -site:citeseerx.ist.psu.edu"
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://www.nyc.gov/site/hpd/about/research.page"
+          }
+        ],
+        "response_length": "long"
+      }
+    },
+    {
+      "order": 13,
+      "tool": "web__run",
+      "summary": "打开Romitti、Wakefield与Gelman全文及HPD公共微数据文档入口",
+      "web_call": 5,
+      "arguments": {
+        "open": [
+          {
+            "ref_id": "https://academic.oup.com/pnasnexus/article/1/4/pgac210/6713629"
+          },
+          {
+            "ref_id": "https://www.stat.purdue.edu/~chuanhai/teaching/Stat598A/Wakefield_Ecology.pdf"
+          },
+          {
+            "ref_id": "https://sites.stat.columbia.edu/gelman/research/published/ecological.pdf"
+          },
+          {
+            "ref_id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4348023/"
+          }
+        ],
+        "find": [
+          {
+            "ref_id": "turn106view0",
+            "pattern": "2023 NYCHVS"
+          }
+        ],
+        "response_length": "long"
+      },
+      "failures": [
+        "WakefieldPDF内部错误",
+        "PMC验证码",
+        "GelmanPDF文本抽取乱码，未当作已深读"
+      ]
+    },
+    {
+      "order": 14,
+      "tool": "exec_command",
+      "summary": "2017空调—植被及2018温度预览；五Borough家庭权重背景实算",
+      "other_call": 9
+    },
+    {
+      "order": 15,
+      "tool": "web__run",
+      "summary": "读取Romitti原文方法、局限、资料声明；尝试Gelman关键词",
+      "web_call": 6,
+      "arguments": {
+        "find": [
+          {
+            "ref_id": "turn107view0",
+            "pattern": "Methods"
+          },
+          {
+            "ref_id": "turn107view0",
+            "pattern": "logistic"
+          },
+          {
+            "ref_id": "turn107view0",
+            "pattern": "Limitations"
+          },
+          {
+            "ref_id": "turn107view0",
+            "pattern": "Data availability"
+          },
+          {
+            "ref_id": "turn107view2",
+            "pattern": "Summary"
+          },
+          {
+            "ref_id": "turn107view2",
+            "pattern": "individual-level data"
+          },
+          {
+            "ref_id": "turn107view2",
+            "pattern": "surveys"
+          }
+        ],
+        "response_length": "long"
+      },
+      "limitation": "未找到关键词不等于全文中没有该概念"
+    },
+    {
+      "order": 16,
+      "tool": "exec_command",
+      "summary": "写并执行analyze.py；输入哈希、唯一键、42区比较、84次LP端点、假设表、Borough背景、results.json",
+      "other_call": 10,
+      "status": "exit0; assertions passed"
+    },
+    {
+      "order": 17,
+      "tool": "web__run",
+      "summary": "检索并核Wakefield原始题名年份；核Romitti公式；打开2023NYCHVS官方代码本",
+      "web_call": 7,
+      "arguments": {
+        "search_query": [
+          {
+            "q": "\"Ecological inference for 2 × 2 tables\" Wakefield 2004 pdf"
+          },
+          {
+            "q": "\"Ecological inference for 2\" \"Wakefield\" \"individual\" data"
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "turn107view0",
+            "lineno": 1
+          },
+          {
+            "ref_id": "turn107view0",
+            "lineno": 338
+          },
+          {
+            "ref_id": "turn107view2",
+            "lineno": 1
+          }
+        ],
+        "click": [
+          {
+            "ref_id": "turn106view0",
+            "id": 26
+          }
+        ],
+        "response_length": "long"
+      }
+    },
+    {
+      "order": 18,
+      "tool": "web__run",
+      "summary": "替代Wakefield全文尝试；查官方ACUNIT/CENTRALAIR/AC_OFF与空间字段",
+      "web_call": 8,
+      "arguments": {
+        "open": [
+          {
+            "ref_id": "https://citeseerx.ist.psu.edu/document?doi=daa82c38354a1982fd3cc5ebdb687140c3d05033&repid=rep1&type=pdf"
+          }
+        ],
+        "find": [
+          {
+            "ref_id": "turn110view3",
+            "pattern": "PUMA"
+          },
+          {
+            "ref_id": "turn110view3",
+            "pattern": "address"
+          },
+          {
+            "ref_id": "turn110view3",
+            "pattern": "AIRCON"
+          },
+          {
+            "ref_id": "turn110view3",
+            "pattern": "Air Conditioning"
+          }
+        ],
+        "response_length": "long"
+      },
+      "failures": [
+        "Citeseer全文内部错误"
+      ],
+      "limitation": "PUMA搜索无匹配不能证明公共微数据无空间变量"
+    },
+    {
+      "order": 19,
+      "tool": "exec_command",
+      "summary": "下载Wakefield原文和Romitti正文，调用已有pdftotext，不加依赖，读取方法与调查段",
+      "other_call": 11,
+      "acquisitions": [
+        {
+          "url": "https://www.stat.purdue.edu/~chuanhai/teaching/Stat598A/Wakefield_Ecology.pdf",
+          "status": "saved",
+          "bytes": 3493909
+        },
+        {
+          "url": "https://oup.silverchair-cdn.com/article-minimal/6713629",
+          "status": "saved",
+          "bytes": 325017
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "tool": "exec_command",
+      "summary": "读Wakefield边界/模型/个体资料定位，stdlib解析Romitti原文",
+      "other_call": 12
+    },
+    {
+      "order": 21,
+      "tool": "exec_command",
+      "summary": "读Wakefield3.7/表3/7节，核Romitti模型迁移与方程",
+      "other_call": 13
+    },
+    {
+      "order": 22,
+      "tool": "exec_command",
+      "summary": "保存answer.md、derivation.md、sources.json与operations.json，计算指导文件哈希及报告字数",
+      "other_call": 14
+    },
+    {
+      "order": 23,
+      "tool": "exec_command",
+      "other_call": 15,
+      "summary": "完善市级权重/信息价值/联合补测边界；最终检查JSON、42区表、84假设表、边际约束、报告汉字数、产物hash并保存checks.json",
+      "status": "checks passed"
+    }
+  ],
+  "skills": [
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/SKILL.md",
+      "relative_path": "research-paper-workflow/SKILL.md",
+      "version": "3.2.0",
+      "sha256": "2da05a8430e2f29470179ca7c27dc33e9c6fdcd9d5e48c06373f77ffc72c64c8",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/research-lifecycle.md",
+      "relative_path": "research-paper-workflow/references/research-lifecycle.md",
+      "version": "3.2.0",
+      "sha256": "076e24247c54da5fe52ee5e46bdaa93eaa5f9ebd7384eae6c969c96677a11c4d",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/research-quality.md",
+      "relative_path": "research-paper-workflow/references/research-quality.md",
+      "version": "3.2.0",
+      "sha256": "2be115bd99804b413426a96a194276afea8016960ac9ec30e2ace19a2f033019",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/provider-policy.md",
+      "relative_path": "research-paper-workflow/references/provider-policy.md",
+      "version": "3.2.0",
+      "sha256": "93bae0ddafd206329dfb0b8c2a1c0d822e61da33b941d59c8b9fe9daa2b11809",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/research-design/SKILL.md",
+      "relative_path": "research-design/SKILL.md",
+      "version": "3.2.0",
+      "sha256": "19e945762325604ed95695563b3cddea044bed5cf878a713f1c759a52f567acb",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/data-preparation/SKILL.md",
+      "relative_path": "data-preparation/SKILL.md",
+      "version": "3.2.0",
+      "sha256": "b22b18b796125bfdfa1f00bbed405f41e9509b335f58326aa71cc4fe1f22490f",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/literature-discovery/SKILL.md",
+      "relative_path": "literature-discovery/SKILL.md",
+      "version": "3.2.0",
+      "sha256": "ac1447dfd27e3eee4f49dac306cabb390ca7dcfc2417fed9df07d17f8a1ec0ef",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/analysis-execution/SKILL.md",
+      "relative_path": "analysis-execution/SKILL.md",
+      "version": "3.2.0",
+      "sha256": "f93b6c6b7e0aaa926e6f09c13018b9c0e09707af50708bede20cfa1ec5dd8816",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/research-design/references/protocol.md",
+      "relative_path": "research-design/references/protocol.md",
+      "version": "3.2.0",
+      "sha256": "b9c74ccf77ddcba09b8945fcb83c860e10012a3f459fbd942ceb18442729b89b",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/analysis-execution/references/protocol.md",
+      "relative_path": "analysis-execution/references/protocol.md",
+      "version": "3.2.0",
+      "sha256": "4eb7ddab7725354732f5622d4ea8c75f5543c7daad7822eaab934e5057f6e020",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/inference-examples.md",
+      "relative_path": "research-paper-workflow/references/inference-examples.md",
+      "version": "3.2.0",
+      "sha256": "7c9e9f97401d7997af41ac93acc43ef4a36a4ea041148b615b9d0813edc71814",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/literature-discovery/references/protocol.md",
+      "relative_path": "literature-discovery/references/protocol.md",
+      "version": "3.2.0",
+      "sha256": "5fcea696973ef9319579ddd4711dd4e78062412f26da7f5a18f1681d204ad3c6",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/versions/A/academic-research-skills-v3.2.0/skills/research-design/references/method-routing.md",
+      "relative_path": "research-design/references/method-routing.md",
+      "version": "3.2.0",
+      "sha256": "a77a05b210e54a0378453f8514d4e7b6264b826ddfdb7f99334adaaf48bb8061",
+      "reading_level": "full guidance text",
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    }
+  ],
+  "reading_levels": {
+    "prompt": "full",
+    "input_README_manifest_LICENSE": "README and manifest full; LICENSE read by hash verification, contents not legally summarized",
+    "input_metadata": "full",
+    "input_JSONs": "all rows parsed computationally; dictionary matched by types/IDs",
+    "skill_tree_inventory": "paths only; truncated output",
+    "papers": "see sources.json"
+  },
+  "download": {
+    "known_HTTP_bytes_received": 14377337,
+    "limit_bytes": 100000000,
+    "stopped_request": "King book stopped at 10,000,001 bytes per-request cap; not used",
+    "web_tool_transfer_bytes": "unknown; tool未披露",
+    "no_download_over_100MB_requested": true
+  },
+  "checks": {
+    "input_hashes": "all passed",
+    "one_to_one_join": "passed",
+    "LP_extrema": 84,
+    "tolerance": 1e-09,
+    "rerun_command": "{PYTHON_ENV} {ACCEPTANCE_ROOT}/method-A/analyze.py"
+  },
+  "scope": {
+    "actual": "official area-level comparisons; conditional mathematical bounds; labelled hypothetical joint constructions",
+    "not_completed": "real household joint measurement; effects of interventions; contemporary priority ranking; publication novelty claim"
+  },
+  "limits": [
+    "literature discovery is targeted, not systematic review",
+    "UHF has no AC confidence intervals in provided files",
+    "incompatible land and household supports",
+    "2014 canopy vs 2017 vegetation confounds time with construct",
+    "hypothetical tables do not reconstruct every published geography",
+    "borough household denominators recovered from rounded estimates",
+    "no raw geocoded household data or validated canopy-to-access calibration"
+  ],
+  "outputs": [
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/analyze.py",
+      "sha256": "0a8e8aec37860b08b24d665325b593d76d9f3f7f73e3a991c9ab9746f9815ffd",
+      "bytes": 6903
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/answer.md",
+      "sha256": "a0ac60d3aa2ed9bd750c51b9ea8c441ffdb1699647d218568cc85b187d0fc80c",
+      "bytes": 9077
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/borough_context.csv",
+      "sha256": "7f144a0568ffda845ac18331c773dacee79fbcbaaeff3686ec81155a453a9c7b",
+      "bytes": 1288
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/coverage.csv",
+      "sha256": "da53bf5cb5271535022becf77338e82040982272175ee72fcc6bcea5d1a31671",
+      "bytes": 1268
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/derivation.md",
+      "sha256": "4a314cc848b0cc25ce7be150276363817c0aff28d81c9777097dbec45afb69da",
+      "bytes": 2025
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/district_comparison.csv",
+      "sha256": "bf4015ef537c71f27015e51ca7069eb99fdf1a0ce4dda0835cea32d8da281578",
+      "bytes": 8227
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/hypothetical_joint_tables.csv",
+      "sha256": "c1758b3cb11ba4b45540455d9f0f24223fb703b06775d929eee7c9ecaf986055",
+      "bytes": 15787
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/results.json",
+      "sha256": "dd0f45ef3c704bbb343e699f2b742f4e1394ab31e684126cae96e5c018a56481",
+      "bytes": 3894
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/route.md",
+      "sha256": "4f06ade86231f79e04bd0f41f1d5584a77542b05994d1e7ab5dc4aed33ee7df1",
+      "bytes": 684
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/PMC4492264.txt",
+      "sha256": "bd8a47ea85b1323683fc0abc18c8ec9c6cb09d5536fb8dc801db9ac195b030fc",
+      "bytes": 47320
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/PMC4492264.xml",
+      "sha256": "33cabee6d184e20fac48cd9577921eb3fa11f834c01f967ae4b7243330a32c74",
+      "bytes": 99547
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/ecological-inference.html",
+      "sha256": "6c6925319a51471a64aec8372cc8ab0f289007411aee9fa37d71895024314ff2",
+      "bytes": 121968
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/ecological-inference.txt",
+      "sha256": "7dea0f86a86a5e8e05adc331ffef72c151262bbc0ff6e99c3ac25c10e3d1d3bf",
+      "bytes": 23547
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/romitti.html",
+      "sha256": "32b193233872310e64fe82ee20d4e323b618c102df656c88b5b469ccbcdbb3dd",
+      "bytes": 325017
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/romitti.txt",
+      "sha256": "f5644353cad0aae377f0f9b3b50368b98faa4b856de5e8c899c0613536ea3ba1",
+      "bytes": 75458
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/rosenthal.html",
+      "sha256": "aa18de5e29ad2f8f6ab887828ca22fe979afb49ea5977b11e0ef22971e862d27",
+      "bytes": 336895
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/rosenthal.txt",
+      "sha256": "1126ae2697dfb6f81f80f6f85616109bc0892f3a4efcc21a3acbecdcf978b143",
+      "bytes": 102420
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/wakefield.pdf",
+      "sha256": "32b431269eb18094fe0d07e65d47813a1723ba9c13244909be27f04737c645a5",
+      "bytes": 3493909
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources/wakefield.txt",
+      "sha256": "3cfb63f19f02bf4d2a16823eeb5ba9df21395ab3c3a34f56469d53cbffa6b649",
+      "bytes": 238548
+    },
+    {
+      "path": "{ACCEPTANCE_ROOT}/method-A/sources.json",
+      "sha256": "582937eeb915e41a68585309474cff9303dd6dc0f9b313d86efff6602ae526ba",
+      "bytes": 4583
+    }
+  ],
+  "completion": "report, reproducible calculations, sources and audit saved; scientific scope limited as stated"
+}

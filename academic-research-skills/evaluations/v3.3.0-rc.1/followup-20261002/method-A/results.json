@@ -1,0 +1,132 @@
+{
+  "source_commit": "d3558441d122b4db4b9fd4d2011be500df6b584a",
+  "n_UHF": 42,
+  "definitions": {
+    "no_ac": "100 minus measure 781; functioning AC, not affordability or usage",
+    "canopy": "land share, not household access",
+    "screen": "Pareto high no_AC and low published land cover; not intervention benefit or population count"
+  },
+  "comparison": {
+    "2014": {
+      "pearson": -0.2806932019972801,
+      "spearman": -0.21466774786856122,
+      "frontier": [
+        {
+          "GeoID": 107,
+          "Name": "Hunts Point - Mott Haven",
+          "no_ac2014": 25.700000000000003,
+          "canopy2014": 7.084
+        }
+      ],
+      "AC_CI_available": 0,
+      "AC_notes": 13
+    },
+    "2017": {
+      "pearson": -0.04391912501478956,
+      "spearman": 0.0535243644573455,
+      "frontier": [
+        {
+          "GeoID": 105,
+          "Name": "Crotona - Tremont",
+          "no_ac2017": 20.900000000000006,
+          "vegetation2017": 32.0
+        },
+        {
+          "GeoID": 106,
+          "Name": "High Bridge - Morrisania",
+          "no_ac2017": 17.599999999999994,
+          "vegetation2017": 21.0
+        },
+        {
+          "GeoID": 107,
+          "Name": "Hunts Point - Mott Haven",
+          "no_ac2017": 16.700000000000003,
+          "vegetation2017": 18.0
+        },
+        {
+          "GeoID": 201,
+          "Name": "Greenpoint",
+          "no_ac2017": 6.599999999999994,
+          "vegetation2017": 14.0
+        },
+        {
+          "GeoID": 306,
+          "Name": "Chelsea - Clinton",
+          "no_ac2017": 2.5,
+          "vegetation2017": 11.0
+        },
+        {
+          "GeoID": 307,
+          "Name": "Gramercy Park - Murray Hill",
+          "no_ac2017": 5.700000000000003,
+          "vegetation2017": 13.0
+        }
+      ],
+      "AC_CI_available": 0,
+      "AC_notes": 25
+    }
+  },
+  "borough_context": {
+    "2014": {
+      "all_household_context": 18.96772874112743,
+      "no_AC_context": 18.766418579001446,
+      "AC_context": 18.99337461311717,
+      "noAC_minus_AC_context_pp": -0.22695603411572307,
+      "warning": "assigned borough land context, not personal outdoor access; denominators recovered from rounded estimates"
+    },
+    "2017": {
+      "all_household_context": 32.960168523875645,
+      "no_AC_context": 33.0342515166714,
+      "AC_context": 32.95275888133031,
+      "noAC_minus_AC_context_pp": 0.08149263534108542,
+      "warning": "assigned borough land context, not personal outdoor access; denominators recovered from rounded estimates"
+    }
+  },
+  "hypothetical_Hunts_Point": [
+    {
+      "GeoID": 107,
+      "Name": "Hunts Point - Mott Haven",
+      "scenario": "hypothetical_household_marginal_bridge",
+      "endpoint": "lower",
+      "a": 0.257,
+      "b": 0.92916,
+      "j": 0.1861600000000001,
+      "A1Y1": 0.1861600000000001,
+      "A1Y0": 0.0708399999999999,
+      "A0Y1": 0.7429999999999999,
+      "A0Y0": 1.1102230246251565e-16,
+      "P_Y_given_A": 0.7243579766536968,
+      "delta": -0.27564202334630294
+    },
+    {
+      "GeoID": 107,
+      "Name": "Hunts Point - Mott Haven",
+      "scenario": "hypothetical_household_marginal_bridge",
+      "endpoint": "upper",
+      "a": 0.257,
+      "b": 0.92916,
+      "j": 0.257,
+      "A1Y1": 0.257,
+      "A1Y0": 0.0,
+      "A0Y1": 0.67216,
+      "A0Y0": 0.07084000000000001,
+      "P_Y_given_A": 1.0,
+      "delta": 0.09534320323014808
+    }
+  ],
+  "verification": {
+    "input_manifest": "passed",
+    "LP_extrema_checks": 84,
+    "independence_feasible": "42/42 hypothetical district margins",
+    "dependencies": {
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "seed": "none; deterministic",
+    "solver": "scipy.optimize.linprog/HiGHS default settings",
+    "tolerance": 1e-09
+  }
+}

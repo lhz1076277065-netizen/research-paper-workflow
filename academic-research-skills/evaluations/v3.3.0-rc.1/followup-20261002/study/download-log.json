@@ -1,0 +1,170 @@
+{
+  "repo": "nychealth/EHDP-data",
+  "default_branch": "production",
+  "commit": "d3558441d122b4db4b9fd4d2011be500df6b584a",
+  "requests": [
+    {
+      "url": "https://api.github.com/repos/nychealth/EHDP-data",
+      "file": "repo.json",
+      "status": 200,
+      "bytes": 6337,
+      "sha256": "b0a6a69fed99cd04d99be2cd65d4447893c361ba46383f434ea8feee2a11d8e4",
+      "started_utc": "2026-10-01T18:07:17.709537+00:00",
+      "finished_utc": "2026-10-01T18:07:19.065817+00:00",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"b0a6a69fed99cd04d99be2cd65d4447893c361ba46383f434ea8feee2a11d8e4\"",
+        "Last-Modified": "Thu, 01 Oct 2026 16:00:18 GMT"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/nychealth/EHDP-data/commits/production",
+      "file": "commit.json",
+      "status": 200,
+      "bytes": 4047,
+      "sha256": "79657472c844d38f73165e19173916b380966607dd08a38b535237fcd2dcb451",
+      "started_utc": "2026-10-01T18:07:19.065991+00:00",
+      "finished_utc": "2026-10-01T18:07:20.270195+00:00",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"79657472c844d38f73165e19173916b380966607dd08a38b535237fcd2dcb451\"",
+        "Last-Modified": "Thu, 01 Oct 2026 16:00:05 GMT"
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nychealth/EHDP-data/d3558441d122b4db4b9fd4d2011be500df6b584a/indicators/data/2185.json",
+      "file": "2185.json",
+      "status": 200,
+      "bytes": 62896,
+      "sha256": "872f8893e455b14c2790ae1f766c99d4f30f844d729e5b0e36cb67ba13a8b4c8",
+      "started_utc": "2026-10-01T18:07:20.270436+00:00",
+      "finished_utc": "2026-10-01T18:07:21.340794+00:00",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"b4fbcdc6ff31942a9b84430e3494ff03ab831b85ff220790c87780de5dfe88a1\"",
+        "Last-Modified": null
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nychealth/EHDP-data/d3558441d122b4db4b9fd4d2011be500df6b584a/indicators/data/2141.json",
+      "file": "2141.json",
+      "status": 200,
+      "bytes": 12345,
+      "sha256": "022861accc1a96b72c45593c9e89621bb87b87c77523706e873eb6bd0f2c374d",
+      "started_utc": "2026-10-01T18:07:21.341609+00:00",
+      "finished_utc": "2026-10-01T18:07:22.395012+00:00",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"bc55b8ce3b01521152f92b000bcaf616edc3f294f4e765a104c28f23384063c1\"",
+        "Last-Modified": null
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nychealth/EHDP-data/d3558441d122b4db4b9fd4d2011be500df6b584a/indicators/data/2143.json",
+      "file": "2143.json",
+      "status": 200,
+      "bytes": 12981,
+      "sha256": "fb41926f7482fdc9ddc1206a02beec67f1f243b307206ef429dac30799a0255f",
+      "started_utc": "2026-10-01T18:07:22.395262+00:00",
+      "finished_utc": "2026-10-01T18:07:23.453586+00:00",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"8842d16fabe8abbdb9cc5cfd9e33d0622c82dc528f58da60a818db11af6ad5b9\"",
+        "Last-Modified": null
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nychealth/EHDP-data/d3558441d122b4db4b9fd4d2011be500df6b584a/indicators/data/2157.json",
+      "file": "2157.json",
+      "status": 200,
+      "bytes": 2005,
+      "sha256": "eb3ab3b91cad781b3244ff853d658e96b6b45788465ebebbc6445511aea51c01",
+      "started_utc": "2026-10-01T18:07:23.453786+00:00",
+      "finished_utc": "2026-10-01T18:07:24.830538+00:00",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"7dbc95414b5db860af25799f279ba78b8d48dfeaefd9e45e78eba095bce5db55\"",
+        "Last-Modified": null
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nychealth/EHDP-data/d3558441d122b4db4b9fd4d2011be500df6b584a/indicators/metadata/TimePeriods.json",
+      "file": "TimePeriods.json",
+      "status": 200,
+      "bytes": 34400,
+      "sha256": "200dde628c2d60b90b71b9624ae8af1633f59c41bcf958129da1283dcc2e885e",
+      "started_utc": "2026-10-01T18:07:24.830751+00:00",
+      "finished_utc": "2026-10-01T18:07:25.877796+00:00",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"d47b76a59026a2fbf6b2c1899b1aea8394c4bc9db4e0ec12dd8b38594a178932\"",
+        "Last-Modified": null
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nychealth/EHDP-data/d3558441d122b4db4b9fd4d2011be500df6b584a/geography/GeoLookup.json",
+      "file": "GeoLookup.json",
+      "status": 200,
+      "bytes": 95279,
+      "sha256": "8f90a584c4421a0b4501a7ff0de609d69f43b7aa38e2e519c5bc164f7e5c053f",
+      "started_utc": "2026-10-01T18:07:25.877988+00:00",
+      "finished_utc": "2026-10-01T18:07:26.938773+00:00",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"fb179d94a68f8b19c5cb2a4a79cc0dd31e4d0e235876af9f4f74e6e9803f5749\"",
+        "Last-Modified": null
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nychealth/EHDP-data/d3558441d122b4db4b9fd4d2011be500df6b584a/LICENSE",
+      "file": "LICENSE",
+      "status": 200,
+      "bytes": 11324,
+      "sha256": "50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a",
+      "started_utc": "2026-10-01T18:07:26.939261+00:00",
+      "finished_utc": "2026-10-01T18:07:27.974093+00:00",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"76f7d415b01997f8a6e4eba3bf88e792284790e1cc55fc69cb301a6a45340a34\"",
+        "Last-Modified": null
+      }
+    }
+  ],
+  "additional_downloads": [
+    {
+      "url": "https://raw.githubusercontent.com/nychealth/EHDP-data/d3558441d122b4db4b9fd4d2011be500df6b584a/indicators/metadata/metadata.json",
+      "status": 200,
+      "bytes": 1150979,
+      "sha256": "cfde653128a7a8b569af817bc7955ecb62372ba82ebc57d7f24e00260da2750e",
+      "started_utc": "2026-10-01T18:17:35.046703+00:00",
+      "finished_utc": "2026-10-01T18:17:36.675593+00:00",
+      "headers": {
+        "Connection": "close",
+        "Content-Length": "1150979",
+        "Cache-Control": "max-age=300",
+        "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"53abb0d6fa1b940213102f6bd1aee9c851ae5f0ba4c5d098bd836b716ceff696\"",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "X-XSS-Protection": "1; mode=block",
+        "X-GitHub-Request-Id": "60D0:F33BA:3535:73C6:6ABEA3C1",
+        "x-github-edge-region": "japaneast",
+        "Accept-Ranges": "bytes",
+        "Date": "Thu, 01 Oct 2026 18:17:38 GMT",
+        "Via": "1.1 varnish",
+        "X-Served-By": "cache-nrt-rjtf7700099-NRT",
+        "X-Cache": "MISS",
+        "X-Cache-Hits": "0",
+        "X-Timer": "S1790878658.891459,VS0,VE238",
+        "Vary": "Authorization,Accept-Encoding",
+        "Access-Control-Allow-Origin": "*",
+        "Cross-Origin-Resource-Policy": "cross-origin",
+        "X-Fastly-Request-ID": "de5acc31c0e76cfb4fe4c52728db139ac088e55d",
+        "Expires": "Thu, 01 Oct 2026 18:22:38 GMT",
+        "Source-Age": "0"
+      }
+    }
+  ]
+}

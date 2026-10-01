@@ -1,0 +1,54 @@
+{
+  "counterexample": "synthetic; one added center-hour in either choice; uniformly weighted departure times, not observed demand",
+  "results": [
+    {
+      "choice": "extend_A",
+      "travel_minutes": 0,
+      "incremental_person_start_hours_L0": 1000,
+      "incremental_person_start_hours_L2": 0
+    },
+    {
+      "choice": "extend_B",
+      "travel_minutes": 0,
+      "incremental_person_start_hours_L0": 600,
+      "incremental_person_start_hours_L2": 600
+    },
+    {
+      "choice": "extend_A",
+      "travel_minutes": 10.0,
+      "incremental_person_start_hours_L0": 833.3333333333339,
+      "incremental_person_start_hours_L2": 0
+    },
+    {
+      "choice": "extend_B",
+      "travel_minutes": 10.0,
+      "incremental_person_start_hours_L0": 500.00000000000034,
+      "incremental_person_start_hours_L2": 500.00000000000034
+    },
+    {
+      "choice": "extend_A",
+      "travel_minutes": 15.0,
+      "incremental_person_start_hours_L0": 750.0,
+      "incremental_person_start_hours_L2": 0
+    },
+    {
+      "choice": "extend_B",
+      "travel_minutes": 15.0,
+      "incremental_person_start_hours_L0": 450.0,
+      "incremental_person_start_hours_L2": 450.0
+    }
+  ],
+  "representative_schedule_calculation": {
+    "open_hours_per_center_day": 12,
+    "travel_minutes_assumed": 10,
+    "stay_hours_scenario": 2,
+    "departure_horizon": [
+      12,
+      24
+    ],
+    "latest_departure_hour": 21.833333333333332,
+    "feasible_departure_hours": 9.833333333333332,
+    "interpretation": "announced schedule opportunity; no observed attendance or physiology"
+  },
+  "checks": "passed"
+}

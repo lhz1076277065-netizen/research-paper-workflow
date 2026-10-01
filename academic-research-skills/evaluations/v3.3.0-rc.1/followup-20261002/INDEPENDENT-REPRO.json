@@ -1,0 +1,62 @@
+{
+  "at_utc": "2026-10-01T18:35:17.303975+00:00",
+  "executor": "root, after author completion, on delivery copies",
+  "cases": [
+    {
+      "script": "study/analyze.py",
+      "exit_code": 0,
+      "same_outputs": true,
+      "output_sha256": {
+        "study/derived/results.json": "c55916cca8f0023dd832410271947b2a884d17bb2f571fd0c80691c9bae12629",
+        "study/derived/constructed-worlds.json": "438792f0a8e8e8287acf5c2e8202dc983c4b51dc17712f0fdbbd572d26e4db2e",
+        "study/derived/uhf42-aligned.csv": "bae3c068139cf4155e402bf822f5586ae3e54b578c57959f1619f53a1855bc60"
+      },
+      "stderr": "",
+      "stdout_sha256": "f3ec8cc989326ddc62fbde3a35460d90901e5d2b5d7adcf0a4e13396d7249346"
+    },
+    {
+      "script": "broad-A/analyze.py",
+      "exit_code": 0,
+      "same_outputs": true,
+      "output_sha256": {
+        "broad-A/pilot-results.json": "fc2b3d0544636527534f6a97a22f689422d7ed0100f93beb2735dc804af0e17a",
+        "broad-A/july-sunday-observations.csv": "4687ab55ea34925d925d0219e661527d5717cffc0ecfef61decd50a8bf7361ff"
+      },
+      "stderr": "",
+      "stdout_sha256": "bf058477d7cf02e93cda114b7d145b47023183f76a1b99c691c45f7e26732d10"
+    },
+    {
+      "script": "broad-B/core_compare.py",
+      "exit_code": 0,
+      "same_outputs": true,
+      "output_sha256": {
+        "broad-B/core-results.json": "b86903522474b1274e5a259a98ff878d83672334a3c5b071894ee2e50343c840"
+      },
+      "stderr": "",
+      "stdout_sha256": "1cb120c1a780360cc0981a94dd79403ec022f6a304590c713519ce0061461837"
+    },
+    {
+      "script": "method-A/analyze.py",
+      "exit_code": 0,
+      "all_csv_byte_identical": true,
+      "scientific_json_identical": true,
+      "quality_json_byte_identical": true,
+      "excluded_volatile_json_field": null,
+      "author_result_restored": true,
+      "stdout_sha256": "cc23cb3f2dea27906af22bc61493f0e76902f1812664d4e120cddc8da161cca4",
+      "stderr": ""
+    },
+    {
+      "script": "method-B/analyze.py",
+      "exit_code": 0,
+      "all_csv_byte_identical": true,
+      "scientific_json_identical": true,
+      "quality_json_byte_identical": true,
+      "excluded_volatile_json_field": "runtime_seconds",
+      "author_result_restored": true,
+      "stdout_sha256": "613f7a9c9d810de03f5f377992f5d3e54137ad107dc0fba6c81cadcad17a39e8",
+      "stderr": ""
+    }
+  ],
+  "updated_at_utc": "2026-10-01T18:46:39.050376+00:00"
+}

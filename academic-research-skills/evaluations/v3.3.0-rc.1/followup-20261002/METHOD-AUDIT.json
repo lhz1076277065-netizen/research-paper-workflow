@@ -1,0 +1,179 @@
+{
+  "at_utc": "2026-10-01T18:47:29.579113+00:00",
+  "conditions": [
+    {
+      "condition": "A",
+      "calls_recounted": {
+        "web": 8,
+        "other": 15
+      },
+      "within_cap": true,
+      "guidance_verified": [
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/SKILL.md",
+          "sha256": "2da05a8430e2f29470179ca7c27dc33e9c6fdcd9d5e48c06373f77ffc72c64c8"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/research-lifecycle.md",
+          "sha256": "076e24247c54da5fe52ee5e46bdaa93eaa5f9ebd7384eae6c969c96677a11c4d"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/research-quality.md",
+          "sha256": "2be115bd99804b413426a96a194276afea8016960ac9ec30e2ace19a2f033019"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/provider-policy.md",
+          "sha256": "93bae0ddafd206329dfb0b8c2a1c0d822e61da33b941d59c8b9fe9daa2b11809"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/research-design/SKILL.md",
+          "sha256": "19e945762325604ed95695563b3cddea044bed5cf878a713f1c759a52f567acb"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/data-preparation/SKILL.md",
+          "sha256": "b22b18b796125bfdfa1f00bbed405f41e9509b335f58326aa71cc4fe1f22490f"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/literature-discovery/SKILL.md",
+          "sha256": "ac1447dfd27e3eee4f49dac306cabb390ca7dcfc2417fed9df07d17f8a1ec0ef"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/analysis-execution/SKILL.md",
+          "sha256": "f93b6c6b7e0aaa926e6f09c13018b9c0e09707af50708bede20cfa1ec5dd8816"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/research-design/references/protocol.md",
+          "sha256": "b9c74ccf77ddcba09b8945fcb83c860e10012a3f459fbd942ceb18442729b89b"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/analysis-execution/references/protocol.md",
+          "sha256": "4eb7ddab7725354732f5622d4ea8c75f5543c7daad7822eaab934e5057f6e020"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/research-paper-workflow/references/inference-examples.md",
+          "sha256": "7c9e9f97401d7997af41ac93acc43ef4a36a4ea041148b615b9d0813edc71814"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/literature-discovery/references/protocol.md",
+          "sha256": "5fcea696973ef9319579ddd4711dd4e78062412f26da7f5a18f1681d204ad3c6"
+        },
+        {
+          "path": "versions/A/academic-research-skills-v3.2.0/skills/research-design/references/method-routing.md",
+          "sha256": "a77a05b210e54a0378453f8514d4e7b6264b826ddfdb7f99334adaaf48bb8061"
+        }
+      ],
+      "answer_characters": 4122
+    },
+    {
+      "condition": "B",
+      "calls_recounted": {
+        "web": 6,
+        "other": 16
+      },
+      "within_cap": true,
+      "guidance_verified": [
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/SKILL.md",
+          "sha256": "a8bcb63db422a9e1168c4e9fadfc2a2825df786887f83f4ac0ef432751a0caa9"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-design/SKILL.md",
+          "sha256": "8d6c2567e04d6232565d0b43f715e2d77733a5f9994a5244e9f7587e3c2fbaf0"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/topic-novelty/SKILL.md",
+          "sha256": "8faa50e1074acc67f87b91c56a039c52c662a682d7b266ab95c85a3f343c5db7"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/analysis-execution/SKILL.md",
+          "sha256": "373d2990fbbbd2be08904e6304a55f0a70d49b9077171efe0efb6445db722953"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/data-preparation/SKILL.md",
+          "sha256": "5d4404bd57f57ca989ff8f1615e7bc3c04885a8b936858c95738310cae5135f0"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/paper-deep-reading/SKILL.md",
+          "sha256": "b67d6db88354a9ac332e672d95ca6bcbeb663e1025bf1eb5ed3c5a43d5bd6ac5"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/citation-audit/SKILL.md",
+          "sha256": "c8c134387c15ef3ee60e2b436047376b8da2b5ce4b4e91a2958dac91d0050fbc"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/research-lifecycle.md",
+          "sha256": "1dede360e525a75b43d801d5257e03fe60374f1d1c26d49b58dd29bcdd4e4b97"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/research-quality.md",
+          "sha256": "eaaec08bf3fb0e881b6f949733f95ea38d977a047f70388ed4aea6bc24f472e0"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/provider-policy.md",
+          "sha256": "0b9a41493258edaaf64c338f58ab49aaf9ee9caeef0ab948f6d0c717710a83af"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/execution-handoff.md",
+          "sha256": "98414d5f5046936def93af9fb6607fcb7f1264adf589b28b33d02ecbe9a00d3c"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-paper-workflow/references/inference-examples.md",
+          "sha256": "7c9e9f97401d7997af41ac93acc43ef4a36a4ea041148b615b9d0813edc71814"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/topic-novelty/references/problem-led-topics.md",
+          "sha256": "6684966ab668219a031279255411a463b7381c9c6868b6b3b071af64d963e878"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/topic-novelty/references/protocol.md",
+          "sha256": "77f6bd5960dd665cd36d415d6d7a4f028dbaa41b220693af158e747c6263b178"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-design/references/protocol.md",
+          "sha256": "b9c74ccf77ddcba09b8945fcb83c860e10012a3f459fbd942ceb18442729b89b"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/analysis-execution/references/protocol.md",
+          "sha256": "4eb7ddab7725354732f5622d4ea8c75f5543c7daad7822eaab934e5057f6e020"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/data-preparation/references/protocol.md",
+          "sha256": "a4fba54749e453bf3d569b8a26620a779e3c4194ca1e235586316f2642aa2fab"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/paper-deep-reading/references/protocol.md",
+          "sha256": "e5bf7ad22bcc9095bcb968d763cc16396b41ab00d8ec254d999721cc19d6e40c"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/citation-audit/references/protocol.md",
+          "sha256": "6d3d352ceba5793dd53d25cd42de84617c67acec1249e7824862b388b5ccd93e"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/manuscript-writing/references/method-routing.md",
+          "sha256": "a77a05b210e54a0378453f8514d4e7b6264b826ddfdb7f99334adaaf48bb8061"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/manuscript-review/references/method-routing.md",
+          "sha256": "a77a05b210e54a0378453f8514d4e7b6264b826ddfdb7f99334adaaf48bb8061"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/robustness-reproducibility/references/method-routing.md",
+          "sha256": "a77a05b210e54a0378453f8514d4e7b6264b826ddfdb7f99334adaaf48bb8061"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-design/references/method-routing.md",
+          "sha256": "a77a05b210e54a0378453f8514d4e7b6264b826ddfdb7f99334adaaf48bb8061"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/analysis-execution/references/method-routing.md",
+          "sha256": "a77a05b210e54a0378453f8514d4e7b6264b826ddfdb7f99334adaaf48bb8061"
+        },
+        {
+          "path": "versions/B/academic-research-skills-v3.3.0-rc.1/skills/research-intake/references/method-routing.md",
+          "sha256": "a77a05b210e54a0378453f8514d4e7b6264b826ddfdb7f99334adaaf48bb8061"
+        }
+      ],
+      "answer_characters": 3796
+    }
+  ]
+}
