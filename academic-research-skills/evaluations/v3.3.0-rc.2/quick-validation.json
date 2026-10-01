@@ -3,7 +3,7 @@
     {
       "skill": "analysis-execution",
       "exit": 1,
-      "output": "Traceback (most recent call last):\n  File \"/Users/luca/.codex/skills/.system/skill-creator/scripts/quick_validate.py\", line 10, in <module>\n    import yaml\nModuleNotFoundError: No module named 'yaml'"
+      "output": "Traceback (most recent call last):\n  File \"{SKILL_CREATOR}/scripts/quick_validate.py\", line 10, in <module>\n    import yaml\nModuleNotFoundError: No module named 'yaml'"
     }
   ],
   "reuse_existing_yaml_runtime": "{PYTHON_ENV}",
