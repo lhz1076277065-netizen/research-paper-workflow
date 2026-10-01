@@ -1,0 +1,138 @@
+{
+  "protocols": {
+    "analysis-execution": {
+      "headings_preserved": true,
+      "before_sha256": "4eb7ddab7725354732f5622d4ea8c75f5543c7daad7822eaab934e5057f6e020",
+      "after_sha256": "4eb7ddab7725354732f5622d4ea8c75f5543c7daad7822eaab934e5057f6e020",
+      "changed": false,
+      "headings": 6
+    },
+    "citation-audit": {
+      "headings_preserved": true,
+      "before_sha256": "6d3d352ceba5793dd53d25cd42de84617c67acec1249e7824862b388b5ccd93e",
+      "after_sha256": "6d3d352ceba5793dd53d25cd42de84617c67acec1249e7824862b388b5ccd93e",
+      "changed": false,
+      "headings": 5
+    },
+    "data-discovery": {
+      "headings_preserved": true,
+      "before_sha256": "9679c8569638b3c4c469a77ead1f12a456fe9e38882923c14107d6f1aab8b340",
+      "after_sha256": "9679c8569638b3c4c469a77ead1f12a456fe9e38882923c14107d6f1aab8b340",
+      "changed": false,
+      "headings": 6
+    },
+    "data-preparation": {
+      "headings_preserved": true,
+      "before_sha256": "a4fba54749e453bf3d569b8a26620a779e3c4194ca1e235586316f2642aa2fab",
+      "after_sha256": "a4fba54749e453bf3d569b8a26620a779e3c4194ca1e235586316f2642aa2fab",
+      "changed": false,
+      "headings": 8
+    },
+    "ethics-protocol": {
+      "headings_preserved": true,
+      "before_sha256": "6009c08bedcc9ae446de8d63afe10576c7e7b3c6f592a23c33a9b10ce803ddec",
+      "after_sha256": "6009c08bedcc9ae446de8d63afe10576c7e7b3c6f592a23c33a9b10ce803ddec",
+      "changed": false,
+      "headings": 6
+    },
+    "journal-intelligence": {
+      "headings_preserved": true,
+      "before_sha256": "8e42d63cbaefa46178520ec79074bd8441e65fd527fc86025c08f77c5070d54a",
+      "after_sha256": "9ac6ab9873a3393c63d90d6531aeee85214cbc88f3b52202991b79c4d09705f5",
+      "changed": true,
+      "headings": 6
+    },
+    "literature-discovery": {
+      "headings_preserved": true,
+      "before_sha256": "5fcea696973ef9319579ddd4711dd4e78062412f26da7f5a18f1681d204ad3c6",
+      "after_sha256": "5fcea696973ef9319579ddd4711dd4e78062412f26da7f5a18f1681d204ad3c6",
+      "changed": false,
+      "headings": 6
+    },
+    "manuscript-review": {
+      "headings_preserved": true,
+      "before_sha256": "abe3b450269c9867f07d06fd6d53e8fc2cc529cdc47196a46c006e6e051ad01f",
+      "after_sha256": "abe3b450269c9867f07d06fd6d53e8fc2cc529cdc47196a46c006e6e051ad01f",
+      "changed": false,
+      "headings": 7
+    },
+    "manuscript-writing": {
+      "headings_preserved": true,
+      "before_sha256": "374cadcb0686052d06286efc637e98db93ffee81c0b7a9f4d209ebf584d7836d",
+      "after_sha256": "374cadcb0686052d06286efc637e98db93ffee81c0b7a9f4d209ebf584d7836d",
+      "changed": false,
+      "headings": 5
+    },
+    "paper-deep-reading": {
+      "headings_preserved": true,
+      "before_sha256": "225a4ac6c456475fad3bdfdb2b3681fec66bed5adc8db890f2b5437fea2af04d",
+      "after_sha256": "e5bf7ad22bcc9095bcb968d763cc16396b41ab00d8ec254d999721cc19d6e40c",
+      "changed": true,
+      "headings": 11
+    },
+    "peer-review-response": {
+      "headings_preserved": true,
+      "before_sha256": "1f8552ff512ac1e127c185dbdd39d63daddcbef70818637b28f52029b34d3c80",
+      "after_sha256": "1f8552ff512ac1e127c185dbdd39d63daddcbef70818637b28f52029b34d3c80",
+      "changed": false,
+      "headings": 7
+    },
+    "publication-stewardship": {
+      "headings_preserved": true,
+      "before_sha256": "8be2abb89c81b0460cfb4de8d35c2a265eff92f764b8e9b4871356f62a863afd",
+      "after_sha256": "8be2abb89c81b0460cfb4de8d35c2a265eff92f764b8e9b4871356f62a863afd",
+      "changed": false,
+      "headings": 5
+    },
+    "research-design": {
+      "headings_preserved": true,
+      "before_sha256": "b9c74ccf77ddcba09b8945fcb83c860e10012a3f459fbd942ceb18442729b89b",
+      "after_sha256": "b9c74ccf77ddcba09b8945fcb83c860e10012a3f459fbd942ceb18442729b89b",
+      "changed": false,
+      "headings": 7
+    },
+    "research-intake": {
+      "headings_preserved": true,
+      "before_sha256": "157a9ed0eee0cd79677b140df49d5ce7bdbe50acd84965378a2bd47ce59ac85b",
+      "after_sha256": "157a9ed0eee0cd79677b140df49d5ce7bdbe50acd84965378a2bd47ce59ac85b",
+      "changed": false,
+      "headings": 5
+    },
+    "research-paper-workflow": {
+      "headings_preserved": true,
+      "before_sha256": "304684bc8ab0d3ad56c8c40b2c9381e0097ce08f23dd54888d5368ec774a37d5",
+      "after_sha256": "304684bc8ab0d3ad56c8c40b2c9381e0097ce08f23dd54888d5368ec774a37d5",
+      "changed": false,
+      "headings": 6
+    },
+    "robustness-reproducibility": {
+      "headings_preserved": true,
+      "before_sha256": "0facb10163e6340484037663522d7a9e28be68b0f21573113ec69105b3fa918c",
+      "after_sha256": "0facb10163e6340484037663522d7a9e28be68b0f21573113ec69105b3fa918c",
+      "changed": false,
+      "headings": 5
+    },
+    "scientific-visualization": {
+      "headings_preserved": true,
+      "before_sha256": "f3fd5c817e358aa69abac25e3cea78107d0ced6f44137fc087682f73e4a8cd68",
+      "after_sha256": "f3fd5c817e358aa69abac25e3cea78107d0ced6f44137fc087682f73e4a8cd68",
+      "changed": false,
+      "headings": 6
+    },
+    "submission-packaging": {
+      "headings_preserved": true,
+      "before_sha256": "90718092a661b6df1aad5bb060babeaf5e8dbc01c5babfb799b7d1778ae88b66",
+      "after_sha256": "90718092a661b6df1aad5bb060babeaf5e8dbc01c5babfb799b7d1778ae88b66",
+      "changed": false,
+      "headings": 5
+    },
+    "topic-novelty": {
+      "headings_preserved": true,
+      "before_sha256": "6ba629a0d897eb6d1469d31bc2628b5007d7f2fabe1394ec28ac9b4debfcf186",
+      "after_sha256": "77f6bd5960dd665cd36d415d6d7a4f028dbaa41b220693af158e747c6263b178",
+      "changed": true,
+      "headings": 6
+    }
+  },
+  "manuscript_writing_identical": true
+}

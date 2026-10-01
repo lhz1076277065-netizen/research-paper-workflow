@@ -1,0 +1,87 @@
+{
+  "baseline_tag": "v3.2.0",
+  "baseline_commit": "1e2a56bc9db0bfd411ce8ce250703785e53bb43d",
+  "contexts": 4,
+  "problem_types": 2,
+  "task_outcomes": 6,
+  "trials": [
+    {
+      "trial": "A",
+      "instruction_identity": "v3.2.0",
+      "tasks": [
+        "F",
+        "H"
+      ],
+      "actual_unique_calls": {
+        "web": 20,
+        "other": 14
+      },
+      "artifacts_sha256": {
+        "answer.md": "605a0b02ae51e703aff5da2808c1191bca209833d11575b31d3dca9576b1d30a",
+        "operations.json": "518bb75d5a5fc63ace75b948823f6a50b6eceb85ecb980cc4cd954e07014e42e"
+      }
+    },
+    {
+      "trial": "B",
+      "instruction_identity": "initial problem-led candidate, metadata at read v3.2.0",
+      "tasks": [
+        "F",
+        "H"
+      ],
+      "actual_unique_calls": {
+        "web": 20,
+        "other": 12
+      },
+      "artifacts_sha256": {
+        "answer.md": "49d3f51459af32ffbe4e227f7c68f0927954b1dd6678159364ede86cc4723e66",
+        "operations.json": "ec879cde679e7e66f5646940b3ff323d7b9edc630c70a066ee447f65a09a0a68"
+      }
+    },
+    {
+      "trial": "C",
+      "instruction_identity": "v3.2.0",
+      "tasks": [
+        "F"
+      ],
+      "actual_unique_calls": {
+        "web": 10,
+        "other": 8
+      },
+      "artifacts_sha256": {
+        "answer.md": "b56f089793172ce1d5b4aaa4f4797e87cdb326aefa9e674ae23b29d36713f2f6",
+        "operations.json": "ebbad40ef112fa73627703ab19d3cd942ee1f4d9bc567e697d35fa0ec810617f"
+      }
+    },
+    {
+      "trial": "D",
+      "instruction_identity": "v3.3.0-rc.1 frozen",
+      "tasks": [
+        "F"
+      ],
+      "actual_unique_calls": {
+        "web": 10,
+        "other": 8
+      },
+      "artifacts_sha256": {
+        "answer.md": "2ded0904c5f154dec88f13bdc514f5d5eabc8a9f4721b6238e7e0b9a660f25f3",
+        "operations.json": "afc6609f955c509f84daf664b5102e40aab22a651929ecc3e4c74ebd4f1d62ba"
+      }
+    }
+  ],
+  "frozen_candidate_files_match_release_skill": 58,
+  "actual_guidance_characters_frozen_repeat": {
+    "C": 5908,
+    "D": 4495
+  },
+  "sampling": "Same inherited settings; full model build, temperature, top_p, seed and exact token cost unavailable.",
+  "deviations": [
+    "Initial candidate metadata changed after initial read; initial SHA not observed.",
+    "Initial A shared conservative per-task other count10 exceeded nominal8 due directory/save failure and recovery.",
+    "Both initial contexts received uniform closeout and deliberate interruption prompts.",
+    "Not exact cost-matched, no model-quality causal attribution."
+  ],
+  "scope": "Real source reading and topic-design deliverables; no data pairing, policy replay, training, paper or deployment-effect study.",
+  "native_loading": "Current-host manual skill-guidance execution, not globally installed native auto-discovery test.",
+  "blind_review": "Anonymous answer inputs; scientific text preserved, initial condition/method metadata paragraph redacted. Mapping unavailable to evaluators.",
+  "publication_media": "Third-party full papers, images and large raw data not redistributed; operation records preserve reading levels and source/selected media identities."
+}

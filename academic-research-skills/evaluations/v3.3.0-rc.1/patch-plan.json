@@ -1,0 +1,90 @@
+{
+  "proposal": "problem-led-topic-upgrade-r1",
+  "proposed_release": "v3.3.0-rc.1",
+  "base_tag": "v3.2.0",
+  "base_commit": "1e2a56bc9db0bfd411ce8ce250703785e53bb43d",
+  "status": "local_source_patch_proposal_not_published",
+  "repository": "lhz1076277065-netizen/research-paper-workflow",
+  "replacements": [
+    {
+      "path": "src/quality31/payload/skills/research-paper-workflow/SKILL.md",
+      "old": "从重要问题、最近邻增量和数字完成路径推进原创研究；主动取得合法免费材料，执行区分解释的验证，再形成完整图稿与实际适配期刊。基线复现和工具试跑服务研究贡献。",
+      "new": "从现实问题与顶刊跨篇学习出发，形成有知识增量、实际意义和数字验证路径的核心选题；方法服务问题，主动取得材料并推进研究、图稿与期刊适配。基线与工具试跑服务贡献。"
+    },
+    {
+      "path": "src/quality31/payload/skills/topic-novelty/SKILL.md",
+      "old": "从最近邻能力与未解困难产生新机制、表示、目标、算法、关系、命题或设计；比较价值、科学难点、数字材料、决定性证据及下一项能改变判断的动作。",
+      "new": "从领域现实难题与顶刊跨篇学习提出核心问题：谁需要答案、解决什么困难、现有认识缺什么；比较新增知识/能力、数据与尺度、决定性证据。模型与算法按问题选择，题名简明而准确。"
+    },
+    {
+      "path": "src/quality31/payload/skills/topic-novelty/SKILL.md",
+      "old": "专业细节按需查 [原专业参考](references/protocol.md)。问题与路线判断时读 [研究判断示例](references/research-quality.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。",
+      "new": "开放选题按需读 [问题导向选题](references/problem-led-topics.md)，沿用 [原专业参考](references/protocol.md) 的创新核查。选实现查 [选题来源](references/topic-provider-selection.md)。只加载当前缺少的资源，共享材料在同一任务中复用。"
+    },
+    {
+      "path": "src/common/references/research-quality.md",
+      "old": "比较“什么重要问题能通过当前数字手段取得新证据”：改变什么；最近邻未解什么；新增方法/命题/发现/设计/关系或评价能力；核心困难与新思路；决定性证据、材料及数字路径；下一项最能改变判断的动作。用一段承诺或已有路线板；基础理论按命题价值进入。",
+      "new": "先理解领域中谁面临什么困难、哪个科学未知妨碍理解或行动；用顶刊跨篇比较和实际需要判断选题，再比较最近邻增量、新思路、可得材料与尺度及决定性证据。用原路线板连接问题、知识贡献和可检验用途；开放选题时按需读[问题导向选题](problem-led-topics.md)。基础理论按命题价值和解释能力进入，方法创新按其打开的问题与能力判断。"
+    },
+    {
+      "path": "src/common/references/research-lifecycle.md",
+      "old": "| 问题与定位 | 为什么值得研究；已有工作解决到哪里；改变什么认识/实践 | 选刊标杆、文献与精读、创新核查；研究承诺与最近邻差异 |",
+      "new": "| 问题与定位 | 顶刊跨篇学习揭示什么现实问题与科学未知；数据/尺度怎样支持新增认识或行动 | 标杆学习与问题综合、精读、创新核查；简明选题与下一项决定性工作 |"
+    },
+    {
+      "path": "skills/topic-novelty/references/protocol.md",
+      "old": "从真实文献分歧、理论张力、测量限制、识别困难、泛化失效、重要数据缺口、未解释现象和关键重复验证需求出发。顶刊阅读提供问题标准与范式，不是机械拼接题目、模型和数据。",
+      "new": "从领域实际困难与真实文献中的未解问题出发。先综合顶刊的研究主题、受益对象、选题理由、方法/模型、数据来源、尺度与关键证据，形成问题家族和成熟/未解部分，再提出解释、发现、测量、决策、设计或方法路线。开放选题可按需使用[问题导向选题](problem-led-topics.md)，原有笔记直接复用。"
+    },
+    {
+      "path": "skills/paper-deep-reading/references/protocol.md",
+      "old": "比较相同问题的不同设计、相同模型的不同数据、相同结论的不同证据，找出共识、矛盾、遗漏和适用边界。每个可迁移模式记录原始来源、要解决的表达/研究问题、需要什么数据和假设、本研究如何改造、预期成本、不能使用的条件。",
+      "new": "比较相同问题的不同设计、相同模型的不同数据、相同结论的不同证据，归纳核心主题、现实瓶颈与尚未回答的问题。跨篇对齐数据来源、独立单位/样本量、时空覆盖与粒度、验证层级；计算规模另记。迁移说明来源、作用机制、适用条件及将改变的研究判断，沿用既有笔记；需要时参照[问题导向选题](problem-led-topics.md)。作者公开论证与自己的选题归纳分别标明。"
+    },
+    {
+      "path": "skills/journal-intelligence/references/protocol.md",
+      "old": "采样回答：这个期刊面向谁，解决什么问题，贡献通常是机制/理论/方法/应用中的哪类，数据和验证如何支撑，图表承担什么论证功能。明确这是对已发表样本的观察或推断，而不是编辑承诺。",
+      "new": "采样回答：这个期刊面向谁、反复解决哪些现实与科学问题，贡献怎样改变认识或行动，常用模型、数据来源、独立样本与时空尺度如何支持结论，图表承担什么论证功能。综合已解决/未解部分并交给选题阶段；这属于对实际论文样本的观察与归纳，而非编辑承诺。"
+    },
+    {
+      "path": "src/common/references/provider-policy.md",
+      "old": "外部Skill来源为`assets/research31-policy.json`中的13个仓库，按角色选择，不要求全部使用。",
+      "new": "外部Skill来源以`assets/research31-policy.json`中用户已纳入的仓库为准，按当前任务与角色选择。"
+    }
+  ],
+  "source_addition": {
+    "repository": "Orchestra-Research/AI-Research-SKILLs",
+    "roles": [
+      "ideation",
+      "novelty"
+    ]
+  },
+  "role_updates": {
+    "K-Dense-AI/scientific-agent-skills": [
+      "ideation",
+      "novelty"
+    ]
+  },
+  "shared_wording": [
+    [
+      "用户指定13仓库",
+      "用户已纳入来源清单的仓库"
+    ],
+    [
+      "指定13仓库",
+      "来源清单中仓库"
+    ]
+  ],
+  "payload_source_root": "src/quality31/payload/skills",
+  "new_references": [
+    "src/common/references/problem-led-topics.md",
+    "src/common/references/topic-provider-selection.md"
+  ],
+  "unchanged_runtime_algorithms": [
+    "research31.py",
+    "upstream.py",
+    "environment.py",
+    "result_links.py"
+  ],
+  "validation_boundary": "Patch tests and selected actual file snapshots only; full repository build/regression and model research comparison remain to be executed in the actual checkout."
+}

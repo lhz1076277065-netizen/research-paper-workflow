@@ -176,7 +176,10 @@ class LeanDefaults(unittest.TestCase):
             if s.is_dir():self.assertEqual(json.loads((s/'assets/providers.json').read_text())['providers'],[])
     def test_sources_are_unpinned_repository_pointers(self):
         d=json.loads((ROOT/'assets/repository-sources.json').read_text())
-        self.assertEqual(len(d['repositories']),13)
+        policy=json.loads((ROOT/'assets/research31-policy.json').read_text())
+        self.assertEqual({r['url'] for r in d['repositories']},
+                         {'https://github.com/'+s['repository'] for s in policy['sources']})
+        self.assertEqual(len(d['repositories']),len({r['url'] for r in d['repositories']}))
         for r in d['repositories']:
             self.assertEqual(set(r),{'url','hints'});u.repository(r['url'])
     def test_no_static_provider_cards_in_active_skills(self):self.assertFalse(list((ROOT/'skills').glob('*/references/provider-details/*')))

@@ -1,0 +1,721 @@
+{
+  "run": "B",
+  "date": "2026-10-01",
+  "scope": "two independent preliminary topic deliverables; no comparison, other skill versions or parent artifacts read",
+  "skill": {
+    "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/skills/topic-novelty/SKILL.md",
+    "observed_metadata_version": "3.2.0",
+    "initial_hash": "not recorded; no retrospective hash calculation",
+    "references_read": [
+      "references/problem-led-topics.md",
+      "references/protocol.md"
+    ],
+    "actual_reading": "full content returned in the first two shell calls; no re-read after metadata update message"
+  },
+  "counting": {
+    "unit": "one actual web__run call, one exec_command or view_image call; independent requests batched inside a web call count as one web call",
+    "limits_per_task": {
+      "web": 10,
+      "shell_or_other": 8
+    },
+    "F": {
+      "web": 10,
+      "shell_or_other": 7
+    },
+    "H": {
+      "web": 10,
+      "shell_or_other": 8
+    },
+    "unique_research_calls": {
+      "web": 20,
+      "exec_command": 8,
+      "view_image": 4,
+      "total": 32
+    },
+    "shared_attribution": "first two skill/reference shell calls and final write are attributed to both task budgets conservatively",
+    "orchestration_wrappers": "functions.exec wrappers are not double-counted as additional research tool calls",
+    "coordination": "one status send_message to parent, separate from research; no source work done through it"
+  },
+  "sampling": {
+    "model": "same current host model inherited; no model override or alternate model",
+    "temperature": null,
+    "top_p": null,
+    "seed": null,
+    "exact_model_build": null,
+    "reason": "not exposed by tools or task context; not inferred"
+  },
+  "operations": [
+    {
+      "task": "shared",
+      "number": 1,
+      "tool": "exec_command",
+      "sources": [
+        "skill entry"
+      ],
+      "actual_read": "full SKILL.md",
+      "source_fact_or_observation": "observed metadata.version 3.2.0",
+      "own_inference": "use problem-led selection and novelty protocol",
+      "status": "success"
+    },
+    {
+      "task": "shared",
+      "number": 2,
+      "tool": "exec_command",
+      "sources": [
+        "references/problem-led-topics.md",
+        "references/protocol.md"
+      ],
+      "actual_read": "full two references",
+      "source_fact_or_observation": "problem-first, nearest-neighbor, scale and decisive evidence requirements",
+      "own_inference": "no other skill resources needed",
+      "status": "success"
+    },
+    {
+      "task": "F",
+      "number": 1,
+      "tool": "web__run",
+      "sources": [
+        "Nature 07145",
+        "CEE 01401",
+        "IFRC"
+      ],
+      "actual_read": "Nature abstract/main/method opening; IFRC initial page; CEE failed",
+      "source_fact_or_observation": "out-of-location/time forecast evaluation",
+      "own_inference": "value of action still separate",
+      "status": "partial"
+    },
+    {
+      "task": "F",
+      "number": 2,
+      "tool": "web__run",
+      "sources": [
+        "Nature methods continuation",
+        "IFRC line40",
+        "01401 DOI search"
+      ],
+      "actual_read": "search abstracts, dataset/code links; line-targeted opens returned little continuation",
+      "source_fact_or_observation": "CEE vulnerability paper identified",
+      "own_inference": "need original method access",
+      "status": "partial"
+    },
+    {
+      "task": "F",
+      "number": 3,
+      "tool": "web__run",
+      "sources": [
+        "CEE original",
+        "Nature Data availability",
+        "IFRC anticipatory/Early warning find"
+      ],
+      "actual_read": "Nature data/code declaration and IFRC operational sections; CEE 500",
+      "source_fact_or_observation": "reforecasts and trained models declared; community participation/action matters",
+      "own_inference": "delivery capability must enter decision design",
+      "status": "partial"
+    },
+    {
+      "task": "F",
+      "number": 4,
+      "tool": "web__run",
+      "sources": [
+        "PIK published PDF",
+        "Nature PDF",
+        "Zenodo 10397664",
+        "Zenodo 8118213"
+      ],
+      "actual_read": "both Zenodo descriptions/file lists; PDFs failed",
+      "source_fact_or_observation": "model_data.tgz 14.5GB; DFO CSV 585.4kB",
+      "own_inference": "small CSV inspect feasible; no full forecasts downloaded",
+      "status": "partial"
+    },
+    {
+      "task": "F",
+      "number": 5,
+      "tool": "web__run",
+      "sources": [
+        "PIK alternate PDF",
+        "Nature fig3 full-size link",
+        "budget/cost-loss nearest searches"
+      ],
+      "actual_read": "original 2019 and other paper excerpts; official WFP search results; figure/PDF links failed",
+      "source_fact_or_observation": "limited-budget staged trigger framework already exists",
+      "own_inference": "budget alone cannot be novelty",
+      "status": "partial"
+    },
+    {
+      "task": "F",
+      "number": 6,
+      "tool": "web__run",
+      "sources": [
+        "CEE cookies-not-supported URL",
+        "two publisher neighbor opens",
+        "arxiv 2510.16015"
+      ],
+      "actual_read": "CEE abstract/introduction/results; arxiv initial page; publisher failed",
+      "source_fact_or_observation": "913-event scope and structural associations",
+      "own_inference": "separate vulnerability from forecast impact",
+      "status": "partial"
+    },
+    {
+      "task": "F",
+      "number": 7,
+      "tool": "web__run",
+      "sources": [
+        "CEE Methods/Data find",
+        "Nature fig3 image link",
+        "CEE fig1 image link",
+        "arxiv HTML"
+      ],
+      "actual_read": "CEE methods/limitations/data statements; arxiv HTML loaded; image link resolved but pixels not inspected through this call",
+      "source_fact_or_observation": "restricted NatCatSERVICE and remote-sensing limits",
+      "own_inference": "public-only implementation must avoid restricted main loss data",
+      "status": "partial"
+    },
+    {
+      "task": "F",
+      "number": 8,
+      "tool": "web__run",
+      "sources": [
+        "2019 nearest exact-title searches",
+        "ungauged budget searches",
+        "arxiv experiments/budget find"
+      ],
+      "actual_read": "publisher excerpts Methods2-3/Discussion/Conclusion; preprint budget formulation; other matches screening only",
+      "source_fact_or_observation": "2019 already models uncertainty, budget and time",
+      "own_inference": "focus candidate on ungauged transfer conditions",
+      "status": "success"
+    },
+    {
+      "task": "F",
+      "number": 9,
+      "tool": "web__run",
+      "sources": [
+        "2019 correct publisher PII",
+        "arxiv experiment section",
+        "Google dataset repository"
+      ],
+      "actual_read": "preprint sections3.3-4.8/Table1/Conclusion; repository initial; publisher failed",
+      "source_fact_or_observation": "single simulated 2019 AFB event, USGS boundary data",
+      "own_inference": "not a multi-basin ungauged finance validation",
+      "status": "partial"
+    },
+    {
+      "task": "F",
+      "number": 10,
+      "tool": "web__run",
+      "sources": [
+        "IIASA nearest PDF",
+        "Google repository GRDC/metadata find"
+      ],
+      "actual_read": "IIASA anti-bot page; full relevant README data/folds/license sections",
+      "source_fact_or_observation": "GRDC licensing; provided GloFAS reanalysis and fold caution",
+      "own_inference": "no local calibration leakage or fabricated GloFAS reforecast comparison",
+      "status": "partial"
+    },
+    {
+      "task": "F",
+      "number": "other-3",
+      "tool": "exec_command",
+      "sources": [
+        "two Springer figure URLs",
+        "Zenodo DFO CSV"
+      ],
+      "actual_read": "download two figures and parse CSV header, count, first row",
+      "source_fact_or_observation": "913 rows, DFO_ID/year/exposure/infrastructure/fatalities; no date/geometry fields in inspected header",
+      "own_inference": "needs event shape/date join before forecast validation",
+      "status": "success"
+    },
+    {
+      "task": "F",
+      "number": "other-4",
+      "tool": "view_image",
+      "sources": [
+        "evidence/F_Nearing_fig3.png"
+      ],
+      "actual_read": "actual pixels of four F1/lead-time panels",
+      "source_fact_or_observation": "skill distribution and displayed sample counts",
+      "own_inference": "operational value not established by F1",
+      "status": "success"
+    },
+    {
+      "task": "F",
+      "number": "other-5",
+      "tool": "view_image",
+      "sources": [
+        "evidence/F_Sauer_fig1.png"
+      ],
+      "actual_read": "actual map/scatter/boxplot pixels",
+      "source_fact_or_observation": "PMK annotations 0.827/0.798/0.138",
+      "own_inference": "association evidence and heterogeneous vulnerability",
+      "status": "success"
+    },
+    {
+      "task": "F",
+      "number": "other-6",
+      "tool": "exec_command",
+      "sources": [
+        "https://research.vu.nl/files/102354679/12072.pdf"
+      ],
+      "actual_read": "download attempt only",
+      "source_fact_or_observation": "HTTP403",
+      "own_inference": "full nearest methods remain unverified",
+      "status": "failed"
+    },
+    {
+      "task": "H",
+      "number": 1,
+      "tool": "web__run",
+      "sources": [
+        "Nature 51355",
+        "Nature 73015"
+      ],
+      "actual_read": "2024 abstract/introduction/results and initial 2026 page",
+      "source_fact_or_observation": "global cooling inequality, city-scale evidence",
+      "own_inference": "need household resource definition",
+      "status": "success"
+    },
+    {
+      "task": "H",
+      "number": 2,
+      "tool": "web__run",
+      "sources": [
+        "both Nature Methods/Data finds",
+        "2026 Abstract find"
+      ],
+      "actual_read": "primary methods/data declarations and 2026 limitations",
+      "source_fact_or_observation": "468 versus11210 analysis units; 100m/500m supports differ",
+      "own_inference": "macro results not household deprivation evidence",
+      "status": "success"
+    },
+    {
+      "task": "H",
+      "number": 3,
+      "tool": "web__run",
+      "sources": [
+        "both Nature line-targeted opens",
+        "both Figshare DOIs",
+        "NYC official/nearest searches"
+      ],
+      "actual_read": "limited continuation; official excerpts and nearest abstract screening; DOI opens failed",
+      "source_fact_or_observation": "public cooling equity/accessibility nearest found",
+      "own_inference": "cannot claim adding accessibility alone is novel",
+      "status": "partial"
+    },
+    {
+      "task": "H",
+      "number": 4,
+      "tool": "web__run",
+      "sources": [
+        "npj behavior-encoded original",
+        "NYC Comptroller",
+        "NYC 2025 heat report",
+        "two Figshare API URLs",
+        "primary robustness/Gini finds"
+      ],
+      "actual_read": "official methodology/needs; primary Gini/sampling/limits; APIs failed",
+      "source_fact_or_observation": "LST is not thermal comfort; overall Gini not group identity; center snapshot restrictions",
+      "own_inference": "target actual AC measure and time-specific opportunities",
+      "status": "partial"
+    },
+    {
+      "task": "H",
+      "number": 5,
+      "tool": "web__run",
+      "sources": [
+        "npj Abstract/Methods/Data/AC finds",
+        "NYC heat-story"
+      ],
+      "actual_read": "direct neighbor methods, supply/demand proxies; local air measurement collection design",
+      "source_fact_or_observation": "40 counties, canopy/floor-area proxies, walking/driving",
+      "own_inference": "detailed direct thermal supply and AC-conditioned time gaps merit candidate test",
+      "status": "success"
+    },
+    {
+      "task": "H",
+      "number": 6,
+      "tool": "web__run",
+      "sources": [
+        "AC/green/cooling complement search",
+        "NYC AC exact phrase",
+        "2026 beyond inequality search"
+      ],
+      "actual_read": "2026 service-equity full abstract plus author-lab explanation; official AC-related search screening",
+      "source_fact_or_observation": "29-city coverage/capacity inequity and allocation already studied",
+      "own_inference": "service-fairness framing alone not new",
+      "status": "success"
+    },
+    {
+      "task": "H",
+      "number": 7,
+      "tool": "web__run",
+      "sources": [
+        "2026 service-equity original",
+        "NYC guessed heat explorer path",
+        "NYC IBO PDF",
+        "official metadata/temporal queries"
+      ],
+      "actual_read": "2026 abstract page; failed explorer/PDF; search screening only",
+      "source_fact_or_observation": "new neighbor is accepted early article",
+      "own_inference": "nearest exact method overlap still needs full text",
+      "status": "partial"
+    },
+    {
+      "task": "H",
+      "number": 8,
+      "tool": "web__run",
+      "sources": [
+        "NYC official GitHub",
+        "2026 nearest PDF link",
+        "NYC hours find",
+        "2024 robustness find"
+      ],
+      "actual_read": "README, official hours/method sample, robustness definitions; PDF resolved but no usable body read",
+      "source_fact_or_observation": "542-center historic snapshot and closure, age/access restrictions; prior buffer checks",
+      "own_inference": "do not promise current point operation or novelty from buffer size",
+      "status": "partial"
+    },
+    {
+      "task": "H",
+      "number": 9,
+      "tool": "web__run",
+      "sources": [
+        "2026 nearest PDF Methods/Data find",
+        "official GitHub data find"
+      ],
+      "actual_read": "failed PDF text finds; repository tree/README",
+      "source_fact_or_observation": "official indicator/geography directories exist",
+      "own_inference": "data provenance feasible but content next needed",
+      "status": "partial"
+    },
+    {
+      "task": "H",
+      "number": 10,
+      "tool": "web__run",
+      "sources": [
+        "2026 nearest PDF open/screenshot p20",
+        "NYC indicator tree click"
+      ],
+      "actual_read": "all retrievals failed; no screenshot viewed",
+      "source_fact_or_observation": "cookie authorization and restricted URL errors",
+      "own_inference": "explicitly retain method and operating-data gaps",
+      "status": "failed"
+    },
+    {
+      "task": "H",
+      "number": "other-3",
+      "tool": "exec_command",
+      "sources": [
+        "two Springer figure URLs",
+        "two Figshare APIs"
+      ],
+      "actual_read": "download figures and API JSON; inspect file lists/licenses",
+      "source_fact_or_observation": "both CC BY4.0; Li1.16GB zip not downloaded; Huang CSV downloadable",
+      "own_inference": "file existence is not analysis replication",
+      "status": "success"
+    },
+    {
+      "task": "H",
+      "number": "other-4",
+      "tool": "view_image",
+      "sources": [
+        "evidence/H_Li_fig1.png"
+      ],
+      "actual_read": "actual twenty map-panel pixels",
+      "source_fact_or_observation": "density weighted benefit differs from raw capacity",
+      "own_inference": "not literal individual temperature benefit",
+      "status": "success"
+    },
+    {
+      "task": "H",
+      "number": "other-5",
+      "tool": "view_image",
+      "sources": [
+        "evidence/H_Huang_fig2.png"
+      ],
+      "actual_read": "actual three scaling scatter panels",
+      "source_fact_or_observation": "R2 .04/.04/.03, alpha .13/.12/.11",
+      "own_inference": "weak macro explanatory power cannot rank neighborhood deprivation",
+      "status": "success"
+    },
+    {
+      "task": "H",
+      "number": "other-6",
+      "tool": "exec_command",
+      "sources": [
+        "Huang Figshare CSV",
+        "NYC GitHub production recursive tree"
+      ],
+      "actual_read": "download, count CSV, read header/first row, list relevant repository paths",
+      "source_fact_or_observation": "11422 raw rows; dataMerged Gini 300/500/800m fields",
+      "own_inference": "final11210 filtering not reproduced; city CSV does not resolve specific people",
+      "status": "success"
+    },
+    {
+      "task": "H",
+      "number": "other-7",
+      "tool": "exec_command",
+      "sources": [
+        "NYC official indicators/metadata/metadata.json"
+      ],
+      "actual_read": "download metadata and recursively inspect AC/HVI records",
+      "source_fact_or_observation": "Indicator2185/Measure1045 NYCHVS without functioning AC; PUMA geography;2021 methodology note",
+      "own_inference": "PUMA-scale inference required, not pixel-level independent AC observations",
+      "status": "success"
+    },
+    {
+      "task": "shared",
+      "number": "final-write",
+      "tool": "exec_command",
+      "sources": [
+        "local answer.md",
+        "local operations.json"
+      ],
+      "actual_read": "one final write only; no new retrieval or checking call",
+      "source_fact_or_observation": "saved existing-material preliminary topic deliverables",
+      "own_inference": "limitations left explicit",
+      "status": "success"
+    }
+  ],
+  "evidence": {
+    "F_Nearing": {
+      "url": "https://www.nature.com/articles/s41586-024-07145-1",
+      "read": [
+        "Abstract",
+        "Main",
+        "AI improves forecast reliability",
+        "Return periods",
+        "Forecast lead time",
+        "Continents",
+        "Predictability of forecast reliability",
+        "Conclusion and discussion",
+        "Methods: AI model, Input data, Target and evaluation data, opening Experiments",
+        "Data availability",
+        "Code availability"
+      ],
+      "figures": {
+        "3": {
+          "actually_viewed": true,
+          "file": "evidence/F_Nearing_fig3.png",
+          "observations": "F1 boxplots by lead time; 10-year events visibly heterogeneous; displayed N 2406/2092/1068/382",
+          "limit": "figure sample sizes differ from body lead-time comparison counts; reason not independently resolved"
+        }
+      },
+      "facts": "encoder-decoder LSTM, no streamflow inputs; out-of-time/out-of-location evaluation; repository declares 2014-2021 reforecasts",
+      "inference": "forecast skill alone does not establish budget-constrained timely action value"
+    },
+    "F_Sauer": {
+      "url": "https://www.nature.com/articles/s43247-024-01401-y",
+      "read": [
+        "Abstract",
+        "Introduction",
+        "Results including vulnerability trends and development/structure relationships",
+        "Discussion limitations excerpts",
+        "Methods: Flooded areas, Impact data, Socio-economic and land use data",
+        "random forest/leave-one-out excerpts",
+        "Limitations of satellite-based observations",
+        "Data availability",
+        "Code availability"
+      ],
+      "figures": {
+        "1": {
+          "actually_viewed": true,
+          "file": "evidence/F_Sauer_fig1.png",
+          "observations": "asset/fatality/displacement panels with scatter, trend lines and regional boxes; PMK displayed 0.827/0.798/0.138"
+        }
+      },
+      "facts": "GFD 913 MODIS events; impact data coverage differs by source; main NatCatSERVICE data restricted; DFO displacement definition inconsistent",
+      "inference": "global vulnerability association is not a causal test of the forecast system"
+    },
+    "F_IFRC": {
+      "url": "https://www.ifrc.org/early-warning-early-action",
+      "read": [
+        "Early Warnings for All",
+        "Community early warning systems",
+        "Anticipatory action",
+        "Forecast-based financing",
+        "REAP",
+        "WhatNow",
+        "Alert Hub"
+      ],
+      "facts": "protocols, community capacities, dissemination and action feedback are operational components",
+      "inference": "delivery latency and capacity belong in decision evaluation; cost/effect parameters not obtained"
+    },
+    "F_neighbor_2019": {
+      "url": "https://doi.org/10.1016/j.ijdrr.2019.101252",
+      "read": [
+        "search-returned substantial excerpts of Methods 2 and case configuration 3",
+        "Discussion 5",
+        "Conclusions 6"
+      ],
+      "reading_level": "extracted search text from original publisher, not successful full-page/PDF read",
+      "figures_actually_viewed": [],
+      "facts": "already considers limited budgets, uncertainty, implementation time and one-/two-stage actions in Akokoro Uganda idealized case",
+      "inference": "budget or staged triggers alone are not a new contribution",
+      "failed": [
+        "publisher opens",
+        "IIASA challenge page",
+        "VU PDF 403"
+      ]
+    },
+    "F_neighbor_2025": {
+      "url": "https://arxiv.org/html/2510.16015v1",
+      "read": [
+        "Abstract",
+        "sensor placement/task formulations",
+        "3.3 training pipeline",
+        "Algorithm 1",
+        "4.1-4.8 experiments, data, constraints, baselines, table 1, limitations",
+        "Conclusion"
+      ],
+      "figures_actually_viewed": [],
+      "facts": "2019 Offutt AFB simulated flood, observed USGS boundary inputs; K=4 sensors; response tasks constrained; simulated hydraulic target",
+      "inference": "this does not establish ungauged cross-basin early-finance transfer"
+    },
+    "F_public_files": {
+      "urls": [
+        "https://zenodo.org/records/10397664",
+        "https://zenodo.org/records/8118213",
+        "https://github.com/google-research-datasets/global_streamflow_model_paper"
+      ],
+      "read": [
+        "Zenodo descriptions and file lists",
+        "repository README overview, download, units, GRDC licensing, supplied fold warnings"
+      ],
+      "actual_download": "evidence/F_GFD_exposure_DFO.csv",
+      "records_observed": 913,
+      "columns_observed": [
+        "DFO_ID",
+        "year",
+        "affected_sum_GHSL",
+        "affected_sum_GPW",
+        "CISI_global_affected_mean",
+        "fatalities",
+        "displaced"
+      ],
+      "facts": "Google mm/day versus GloFAS m3/s; right-labeled dates; GloFAS archive described as reanalysis; GRDC requires separate access; supplied folds must be retained",
+      "inference": "dates/shapes and event-basin linkage still required; grid rows are not independent flood units"
+    },
+    "H_Li": {
+      "url": "https://www.nature.com/articles/s41467-024-51355-0",
+      "read": [
+        "Abstract",
+        "Introduction",
+        "Results/discussion: inequality, influencing factors, potential, outlook",
+        "Methods: Urban data, Quantifying cooling effect opening",
+        "Testing for robustness",
+        "population-weighted cooling benefit definition excerpts",
+        "Quantifying between-city inequality",
+        "Data availability"
+      ],
+      "figures": {
+        "1": {
+          "actually_viewed": true,
+          "file": "evidence/H_Li_fig1.png",
+          "observations": "four cities, separate LST, NDVI, efficiency, capacity and population-weighted benefit panels; benefit has strong density dependence"
+        }
+      },
+      "facts": "468 urbanized polygons; 2018 hottest-month data; 100m primary and 1km robustness; buffer checks already exist",
+      "inference": "pixel weighted-benefit map values are not individual physical temperature reductions; global-city result insufficient for resource-poor households"
+    },
+    "H_Huang": {
+      "url": "https://www.nature.com/articles/s41467-026-73015-1",
+      "read": [
+        "Abstract",
+        "Introduction opening",
+        "Results: global scaling and socioeconomic/climate modulation excerpts",
+        "Discussion limitations",
+        "Methods: studied cities, remote-sensing data, population-weighted neighborhood Gini, scaling law analysis",
+        "Data availability",
+        "Code availability"
+      ],
+      "figures": {
+        "2": {
+          "actually_viewed": true,
+          "file": "evidence/H_Huang_fig2.png",
+          "observations": "three log-log scatter panels, alpha 0.13/0.12/0.11 and R2 0.04/0.04/0.03"
+        }
+      },
+      "facts": "11210 final urban centers, cross-sectional; 500m buffers with 300/800m sensitivity; 2024 greenery, 2022-2024 summer LST; raw data has 11422 rows",
+      "inference": "scale law cannot identify affected social groups or individual-city growth effects; no filtering reproduction done"
+    },
+    "H_neighbor_2024": {
+      "url": "https://www.nature.com/articles/s42949-024-00157-w",
+      "read": [
+        "Abstract",
+        "Discussion",
+        "Methods: county selection and accessibility assessment, demand/supply definitions, formulas and processing excerpts",
+        "Data availability",
+        "Code availability"
+      ],
+      "figures_actually_viewed": [],
+      "facts": "40 US counties; modified 2SFCA, walking/driving; canopy area and facility floor area proxies; public data, author-request analyzed data",
+      "inference": "multiple cooling-resource accessibility already done; household AC and measured thermal-service/time alignment remain candidate distinctions"
+    },
+    "H_neighbor_2026": {
+      "url": "https://www.nature.com/articles/s42949-026-00438-6",
+      "read": [
+        "full Abstract",
+        "author affiliations/publication metadata",
+        "author laboratory explanation of design at https://3slab.pku.edu.cn/info/1028/3265.htm returned by search"
+      ],
+      "reading_level": "abstract plus author research explanation only; PDF initially resolved as 43 pages but no usable method/page content was returned on follow-up",
+      "figures_actually_viewed": [],
+      "facts": "29 Chinese cities, 1km, coverage/capacity divergence, social-group comparison and allocation simulations already exist",
+      "inference": "service fairness alone is not novel; detailed method overlap unresolved"
+    },
+    "H_official_need": {
+      "urls": [
+        "https://comptroller.nyc.gov/reports/overheated-underserved/",
+        "https://a816-dohbesp.nyc.gov/IndicatorPublic/data-features/heat-report-archive/2025/",
+        "https://a816-dohbesp.nyc.gov/IndicatorPublic/data-features/heat-story/"
+      ],
+      "read": [
+        "Comptroller summary, geographic/community distribution, facilities, hours, recommendations, methodology, appendix beginning",
+        "health report community-level impacts and household-cooling discussion",
+        "heat-story community collection design"
+      ],
+      "facts": "2022-07-20 point snapshot of 542 centers, restricted hours/age/access; HVI includes LST/greenery/AC; mobile campaign one day and three collection windows",
+      "inference": "use AC component rather than circular HVI demand proxy; historic center availability is not verified current operation"
+    },
+    "H_files": {
+      "urls": [
+        "https://api.figshare.com/v2/articles/26340592/versions/1",
+        "https://api.figshare.com/v2/articles/30122284",
+        "https://ndownloader.figshare.com/files/61926235",
+        "https://api.github.com/repos/nychealth/EHDP-data/git/trees/production?recursive=1",
+        "https://raw.githubusercontent.com/nychealth/EHDP-data/production/indicators/metadata/metadata.json"
+      ],
+      "actual_downloads": [
+        "evidence/H_Li_figshare.json",
+        "evidence/H_Huang_figshare.json",
+        "evidence/H_Huang_dataMerged.csv",
+        "evidence/H_NYC_tree.json",
+        "evidence/H_NYC_indicator_metadata.json"
+      ],
+      "read": "file lists/licenses; city CSV header/count/first record; official metadata records matching air conditioning and HVI",
+      "facts": {
+        "figshare_license": "CC BY 4.0 for both records",
+        "Li_data_zip_bytes": 1160139073,
+        "Huang_csv_rows": 11422,
+        "AC_indicator": 2185,
+        "without_AC_measure": 1045,
+        "source": "NYC Housing and Vacancy Survey",
+        "geography": "Borough, Citywide, PUMA2010, Subboro, PUMA2020; no household-level independent outcome table obtained",
+        "survey_note": "method change in 2021; time-period IDs 41/46/298 not decoded in this run"
+      },
+      "inference": "population inference should respect PUMA geography; no million-pixel independent-sample claim"
+    }
+  },
+  "limitations": [
+    "Initial skill hash not recorded; no retrospective hash substituted for initial observation.",
+    "Parent informed of metadata/synonym edits during run; no alternate version or comparison report read.",
+    "Two uniform closing prompts plus subsequent deliberate interruptions/new-task closing instructions were received; output was closed as a preliminary topic acceptance deliverable, not complete research.",
+    "Final instruction allowed only one file-write operation; no further networking, rendering, checking tool calls or numerical study performed after it.",
+    "F and H each exhausted 10 web calls, including failures.",
+    "F closest 2019 original full page/PDF inaccessible; substantial search excerpts only; no figure/supplement inspection.",
+    "H 2026 service-equity nearest neighbor methods and PDF screenshot inaccessible; abstract/author explanation only.",
+    "No large forecast downloads, GRDC data, event-basin pairing, policy simulation, city analysis replication, household AC value table or complete cooling-center historical operating table obtained.",
+    "Only structural source-file inspection/counts performed; no causal health/real deployment benefit estimated.",
+    "No software install, source changes, alternate models, subagents or external messaging; parent coordination status only.",
+    "Exact sampling parameters and model build unavailable."
+  ]
+}

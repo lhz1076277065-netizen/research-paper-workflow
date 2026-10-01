@@ -2,14 +2,14 @@
 name: manuscript-writing
 description: "当需要起草、整合或改写学术稿件时使用；完整稿按证据组织全文并终审，单段或摘要请求只处理指定范围。"
 metadata:
-  version: "3.2.0"
+  version: "3.3.0-rc.1"
 ---
 
 # 证据与贡献驱动的完整论文写作
 
 从真实研究形成完整可编辑稿，关键结果、正文、图表、引用与导出相互对应。指定anti-defensive-writing整理已成立贡献，再核对对象、结局、时间与数值；局部请求只完成相应范围。
 
-默认 computational-autonomous：在线取得或电脑内构造材料，用数字工具检验结论。executor 为当前Agent，原生子代理按需分工；research_model 可本地加载、训练和评价。专业Skill按角色选指定13仓库的已安装/当前版本；自主选择方法，改造或新写代码。免费工具按需准备、验证，以API、CLI或GUI保存输出和可编辑项目。
+默认 computational-autonomous：在线取得或电脑内构造材料，用数字工具检验结论。executor 为当前Agent，原生子代理按需分工；research_model 可本地加载、训练和评价。专业Skill按角色选来源清单内的已安装/当前版本；自主选择方法，改造或新写代码。免费工具按需准备、验证，以API、CLI或GUI保存输出和可编辑项目。
 
 专业细节按需查 [原专业参考](references/protocol.md)。完整稿最终表达时读 [指定写作终审](references/final-expression.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。
 

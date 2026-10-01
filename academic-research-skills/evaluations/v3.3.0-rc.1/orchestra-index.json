@@ -1,0 +1,2761 @@
+{
+  "schema_version": "upstream-index-1",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+  "requested_ref": null,
+  "default_branch": "main",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "tree_sha": "eb544e88f08d76170d17050b10c18a317afd0314",
+  "checked_at": "2026-10-01T14:52:26.615218+00:00",
+  "complete": true,
+  "unresolved_trees": [],
+  "skills": [
+    "0-autoresearch-skill/SKILL.md",
+    "01-model-architecture/litgpt/SKILL.md",
+    "01-model-architecture/mamba/SKILL.md",
+    "01-model-architecture/nanogpt/SKILL.md",
+    "01-model-architecture/rwkv/SKILL.md",
+    "01-model-architecture/torchtitan/SKILL.md",
+    "02-tokenization/huggingface-tokenizers/SKILL.md",
+    "02-tokenization/sentencepiece/SKILL.md",
+    "03-fine-tuning/axolotl/SKILL.md",
+    "03-fine-tuning/llama-factory/SKILL.md",
+    "03-fine-tuning/peft/SKILL.md",
+    "03-fine-tuning/unsloth/SKILL.md",
+    "04-mechanistic-interpretability/nnsight/SKILL.md",
+    "04-mechanistic-interpretability/pyvene/SKILL.md",
+    "04-mechanistic-interpretability/saelens/SKILL.md",
+    "04-mechanistic-interpretability/transformer-lens/SKILL.md",
+    "05-data-processing/nemo-curator/SKILL.md",
+    "05-data-processing/ray-data/SKILL.md",
+    "06-post-training/grpo-rl-training/SKILL.md",
+    "06-post-training/miles/SKILL.md",
+    "06-post-training/openrlhf/SKILL.md",
+    "06-post-training/simpo/SKILL.md",
+    "06-post-training/slime/SKILL.md",
+    "06-post-training/torchforge/SKILL.md",
+    "06-post-training/trl-fine-tuning/SKILL.md",
+    "06-post-training/verl/SKILL.md",
+    "07-safety-alignment/constitutional-ai/SKILL.md",
+    "07-safety-alignment/llamaguard/SKILL.md",
+    "07-safety-alignment/nemo-guardrails/SKILL.md",
+    "07-safety-alignment/prompt-guard/SKILL.md",
+    "08-distributed-training/accelerate/SKILL.md",
+    "08-distributed-training/deepspeed/SKILL.md",
+    "08-distributed-training/megatron-core/SKILL.md",
+    "08-distributed-training/pytorch-fsdp2/SKILL.md",
+    "08-distributed-training/pytorch-lightning/SKILL.md",
+    "08-distributed-training/ray-train/SKILL.md",
+    "09-infrastructure/lambda-labs/SKILL.md",
+    "09-infrastructure/modal/SKILL.md",
+    "09-infrastructure/skypilot/SKILL.md",
+    "10-optimization/awq/SKILL.md",
+    "10-optimization/bitsandbytes/SKILL.md",
+    "10-optimization/flash-attention/SKILL.md",
+    "10-optimization/gguf/SKILL.md",
+    "10-optimization/gptq/SKILL.md",
+    "10-optimization/hqq/SKILL.md",
+    "10-optimization/ml-training-recipes/SKILL.md",
+    "11-evaluation/bigcode-evaluation-harness/SKILL.md",
+    "11-evaluation/lm-evaluation-harness/SKILL.md",
+    "11-evaluation/nemo-evaluator/SKILL.md",
+    "12-inference-serving/llama-cpp/SKILL.md",
+    "12-inference-serving/sglang/SKILL.md",
+    "12-inference-serving/tensorrt-llm/SKILL.md",
+    "12-inference-serving/vllm/SKILL.md",
+    "13-mlops/mlflow/SKILL.md",
+    "13-mlops/swanlab/SKILL.md",
+    "13-mlops/tensorboard/SKILL.md",
+    "13-mlops/weights-and-biases/SKILL.md",
+    "14-agents/a-evolve/SKILL.md",
+    "14-agents/autogpt/SKILL.md",
+    "14-agents/crewai/SKILL.md",
+    "14-agents/langchain/SKILL.md",
+    "14-agents/llamaindex/SKILL.md",
+    "15-rag/chroma/SKILL.md",
+    "15-rag/faiss/SKILL.md",
+    "15-rag/pinecone/SKILL.md",
+    "15-rag/qdrant/SKILL.md",
+    "15-rag/sentence-transformers/SKILL.md",
+    "16-prompt-engineering/dspy/SKILL.md",
+    "16-prompt-engineering/guidance/SKILL.md",
+    "16-prompt-engineering/instructor/SKILL.md",
+    "16-prompt-engineering/outlines/SKILL.md",
+    "17-observability/langsmith/SKILL.md",
+    "17-observability/phoenix/SKILL.md",
+    "18-multimodal/audiocraft/SKILL.md",
+    "18-multimodal/blip-2/SKILL.md",
+    "18-multimodal/clip/SKILL.md",
+    "18-multimodal/cosmos-policy/SKILL.md",
+    "18-multimodal/llava/SKILL.md",
+    "18-multimodal/openpi/SKILL.md",
+    "18-multimodal/openvla-oft/SKILL.md",
+    "18-multimodal/segment-anything/SKILL.md",
+    "18-multimodal/stable-diffusion/SKILL.md",
+    "18-multimodal/whisper/SKILL.md",
+    "19-emerging-techniques/knowledge-distillation/SKILL.md",
+    "19-emerging-techniques/long-context/SKILL.md",
+    "19-emerging-techniques/model-merging/SKILL.md",
+    "19-emerging-techniques/model-pruning/SKILL.md",
+    "19-emerging-techniques/moe-training/SKILL.md",
+    "19-emerging-techniques/speculative-decoding/SKILL.md",
+    "20-ml-paper-writing/academic-plotting/SKILL.md",
+    "20-ml-paper-writing/ml-paper-writing/SKILL.md",
+    "20-ml-paper-writing/presenting-conference-talks/SKILL.md",
+    "20-ml-paper-writing/systems-paper-writing/SKILL.md",
+    "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+    "21-research-ideation/creative-thinking-for-research/SKILL.md",
+    "22-agent-native-research-artifact/compiler/SKILL.md",
+    "22-agent-native-research-artifact/research-manager/SKILL.md",
+    "22-agent-native-research-artifact/rigor-reviewer/SKILL.md"
+  ],
+  "files": {
+    ".claude-plugin/marketplace.json": {
+      "path": ".claude-plugin/marketplace.json",
+      "blob_sha": "fda983c1325c2a52f4543a24b0efdf6fa3c85f2e",
+      "size": 12081
+    },
+    ".github/workflows/check-inventory.yml": {
+      "path": ".github/workflows/check-inventory.yml",
+      "blob_sha": "c62431fd71087e85e86e5029e7a097cc28f5c579",
+      "size": 785
+    },
+    ".github/workflows/claude.yml": {
+      "path": ".github/workflows/claude.yml",
+      "blob_sha": "a662022f423f9dd8273f535cfafd0b7017f9720b",
+      "size": 1109
+    },
+    ".github/workflows/publish-npm.yml": {
+      "path": ".github/workflows/publish-npm.yml",
+      "blob_sha": "ed7142b332f07cb2e2ebe3d1da57f0237aeef0df",
+      "size": 2485
+    },
+    ".github/workflows/sync-skills.yml": {
+      "path": ".github/workflows/sync-skills.yml",
+      "blob_sha": "f1be007e3cbbf2251a0d1f822a2d6afc0aafbbc6",
+      "size": 8925
+    },
+    ".gitignore": {
+      "path": ".gitignore",
+      "blob_sha": "c88b1acc1fbfe5e2279843a528e4d382b3d23599",
+      "size": 1099
+    },
+    "0-autoresearch-skill/SKILL.md": {
+      "path": "0-autoresearch-skill/SKILL.md",
+      "blob_sha": "cf2ef23d6f571624bc950d3b0de4797308cd9955",
+      "size": 24945
+    },
+    "0-autoresearch-skill/references/agent-continuity.md": {
+      "path": "0-autoresearch-skill/references/agent-continuity.md",
+      "blob_sha": "394f2e20d2564db2567ab691f79e1d5ef0f666ad",
+      "size": 4690
+    },
+    "0-autoresearch-skill/references/progress-reporting.md": {
+      "path": "0-autoresearch-skill/references/progress-reporting.md",
+      "blob_sha": "b065416bf5ca04ce19691cd521abdda6fa02dca5",
+      "size": 6467
+    },
+    "0-autoresearch-skill/references/skill-routing.md": {
+      "path": "0-autoresearch-skill/references/skill-routing.md",
+      "blob_sha": "d9230745f406bb69570a79a8c639c6e95a521461",
+      "size": 8546
+    },
+    "0-autoresearch-skill/templates/findings.md": {
+      "path": "0-autoresearch-skill/templates/findings.md",
+      "blob_sha": "7c71249ddbe4d037d6954984561f63132ec30d7a",
+      "size": 1494
+    },
+    "0-autoresearch-skill/templates/progress-presentation.html": {
+      "path": "0-autoresearch-skill/templates/progress-presentation.html",
+      "blob_sha": "15ef0e43ff17968c35ceeb4b28751782b491ebbc",
+      "size": 8685
+    },
+    "0-autoresearch-skill/templates/research-log.md": {
+      "path": "0-autoresearch-skill/templates/research-log.md",
+      "blob_sha": "e4e544afb19ddf357b98aebb6650624484ca9d17",
+      "size": 5011
+    },
+    "0-autoresearch-skill/templates/research-state.yaml": {
+      "path": "0-autoresearch-skill/templates/research-state.yaml",
+      "blob_sha": "c49391ac921493a1b452547e475d85fe4cbbfe79",
+      "size": 2102
+    },
+    "01-model-architecture/.gitkeep": {
+      "path": "01-model-architecture/.gitkeep",
+      "blob_sha": "8b70727ebb6f63bde894adb23f88847a27115ad6",
+      "size": 172
+    },
+    "01-model-architecture/litgpt/SKILL.md": {
+      "path": "01-model-architecture/litgpt/SKILL.md",
+      "blob_sha": "4fc77cb621f902a20c4df8ad578db1b0d8ee7149",
+      "size": 11010
+    },
+    "01-model-architecture/litgpt/references/custom-models.md": {
+      "path": "01-model-architecture/litgpt/references/custom-models.md",
+      "blob_sha": "3548a9303a996c002b5416e9dd65943b7f91e85c",
+      "size": 15655
+    },
+    "01-model-architecture/litgpt/references/distributed-training.md": {
+      "path": "01-model-architecture/litgpt/references/distributed-training.md",
+      "blob_sha": "6c5d434221f71dbfe612193b24cd9866522b145d",
+      "size": 11099
+    },
+    "01-model-architecture/litgpt/references/supported-models.md": {
+      "path": "01-model-architecture/litgpt/references/supported-models.md",
+      "blob_sha": "8eac5110bb2959fed726b26621a563bc0e4992c2",
+      "size": 7935
+    },
+    "01-model-architecture/litgpt/references/training-recipes.md": {
+      "path": "01-model-architecture/litgpt/references/training-recipes.md",
+      "blob_sha": "dd0157c9aac0c7a7dfa7393ef1ee9e0429165baa",
+      "size": 10978
+    },
+    "01-model-architecture/mamba/SKILL.md": {
+      "path": "01-model-architecture/mamba/SKILL.md",
+      "blob_sha": "8dd0ee2e6dbc85e9fdb9b69967482a8b54c4da26",
+      "size": 7368
+    },
+    "01-model-architecture/mamba/references/architecture-details.md": {
+      "path": "01-model-architecture/mamba/references/architecture-details.md",
+      "blob_sha": "719f25f63b83aaee8f0af69dc8c26536998de030",
+      "size": 5456
+    },
+    "01-model-architecture/mamba/references/benchmarks.md": {
+      "path": "01-model-architecture/mamba/references/benchmarks.md",
+      "blob_sha": "3190d2b8da51b6c9506b24c0421c789f2e4a130f",
+      "size": 8120
+    },
+    "01-model-architecture/mamba/references/training-guide.md": {
+      "path": "01-model-architecture/mamba/references/training-guide.md",
+      "blob_sha": "55034edf022855b4b783e0a0a26507346eadd499",
+      "size": 9012
+    },
+    "01-model-architecture/nanogpt/SKILL.md": {
+      "path": "01-model-architecture/nanogpt/SKILL.md",
+      "blob_sha": "3b77abf9a8f7408f1b5db7bcbeb31a187f6ac148",
+      "size": 6752
+    },
+    "01-model-architecture/nanogpt/references/architecture.md": {
+      "path": "01-model-architecture/nanogpt/references/architecture.md",
+      "blob_sha": "dae9df6c22562e6acfa0c05356f0d89755b6bb41",
+      "size": 11716
+    },
+    "01-model-architecture/nanogpt/references/data.md": {
+      "path": "01-model-architecture/nanogpt/references/data.md",
+      "blob_sha": "c54e79605914c688d47504156548f9068dcee37a",
+      "size": 11212
+    },
+    "01-model-architecture/nanogpt/references/training.md": {
+      "path": "01-model-architecture/nanogpt/references/training.md",
+      "blob_sha": "bfdacfd4b2a413631a73b1ea31e379fe70f538df",
+      "size": 13551
+    },
+    "01-model-architecture/rwkv/SKILL.md": {
+      "path": "01-model-architecture/rwkv/SKILL.md",
+      "blob_sha": "d8f00673a85979d6aba406003deb3f3b5c993941",
+      "size": 7099
+    },
+    "01-model-architecture/rwkv/references/architecture-details.md": {
+      "path": "01-model-architecture/rwkv/references/architecture-details.md",
+      "blob_sha": "23e11f8db3d2b66c490fcdbb9d2dc806030296b7",
+      "size": 9304
+    },
+    "01-model-architecture/rwkv/references/rwkv7.md": {
+      "path": "01-model-architecture/rwkv/references/rwkv7.md",
+      "blob_sha": "cb44780ff246a13771a0627e97dff1b746b8759d",
+      "size": 10428
+    },
+    "01-model-architecture/rwkv/references/state-management.md": {
+      "path": "01-model-architecture/rwkv/references/state-management.md",
+      "blob_sha": "2954b9120841ac26bf42e694b4a2a5621669a284",
+      "size": 9497
+    },
+    "01-model-architecture/torchtitan/SKILL.md": {
+      "path": "01-model-architecture/torchtitan/SKILL.md",
+      "blob_sha": "7b08ed5366cf7444fd08a6484cc791797d4844d2",
+      "size": 8927
+    },
+    "01-model-architecture/torchtitan/references/checkpoint.md": {
+      "path": "01-model-architecture/torchtitan/references/checkpoint.md",
+      "blob_sha": "ff819683f86aa96cd1edc5bc303df639a0a35054",
+      "size": 4216
+    },
+    "01-model-architecture/torchtitan/references/custom-models.md": {
+      "path": "01-model-architecture/torchtitan/references/custom-models.md",
+      "blob_sha": "ee80f744426b8ef8f383f98a2ca88104454c270b",
+      "size": 7383
+    },
+    "01-model-architecture/torchtitan/references/float8.md": {
+      "path": "01-model-architecture/torchtitan/references/float8.md",
+      "blob_sha": "b08fd2bf4ee45d8206bee3f946ce0e3fdf4cfee0",
+      "size": 4055
+    },
+    "01-model-architecture/torchtitan/references/fsdp.md": {
+      "path": "01-model-architecture/torchtitan/references/fsdp.md",
+      "blob_sha": "21ef7fdbd589f2831984a4c8cd0d668224cfcdc6",
+      "size": 3888
+    },
+    "02-tokenization/.gitkeep": {
+      "path": "02-tokenization/.gitkeep",
+      "blob_sha": "6bc70332a59dc82e0feff956cd63da929f4c7885",
+      "size": 166
+    },
+    "02-tokenization/huggingface-tokenizers/SKILL.md": {
+      "path": "02-tokenization/huggingface-tokenizers/SKILL.md",
+      "blob_sha": "a7f399f7a51af6bc9d2a4669f5a4845d853e466d",
+      "size": 13674
+    },
+    "02-tokenization/huggingface-tokenizers/references/algorithms.md": {
+      "path": "02-tokenization/huggingface-tokenizers/references/algorithms.md",
+      "blob_sha": "745bcd909f04d0be2d6deb1532cac6aea7d85810",
+      "size": 15182
+    },
+    "02-tokenization/huggingface-tokenizers/references/integration.md": {
+      "path": "02-tokenization/huggingface-tokenizers/references/integration.md",
+      "blob_sha": "a5dafec16ff8de3df178df55d1a408023bc32fd7",
+      "size": 15389
+    },
+    "02-tokenization/huggingface-tokenizers/references/pipeline.md": {
+      "path": "02-tokenization/huggingface-tokenizers/references/pipeline.md",
+      "blob_sha": "9efcb48ae3789a8ece0b16908341dfa4e7011c51",
+      "size": 16746
+    },
+    "02-tokenization/huggingface-tokenizers/references/training.md": {
+      "path": "02-tokenization/huggingface-tokenizers/references/training.md",
+      "blob_sha": "99454a43468f8af1b737d16049109892d6496abe",
+      "size": 14559
+    },
+    "02-tokenization/sentencepiece/SKILL.md": {
+      "path": "02-tokenization/sentencepiece/SKILL.md",
+      "blob_sha": "c525d171eb905a4c8df2368b3c7d97f85a0ef056",
+      "size": 5632
+    },
+    "02-tokenization/sentencepiece/references/algorithms.md": {
+      "path": "02-tokenization/sentencepiece/references/algorithms.md",
+      "blob_sha": "f01782a758ae70e96995ee23b44d5ed75793d2fa",
+      "size": 4212
+    },
+    "02-tokenization/sentencepiece/references/training.md": {
+      "path": "02-tokenization/sentencepiece/references/training.md",
+      "blob_sha": "d1d940ab4c45bd7a24e3270eced05f78ab5416e1",
+      "size": 6240
+    },
+    "03-fine-tuning/axolotl/SKILL.md": {
+      "path": "03-fine-tuning/axolotl/SKILL.md",
+      "blob_sha": "216d07e8a0808b98fdc059098b70eb00445a2963",
+      "size": 4797
+    },
+    "03-fine-tuning/axolotl/references/api.md": {
+      "path": "03-fine-tuning/axolotl/references/api.md",
+      "blob_sha": "f00b6eb6acd012e56fa056166dba780144d53cae",
+      "size": 121142
+    },
+    "03-fine-tuning/axolotl/references/dataset-formats.md": {
+      "path": "03-fine-tuning/axolotl/references/dataset-formats.md",
+      "blob_sha": "e09fde4c4629c0362c66e6e501e1d1141ba1ae0a",
+      "size": 46043
+    },
+    "03-fine-tuning/axolotl/references/index.md": {
+      "path": "03-fine-tuning/axolotl/references/index.md",
+      "blob_sha": "2f2acb1b46c2bd633767cbd2b2a0e1577784a33a",
+      "size": 199
+    },
+    "03-fine-tuning/axolotl/references/other.md": {
+      "path": "03-fine-tuning/axolotl/references/other.md",
+      "blob_sha": "c711f115e2e881156d139d7f158003fcd3c8ecba",
+      "size": 140407
+    },
+    "03-fine-tuning/llama-factory/SKILL.md": {
+      "path": "03-fine-tuning/llama-factory/SKILL.md",
+      "blob_sha": "c3d592ce83b42f27946d7ba4da88c01301554ad2",
+      "size": 2472
+    },
+    "03-fine-tuning/llama-factory/references/_images.md": {
+      "path": "03-fine-tuning/llama-factory/references/_images.md",
+      "blob_sha": "70636c01bb84ab69f7b0666c304cfcfa27507c7c",
+      "size": 307
+    },
+    "03-fine-tuning/llama-factory/references/advanced.md": {
+      "path": "03-fine-tuning/llama-factory/references/advanced.md",
+      "blob_sha": "2ac02c74ba5143614d44a51851a97ab854008f22",
+      "size": 47823
+    },
+    "03-fine-tuning/llama-factory/references/getting_started.md": {
+      "path": "03-fine-tuning/llama-factory/references/getting_started.md",
+      "blob_sha": "e648371a8d0e7d090012dd332a1780307ab710de",
+      "size": 16188
+    },
+    "03-fine-tuning/llama-factory/references/index.md": {
+      "path": "03-fine-tuning/llama-factory/references/index.md",
+      "blob_sha": "d7f01a5b4a8ab0790fe07e378ae400fd89088736",
+      "size": 262
+    },
+    "03-fine-tuning/llama-factory/references/other.md": {
+      "path": "03-fine-tuning/llama-factory/references/other.md",
+      "blob_sha": "7ce650f089829dfb807ec0a27e99341694636a19",
+      "size": 1166
+    },
+    "03-fine-tuning/peft/SKILL.md": {
+      "path": "03-fine-tuning/peft/SKILL.md",
+      "blob_sha": "fee4108b968e2b295fa3df5debf66eb5fee93222",
+      "size": 12210
+    },
+    "03-fine-tuning/peft/references/advanced-usage.md": {
+      "path": "03-fine-tuning/peft/references/advanced-usage.md",
+      "blob_sha": "d23c0d422afc6a2b1b1efc8c590e109f15c1ead6",
+      "size": 12541
+    },
+    "03-fine-tuning/peft/references/troubleshooting.md": {
+      "path": "03-fine-tuning/peft/references/troubleshooting.md",
+      "blob_sha": "2200f75c2f80f3c60a7eba508bdf90c18bebd1b5",
+      "size": 10344
+    },
+    "03-fine-tuning/unsloth/SKILL.md": {
+      "path": "03-fine-tuning/unsloth/SKILL.md",
+      "blob_sha": "2cafc0fb699221a329734f30dd5a5b40040c07c1",
+      "size": 2307
+    },
+    "03-fine-tuning/unsloth/references/index.md": {
+      "path": "03-fine-tuning/unsloth/references/index.md",
+      "blob_sha": "96a4adb7610002d22fab55ca24ef8a9b881aa513",
+      "size": 98
+    },
+    "03-fine-tuning/unsloth/references/llms-full.md": {
+      "path": "03-fine-tuning/unsloth/references/llms-full.md",
+      "blob_sha": "76bc16a352c53916ea3a9494b61bcbbea8fd4948",
+      "size": 1077228
+    },
+    "03-fine-tuning/unsloth/references/llms-txt.md": {
+      "path": "03-fine-tuning/unsloth/references/llms-txt.md",
+      "blob_sha": "ed99f5bbff06ae27171ec3c9680337ce4dbabdd9",
+      "size": 813092
+    },
+    "03-fine-tuning/unsloth/references/llms.md": {
+      "path": "03-fine-tuning/unsloth/references/llms.md",
+      "blob_sha": "041d3527995920f3ed03a24f85709207d68dc488",
+      "size": 12507
+    },
+    "04-mechanistic-interpretability/nnsight/SKILL.md": {
+      "path": "04-mechanistic-interpretability/nnsight/SKILL.md",
+      "blob_sha": "48472d111ab6acd1e02c2d775c3febe974664f09",
+      "size": 13066
+    },
+    "04-mechanistic-interpretability/nnsight/references/README.md": {
+      "path": "04-mechanistic-interpretability/nnsight/references/README.md",
+      "blob_sha": "0ba6322fbc0208f69702815ddb2d7f5896a52726",
+      "size": 1913
+    },
+    "04-mechanistic-interpretability/nnsight/references/api.md": {
+      "path": "04-mechanistic-interpretability/nnsight/references/api.md",
+      "blob_sha": "d077056ce2b4b3cab647f13e9e58009a4c978410",
+      "size": 7160
+    },
+    "04-mechanistic-interpretability/nnsight/references/tutorials.md": {
+      "path": "04-mechanistic-interpretability/nnsight/references/tutorials.md",
+      "blob_sha": "43f2235fad5509eebf47b6b67110619ac9de9d49",
+      "size": 7970
+    },
+    "04-mechanistic-interpretability/pyvene/SKILL.md": {
+      "path": "04-mechanistic-interpretability/pyvene/SKILL.md",
+      "blob_sha": "c62d2530552059fb908f2ebde294c65297695706",
+      "size": 14144
+    },
+    "04-mechanistic-interpretability/pyvene/references/README.md": {
+      "path": "04-mechanistic-interpretability/pyvene/references/README.md",
+      "blob_sha": "95ddf67b1fb99e1c23c5edc3e3c2e9a39ebc6376",
+      "size": 2105
+    },
+    "04-mechanistic-interpretability/pyvene/references/api.md": {
+      "path": "04-mechanistic-interpretability/pyvene/references/api.md",
+      "blob_sha": "df52b070a9d1a875704adcb06efed273cf7888e6",
+      "size": 7871
+    },
+    "04-mechanistic-interpretability/pyvene/references/tutorials.md": {
+      "path": "04-mechanistic-interpretability/pyvene/references/tutorials.md",
+      "blob_sha": "8b3f500bab76428131d106bd241010b5dc129f70",
+      "size": 10111
+    },
+    "04-mechanistic-interpretability/saelens/SKILL.md": {
+      "path": "04-mechanistic-interpretability/saelens/SKILL.md",
+      "blob_sha": "f70208aa61d52a3c90cb872b54ca7967fbb1f09c",
+      "size": 12754
+    },
+    "04-mechanistic-interpretability/saelens/references/README.md": {
+      "path": "04-mechanistic-interpretability/saelens/references/README.md",
+      "blob_sha": "0ec3b7cff944caed68b2d26c8538178557bf33df",
+      "size": 2155
+    },
+    "04-mechanistic-interpretability/saelens/references/api.md": {
+      "path": "04-mechanistic-interpretability/saelens/references/api.md",
+      "blob_sha": "7ce5643b61abb8c3bc0a247054fff211ad0ddc97",
+      "size": 6968
+    },
+    "04-mechanistic-interpretability/saelens/references/tutorials.md": {
+      "path": "04-mechanistic-interpretability/saelens/references/tutorials.md",
+      "blob_sha": "fd44d9d6d3140ce565570dd2146029d33383471a",
+      "size": 9383
+    },
+    "04-mechanistic-interpretability/transformer-lens/SKILL.md": {
+      "path": "04-mechanistic-interpretability/transformer-lens/SKILL.md",
+      "blob_sha": "0575eb2733387fbbb186fac7c8fd477690997927",
+      "size": 12036
+    },
+    "04-mechanistic-interpretability/transformer-lens/references/README.md": {
+      "path": "04-mechanistic-interpretability/transformer-lens/references/README.md",
+      "blob_sha": "dcf818f6e922d42ace56dc3f9d1e23a492caa9c8",
+      "size": 1643
+    },
+    "04-mechanistic-interpretability/transformer-lens/references/api.md": {
+      "path": "04-mechanistic-interpretability/transformer-lens/references/api.md",
+      "blob_sha": "3eb6bc86277bed11124da7e0665d819276009ef5",
+      "size": 8349
+    },
+    "04-mechanistic-interpretability/transformer-lens/references/tutorials.md": {
+      "path": "04-mechanistic-interpretability/transformer-lens/references/tutorials.md",
+      "blob_sha": "1dc94dc131b8eb188ac17bf705b64ae8c0e443e4",
+      "size": 10142
+    },
+    "05-data-processing/.gitkeep": {
+      "path": "05-data-processing/.gitkeep",
+      "blob_sha": "22bbbdb21e4f685aaf41b275e2be01f0eef82583",
+      "size": 169
+    },
+    "05-data-processing/nemo-curator/SKILL.md": {
+      "path": "05-data-processing/nemo-curator/SKILL.md",
+      "blob_sha": "f07d7c9530ec50d7e40d60cd9df21e4cf8200f1c",
+      "size": 9338
+    },
+    "05-data-processing/nemo-curator/references/deduplication.md": {
+      "path": "05-data-processing/nemo-curator/references/deduplication.md",
+      "blob_sha": "b3336c1c7e4fe0c63977c306aec290865bace21c",
+      "size": 2142
+    },
+    "05-data-processing/nemo-curator/references/filtering.md": {
+      "path": "05-data-processing/nemo-curator/references/filtering.md",
+      "blob_sha": "565160685b325cc747a835b41ca566a0c7eccd93",
+      "size": 2351
+    },
+    "05-data-processing/ray-data/SKILL.md": {
+      "path": "05-data-processing/ray-data/SKILL.md",
+      "blob_sha": "50fc4ab0a76f3792c1c54f1195c1deb8cbc8cda8",
+      "size": 7328
+    },
+    "05-data-processing/ray-data/references/integration.md": {
+      "path": "05-data-processing/ray-data/references/integration.md",
+      "blob_sha": "adcaa784035d6a58d2221d50e3803cd903414f87",
+      "size": 1851
+    },
+    "05-data-processing/ray-data/references/transformations.md": {
+      "path": "05-data-processing/ray-data/references/transformations.md",
+      "blob_sha": "6c8bc440667ce8ed29eea81db6798693d2a9de50",
+      "size": 1664
+    },
+    "06-post-training/grpo-rl-training/README.md": {
+      "path": "06-post-training/grpo-rl-training/README.md",
+      "blob_sha": "99b60d66438e4aaf8c33046292b0ba4979cf582a",
+      "size": 3514
+    },
+    "06-post-training/grpo-rl-training/SKILL.md": {
+      "path": "06-post-training/grpo-rl-training/SKILL.md",
+      "blob_sha": "11873ce71ed933ecb62754122fac29ea12f1a789",
+      "size": 17200
+    },
+    "06-post-training/grpo-rl-training/examples/reward_functions_library.py": {
+      "path": "06-post-training/grpo-rl-training/examples/reward_functions_library.py",
+      "blob_sha": "17bba20147626f3d62b76d71bd554e05832fcdb4",
+      "size": 11568
+    },
+    "06-post-training/grpo-rl-training/templates/basic_grpo_training.py": {
+      "path": "06-post-training/grpo-rl-training/templates/basic_grpo_training.py",
+      "blob_sha": "228a93e7c0a0f395c4a47724a4434339c96c5792",
+      "size": 6122
+    },
+    "06-post-training/miles/SKILL.md": {
+      "path": "06-post-training/miles/SKILL.md",
+      "blob_sha": "0427abd0ab9a12d172f433d6ff12bb90af06109e",
+      "size": 8900
+    },
+    "06-post-training/miles/references/api-reference.md": {
+      "path": "06-post-training/miles/references/api-reference.md",
+      "blob_sha": "b23f375a3b46984e5761f2bff1bf98d7ffc953a4",
+      "size": 4137
+    },
+    "06-post-training/miles/references/troubleshooting.md": {
+      "path": "06-post-training/miles/references/troubleshooting.md",
+      "blob_sha": "e79b5c1766eef040b3deb80d7a4935769fc2d150",
+      "size": 5814
+    },
+    "06-post-training/openrlhf/SKILL.md": {
+      "path": "06-post-training/openrlhf/SKILL.md",
+      "blob_sha": "a82ed34ad3993a4dc74635c8985754dffe47813e",
+      "size": 8379
+    },
+    "06-post-training/openrlhf/references/algorithm-comparison.md": {
+      "path": "06-post-training/openrlhf/references/algorithm-comparison.md",
+      "blob_sha": "02cd9162d2a855f32d643bdf6ad68f125e929268",
+      "size": 9783
+    },
+    "06-post-training/openrlhf/references/custom-rewards.md": {
+      "path": "06-post-training/openrlhf/references/custom-rewards.md",
+      "blob_sha": "b4d028f6de8bcba7adcb2d2b493b763e39072310",
+      "size": 15865
+    },
+    "06-post-training/openrlhf/references/hybrid-engine.md": {
+      "path": "06-post-training/openrlhf/references/hybrid-engine.md",
+      "blob_sha": "41c9d571c2c1e93b118aac1305e6db72d431f3ab",
+      "size": 7266
+    },
+    "06-post-training/openrlhf/references/multi-node-training.md": {
+      "path": "06-post-training/openrlhf/references/multi-node-training.md",
+      "blob_sha": "035b9aadbdf6531bceaa22bf6b620f6c57d39b8c",
+      "size": 11099
+    },
+    "06-post-training/simpo/SKILL.md": {
+      "path": "06-post-training/simpo/SKILL.md",
+      "blob_sha": "6a5e0fec4b1788468efbf864a9070f7944b55070",
+      "size": 5916
+    },
+    "06-post-training/simpo/references/datasets.md": {
+      "path": "06-post-training/simpo/references/datasets.md",
+      "blob_sha": "449e6cf86f50a4d60dc37f875a9059c74c74b689",
+      "size": 10889
+    },
+    "06-post-training/simpo/references/hyperparameters.md": {
+      "path": "06-post-training/simpo/references/hyperparameters.md",
+      "blob_sha": "f55c31f86d465f42afb8b5a4b252ec41a78a0f6c",
+      "size": 8502
+    },
+    "06-post-training/simpo/references/loss-functions.md": {
+      "path": "06-post-training/simpo/references/loss-functions.md",
+      "blob_sha": "3aba0dc5deaa8708a0939fa0900f5bec8ff906db",
+      "size": 7067
+    },
+    "06-post-training/slime/SKILL.md": {
+      "path": "06-post-training/slime/SKILL.md",
+      "blob_sha": "8f5a17b8fb31edf27af4f42de6a501ed3932425d",
+      "size": 11600
+    },
+    "06-post-training/slime/references/api-reference.md": {
+      "path": "06-post-training/slime/references/api-reference.md",
+      "blob_sha": "a63a6fbe43030ed2cece362460f8aef28be536dd",
+      "size": 11907
+    },
+    "06-post-training/slime/references/troubleshooting.md": {
+      "path": "06-post-training/slime/references/troubleshooting.md",
+      "blob_sha": "23108525d5acc66dc7dfd3adab224935bc558668",
+      "size": 7221
+    },
+    "06-post-training/torchforge/SKILL.md": {
+      "path": "06-post-training/torchforge/SKILL.md",
+      "blob_sha": "ca35ce550685614ecc53091f2508d8421e3cdc2a",
+      "size": 10734
+    },
+    "06-post-training/torchforge/references/api-reference.md": {
+      "path": "06-post-training/torchforge/references/api-reference.md",
+      "blob_sha": "5d28de61a3fdfa029127006f36fa1460d528b4c1",
+      "size": 8685
+    },
+    "06-post-training/torchforge/references/troubleshooting.md": {
+      "path": "06-post-training/torchforge/references/troubleshooting.md",
+      "blob_sha": "c10ea1f24b222727e7443a49e0622a63a775c16f",
+      "size": 6709
+    },
+    "06-post-training/trl-fine-tuning/SKILL.md": {
+      "path": "06-post-training/trl-fine-tuning/SKILL.md",
+      "blob_sha": "db36dd8c05b82dfd520a837dfaaf811499e3256c",
+      "size": 11451
+    },
+    "06-post-training/trl-fine-tuning/references/dpo-variants.md": {
+      "path": "06-post-training/trl-fine-tuning/references/dpo-variants.md",
+      "blob_sha": "5623b9ab8473d2b82038d55f23870bdb650da885",
+      "size": 4297
+    },
+    "06-post-training/trl-fine-tuning/references/online-rl.md": {
+      "path": "06-post-training/trl-fine-tuning/references/online-rl.md",
+      "blob_sha": "87f46e91fb23adbab5700f66c7bc8dba42d25e0b",
+      "size": 1971
+    },
+    "06-post-training/trl-fine-tuning/references/reward-modeling.md": {
+      "path": "06-post-training/trl-fine-tuning/references/reward-modeling.md",
+      "blob_sha": "3b59695b19d8ea2946aebefad522845e76ce4fef",
+      "size": 2597
+    },
+    "06-post-training/trl-fine-tuning/references/sft-training.md": {
+      "path": "06-post-training/trl-fine-tuning/references/sft-training.md",
+      "blob_sha": "cd4294c63b60208691ee5d74cf68eac5d20c4bbc",
+      "size": 3237
+    },
+    "06-post-training/verl/SKILL.md": {
+      "path": "06-post-training/verl/SKILL.md",
+      "blob_sha": "f42820c1acd8e92329410d63b0f1ae4d14592268",
+      "size": 10323
+    },
+    "06-post-training/verl/references/api-reference.md": {
+      "path": "06-post-training/verl/references/api-reference.md",
+      "blob_sha": "1850be6472e709e0792b1c794d627e6241152c4e",
+      "size": 6941
+    },
+    "06-post-training/verl/references/troubleshooting.md": {
+      "path": "06-post-training/verl/references/troubleshooting.md",
+      "blob_sha": "45a885c674d6314eb07767a1b4da2d5a8aa4ed87",
+      "size": 6792
+    },
+    "07-safety-alignment/.gitkeep": {
+      "path": "07-safety-alignment/.gitkeep",
+      "blob_sha": "7866db86fd2cf6d813b07b5cd23e550ac9124a32",
+      "size": 170
+    },
+    "07-safety-alignment/constitutional-ai/SKILL.md": {
+      "path": "07-safety-alignment/constitutional-ai/SKILL.md",
+      "blob_sha": "4c96f987ab8c567efc1016d441d738e49f9ef53d",
+      "size": 8177
+    },
+    "07-safety-alignment/llamaguard/SKILL.md": {
+      "path": "07-safety-alignment/llamaguard/SKILL.md",
+      "blob_sha": "69a6b24144268434db5f316a4231fbdf4be38a88",
+      "size": 9204
+    },
+    "07-safety-alignment/nemo-guardrails/SKILL.md": {
+      "path": "07-safety-alignment/nemo-guardrails/SKILL.md",
+      "blob_sha": "b85b1d5f4abe4bc7dc288dc33f100c4afcbc5822",
+      "size": 7642
+    },
+    "07-safety-alignment/prompt-guard/SKILL.md": {
+      "path": "07-safety-alignment/prompt-guard/SKILL.md",
+      "blob_sha": "909499b249b7b9b3c02dc1521b49980a61d2b559",
+      "size": 9455
+    },
+    "08-distributed-training/accelerate/SKILL.md": {
+      "path": "08-distributed-training/accelerate/SKILL.md",
+      "blob_sha": "f44898099cb7628133d68ff6cd7fca380bcbab77",
+      "size": 8340
+    },
+    "08-distributed-training/accelerate/references/custom-plugins.md": {
+      "path": "08-distributed-training/accelerate/references/custom-plugins.md",
+      "blob_sha": "d8207ee857d3566d3fe1ab7a0a74d8e78973f93f",
+      "size": 11781
+    },
+    "08-distributed-training/accelerate/references/megatron-integration.md": {
+      "path": "08-distributed-training/accelerate/references/megatron-integration.md",
+      "blob_sha": "61b025b5e0aa6221cfc0bf980df54ced0665a7a7",
+      "size": 11252
+    },
+    "08-distributed-training/accelerate/references/performance.md": {
+      "path": "08-distributed-training/accelerate/references/performance.md",
+      "blob_sha": "62560d2bf2f2cb07523946b69eb84084fa8f7aea",
+      "size": 12569
+    },
+    "08-distributed-training/deepspeed/SKILL.md": {
+      "path": "08-distributed-training/deepspeed/SKILL.md",
+      "blob_sha": "cf35db7e735118e2bf26269600dba6bdaa0cf4fd",
+      "size": 144988
+    },
+    "08-distributed-training/deepspeed/references/08.md": {
+      "path": "08-distributed-training/deepspeed/references/08.md",
+      "blob_sha": "e3057c20291e288c29bf8da45400a7735105c7d8",
+      "size": 304
+    },
+    "08-distributed-training/deepspeed/references/09.md": {
+      "path": "08-distributed-training/deepspeed/references/09.md",
+      "blob_sha": "5272dcd45d2697d2b7ada42dfc80cea8d66e24a5",
+      "size": 27523
+    },
+    "08-distributed-training/deepspeed/references/2020.md": {
+      "path": "08-distributed-training/deepspeed/references/2020.md",
+      "blob_sha": "d04506a31cdd19f209d13074b3940a275576eef5",
+      "size": 35816
+    },
+    "08-distributed-training/deepspeed/references/2023.md": {
+      "path": "08-distributed-training/deepspeed/references/2023.md",
+      "blob_sha": "f708c10f5379a68ad7b309c0054ede3cab33da32",
+      "size": 11787
+    },
+    "08-distributed-training/deepspeed/references/assets.md": {
+      "path": "08-distributed-training/deepspeed/references/assets.md",
+      "blob_sha": "7a8e4d5fc3ea8e996b6a02b43ec7b57180f1a9aa",
+      "size": 2491
+    },
+    "08-distributed-training/deepspeed/references/index.md": {
+      "path": "08-distributed-training/deepspeed/references/index.md",
+      "blob_sha": "7a2039ff15cb2deb0ebdbf818e2114915d3fd51f",
+      "size": 402
+    },
+    "08-distributed-training/deepspeed/references/mii.md": {
+      "path": "08-distributed-training/deepspeed/references/mii.md",
+      "blob_sha": "c6c3e2123f2fbbe9641569a7a4841282e245843f",
+      "size": 11036
+    },
+    "08-distributed-training/deepspeed/references/other.md": {
+      "path": "08-distributed-training/deepspeed/references/other.md",
+      "blob_sha": "85a429d814e5ba37020e9dc3b80bdfd798b5d7c3",
+      "size": 99667
+    },
+    "08-distributed-training/deepspeed/references/tutorials.md": {
+      "path": "08-distributed-training/deepspeed/references/tutorials.md",
+      "blob_sha": "915bfb7dee75ca931865b6a9ef0230137d283a83",
+      "size": 454412
+    },
+    "08-distributed-training/megatron-core/SKILL.md": {
+      "path": "08-distributed-training/megatron-core/SKILL.md",
+      "blob_sha": "8c96e20e89782dce448c02187e7a4763a7f6e1e1",
+      "size": 9706
+    },
+    "08-distributed-training/megatron-core/references/benchmarks.md": {
+      "path": "08-distributed-training/megatron-core/references/benchmarks.md",
+      "blob_sha": "dad5bd0fcd48e4251d685e19edcf10242c68a59d",
+      "size": 7363
+    },
+    "08-distributed-training/megatron-core/references/parallelism-guide.md": {
+      "path": "08-distributed-training/megatron-core/references/parallelism-guide.md",
+      "blob_sha": "4727b22e7610a9999dbd9031609b27f3e622e467",
+      "size": 9591
+    },
+    "08-distributed-training/megatron-core/references/production-examples.md": {
+      "path": "08-distributed-training/megatron-core/references/production-examples.md",
+      "blob_sha": "4218a7d6d1b7be738a0abcb08e497fe3d45af6e3",
+      "size": 10903
+    },
+    "08-distributed-training/megatron-core/references/training-recipes.md": {
+      "path": "08-distributed-training/megatron-core/references/training-recipes.md",
+      "blob_sha": "c2d86bb0b825e6c4aa04d1eb89affb8635f8c525",
+      "size": 11588
+    },
+    "08-distributed-training/pytorch-fsdp2/SKILL.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/SKILL.md",
+      "blob_sha": "30d159316c8845e8d2f0bdf617959324a97227b3",
+      "size": 10992
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_dcp_async_recipe.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_dcp_async_recipe.md",
+      "blob_sha": "bdec79c1e57760ea1a669ff7a51f2bc51ae2f3b4",
+      "size": 808
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_dcp_overview.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_dcp_overview.md",
+      "blob_sha": "3914e98d32630892297652c5ccad82687bcc8ba5",
+      "size": 1022
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_dcp_recipe.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_dcp_recipe.md",
+      "blob_sha": "f9a1fbffde8548e18ea55e89c53af168dc6beac8",
+      "size": 1043
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_ddp_notes.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_ddp_notes.md",
+      "blob_sha": "5d10260441e51db68fe6c34cf51e14033465245f",
+      "size": 461
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_device_mesh_tutorial.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_device_mesh_tutorial.md",
+      "blob_sha": "efafdc619f37a5c73f9c5a062a0c4f82057e2192",
+      "size": 1222
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_examples_fsdp2.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_examples_fsdp2.md",
+      "blob_sha": "20a44eb6c69ed2b1a6b4c70f25ceaaafa9b89dff",
+      "size": 742
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_fsdp1_api.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_fsdp1_api.md",
+      "blob_sha": "5b08b7b643c37aae9155628ed9b280cdb0e7c9cc",
+      "size": 396
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_fsdp2_tutorial.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_fsdp2_tutorial.md",
+      "blob_sha": "521cc6231ca5414d206e9084737501c7ce57fbb7",
+      "size": 2495
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_fully_shard_api.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_fully_shard_api.md",
+      "blob_sha": "c00cd54d5eb94a0c852e4bf70b67ed9fa5fbf261",
+      "size": 2884
+    },
+    "08-distributed-training/pytorch-fsdp2/references/pytorch_tp_tutorial.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/pytorch_tp_tutorial.md",
+      "blob_sha": "122efdb8ad981435edc140014e7e0a610f6282a5",
+      "size": 994
+    },
+    "08-distributed-training/pytorch-fsdp2/references/ray_train_fsdp2_example.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/ray_train_fsdp2_example.md",
+      "blob_sha": "9b397d1ed003d9eb5a4dce4ceb69f9a7a5a05114",
+      "size": 592
+    },
+    "08-distributed-training/pytorch-fsdp2/references/torchtitan_fsdp_notes.md": {
+      "path": "08-distributed-training/pytorch-fsdp2/references/torchtitan_fsdp_notes.md",
+      "blob_sha": "c0d9df20de009e1ee91c9bbb70410b4f4d29a899",
+      "size": 666
+    },
+    "08-distributed-training/pytorch-lightning/SKILL.md": {
+      "path": "08-distributed-training/pytorch-lightning/SKILL.md",
+      "blob_sha": "042facd430b317aea0c11cc99da8c4d104921e59",
+      "size": 9121
+    },
+    "08-distributed-training/pytorch-lightning/references/callbacks.md": {
+      "path": "08-distributed-training/pytorch-lightning/references/callbacks.md",
+      "blob_sha": "3d65ffa2d0d03681bfcf2f257ae04207dac4fffc",
+      "size": 12031
+    },
+    "08-distributed-training/pytorch-lightning/references/distributed.md": {
+      "path": "08-distributed-training/pytorch-lightning/references/distributed.md",
+      "blob_sha": "886b3c75ac5d1b97165f4cc7e3084f6d47f6d1cd",
+      "size": 10818
+    },
+    "08-distributed-training/pytorch-lightning/references/hyperparameter-tuning.md": {
+      "path": "08-distributed-training/pytorch-lightning/references/hyperparameter-tuning.md",
+      "blob_sha": "ea57f711690040dc8cdb31ad80c1a8269a8c2b50",
+      "size": 12517
+    },
+    "08-distributed-training/ray-train/SKILL.md": {
+      "path": "08-distributed-training/ray-train/SKILL.md",
+      "blob_sha": "8219595547113da2c4d074f6c1a356324e73ae27",
+      "size": 10696
+    },
+    "08-distributed-training/ray-train/references/multi-node.md": {
+      "path": "08-distributed-training/ray-train/references/multi-node.md",
+      "blob_sha": "ae8321d9bbad11d970f83a416b68e14fcf722410",
+      "size": 13526
+    },
+    "09-infrastructure/.gitkeep": {
+      "path": "09-infrastructure/.gitkeep",
+      "blob_sha": "14af2063ab0674df757fa5c052a87e0f5a5769cc",
+      "size": 168
+    },
+    "09-infrastructure/lambda-labs/SKILL.md": {
+      "path": "09-infrastructure/lambda-labs/SKILL.md",
+      "blob_sha": "adc9e1150239b73e96f0023f7dbbdbc55a5e0a58",
+      "size": 12153
+    },
+    "09-infrastructure/lambda-labs/references/advanced-usage.md": {
+      "path": "09-infrastructure/lambda-labs/references/advanced-usage.md",
+      "blob_sha": "1902d8c5c50ea4e5d80fded042c934cd8fd2d120",
+      "size": 15100
+    },
+    "09-infrastructure/lambda-labs/references/troubleshooting.md": {
+      "path": "09-infrastructure/lambda-labs/references/troubleshooting.md",
+      "blob_sha": "927e3814569be8cbc0372402197db5f418b12088",
+      "size": 11683
+    },
+    "09-infrastructure/modal/SKILL.md": {
+      "path": "09-infrastructure/modal/SKILL.md",
+      "blob_sha": "bca49254c978d3017e1bea7564f0b2e553152326",
+      "size": 8555
+    },
+    "09-infrastructure/modal/references/advanced-usage.md": {
+      "path": "09-infrastructure/modal/references/advanced-usage.md",
+      "blob_sha": "639278ed88d5ebba0c825a5ed39bfdf5625bf2f5",
+      "size": 10903
+    },
+    "09-infrastructure/modal/references/troubleshooting.md": {
+      "path": "09-infrastructure/modal/references/troubleshooting.md",
+      "blob_sha": "2b47ff3eedba29c3f4f9926d5eeb293f556c1408",
+      "size": 10516
+    },
+    "09-infrastructure/skypilot/SKILL.md": {
+      "path": "09-infrastructure/skypilot/SKILL.md",
+      "blob_sha": "e2db30e31510cfea1cf62748d2e0551ec6ea231b",
+      "size": 9641
+    },
+    "09-infrastructure/skypilot/references/advanced-usage.md": {
+      "path": "09-infrastructure/skypilot/references/advanced-usage.md",
+      "blob_sha": "7c4a661fdf212b7506e131172644ffc0a67d241f",
+      "size": 7469
+    },
+    "09-infrastructure/skypilot/references/troubleshooting.md": {
+      "path": "09-infrastructure/skypilot/references/troubleshooting.md",
+      "blob_sha": "b978f77f78138588b922a7f708bea739be8c988d",
+      "size": 10493
+    },
+    "10-optimization/.gitkeep": {
+      "path": "10-optimization/.gitkeep",
+      "blob_sha": "bfa9b81ebf90b05af2559049144324b9c3dac056",
+      "size": 166
+    },
+    "10-optimization/awq/SKILL.md": {
+      "path": "10-optimization/awq/SKILL.md",
+      "blob_sha": "f3b5b8049aaa10cb8a68948e43e42c051ff6c85d",
+      "size": 8383
+    },
+    "10-optimization/awq/references/advanced-usage.md": {
+      "path": "10-optimization/awq/references/advanced-usage.md",
+      "blob_sha": "6972c48a58205f7408bf24953ba03c91316094df",
+      "size": 7983
+    },
+    "10-optimization/awq/references/troubleshooting.md": {
+      "path": "10-optimization/awq/references/troubleshooting.md",
+      "blob_sha": "496747ac08f36c41ab7a31c259d87c5a09f1eb5a",
+      "size": 7733
+    },
+    "10-optimization/bitsandbytes/SKILL.md": {
+      "path": "10-optimization/bitsandbytes/SKILL.md",
+      "blob_sha": "81e7e81d0f1ca68f3c9861166c1e6a9df1738979",
+      "size": 10126
+    },
+    "10-optimization/bitsandbytes/references/memory-optimization.md": {
+      "path": "10-optimization/bitsandbytes/references/memory-optimization.md",
+      "blob_sha": "ed20e88fdea1eb07dce8b596c3858133d15d45de",
+      "size": 12642
+    },
+    "10-optimization/bitsandbytes/references/qlora-training.md": {
+      "path": "10-optimization/bitsandbytes/references/qlora-training.md",
+      "blob_sha": "9455c0de1379a1b520c59a24b881af48c0d23267",
+      "size": 12015
+    },
+    "10-optimization/bitsandbytes/references/quantization-formats.md": {
+      "path": "10-optimization/bitsandbytes/references/quantization-formats.md",
+      "blob_sha": "9abe8d7ad13ad7a5753d49dea775a6e4adf6d116",
+      "size": 10258
+    },
+    "10-optimization/flash-attention/SKILL.md": {
+      "path": "10-optimization/flash-attention/SKILL.md",
+      "blob_sha": "b8a7245efc973e81e7d932e0aa848f95fdc80ec2",
+      "size": 10201
+    },
+    "10-optimization/flash-attention/references/benchmarks.md": {
+      "path": "10-optimization/flash-attention/references/benchmarks.md",
+      "blob_sha": "f798a6dda35d41662b32a42f045dfc5e288f797b",
+      "size": 7129
+    },
+    "10-optimization/flash-attention/references/transformers-integration.md": {
+      "path": "10-optimization/flash-attention/references/transformers-integration.md",
+      "blob_sha": "48736755d5d01849127cec8af5f5b4a078de5900",
+      "size": 7427
+    },
+    "10-optimization/gguf/SKILL.md": {
+      "path": "10-optimization/gguf/SKILL.md",
+      "blob_sha": "0a8cc60f3fea1ded6ddd8620d6f3394d39e883f0",
+      "size": 10320
+    },
+    "10-optimization/gguf/references/advanced-usage.md": {
+      "path": "10-optimization/gguf/references/advanced-usage.md",
+      "blob_sha": "de01fda246ac3dbaa6aa28c56db87a05782e3e40",
+      "size": 10887
+    },
+    "10-optimization/gguf/references/troubleshooting.md": {
+      "path": "10-optimization/gguf/references/troubleshooting.md",
+      "blob_sha": "3d5c579cb5375c311e1bea2ddc62cebfb6f2b24b",
+      "size": 8904
+    },
+    "10-optimization/gptq/SKILL.md": {
+      "path": "10-optimization/gptq/SKILL.md",
+      "blob_sha": "3117bde3c59686c66ac606cd40f26deb2151434a",
+      "size": 11593
+    },
+    "10-optimization/gptq/references/calibration.md": {
+      "path": "10-optimization/gptq/references/calibration.md",
+      "blob_sha": "1828b64cd06e230f0ba592f377c7d10992418ea4",
+      "size": 8164
+    },
+    "10-optimization/gptq/references/integration.md": {
+      "path": "10-optimization/gptq/references/integration.md",
+      "blob_sha": "879986c3d96472b82291a45cd432034e8653461e",
+      "size": 2797
+    },
+    "10-optimization/gptq/references/troubleshooting.md": {
+      "path": "10-optimization/gptq/references/troubleshooting.md",
+      "blob_sha": "0a95bf465b98aa2fa16a8ec4562ddf44a3856586",
+      "size": 1899
+    },
+    "10-optimization/hqq/SKILL.md": {
+      "path": "10-optimization/hqq/SKILL.md",
+      "blob_sha": "4a73b9b1a5587a960148c8f3f64cca69820a8c9a",
+      "size": 11466
+    },
+    "10-optimization/hqq/references/advanced-usage.md": {
+      "path": "10-optimization/hqq/references/advanced-usage.md",
+      "blob_sha": "bf184161b5de12fbca35b19b877a2c6344f8626a",
+      "size": 14077
+    },
+    "10-optimization/hqq/references/troubleshooting.md": {
+      "path": "10-optimization/hqq/references/troubleshooting.md",
+      "blob_sha": "7382d3dfd0ae7cd9c157465d4eb23b0a0eed7403",
+      "size": 11086
+    },
+    "10-optimization/ml-training-recipes/SKILL.md": {
+      "path": "10-optimization/ml-training-recipes/SKILL.md",
+      "blob_sha": "7c0517adc904241f39bbd5ec34d9d22c60f8f5e7",
+      "size": 11483
+    },
+    "10-optimization/ml-training-recipes/references/architecture.md": {
+      "path": "10-optimization/ml-training-recipes/references/architecture.md",
+      "blob_sha": "7e7a7cabc62fa383b64b7c8303016437b409afa8",
+      "size": 10523
+    },
+    "10-optimization/ml-training-recipes/references/biomedical.md": {
+      "path": "10-optimization/ml-training-recipes/references/biomedical.md",
+      "blob_sha": "28f4da594dfc5b953f146cf0a7bfbf3b42e3768b",
+      "size": 21275
+    },
+    "10-optimization/ml-training-recipes/references/domain-specific.md": {
+      "path": "10-optimization/ml-training-recipes/references/domain-specific.md",
+      "blob_sha": "ebe1ae75ab82cbcf59b7600371f6fbd5cea43167",
+      "size": 19643
+    },
+    "10-optimization/ml-training-recipes/references/experiment-loop.md": {
+      "path": "10-optimization/ml-training-recipes/references/experiment-loop.md",
+      "blob_sha": "8dcd003a68596aa00f48f7157ef758291e483af5",
+      "size": 4574
+    },
+    "10-optimization/ml-training-recipes/references/optimizers.md": {
+      "path": "10-optimization/ml-training-recipes/references/optimizers.md",
+      "blob_sha": "06e5330454089fde28567de9cd5cb77c0e63e606",
+      "size": 10893
+    },
+    "10-optimization/ml-training-recipes/references/scaling-and-selection.md": {
+      "path": "10-optimization/ml-training-recipes/references/scaling-and-selection.md",
+      "blob_sha": "a7cce07e034e829f90af4c997a9f0ce658790f40",
+      "size": 17259
+    },
+    "11-evaluation/.gitkeep": {
+      "path": "11-evaluation/.gitkeep",
+      "blob_sha": "ed1e7db03b5133da04f0fb29f525fc16a833cbe5",
+      "size": 164
+    },
+    "11-evaluation/bigcode-evaluation-harness/SKILL.md": {
+      "path": "11-evaluation/bigcode-evaluation-harness/SKILL.md",
+      "blob_sha": "8d231073a90e47e78d6f933c11206285bb9dfb3a",
+      "size": 11696
+    },
+    "11-evaluation/bigcode-evaluation-harness/references/benchmarks.md": {
+      "path": "11-evaluation/bigcode-evaluation-harness/references/benchmarks.md",
+      "blob_sha": "3d19e5ad93e810494241870358723fc228b8b86d",
+      "size": 9168
+    },
+    "11-evaluation/bigcode-evaluation-harness/references/custom-tasks.md": {
+      "path": "11-evaluation/bigcode-evaluation-harness/references/custom-tasks.md",
+      "blob_sha": "20a0308775a4f5bfce881ced29fd8c888d68c578",
+      "size": 10378
+    },
+    "11-evaluation/bigcode-evaluation-harness/references/issues.md": {
+      "path": "11-evaluation/bigcode-evaluation-harness/references/issues.md",
+      "blob_sha": "e050883d6e8f79dbd2f90eeda494b0fec0f11180",
+      "size": 8085
+    },
+    "11-evaluation/lm-evaluation-harness/SKILL.md": {
+      "path": "11-evaluation/lm-evaluation-harness/SKILL.md",
+      "blob_sha": "9dec810a96cfdfee2431e9105c38121482b1da83",
+      "size": 11895
+    },
+    "11-evaluation/lm-evaluation-harness/references/api-evaluation.md": {
+      "path": "11-evaluation/lm-evaluation-harness/references/api-evaluation.md",
+      "blob_sha": "db77f610b8b3223dc620c7f35b93443c4fb86487",
+      "size": 11114
+    },
+    "11-evaluation/lm-evaluation-harness/references/benchmark-guide.md": {
+      "path": "11-evaluation/lm-evaluation-harness/references/benchmark-guide.md",
+      "blob_sha": "e3031ecfa592b4e5d30fdd463fda0a75c89edd28",
+      "size": 10769
+    },
+    "11-evaluation/lm-evaluation-harness/references/custom-tasks.md": {
+      "path": "11-evaluation/lm-evaluation-harness/references/custom-tasks.md",
+      "blob_sha": "c5c1e895e3899dfb63340b370f8c5eb13207fc9a",
+      "size": 13125
+    },
+    "11-evaluation/lm-evaluation-harness/references/distributed-eval.md": {
+      "path": "11-evaluation/lm-evaluation-harness/references/distributed-eval.md",
+      "blob_sha": "2132e5bef778cd802783de9ca8c0a23139defc44",
+      "size": 11426
+    },
+    "11-evaluation/nemo-evaluator/SKILL.md": {
+      "path": "11-evaluation/nemo-evaluator/SKILL.md",
+      "blob_sha": "aff0cb8be39f17cfa4e433de1aacc0d01a89a6b3",
+      "size": 12225
+    },
+    "11-evaluation/nemo-evaluator/references/adapter-system.md": {
+      "path": "11-evaluation/nemo-evaluator/references/adapter-system.md",
+      "blob_sha": "6af25967f2ed4da1f6d5abab5ff48823e7611954",
+      "size": 9468
+    },
+    "11-evaluation/nemo-evaluator/references/configuration.md": {
+      "path": "11-evaluation/nemo-evaluator/references/configuration.md",
+      "blob_sha": "16b7fb50c838381a5265e00a349818b9d518a53d",
+      "size": 9567
+    },
+    "11-evaluation/nemo-evaluator/references/custom-benchmarks.md": {
+      "path": "11-evaluation/nemo-evaluator/references/custom-benchmarks.md",
+      "blob_sha": "99879b7d7360bc9b96334020acc0ff53a4cb4a21",
+      "size": 7101
+    },
+    "11-evaluation/nemo-evaluator/references/execution-backends.md": {
+      "path": "11-evaluation/nemo-evaluator/references/execution-backends.md",
+      "blob_sha": "5a15131ca7adfd5039535f21513ba5138360f94b",
+      "size": 9351
+    },
+    "12-inference-serving/.gitkeep": {
+      "path": "12-inference-serving/.gitkeep",
+      "blob_sha": "8ff802c192c4ff26137e122c8760cbf3e297a688",
+      "size": 171
+    },
+    "12-inference-serving/llama-cpp/SKILL.md": {
+      "path": "12-inference-serving/llama-cpp/SKILL.md",
+      "blob_sha": "ed41a5dedf43478838b3d9eeae76986418e70e75",
+      "size": 5912
+    },
+    "12-inference-serving/llama-cpp/references/optimization.md": {
+      "path": "12-inference-serving/llama-cpp/references/optimization.md",
+      "blob_sha": "dbe870c5d2ab27591cc0bd2a266549f3408dbdc4",
+      "size": 1659
+    },
+    "12-inference-serving/llama-cpp/references/quantization.md": {
+      "path": "12-inference-serving/llama-cpp/references/quantization.md",
+      "blob_sha": "8620463a647f826f449f5cee0851ec1be78f644b",
+      "size": 4956
+    },
+    "12-inference-serving/llama-cpp/references/server.md": {
+      "path": "12-inference-serving/llama-cpp/references/server.md",
+      "blob_sha": "19dba47bc2b35671190fb4082fee25ea6c578bb1",
+      "size": 2259
+    },
+    "12-inference-serving/sglang/SKILL.md": {
+      "path": "12-inference-serving/sglang/SKILL.md",
+      "blob_sha": "9e1e044f8b8bc6960733081de9dcb61332a00edc",
+      "size": 11431
+    },
+    "12-inference-serving/sglang/references/deployment.md": {
+      "path": "12-inference-serving/sglang/references/deployment.md",
+      "blob_sha": "8b73ae94b424a05fca31af3eb9670aa6587f2914",
+      "size": 10020
+    },
+    "12-inference-serving/sglang/references/radix-attention.md": {
+      "path": "12-inference-serving/sglang/references/radix-attention.md",
+      "blob_sha": "0dbfd220614159fd3acc49b158e364af0528c2d4",
+      "size": 11005
+    },
+    "12-inference-serving/sglang/references/structured-generation.md": {
+      "path": "12-inference-serving/sglang/references/structured-generation.md",
+      "blob_sha": "529d7764cdf4269c751b9e8269a9c87ef254535f",
+      "size": 13468
+    },
+    "12-inference-serving/tensorrt-llm/SKILL.md": {
+      "path": "12-inference-serving/tensorrt-llm/SKILL.md",
+      "blob_sha": "1cf338f48a4634ea8e8a676bf58aeaf67c0431af",
+      "size": 5039
+    },
+    "12-inference-serving/tensorrt-llm/references/multi-gpu.md": {
+      "path": "12-inference-serving/tensorrt-llm/references/multi-gpu.md",
+      "blob_sha": "1c0a5e7e9e474d1b90b28397aeaf0c462bf8c34f",
+      "size": 6699
+    },
+    "12-inference-serving/tensorrt-llm/references/optimization.md": {
+      "path": "12-inference-serving/tensorrt-llm/references/optimization.md",
+      "blob_sha": "2eb255ddf06046af5622214c0e2995115e994b9d",
+      "size": 5613
+    },
+    "12-inference-serving/tensorrt-llm/references/serving.md": {
+      "path": "12-inference-serving/tensorrt-llm/references/serving.md",
+      "blob_sha": "6ff1f18a48f6f8f0aa3d3872059f7f14cef5d55e",
+      "size": 9798
+    },
+    "12-inference-serving/vllm/SKILL.md": {
+      "path": "12-inference-serving/vllm/SKILL.md",
+      "blob_sha": "36b260ba4db56fb36af7bf73614157049b04f9a6",
+      "size": 9026
+    },
+    "12-inference-serving/vllm/references/optimization.md": {
+      "path": "12-inference-serving/vllm/references/optimization.md",
+      "blob_sha": "3d0cac5893fee862ac8dfa733bfc44b930424fa8",
+      "size": 5769
+    },
+    "12-inference-serving/vllm/references/quantization.md": {
+      "path": "12-inference-serving/vllm/references/quantization.md",
+      "blob_sha": "44901a2ac54bed6778d177be814df797e93e3be5",
+      "size": 6746
+    },
+    "12-inference-serving/vllm/references/server-deployment.md": {
+      "path": "12-inference-serving/vllm/references/server-deployment.md",
+      "blob_sha": "da5b837bca49a454711e36a12d528b2e056258eb",
+      "size": 5252
+    },
+    "12-inference-serving/vllm/references/troubleshooting.md": {
+      "path": "12-inference-serving/vllm/references/troubleshooting.md",
+      "blob_sha": "c00cc9a96b5bbee298002e98849b884c31a69614",
+      "size": 9037
+    },
+    "13-mlops/.gitkeep": {
+      "path": "13-mlops/.gitkeep",
+      "blob_sha": "f908f65bf4eae9d3d3d3f2e9ab90d91d342b1b60",
+      "size": 159
+    },
+    "13-mlops/mlflow/SKILL.md": {
+      "path": "13-mlops/mlflow/SKILL.md",
+      "blob_sha": "8c3e445b6a1a1b35c0dab72f88000ed84d38b83e",
+      "size": 15599
+    },
+    "13-mlops/mlflow/references/deployment.md": {
+      "path": "13-mlops/mlflow/references/deployment.md",
+      "blob_sha": "7a8a288edc0127b4bbcfddb67846a86c33297daf",
+      "size": 16695
+    },
+    "13-mlops/mlflow/references/model-registry.md": {
+      "path": "13-mlops/mlflow/references/model-registry.md",
+      "blob_sha": "286ff491699f0d1c46d814646ae8adccbb6c68d8",
+      "size": 17475
+    },
+    "13-mlops/mlflow/references/tracking.md": {
+      "path": "13-mlops/mlflow/references/tracking.md",
+      "blob_sha": "2258db8fafeb95587cd17e8d365b6388c833dad7",
+      "size": 14970
+    },
+    "13-mlops/swanlab/SKILL.md": {
+      "path": "13-mlops/swanlab/SKILL.md",
+      "blob_sha": "5b85a385bedff40ba12ab1d3591198d3eeb6c843",
+      "size": 9759
+    },
+    "13-mlops/swanlab/references/integrations.md": {
+      "path": "13-mlops/swanlab/references/integrations.md",
+      "blob_sha": "51f4bfb90041a69793a0ba57f83b246ea91d8fc0",
+      "size": 8017
+    },
+    "13-mlops/swanlab/references/visualization.md": {
+      "path": "13-mlops/swanlab/references/visualization.md",
+      "blob_sha": "331c4965d9effa9f2a799bd8e8f6472628524e3b",
+      "size": 5796
+    },
+    "13-mlops/tensorboard/SKILL.md": {
+      "path": "13-mlops/tensorboard/SKILL.md",
+      "blob_sha": "2764d52fa4ec393b1b300b576ef76189e6e8e269",
+      "size": 15276
+    },
+    "13-mlops/tensorboard/references/integrations.md": {
+      "path": "13-mlops/tensorboard/references/integrations.md",
+      "blob_sha": "58653502abc2ba2c769375de104b84c60ffc3c7f",
+      "size": 16205
+    },
+    "13-mlops/tensorboard/references/profiling.md": {
+      "path": "13-mlops/tensorboard/references/profiling.md",
+      "blob_sha": "5b1da6b24651ba814721cb4037d98140881b3dfc",
+      "size": 13337
+    },
+    "13-mlops/tensorboard/references/visualization.md": {
+      "path": "13-mlops/tensorboard/references/visualization.md",
+      "blob_sha": "be9e7d396938ee13fe443070642058e045ce6721",
+      "size": 14897
+    },
+    "13-mlops/weights-and-biases/SKILL.md": {
+      "path": "13-mlops/weights-and-biases/SKILL.md",
+      "blob_sha": "81d2e335f1ba6dc41f3a8f688310dbf1972d8dc4",
+      "size": 12454
+    },
+    "13-mlops/weights-and-biases/references/artifacts.md": {
+      "path": "13-mlops/weights-and-biases/references/artifacts.md",
+      "blob_sha": "2b0f793315e90184c0695cc314f3122fefba6d55",
+      "size": 13425
+    },
+    "13-mlops/weights-and-biases/references/integrations.md": {
+      "path": "13-mlops/weights-and-biases/references/integrations.md",
+      "blob_sha": "2a93865b7810ab709ef77a765c17153c5ad22404",
+      "size": 16219
+    },
+    "13-mlops/weights-and-biases/references/sweeps.md": {
+      "path": "13-mlops/weights-and-biases/references/sweeps.md",
+      "blob_sha": "38d93a2c777941f8c654b5cf059409146b938669",
+      "size": 17675
+    },
+    "14-agents/.gitkeep": {
+      "path": "14-agents/.gitkeep",
+      "blob_sha": "288fc170b94eb2b0bee760b7cc53f6f7662f7489",
+      "size": 160
+    },
+    "14-agents/a-evolve/SKILL.md": {
+      "path": "14-agents/a-evolve/SKILL.md",
+      "blob_sha": "3102bcbf05752d9359081ccf14af6f34ca71a0d8",
+      "size": 14603
+    },
+    "14-agents/a-evolve/references/README.md": {
+      "path": "14-agents/a-evolve/references/README.md",
+      "blob_sha": "5741a13813370b7a01ac1220534ce7090a10e9d3",
+      "size": 27098
+    },
+    "14-agents/a-evolve/references/api.md": {
+      "path": "14-agents/a-evolve/references/api.md",
+      "blob_sha": "44fd2de3c361c995f07cba6e304b6949055bd9d5",
+      "size": 15810
+    },
+    "14-agents/a-evolve/references/architecture.md": {
+      "path": "14-agents/a-evolve/references/architecture.md",
+      "blob_sha": "d14a7ec42953e58e753cc4bc982143d8586b499e",
+      "size": 15505
+    },
+    "14-agents/a-evolve/references/design-patterns.md": {
+      "path": "14-agents/a-evolve/references/design-patterns.md",
+      "blob_sha": "903afdc913dcd0aacdd15788aa08bb98fbb3c6d3",
+      "size": 15192
+    },
+    "14-agents/a-evolve/references/examples.md": {
+      "path": "14-agents/a-evolve/references/examples.md",
+      "blob_sha": "9ae6d2826e3991b768b13db67e7d91805d2a5d08",
+      "size": 10015
+    },
+    "14-agents/a-evolve/references/issues.md": {
+      "path": "14-agents/a-evolve/references/issues.md",
+      "blob_sha": "95faaab7625b46183db7ee0dab4aefbda44757ce",
+      "size": 16411
+    },
+    "14-agents/a-evolve/references/releases.md": {
+      "path": "14-agents/a-evolve/references/releases.md",
+      "blob_sha": "08b2416d163a1ab4e5176d11323e4becb7117410",
+      "size": 4561
+    },
+    "14-agents/a-evolve/references/tutorials.md": {
+      "path": "14-agents/a-evolve/references/tutorials.md",
+      "blob_sha": "eca8cfe80387b394c73768557b931f14d5968428",
+      "size": 23161
+    },
+    "14-agents/autogpt/SKILL.md": {
+      "path": "14-agents/autogpt/SKILL.md",
+      "blob_sha": "8d811a5dd9ddbeaafa7a954646b3a046096aa2d6",
+      "size": 9304
+    },
+    "14-agents/autogpt/references/advanced-usage.md": {
+      "path": "14-agents/autogpt/references/advanced-usage.md",
+      "blob_sha": "65b3ee0c8f823d8fa97f292381e3a60002e4e8d3",
+      "size": 13209
+    },
+    "14-agents/autogpt/references/troubleshooting.md": {
+      "path": "14-agents/autogpt/references/troubleshooting.md",
+      "blob_sha": "d59abf4dca579985da6bd5cd12ac140eb5dcd2a7",
+      "size": 7689
+    },
+    "14-agents/crewai/SKILL.md": {
+      "path": "14-agents/crewai/SKILL.md",
+      "blob_sha": "cf27744ddd9f60faee2670d6a47a3a676560f5ac",
+      "size": 13469
+    },
+    "14-agents/crewai/references/flows.md": {
+      "path": "14-agents/crewai/references/flows.md",
+      "blob_sha": "9a79d9bf2cb06e257beea3bfbaf36f90a3289ca8",
+      "size": 9846
+    },
+    "14-agents/crewai/references/tools.md": {
+      "path": "14-agents/crewai/references/tools.md",
+      "blob_sha": "6f7d282a78eea9bbc30e6f2a33daedbafbd5e5da",
+      "size": 10283
+    },
+    "14-agents/crewai/references/troubleshooting.md": {
+      "path": "14-agents/crewai/references/troubleshooting.md",
+      "blob_sha": "aa38560e9c0bf9fce4535658890411de86d4f5de",
+      "size": 8933
+    },
+    "14-agents/langchain/SKILL.md": {
+      "path": "14-agents/langchain/SKILL.md",
+      "blob_sha": "cf667923a29c7d4d03af2ddea8a916935bb9cea8",
+      "size": 12839
+    },
+    "14-agents/langchain/references/agents.md": {
+      "path": "14-agents/langchain/references/agents.md",
+      "blob_sha": "fe8e6feecb39c87a0744f5b8ea91b39fe65a84a7",
+      "size": 12661
+    },
+    "14-agents/langchain/references/integration.md": {
+      "path": "14-agents/langchain/references/integration.md",
+      "blob_sha": "c06e1226cdb91c0357da3888a92e649723c50684",
+      "size": 11832
+    },
+    "14-agents/langchain/references/rag.md": {
+      "path": "14-agents/langchain/references/rag.md",
+      "blob_sha": "294e78950dcd0cfa70182e05d6d58a17d6918e52",
+      "size": 14490
+    },
+    "14-agents/llamaindex/SKILL.md": {
+      "path": "14-agents/llamaindex/SKILL.md",
+      "blob_sha": "a32d8a067d1ecfe3fa64ee476aec85ab0b5b6c53",
+      "size": 14726
+    },
+    "14-agents/llamaindex/references/agents.md": {
+      "path": "14-agents/llamaindex/references/agents.md",
+      "blob_sha": "d5cfeadb8ebe54063a0cb5f1ba969c1c4b30a1e5",
+      "size": 1958
+    },
+    "14-agents/llamaindex/references/data_connectors.md": {
+      "path": "14-agents/llamaindex/references/data_connectors.md",
+      "blob_sha": "23ff9856fe898cb7aaf6921840e99c15d4e6211e",
+      "size": 2307
+    },
+    "14-agents/llamaindex/references/query_engines.md": {
+      "path": "14-agents/llamaindex/references/query_engines.md",
+      "blob_sha": "e774d240db40036bbfd9fd8f8ebfb2cb69ccb2d1",
+      "size": 9905
+    },
+    "15-rag/.gitkeep": {
+      "path": "15-rag/.gitkeep",
+      "blob_sha": "e3b1da313f2d0a3de2cbb3400c6e90c2bb9ed10d",
+      "size": 157
+    },
+    "15-rag/chroma/SKILL.md": {
+      "path": "15-rag/chroma/SKILL.md",
+      "blob_sha": "ef842181883cfc2b2ce5532a75b1f1dcdb75ed7a",
+      "size": 9165
+    },
+    "15-rag/chroma/references/integration.md": {
+      "path": "15-rag/chroma/references/integration.md",
+      "blob_sha": "e2d4f26adc59cdb60888cec89ead24b78dc67d5d",
+      "size": 771
+    },
+    "15-rag/faiss/SKILL.md": {
+      "path": "15-rag/faiss/SKILL.md",
+      "blob_sha": "a9ead285182767a0faba34f7b937362d1cdb93e8",
+      "size": 5048
+    },
+    "15-rag/faiss/references/index_types.md": {
+      "path": "15-rag/faiss/references/index_types.md",
+      "blob_sha": "f75bd3e9e87e42bc3933981c9be9833faddc2d28",
+      "size": 6181
+    },
+    "15-rag/pinecone/SKILL.md": {
+      "path": "15-rag/pinecone/SKILL.md",
+      "blob_sha": "c54a8eed77acacbccbddfe8c3400426fb6d66995",
+      "size": 7827
+    },
+    "15-rag/pinecone/references/deployment.md": {
+      "path": "15-rag/pinecone/references/deployment.md",
+      "blob_sha": "0f32988c6b1e5a0f84be29ea92b18aeddf7a3974",
+      "size": 3557
+    },
+    "15-rag/qdrant/SKILL.md": {
+      "path": "15-rag/qdrant/SKILL.md",
+      "blob_sha": "a2427142bde8fdd21aa9a9aa4466d925ffdae000",
+      "size": 13451
+    },
+    "15-rag/qdrant/references/advanced-usage.md": {
+      "path": "15-rag/qdrant/references/advanced-usage.md",
+      "blob_sha": "54a8b25d11d6a8b5b5bfa783e737da2e6b3c1eaa",
+      "size": 14969
+    },
+    "15-rag/qdrant/references/troubleshooting.md": {
+      "path": "15-rag/qdrant/references/troubleshooting.md",
+      "blob_sha": "219f281bd0acaff696c7305e7aeced692f4950c1",
+      "size": 12682
+    },
+    "15-rag/sentence-transformers/SKILL.md": {
+      "path": "15-rag/sentence-transformers/SKILL.md",
+      "blob_sha": "e3d50bc4c46377c9e8b9d54b4b90f6c743c7ac89",
+      "size": 6327
+    },
+    "15-rag/sentence-transformers/references/models.md": {
+      "path": "15-rag/sentence-transformers/references/models.md",
+      "blob_sha": "7692d2b00eeaebd7c4838b675e0b0ba895ead544",
+      "size": 2925
+    },
+    "16-prompt-engineering/.gitkeep": {
+      "path": "16-prompt-engineering/.gitkeep",
+      "blob_sha": "ea50cc295e81ac6f04ef23153b4529384bd85e00",
+      "size": 172
+    },
+    "16-prompt-engineering/dspy/SKILL.md": {
+      "path": "16-prompt-engineering/dspy/SKILL.md",
+      "blob_sha": "9e473d536887e0f6e2fbcc8fe393f583eb46164c",
+      "size": 15291
+    },
+    "16-prompt-engineering/dspy/references/examples.md": {
+      "path": "16-prompt-engineering/dspy/references/examples.md",
+      "blob_sha": "2f568c7b5a3ad1233d2db7f24c1458cb23babe1c",
+      "size": 18983
+    },
+    "16-prompt-engineering/dspy/references/modules.md": {
+      "path": "16-prompt-engineering/dspy/references/modules.md",
+      "blob_sha": "aa373d0f9560e002687f0f9a193b78fe106d6bd9",
+      "size": 12363
+    },
+    "16-prompt-engineering/dspy/references/optimizers.md": {
+      "path": "16-prompt-engineering/dspy/references/optimizers.md",
+      "blob_sha": "62bba9689b8a984df707c00b308869b941510d33",
+      "size": 14933
+    },
+    "16-prompt-engineering/guidance/SKILL.md": {
+      "path": "16-prompt-engineering/guidance/SKILL.md",
+      "blob_sha": "6135adfc712587523e883372ebf8314f46bf8acf",
+      "size": 14515
+    },
+    "16-prompt-engineering/guidance/references/backends.md": {
+      "path": "16-prompt-engineering/guidance/references/backends.md",
+      "blob_sha": "e1e9c5e440641d3876a56d8386edd3705e931a4c",
+      "size": 12010
+    },
+    "16-prompt-engineering/guidance/references/constraints.md": {
+      "path": "16-prompt-engineering/guidance/references/constraints.md",
+      "blob_sha": "99c81890c910123efe9f9c566cd621ebf8891323",
+      "size": 15886
+    },
+    "16-prompt-engineering/guidance/references/examples.md": {
+      "path": "16-prompt-engineering/guidance/references/examples.md",
+      "blob_sha": "315388748289129dd1aca966c8b57fd55e985962",
+      "size": 20079
+    },
+    "16-prompt-engineering/instructor/SKILL.md": {
+      "path": "16-prompt-engineering/instructor/SKILL.md",
+      "blob_sha": "9db7c8070ca7155002aed50e0d1df408ae12d587",
+      "size": 16827
+    },
+    "16-prompt-engineering/instructor/references/examples.md": {
+      "path": "16-prompt-engineering/instructor/references/examples.md",
+      "blob_sha": "e114835234f14be04e65d74fd4dca61c7fa61977",
+      "size": 2320
+    },
+    "16-prompt-engineering/instructor/references/providers.md": {
+      "path": "16-prompt-engineering/instructor/references/providers.md",
+      "blob_sha": "1f5975ef6ae3b62c02d93fd2248c3db697e36a97",
+      "size": 1329
+    },
+    "16-prompt-engineering/instructor/references/validation.md": {
+      "path": "16-prompt-engineering/instructor/references/validation.md",
+      "blob_sha": "790c48671532852b4ec1928c7769619889e4c8c4",
+      "size": 15306
+    },
+    "16-prompt-engineering/outlines/SKILL.md": {
+      "path": "16-prompt-engineering/outlines/SKILL.md",
+      "blob_sha": "e42792a14bcc37c521e4260e4b9078a6fbb7105d",
+      "size": 15951
+    },
+    "16-prompt-engineering/outlines/references/backends.md": {
+      "path": "16-prompt-engineering/outlines/references/backends.md",
+      "blob_sha": "f019f121437a32568d8211f3e81b1008e26e8c7f",
+      "size": 14407
+    },
+    "16-prompt-engineering/outlines/references/examples.md": {
+      "path": "16-prompt-engineering/outlines/references/examples.md",
+      "blob_sha": "c32ecdfcc7e74c1a33f732925e0003cf54734ca4",
+      "size": 21231
+    },
+    "16-prompt-engineering/outlines/references/json_generation.md": {
+      "path": "16-prompt-engineering/outlines/references/json_generation.md",
+      "blob_sha": "20cee9fc8242b708e03f465c3d8b6a9fca08d620",
+      "size": 14927
+    },
+    "17-observability/.gitkeep": {
+      "path": "17-observability/.gitkeep",
+      "blob_sha": "f17c5fbeca7aa63006426c422af4b5e2ea9da060",
+      "size": 167
+    },
+    "17-observability/langsmith/SKILL.md": {
+      "path": "17-observability/langsmith/SKILL.md",
+      "blob_sha": "68db9e4dbb4c1e23dd9abf002cceb0575d9d1254",
+      "size": 9693
+    },
+    "17-observability/langsmith/references/advanced-usage.md": {
+      "path": "17-observability/langsmith/references/advanced-usage.md",
+      "blob_sha": "80934cfeab589a4494aea5f37a58e2c09ed03fb6",
+      "size": 12006
+    },
+    "17-observability/langsmith/references/troubleshooting.md": {
+      "path": "17-observability/langsmith/references/troubleshooting.md",
+      "blob_sha": "7057cff657fec4e5268f60ae66b405e437c7c0b6",
+      "size": 10983
+    },
+    "17-observability/phoenix/SKILL.md": {
+      "path": "17-observability/phoenix/SKILL.md",
+      "blob_sha": "30f7d3de91339d42529a52bb309b982addca510a",
+      "size": 11466
+    },
+    "17-observability/phoenix/references/advanced-usage.md": {
+      "path": "17-observability/phoenix/references/advanced-usage.md",
+      "blob_sha": "a0846d08ca326285f7bad61e79b7efea2b753d55",
+      "size": 15277
+    },
+    "17-observability/phoenix/references/troubleshooting.md": {
+      "path": "17-observability/phoenix/references/troubleshooting.md",
+      "blob_sha": "9ebda56c880ae1f1c7c8b15615f5427bde831b86",
+      "size": 10944
+    },
+    "18-multimodal/.gitkeep": {
+      "path": "18-multimodal/.gitkeep",
+      "blob_sha": "e5356a04db7235436567539d2a60d9fc8270b99e",
+      "size": 164
+    },
+    "18-multimodal/audiocraft/SKILL.md": {
+      "path": "18-multimodal/audiocraft/SKILL.md",
+      "blob_sha": "03b900a0b718c1057945483e0f107876ccdb9ae2",
+      "size": 16308
+    },
+    "18-multimodal/audiocraft/references/advanced-usage.md": {
+      "path": "18-multimodal/audiocraft/references/advanced-usage.md",
+      "blob_sha": "953be2b4a560cd5d33f6f5675d2f1f3733371ad0",
+      "size": 16953
+    },
+    "18-multimodal/audiocraft/references/troubleshooting.md": {
+      "path": "18-multimodal/audiocraft/references/troubleshooting.md",
+      "blob_sha": "7b83e863d65186c80fcd139e425629baddd13bb8",
+      "size": 11412
+    },
+    "18-multimodal/blip-2/SKILL.md": {
+      "path": "18-multimodal/blip-2/SKILL.md",
+      "blob_sha": "749b17c2656c538e79e277dc0aad886e5e03c448",
+      "size": 18616
+    },
+    "18-multimodal/blip-2/references/advanced-usage.md": {
+      "path": "18-multimodal/blip-2/references/advanced-usage.md",
+      "blob_sha": "6137e02736863874e44fa1f114013276d5bd44ce",
+      "size": 18889
+    },
+    "18-multimodal/blip-2/references/troubleshooting.md": {
+      "path": "18-multimodal/blip-2/references/troubleshooting.md",
+      "blob_sha": "1ec2a52bbab1bcf63e4c79c6a4e73eba7d8237c9",
+      "size": 11981
+    },
+    "18-multimodal/clip/SKILL.md": {
+      "path": "18-multimodal/clip/SKILL.md",
+      "blob_sha": "e5282aeb047785130b98f0b8398ec70d2d0ad10c",
+      "size": 6884
+    },
+    "18-multimodal/clip/references/applications.md": {
+      "path": "18-multimodal/clip/references/applications.md",
+      "blob_sha": "38e9a0563f1525951976c15e71eef98060cc3b10",
+      "size": 5360
+    },
+    "18-multimodal/cosmos-policy/SKILL.md": {
+      "path": "18-multimodal/cosmos-policy/SKILL.md",
+      "blob_sha": "4f79afb30fc6d24c2991e1b11d9206c2216b670b",
+      "size": 14606
+    },
+    "18-multimodal/cosmos-policy/references/libero-commands.md": {
+      "path": "18-multimodal/cosmos-policy/references/libero-commands.md",
+      "blob_sha": "e41575dfad11f862180d5759e4a0af4a62f15b5b",
+      "size": 6863
+    },
+    "18-multimodal/cosmos-policy/references/robocasa-commands.md": {
+      "path": "18-multimodal/cosmos-policy/references/robocasa-commands.md",
+      "blob_sha": "1890a5c0e0e5bb5d7f2913deb72d80d704fb7437",
+      "size": 5894
+    },
+    "18-multimodal/llava/SKILL.md": {
+      "path": "18-multimodal/llava/SKILL.md",
+      "blob_sha": "f44b2ca6ea45daec60fbb77975eb2ae5ba10f89e",
+      "size": 7833
+    },
+    "18-multimodal/llava/references/training.md": {
+      "path": "18-multimodal/llava/references/training.md",
+      "blob_sha": "9ab89c96f9721515ee5d5072149d7077d36665aa",
+      "size": 4738
+    },
+    "18-multimodal/openpi/SKILL.md": {
+      "path": "18-multimodal/openpi/SKILL.md",
+      "blob_sha": "705328851021ff3ba23fb32b0bd6fca54b560ef7",
+      "size": 14242
+    },
+    "18-multimodal/openpi/references/checkpoints-and-env-map.md": {
+      "path": "18-multimodal/openpi/references/checkpoints-and-env-map.md",
+      "blob_sha": "3da336120195a16d9a21a27a3ddd4d714160c711",
+      "size": 2571
+    },
+    "18-multimodal/openpi/references/config-recipes.md": {
+      "path": "18-multimodal/openpi/references/config-recipes.md",
+      "blob_sha": "8a9045e6bb1068a68063352a939fa4e08a5dae80",
+      "size": 1782
+    },
+    "18-multimodal/openpi/references/pytorch-gotchas.md": {
+      "path": "18-multimodal/openpi/references/pytorch-gotchas.md",
+      "blob_sha": "74f81f6dabc29aa26dac37eac1c5eb242ba78602",
+      "size": 1446
+    },
+    "18-multimodal/openpi/references/remote-client-pattern.md": {
+      "path": "18-multimodal/openpi/references/remote-client-pattern.md",
+      "blob_sha": "78ec8ba18b4b4c88ce2c7db44b8b875ee4a4cc4a",
+      "size": 1205
+    },
+    "18-multimodal/openpi/references/training-debugging.md": {
+      "path": "18-multimodal/openpi/references/training-debugging.md",
+      "blob_sha": "ce475b6900099b074e2a989198cd89fc300e2a8c",
+      "size": 1207
+    },
+    "18-multimodal/openvla-oft/SKILL.md": {
+      "path": "18-multimodal/openvla-oft/SKILL.md",
+      "blob_sha": "508f8e7bf03179125dd1f51f221508db0dd2d482",
+      "size": 14858
+    },
+    "18-multimodal/openvla-oft/references/aloha-workflow.md": {
+      "path": "18-multimodal/openvla-oft/references/aloha-workflow.md",
+      "blob_sha": "36c75f3d1c3f6975cdffa414f1b105aae85b60cc",
+      "size": 3846
+    },
+    "18-multimodal/openvla-oft/references/config-troubleshooting.md": {
+      "path": "18-multimodal/openvla-oft/references/config-troubleshooting.md",
+      "blob_sha": "8f41df23e013663dfb096ba8547fc1d93ca8fc82",
+      "size": 4010
+    },
+    "18-multimodal/openvla-oft/references/libero-workflow.md": {
+      "path": "18-multimodal/openvla-oft/references/libero-workflow.md",
+      "blob_sha": "26572446ad598510863630bd7f09095fbd6d24a9",
+      "size": 3070
+    },
+    "18-multimodal/openvla-oft/references/paper-and-checkpoints.md": {
+      "path": "18-multimodal/openvla-oft/references/paper-and-checkpoints.md",
+      "blob_sha": "9a61622500043aae9d1cc21bd4cb576a9a26a5dd",
+      "size": 2600
+    },
+    "18-multimodal/segment-anything/SKILL.md": {
+      "path": "18-multimodal/segment-anything/SKILL.md",
+      "blob_sha": "47526d145b42e61b47fc2dbd17478176d98f7c78",
+      "size": 13403
+    },
+    "18-multimodal/segment-anything/references/advanced-usage.md": {
+      "path": "18-multimodal/segment-anything/references/advanced-usage.md",
+      "blob_sha": "95d2da2d1f6393ac5ea02c165be05f78c83906c2",
+      "size": 15803
+    },
+    "18-multimodal/segment-anything/references/troubleshooting.md": {
+      "path": "18-multimodal/segment-anything/references/troubleshooting.md",
+      "blob_sha": "434e95bcd4c8ff50832045ebb7e7927d26903430",
+      "size": 11914
+    },
+    "18-multimodal/stable-diffusion/SKILL.md": {
+      "path": "18-multimodal/stable-diffusion/SKILL.md",
+      "blob_sha": "8ee958a4252c90c76e243763126131f081a004ee",
+      "size": 12989
+    },
+    "18-multimodal/stable-diffusion/references/advanced-usage.md": {
+      "path": "18-multimodal/stable-diffusion/references/advanced-usage.md",
+      "blob_sha": "2384715f949cd6e8315d16fee9214f4eeea6308f",
+      "size": 17690
+    },
+    "18-multimodal/stable-diffusion/references/troubleshooting.md": {
+      "path": "18-multimodal/stable-diffusion/references/troubleshooting.md",
+      "blob_sha": "f358643b628aa93b47304a8eb7526298e5614233",
+      "size": 12401
+    },
+    "18-multimodal/whisper/SKILL.md": {
+      "path": "18-multimodal/whisper/SKILL.md",
+      "blob_sha": "4d751897cc8c2da4ff2db200e4100aae2bc2d1f1",
+      "size": 7466
+    },
+    "18-multimodal/whisper/references/languages.md": {
+      "path": "18-multimodal/whisper/references/languages.md",
+      "blob_sha": "dd17e123a0837ea3c1e333f4e6c7b1d14e86fbf0",
+      "size": 4786
+    },
+    "19-emerging-techniques/.gitkeep": {
+      "path": "19-emerging-techniques/.gitkeep",
+      "blob_sha": "3b0dd8a2bc1a6c306fca9739d4b28f1e5164be46",
+      "size": 173
+    },
+    "19-emerging-techniques/knowledge-distillation/SKILL.md": {
+      "path": "19-emerging-techniques/knowledge-distillation/SKILL.md",
+      "blob_sha": "6817e5a1c46efcd387d726947519a94fe618f561",
+      "size": 13600
+    },
+    "19-emerging-techniques/knowledge-distillation/references/minillm.md": {
+      "path": "19-emerging-techniques/knowledge-distillation/references/minillm.md",
+      "blob_sha": "b5a35e4a54c71787df89301880861501772577f3",
+      "size": 9117
+    },
+    "19-emerging-techniques/long-context/SKILL.md": {
+      "path": "19-emerging-techniques/long-context/SKILL.md",
+      "blob_sha": "0a3ec677fb5838cdf92aad51fd1ed1c2e833cc57",
+      "size": 15577
+    },
+    "19-emerging-techniques/long-context/references/extension_methods.md": {
+      "path": "19-emerging-techniques/long-context/references/extension_methods.md",
+      "blob_sha": "1a2d3d2c24e651021833d827792ab0fae9121819",
+      "size": 14537
+    },
+    "19-emerging-techniques/long-context/references/fine_tuning.md": {
+      "path": "19-emerging-techniques/long-context/references/fine_tuning.md",
+      "blob_sha": "9debc49aea0b9dd6cc512790e3b36799a01d93b5",
+      "size": 16431
+    },
+    "19-emerging-techniques/long-context/references/rope.md": {
+      "path": "19-emerging-techniques/long-context/references/rope.md",
+      "blob_sha": "962bc183938c601fa64d7f49dacf7a078e40ffa4",
+      "size": 12121
+    },
+    "19-emerging-techniques/model-merging/SKILL.md": {
+      "path": "19-emerging-techniques/model-merging/SKILL.md",
+      "blob_sha": "bde09c5c6b064eb347d2a9d131253c0a62a94106",
+      "size": 12818
+    },
+    "19-emerging-techniques/model-merging/references/coefficient-tuning.md": {
+      "path": "19-emerging-techniques/model-merging/references/coefficient-tuning.md",
+      "blob_sha": "a426ae33a7d79ba4daa489eb2380ed1429909dd8",
+      "size": 14622
+    },
+    "19-emerging-techniques/model-merging/references/evaluation.md": {
+      "path": "19-emerging-techniques/model-merging/references/evaluation.md",
+      "blob_sha": "10b881101e56da905cf2e1c8227c4ad3ec3ec760",
+      "size": 11705
+    },
+    "19-emerging-techniques/model-merging/references/examples.md": {
+      "path": "19-emerging-techniques/model-merging/references/examples.md",
+      "blob_sha": "457f9a7a00fdb1d377c316a18827a87b86111fdd",
+      "size": 8813
+    },
+    "19-emerging-techniques/model-merging/references/methods.md": {
+      "path": "19-emerging-techniques/model-merging/references/methods.md",
+      "blob_sha": "5edf78a671ba5d5d973c2e3627f865c3dc9288c7",
+      "size": 9562
+    },
+    "19-emerging-techniques/model-pruning/SKILL.md": {
+      "path": "19-emerging-techniques/model-pruning/SKILL.md",
+      "blob_sha": "5017efe27ba7059908f34116bab2a0c85ecad18d",
+      "size": 13744
+    },
+    "19-emerging-techniques/model-pruning/references/wanda.md": {
+      "path": "19-emerging-techniques/model-pruning/references/wanda.md",
+      "blob_sha": "3b12f04eb30851ead87e3180cbc7f5ade20feb22",
+      "size": 9492
+    },
+    "19-emerging-techniques/moe-training/SKILL.md": {
+      "path": "19-emerging-techniques/moe-training/SKILL.md",
+      "blob_sha": "e7ebe8b6c0025be80a3906b61021a6f5378c91c7",
+      "size": 14968
+    },
+    "19-emerging-techniques/moe-training/references/architectures.md": {
+      "path": "19-emerging-techniques/moe-training/references/architectures.md",
+      "blob_sha": "03610ecfc23ed95634c6357b01d55585f6d1935c",
+      "size": 14044
+    },
+    "19-emerging-techniques/moe-training/references/inference.md": {
+      "path": "19-emerging-techniques/moe-training/references/inference.md",
+      "blob_sha": "9ea15ad80a13c368a3770ec42f138f67fefe0092",
+      "size": 8239
+    },
+    "19-emerging-techniques/moe-training/references/training.md": {
+      "path": "19-emerging-techniques/moe-training/references/training.md",
+      "blob_sha": "13285e5cae2b7017371234417e6e71c2f99aa755",
+      "size": 9707
+    },
+    "19-emerging-techniques/speculative-decoding/SKILL.md": {
+      "path": "19-emerging-techniques/speculative-decoding/SKILL.md",
+      "blob_sha": "e556e4a979368f5e5bcd9ac9a4412a4bf83356d3",
+      "size": 14072
+    },
+    "19-emerging-techniques/speculative-decoding/references/lookahead.md": {
+      "path": "19-emerging-techniques/speculative-decoding/references/lookahead.md",
+      "blob_sha": "dc2bb3c48d8275005984da963bf2d898c6cd8fc9",
+      "size": 8890
+    },
+    "19-emerging-techniques/speculative-decoding/references/medusa.md": {
+      "path": "19-emerging-techniques/speculative-decoding/references/medusa.md",
+      "blob_sha": "b08d5c8929100db377dac2ba7174ac92700912eb",
+      "size": 9851
+    },
+    "20-ml-paper-writing/academic-plotting/SKILL.md": {
+      "path": "20-ml-paper-writing/academic-plotting/SKILL.md",
+      "blob_sha": "ee4ff26d6db646baa106c2d516dc1451e9bb1a4d",
+      "size": 21149
+    },
+    "20-ml-paper-writing/academic-plotting/references/data-visualization.md": {
+      "path": "20-ml-paper-writing/academic-plotting/references/data-visualization.md",
+      "blob_sha": "dc2d6058982de81b05bfab0089504ed8d787d3f8",
+      "size": 15393
+    },
+    "20-ml-paper-writing/academic-plotting/references/diagram-generation.md": {
+      "path": "20-ml-paper-writing/academic-plotting/references/diagram-generation.md",
+      "blob_sha": "93e548046cc4965fffff8e9e5ed1d34aa1685c96",
+      "size": 15426
+    },
+    "20-ml-paper-writing/academic-plotting/references/style-guide.md": {
+      "path": "20-ml-paper-writing/academic-plotting/references/style-guide.md",
+      "blob_sha": "c69cbc1192516653bc541f320ded1fae3f2cebee",
+      "size": 8652
+    },
+    "20-ml-paper-writing/ml-paper-writing/SKILL.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/SKILL.md",
+      "blob_sha": "2090941c1d1e6b619e5ab32147741546c8dbdb09",
+      "size": 37635
+    },
+    "20-ml-paper-writing/ml-paper-writing/references/checklists.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/references/checklists.md",
+      "blob_sha": "b8292ee1705417c66306954d30937de164c3e2fb",
+      "size": 10984
+    },
+    "20-ml-paper-writing/ml-paper-writing/references/citation-workflow.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/references/citation-workflow.md",
+      "blob_sha": "b7ec90b6a9d8e8ee932921a22e3d76ab41fcf663",
+      "size": 15167
+    },
+    "20-ml-paper-writing/ml-paper-writing/references/reviewer-guidelines.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/references/reviewer-guidelines.md",
+      "blob_sha": "0bdccc99e676299bbf22197904eed6056bd7fb7d",
+      "size": 10600
+    },
+    "20-ml-paper-writing/ml-paper-writing/references/sources.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/references/sources.md",
+      "blob_sha": "28cff8719889cfc4fe8da00c7668f5847971fa14",
+      "size": 7667
+    },
+    "20-ml-paper-writing/ml-paper-writing/references/writing-guide.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/references/writing-guide.md",
+      "blob_sha": "3da7233b657b980f8d58402a21bde3ed28453494",
+      "size": 16297
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/README.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/README.md",
+      "blob_sha": "efd22d29c37878bb65266f568c1a451ce20a73f8",
+      "size": 7347
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/README.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/README.md",
+      "blob_sha": "401ff3eb7ecde1b5972cbc64870feaab8a5ed5ad",
+      "size": 17987
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026-unified-supp.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026-unified-supp.tex",
+      "blob_sha": "e59d365bc1eb4d1e731eaed5d7475d70eb34205a",
+      "size": 4548
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026-unified-template.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026-unified-template.tex",
+      "blob_sha": "0a7612fea5dfe74707049b77cc3a0f3a0074c7d3",
+      "size": 63140
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026.bib": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026.bib",
+      "blob_sha": "7b7d2bcf44a7488d282c3e9b1f9079598dc99fa3",
+      "size": 4766
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026.bst": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026.bst",
+      "blob_sha": "bc73330ee79240ca69f8bd439f2230e46b555250",
+      "size": 30207
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/aaai2026/aaai2026.sty",
+      "blob_sha": "1c587a54d5613355974d8ac25ebb7d5d741c84e0",
+      "size": 11802
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/acl/README.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/acl/README.md",
+      "blob_sha": "a9404276c07f6dd1bf0b1fd61f1bee7affe2a8b7",
+      "size": 2126
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/acl/acl.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/acl/acl.sty",
+      "blob_sha": "d9b74d0e6d1ea7a41929ff30111a112e1d23f959",
+      "size": 11615
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/acl/acl_latex.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/acl/acl_latex.tex",
+      "blob_sha": "2eba2f17011dcd0e99bc9e127e12bccf422fc7d3",
+      "size": 14533
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/acl/acl_lualatex.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/acl/acl_lualatex.tex",
+      "blob_sha": "6684e89307487f419bb3b850bdd5495b9aa5458c",
+      "size": 3050
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/acl/acl_natbib.bst": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/acl/acl_natbib.bst",
+      "blob_sha": "49196816b22fed15ed57fbdad5c769e50955e935",
+      "size": 45186
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/acl/anthology.bib.txt": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/acl/anthology.bib.txt",
+      "blob_sha": "0d9f1fd5a4f683f779972d62a02d89bb95c53f96",
+      "size": 1169
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/acl/custom.bib": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/acl/custom.bib",
+      "blob_sha": "c2c0106471e5984835b3a25c6347e73a0624d415",
+      "size": 2071
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/acl/formatting.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/acl/formatting.md",
+      "blob_sha": "eeb1ce1548b95ea3191fe3ac76df1f5595adb8e7",
+      "size": 17923
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/colm2025/README.md": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/colm2025/README.md",
+      "blob_sha": "5a2c5ff16099a9d651e843999961269d70ae36bc",
+      "size": 51
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.bib": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.bib",
+      "blob_sha": "95744c20fc7ed4864ec1e860231ea981059afdd3",
+      "size": 496
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.bst": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.bst",
+      "blob_sha": "a85a0087d13bb3d19ba2ca53cae3a9db47119853",
+      "size": 26973
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.pdf": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.pdf",
+      "blob_sha": "1e78480975a5878619e71b1dc7957d6eb9489c4b",
+      "size": 122635
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.sty",
+      "blob_sha": "ae6c90f387a2ee8191a84478c107d6155483586c",
+      "size": 7727
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/colm2025/colm2025_conference.tex",
+      "blob_sha": "cd02cdc0d911d15fcbe9d8543fdc85ce70ede406",
+      "size": 12830
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/colm2025/fancyhdr.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/colm2025/fancyhdr.sty",
+      "blob_sha": "77ed4e3012d822c7cca5c17efcae308b32b8cc2b",
+      "size": 20521
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/colm2025/math_commands.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/colm2025/math_commands.tex",
+      "blob_sha": "0668f931945175ca8535db25cc27fa603920cc3c",
+      "size": 12284
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/colm2025/natbib.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/colm2025/natbib.sty",
+      "blob_sha": "ff0d0b91b6ef41468c593a0ca40a81f9a183b055",
+      "size": 45154
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/fancyhdr.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/fancyhdr.sty",
+      "blob_sha": "77ed4e3012d822c7cca5c17efcae308b32b8cc2b",
+      "size": 20521
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.bib": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.bib",
+      "blob_sha": "dbc773bf20f6a5e04306a5f7c8c4c759abf44baf",
+      "size": 629
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.bst": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.bst",
+      "blob_sha": "a85a0087d13bb3d19ba2ca53cae3a9db47119853",
+      "size": 26973
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.pdf": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.pdf",
+      "blob_sha": "396adefa6cccc9885433597c8e82bc6fa4c3329b",
+      "size": 200508
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.sty",
+      "blob_sha": "7a3e556699846084788d87853d2865cf8b4d0e70",
+      "size": 9025
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/iclr2026_conference.tex",
+      "blob_sha": "695022843e0be1fda33d6d0d3c989db212ab56d4",
+      "size": 16899
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/math_commands.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/math_commands.tex",
+      "blob_sha": "0668f931945175ca8535db25cc27fa603920cc3c",
+      "size": 12284
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/natbib.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/iclr2026/natbib.sty",
+      "blob_sha": "ff0d0b91b6ef41468c593a0ca40a81f9a183b055",
+      "size": 45154
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/icml2026/algorithm.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/icml2026/algorithm.sty",
+      "blob_sha": "843e3d5b9a52c705c34255b26177ba6d064630f5",
+      "size": 2223
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/icml2026/algorithmic.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/icml2026/algorithmic.sty",
+      "blob_sha": "ad614783f8b9160eb736ae864a2c6fe6cf7707c5",
+      "size": 7414
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/icml2026/example_paper.bib": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/icml2026/example_paper.bib",
+      "blob_sha": "ac29a9925877fd3e7bed2b7c208ab7713516062e",
+      "size": 2051
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/icml2026/example_paper.pdf": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/icml2026/example_paper.pdf",
+      "blob_sha": "26dc1b8d7f4d3ec1a09d7b7be1d1d7171bcd178c",
+      "size": 193509
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/icml2026/example_paper.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/icml2026/example_paper.tex",
+      "blob_sha": "2d3e8313db38bd0f9688557009c55f2c73370962",
+      "size": 29714
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/icml2026/fancyhdr.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/icml2026/fancyhdr.sty",
+      "blob_sha": "b3d811f9028c2f60b4437f9c834a5dfff1d02a9d",
+      "size": 31715
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/icml2026/icml2026.bst": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/icml2026/icml2026.bst",
+      "blob_sha": "f1a50e87853c5a25a1f072fecc8a99398413257f",
+      "size": 27147
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/icml2026/icml2026.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/icml2026/icml2026.sty",
+      "blob_sha": "47f1fae8400f54698eb5b3b245da8ea458dac536",
+      "size": 27344
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/icml2026/icml_numpapers.pdf": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/icml2026/icml_numpapers.pdf",
+      "blob_sha": "98d2167980dcea38980d2c58a8630d8be1b0905d",
+      "size": 2823
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/neurips2025/Makefile": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/neurips2025/Makefile",
+      "blob_sha": "9baab4a2eb95bec88fcb62b412d45620c8c4a446",
+      "size": 1054
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/neurips2025/extra_pkgs.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/neurips2025/extra_pkgs.tex",
+      "blob_sha": "7b8b2e81203f48bc5ffbd20d97dd8950f4f39151",
+      "size": 2837
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/neurips2025/main.tex": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/neurips2025/main.tex",
+      "blob_sha": "65ece27c1a069b007c2019c8c777a5e005c4eac4",
+      "size": 574
+    },
+    "20-ml-paper-writing/ml-paper-writing/templates/neurips2025/neurips.sty": {
+      "path": "20-ml-paper-writing/ml-paper-writing/templates/neurips2025/neurips.sty",
+      "blob_sha": "d5297aaa270108376df30adea22c6297f930d943",
+      "size": 11625
+    },
+    "20-ml-paper-writing/presenting-conference-talks/SKILL.md": {
+      "path": "20-ml-paper-writing/presenting-conference-talks/SKILL.md",
+      "blob_sha": "b65c36207dd0da9c9d583a816f488458820bcc26",
+      "size": 10253
+    },
+    "20-ml-paper-writing/presenting-conference-talks/references/slide-templates.md": {
+      "path": "20-ml-paper-writing/presenting-conference-talks/references/slide-templates.md",
+      "blob_sha": "9acf97411c952545b54ae267b8a95a7ac8e8056a",
+      "size": 15279
+    },
+    "20-ml-paper-writing/systems-paper-writing/SKILL.md": {
+      "path": "20-ml-paper-writing/systems-paper-writing/SKILL.md",
+      "blob_sha": "c7607cfa79cd4114f0f2df071bcc4f9e24ef6b4d",
+      "size": 14355
+    },
+    "20-ml-paper-writing/systems-paper-writing/references/checklist.md": {
+      "path": "20-ml-paper-writing/systems-paper-writing/references/checklist.md",
+      "blob_sha": "b36e3a7f62cb86ee9ba32e19e37a826fbcf80e4f",
+      "size": 11896
+    },
+    "20-ml-paper-writing/systems-paper-writing/references/reviewer-guidelines.md": {
+      "path": "20-ml-paper-writing/systems-paper-writing/references/reviewer-guidelines.md",
+      "blob_sha": "8e650908444bae91252fe7d37c6580d12dffdb84",
+      "size": 4585
+    },
+    "20-ml-paper-writing/systems-paper-writing/references/section-blueprints.md": {
+      "path": "20-ml-paper-writing/systems-paper-writing/references/section-blueprints.md",
+      "blob_sha": "a82de062e0a80e4195447b601b8148ada52df4a1",
+      "size": 16479
+    },
+    "20-ml-paper-writing/systems-paper-writing/references/systems-conferences.md": {
+      "path": "20-ml-paper-writing/systems-paper-writing/references/systems-conferences.md",
+      "blob_sha": "50264f859ce82dba902ac20170634ac1b31ad0b5",
+      "size": 10256
+    },
+    "20-ml-paper-writing/systems-paper-writing/references/writing-patterns.md": {
+      "path": "20-ml-paper-writing/systems-paper-writing/references/writing-patterns.md",
+      "blob_sha": "3bd6ca9846d63956ddf7bb4542db256271a32434",
+      "size": 9447
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/asplos2027/main.tex": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/asplos2027/main.tex",
+      "blob_sha": "d42a0faee3cb1e8740022655ddf83cc7f834f44c",
+      "size": 15845
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/asplos2027/references.bib": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/asplos2027/references.bib",
+      "blob_sha": "62d04a7639a0a7dce42e3cc21798dfa454e1286b",
+      "size": 5172
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/nsdi2027/main.tex": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/nsdi2027/main.tex",
+      "blob_sha": "a595aef3ebd7e14a303845d47a4e08aac2671952",
+      "size": 15006
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/nsdi2027/references.bib": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/nsdi2027/references.bib",
+      "blob_sha": "1081b08607c3b3222ad81dad46261d7daa4bbc17",
+      "size": 5848
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/nsdi2027/usenix-2020-09.sty": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/nsdi2027/usenix-2020-09.sty",
+      "blob_sha": "2b58a908293474b9b0464ec9220ae0f743fcb166",
+      "size": 2294
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/osdi2026/main.tex": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/osdi2026/main.tex",
+      "blob_sha": "69f50ec2d174a55474e0c4d82d11d94c742d5cb9",
+      "size": 14716
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/osdi2026/references.bib": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/osdi2026/references.bib",
+      "blob_sha": "871cecb57e50ea3a6446f8012a8998a481a2df40",
+      "size": 5785
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/osdi2026/usenix-2020-09.sty": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/osdi2026/usenix-2020-09.sty",
+      "blob_sha": "2b58a908293474b9b0464ec9220ae0f743fcb166",
+      "size": 2294
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/sosp2026/main.tex": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/sosp2026/main.tex",
+      "blob_sha": "ec38832ca5775eb62a81a4feae12a21553f181d3",
+      "size": 17451
+    },
+    "20-ml-paper-writing/systems-paper-writing/templates/sosp2026/references.bib": {
+      "path": "20-ml-paper-writing/systems-paper-writing/templates/sosp2026/references.bib",
+      "blob_sha": "14eb3a40dce0562a2f960235875722b266d02b8a",
+      "size": 5395
+    },
+    "21-research-ideation/brainstorming-research-ideas/SKILL.md": {
+      "path": "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "blob_sha": "f5427a507c009fe0a91e51e213b340987334adb4",
+      "size": 19150
+    },
+    "21-research-ideation/creative-thinking-for-research/SKILL.md": {
+      "path": "21-research-ideation/creative-thinking-for-research/SKILL.md",
+      "blob_sha": "a76b01c979bcaf6fd77e97826ac14444547c809d",
+      "size": 21962
+    },
+    "22-agent-native-research-artifact/compiler/SKILL.md": {
+      "path": "22-agent-native-research-artifact/compiler/SKILL.md",
+      "blob_sha": "cff93e181256f836fc31ee49e5dc5fe2cc77f5c9",
+      "size": 14931
+    },
+    "22-agent-native-research-artifact/compiler/references/ara-schema.md": {
+      "path": "22-agent-native-research-artifact/compiler/references/ara-schema.md",
+      "blob_sha": "65223c227ca8a4c5bddad80dcb5969e31782abe8",
+      "size": 12926
+    },
+    "22-agent-native-research-artifact/compiler/references/exploration-tree-spec.md": {
+      "path": "22-agent-native-research-artifact/compiler/references/exploration-tree-spec.md",
+      "blob_sha": "7920987646be8ffb0833f6a956576d42b48240ce",
+      "size": 4577
+    },
+    "22-agent-native-research-artifact/compiler/references/validation-checklist.md": {
+      "path": "22-agent-native-research-artifact/compiler/references/validation-checklist.md",
+      "blob_sha": "6af2b47b68426ba4abd79d0abec9ab7859eb28d4",
+      "size": 5005
+    },
+    "22-agent-native-research-artifact/research-manager/SKILL.md": {
+      "path": "22-agent-native-research-artifact/research-manager/SKILL.md",
+      "blob_sha": "64c7ceab1dc14cd8294463f973b47b0134256330",
+      "size": 12625
+    },
+    "22-agent-native-research-artifact/research-manager/references/event-taxonomy.md": {
+      "path": "22-agent-native-research-artifact/research-manager/references/event-taxonomy.md",
+      "blob_sha": "8aa69ac8bc28daa46f3c5ccad9f2ab8df401d2cb",
+      "size": 5045
+    },
+    "22-agent-native-research-artifact/research-manager/references/provenance-tags.md": {
+      "path": "22-agent-native-research-artifact/research-manager/references/provenance-tags.md",
+      "blob_sha": "1171313bba06a071b1990c2411256bc726a820f6",
+      "size": 6142
+    },
+    "22-agent-native-research-artifact/research-manager/references/session-protocol.md": {
+      "path": "22-agent-native-research-artifact/research-manager/references/session-protocol.md",
+      "blob_sha": "7c12bc26735708456a73f69ee6a57f72a30376b4",
+      "size": 5897
+    },
+    "22-agent-native-research-artifact/rigor-reviewer/SKILL.md": {
+      "path": "22-agent-native-research-artifact/rigor-reviewer/SKILL.md",
+      "blob_sha": "dd13ded1423352c47860f40c8b1df971b1259ba3",
+      "size": 17848
+    },
+    "22-agent-native-research-artifact/rigor-reviewer/references/review-dimensions.md": {
+      "path": "22-agent-native-research-artifact/rigor-reviewer/references/review-dimensions.md",
+      "blob_sha": "af473aef876bd4a6c360288db262682009ef17b6",
+      "size": 8309
+    },
+    "CITATION.cff": {
+      "path": "CITATION.cff",
+      "blob_sha": "f433d7c73ed61c96d9501da104004a89a1be9ed4",
+      "size": 407
+    },
+    "CLAUDE.md": {
+      "path": "CLAUDE.md",
+      "blob_sha": "73e2834610e6303d9f0d5cf8cabae793cbd04ca7",
+      "size": 14471
+    },
+    "CONTRIBUTING.md": {
+      "path": "CONTRIBUTING.md",
+      "blob_sha": "4254827db4c968c63dfabcac7cb661606dd0739b",
+      "size": 15029
+    },
+    "LICENSE": {
+      "path": "LICENSE",
+      "blob_sha": "943d5753a5f02f9ef352ff8a1706f167004d6e6d",
+      "size": 1095
+    },
+    "README.md": {
+      "path": "README.md",
+      "blob_sha": "2d58d4faaf1b503943c40ff6f0fb1179a195f8b9",
+      "size": 46673
+    },
+    "WELCOME.md": {
+      "path": "WELCOME.md",
+      "blob_sha": "b6f6e12619898fc495a336b9edc8cebbbf2114cd",
+      "size": 1636
+    },
+    "anthropic_official_docs/best_practices.md": {
+      "path": "anthropic_official_docs/best_practices.md",
+      "blob_sha": "fb18fae5d7c41afb4aa1675d927f045632040502",
+      "size": 46418
+    },
+    "anthropic_official_docs/skills_overview.md": {
+      "path": "anthropic_official_docs/skills_overview.md",
+      "blob_sha": "38706e31a09dba99e9b89fa52daf309e867246a5",
+      "size": 20992
+    },
+    "demos/README.md": {
+      "path": "demos/README.md",
+      "blob_sha": "7a3400bd6f402a64f9b3388a00b94d2d221d15b0",
+      "size": 10422
+    },
+    "demos/autoresearch-norm-heterogeneity/README.md": {
+      "path": "demos/autoresearch-norm-heterogeneity/README.md",
+      "blob_sha": "b99210face07efe15ba85683d6b14c8dc3aa2a37",
+      "size": 2391
+    },
+    "demos/autoresearch-norm-heterogeneity/norm-heterogeneity-lora-brittleness.pdf": {
+      "path": "demos/autoresearch-norm-heterogeneity/norm-heterogeneity-lora-brittleness.pdf",
+      "blob_sha": "287b3259a254fc77922ad29dbf756b2cf68c2249",
+      "size": 290546
+    },
+    "demos/autoresearch-rl-brain-scan/README.md": {
+      "path": "demos/autoresearch-rl-brain-scan/README.md",
+      "blob_sha": "982229905d98eebca7b26ce2c10b4bc8f34d4431",
+      "size": 2741
+    },
+    "demos/autoresearch-rl-brain-scan/rl_algorithm_brain_scan.pdf": {
+      "path": "demos/autoresearch-rl-brain-scan/rl_algorithm_brain_scan.pdf",
+      "blob_sha": "0256a02e0015fa18602c901152f56b58dd28a71a",
+      "size": 1111370
+    },
+    "demos/scientific-plotting-demo/README.md": {
+      "path": "demos/scientific-plotting-demo/README.md",
+      "blob_sha": "815ce0490d06fd3221303200f3694145892c5c58",
+      "size": 10095
+    },
+    "demos/scientific-plotting-demo/figures/fig_andes_architecture.png": {
+      "path": "demos/scientific-plotting-demo/figures/fig_andes_architecture.png",
+      "blob_sha": "a5ed78ce9b427bb486bb2ae0831f3897b630166c",
+      "size": 509856
+    },
+    "demos/scientific-plotting-demo/figures/fig_andes_architecture_attempt1.png": {
+      "path": "demos/scientific-plotting-demo/figures/fig_andes_architecture_attempt1.png",
+      "blob_sha": "a5ed78ce9b427bb486bb2ae0831f3897b630166c",
+      "size": 509856
+    },
+    "demos/scientific-plotting-demo/figures/fig_andes_architecture_attempt2.png": {
+      "path": "demos/scientific-plotting-demo/figures/fig_andes_architecture_attempt2.png",
+      "blob_sha": "6ed7600cbf146c67a516fd36ce0111175c3c477a",
+      "size": 503264
+    },
+    "demos/scientific-plotting-demo/figures/fig_andes_architecture_attempt3.png": {
+      "path": "demos/scientific-plotting-demo/figures/fig_andes_architecture_attempt3.png",
+      "blob_sha": "aff018c2a4b916d57e9ad962e05241f5b98ed385",
+      "size": 484141
+    },
+    "demos/scientific-plotting-demo/figures/fig_andes_workflow.pdf": {
+      "path": "demos/scientific-plotting-demo/figures/fig_andes_workflow.pdf",
+      "blob_sha": "9fdfd82a7b3044089e7041d1205456075d7515d9",
+      "size": 26091
+    },
+    "demos/scientific-plotting-demo/figures/fig_andes_workflow.png": {
+      "path": "demos/scientific-plotting-demo/figures/fig_andes_workflow.png",
+      "blob_sha": "5fea91c7d3f3478719eb2003b13c61895ef76684",
+      "size": 261705
+    },
+    "demos/scientific-plotting-demo/figures/fig_burst_intensity.pdf": {
+      "path": "demos/scientific-plotting-demo/figures/fig_burst_intensity.pdf",
+      "blob_sha": "484c94ebb2f5ef01f2d70ca52489e1daf2aa432e",
+      "size": 52088
+    },
+    "demos/scientific-plotting-demo/figures/fig_burst_intensity.png": {
+      "path": "demos/scientific-plotting-demo/figures/fig_burst_intensity.png",
+      "blob_sha": "42242d6e582f2cd608d1c0b2d60796948162aa48",
+      "size": 519230
+    },
+    "demos/scientific-plotting-demo/figures/fig_cdf_comparison.pdf": {
+      "path": "demos/scientific-plotting-demo/figures/fig_cdf_comparison.pdf",
+      "blob_sha": "c566b3ac9271145d68d9d7debd580014b17f9f7c",
+      "size": 35731
+    },
+    "demos/scientific-plotting-demo/figures/fig_cdf_comparison.png": {
+      "path": "demos/scientific-plotting-demo/figures/fig_cdf_comparison.png",
+      "blob_sha": "dd44be4c68f95ddf418b6ee967e23ceec2810268",
+      "size": 116441
+    },
+    "demos/scientific-plotting-demo/figures/fig_qoe_definition.pdf": {
+      "path": "demos/scientific-plotting-demo/figures/fig_qoe_definition.pdf",
+      "blob_sha": "2b05f34c1d002675cecd3cce174a552169053e22",
+      "size": 34969
+    },
+    "demos/scientific-plotting-demo/figures/fig_qoe_definition.png": {
+      "path": "demos/scientific-plotting-demo/figures/fig_qoe_definition.png",
+      "blob_sha": "179650cdb9678053298822f5d03138beac369c14",
+      "size": 148362
+    },
+    "demos/scientific-plotting-demo/figures/fig_summary_improvements.pdf": {
+      "path": "demos/scientific-plotting-demo/figures/fig_summary_improvements.pdf",
+      "blob_sha": "0c1985c35ed55d5a94b50e87a7711a81e04207b7",
+      "size": 44036
+    },
+    "demos/scientific-plotting-demo/figures/fig_summary_improvements.png": {
+      "path": "demos/scientific-plotting-demo/figures/fig_summary_improvements.png",
+      "blob_sha": "d9bd5ffc99a1a3ec19af6bbdaac533ff8b6e556e",
+      "size": 176001
+    },
+    "demos/scientific-plotting-demo/figures/gen_fig_andes_architecture_gemini.py": {
+      "path": "demos/scientific-plotting-demo/figures/gen_fig_andes_architecture_gemini.py",
+      "blob_sha": "a855bf2e069803246e0af414c8855553f8c1a17e",
+      "size": 12479
+    },
+    "demos/scientific-plotting-demo/figures/gen_fig_andes_workflow.py": {
+      "path": "demos/scientific-plotting-demo/figures/gen_fig_andes_workflow.py",
+      "blob_sha": "49d288b9c6c343ad2539b2921474297448898c88",
+      "size": 11754
+    },
+    "demos/scientific-plotting-demo/figures/gen_fig_experiment_results.py": {
+      "path": "demos/scientific-plotting-demo/figures/gen_fig_experiment_results.py",
+      "blob_sha": "3ff4c55bf8cf8e5d27080f70a4a7b61515eaac8a",
+      "size": 13682
+    },
+    "dev_data/GITHUB_SKILLS_SYNC_SETUP.md": {
+      "path": "dev_data/GITHUB_SKILLS_SYNC_SETUP.md",
+      "blob_sha": "b1ec972a2127766df850081818a9ee9b6ef2a408",
+      "size": 11062
+    },
+    "dev_data/PROJECT_ANALYSIS.md": {
+      "path": "dev_data/PROJECT_ANALYSIS.md",
+      "blob_sha": "45568f756ecfab5d7ea48a6a0a6cdb8aa6613657",
+      "size": 13954
+    },
+    "dev_data/RESEARCH_QUESTIONNAIRE.md": {
+      "path": "dev_data/RESEARCH_QUESTIONNAIRE.md",
+      "blob_sha": "11c11cf1f4c14fd87b68f4c783fa4186040f33c5",
+      "size": 20111
+    },
+    "dev_data/RESEARCH_QUESTIONNAIRE_PART1.md": {
+      "path": "dev_data/RESEARCH_QUESTIONNAIRE_PART1.md",
+      "blob_sha": "8d76c0a73dfe82e67cf04e799ec85efe686c572b",
+      "size": 9952
+    },
+    "dev_data/RESEARCH_QUESTIONNAIRE_PART2.md": {
+      "path": "dev_data/RESEARCH_QUESTIONNAIRE_PART2.md",
+      "blob_sha": "2fb5d7cb01f4de1b30323b7babc7c732ffed05bf",
+      "size": 5262
+    },
+    "dev_data/RESEARCH_QUESTIONNAIRE_PART3.md": {
+      "path": "dev_data/RESEARCH_QUESTIONNAIRE_PART3.md",
+      "blob_sha": "6750aaf10cf28a654b3fb138e12a00b175effb16",
+      "size": 8449
+    },
+    "dev_data/SCRAPING_STATUS.md": {
+      "path": "dev_data/SCRAPING_STATUS.md",
+      "blob_sha": "2c918986f5987a2e00b10e010aeb0864999cde74",
+      "size": 2857
+    },
+    "dev_data/SKILL_BUILD_PLAN.md": {
+      "path": "dev_data/SKILL_BUILD_PLAN.md",
+      "blob_sha": "c22bdc752156fd311bfaedb0e1b92c842eace780",
+      "size": 5412
+    },
+    "dev_data/SKILL_STRUCTURE_VERIFICATION.md": {
+      "path": "dev_data/SKILL_STRUCTURE_VERIFICATION.md",
+      "blob_sha": "b547f2a4c8acc1fa5a0714f9d8671b4742a92fe0",
+      "size": 4132
+    },
+    "dev_data/deep_research_report_1.md": {
+      "path": "dev_data/deep_research_report_1.md",
+      "blob_sha": "cdb125da91b623f14d778ca2165ad0619a1fabb2",
+      "size": 30242
+    },
+    "docs/ROADMAP.md": {
+      "path": "docs/ROADMAP.md",
+      "blob_sha": "bad4343e79d1d4523603c77c6d8733c47e43cf26",
+      "size": 10106
+    },
+    "docs/SKILL_CREATION_GUIDE.md": {
+      "path": "docs/SKILL_CREATION_GUIDE.md",
+      "blob_sha": "bde0d7950c2fea3cbb899566d01f8c1a8bc76dbc",
+      "size": 16669
+    },
+    "docs/SKILL_TEMPLATE.md": {
+      "path": "docs/SKILL_TEMPLATE.md",
+      "blob_sha": "dc2428fc12f34eb82e178d9d1a364557e28cf1f6",
+      "size": 2056
+    },
+    "docs/assets/promo.gif": {
+      "path": "docs/assets/promo.gif",
+      "blob_sha": "57b61ccf81e814c013c7ee0a48cf0530246407de",
+      "size": 5081818
+    },
+    "docs/christmas-tree.svg": {
+      "path": "docs/christmas-tree.svg",
+      "blob_sha": "9facd93e03dc4bce468776cf1592ac5f2cb7b335",
+      "size": 3332
+    },
+    "docs/npm-package-plan.md": {
+      "path": "docs/npm-package-plan.md",
+      "blob_sha": "2981a6a7f274860c64c1d787f35aa4e26fe49a2d",
+      "size": 17006
+    },
+    "docs/npm-package-ux-mockup.html": {
+      "path": "docs/npm-package-ux-mockup.html",
+      "blob_sha": "23526220365880e0e7d24e66c49b9db37f51398c",
+      "size": 36193
+    },
+    "docs/skills.png": {
+      "path": "docs/skills.png",
+      "blob_sha": "a62bcec005ccca575aebc5495832b73cd9fc09e0",
+      "size": 416542
+    },
+    "docs/tech-tree.svg": {
+      "path": "docs/tech-tree.svg",
+      "blob_sha": "7c95b32c97525eaaeb7e537b5b4d306c12e8b458",
+      "size": 6319
+    },
+    "docs/writing-assets/ML_paper_guide.md": {
+      "path": "docs/writing-assets/ML_paper_guide.md",
+      "blob_sha": "84d80e1b1966e0438ebbb031920e709cd13bf3a8",
+      "size": 13804
+    },
+    "docs/writing-assets/ml_paper_writing_sources.md": {
+      "path": "docs/writing-assets/ml_paper_writing_sources.md",
+      "blob_sha": "671eaa604bd96a3e822319fed8f1f5a40027eef1",
+      "size": 11320
+    },
+    "package.json": {
+      "path": "package.json",
+      "blob_sha": "b0cc872053adcd7ab3054c7438e6897975bae44c",
+      "size": 665
+    },
+    "packages/ai-research-skills/.gitignore": {
+      "path": "packages/ai-research-skills/.gitignore",
+      "blob_sha": "c2658d7d1b31848c3b71960543cb0368e56cd4c7",
+      "size": 14
+    },
+    "packages/ai-research-skills/README.md": {
+      "path": "packages/ai-research-skills/README.md",
+      "blob_sha": "816f466877d4bff603366667c88940cba3251cd4",
+      "size": 4918
+    },
+    "packages/ai-research-skills/bin/cli.js": {
+      "path": "packages/ai-research-skills/bin/cli.js",
+      "blob_sha": "685750758a1a18364fd679a1e3dc4325342b7285",
+      "size": 153
+    },
+    "packages/ai-research-skills/package-lock.json": {
+      "path": "packages/ai-research-skills/package-lock.json",
+      "blob_sha": "f492f54fa526620f2386eb4c58c5737cd7febba2",
+      "size": 29581
+    },
+    "packages/ai-research-skills/package.json": {
+      "path": "packages/ai-research-skills/package.json",
+      "blob_sha": "d5517bd25a1c923ef3d37e5f2b9e003b9e09d5f5",
+      "size": 1123
+    },
+    "packages/ai-research-skills/src/agents.js": {
+      "path": "packages/ai-research-skills/src/agents.js",
+      "blob_sha": "b09ecdcda4b598ff84d6b551d8cc183263062de9",
+      "size": 4476
+    },
+    "packages/ai-research-skills/src/ascii.js": {
+      "path": "packages/ai-research-skills/src/ascii.js",
+      "blob_sha": "e555f50eeca66abfa48bb1b83722c8c5f4c23cea",
+      "size": 8310
+    },
+    "packages/ai-research-skills/src/index.js": {
+      "path": "packages/ai-research-skills/src/index.js",
+      "blob_sha": "f6ee92e1a7852db1d327bc9db2f713d49304b591",
+      "size": 16215
+    },
+    "packages/ai-research-skills/src/installer.js": {
+      "path": "packages/ai-research-skills/src/installer.js",
+      "blob_sha": "1315cf7ebce3904ac7889f4987b8440a2f729de9",
+      "size": 31333
+    },
+    "packages/ai-research-skills/src/prompts.js": {
+      "path": "packages/ai-research-skills/src/prompts.js",
+      "blob_sha": "96b31e45fa30edf75eba4a216c3222a384196fd7",
+      "size": 22869
+    },
+    "scripts/check-inventory.sh": {
+      "path": "scripts/check-inventory.sh",
+      "blob_sha": "1e87d5839c0decf9f7097502204fec65988d72f0",
+      "size": 2721
+    },
+    "video-promo/ai-research-skills-promo/.gitignore": {
+      "path": "video-promo/ai-research-skills-promo/.gitignore",
+      "blob_sha": "f4d0ab0f09549e4ceb99220d8154ed9d62d12fd6",
+      "size": 41
+    },
+    "video-promo/ai-research-skills-promo/package-lock.json": {
+      "path": "video-promo/ai-research-skills-promo/package-lock.json",
+      "blob_sha": "8fe4dd78ace604eb1980e752fd9d73d0f14f3d41",
+      "size": 100035
+    },
+    "video-promo/ai-research-skills-promo/package.json": {
+      "path": "video-promo/ai-research-skills-promo/package.json",
+      "blob_sha": "cc89235787df743aa62ab6251fff8f46b718861e",
+      "size": 616
+    },
+    "video-promo/ai-research-skills-promo/public/music.wav": {
+      "path": "video-promo/ai-research-skills-promo/public/music.wav",
+      "blob_sha": "f826d40bb30b66f07c0277292836a5e38f762b0e",
+      "size": 5759432
+    },
+    "video-promo/ai-research-skills-promo/remotion.config.ts": {
+      "path": "video-promo/ai-research-skills-promo/remotion.config.ts",
+      "blob_sha": "e8d4dba9121f6b2335d1033f21137e37fa5e971c",
+      "size": 117
+    },
+    "video-promo/ai-research-skills-promo/src/AIResearchSkillsPromo.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/AIResearchSkillsPromo.tsx",
+      "blob_sha": "54969338ddf30f31b519a619251e4e086e25f730",
+      "size": 8499
+    },
+    "video-promo/ai-research-skills-promo/src/Root.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/Root.tsx",
+      "blob_sha": "498bcbcdab489967e02777be14366d01b8f6cf0c",
+      "size": 408
+    },
+    "video-promo/ai-research-skills-promo/src/components/AgentDetection.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/components/AgentDetection.tsx",
+      "blob_sha": "63fe9e182df062ba52e8614dd02c1ae3e6d68267",
+      "size": 3278
+    },
+    "video-promo/ai-research-skills-promo/src/components/CallToAction.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/components/CallToAction.tsx",
+      "blob_sha": "80b05be8076054e55e8c81aa65225ccdc99e3994",
+      "size": 4023
+    },
+    "video-promo/ai-research-skills-promo/src/components/CategorySelection.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/components/CategorySelection.tsx",
+      "blob_sha": "e652aa4d78d50c36fbc2e61ab5bce191a6f4c3d5",
+      "size": 4170
+    },
+    "video-promo/ai-research-skills-promo/src/components/InstallProgress.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/components/InstallProgress.tsx",
+      "blob_sha": "730491ec86ddc46f73e4269f89e8af51a32fe94e",
+      "size": 4505
+    },
+    "video-promo/ai-research-skills-promo/src/components/OrchestraLogo.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/components/OrchestraLogo.tsx",
+      "blob_sha": "1645f7bf8581fd5441f72aa0db3ec08cdf41c9cb",
+      "size": 3823
+    },
+    "video-promo/ai-research-skills-promo/src/components/StatsDisplay.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/components/StatsDisplay.tsx",
+      "blob_sha": "a20b7451f63f9a8a57efbd353392c1f3ea440cd2",
+      "size": 4262
+    },
+    "video-promo/ai-research-skills-promo/src/components/SuccessScreen.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/components/SuccessScreen.tsx",
+      "blob_sha": "de7cd43767c19bf0fbdf9d443a3eb2bfe4290c2e",
+      "size": 6019
+    },
+    "video-promo/ai-research-skills-promo/src/components/Terminal.tsx": {
+      "path": "video-promo/ai-research-skills-promo/src/components/Terminal.tsx",
+      "blob_sha": "7dc615283117a47abeb735ac161a1a8c952e1e31",
+      "size": 5143
+    },
+    "video-promo/ai-research-skills-promo/src/index.ts": {
+      "path": "video-promo/ai-research-skills-promo/src/index.ts",
+      "blob_sha": "f31c790edb3e2f1611a701c7637cc396353d1ff7",
+      "size": 109
+    },
+    "video-promo/ai-research-skills-promo/tsconfig.json": {
+      "path": "video-promo/ai-research-skills-promo/tsconfig.json",
+      "blob_sha": "7435ab114dd70f7258a8a5b75f4c0dbd82627204",
+      "size": 426
+    }
+  },
+  "execution_performed": false,
+  "tree_calls": 1
+}

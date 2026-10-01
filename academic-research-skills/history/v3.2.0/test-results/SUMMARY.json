@@ -1,0 +1,115 @@
+{
+  "version": "3.2.0",
+  "baseline_tag": "v3.2.0-rc.5",
+  "baseline_commit": "9813b193a2cd6504205ede70393c22c7683e22c6",
+  "scope": "Stable release closure; frozen rc.5 interfaces. Current archive tests are new; scientific research remains preserved rc.5 evaluation.",
+  "regression": {
+    "version": "3.2.0",
+    "generated_at": "2026-10-01T11:50:24.520923+00:00",
+    "tests_run": 608,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "groups": {
+      "test_architecture": 86,
+      "test_computational_routes": 10,
+      "test_integration": 78,
+      "test_lean": 57,
+      "test_package_identity": 2,
+      "test_pdf_extract": 2,
+      "test_portability": 50,
+      "test_quality31": 68,
+      "test_release": 57,
+      "test_research_tools": 18,
+      "test_result_links": 59,
+      "test_suite": 121
+    },
+    "platform": "Darwin",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "scope": "Local software regression. HTTP/source responses are synthetic fixtures unless separately reported.",
+    "native_agent_behavior_evaluated": false,
+    "real_paper_lifecycle_tested": false,
+    "macos_native_tested": true
+  },
+  "retained_cases": 608,
+  "new_targeted_cases": 0,
+  "root_legacy_tests": 30,
+  "build": {
+    "generated_files": 937,
+    "drift": 0
+  },
+  "standalone_modules": 19,
+  "actual_isolated_basic_checks": 76,
+  "preserved": {
+    "profiles": 16,
+    "routes": 14,
+    "designated_repositories": 13,
+    "existing_root_UI_unchanged": true,
+    "professional_protocols_unchanged": true
+  },
+  "independent_engineering_review": {
+    "actual_file_probes": 20,
+    "entrypoints": 4,
+    "unexpected": 0,
+    "initial_false_passes_repaired": 4
+  },
+  "actual_PDF_backends": [
+    "pdftotext",
+    "pypdf_only"
+  ],
+  "actual_exports": {
+    "formats": [
+      "Markdown",
+      "DOCX",
+      "PDF"
+    ],
+    "linked_occurrences": 24,
+    "passed": true,
+    "located_semantic_and_visual_review": true
+  },
+  "native_evaluation": {
+    "contexts": 4,
+    "paired_repeats": 2,
+    "problems": 1,
+    "constructed_holdout_streams": 480,
+    "dev_score_calls_each": 40,
+    "extra_train_score_calls_B1": 3,
+    "causal_checkpoint_and_alarm_boundary_checks": 83211,
+    "positive_point_estimate_vs_own_baseline": 3,
+    "negative_point_estimate_vs_own_baseline": 1,
+    "publication_novelty_established": false,
+    "universal_guidance_gain_established": false,
+    "same_inherited_model": true,
+    "exact_model_revision": null,
+    "tokens": null,
+    "cost": null,
+    "independent_reproduced_method_rows": 8640,
+    "independent_reproduced_median_rows": 480,
+    "independent_reproduced_development_calls": 160,
+    "independent_reproduced_paired_statistics": 17,
+    "evidence_versions": [
+      "3.2.0-rc.4",
+      "3.2.0-rc.5"
+    ],
+    "new_research_experiment_run_for_stable_release": false,
+    "previous_holdout_retuned": false
+  },
+  "reading": {
+    "old_emitted_characters": 12666,
+    "candidate_emitted_characters": 10020,
+    "reduction_fraction": 0.2089057318806253,
+    "scope": "Preserved historical reader-emitted characters, not a new stable-version experiment or token/cost claim.",
+    "evidence_versions": [
+      "3.2.0-rc.4",
+      "3.2.0-rc.5"
+    ]
+  },
+  "stable_release_assessment": "Release stable software baseline within documented host/platform/semantic scope; no claim of general research creativity or publication novelty.",
+  "final_ZIP_commit_CI_installer_checks": "External v3.2.0 release receipt, created from final merged commit and verified final archives.",
+  "migration_examples": {
+    "population_subject": "Explicit subject_field=population; source canonical values retained.",
+    "coverage": "Same source/result/file only; cross-file coverage not automatically combined."
+  }
+}

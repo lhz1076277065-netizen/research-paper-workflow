@@ -4,7 +4,7 @@ For full research, read skills/research-paper-workflow/SKILL.md with the real sc
 
 The current agent coordinates as executor; native subagents are optional. A research_model may run, train and be evaluated locally using free tools and suitable licensing. Choose numerical software for the scientific design.
 
-Select external professional Skills from the thirteen user-designated repositories; discover current entry paths using scripts/research31.py upstream, or use verified installed resources from those sources. Ordinary literature, data, libraries and original research code are unrestricted by this Skill list. Read only the selected task branch and necessary supporting resources.
+Select external professional Skills from the user-designated source repositories; discover current entry paths using scripts/research31.py upstream, or use verified installed resources from those sources. Ordinary literature, data, libraries and original research code are unrestricted by this Skill list. Read only the selected task branch and necessary supporting resources.
 
 Main figures require professional reasoning, production or substantial revision, numerical checks and actual viewing of the final image. Full manuscripts receive the designated evidence-preserving anti-defensive expression pass after scientific review. Retain the earlier manuscript and factual checks.
 

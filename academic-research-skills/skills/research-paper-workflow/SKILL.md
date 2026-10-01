@@ -2,14 +2,14 @@
 name: research-paper-workflow
 description: "当用户要求跨阶段开展学术研究或完成整篇研究成果时协调问题、设计、证据、图稿与交付；单项请求直接用对应能力，更新Skill本身不启动论文研究。"
 metadata:
-  version: "3.2.0"
+  version: "3.3.0-rc.1"
 ---
 
 # 实际学术研究到完整成果的当前Agent总控
 
-从重要问题、最近邻增量和数字完成路径推进原创研究；主动取得合法免费材料，执行区分解释的验证，再形成完整图稿与实际适配期刊。基线复现和工具试跑服务研究贡献。
+从现实问题与顶刊跨篇学习，形成有知识增量、实际意义与数字验证路径的选题；方法服务问题，主动取得材料并推进研究、图稿与期刊适配。基线与工具试跑服务贡献。
 
-默认 computational-autonomous：在线取得或电脑内构造材料，用数字工具检验结论。executor 为当前Agent，原生子代理按需分工；research_model 可本地加载、训练和评价。专业Skill按角色选指定13仓库的已安装/当前版本；自主选择方法，改造或新写代码。免费工具按需准备、验证，以API、CLI或GUI保存输出和可编辑项目。
+默认 computational-autonomous：在线取得或电脑内构造材料，用数字工具检验结论。executor 为当前Agent，原生子代理按需分工；research_model 可本地加载、训练和评价。专业Skill按角色选来源清单内的已安装/当前版本；自主选择方法，改造或新写代码。免费工具按需准备、验证，以API、CLI或GUI保存输出和可编辑项目。
 
 完整项目先读 [科研主线](references/research-lifecycle.md) 和 [研究质量](references/research-quality.md)，建立一份可见路线板后持续推进。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。
 

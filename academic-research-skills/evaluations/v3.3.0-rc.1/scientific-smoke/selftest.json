@@ -1,0 +1,46 @@
+{
+  "version": "3.2.0",
+  "checked_at": "2026-10-01T14:53:54.165604+00:00",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "python": "3.12.14",
+  "passed": false,
+  "checks": [
+    {
+      "name": "local_python_scripts",
+      "status": "passed",
+      "detail": {
+        "files": 12
+      }
+    },
+    {
+      "name": "empty_default_provider_registry",
+      "status": "passed",
+      "detail": "dynamic source selection enabled"
+    },
+    {
+      "name": "designated_skill_source_scope",
+      "status": "passed",
+      "detail": {
+        "selected_sources": 14,
+        "outside_library_rejected": true,
+        "ordinary_scientific_software_restricted": false
+      }
+    },
+    {
+      "name": "focused_environment_needs_no_statistical_stack",
+      "status": "passed",
+      "detail": "no packages needed"
+    },
+    {
+      "name": "scientific_imports",
+      "status": "failed",
+      "error": "Required imports unavailable; prepare the selected environment first: install_needed"
+    }
+  ],
+  "scientific_smoke_requested": true,
+  "native_host_activation_tested": false,
+  "model_ability_measured": false,
+  "real_paper_lifecycle_tested": false,
+  "output_directory": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v33-20261001/scientific-smoke"
+}

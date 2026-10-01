@@ -1,11 +1,18 @@
 """Actual Git/ZIP identity checks; no network or user installation."""
-import importlib.util,json,subprocess,tempfile,unittest,zipfile
+import importlib.util,json,re,subprocess,tempfile,unittest,zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('release_pack',ROOT/'release/make_package.py')
 pack=importlib.util.module_from_spec(spec);spec.loader.exec_module(pack)
 
 class PackageIdentity(unittest.TestCase):
+    def test_runtime_keeps_update_report_local_targets(self):
+        files={p.relative_to(pack.ROOT).as_posix() for p in pack.chosen('runtime')}
+        report=pack.ROOT/'UPDATE_REPORT.zh-CN.md'
+        for link in re.findall(r'\]\(([^)]+)\)',report.read_text()):
+            if '://' not in link:
+                target=(report.parent/link.split('#')[0]).resolve().relative_to(pack.ROOT).as_posix()
+                self.assertIn(target,files)
     def test_commit_binding_excludes_ignored_files_and_rejects_changes(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'VERSION').write_text('3.2.0\n')

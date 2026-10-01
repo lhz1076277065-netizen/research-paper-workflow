@@ -1,7 +1,7 @@
 {
-  "version": "3.2.0",
-  "generated_at": "2026-10-01T11:50:24.520923+00:00",
-  "tests_run": 608,
+  "version": "3.3.0-rc.1",
+  "generated_at": "2026-10-01T15:58:14.160715+00:00",
+  "tests_run": 610,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
@@ -11,10 +11,10 @@
     "test_computational_routes": 10,
     "test_integration": 78,
     "test_lean": 57,
-    "test_package_identity": 2,
+    "test_package_identity": 3,
     "test_pdf_extract": 2,
     "test_portability": 50,
-    "test_quality31": 68,
+    "test_quality31": 69,
     "test_release": 57,
     "test_research_tools": 18,
     "test_result_links": 59,
@@ -957,6 +957,10 @@
       "status": "passed"
     },
     {
+      "id": "test_package_identity.PackageIdentity.test_runtime_keeps_update_report_local_targets",
+      "status": "passed"
+    },
+    {
       "id": "test_pdf_extract.PdfExtraction.test_pdftotext_actual_pdf_and_malformed_boundary",
       "status": "passed"
     },
@@ -1213,10 +1217,6 @@
       "status": "passed"
     },
     {
-      "id": "test_quality31.PolicyTests.test_exact_13_user_sources",
-      "status": "passed"
-    },
-    {
       "id": "test_quality31.PolicyTests.test_known_alias",
       "status": "passed"
     },
@@ -1237,6 +1237,10 @@
       "status": "passed"
     },
     {
+      "id": "test_quality31.PolicyTests.test_new_ideation_source_is_selectable_with_dynamic_entry",
+      "status": "passed"
+    },
+    {
       "id": "test_quality31.PolicyTests.test_no_claim_os_sandbox",
       "status": "passed"
     },
@@ -1250,6 +1254,10 @@
     },
     {
       "id": "test_quality31.PolicyTests.test_paths_not_pinned",
+      "status": "passed"
+    },
+    {
+      "id": "test_quality31.PolicyTests.test_preserves_baseline_sources_and_adds_ideation",
       "status": "passed"
     },
     {

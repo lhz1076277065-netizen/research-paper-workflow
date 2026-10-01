@@ -3,7 +3,7 @@
 from pathlib import Path
 import argparse,hashlib,json,shutil,subprocess,zipfile
 ROOT=Path(__file__).resolve().parents[1]
-EXCLUDED={'.git','.academic','.venv','__pycache__','.pytest_cache'}
+EXCLUDED={'.git','.academic','.venv','__pycache__','.pytest_cache','.topic-upgrade-backup'}
 FONTS={'.ttf','.otf','.woff','.woff2','.ttc'}
 def chosen(kind):
     files=[]
@@ -11,7 +11,13 @@ def chosen(kind):
         rel=f.relative_to(ROOT)
         if f.is_symlink() or not f.is_file() or set(rel.parts)&EXCLUDED or f.suffix in FONTS or f.suffix=='.pyc' or f.name=='.DS_Store' or rel.as_posix()=='PACKAGE-MANIFEST.json':continue
         if kind=='runtime':
-            reports={'evaluations/v3.2.0/VALIDATION.zh-CN.md','evaluations/v3.2.0/PR_REVIEW.zh-CN.md'}
+            reports={'evaluations/v3.2.0/VALIDATION.zh-CN.md','evaluations/v3.2.0/PR_REVIEW.zh-CN.md',
+                     'evaluations/v3.3.0-rc.1/VALIDATION.zh-CN.md',
+                     'evaluations/v3.3.0-rc.1/BEHAVIOR.zh-CN.md',
+                     'evaluations/v3.3.0-rc.1/context-metrics.json',
+                     'evaluations/v3.3.0-rc.1/SOURCE-OBSERVATIONS.json',
+                     'evaluations/v3.3.0-rc.1/CHANGES.json',
+                     'evaluations/v3.3.0-rc.1/ORCHESTRATOR.md'}
             if rel.parts[0] in {'src','tests','evaluations','history','previous-release','release','source-diffs'} and rel.as_posix() not in reports:continue
             if rel.as_posix() in {'scripts/build_release.py','scripts/_v300_build_release.py','UPGRADE-RECEIPT.json','release/make_package.py','release/coverage-baseline.json','release/ci-matrix.example.yml'}:continue
             if rel.parts[0]=='test-results' and rel.name not in {'SUMMARY.json','SUMMARY.zh-CN.md','context-metrics.json','distribution-checks.json'}:continue

@@ -1,0 +1,75 @@
+{
+  "checked_date": "2026-10-01",
+  "base_tag": "v3.2.0",
+  "base_commit": "1e2a56bc9db0bfd411ce8ce250703785e53bb43d",
+  "sources": [
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "stars_observed": 13167,
+      "archived": false,
+      "license": "MIT",
+      "source_read": "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "blob": "f5427a507c009fe0a91e51e213b340987334adb4",
+      "read_scope": "lines 1-380",
+      "native_skill": true,
+      "use": "new optional ideation source; problem-first/stakeholder/plain-language framing",
+      "limitations": "Full workflow includes fixed counts, interactive steps and computer-science examples. Use relevant guidance in current host with explicit adaptation."
+    },
+    {
+      "repo": "Galaxy-Dawn/claude-scholar",
+      "stars_observed": 5672,
+      "archived": false,
+      "license": "MIT",
+      "source_read": "skills/research-ideation/SKILL.md",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "blob": "c389b2d2717207b99646f880db033d103d8512c1",
+      "read_scope": "lines 1-215",
+      "native_skill": true,
+      "use": "existing source: 5W1H, gap analysis, literature library",
+      "limitations": "Original workflow includes question cards and proposal gates. Existing project notes and actual evidence needs guide adaptation."
+    },
+    {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "stars_observed": 47266,
+      "archived": false,
+      "license": "MIT",
+      "source_read": "skills/scientific-brainstorming/SKILL.md",
+      "commit": "91497e335489dcb544ec8ddc8f6b7ce5fd6d1121",
+      "blob": "7b4e99384356910d0fbfb738f30e812d9b4985a2",
+      "read_scope": "lines 1-210",
+      "native_skill": true,
+      "use": "existing source: independent ideation and hypothesis development",
+      "limitations": "Read version includes group facilitation, scoring and accountable-human decision. Not automatically the primary autonomous topic workflow."
+    },
+    {
+      "repo": "stanford-oval/storm",
+      "stars_observed": 31548,
+      "archived": false,
+      "license": "MIT",
+      "source_read": "README.md",
+      "blob": "e0dba464b54fc82a16119dbee1d073f2404dfaae",
+      "read_scope": "lines 25-155",
+      "native_skill_verified": false,
+      "use": "reference only in this proposal: perspective-guided question asking",
+      "limitations": "Knowledge-curation system producing Wikipedia-like articles; model and retrieval setup required. No full backend integration in this patch."
+    }
+  ],
+  "market_scope": "Targeted search, not exhaustive coverage of all GitHub repositories.",
+  "maturity_claim": "Repository popularity and inspected content; no universal topic-quality certification.",
+  "upstream_execution_performed": false,
+  "source_content_redistributed": false,
+  "integration_recheck": {
+    "date": "2026-10-01",
+    "repository": "Orchestra-Research/AI-Research-SKILLs",
+    "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+    "tree_sha": "eb544e88f08d76170d17050b10c18a317afd0314",
+    "blob_sha": "f5427a507c009fe0a91e51e213b340987334adb4",
+    "sha256": "8422a1a6dc0a88d05f02b9fbe0f8c2ae06a77024856d18125efa13d19d855d46",
+    "stars_observed": 13169,
+    "license": "MIT",
+    "source_discovered_with_project_cli": true,
+    "entry_read_with_project_cli": true,
+    "source_content_redistributed": false,
+    "native_full_workflow_executed": false
+  }
+}

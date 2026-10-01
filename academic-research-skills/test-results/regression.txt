@@ -231,6 +231,7 @@ test_unsupported_binary_response (test_lean.Sources.test_unsupported_binary_resp
 test_verified_read_cache_reuses_bytes_without_network (test_lean.Sources.test_verified_read_cache_reuses_bytes_without_network) ... ok
 test_commit_binding_excludes_ignored_files_and_rejects_changes (test_package_identity.PackageIdentity.test_commit_binding_excludes_ignored_files_and_rejects_changes) ... ok
 test_one_click_refuses_preexisting_output (test_package_identity.PackageIdentity.test_one_click_refuses_preexisting_output) ... ok
+test_runtime_keeps_update_report_local_targets (test_package_identity.PackageIdentity.test_runtime_keeps_update_report_local_targets) ... ok
 test_pdftotext_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pdftotext_actual_pdf_and_malformed_boundary) ... ok
 test_pypdf_only_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary) ... ok
 test_failed_install_prevents_research_script (test_portability.InstallTests.test_failed_install_prevents_research_script) ... ok
@@ -295,16 +296,17 @@ test_duplicate_repo_rejected (test_quality31.PolicyTests.test_duplicate_repo_rej
 test_empty_repo_argument_has_specific_error (test_quality31.PolicyTests.test_empty_repo_argument_has_specific_error) ... ok
 test_endpoint_discovery_not_in_research_scope (test_quality31.PolicyTests.test_endpoint_discovery_not_in_research_scope) ... ok
 test_equal_form_repo_and_duplicate_flags (test_quality31.PolicyTests.test_equal_form_repo_and_duplicate_flags) ... ok
-test_exact_13_user_sources (test_quality31.PolicyTests.test_exact_13_user_sources) ... ok
 test_known_alias (test_quality31.PolicyTests.test_known_alias) ... ok
 test_literature_sources_not_restricted (test_quality31.PolicyTests.test_literature_sources_not_restricted) ... ok
 test_local_llm_url_not_a_source (test_quality31.PolicyTests.test_local_llm_url_not_a_source) ... ok
 test_native_subagent_stays_permitted (test_quality31.PolicyTests.test_native_subagent_stays_permitted) ... ok
 test_new_entry_for_approved_repo (test_quality31.PolicyTests.test_new_entry_for_approved_repo) ... ok
+test_new_ideation_source_is_selectable_with_dynamic_entry (test_quality31.PolicyTests.test_new_ideation_source_is_selectable_with_dynamic_entry) ... ok
 test_no_claim_os_sandbox (test_quality31.PolicyTests.test_no_claim_os_sandbox) ... ok
 test_off_library_not_silent (test_quality31.PolicyTests.test_off_library_not_silent) ... ok
 test_other_host_action_not_in_research_scope (test_quality31.PolicyTests.test_other_host_action_not_in_research_scope) ... ok
 test_paths_not_pinned (test_quality31.PolicyTests.test_paths_not_pinned) ... ok
+test_preserves_baseline_sources_and_adds_ideation (test_quality31.PolicyTests.test_preserves_baseline_sources_and_adds_ideation) ... ok
 test_repo_url (test_quality31.PolicyTests.test_repo_url) ... ok
 test_research_model_code_permitted (test_quality31.PolicyTests.test_research_model_code_permitted) ... ok
 test_abstract_writing_does_not_complete_full_paper_role (test_quality31.RecordTests.test_abstract_writing_does_not_complete_full_paper_role) ... ok
@@ -608,6 +610,6 @@ test_wrong_contract (test_suite.ValidatorNegativeTests.test_wrong_contract) ... 
 test_wrong_output_artifact (test_suite.ValidatorNegativeTests.test_wrong_output_artifact) ... ok
 
 ----------------------------------------------------------------------
-Ran 608 tests in 29.166s
+Ran 610 tests in 28.760s
 
 OK

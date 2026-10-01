@@ -175,7 +175,9 @@ class ScopeAndCoverage(Work):
             text=f.read_text().lower()
             for s in ['m5max','128gb','4t 硬盘','spawn_agent','gpt-6','claude-project-dir']:self.assertNotIn(s,text)
     def test_release_version_all_entries(self):
-        for f in (ROOT/'skills').glob('*/SKILL.md'):self.assertIn('version: "'+(ROOT/'VERSION').read_text().strip()+'"',f.read_text())
+        version=(ROOT/'VERSION').read_text().strip()
+        for f in (ROOT/'skills').glob('*/SKILL.md'):self.assertIn('version: "'+version+'"',f.read_text())
+        self.assertEqual(e.VERSION,version);self.assertEqual(b.VERSION,version)
 
 
 class EnvironmentRecovery(Work):
