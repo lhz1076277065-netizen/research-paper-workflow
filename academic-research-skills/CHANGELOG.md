@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.2.0
+
+- Promote the reviewed rc.5 interface and nineteen independent skills to the stable release.
+- Clarify explicit population subjects and per-artifact manuscript coverage in migration examples.
+- Align default-branch installation links, version metadata and documented platform/semantic scope; rebuild and verify all final archives.
+- Preserve candidate tags, evaluated research data and prior failure evidence. Future 3.2.x changes address demonstrated defects and small compatibility needs.
+
 ## 3.2.0-rc.5
 
 - Compare recomputed result identities before tolerances and convert compatible dimensions; explicit implementation equivalence is frozen in result sources.

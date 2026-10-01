@@ -8,10 +8,10 @@ pack=importlib.util.module_from_spec(spec);spec.loader.exec_module(pack)
 class PackageIdentity(unittest.TestCase):
     def test_commit_binding_excludes_ignored_files_and_rejects_changes(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root=Path(tmp);(root/'VERSION').write_text('3.2.0-rc.5\n')
+            root=Path(tmp);(root/'VERSION').write_text('3.2.0\n')
             (root/'.gitignore').write_text('validation-report.json\nout/\n')
             (root/'entry.md').write_text('committed release source\n')
-            (root/'evaluations/rc5').mkdir(parents=True);(root/'evaluations/rc5/VALIDATION.zh-CN.md').write_text('source evidence scope\n')
+            (root/'evaluations/v3.2.0').mkdir(parents=True);(root/'evaluations/v3.2.0/VALIDATION.zh-CN.md').write_text('source evidence scope\n')
             (root/'history').mkdir();(root/'history/PACKAGE-MANIFEST.json').write_text('historical identity\n')
             def git(*args):
                 return subprocess.check_output(['git',*args],cwd=root,stderr=subprocess.DEVNULL,text=True).strip()
@@ -23,11 +23,11 @@ class PackageIdentity(unittest.TestCase):
                 self.assertIn(root/'history/PACKAGE-MANIFEST.json',pack.chosen('source'))
                 receipt=pack.pack('runtime',root/'out')
                 with zipfile.ZipFile(root/'out'/receipt['file']) as archive:
-                    manifest=json.loads(archive.read('academic-research-skills-v3.2.0-rc.5/PACKAGE-MANIFEST.json'))
+                    manifest=json.loads(archive.read('academic-research-skills-v3.2.0/PACKAGE-MANIFEST.json'))
                     self.assertEqual(manifest['source_commit'],git('rev-parse','HEAD'))
                     self.assertNotIn('validation-report.json',manifest['files'])
-                    self.assertIn('evaluations/rc5/VALIDATION.zh-CN.md',manifest['files'])
-                    self.assertEqual(archive.read('academic-research-skills-v3.2.0-rc.5/entry.md'),b'committed release source\n')
+                    self.assertIn('evaluations/v3.2.0/VALIDATION.zh-CN.md',manifest['files'])
+                    self.assertEqual(archive.read('academic-research-skills-v3.2.0/entry.md'),b'committed release source\n')
                 (root/'entry.md').write_text('uncommitted source change\n')
                 with self.assertRaisesRegex(ValueError,'Commit the release source'):
                     pack.pack('runtime',root/'other-out')

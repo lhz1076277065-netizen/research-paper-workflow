@@ -1,15 +1,15 @@
-# Academic Research Skills 3.2.0-rc.5
+# Academic Research Skills 3.2.0
 
-One optional research orchestrator and eighteen standalone specialist skills. Full research defaults to computational-autonomous: acquire lawful free digital material, construct an original increment over nearest work and run a discriminating test with computer-executable tools. Focused requests use the relevant specialist directly.
+One optional research orchestrator and eighteen standalone specialists. Full research uses computer-executable routes: actively acquire lawful digital materials, develop an original increment over nearest work, implement it with the current Agent and existing model, reuse suitable professional tools and run fair, discriminating tests. Focused requests use the relevant specialist directly.
 
-Start at [START_HERE.en.md](START_HERE.en.md) or the chosen skills/<capability>/SKILL.md. Load only the references needed for the task. Execute with the current agent and its existing model; native internal subagents are optional. Scientific computation can use justified research models without switching the executing assistant.
+Start at [START_HERE.en.md](START_HERE.en.md) or skills/<capability>/SKILL.md. Load only necessary references. Nineteen complete independent folders, sixteen profiles, fourteen computational routes and detailed professional protocols remain available. Native internal delegation is optional.
 
-External professional Skills are selected from the user's thirteen repositories in assets/repository-sources.json. Discover their actual current entries and record the source used for this work. Scientific literature, public data, ordinary libraries and original code are separate from this Skill-source scope. Main figures need actual professional planning, production or substantive revision, numerical checks and inspection of the final image. Complete manuscripts receive an evidence-preserving final expression pass using the designated anti-defensive-writing Skill.
+Professional Skills are discovered from the thirteen designated repositories. Scientific literature, data, ordinary libraries and original code are separate from that source scope. Main figures require actual professional work, numeric checks and inspection of the final image; complete manuscripts retain evidence-preserving review and expression revision.
 
-This is the complete merged release. Detailed professional protocols and existing optional tools are retained. Use scripts/research31.py upstream for source-scoped discovery; it neither launches assistants nor certifies scientific quality. Optional engineering checks require Python 3.10+: scripts/selftest.py and tests/run_all.py in the source package. Their results concern software behavior, not a publication claim.
+The frozen rc.5 result-links interface checks declared numeric/source-semantic occurrences, limited local relationships and stale rendering dependencies. It neither discovers every claim nor certifies source truth, scientific novelty or publication quality. See [migration examples](MIGRATION.zh-CN.md), [supported scope](docs/COMPATIBILITY.zh-CN.md), [stable validation](evaluations/v3.2.0/VALIDATION.zh-CN.md) and [installation](INSTALLATION.zh-CN.md).
 
-[中文说明](README.zh-CN.md) · [Validation scope](docs/COMPATIBILITY.zh-CN.md)
+The macOS one-click installer requires Python3.9+ and an existing Codex system installer; engineering scripts require Python3.10+. macOS ARM64 local execution and Linux CLI dual-PDF CI are covered; other native hosts/platform installations are unverified. Software versioning does not guarantee general research creativity or acceptance probability.
 
-The library is discipline-neutral. Requests to develop, update or package this library produce Skill folders and software validation; they do not start a research project or manuscript.
+[中文说明](README.zh-CN.md) · [Stable release and archives](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0)
 
-rc.5 repairs recomputation identity and unit conversion, occurrence relationships and manuscript coverage, and generates links from actual build rows. PDF extraction is exercised through both real backends in CI. Detailed examples are loaded in focused fragments. Read [migration](MIGRATION.zh-CN.md), [change evidence](UPDATE_REPORT.zh-CN.md) and [validation](evaluations/rc5/VALIDATION.zh-CN.md).
+Candidate evidence and tags remain preserved. The previously inspected 480-stream holdout is evaluated evidence; future method changes use new development/evaluation arrangements. 3.2.x handles demonstrated defects and small compatibility improvements. Updating this library delivers Skills and software validation without starting a manuscript project.

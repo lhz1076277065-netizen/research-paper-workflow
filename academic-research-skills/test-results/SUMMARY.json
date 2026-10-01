@@ -1,11 +1,11 @@
 {
-  "version": "3.2.0-rc.5",
-  "baseline_tag": "v3.2.0-rc.4",
-  "baseline_commit": "ed4c86ec00593de48d2cb88109afe4191d1bfe04",
-  "scope": "Engineering fixes and four native method-development studies reported separately; no publication novelty certificate.",
+  "version": "3.2.0",
+  "baseline_tag": "v3.2.0-rc.5",
+  "baseline_commit": "9813b193a2cd6504205ede70393c22c7683e22c6",
+  "scope": "Stable release closure; frozen rc.5 interfaces. Current archive tests are new; scientific research remains preserved rc.5 evaluation.",
   "regression": {
-    "version": "3.2.0-rc.5",
-    "generated_at": "2026-10-01T09:47:46.865860+00:00",
+    "version": "3.2.0",
+    "generated_at": "2026-10-01T11:50:24.520923+00:00",
     "tests_run": 608,
     "failures": 0,
     "errors": 0,
@@ -33,8 +33,8 @@
     "real_paper_lifecycle_tested": false,
     "macos_native_tested": true
   },
-  "retained_cases": 587,
-  "new_targeted_cases": 21,
+  "retained_cases": 608,
+  "new_targeted_cases": 0,
   "root_legacy_tests": 30,
   "build": {
     "generated_files": 937,
@@ -88,14 +88,28 @@
     "independent_reproduced_method_rows": 8640,
     "independent_reproduced_median_rows": 480,
     "independent_reproduced_development_calls": 160,
-    "independent_reproduced_paired_statistics": 17
+    "independent_reproduced_paired_statistics": 17,
+    "evidence_versions": [
+      "3.2.0-rc.4",
+      "3.2.0-rc.5"
+    ],
+    "new_research_experiment_run_for_stable_release": false,
+    "previous_holdout_retuned": false
   },
   "reading": {
     "old_emitted_characters": 12666,
     "candidate_emitted_characters": 10020,
     "reduction_fraction": 0.2089057318806253,
-    "scope": "Actual supplied-reader emitted Unicode characters; not token cost, hidden model context or mental comprehension."
+    "scope": "Preserved historical reader-emitted characters, not a new stable-version experiment or token/cost claim.",
+    "evidence_versions": [
+      "3.2.0-rc.4",
+      "3.2.0-rc.5"
+    ]
   },
-  "stable_release_assessment": "Keep release candidate; two pairs on one constructed problem do not establish general research improvement.",
-  "final_ZIP_commit_CI_installer_checks": "External release receipt from same release, generated after archives."
+  "stable_release_assessment": "Release stable software baseline within documented host/platform/semantic scope; no claim of general research creativity or publication novelty.",
+  "final_ZIP_commit_CI_installer_checks": "External v3.2.0 release receipt, created from final merged commit and verified final archives.",
+  "migration_examples": {
+    "population_subject": "Explicit subject_field=population; source canonical values retained.",
+    "coverage": "Same source/result/file only; cross-file coverage not automatically combined."
+  }
 }

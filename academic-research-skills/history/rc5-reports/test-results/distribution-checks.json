@@ -1,0 +1,148 @@
+{
+  "version": "3.2.0-rc.5",
+  "scope": "Actual isolated copies and pre-pack generated source checks; final archive and install receipt external.",
+  "capabilities": [
+    "analysis-execution",
+    "citation-audit",
+    "data-discovery",
+    "data-preparation",
+    "ethics-protocol",
+    "journal-intelligence",
+    "literature-discovery",
+    "manuscript-review",
+    "manuscript-writing",
+    "paper-deep-reading",
+    "peer-review-response",
+    "publication-stewardship",
+    "research-design",
+    "research-intake",
+    "research-paper-workflow",
+    "robustness-reproducibility",
+    "scientific-visualization",
+    "submission-packaging",
+    "topic-novelty"
+  ],
+  "capability_count": 19,
+  "profiles": 16,
+  "routes": 14,
+  "professional_sources": 13,
+  "standalone": [
+    {
+      "module": "analysis-execution",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "citation-audit",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "data-discovery",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "data-preparation",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "ethics-protocol",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "journal-intelligence",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "literature-discovery",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "manuscript-review",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "manuscript-writing",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "paper-deep-reading",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "peer-review-response",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "publication-stewardship",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "research-design",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "research-intake",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "research-paper-workflow",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "robustness-reproducibility",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "scientific-visualization",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "submission-packaging",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    },
+    {
+      "module": "topic-novelty",
+      "standalone_copy": true,
+      "basic_checks": 4,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "source_authoritative_diff": "source-diffs/v3.2.0-rc.4-to-v3.2.0-rc.5.patch",
+  "global_install_performed": false
+}

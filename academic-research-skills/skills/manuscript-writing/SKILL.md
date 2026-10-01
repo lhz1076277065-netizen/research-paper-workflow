@@ -2,7 +2,7 @@
 name: manuscript-writing
 description: "当需要起草、整合或改写学术稿件时使用；完整稿按证据组织全文并终审，单段或摘要请求只处理指定范围。"
 metadata:
-  version: "3.2.0-rc.5"
+  version: "3.2.0"
 ---
 
 # 证据与贡献驱动的完整论文写作

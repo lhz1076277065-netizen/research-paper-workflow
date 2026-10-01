@@ -1,17 +1,17 @@
-# Academic Research Skills v3.2.0-rc.4 一键安装与部署教程
+# Academic Research Skills v3.2.0 一键安装与部署教程
 
-适用：macOS 上已经可以使用的 Codex。固定安装通用学术 Skill v3.2.0-rc.4，共 19 项独立能力。核对日期：2026-10-01，Asia/Shanghai。
+适用：macOS 上已经可以使用的 Codex。固定安装通用学术 Skill v3.2.0，共 19 项独立能力。核对日期：2026-10-01，Asia/Shanghai。
 
 ## 最快安装：解压后双击
 
-1. 解压 `academic-research-skills-v3.2.0-rc.4-one-click.zip`，把整个文件夹放在电脑任意位置。保留文件夹内的脚本和日常版 ZIP。
+1. 解压 `academic-research-skills-v3.2.0-one-click.zip`，把整个文件夹放在电脑任意位置。保留文件夹内的脚本和日常版 ZIP。
 2. 双击 **一键安装.command**。终端窗口会显示校验、安装结果、安装位置和旧版本备份位置。
-3. 看到 **“安装完成：19 个 Skill，版本 3.2.0-rc.4”** 即表示本机文件安装完成。如果已是该完整版本，会显示无需重复安装。
+3. 看到 **“安装完成：19 个 Skill，版本 3.2.0”** 即表示本机文件安装完成。如果已是该完整版本，会显示无需重复安装。
 4. 回到 Codex，在下一轮消息中按名字使用 Skill。如果没有出现，重启 Codex 后再试。
 
 安装到当前用户的 `~/.agents/skills/`。该目录是官方当前文档列出的用户级 Skill 位置；Codex 会检测新文件。如果同名 Skill 有两份，选择器可能同时显示，因此本脚本会把所选能力在用户 `.agents/skills`、`.codex/skills` 及自定义 CODEX_HOME 中的旧副本移到备份位置，然后保留一份新目录。[官方本地 Skill 说明](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
 
-你这台 Mac 已核实默认 `python3` 为 3.9.6，能运行这个安装器。安装器还使用 Codex 已有的系统 `skill-installer`。它们已在本机隔离目录验证，不需要为安装步骤新增 Python 包。其他电脑应先具备可用 Codex、Python 3.9+ 和 Codex 系统安装器。
+安装器要求Python 3.9+，复用已有Codex系统skill-installer；研究工程脚本要求Python 3.10+。本机macOS ARM64安装验收使用Python 3.9.6，工程回归使用3.12.14。其他系统/宿主范围见[支持说明](https://github.com/lhz1076277065-netizen/research-paper-workflow/blob/v3.2.0/academic-research-skills/docs/COMPATIBILITY.zh-CN.md)。
 
 这里的“部署”是把专业工作流放入本机 Codex 能读取的位置，之后由当前 Agent 和现有模型执行。日常安装包已经内置，安装阶段无需联网；首次任务需要在线文献或专业来源时再使用网络。
 
@@ -22,13 +22,13 @@
 | 一键安装.command | 双击安装全部 19 项能力 |
 | 检查安装.command | 双击检查已安装文件与原版的身份 |
 | install.py | 实际安装、备份、检查及恢复脚本 |
-| academic-research-skills-v3.2.0-rc.4.zip | 已核验的完整日常版，全部必要 Skill 文件在其中 |
+| academic-research-skills-v3.2.0.zip | 已核验的完整日常版，全部必要 Skill 文件在其中 |
 | README.zh-CN.md | 本教程 |
-| selfcheck.py / selfcheck-results.json | 隔离目录验证程序和实际结果 |
-| launcher-check-results.json | 两个终端启动文件的实际运行结果 |
+| selfcheck.py | 运行隔离安装、备份恢复与异常回退检查；实际结果另附在发行页 |
+
 | SHA256SUMS.txt | 安装器、教程与内置日常包的文件摘要 |
 
-本安装包是日常使用安装包；完整维护源码和开发证据另见 [rc.4 GitHub 发行页](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0-rc.4)。
+本安装包是日常使用安装包；完整维护源码和开发证据另见 [v3.2.0 GitHub 发行页](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0)。
 
 ## 怎么确认真的装好了
 
@@ -36,7 +36,7 @@
 
 ```json
 {
-  "version": "3.2.0-rc.4",
+  "version": "3.2.0",
   "selected": 19,
   "matching": 19,
   "missing_or_changed": [],
@@ -47,13 +47,13 @@
 这一步核对全部所选目录的必需文件集合及 SHA-256，忽略 Python 的 __pycache__/pyc 和 Finder 的 .DS_Store 缓存。其他新增文件或原文件修改会列为变化。然后在 Codex 下一轮发送下面这段，用实际入口确认本机加载：
 
 ```text
-请检查通用学术 Skill v3.2.0-rc.4 的本机安装。
+请检查通用学术 Skill v3.2.0 的本机安装。
 先确认 research-paper-workflow 和 journal-intelligence 是否出现在当前可用 Skill 中；
 读取它们的真实 SKILL.md，报告路径、名称和版本。
 这里只做安装自查，不开展论文研究。
 ```
 
-应取得两个真实入口路径及 `metadata.version: 3.2.0-rc.4`。在默认安装中路径为：
+应取得两个真实入口路径及 `metadata.version: 3.2.0`。在默认安装中路径为：
 
 ```text
 ~/.agents/skills/research-paper-workflow/SKILL.md
@@ -131,7 +131,7 @@ Skill 的模型使用、网络、文件读写和研究操作仍采用当前 Code
 若解压在默认下载目录，也可以直接运行：
 
 ```bash
-bash "$HOME/Downloads/academic-research-skills-v3.2.0-rc.4-one-click/一键安装.command"
+bash "$HOME/Downloads/academic-research-skills-v3.2.0-one-click/一键安装.command"
 ```
 
 如果提示找不到 `python3`，先准备 Python 3.9+，或让 Codex 查找应用已有 Python 来运行 `install.py`。如果提示未找到系统安装器，在 Codex 中使用 `skill-installer`，或采用下面的官方命令/手动目录方式。安装器验证失败时会显示非零退出码和具体原因。
@@ -147,12 +147,12 @@ python3 install.py --check --skill journal-intelligence
 
 此操作只备份和更新该能力的用户目录；其他能力不受影响。检查部分安装时，应带上同样的 `--skill` 参数。
 
-已有官方系统安装器，也可以从 GitHub 的固定提交安装单个能力：
+已有官方系统安装器，也可以从 GitHub 的固定发行标签安装单个能力：
 
 ```bash
 python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
   --repo lhz1076277065-netizen/research-paper-workflow \
-  --ref 8985d90d7e3a599a8c06556b8d1c2cec6ccb8e21 \
+  --ref v3.2.0 \
   --path academic-research-skills/skills/journal-intelligence \
   --dest "$HOME/.agents/skills"
 ```
@@ -173,10 +173,8 @@ python3 install.py --restore "/完整路径/academic-research-skills-backups/本
 
 脚本先确认本次新 Skill 原字节未改变，再恢复旧目录；新版本副本保留在备份的 `new-after-restore/`。如果你已经编辑新 Skill，会停止恢复并保留当前文件，避免丢失你的修改。安装写入过程中发生普通错误会尝试回退并保存失败收据；断电等进程无法继续的情况，可依据备份内的路径记录进行恢复。
 
-## 已完成的验证
+## 正式归档验证与支持范围
 
-安装器复用 rc.3 已在隔离目录检查的安装、旧版/断链备份、缓存、同版重复、用户修改保护、优化模式、恢复、异常回退、错误 ZIP 与单能力安装路径。本次 rc.4 对实际发行包再次运行隔离检查与两个 .command 启动文件，结果放在发行页的 receipt 中；全局用户 Skill 不在制作发行时替换。
+正式版重新构建三个包，并针对最终归档运行构建一致性、完整回归、双PDF后端、隔离安装/备份恢复与异常回退；实际结果和最终提交摘要以同次发行的release-receipt.json为准。可运行python3 selfcheck.py重现隔离安装检查。正式包摘要与rc.5不同，安装器绑定本次实际日常包SHA256。
 
-可运行 `python3 selfcheck.py` 重现隔离检查。实际日常包 SHA-256 在发行页 SHA256SUMS 中；一键包的 install.py 固定绑定该摘要，内部 SHA256SUMS 同时绑定教程和脚本。
-
-本教程是 rc.4 安装与本机启用说明；rc.3 历史发行附件保留。本次实际 ZIP 摘要在发行校验文件中，安装器由构建器绑定该摘要。
+一键包面向macOS及已有Codex系统安装器，原生文件加载应在用户的下一轮任务中另行确认。Linux工程CLI由双后端CI验证，未认证Linux宿主安装；Windows、macOS Intel及其他Agent的原生加载尚未覆盖。本次不替换全局用户Skill。[完整支持范围](https://github.com/lhz1076277065-netizen/research-paper-workflow/blob/v3.2.0/academic-research-skills/docs/COMPATIBILITY.zh-CN.md)。rc.5标签、原始研究和旧发行附件保留。

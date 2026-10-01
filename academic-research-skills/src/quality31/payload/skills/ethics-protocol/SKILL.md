@@ -2,7 +2,7 @@
 name: ethics-protocol
 description: "当研究涉及伦理、许可、参与者、敏感材料或方案准备时使用；依据实际研究和现行要求准备材料，不声称已获批准。"
 metadata:
-  version: "3.2.0-rc.5"
+  version: "3.2.0"
 ---
 
 # 研究权限与真实披露

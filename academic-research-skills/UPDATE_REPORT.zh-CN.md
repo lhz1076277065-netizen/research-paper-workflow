@@ -1,24 +1,17 @@
-# v3.2.0-rc.5 变更与实际效果
+# v3.2.0 正式发布收尾
 
-基线为v3.2.0-rc.4 / ed4c86ec00593de48d2cb88109afe4191d1bfe04。本版定向修补结果审计、实际研究验收与读取负担；保留19个独立模块、原有专业协议和已有工具路径。
+以v3.2.0-rc.5（9813b193a2cd6504205ede70393c22c7683e22c6）为稳定基线。本次只完成迁移说明、版本/导航一致、PR正式评审合并及新归档验收发布。19能力、16画像、14路线、按需参考、专业协议和审计接口保留。
 
-| 权威文件 | 改变及原因 | 实际验收与边界 |
-|---|---|---|
-| src/common/scripts/result_links.py | 复算先核科学身份与量纲，再换成原源单位使用容差；等价实现须源授权 | 真换算相等、量纲/值不等、分区差异、显示别名与科学等价正反例；完整Decimal精度及JSON往返 |
-| 同一helper | 端点顺序、主值主体、否定范围；比较阈值不认作精确值；按格式拒绝混合定位，实际单位不能被远端映射掩盖 | 59项结果测试；独立20个实际文件探针在audit_links、provider audit、research31 audit及accept_result四入口一致 |
-| 同一helper的build_links | 复用稿件构建行和result_id生成链接、实际哈希；校验既有哈希而非自动刷新 | 真实研究汇总24处Markdown/DOCX/PDF出现位置；复杂关系仍需定位语义复核 |
-| src/common/assets/result-links.schema.json | 同步定位格式、出现角色、构建行与身份语义约束 | 实际Draft202012验证器检查合法输入及跨格式/混合坐标反例 |
-| src/common/references/runtime.md、integrity.md | 分开当地出现角色、全稿字段覆盖、自动关系与定位审阅 | 图注可局部覆盖，同稿正文补全；缺失不能靠重复端点获得通过 |
-| research-quality.md、computational-routes.md及三个examples文件 | 保留原推演内容，按问题加载；质量主线3152→1829字符 | 两对同路径实际读取合计12666→10020字符，减少20.9%；非token/账单测量 |
-| tests/test_result_links.py、test_pdf_extract.py、report_pdf_links.py | 增加19项结果回归及2项真实PDF后端测试；旧PDF装饰器认识两后端 | 本机608项完整回归零跳过；pypdf-only真正无pdftotext，坏PDF有诊断 |
-| 根.github/workflows/validate-skill.yml | pdftotext与pypdf-only两条真实CI路径，上传新库回归和PDF结果链接报告 | 所选后端及旧定位用例必须通过；对侧专属用例可跳过；远程结果在发行receipt |
-| evaluations/rc5/paired-study | 四个新原生上下文做完整基线→改动→实施→检验→修订；同开发材料与预算，冻结后480条共用留出 | 三种改善各自基线、一种变差；内容/最近邻与原始结果独立匿名审阅；不认证发表新颖性 |
-| evaluations/rc5/engineering | 保留首轮失败、四项假通过、修后探针、全回归、隔离模块验证及实际导出审计 | 工程事实与研究价值分别记录；原始失败未删除 |
-| release/make_package.py及tests/test_package_identity.py | 复用干净Git、tracked-only、文件摘要与固定版本安装器；运行包带当前三份验收报告 | ZIP绑定真实commit/tag，最终CRC/摘要/隔离安装外部验收 |
-| VERSION、README、CHANGELOG、MIGRATION、COMPATIBILITY、SUMMARY及source-diffs | 更新当前候选导航、逐项范围和权威源码差异 | rc.4报告移入history保留；不在补丁重复937个生成文件 |
+| 文件 | 实际改变 |
+|---|---|
+| MIGRATION.zh-CN.md | 增加population主体显式指定和跨文件字段不自动合并两个短例；说明冻结已有封装/schema/API。 |
+| VERSION、src/common版本字段、src/quality31/payload入口元数据 | 更新3.2.0，经原构建器同步937副本；运行时算法不改。 |
+| 根README、library双语README、INSTALLATION、installation导航/checklist | 指向正式v3.2.0与正确能力路径；修旧固定提交；安装正文只维护一份，旧文档存history/rc5-reports。 |
+| COMPATIBILITY.zh-CN.md | 明确macOS ARM64安装、Linux CLI双后端、未验证宿主/平台及有限结果/导出语义；记录实际s/was保守pending边界。 |
+| release/make_package.py、test_package_identity.py | 复用既有归档机制，运行包带当前短验收/评审报告；真实Git/ZIP回归固定正式版本。 |
+| test-results、evaluations/v3.2.0 | 当前608回归、双PDF、隔离模块、迁移例与独立PR评审；rc.5研究保留原范围，未重新调参。 |
+| source-diffs、history/rc5-reports | 权威源差异和旧导航/汇总保留；rc.5标签与1104份既有评估文件字节保持。 |
 
-公共修复由现有build_release.py统一生成，937个文件无漂移。19个模块分别复制到隔离目录后实际运行，共76项基本检查通过；16画像、13来源内容与原根UI字节保留，14路线与旧知识仍可到达。
+正式包从PR合并后的最终提交重新生成运行/源码/一键ZIP，不能复用候选包摘要。所有文件摘要、最终tag/commit、解压后回归、双后端CI、安装/备份恢复和异常回退由同次发行外部receipt核验。当前源内报告不写包自身SHA，避免自引用。
 
-正式发布评估：工程边界和发行检查适合rc.5候选发布；两对、一个构造问题不足以宣称普遍创新提升。保持候选版，待更多问题的实际使用反馈再评估稳定版。
-
-[验收映射](evaluations/rc5/VALIDATION.zh-CN.md)、[研究比较](evaluations/rc5/paired-study/COMPARISON.zh-CN.md)和[独立工程审阅](evaluations/rc5/engineering/INDEPENDENT_REVIEW.zh-CN.md)可追溯。发行commit/tag、ZIP SHA256、远程CI及实际安装结果写入发行后的外部receipt，避免将包摘要写回包。
+稳定版表示已有软件接口在列明范围内的稳定基线；研究新颖性、普遍方法创造力及论文录用仍按实际研究判断。3.2.x只处理真实缺陷/小型兼容改进；后续能力升级使用新的研究任务和新的开发/独立评价安排，已查看480条流保持已评估证据。

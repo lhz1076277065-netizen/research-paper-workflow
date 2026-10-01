@@ -2,7 +2,7 @@
 name: research-paper-workflow
 description: "当用户要求跨阶段开展学术研究或完成整篇研究成果时协调问题、设计、证据、图稿与交付；单项请求直接用对应能力，更新Skill本身不启动论文研究。"
 metadata:
-  version: "3.2.0-rc.5"
+  version: "3.2.0"
 ---
 
 # 实际学术研究到完整成果的当前Agent总控

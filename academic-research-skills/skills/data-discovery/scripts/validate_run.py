@@ -112,7 +112,7 @@ def validate(root: Path, skill_root: Path, completion: bool = False) -> dict[str
     errors: list[str] = []
     warnings: list[str] = []
     report: dict[str, Any] = {
-        'validator': 'academic-run-structural-checker', 'version': '3.2.0-rc.5',
+        'validator': 'academic-run-structural-checker', 'version': '3.2.0',
         'run_directory': str(root.resolve()), 'checks': [
             'bundled_schema_subset', 'file_existence_and_hashes',
             'local_reference_resolution', 'declared_gate_and_output_consistency'],

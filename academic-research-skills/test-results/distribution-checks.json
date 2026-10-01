@@ -1,5 +1,5 @@
 {
-  "version": "3.2.0-rc.5",
+  "version": "3.2.0",
   "scope": "Actual isolated copies and pre-pack generated source checks; final archive and install receipt external.",
   "capabilities": [
     "analysis-execution",
@@ -143,6 +143,6 @@
     }
   ],
   "passed": true,
-  "source_authoritative_diff": "source-diffs/v3.2.0-rc.4-to-v3.2.0-rc.5.patch",
+  "source_authoritative_diff": "source-diffs/v3.2.0-rc.5-to-v3.2.0.patch",
   "global_install_performed": false
 }
