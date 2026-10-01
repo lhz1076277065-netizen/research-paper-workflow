@@ -1,0 +1,519 @@
+{
+  "task": "F",
+  "condition": "C independent trial",
+  "executor": "current agent",
+  "scope": "topic selection only",
+  "status": "completed topic-selection deliverables; research unperformed",
+  "skill_version": "3.2.0",
+  "skill_reads": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v33-20261001/baseline/academic-research-skills/skills/topic-novelty/SKILL.md",
+      "read_at_utc": "2026-10-01T15:09:32.508525+00:00",
+      "sha256_at_read": "0c90c4dda779e8497912d00cb5793da806a22c0c39751d7eb5fef6ec0b0bc144",
+      "read_scope": "full file",
+      "content_read": "---\nname: topic-novelty\ndescription: \"当需要从方向、文献或已有结果提出有知识增量的选题，或判断方案是否已被完成时使用；比较最近邻、竞争路线与决定性验证。\"\nmetadata:\n  version: \"3.2.0\"\n---\n\n# 重要问题与可验证创新\n\n从最近邻能力与未解困难产生新机制、表示、目标、算法、关系、命题或设计；比较价值、科学难点、数字材料、决定性证据及下一项能改变判断的动作。\n\n默认 computational-autonomous：在线取得或电脑内构造材料，用数字工具检验结论。executor 为当前Agent，原生子代理按需分工；research_model 可本地加载、训练和评价。专业Skill按角色选指定13仓库的已安装/当前版本；自主选择方法，改造或新写代码。免费工具按需准备、验证，以API、CLI或GUI保存输出和可编辑项目。\n\n专业细节按需查 [原专业参考](references/protocol.md)。问题与路线判断时读 [研究判断示例](references/research-quality.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。\n\n交付真实成果、实际证据、Skill作用与完成范围。局部任务直接做；完整研究保留科学目标与下一步，自检和试跑只证明其检查范围。\n\n脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。\n",
+      "snapshot_revalidated_at_utc": "2026-10-01T15:20:20.878669+00:00"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v33-20261001/baseline/academic-research-skills/skills/topic-novelty/references/protocol.md",
+      "read_at_utc": "2026-10-01T15:09:44.919218+00:00",
+      "sha256_at_read": "6ba629a0d897eb6d1469d31bc2628b5007d7f2fabe1394ec28ac9b4debfcf186",
+      "read_scope": "full file",
+      "content_read": "# 选题组合与创新性论证协议\n\n> 按任务查阅本参考的相关部分，灵活组合步骤；它不是逐项审批流程。具体输出以用户目标为准。\n\n\n## 建立问题池\n\n从真实文献分歧、理论张力、测量限制、识别困难、泛化失效、重要数据缺口、未解释现象和关键重复验证需求出发。顶刊阅读提供问题标准与范式，不是机械拼接题目、模型和数据。\n\n每个候选用一个可回答的问题表述，并指出谁需要答案、当前不确定什么、答案如何改变理解。不要只有“采用模型 X 研究地区 Y”的标题。地区、数据年份或模型更换可以是合理贡献，但必须说明为何改变外推、识别或机制，而不是默认创新。\n\n## 最近邻工作核查\n\n对候选分别检索问题、机制、变量、方法、数据、对象和同义表述，回查最近的正式论文与相关预印本。实际检查最近邻的输入信息、假设、对象、模型、训练/估计、评价划分、资源、边界和失败，形成前作能力→未解困难→改变部分→新增知识/能力→对应证据；同义命名不构成差异。\n\n来源不同但同一数据或研究团队的文章不能默认算独立证据。记录检索覆盖和截止日期，使用“在所检索范围内未发现”而不是证明绝对首创。\n\n## 贡献与可证伪性\n\n区分理论、机制、识别、方法、测量、数据资源、实证、复现与边界贡献。明确支持该贡献需要什么最低证据，什么结果会反驳或削弱主张。预想零结果、相反结果和基线更好时还能回答什么；不能只为期望的正面叙事设计研究。\n\n构思新机制、表示、目标函数、优化、观测关系、问题构造、理论边界或设计空间；组合说明修复的具体困难，迁移解释作用机制并验证关键条件。复杂度、参数量和数据名不代替新增能力。已有原理、复现和可行性是基线，应用须检验新能力、解释、情景或重要修正。为理论工作确定命题和证明目标；定性研究确定待理解的经验或过程，不强制可量化假设。\n\n## 可行性小验证\n\n缺材料时沿论文声明/附件、作者仓储、领域与公开来源主动取得免费合法字典及代表记录，核对象、变量、结局、时间、尺度与独立单位，再取得正式材料。原需人工采集的主题寻找公开记录、计算或理论完成路径；数学问题按命题价值进入。先校准成本再改进算法和有效规模。允许授权的小规模数据探查或先导计算；这些结果若影响选题，应记录已有结果暴露，不能后来声称完全预设。\n\n## 候选组合与选择\n\n用已有路线板或一段说明比较六项：重要性与改变、最近邻未解问题、预期新增对象、核心困难与新思路、决定性证据/数字完成路径、下一项能改变判断的动作。补明限制、主图、零结果价值和接受该证据的读者/期刊群，不新增固定表格。\n\n可以提出相对优先级，但依据须可解释，不把新颖性变成精确概率。区分值得继续、需缩小、需重设计、需外部资源、不建议当前执行。不是仅因已有研究或问题长期未解就直接淘汰。\n\n最终决策保留理由和备选路径；如目标是初步选题而全文缺失，明确暂定，指出正式设计前应核验的关键论文。\n\n## 探索自由\n\n知识不完整、问题困难或暂未找到实现不应自动终止构思。先提出清楚标记的假设、原创路线或跨领域联系，再用最小可行验证区分有价值方向；只有具体证据才支持否定一条路线。\n\n当候选看起来相似时，按[完整判断推演](research-quality.md)比较各自修复的信息、测量或解释障碍，做一项会改变选择的推导、设计或检验。新模型名或额外场景本身不区分路线；探索结果可以反过来改变候选，不要求开始前证明绝对新颖。\n",
+      "snapshot_revalidated_at_utc": "2026-10-01T15:20:20.878847+00:00"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v33-20261001/baseline/academic-research-skills/skills/topic-novelty/references/research-quality.md",
+      "read_at_utc": "2026-10-01T15:09:44.919388+00:00",
+      "sha256_at_read": "2be115bd99804b413426a96a194276afea8016960ac9ec30e2ace19a2f033019",
+      "read_scope": "full file",
+      "content_read": "# 研究质量主线：从可运行转向值得发表\n\n用于用户要求实际开展研究、形成论文或推进顶尖领域期刊目标时；代码自检、接口测试及单段改写不自动进入整条主线。用户未明确只做小型试跑时，不把短时间、易下载数据或固定图数设成研究目标。\n\n## 研究承诺与决定性证据\n\n比较“什么重要问题能通过当前数字手段取得新证据”：改变什么；最近邻未解什么；新增方法/命题/发现/设计/关系或评价能力；核心困难与新思路；决定性证据、材料及数字路径；下一项最能改变判断的动作。用一段承诺或已有路线板；基础理论按命题价值进入。\n\n对比几条有意义的候选路线：例如解释机制、识别关键边界、提出可推广的方法、解决实际测量/决策障碍、纠正一个影响实践的结论。比较价值和可验证性，不按复杂度、模型大小、统计显著性或已下载数据排名。描述研究、复现、零结果同样可有强贡献，但需要说明改变了哪项重要认识，不因“数据是真的”就判有发表价值。\n\n## 文献与目标期刊前置\n\n在目标子领域中核实标杆期刊与直接相关论文，实际读摘要、关键全文、模型/公式、验证及图表。提取“论文为什么值得发表”：核心问题、最近邻差异、证据强度、图表各自证明什么、尚未解决的关键问题。文献库另查非顶刊最近邻和反证，不能以期刊声望筛掉相反证据。\n\n检查最近邻的输入、假设、对象/模型、训练/估计、划分、资源、边界和失败，形成前作能力→缺口→改变部分→新增能力/知识→证据。从新机制、表示、目标、优化、关系、问题、理论边界或设计构思；迁移说明为何修复困难并检验条件。复杂度和参数/组合数只是实现描述。检索不足继续关键检索或验证，不假装“首次”，不以无限检索替代研究；覆盖决定完成。\n\n## 设计由问题而非工具决定\n\n描述/估计明确目标量、测量、抽样与不确定性；因果明确识别与设计诊断；预测明确部署情境、分区、泄漏、强基线与外部/时间验证；方法明确实现和公平评价；理论明确命题、条件、证明/反例；定性/人文明确原始材料、语境、解释路径与竞争解释；综述明确覆盖、筛选、偏倚与综合。选适合本研究的证据，不把这些路线全部跑一遍。\n\n主张写清目标解释、最强替代、同条件各自预测、区分操作及判断变化。预测重合就设计对照、消融、变量变化、跨域、条件推导或公开材料再分析。比较对齐数据、分区、外部信息、调参、算力和指标；组件比较完整、去除与适用替代，优势/代价同报。pilot校准后安排有效正式规模；材料不能因易得偷换目标。\n\n## 有信息价值的研究循环\n\n做能改变判断的检验→查数据、实现与评价→改进解释、方法或重要边界。批评转成增加可得信息、新估计器/表示/目标/算法、改善复杂度、更紧界/条件/构造证明或数字设计。原理展示、复现与可行性服务新增贡献；已有原理应用检验哪项新能力、解释、情景或重要修正。\n\n开发用训练/验证，正式比较用事先指定留出，主张决定验证范围。仿真分检实现、收敛、适用性；理论分记数值线索、猜想、已证命题/边界；计算实证按设计定位。资源瓶颈先用分解、稀疏、降阶、多保真、流式/分块处理。保留负结果与事后变化，每轮减小关键不确定性。\n\n## 评审目标是推进，不是文件打勾\n\n按重要性、最近邻差异、证据/方法适配、独立验证或证明、图文论证与适用范围给出具体诊断。发现缺口时指出下一次关键研究动作。稿件可以随成果逐步起草；尚未满足主要证据的稿件叫在研稿，不以工程全绿替代研究完成。\n\n当前Agent负责判断与自我复核；同宿主独立上下文可辅助批评，不冒充真实外部专家。软件只能检查记录和文件的一致性，不能给出可靠“顶刊分数”或保证录用。\n\n本套Skill的开发、更新和打包请求以通用Skill文件与软件验证为交付，不自动开展具体课题、获取研究数据或写论文。任何开发样例按其测试范围标注，不作为科研成果。\n\n\n## 按需推演\n\n按当前缺口选择一个相关段：\n\n- 测量偏移、选择缺失、代理约束与建设性估计：[推导示例](inference-examples.md)。\n- 文本来源、行动顺序与竞争解释：[材料示例](interpretive-examples.md)。\n- 算法、求解或数字设计的资源瓶颈：[建设性计算](computation-examples.md)。\n\n保持模型、联合信息与约束，完成推导、设计或可复算检验。开放探索可先产生信息，再查最近邻更新路线；证明与数值提示、识别与精度、实现错误与真实反例分别决定下一动作。\n",
+      "snapshot_revalidated_at_utc": "2026-10-01T15:20:20.878885+00:00"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v33-20261001/baseline/academic-research-skills/skills/topic-novelty/references/provider-policy.md",
+      "read_at_utc": "2026-10-01T15:09:44.919433+00:00",
+      "sha256_at_read": "93bae0ddafd206329dfb0b8c2a1c0d822e61da33b941d59c8b9fe9daa2b11809",
+      "read_scope": "full file",
+      "content_read": "# 用户指定来源内选择，当前Agent内执行\n\n外部Skill来源为`assets/research31-policy.json`中的13个仓库，按角色选择，不要求全部使用。本地已安装同来源能力优先；需要更新时在对应GitHub仓库发现当前入口/共享依赖，记录当前版本。不是固定13个SKILL文件路径，也不固定某一模型。学术文献、数据库、普通科学软件与原创方法代码不受此Skill来源清单限制。\n\n研究主线需要专业执行时，实际读取选中入口/必要资源，完成目标步骤，将结果接到正式研究产物。文献搜索不以一次API返回替代筛选与综合；分析不以IQR函数替代研究设计与推断；图表不以export函数替代选图和视觉表达；写作不以一段摘要替代完整稿件。\n\n主要数据图从SciPilot、Nature Figure、Scholar相关图表能力或库内其他实际匹配入口选择。稿件终审后调用指定anti-defensive-writing作最终表达整理。只读源码、下载或在另一个测试场景执行，不算已服务本稿；记录实际输入、输出文件/版本、做过的步骤即可，不需要行政式长日志。\n\n当前Agent及其原生子代理可执行上游专业步骤；不因上游部署/多模型说明寻找本地LLM、启动其他宿主、改认证或切换助手。适配非必要的宿主/模型调度部分，保留专业工作，标记adapted_in_host。研究本身使用预测算法、编码模型等必须来自具体研究需要，不是为更换执行助手。\n\n已装技能不可用时先定位真正缺口：资源未读、依赖未装、权限或格式问题。修复、库内换实现或提出替代方案，继续独立研究；不要默默改成普通画图后声称专业路线完成。现有主图可经选定Skill实质审改后纳入；追溯原始生成方式，不补记不存在的调用。\n\n读取manifest索引和相关片段，共享资源在同一任务中复用，搜索/代码输出仅显示当前需要部分。若原生流程要求大量全量加载，可改用当前Agent内的明确适配，不声称原生完整执行。事实判断仍回到真实来源，不把摘要缓存当全文证据。\n\n上游更新时比较本次所需入口、依赖与实际接口，用相关的小操作确认兼容后用于新任务；保留已核验版本、本地适配和已完成产物，不用新源码覆盖正在复现的工作。短操作说明连接真实输入、选择理由、实际动作和最终成果；保留好原图/原稿也可以是核查后的成果。\n\n需要评估成本时按用户任务、子任务、审查和重试归因，分开wall time与各分支累计时间、可取得的输入/缓存输入/输出、实际资源读取和重复展示。取不到的费用与峰值保持未知。已在当前上下文中的同版本资料可复用；上下文丢失或版本相关时回读必要原文，不为固定阅读额度截断科学工作。\n\n## 按科研角色选主实现与互补者\n\n检索、深读、构思、方法、实验、图表、写作、终审与表达分别按本次领域、任务、材料、输出形式、依赖和当前可用性比较实际入口。一个仓库可承担多角色；同类实现选择一个主实现，第二者只承担明确补覆盖、独立评价或替代。优先已安装且真正匹配的实现，安装位置本身不代表任务适配或科学质量。可用`research31.py select --role figure --input inspected-candidates.json`核对已检查的匹配字段，工具不自动读取源码或评判能力。\n\n记录入口、实际commit/tree/blob版本、输入、实施步骤和进入本稿的输出；将`guidance_read`（读取指导）、`research_work_done`（按指导完成研究工作）、`functions_run`（运行附带函数/软件）分别记录。读完指导或运行导出函数不会自动完成科研角色；完整工作可以无需附带函数。旧`status: executed`保留工作关联，未记录的阅读/函数状态保持未知。\n\n`executor`是当前协调助手，`research_model`是作为研究对象或算法的本地模型。按用户研究授权准备免费开源模型、框架和权重并训练/评价，核对各许可证与版本；不因名称包含model而禁止科研计算，也不把科研模型声明用于启动/切换执行助手。具体项目角色与依赖见`environment-setup.md`。\n",
+      "snapshot_revalidated_at_utc": "2026-10-01T15:20:20.878919+00:00"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v33-20261001/baseline/academic-research-skills/skills/topic-novelty/references/execution-handoff.md",
+      "read_at_utc": "2026-10-01T15:09:44.919476+00:00",
+      "sha256_at_read": "98414d5f5046936def93af9fb6607fcb7f1264adf589b28b33d02ecbe9a00d3c",
+      "read_scope": "full file",
+      "content_read": "# 实际研究交接\n\n当前Agent作为 executor 传目标、输入版本、最近邻增量、竞争预测、下一决定性动作和真实输出；原生子代理按需分工。research_model 单列其权重/许可、框架与评价，宿主继续协调。\n\n正式产物记录实际专业Skill入口、版本、输入、步骤和输出，区分读指导、实施研究与运行函数。保留数字完成路径、结果定位、可编辑项目及受影响导出；研究、成果、外部事项各留下一可执行动作，等待外部确认时继续独立工作。旧材料可复用，不追认未发生调用；局部任务保持相应范围。\n",
+      "snapshot_revalidated_at_utc": "2026-10-01T15:20:20.878951+00:00"
+    }
+  ],
+  "skill_role_status": {
+    "guidance_read": true,
+    "research_work_done": "literature synthesis, provisional nearest-neighbour discrimination and executable topic design",
+    "functions_run": "no Skill bundled scripts or functions",
+    "adapted_in_host": true,
+    "extra_skill_or_model": false,
+    "subagents": false
+  },
+  "research_model": null,
+  "sampling_parameters": {
+    "model_identifier": "unknown",
+    "temperature": "unknown",
+    "top_p": "unknown",
+    "seed": "unknown"
+  },
+  "search_cutoff": "2026-10-01",
+  "web_operations": [
+    {
+      "n": 1,
+      "actions": [
+        "open Nature 07145",
+        "open CEE 01401 (failed)",
+        "open IFRC early warning"
+      ],
+      "result": "Nature abstract/main/methods lines55-203; IFRC page acquired"
+    },
+    {
+      "n": 2,
+      "actions": [
+        "retry CEE with cookie parameter",
+        "open Nature line200",
+        "open IFRC line150"
+      ],
+      "result": "CEE abstract/introduction65-81; Nature input/evaluation/experiments/metrics; IFRC145-219"
+    },
+    {
+      "n": 3,
+      "actions": [
+        "find Nature data availability",
+        "find CEE Methods/data availability",
+        "search two budget/cost-loss/early-action queries"
+      ],
+      "result": "nearest2019,2021,2026 allocation and decision-focused sensing found; search-only WFP2026 RCT not used"
+    },
+    {
+      "n": 4,
+      "actions": [
+        "open CEE82/253",
+        "open Nature238",
+        "open nearest2019 and2026 (failed)",
+        "open arXiv2510.16015",
+        "click two Nature PDFs (failed)"
+      ],
+      "result": "CEE results/fig1 caption,Methods254-283; Nature data/code239-244; sensing abstract only"
+    },
+    {
+      "n": 5,
+      "actions": [
+        "click Nature fig3 and CEE fig1 full-size (failed)",
+        "click Nature Zenodo",
+        "open CEE283",
+        "open2019 hub PDF (failed)",
+        "search exact2026 allocation and ungauged calibration queries"
+      ],
+      "result": "2026 allocation abstract/data declaration; calibrated-risk2026 abstract and selected2.5,3.4,3.5 excerpts; Zenodo metadata"
+    },
+    {
+      "n": 6,
+      "actions": [
+        "open CEE290/351",
+        "open Zenodo45",
+        "open calibrated-risk DOI (failed)",
+        "open IIASA2019 (challenge page)",
+        "click IFRC EAP link"
+      ],
+      "result": "CEE matching,event-vulnerability equations5-8,satellite limitations343-350,data/code351-356; Zenodo file units/time conventions; IFRC pillar page"
+    },
+    {
+      "n": 7,
+      "actions": [
+        "click CEE FLODIS/DFO Zenodo (failed)",
+        "open IFRC145",
+        "search2019 Akokoro/data and2026 calibrated data declaration"
+      ],
+      "result": "primary article excerpts2019 abstract/introduction2.1/example5/conclusion;2026 calibrated2.1,2.6,conclusion/data declaration"
+    },
+    {
+      "n": 8,
+      "actions": [
+        "open FLODIS direct",
+        "open DFO Zenodo (429)",
+        "open IFRC150",
+        "open2019 accepted manuscript (challenge page)"
+      ],
+      "result": "FLODIS v1 file inventory; IFRC pillars146-189 triggers/action/protocol finance"
+    },
+    {
+      "n": 9,
+      "actions": [
+        "click two FLODIS CSVs (tool gave one line without rows)",
+        "search ungauged anticipatory calibration/transfer and allocation"
+      ],
+      "result": "Mali direct nearest preprint found; other peripheral items not substantively used"
+    },
+    {
+      "n": 10,
+      "actions": [
+        "open Mali EarthArxiv PDF (unparsed three-line HTML)",
+        "search exact Mali title"
+      ],
+      "result": "formal2026 JFRM DOI70247 publication16Sept2026 and primary institutional abstract; full text not read"
+    }
+  ],
+  "other_operations": [
+    {
+      "n": 1,
+      "tool": "exec_command",
+      "action": "read SKILL plus hash/read timestamp"
+    },
+    {
+      "n": 2,
+      "tool": "exec_command",
+      "action": "read four relevant references plus hash/read timestamps"
+    },
+    {
+      "n": 3,
+      "tool": "exec_command",
+      "action": "fetch original Nature HTML and its observed media URLs; save two figures"
+    },
+    {
+      "n": 4,
+      "tool": "write_stdin",
+      "action": "collect completion of figure retrieval"
+    },
+    {
+      "n": 5,
+      "tool": "view_image",
+      "action": "actually inspect Nature Fig3 pixels"
+    },
+    {
+      "n": 6,
+      "tool": "view_image",
+      "action": "actually inspect CEE Fig1 pixels"
+    },
+    {
+      "n": 7,
+      "tool": "exec_command",
+      "action": "write answer and operations; verify read hashes; inspect one FLODIS record if reachable"
+    },
+    {
+      "n": 8,
+      "tool": "exec_command",
+      "action": "completed final artifact validation and clarified prospective information, calibration feasibility and rival measurement explanation"
+    }
+  ],
+  "tool_counts": {
+    "web_run": 10,
+    "shell_or_other": 8,
+    "nested_tool_calls_total": 18,
+    "functions_exec_orchestration_calls": 17,
+    "web_limit": 10,
+    "other_limit": 8
+  },
+  "network_access_outside_web_tool": {
+    "figure_retrieval": "two original Nature HTML pages and linked media URLs via urllib, counted as other tool3",
+    "representative_record": "one FLODIS csv via urllib in other tool7"
+  },
+  "sources": [
+    {
+      "url": "https://www.nature.com/articles/s41586-024-07145-1",
+      "level": "peer-reviewed primary; substantial key-section reading",
+      "actually_read": [
+        "Abstract",
+        "Main",
+        "AI improves forecast reliability",
+        "Return periods",
+        "Forecast lead time",
+        "Continents",
+        "Predictability of forecast reliability",
+        "Conclusion and discussion",
+        "Methods: AI model/input/target/experiments/GloFAS/metrics",
+        "Data availability",
+        "Code availability"
+      ],
+      "figures": [
+        "Fig3 pixels inspected locally; Fig1/2/4/5/6 captions read only"
+      ],
+      "facts_used": [
+        "daily forecasts0-7d; out-of-location/time validation",
+        "published AI-vs-GloFAS comparison uses GloFAS nowcast; not equal forecast lead time",
+        "matching metric allows2-day temporal window",
+        "reforecast2014-2021 and reanalysis1984-2021",
+        "forecast skill not action benefit"
+      ],
+      "not_done": [
+        "no trained model run",
+        "no source archive analysis",
+        "no appendix figures pixel inspection"
+      ]
+    },
+    {
+      "url": "https://www.nature.com/articles/s43247-024-01401-y",
+      "level": "peer-reviewed primary; substantial key-section reading",
+      "actually_read": [
+        "Abstract",
+        "Introduction65-90",
+        "Results: Stagnation92-103",
+        "Discussion limitations244-252",
+        "Methods: flooded areas,impacts,socio-economic data,flood exposure,matching,event vulnerabilities,zero-fatality issue",
+        "satellite limitations343-350",
+        "Data/Code availability351-356"
+      ],
+      "figures": [
+        "Fig1 pixels inspected locally; temporal flatness and PMK0.827/0.798/0.138 visible"
+      ],
+      "facts_used": [
+        "GFD913 events2000-2018",
+        "MODIS250m and2/3-day composites; selection913 of3127 eligible events",
+        "population30arcsec",
+        "event ratios not causal early-action effect",
+        "NatCatSERVICE restricted",
+        "2022 infrastructure information can leak into historical action replay"
+      ],
+      "not_done": [
+        "no supplementary tables read",
+        "no full trend replication",
+        "Fig2 and later results not fully read"
+      ]
+    },
+    {
+      "url": "https://www.ifrc.org/early-warning-early-action",
+      "level": "institutional practice description",
+      "actually_read": [
+        "145-219 community engagement,last-mile/response capacity,anticipatory action and forecast based finance"
+      ],
+      "facts_used": [
+        "community engagement essential",
+        "forecasts and risk analysis trigger funding",
+        "execution ability required"
+      ],
+      "not_done": [
+        "no intervention outcomes or district costs obtained"
+      ]
+    },
+    {
+      "url": "https://www.ifrc.org/happening-now/emergencies/anticipatory-pillar-dref",
+      "level": "institutional practice description",
+      "actually_read": [
+        "146-189 funding trigger,action selection,financial mechanism,EAP/sEAP structure"
+      ],
+      "facts_used": [
+        "pre-agreed actions and triggers",
+        "EAP includes readiness,prepositioning and early-action activities"
+      ],
+      "not_done": [
+        "no country-specific EAP accessed"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.1016/j.ijdrr.2019.101252",
+      "level": "peer-reviewed primary, search-returned substantive article excerpts; direct/PDF access failed",
+      "actually_read": [
+        "Abstract",
+        "introduction final paragraphs",
+        "2.1 GloFAS description",
+        "Akokoro forecast/sample description and Fig5 caption",
+        "two-stage budget split text",
+        "4.2.1 sensitivity excerpt",
+        "Conclusion"
+      ],
+      "facts_used": [
+        "already models limited budget,implementation time and two stages",
+        "idealized Akokoro case; no observed intervention-effect estimate"
+      ],
+      "not_done": [
+        "not full article/PDF or figure pixels"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.1016/j.rcns.2026.03.005",
+      "level": "peer-reviewed primary, search-returned substantive article excerpts; direct open failed",
+      "actually_read": [
+        "Abstract",
+        "2.1 data sources",
+        "2.5 prescriptive calibrated optimization",
+        "2.6 metrics/environment",
+        "3.4/3.5 excerpts",
+        "Conclusion",
+        "Data availability"
+      ],
+      "facts_used": [
+        "already calibrates probabilities then optimizes known high-risk Texas urban assets",
+        "data2005-2019, rare outcome and small2019 positive sample",
+        "relative effort assumptions stylized"
+      ],
+      "not_done": [
+        "not full text/PDF",
+        "no forecast-model or code replication"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.1016/j.ijdrr.2026.106249",
+      "level": "peer-reviewed primary, abstract and data declaration only through search",
+      "actually_read": [
+        "Abstract",
+        "Data availability"
+      ],
+      "facts_used": [
+        "spatial/time-phased aid allocation with budget/equity/capacity already exists",
+        "cyclone India case",
+        "data on request"
+      ],
+      "not_done": [
+        "not full methods",
+        "corrigendum surfaced in last search but not read; numeric results not used"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.1111/jfr3.70247",
+      "primary_metadata_url": "https://research.utwente.nl/en/publications/assessing-the-riverine-flood-forecast-skill-of-glofas-and-google--2/",
+      "level": "peer-reviewed formal2026 publication verified from primary institutional record; abstract only",
+      "actually_read": [
+        "institutional formal publication metadata and complete abstract"
+      ],
+      "facts_used": [
+        "Mali GFH/GloFAS/current EAP comparison",
+        "discharge and district impact reference data",
+        "7-day/spatial expansion capability already studied"
+      ],
+      "not_done": [
+        "formal full text/methods/data statement not read",
+        "EarthArxivPDF unparsed",
+        "not independent from same study conference/preprint"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2510.16015",
+      "level": "preprint abstract only",
+      "actually_read": [
+        "eight-line abstract"
+      ],
+      "facts_used": [
+        "decision-focused forecasting and budgeted sensor placement already proposed"
+      ],
+      "use_in_answer": "screening background only; not cited recommendation foundation",
+      "not_done": [
+        "no full methods/evaluation reading"
+      ]
+    },
+    {
+      "url": "https://zenodo.org/records/10397664",
+      "level": "data declaration/metadata",
+      "actually_read": [
+        "description21-22",
+        "file inventory31-35"
+      ],
+      "facts_used": [
+        "Google mm/day,GloFASm3/s; right-labeled previous-day timestamps",
+        "model_data14.5GB; trainedmodels3.7GB"
+      ],
+      "not_done": [
+        "no14.5GB archive downloaded",
+        "no proof of probabilistic forecast archive availability"
+      ]
+    },
+    {
+      "url": "https://zenodo.org/records/7306882",
+      "level": "data declaration/inventory plus one parsed representative record if download succeeded",
+      "actually_read": [
+        "description19",
+        "v1 file inventory33-37"
+      ],
+      "sample": {
+        "status": "not retrieved",
+        "role": "representative public data record; not research analysis",
+        "error": "<HTTPError 403: 'Forbidden'>"
+      },
+      "not_done": [
+        "no event matching",
+        "no updated data-version comparison"
+      ]
+    },
+    {
+      "url": "https://zenodo.org/records/8118213",
+      "level": "paper data declaration only",
+      "actually_read": [],
+      "failure": "429/tool internal error",
+      "not_done": [
+        "not accessed"
+      ]
+    }
+  ],
+  "visual_evidence": [
+    {
+      "file": "evidence/nearing-figure3.png",
+      "sha256": "2911cdbab6a1d2a92b3517ff5830636072d9383d243e0c221a61ef7c37b3d56f",
+      "actual_inspection": "F1 distributions weaken across lead;10yr median often0,wide spread;figure N differs from text test N,not treated as same count"
+    },
+    {
+      "file": "evidence/sauer-figure1.png",
+      "sha256": "7fa79ef3b5284bcd85ba5b1a1b2269530b5ab70e33a10f4a835c94bacc37a15e",
+      "actual_inspection": "event scatter and yearly median flatten;regional heterogeneity;no causal action contrasts"
+    }
+  ],
+  "facts_vs_inferences": {
+    "facts": "source facts recorded individually above; no unperformed result claimed",
+    "own_inferences": [
+      "forecast skill improvement does not by itself establish budgeted action benefit",
+      "target-no-flow-label calibration transfer may reverse budget priorities",
+      "2022 infrastructure would violate pre-event historical information if used in2014-2018 replay",
+      "archive gauges permit simulated ungauged assessment only; true ungauged geographic deployment needs external validation"
+    ],
+    "proposed_unvalidated": [
+      "robust allocation outperforming nominal allocation",
+      "conditional failure boundaries and calibration intervals",
+      "achievable event intersection and power"
+    ]
+  },
+  "independence": {
+    "forecast_validation_unit": "terminal basin × flood process; whole-year temporal blocking",
+    "allocation_unit": "administrative district; linked to basin forecasts",
+    "shared_sources": [
+      "Sauer and FLODIS share GFD/impact records",
+      "Mali preprint/conference/formal paper one study",
+      "multiple forecasts/lead days/gauges within one process correlated"
+    ],
+    "proposed_time_overlap": "2014-2018",
+    "limitations": "GFD positive-event archive cannot alone identify all negative days or false alarms"
+  },
+  "decision": "continue with narrowed provisional empirical decision-boundary topic; fixed forecasting model first",
+  "first_decisive_action": "audit one region and one action, join event/discharge forecast timing/exposure, construct valid non-event labels, then locked basin/year holdout budget replay",
+  "evidence_levels": [
+    "published predictive/general association evidence",
+    "proposed retrospective decision evidence",
+    "real action causal effect requires future independent intervention evidence"
+  ],
+  "fallback": "simulated ungauged terminal-basin holdout calibration boundaries if footprint/forecast overlap too sparse",
+  "gaps_at_budget": [
+    "Mali formal full text and data declaration",
+    "country EAP actual costs/delays/reachability",
+    "forecast/GFD intersection count",
+    "valid continuous non-event labels and detection bias",
+    "whether forecast archive supplies raw probabilities or only median series",
+    "2026 allocation corrigendum detail",
+    "trained inputs access/license and true ungauged deployment feasibility",
+    "availability of whole-terminal-basin withheld archived outputs, rather than random-gauge cross-validation alone"
+  ],
+  "no_complete_research": {
+    "training": false,
+    "policy_replay": false,
+    "effect_estimation": false,
+    "statistical_power_assessed": false
+  },
+  "outputs": [
+    "answer.md",
+    "operations.json",
+    "evidence/nearing-figure3.png",
+    "evidence/sauer-figure1.png"
+  ],
+  "created_at_utc": "2026-10-01T15:20:22.289026+00:00",
+  "outputs_validation": {
+    "answer_nonempty": true,
+    "json_parseable": true,
+    "required_outputs_exist": true,
+    "skill_hashes_revalidated": true,
+    "cjk_characters": 1376,
+    "characters_without_markdown_urls": 1843,
+    "answer_sha256": "b56f089793172ce1d5b4aaa4f4797e87cdb326aefa9e674ae23b29d36713f2f6"
+  }
+}

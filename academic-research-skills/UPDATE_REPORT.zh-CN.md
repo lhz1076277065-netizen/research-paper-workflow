@@ -19,6 +19,6 @@
 
 Orchestra已通过项目自身来源包装器完成实时仓库发现与入口读取，核验commit/tree/blob与SHA256。记录见[SOURCE-OBSERVATIONS](evaluations/v3.3.0-rc.1/SOURCE-OBSERVATIONS.json)。上游专业思想由当前宿主按研究任务适配；不永久固定入口、不全量安装、不接入STORM后端。历史星数与本次观察分开，关注度不作科学质量评分。
 
-工程验收见[本轮验证](evaluations/v3.3.0-rc.1/VALIDATION.zh-CN.md)，实际任务与版本对照见[行为观察](evaluations/v3.3.0-rc.1/BEHAVIOR.zh-CN.md)，逐文件身份见[变更清单](evaluations/v3.3.0-rc.1/CHANGES.json)。完整总控原文见[ORCHESTRATOR](evaluations/v3.3.0-rc.1/ORCHESTRATOR.md)。日常/源码/一键安装包由最终提交构建，manifest绑定提交与逐文件摘要；发行页提供SHA256与核验收据。
+工程验收见[本轮验证](evaluations/v3.3.0-rc.1/VALIDATION.zh-CN.md)，实际任务与版本对照见[行为观察](evaluations/v3.3.0-rc.1/BEHAVIOR.zh-CN.md)，逐文件身份见[变更清单](evaluations/v3.3.0-rc.1/CHANGES.json)。两问题首轮及洪水冻结重复共六份任务产物已保存，并完成两组匿名评阅：候选的需求与数据入口更具体、重复题名更清楚；跨篇/方法/效果边界多处相当，近邻与反证也有变弱、研究负担增加。首轮预算/冻结偏差、未完成数据联接和收益分析均记录，未用工程通过替代能力结论。完整总控原文见[ORCHESTRATOR](evaluations/v3.3.0-rc.1/ORCHESTRATOR.md)。日常/源码/一键安装包由最终提交构建，manifest绑定提交与逐文件摘要；发行页提供SHA256与核验收据。
 
-按[迁移说明](MIGRATION.zh-CN.md)与[安装教程](INSTALLATION.zh-CN.md)替换所选完整能力目录。稳定[v3.2.0](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0)保留为比较/回退基线；本次发布为候选版。尚未完成的多领域重复、真实外部专家评阅和部署收益验证均保持待验证，不宣称普遍选题提升、绝对新颖性或论文录用。
+按[迁移说明](MIGRATION.zh-CN.md)与[安装教程](INSTALLATION.zh-CN.md)替换所选完整能力目录。稳定[v3.2.0](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0)保留为比较/回退基线；本次发布为候选版。尚未完成的更广领域重复、真实外部专家评阅和部署收益验证均保持待验证，不宣称普遍选题提升、绝对新颖性或论文录用。

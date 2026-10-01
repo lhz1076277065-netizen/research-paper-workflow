@@ -1,0 +1,16 @@
+{
+  "passed": 9,
+  "cases": [
+    "all_19_installed_verified_old_copies_and_broken_link_backed_up",
+    "python_and_finder_cache_do_not_fake_source_edits",
+    "same_version_repeat_is_idempotent",
+    "python_optimized_mode_does_not_bypass_restore_guard",
+    "restore_preserves_post_install_user_edits",
+    "restore_recovers_exact_old_copies_and_keeps_new_version",
+    "mid_commit_failure_restores_all_old_bytes",
+    "wrong_zip_rejected_before_skill_mutation",
+    "single_capability_install_preserves_other_names"
+  ],
+  "python": "3.9.6",
+  "scope": "Temporary isolated home; actual Codex installer copy/validation helpers; no global Skill installation, model call or network needed."
+}

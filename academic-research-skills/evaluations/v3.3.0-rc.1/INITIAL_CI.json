@@ -1,0 +1,28 @@
+{
+  "run_id": 36882600765,
+  "head_commit": "51f4b2f3c99631c1f326ae61101fe757e698b7ec",
+  "passed": true,
+  "lanes": [
+    {
+      "artifact": "validation-report-python-3.11-pdftotext",
+      "backend": "pdftotext",
+      "tests_run": 610,
+      "passed": true,
+      "skipped": [
+        "test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary"
+      ],
+      "pdf_passed": true
+    },
+    {
+      "artifact": "validation-report-python-3.13-pypdf",
+      "backend": "pypdf",
+      "tests_run": 610,
+      "passed": true,
+      "skipped": [
+        "test_pdf_extract.PdfExtraction.test_pdftotext_actual_pdf_and_malformed_boundary"
+      ],
+      "pdf_passed": true
+    }
+  ],
+  "scope": "Initial branch CI; final commit CI recorded in release receipt."
+}

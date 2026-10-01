@@ -1,5 +1,6 @@
 {
   "base_tag": "v3.2.0",
+  "base_commit": "1e2a56bc9db0bfd411ce8ce250703785e53bb43d",
   "release": "v3.3.0-rc.1",
   "files": [
     {
@@ -60,7 +61,7 @@
       "path": "UPDATE_REPORT.zh-CN.md",
       "generated": false,
       "before_sha256": "5d6883c0d07a5f610f00fd9fec0d9ad88b4f1600c7c937845211e82bf978bb0e",
-      "after_sha256": "c1115218ff4e651852c6096cb551b4f227e1557fd63286128b22d4ef9465c524"
+      "after_sha256": "9988f179b2acef2fc4fd2e787407394b5d11d9e78bd416a33ff910ef7aa19777"
     },
     {
       "path": "VERSION",
@@ -162,7 +163,7 @@
       "path": "release/make_package.py",
       "generated": false,
       "before_sha256": "f65d976bca889c35205adc14c9847aa4888f527a723bfd5eb6e39f8f851a7bca",
-      "after_sha256": "5a6ca5229319151bd0f648dd8e1874b1befb3815108bbff376a40d0c0d3179e3"
+      "after_sha256": "5073b0b9355fae2840c39dc37c20843e96c721b64d9367722eb9c83715624bff"
     },
     {
       "path": "scripts/environment.py",
@@ -2353,6 +2354,12 @@
       "generated": false,
       "before_sha256": "b16e27bfc81f9570a0dbbaafa8ad7e9316ce947406b2d914fb5289e34e8fa458",
       "after_sha256": "1ff582bd064733f4381f05595d794b741fbaef1a8c9d14646b5d42f1677c5442"
+    },
+    {
+      "path": "tests/test_package_identity.py",
+      "generated": false,
+      "before_sha256": "b1fb39a501e9bb3c514237b0893e40a600df271e4239b073ede4a90dffd85581",
+      "after_sha256": "4dcd120cfb1f47800200152c432e7ce0814a133a44fce4cd68635670d14e164f"
     },
     {
       "path": "tests/test_quality31.py",

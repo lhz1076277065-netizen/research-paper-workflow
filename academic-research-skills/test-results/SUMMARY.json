@@ -4,7 +4,7 @@
   "baseline_commit": "1e2a56bc9db0bfd411ce8ce250703785e53bb43d",
   "regression": {
     "version": "3.3.0-rc.1",
-    "generated_at": "2026-10-01T15:08:02.770988+00:00",
+    "generated_at": "2026-10-01T15:58:14.160715+00:00",
     "tests_run": 610,
     "failures": 0,
     "errors": 0,
@@ -64,5 +64,13 @@
     "remaining_findings": 0
   },
   "behavioral_results": "See evaluations/v3.3.0-rc.1/BEHAVIOR.zh-CN.md; engineering is not a topic quality score.",
-  "archive_and_remote_verification": "Recorded after final commit in release receipt."
+  "archive_and_remote_verification": "Recorded after final commit in release receipt.",
+  "behavioral_evaluation": {
+    "contexts": 4,
+    "problem_types": 2,
+    "task_outcomes": 6,
+    "anonymous_reviews": 2,
+    "frozen_repeat_module_files_matching_release": 58,
+    "scope": "Current host reads skill guidance; selection designs only, no data pairing or policy experiment. Mixed outcomes, initial budget/freeze deviations recorded."
+  }
 }

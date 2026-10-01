@@ -16,5 +16,17 @@
       "includes_version_frontmatter": true
     }
   ],
-  "meaning": "Full entry characters; not token costs or research quality scores. New detailed references are on demand."
+  "meaning": "Full entry characters; not token costs or research quality scores. New detailed references are on demand.",
+  "frozen_repeat_actual_guidance_read": {
+    "C": {
+      "files": 5,
+      "retained_actual_guidance_characters": 5908,
+      "scope": "Retained actual skill guidance text only; paper content, tool output, hidden/system context, sampling and model tokens excluded."
+    },
+    "D": {
+      "files": 4,
+      "retained_actual_guidance_characters": 4495,
+      "scope": "Retained actual skill guidance text only; paper content, tool output, hidden/system context, sampling and model tokens excluded."
+    }
+  }
 }
