@@ -1,0 +1,87 @@
+{
+  "status": "source_checked_out_needs_review",
+  "provider_id": "Haojae/scipilot-figure-skill::SKILL.md",
+  "repository": "Haojae/scipilot-figure-skill",
+  "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+  "destination": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/scipilot-snapshot",
+  "source_reviewed": false,
+  "runtime_installed": false,
+  "native_host_verified": false,
+  "source_mode": "public_github",
+  "steps": [
+    {
+      "command": [
+        "git",
+        "init",
+        "--template=",
+        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/scipilot-snapshot"
+      ],
+      "returncode": 0,
+      "stdout": "Initialized empty Git repository in /Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/scipilot-snapshot/.git/\n",
+      "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/scipilot-snapshot",
+        "-c",
+        "core.hooksPath=/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/scipilot-snapshot/.disabled-hooks",
+        "fetch",
+        "--depth",
+        "1",
+        "https://github.com/Haojae/scipilot-figure-skill.git",
+        "43098ddb9e6a6d142218540c114f9ed38922fc42"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/Haojae/scipilot-figure-skill\n * branch            43098ddb9e6a6d142218540c114f9ed38922fc42 -> FETCH_HEAD\n"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/scipilot-snapshot",
+        "-c",
+        "core.hooksPath=/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/scipilot-snapshot/.disabled-hooks",
+        "checkout",
+        "--detach",
+        "FETCH_HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "HEAD is now at 43098dd docs: 家族表 polish→writing v1.0.0（写作成员已发布）\n"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/scipilot-snapshot",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "43098ddb9e6a6d142218540c114f9ed38922fc42\n",
+      "stderr": ""
+    }
+  ],
+  "timeout_seconds": 30,
+  "missing_paths": [],
+  "configuration_fragment": {
+    "providers": {
+      "Haojae/scipilot-figure-skill::SKILL.md": {
+        "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/scipilot-snapshot",
+        "layout": "repository"
+      }
+    }
+  },
+  "network_used": true,
+  "source_identity": {
+    "repository": "Haojae/scipilot-figure-skill",
+    "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "tree_sha": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64",
+    "selected_blobs": {
+      "SKILL.md": "212a6088c115b8903885b80f2b54a2c9b52fef7f"
+    }
+  }
+}

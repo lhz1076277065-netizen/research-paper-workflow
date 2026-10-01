@@ -1,0 +1,159 @@
+{
+  "scope": {
+    "read_only_inputs": [
+      "X",
+      "Y"
+    ],
+    "no_other_libraries_or_mapping_read": true,
+    "unit": "两个原生上下文，各八依赖子例，不是16次独立试验",
+    "assessment": "比较观察交付，无全局科学原创性/顶刊认证分数",
+    "limitations": "未重新下载；仅核目录内资料，未在线验证全部最近邻引用"
+  },
+  "cases": [
+    {
+      "id": "direction-no-data",
+      "relative": "tie",
+      "verdict": "并列。两者完成实际材料取得、字典与样例及适配判断；Y多核165个网格缺小时，X更明确标出目标泄漏。",
+      "evidence": [
+        "两份hour.csv独立复算17,379行、731日期、唯一时间键；天气1/2/3/4为11,413/4,544/1,419/3；cnt恒等式通过。",
+        "X/direction-no-data/result.json；Y/direction-no-data/suitability.json；ZIP、Readme、来源HTML及样例均存在。"
+      ],
+      "contribution": "事件相关、稀少天气条件下的区间覆盖与支持不足决策是潜在增量；未训练预测器，未完成极端天气可靠性或新颖性验证。",
+      "next": "都优先构造连续天气事件并核各滚动分区支持；能决定校准是否有足够信息。",
+      "waiting": "当前先导可电脑内推进；正式极端天气主张需更多事件。"
+    },
+    {
+      "id": "human-collection",
+      "relative": "X_slightly_better",
+      "verdict": "X在已交付结论的语义可靠性上略优；Y更直接保留任务重新加权问题并取得重要性评分，但误认实际调查日期。",
+      "evidence": [
+        "X精确连接复算19,281/18,796行、18,778共同键、44改写、18新增、503移除；Task1882仅服务对象措辞变，computer technology和08/2022更新时间保留，负对照有效。",
+        "Y两版Machinists均29项，26同文字；3110为3.95→4.54，3116为3.70→4.33，3094为4.57→4.77，3095为4.38→4.62，原始Task Ratings吻合。",
+        "Y/outputs.md:33、comparison.json:5/8、run_cases.py:62–63把Date称实际测量日期；其自身两份dictionary.pdf第36页定义为Date when data was updated。"
+      ],
+      "contribution": "X完成版本编辑指标的反例先导；Y完成职业级重要性描述比较。都不是工人面板或自动化采用因果验证。",
+      "next": "X核503删除是否为任务维护；Y先纠正Date语义并找真正采集元数据，再核波次与负对照。",
+      "waiting": "两种数字路线核心材料可电脑内取得；需完成测量验证。"
+    },
+    {
+      "id": "theory-known-principle",
+      "relative": "X_slightly_better",
+      "verdict": "标准数学判断和证明并列正确；X对增量候选多推进了可计算的信息边界，故略优。",
+      "evidence": [
+        "两者翻转矩阵P²=I反例正确；所有闭合不可约类非周期的充要条件正确，暂态块极限及周期类必要性证明成立。",
+        "X使用Fraction保存n=0…6，并实际计算ε网格n=100误差|2ε−1|^100/2；明确ε=1有矩阵极限I，公式此时仅为到均匀向量误差。",
+        "Y状态依赖惰性化保平稳分布留作候选；常见逐行惰性化一般改变分布，须先过代数可行性检查，未声称已完成。"
+      ],
+      "contribution": "反例、修正条件和二状态公式均属已有知识；置信集合证书或保持分布的优化只是潜在贡献，无新定理完成。",
+      "next": "X核现有混合证书文献；Y先确认允许的惰性化操作保留目标分布，再比较已有最快混合方法。",
+      "waiting": "无外部等待；新颖性定位及新证明尚未完成。"
+    },
+    {
+      "id": "equal-predictions",
+      "relative": "Y_slightly_better",
+      "verdict": "Y略优：保留同一初始六环，增加有标签时间快照，并量化一次观测的预测重叠；X传播检验也满足请求。",
+      "evidence": [
+        "X两三角与六环度均2；六种种子同步SI的t=3分别3/6，独立复算全部吻合。",
+        "Y720置换重合边直方图复算为0:36,1:144,2:180,3:240,4:108,6:12；E[S]=0.4，保留原图概率1/60。",
+        "X说明完整邻接矩阵可直接由连通性区分；Y说明S<1反驳甲而S=1不能排除乙。"
+      ],
+      "contribution": "两者完成明确小模型内的区分操作、代码/输入/输出；没有识别未知真实甲乙机制。",
+      "next": "依实际机制方程和可观测信息重做；种子/置换不是独立真实网络样本。",
+      "waiting": "小模型已完成；真实结论需要机制定义和观测。"
+    },
+    {
+      "id": "initial-failure",
+      "relative": "tie",
+      "verdict": "并列。都选择配对开发审计、保留测试集，并构造兼容世界证明均值不足以判断边界。",
+      "evidence": [
+        "误差高12%、资源多100%语义正确，按两个平均指标被基线支配。",
+        "X 0.2×0.60+0.8×1.25=1.12；Y (2×0.2+8×1.35)/10=1.12，复算通过。",
+        "X要求部署前可识别困难状态；Y要求事后规则经新独立验证，均未把合成例子当真实亚组。"
+      ],
+      "contribution": "完成研究决策和信息充分性构造；无真实算法改善、残差审计或消融结果。",
+      "next": "取得同单元预测、耗时和公平比较条件，再检验边界与组件。",
+      "waiting": "缺原算法与逐单元记录限制实际检验；不是打开正式测试的理由。"
+    },
+    {
+      "id": "citation-time",
+      "relative": "tie",
+      "verdict": "并列正确，遵守仅改一句的范围。",
+      "evidence": [
+        "都只写第六个月组间差异，未补持续或提高；未给方向不补方向。",
+        "X/citation-time/revision.md、Y/outputs.md:80无虚构论文身份；随机分组未被误写成依从者效应。"
+      ],
+      "contribution": "局部引用语义修正已完成，不涉及研究原创贡献。",
+      "next": "限定请求已完成。",
+      "waiting": "无。"
+    },
+    {
+      "id": "focused-paragraph",
+      "relative": "tie",
+      "verdict": "并列完成；不因降低误差/提高预测准确性的措辞差异评分。",
+      "evidence": [
+        "都保留0.757分、0.898分、白葡萄酒留出分区、跨来源未验证。",
+        "X/outputs.md:100、Y/outputs.md:86未补显著性、误差指标名称或外部泛化结果。"
+      ],
+      "contribution": "局部改写完成，不是新增实验或正式泛化验证。",
+      "next": "限定请求已完成。",
+      "waiting": "无。"
+    },
+    {
+      "id": "author-pending",
+      "relative": "tie",
+      "verdict": "并列。都记录真实缺件和续接队列，未把作者确认当停止技术工作的前置。",
+      "evidence": [
+        "两目录无真实源稿、冻结结果、图或PDF；分析证明已完成只是合成请求中的上游声明。",
+        "X/author-pending/sync_audit.json、Y/author-pending/delivery_check.json均标同步/摘要/图注未检查、not submission ready；未外发或代作者确认。",
+        "X空manifest状态断言、Y文件清点均不是实质同步检查通过。"
+      ],
+      "contribution": "完成缺件审计和内部交接；科研完成未独立复核，稿件检查和正式提交未完成。",
+      "next": "收到源稿与冻结结果后核摘要数、图注及源稿/PDF；作者独立确认身份声明。",
+      "waiting": "技术检查等待真实材料，作者确认属于另一外部事项。"
+    }
+  ],
+  "issues": [
+    {
+      "id": "Y_DATE_SEMANTICS",
+      "severity": "substantive",
+      "case": "human-collection",
+      "locations": [
+        "Y/outputs.md:33",
+        "Y/human-collection/comparison.json:5",
+        "Y/human-collection/comparison.json:8",
+        "Y/run_cases.py:55",
+        "Y/run_cases.py:62",
+        "Y/run_cases.py:63"
+      ],
+      "evidence": [
+        "Y/human-collection/v20_0/dictionary.pdf PDF第36页（印刷页34）Task Ratings",
+        "Y/human-collection/v30_0/dictionary.pdf PDF第36页（印刷页33）Task Ratings"
+      ],
+      "reproduction": "用pypdf.PdfReader读取两份dictionary.pdf的pages[35].extract_text()，查找Date when data was updated；对照run_cases.py与comparison.json。",
+      "impact": "重要性分数及差值正确；2012/2020实际采集波次没有得到该字段支持。",
+      "fix": "改称更新时间，取得采集元数据再解释调查波次。"
+    },
+    {
+      "id": "MISSING_EXECUTION_RECORD",
+      "severity": "minor_packaging",
+      "case": "cross_case",
+      "locations": [
+        "X/outputs.md:5",
+        "Y/outputs.md:104"
+      ],
+      "reproduction": "两个目录检查execution.json，均不存在；可复算脚本实际为X/run_checks.py和Y/run_cases.py。",
+      "impact": "原表、代码、结果及日志足以复核关键数，但文档声称的完整execution.json不可审计；output/前缀须随匿名迁移调整。",
+      "fix": "补完整执行记录或删除引用，并提供当前目录适用的命令。"
+    }
+  ],
+  "checks": [
+    "两份Bike行数/时间键/天气频数/cnt恒等式通过",
+    "X所有任务键差分及负对照原行通过",
+    "Y29共同/26同文字及四项重要性原行通过；Date语义未通过",
+    "X六种种子t=3的3/6通过",
+    "Y720置换直方图、0.4及1/60通过",
+    "双方合成边界均值1.12通过",
+    "两份标准充要条件证明文本数学审阅正确"
+  ],
+  "research_completion": "数据先导和小模型检验实际完成；理论为已有知识，增量方向未正式验证；局部改写完成；稿件实质检查因缺材料未完成。"
+}

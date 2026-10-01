@@ -33,7 +33,8 @@ class Work(unittest.TestCase):
         for path in ['SKILL.md','references/guide.md']:
             data=(d/path).read_bytes();h=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
             rows.append({'path':path,'type':'blob','mode':'100644','sha':h,'size':len(data)})
-        return d,u.index_tree('synthetic/source',commit,'b'*40,rows)
+        tree=subprocess.check_output(['git','-C',str(d),'rev-parse','HEAD^{tree}'],text=True).strip()
+        return d,u.index_tree('synthetic/source',commit,tree,rows)
     def checkout(self):
         mirror,index=self.mirror();dest=self.root/'checkout'
         r=u.fetch_snapshot(index,'SKILL.md',dest,apply=True,mirror=mirror,support=['references/guide.md'])

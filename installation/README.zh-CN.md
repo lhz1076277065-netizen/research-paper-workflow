@@ -1,5 +1,7 @@
 # Academic Research Skills v3.2.0-rc.3 一键安装与部署教程
 
+当前 rc.4 教程见 [计算研究新版安装说明](../academic-research-skills/INSTALLATION.zh-CN.md)。下文保留 rc.3 历史安装信息。
+
 适用：macOS 上已经可以使用的 Codex。固定安装通用学术 Skill v3.2.0-rc.3，共 19 项独立能力。核对日期：2026-10-01，Asia/Shanghai。
 
 ## 最快安装：解压后双击

@@ -30,3 +30,13 @@ python3 scripts/research31.py assess --state research-route.json --root /path/to
 - 方案稿可声明`research_context.article_type`为`study-protocol`、`protocol-design`或`registered-report-stage1`；可明确`requested_deliverable: protocol`，已有study_types继续用于方法选择。交付仍须有问题、背景、设计、完整稿件与适用审查，但不编造未来results/validation。结果标明delivery_scope=protocol，不能据此声称整个实证项目完成。明确的empirical_paper请求不能靠修改文章标签跳过研究；applicability理由本身不豁免普通实证证据。
 
 3.1.0记录缺少新关联时返回具体下一步，保留原文件；不假造subjects、bindings或已复核标记以凑齐记录。
+
+## rc.4按需字段与检查
+
+`select --role ROLE --input candidates.json --out selection.json`接收`candidates`数组及可选`requirements`。候选包含唯一id、repository、实际entry/commit、roles、available布尔值、installed布尔值、missing_dependencies，以及已检查的domains/tasks/materials/outputs字符串数组。requirements使用后四个数组要求完全覆盖；这些是实际检查记录，不是工具自动认定。主实现优先匹配的已安装者；互补者注明`complement_role: complementary_coverage | independent_evaluation | fallback`与具体`selection_reason`。
+
+provider_use可加`progress: {guidance_read: true, research_work_done: true, functions_run: false}`，三个布尔值各描述真实工作，互不推导；旧记录兼容，未知状态仍未知。附带函数单独运行不覆盖完整专业角色。`host_actions`对象可明确`role: research_model`、purpose与local/free_to_use/license_allows_research=true；模型用于科研，assistant_target仍只可为current_host。
+
+`audit --input evidence.json --root /path/to/project --out audit.json`调用同目录结果/渲染检查；`assess`可按需接收同格式`evidence_checks`，错配进入record_errors，未关联出现位置进入next_actions。分别报告字节、数值与语义覆盖，记录齐全不认证原创性或视觉正确性。
+
+三个可选字符串队列为`research_work`、`artifact_work`、`external_items`。前两队列未完成项进入next_actions，外部作者确认/访问/正式提交单独返回，不把外部等待当内部研究停工条件。

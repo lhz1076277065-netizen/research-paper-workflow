@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "topic-novelty",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "topic_candidates.jsonl",
+  "output_roles": [
+    "topic_portfolio.md",
+    "closest_work_comparison.md",
+    "topic_decision.md"
+  ],
+  "gates": [
+    "closest_work_compared",
+    "gap_not_just_unstudied_location",
+    "question_answerable",
+    "contribution_and_null_value",
+    "novelty_uncertainty_disclosed"
+  ]
+}

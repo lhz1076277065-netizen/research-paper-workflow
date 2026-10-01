@@ -1,0 +1,83 @@
+{
+  "kind": "render-dependencies",
+  "passed": false,
+  "errors": [
+    "Render artifact changed or missing: md (manuscript.md)",
+    "Stale render: word; changed dependency: md",
+    "Stale render: tex; changed dependency: md",
+    "Stale render: pdf; changed dependency: word"
+  ],
+  "pending": [],
+  "checks": [
+    "Actual input/output hashes and transitive render DAG; rebuild order is reported, no recorded command is executed"
+  ],
+  "coverage": {
+    "bytes": [
+      {
+        "id": "md",
+        "path": "manuscript.md",
+        "expected_sha256": "8824d49bae9bd5264bd6ae1e0b0e8f463ef6ff97c7b91d4e7931edaa1066b8cf",
+        "actual_sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840",
+        "matched": false
+      },
+      {
+        "id": "word",
+        "path": "manuscript.docx",
+        "expected_sha256": "3b81e314977423554b00ed58042a1abcf0bbf81e14f24bd3a51c210cc3f3ede8",
+        "actual_sha256": "3b81e314977423554b00ed58042a1abcf0bbf81e14f24bd3a51c210cc3f3ede8",
+        "matched": true
+      },
+      {
+        "id": "tex",
+        "path": "manuscript.tex",
+        "expected_sha256": "a70d18f2983e1a97311aa68326e4caaee9a657f6f710bf587a776d180b411388",
+        "actual_sha256": "a70d18f2983e1a97311aa68326e4caaee9a657f6f710bf587a776d180b411388",
+        "matched": true
+      },
+      {
+        "id": "pdf",
+        "path": "manuscript.pdf",
+        "expected_sha256": "8cffcd210fb6b090752a58b9d604afc4b84307550dd6247346c4a4fd1aa15501",
+        "actual_sha256": "8cffcd210fb6b090752a58b9d604afc4b84307550dd6247346c4a4fd1aa15501",
+        "matched": true
+      }
+    ],
+    "numeric": [],
+    "declared_semantic": []
+  },
+  "scientific_validity_certified": false,
+  "semantic_truth_certified": false,
+  "actual_visual_inspection_performed": false,
+  "impacted_rebuild_targets": [
+    {
+      "id": "word",
+      "path": "manuscript.docx",
+      "changed_inputs": [
+        "md"
+      ],
+      "output_bytes_changed": false
+    },
+    {
+      "id": "tex",
+      "path": "manuscript.tex",
+      "changed_inputs": [
+        "md"
+      ],
+      "output_bytes_changed": false
+    },
+    {
+      "id": "pdf",
+      "path": "manuscript.pdf",
+      "changed_inputs": [
+        "word"
+      ],
+      "output_bytes_changed": false
+    }
+  ],
+  "rebuild_order": [
+    "word",
+    "tex",
+    "pdf"
+  ],
+  "commands_executed": false
+}

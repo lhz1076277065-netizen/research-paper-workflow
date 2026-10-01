@@ -1,0 +1,39 @@
+{
+  "request": "Representative rc.4 installation and scientific software execution acceptance; manufactured checks, not an original scientific claim",
+  "service": "execute",
+  "runtime": {
+    "backend": "python",
+    "packages": [
+      {
+        "spec": "sympy==1.14.0",
+        "import": "sympy"
+      },
+      {
+        "spec": "rdkit==2026.3.6",
+        "import": "rdkit"
+      },
+      {
+        "spec": "scikit-learn==1.9.1",
+        "import": "sklearn"
+      },
+      {
+        "spec": "mlx==0.32.3",
+        "import": "mlx"
+      }
+    ]
+  },
+  "executor": {
+    "role": "executor",
+    "actor_scope": "current_host"
+  },
+  "research_model": {
+    "role": "research_model",
+    "purpose": "Train and evaluate a local Ridge prediction algorithm on manufactured analytic data",
+    "source": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+    "revision": "1.9.1",
+    "license": "BSD-3-Clause",
+    "local": true,
+    "free_to_use": true,
+    "license_allows_research": true
+  }
+}

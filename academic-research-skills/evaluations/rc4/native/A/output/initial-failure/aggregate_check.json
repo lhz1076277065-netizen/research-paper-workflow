@@ -1,0 +1,48 @@
+{
+  "input_kind": "Synthetic development record supplied in cases.json; allocations below are constructed examples, not actual algorithm errors.",
+  "reported_candidate_error": 1.12,
+  "reported_baseline_error": 1.0,
+  "reported_resource_ratio": 2.0,
+  "relative_error_increase": 0.1200000000000001,
+  "baseline_errors": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "compatible_allocation_A": [
+    1.12,
+    1.12,
+    1.12,
+    1.12,
+    1.12,
+    1.12,
+    1.12,
+    1.12,
+    1.12,
+    1.12
+  ],
+  "compatible_allocation_B": [
+    0.2,
+    0.2,
+    1.35,
+    1.35,
+    1.35,
+    1.35,
+    1.35,
+    1.35,
+    1.35,
+    1.35
+  ],
+  "mean_A": 1.12,
+  "mean_B": 1.12,
+  "candidate_wins_A": 0,
+  "candidate_wins_B": 2,
+  "next_action": "Obtain and audit paired per-unit development predictions, losses, strata, seeds, and resource logs before opening the formal test set."
+}

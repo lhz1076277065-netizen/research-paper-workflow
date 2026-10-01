@@ -1,0 +1,163 @@
+{
+  "schema_version": "environment-plan-1",
+  "version": "3.2.0-rc.3",
+  "task_sha256": "5d692082db9c3b75098ff4fc7615cffd1e3c32e42a38682d5e89788ea55aa9d7",
+  "requirements": {
+    "backend": "python",
+    "groups": [],
+    "packages": [
+      {
+        "spec": "sympy==1.14.0",
+        "import": "sympy",
+        "distribution": "sympy"
+      },
+      {
+        "spec": "rdkit==2026.3.6",
+        "import": "rdkit",
+        "distribution": "rdkit"
+      },
+      {
+        "spec": "scikit-learn==1.9.1",
+        "import": "sklearn",
+        "distribution": "scikit-learn"
+      },
+      {
+        "spec": "mlx==0.32.3",
+        "import": "mlx",
+        "distribution": "mlx"
+      }
+    ],
+    "binaries": [],
+    "notes": [],
+    "dependency_selection": "explicit",
+    "upstream_manifest_review_required": true
+  },
+  "observed": {
+    "executable": "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "python": [
+      3,
+      12,
+      14
+    ],
+    "prefix": "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python",
+    "base_prefix": "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python",
+    "platform": "Darwin",
+    "machine": "arm64",
+    "packages": [
+      {
+        "spec": "sympy==1.14.0",
+        "import": "sympy",
+        "version": null,
+        "module_available": false
+      },
+      {
+        "spec": "rdkit==2026.3.6",
+        "import": "rdkit",
+        "version": null,
+        "module_available": false
+      },
+      {
+        "spec": "scikit-learn==1.9.1",
+        "import": "sklearn",
+        "version": null,
+        "module_available": false
+      },
+      {
+        "spec": "mlx==0.32.3",
+        "import": "mlx",
+        "version": null,
+        "module_available": false
+      }
+    ],
+    "accelerators": {
+      "cpu": {
+        "available": true
+      },
+      "cuda": {
+        "available": null
+      },
+      "mps": {
+        "available": null
+      },
+      "mlx": {
+        "available": null
+      }
+    },
+    "venv_available": true,
+    "pip_available": true,
+    "missing_packages": [
+      "sympy==1.14.0",
+      "rdkit==2026.3.6",
+      "scikit-learn==1.9.1",
+      "mlx==0.32.3"
+    ],
+    "missing_binaries": [],
+    "python_compatible": true,
+    "checked_at": "2026-10-01T06:13:11.863381+00:00",
+    "resources": {
+      "os": "Darwin",
+      "os_release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "arm",
+      "logical_threads": 18,
+      "usable_threads": 18,
+      "memory_total_bytes": 137438953472,
+      "memory_available_bytes": 48546004992,
+      "memory_available_scope": "OS available estimate; macOS free+inactive+speculative, not a reservation",
+      "disk": {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill",
+        "total_bytes": 3996276899840,
+        "free_bytes": 1866553065472
+      },
+      "runtimes_and_compilers": {
+        "python3": {
+          "path": "/usr/bin/python3",
+          "version": [
+            "Python 3.9.6"
+          ]
+        },
+        "node": {
+          "path": "/opt/homebrew/opt/node@24/bin/node",
+          "version": [
+            "v24.20.0"
+          ]
+        },
+        "clang": {
+          "path": "/usr/bin/clang",
+          "version": [
+            "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+            "Target: arm64-apple-darwin25.6.0"
+          ]
+        },
+        "gcc": {
+          "path": "/usr/bin/gcc",
+          "version": [
+            "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+            "Target: arm64-apple-darwin25.6.0"
+          ]
+        },
+        "g++": {
+          "path": "/usr/bin/g++",
+          "version": [
+            "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+            "Target: arm64-apple-darwin25.6.0"
+          ]
+        }
+      },
+      "accelerators": "not executed by resource probe; use calibrate in the selected interpreter",
+      "checked_at": "2026-10-01T06:13:11.968620+00:00"
+    },
+    "probe_depth": "distribution metadata, module discoverability and machine resources; not backend execution",
+    "host_features": {
+      "vision": "not_probed",
+      "network": "not_probed",
+      "native_skill_loading": "not_probed",
+      "subagents": "not_required"
+    }
+  },
+  "status": "install_needed",
+  "blockers": [],
+  "installation_executed": false,
+  "scientific_validity_certified": false,
+  "scope": "Selected local runtime only. Host tool permissions, provider APIs and scientific evidence require their own checks."
+}

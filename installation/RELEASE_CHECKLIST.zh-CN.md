@@ -2,6 +2,6 @@
 
 每次发行说明必须包含部署教程、一键安装包、SHA256和下面可复制给 AI Agent 的一句话：
 
-> 请按照 https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0-rc.3 中的部署教程，将全部19项通用学术Skill安装到本机Codex，核验安装包SHA256、备份同名旧版，并在安装后报告实际路径、版本和检查结果。
+> 请按照 https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0-rc.4 中的部署教程，将全部19项通用学术Skill安装到本机Codex，核验安装包SHA256、备份同名旧版，并在安装后报告实际路径、版本和检查结果。
 
 后续发行替换为本次实际版本和发行链接，同步更新安装器固定版本及校验值，重新检查安装、备份、恢复和异常回滚；不得沿用旧校验值。注明操作系统和 Python 要求，区分文件检查与宿主实际加载。当前一键包适用于 macOS/POSIX，未验证 Windows。核对所有下载链接并保留历史发行资产。

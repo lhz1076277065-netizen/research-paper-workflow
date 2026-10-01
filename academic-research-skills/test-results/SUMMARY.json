@@ -1,21 +1,27 @@
 {
-  "version": "3.2.0-rc.3",
-  "scope": "Complete discipline-neutral Skill candidate; synthetic development fixtures, not research-paper output",
+  "version": "3.2.0-rc.4",
+  "baseline_tag": "v3.2.0-rc.3",
+  "baseline_commit": "8985d90d7e3a599a8c06556b8d1c2cec6ccb8e21",
+  "scope": "General Skill upgrade; software, actual digital operations and two native contexts reported separately",
   "regression": {
-    "version": "3.2.0-rc.3",
-    "generated_at": "2026-09-30T13:38:25.835457+00:00",
-    "tests_run": 517,
+    "version": "3.2.0-rc.4",
+    "generated_at": "2026-10-01T06:57:17.086299+00:00",
+    "tests_run": 587,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "passed": true,
     "groups": {
       "test_architecture": 86,
+      "test_computational_routes": 10,
       "test_integration": 78,
       "test_lean": 57,
+      "test_package_identity": 2,
       "test_portability": 50,
       "test_quality31": 68,
       "test_release": 57,
+      "test_research_tools": 18,
+      "test_result_links": 40,
       "test_suite": 121
     },
     "platform": "Darwin",
@@ -26,57 +32,89 @@
     "real_paper_lifecycle_tested": false,
     "macos_native_tested": true
   },
-  "retained_rc2_cases": 514,
-  "new_targeted_cases": 3,
-  "build": {
-    "generated_files": 797,
-    "drift": 0,
-    "evidence_in_source": "evaluations/results/rc3/engineering/final-build-check.json"
+  "baseline_regression": {
+    "tests": 517,
+    "passed": true,
+    "python": "3.12.14"
   },
-  "smoke": {
-    "scientific_tests": 7,
-    "scientific_passed": true,
-    "manufactured_inputs": true
-  },
+  "retained_cases": 517,
+  "new_targeted_cases": 70,
+  "root_legacy_tests": 30,
   "structure": {
-    "skills_checked": 19,
+    "skills": 19,
     "passed": true
   },
+  "scientific_smoke": {
+    "checks": 7,
+    "passed": true,
+    "manufactured_inputs": true
+  },
+  "build": {
+    "generated_files": 877,
+    "drift": 0
+  },
   "preserved": {
-    "capabilities": 19,
-    "research_profiles": 16,
-    "default_profile": "general",
-    "extensions_allowed": true,
-    "external_professional_sources": 13,
-    "entry_body_and_description_changes": 0,
+    "version": "3.2.0-rc.4",
+    "profile_count": 16,
+    "original_profiles_verbatim": true,
     "UI_yaml_unchanged": true,
-    "frozen_candidate_bundles_and_materials_unchanged": true,
-    "old_reports_preserved": 7
+    "designated_sources_unchanged": true,
+    "skills": 19
+  },
+  "actual_digital": {
+    "public_wine_rows": 4898,
+    "test_n": 915,
+    "compiled_optimization_cases": 4,
+    "professional_APIs": [
+      "SymPy",
+      "RDKit",
+      "scikit-learn"
+    ],
+    "calibration_backends": [
+      "cpu",
+      "numpy",
+      "mlx-cpu",
+      "mlx-gpu"
+    ],
+    "local_research_model_reloaded": true,
+    "GUI_software_execution_tested": false
+  },
+  "actual_exports": {
+    "linked_occurrences": 8,
+    "formats": [
+      "Markdown",
+      "LaTeX source",
+      "DOCX",
+      "PDF"
+    ],
+    "intentional_mismatch_types_detected": 5,
+    "stale_dependencies_detected_and_rebuilt": true,
+    "native_latex_compile_passed": true,
+    "PDF_page_visually_inspected": true,
+    "renderer": "ReportLab reading actual DOCX paragraphs",
+    "arbitrary_Word_layout_preservation_tested": false
   },
   "native_evaluation": {
-    "new_material_task_executions": 9,
-    "old_neighbor_task_contexts": 1,
-    "old_neighbor_operations_in_that_context": 4,
-    "task_executions": 10,
-    "same_agent_continuation_phases": 6,
-    "anonymous_content_reviews": 3,
-    "total_independent_evaluation_contexts": 13,
-    "manual_project_entry_contexts": 7,
-    "without_project_entry_contexts": 3,
-    "new_same_version_independent_repeats": 0,
-    "historical_rc2_repeats": 3,
-    "observed_distinct_project_entries": 18,
-    "research_intake_native_invocation_established": false,
-    "candidate_tuned_using_test_answers": false,
-    "configured_model_alias": "gpt-6.1-sol",
-    "exact_model_version": null,
-    "platform_registration_or_auto_discovery_established": false,
-    "uniform_quality_gain_established": false,
-    "per_trial_tokens": null,
-    "peak_effective_context": null,
-    "per_trial_cost": null,
-    "report_in_source": "evaluations/results/QUALITY_REPORT.zh-CN.md"
+    "contexts": 2,
+    "subcases_per_context": 8,
+    "independent_repeats_per_version": 0,
+    "same_request_material": true,
+    "same_inherited_model": true,
+    "hard_token_time_budget_measured": false,
+    "independent_anonymous_reviews": 1,
+    "exact_model_revision": null,
+    "tokens": null,
+    "cost": null,
+    "whole_unique_guidance_chars": {
+      "rc3": 22756,
+      "rc4": 33189
+    },
+    "guidance_metric_scope": "Complete unique inspected file sizes; truncation/reread caveats, not precise delivered tokens",
+    "universal_quality_gain_established": false,
+    "native_auto_discovery_established": false
   },
-  "real_research_project_or_manuscript_produced": false,
-  "scientific_quality_certified": false
+  "real_original_paper_produced": false,
+  "scientific_quality_certified": false,
+  "global_install_performed": false,
+  "final_ZIP_commit_CI_installer_checks": "External release-receipt.json and SHA256SUMS from same release, generated after archive creation"
 }

@@ -1,0 +1,26 @@
+{
+  "degree_sequences": {
+    "A_closure": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "B_integration": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "size_at_t3": {
+    "A": 3,
+    "B": 6
+  },
+  "changed_judgment": "Degree distributions cannot distinguish these models; controlled propagation distinguishes them. No empirical mechanism attribution is made.",
+  "checks": "All 6 seed locations enumerated; assertions passed"
+}

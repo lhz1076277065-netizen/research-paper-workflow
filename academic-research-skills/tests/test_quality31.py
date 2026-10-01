@@ -213,10 +213,14 @@ class ContentTests(unittest.TestCase):
     def test_short_19_entries(self):
         entries=list((ROOT/'skills').glob('*/SKILL.md'));self.assertEqual(len(entries),19)
         for p in entries:self.assertLess(len(p.read_text()),800)
-    def test_explicit_current_host_in_every_entry(self):
-        for p in (ROOT/'skills').glob('*/SKILL.md'):self.assertIn('不寻找本地大模型或其他宿主联动',p.read_text())
+    def test_executor_and_research_model_are_separate_in_every_entry(self):
+        for p in (ROOT/'skills').glob('*/SKILL.md'):
+            text=p.read_text()
+            self.assertIn('executor',text);self.assertIn('research_model',text)
+            self.assertIn('computational-autonomous',text)
+            self.assertNotIn('不寻找本地大模型',text)
     def test_original_code_allowed_without_host_switch(self):
-        for p in (ROOT/'skills').glob('*/SKILL.md'):self.assertIn('原创代码可自主探索',p.read_text())
+        for p in (ROOT/'skills').glob('*/SKILL.md'):self.assertIn('改造或新写代码',p.read_text())
     def test_final_expression_preserves_comparison_truth(self):
         t=(ROOT/'src/common/references/final-expression.md').read_text();self.assertIn('不因结果不利而事后换主要指标',t);self.assertIn('实际应用于正式全文',t)
     def test_no_context_forced_all13(self):

@@ -1,0 +1,15 @@
+{
+  "task_id": "1882",
+  "operation": "Compare action and tool in both real archive statements, then check update dates",
+  "input": {
+    "occupation": "29-1127.00",
+    "task_id": "1882",
+    "before": "Communicate with non-speaking students, using sign language or computer technology.",
+    "after": "Communicate with students who use an alternative method of communications, using sign language or computer technology.",
+    "old_date": "08/2022",
+    "new_date": "08/2022"
+  },
+  "observation": "communication action and computer technology remain; population wording changed; update date unchanged",
+  "judgment": "Automation keyword plus wording change is insufficient evidence of a new technological task; negative control falsifies this naive indicator in the pilot",
+  "not_claimed": "No causal workplace change or validation of all 44 changes"
+}

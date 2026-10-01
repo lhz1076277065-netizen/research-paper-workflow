@@ -1,11 +1,13 @@
-# v3.2.0-rc.3 迁移
+# v3.2.0-rc.4 迁移
 
-使用完整能力目录替换副本；保留已有项目、用户修改和产物。未进行全局自动安装。无需新增日常 JSON、重做研究或重新执行所有专业来源。原 19 能力、16 类配置、13 来源与 general 默认保留；新增专家说明按任务读取。
+用本版完整能力目录替换选定的rc.3目录；1个可选总控与18个独立能力不变，任一能力无需src或邻居目录。保留项目数据、原始结果和已有专业适配。维护源仍为src/common、src/quality31/payload和各能力protocol.md；维护后运行build_release.py --write，再用--check核对。
 
-研究记录仍沿用既有格式。v3.1.1 对布尔复核、对象版本和真实输入/输出关联的要求继续适用，缺失关联按 [记录说明](docs/research31-usage.md) 补真正发生的操作，不补造执行。方案交付与整个实证研究完成仍分开。
+默认执行模式是computational-autonomous，独立于学科、文章类型、证据类型、研究方法和工具后端。原study_types、method_family、evidence_basis与runtime.backend继续接受；新字段为research_context.execution_mode、evidence_type、research_methods、tool_backend、computational_routes。未提供数据先发现和实际取得适配材料；原人工采集路线转到公开数字资源、模型或理论，并明确改变的问题及证据范围。
 
-评估请求现在可携带完整模块冻结身份及实际读取记录；新比较使用新目录重新 prepare，明确 development、same_version_repeat、unseen_material 或 deployment。历史已发布请求中的本机路径属于观察记录，不能在别处直接运行；应按当前源码重新准备并核查材料。旧执行结果不因改版变成新候选的同版本重复。
+executor保留当前宿主；research_model是本地研究对象或算法，可训练、加载和评价。按实际任务复用免费工具、项目环境和已有授权软件。environment.py的doctor/plan不安装；ensure按项目选定依赖准备；exec以argv、项目cwd、日志和文件回执运行任意已准备的专业工具；calibrate实际检查候选后端的小任务。
 
-新绑定为明确选中的入口、支持文件与适配脚本保存 Git 索引身份。旧绑定无此字段时继续兼容；新绑定中所选依赖变化需复核，不能仅凭布尔“已检查”跳过。保留本地改造，用当前文件的 reviewed_file_sha256 表明实际复核对象；之后再修改需再次核验。未登记的传递依赖和语义兼容仍按任务检查。
+现有result envelope与figure-values检查兼容。需要跨稿件关联时追加result-links检查，绑定实际冻结结果、版本和具体出现位置；明确舍入和复算容差。render-dependencies独立记录源、图表、引用与输出依赖，源改动后按rebuild_order重建。旧记录缺少关联时显示待关联范围，不冒充全面语义核查。
 
-原 rc.1、rc.2 报告分别存入 history/rc1-reports、history/rc2-reports。本次 native 测试素材在公开后成为可复算样例，不能继续称秘密保留集。同一 Agent 的图注或输入更正续接不是新的独立重复。逐次 token/费用和平台自动发现没有观察证据时保持未知。
+科研、成果与external_items分别推进。provider_uses可追加guidance_read、research_work_done、functions_run三种进度；实际版本与所用入口继续记录。外部作者确认待办不阻止独立研究与成果工作，但仍不能宣称已正式提交。
+
+rc.3迁移、更新和目录清单存入history/rc3-reports。本轮软件、真实数字执行、原生行为和视觉检查分列报告；接口通过不代表原创性、科学正确性或期刊录用。

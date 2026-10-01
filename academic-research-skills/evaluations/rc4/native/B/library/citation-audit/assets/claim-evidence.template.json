@@ -1,0 +1,22 @@
+{
+  "template_name": "claim-evidence-entry",
+  "template_status": "unfilled_not_evidence",
+  "schema_version": "3.0-alpha.1",
+  "instructions": "依据实际阅读或研究填写；保留 unknown/null 与原因；模板不是事实或默认结论。",
+  "claim_id": null,
+  "text": null,
+  "scope": null,
+  "classification": null,
+  "status": "unverified",
+  "source_ids": [],
+  "data_ids": [],
+  "method_ids": [],
+  "result_ids": [],
+  "figure_table_ids": [],
+  "uncertainty": null,
+  "limitations": [],
+  "manuscript_locations": [],
+  "actual_support_locators": [],
+  "wording_action": null,
+  "input_versions": []
+}

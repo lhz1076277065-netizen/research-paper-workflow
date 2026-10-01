@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "analysis-execution",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "result_records.jsonl",
+  "output_roles": [
+    "analysis_report.md",
+    "execution_log.jsonl",
+    "results_manifest.json"
+  ],
+  "gates": [
+    "execution_observed",
+    "method_appropriate",
+    "assumptions_and_diagnostics",
+    "estimates_and_uncertainty",
+    "all_relevant_runs_retained"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Optional task envelope v3; host and research-type portable",
+  "title": "Optional task envelope v4; independent research and execution dimensions",
   "type": "object",
   "required": [
     "capability",
@@ -77,13 +77,40 @@
           }
         },
         "method_family": {
-          "type": "string"
+          "type": "string",
+          "description": "Legacy scalar method shorthand; research_methods can name multiple methods."
         },
         "evidence_basis": {
           "type": "array",
           "items": {
             "type": "string"
           }
+        },
+        "execution_mode": {
+          "type": "string",
+          "minLength": 1,
+          "default": "computational-autonomous",
+          "description": "Research execution scope, separate from provider execution_mode; explicit specialist modes remain representable."
+        },
+        "evidence_type": {
+          "oneOf": [
+            {"type": "string", "minLength": 1},
+            {"type": "array", "items": {"type": "string", "minLength": 1}}
+          ],
+          "description": "Evidence type(s); evidence_basis remains a compatible list alias."
+        },
+        "research_methods": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "tool_backend": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Selected research backend; must agree with runtime.backend when both are supplied."
+        },
+        "computational_routes": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
         }
       }
     },

@@ -1,0 +1,23 @@
+test_assess_and_audit_cli_use_actual_result_link_checks (test_research_tools.Roles.test_assess_and_audit_cli_use_actual_result_link_checks) ... ok
+test_bind_retains_commit_tree_blob (test_research_tools.Roles.test_bind_retains_commit_tree_blob) ... ok
+test_discovery_rejects_wrong_resolved_tree (test_research_tools.Roles.test_discovery_rejects_wrong_resolved_tree) ... ok
+test_external_wait_does_not_block_focused_internal_work (test_research_tools.Roles.test_external_wait_does_not_block_focused_internal_work) ... ok
+test_installed_matching_primary_and_purposeful_complement (test_research_tools.Roles.test_installed_matching_primary_and_purposeful_complement) ... ok
+test_read_work_and_function_progress_are_separate (test_research_tools.Roles.test_read_work_and_function_progress_are_separate) ... ok
+test_research_model_action_does_not_authorize_host_switch (test_research_tools.Roles.test_research_model_action_does_not_authorize_host_switch) ... ok
+test_unavailable_or_wrong_material_never_selected (test_research_tools.Roles.test_unavailable_or_wrong_material_never_selected) ... ok
+test_argv_uses_project_cwd_literal_arguments_and_actual_outputs (test_research_tools.Tools.test_argv_uses_project_cwd_literal_arguments_and_actual_outputs) ... ok
+test_command_string_is_not_shell (test_research_tools.Tools.test_command_string_is_not_shell) ... ok
+test_compile_and_run_non_python_in_project (test_research_tools.Tools.test_compile_and_run_non_python_in_project) ... ok
+test_cpu_calibration_checks_actual_numerical_output (test_research_tools.Tools.test_cpu_calibration_checks_actual_numerical_output) ... ok
+test_local_research_model_is_distinct_from_executor (test_research_tools.Tools.test_local_research_model_is_distinct_from_executor) ... ok
+test_missing_outputs_do_not_pass (test_research_tools.Tools.test_missing_outputs_do_not_pass) ... ok
+test_output_and_cwd_escape_rejected (test_research_tools.Tools.test_output_and_cwd_escape_rejected) ... ok
+test_prepared_managed_environment_runs_without_reinstall_permission (test_research_tools.Tools.test_prepared_managed_environment_runs_without_reinstall_permission) ... ok
+test_resources_are_dynamic_and_unknowns_are_not_claimed (test_research_tools.Tools.test_resources_are_dynamic_and_unknowns_are_not_claimed) ... ok
+test_worker_refuses_existing_output_before_import (test_research_tools.Tools.test_worker_refuses_existing_output_before_import) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 10.779s
+
+OK

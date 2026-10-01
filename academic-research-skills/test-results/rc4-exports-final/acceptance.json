@@ -1,0 +1,32 @@
+{
+  "actual_formats": [
+    "Markdown",
+    "LaTeX source text",
+    "DOCX paragraphs",
+    "PDF extracted text"
+  ],
+  "linked_occurrences": 8,
+  "intentional_mismatches_detected": [
+    "value",
+    "unit",
+    "direction",
+    "denominator",
+    "time"
+  ],
+  "rebuild_order": [
+    "word",
+    "tex",
+    "pdf"
+  ],
+  "rebuilt_outputs": [
+    "manuscript.docx",
+    "manuscript.tex",
+    "manuscript.pdf"
+  ],
+  "final_links_passed": true,
+  "final_render_passed": true,
+  "latex_compilation_evaluated_here": false,
+  "visual_inspection_performed_here": false,
+  "renderer_scope": "Actual DOCX paragraph text rendering with ReportLab; not arbitrary Word/LaTeX layout preservation",
+  "code_sha256": "408f767ec5f5b103aa3e6be773782238f073097f24a8ec84dd663d37a7f9baad"
+}

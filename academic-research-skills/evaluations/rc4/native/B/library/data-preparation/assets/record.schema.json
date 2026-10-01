@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "数据工程、质量控制与分析数据冻结：任务记录",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "record_type": {
+      "type": "string",
+      "const": "data-preparation"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "observed",
+        "assessed",
+        "unverified",
+        "not_applicable"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+      },
+      "uniqueItems": true
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+      },
+      "uniqueItems": true
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "input_artifacts": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "output_artifacts": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "code_reference": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "parameters": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "row_counts_before_after": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "join_cardinality": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "missingness_policy": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "exclusion_reason": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "leakage_check": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "validation_result": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "operation",
+        "input_artifacts",
+        "output_artifacts",
+        "code_reference",
+        "parameters",
+        "row_counts_before_after",
+        "join_cardinality",
+        "missingness_policy",
+        "exclusion_reason",
+        "leakage_check",
+        "validation_result"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "id",
+    "record_type",
+    "status",
+    "created_at",
+    "source_refs",
+    "artifact_refs",
+    "fields"
+  ],
+  "additionalProperties": false
+}

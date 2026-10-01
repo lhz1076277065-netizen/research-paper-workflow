@@ -1,0 +1,351 @@
+{
+  "value": {
+    "kind": "result-links",
+    "passed": false,
+    "errors": [
+      "link 1 (RMSE-ridge): Numeric token absent or ambiguous at locator: 0.757"
+    ],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "expected_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "actual_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "matched": true
+        },
+        {
+          "path": "wrong-value.md",
+          "expected_sha256": "02b28f40adbaccf5f89bb3237134ad87e44c3dc37f1263d5cb274aaeccc141c9",
+          "actual_sha256": "02b28f40adbaccf5f89bb3237134ad87e44c3dc37f1263d5cb274aaeccc141c9",
+          "matched": true
+        }
+      ],
+      "numeric": [],
+      "declared_semantic": [
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-value.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "quality score points",
+          "text": "quality score points"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-value.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "direction",
+          "source_value": "decrease",
+          "text": "lower"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-value.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "denominator",
+          "source_value": 915,
+          "text": "n=915"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-value.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "outcome",
+          "source_value": "wine quality",
+          "text": "wine quality"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-value.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "population",
+          "source_value": "white wine",
+          "text": "white wine"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-value.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "time",
+          "source_value": "not supplied",
+          "text": "not supplied"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-value.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "comparison",
+          "source_value": "training mean baseline",
+          "text": "training mean baseline"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-value.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "model",
+          "source_value": "ridge regression",
+          "text": "ridge regression"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-value.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "split",
+          "source_value": "heldout",
+          "text": "heldout"
+        }
+      ]
+    },
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "unit": {
+    "kind": "result-links",
+    "passed": false,
+    "errors": [
+      "link 1 (RMSE-ridge): unit text not found at actual locator: quality score points"
+    ],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "expected_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "actual_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "matched": true
+        },
+        {
+          "path": "wrong-unit.md",
+          "expected_sha256": "b8095baae03a39d8c20252a3909742444afa43822a5d75611896598062de1d4d",
+          "actual_sha256": "b8095baae03a39d8c20252a3909742444afa43822a5d75611896598062de1d4d",
+          "matched": true
+        }
+      ],
+      "numeric": [],
+      "declared_semantic": []
+    },
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "direction": {
+    "kind": "result-links",
+    "passed": false,
+    "errors": [
+      "link 1 (RMSE-ridge): direction text not found at actual locator: lower"
+    ],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "expected_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "actual_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "matched": true
+        },
+        {
+          "path": "wrong-direction.md",
+          "expected_sha256": "75501ac98e48cc9c7dd6768ec74f683df8ec09ac93fa7b78aaf15adcd908809e",
+          "actual_sha256": "75501ac98e48cc9c7dd6768ec74f683df8ec09ac93fa7b78aaf15adcd908809e",
+          "matched": true
+        }
+      ],
+      "numeric": [],
+      "declared_semantic": [
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-direction.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "quality score points",
+          "text": "quality score points"
+        }
+      ]
+    },
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "denominator": {
+    "kind": "result-links",
+    "passed": false,
+    "errors": [
+      "link 1 (RMSE-ridge): denominator text not found at actual locator: n=915"
+    ],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "expected_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "actual_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "matched": true
+        },
+        {
+          "path": "wrong-denominator.md",
+          "expected_sha256": "7bb5aa9f059de97fbf89c4fd89883a8a42700a3a20e7a3ee7c2549aeba7ed11a",
+          "actual_sha256": "7bb5aa9f059de97fbf89c4fd89883a8a42700a3a20e7a3ee7c2549aeba7ed11a",
+          "matched": true
+        }
+      ],
+      "numeric": [],
+      "declared_semantic": [
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-denominator.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "quality score points",
+          "text": "quality score points"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-denominator.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "direction",
+          "source_value": "decrease",
+          "text": "lower"
+        }
+      ]
+    },
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "time": {
+    "kind": "result-links",
+    "passed": false,
+    "errors": [
+      "link 1 (RMSE-ridge): time text not found at actual locator: not supplied"
+    ],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "expected_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "actual_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+          "matched": true
+        },
+        {
+          "path": "wrong-time.md",
+          "expected_sha256": "e6aabd8974d5a62fff79d07e6447e4991e53a554f022221867ff62a7cdedcbd5",
+          "actual_sha256": "e6aabd8974d5a62fff79d07e6447e4991e53a554f022221867ff62a7cdedcbd5",
+          "matched": true
+        }
+      ],
+      "numeric": [],
+      "declared_semantic": [
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-time.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "quality score points",
+          "text": "quality score points"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-time.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "direction",
+          "source_value": "decrease",
+          "text": "lower"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-time.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "denominator",
+          "source_value": 915,
+          "text": "n=915"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-time.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "outcome",
+          "source_value": "wine quality",
+          "text": "wine quality"
+        },
+        {
+          "result_id": "RMSE-ridge",
+          "path": "wrong-time.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "population",
+          "source_value": "white wine",
+          "text": "white wine"
+        }
+      ]
+    },
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  }
+}

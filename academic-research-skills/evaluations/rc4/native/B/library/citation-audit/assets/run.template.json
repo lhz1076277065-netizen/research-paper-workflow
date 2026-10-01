@@ -1,0 +1,71 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "citation-audit",
+  "run_id": "RUN-template",
+  "created_at": "2026-09-29T00:00:00+00:00",
+  "updated_at": "2026-09-29T00:00:00+00:00",
+  "request": "",
+  "scope": "",
+  "status": "draft",
+  "inputs": [],
+  "sources": [],
+  "artifacts": [],
+  "outputs": [
+    {
+      "role": "citation_audit.md",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "reference_corrections.json",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "claim_citation_map.json",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    }
+  ],
+  "gates": [
+    {
+      "id": "bibliographic_accuracy",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "semantic_support",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "versions_and_status_checked",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "intext_reference_bijection",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "unverified_explicit",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    }
+  ],
+  "unknowns": [],
+  "external_dependencies": [],
+  "next_actions": []
+}

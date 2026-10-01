@@ -1,0 +1,4 @@
+Initial local checks: exit 0.
+First O*NET run: exit 1, AssertionError at run_cases.py line 68; 26/29 unchanged task texts, not assumed 29/29.
+Corrected full run: exit 0; SELF-CHECK PASS.
+Initial historical O*NET 20.0 guessed URL: HTTP 404; corrected official archive URL: HTTP 200.

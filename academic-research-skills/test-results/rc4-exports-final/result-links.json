@@ -1,0 +1,374 @@
+{
+  "kind": "result-links",
+  "sources": [
+    {
+      "id": "actual",
+      "path": "results.json",
+      "sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+      "versions": {
+        "data": {
+          "path": "wine-quality.zip",
+          "sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4"
+        },
+        "code": {
+          "path": "executed-source.py",
+          "sha256": "850cb08a805501fa5b92a7215d2c9015f265fa11a3fb7001f2eada8ca350b65b"
+        },
+        "execution": {
+          "path": "public-results.json",
+          "sha256": "4c2c0f0bd84fa60c2e392faee591208bd1620e407e8a3d3028b55024062735f5"
+        }
+      }
+    }
+  ],
+  "links": [
+    {
+      "result_id": "RMSE-ridge",
+      "source_id": "actual",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript.md",
+        "sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840"
+      },
+      "locator": {
+        "line": 1
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "text": "0.757",
+          "decimals": 3
+        }
+      ],
+      "semantics": {
+        "unit": {
+          "value": "quality score points",
+          "text": "quality score points"
+        },
+        "denominator": {
+          "value": 915,
+          "text": "n=915"
+        },
+        "population": {
+          "value": "white wine",
+          "text": "white wine"
+        },
+        "outcome": {
+          "value": "wine quality",
+          "text": "wine quality"
+        },
+        "comparison": {
+          "value": "training mean baseline",
+          "text": "training mean baseline"
+        },
+        "model": {
+          "value": "ridge regression",
+          "text": "ridge regression"
+        },
+        "split": {
+          "value": "heldout",
+          "text": "heldout"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "lower"
+        },
+        "time": {
+          "value": "not supplied",
+          "text": "not supplied"
+        }
+      }
+    },
+    {
+      "result_id": "RMSE-baseline",
+      "source_id": "actual",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript.md",
+        "sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840"
+      },
+      "locator": {
+        "line": 1
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "text": "0.898",
+          "decimals": 3
+        }
+      ],
+      "semantics": {
+        "unit": {
+          "value": "quality score points",
+          "text": "quality score points"
+        },
+        "denominator": {
+          "value": 915,
+          "text": "n=915"
+        }
+      }
+    },
+    {
+      "result_id": "RMSE-ridge",
+      "source_id": "actual",
+      "role": "latex",
+      "artifact": {
+        "path": "manuscript.tex",
+        "sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a"
+      },
+      "locator": {
+        "line": 3
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "text": "0.757",
+          "decimals": 3
+        }
+      ],
+      "semantics": {
+        "unit": {
+          "value": "quality score points",
+          "text": "quality score points"
+        },
+        "denominator": {
+          "value": 915,
+          "text": "n=915"
+        },
+        "population": {
+          "value": "white wine",
+          "text": "white wine"
+        },
+        "outcome": {
+          "value": "wine quality",
+          "text": "wine quality"
+        },
+        "comparison": {
+          "value": "training mean baseline",
+          "text": "training mean baseline"
+        },
+        "model": {
+          "value": "ridge regression",
+          "text": "ridge regression"
+        },
+        "split": {
+          "value": "heldout",
+          "text": "heldout"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "lower"
+        },
+        "time": {
+          "value": "not supplied",
+          "text": "not supplied"
+        }
+      }
+    },
+    {
+      "result_id": "RMSE-baseline",
+      "source_id": "actual",
+      "role": "latex",
+      "artifact": {
+        "path": "manuscript.tex",
+        "sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a"
+      },
+      "locator": {
+        "line": 3
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "text": "0.898",
+          "decimals": 3
+        }
+      ],
+      "semantics": {
+        "unit": {
+          "value": "quality score points",
+          "text": "quality score points"
+        },
+        "denominator": {
+          "value": 915,
+          "text": "n=915"
+        }
+      }
+    },
+    {
+      "result_id": "RMSE-ridge",
+      "source_id": "actual",
+      "role": "word",
+      "artifact": {
+        "path": "manuscript.docx",
+        "sha256": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19"
+      },
+      "locator": {
+        "paragraph": 1
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "text": "0.757",
+          "decimals": 3
+        }
+      ],
+      "semantics": {
+        "unit": {
+          "value": "quality score points",
+          "text": "quality score points"
+        },
+        "denominator": {
+          "value": 915,
+          "text": "n=915"
+        },
+        "population": {
+          "value": "white wine",
+          "text": "white wine"
+        },
+        "outcome": {
+          "value": "wine quality",
+          "text": "wine quality"
+        },
+        "comparison": {
+          "value": "training mean baseline",
+          "text": "training mean baseline"
+        },
+        "model": {
+          "value": "ridge regression",
+          "text": "ridge regression"
+        },
+        "split": {
+          "value": "heldout",
+          "text": "heldout"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "lower"
+        },
+        "time": {
+          "value": "not supplied",
+          "text": "not supplied"
+        }
+      }
+    },
+    {
+      "result_id": "RMSE-baseline",
+      "source_id": "actual",
+      "role": "word",
+      "artifact": {
+        "path": "manuscript.docx",
+        "sha256": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19"
+      },
+      "locator": {
+        "paragraph": 1
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "text": "0.898",
+          "decimals": 3
+        }
+      ],
+      "semantics": {
+        "unit": {
+          "value": "quality score points",
+          "text": "quality score points"
+        },
+        "denominator": {
+          "value": 915,
+          "text": "n=915"
+        }
+      }
+    },
+    {
+      "result_id": "RMSE-ridge",
+      "source_id": "actual",
+      "role": "pdf",
+      "artifact": {
+        "path": "manuscript.pdf",
+        "sha256": "38a5b66bab45fbf0d0e30ce403cd42090c5eb9bca060f70d4405023ff55dd5b4"
+      },
+      "locator": {
+        "page": 1,
+        "line": 1,
+        "line_end": 2
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "text": "0.757",
+          "decimals": 3
+        }
+      ],
+      "semantics": {
+        "unit": {
+          "value": "quality score points",
+          "text": "quality score points"
+        },
+        "denominator": {
+          "value": 915,
+          "text": "n=915"
+        },
+        "population": {
+          "value": "white wine",
+          "text": "white wine"
+        },
+        "outcome": {
+          "value": "wine quality",
+          "text": "wine quality"
+        },
+        "comparison": {
+          "value": "training mean baseline",
+          "text": "training mean baseline"
+        },
+        "model": {
+          "value": "ridge regression",
+          "text": "ridge regression"
+        },
+        "split": {
+          "value": "heldout",
+          "text": "heldout"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "lower"
+        },
+        "time": {
+          "value": "not supplied",
+          "text": "not supplied"
+        }
+      }
+    },
+    {
+      "result_id": "RMSE-baseline",
+      "source_id": "actual",
+      "role": "pdf",
+      "artifact": {
+        "path": "manuscript.pdf",
+        "sha256": "38a5b66bab45fbf0d0e30ce403cd42090c5eb9bca060f70d4405023ff55dd5b4"
+      },
+      "locator": {
+        "page": 1,
+        "line": 1,
+        "line_end": 2
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "text": "0.898",
+          "decimals": 3
+        }
+      ],
+      "semantics": {
+        "unit": {
+          "value": "quality score points",
+          "text": "quality score points"
+        },
+        "denominator": {
+          "value": 915,
+          "text": "n=915"
+        }
+      }
+    }
+  ]
+}

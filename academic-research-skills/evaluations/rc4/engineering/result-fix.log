@@ -1,0 +1,45 @@
+test_accept_result_hash_bound_manifest_and_pending_claim (test_result_links.Links.test_accept_result_hash_bound_manifest_and_pending_claim) ... ok
+test_accept_result_optional_inline_links (test_result_links.Links.test_accept_result_optional_inline_links) ... ok
+test_accept_result_unrelated_occurrence_cannot_validate_returned_draft (test_result_links.Links.test_accept_result_unrelated_occurrence_cannot_validate_returned_draft) ... ok
+test_actual_docx_paragraph (test_result_links.Links.test_actual_docx_paragraph) ... ok
+test_actual_docx_table_cell (test_result_links.Links.test_actual_docx_table_cell) ... ok
+test_actual_pdf_page_line (test_result_links.Links.test_actual_pdf_page_line) ... ok
+test_adapter_optional_project_interpreter_and_workspace (test_result_links.Links.test_adapter_optional_project_interpreter_and_workspace) ... ok
+test_csv_frozen_output_uses_existing_result_id (test_result_links.Links.test_csv_frozen_output_uses_existing_result_id) ... ok
+test_display_tolerance_without_recomputed_source_is_rejected (test_result_links.Links.test_display_tolerance_without_recomputed_source_is_rejected) ... ok
+test_edit_cannot_redefine_source_value_with_display_token (test_result_links.Links.test_edit_cannot_redefine_source_value_with_display_token) ... ok
+test_edited_value_even_with_current_target_hash_fails (test_result_links.Links.test_edited_value_even_with_current_target_hash_fails) ... ok
+test_frozen_output_and_execution_data_code_version_identity (test_result_links.Links.test_frozen_output_and_execution_data_code_version_identity) ... ok
+test_independent_copy_needs_only_sibling_scripts (test_result_links.Links.test_independent_copy_needs_only_sibling_scripts) ... ok
+test_interpretation_binds_actual_source_snippet (test_result_links.Links.test_interpretation_binds_actual_source_snippet) ... ok
+test_interval_endpoints_cannot_hide_unchecked_estimate (test_result_links.Links.test_interval_endpoints_cannot_hide_unchecked_estimate) ... ok
+test_latex_actual_occurrence (test_result_links.Links.test_latex_actual_occurrence) ... ok
+test_legacy_envelope_needs_no_new_linkage_fields (test_result_links.Links.test_legacy_envelope_needs_no_new_linkage_fields) ... ok
+test_missing_source_versions_stay_pending (test_result_links.Links.test_missing_source_versions_stay_pending) ... ok
+test_outcome_population_comparison_model_split_uncertainty (test_result_links.Links.test_outcome_population_comparison_model_split_uncertainty) ... ok
+test_path_escape_symlink_and_malformed_mapping_are_clean_diagnostics (test_result_links.Links.test_path_escape_symlink_and_malformed_mapping_are_clean_diagnostics) ... ok
+test_percent_ratio_conversion_is_not_a_hundredfold_display_error (test_result_links.Links.test_percent_ratio_conversion_is_not_a_hundredfold_display_error) ... ok
+test_provider_dispatch_uses_same_actual_file_audit (test_result_links.Links.test_provider_dispatch_uses_same_actual_file_audit) ... ok
+test_real_markdown_occurrence_and_separate_coverage (test_result_links.Links.test_real_markdown_occurrence_and_separate_coverage) ... ok
+test_recomputation_outside_tolerance_fails (test_result_links.Links.test_recomputation_outside_tolerance_fails) ... ok
+test_recomputation_tolerance_does_not_relax_display_rounding (test_result_links.Links.test_recomputation_tolerance_does_not_relax_display_rounding) ... ok
+test_rounding_tie_is_explicit_decimal_half_even_or_half_up (test_result_links.Links.test_rounding_tie_is_explicit_decimal_half_even_or_half_up) ... ok
+test_theory_proposition_conditions_and_actual_proof (test_result_links.Links.test_theory_proposition_conditions_and_actual_proof) ... ok
+test_unlinked_critical_claim_has_actionable_location (test_result_links.Links.test_unlinked_critical_claim_has_actionable_location) ... ok
+test_wrong_denominator_text_fails (test_result_links.Links.test_wrong_denominator_text_fails) ... ok
+test_wrong_direction_with_correct_declared_value_fails (test_result_links.Links.test_wrong_direction_with_correct_declared_value_fails) ... ok
+test_wrong_followup_even_with_correct_declared_time_fails (test_result_links.Links.test_wrong_followup_even_with_correct_declared_time_fails) ... ok
+test_wrong_unit_fails (test_result_links.Links.test_wrong_unit_fails) ... ok
+test_actual_frozen_inputs_and_outputs_pass (test_result_links.Renders.test_actual_frozen_inputs_and_outputs_pass) ... ok
+test_changed_figure_propagates_and_pdf_tamper_is_detected (test_result_links.Renders.test_changed_figure_propagates_and_pdf_tamper_is_detected) ... ok
+test_latex_change_identifies_word_and_old_pdf_transitively (test_result_links.Renders.test_latex_change_identifies_word_and_old_pdf_transitively) ... ok
+test_malformed_digest_cycle_and_path_escape_fail_cleanly (test_result_links.Renders.test_malformed_digest_cycle_and_path_escape_fail_cleanly) ... ok
+test_manifest_commands_are_not_executed (test_result_links.Renders.test_manifest_commands_are_not_executed) ... ok
+test_provider_dispatch_render (test_result_links.Renders.test_provider_dispatch_render) ... ok
+test_refreshed_source_inventory_does_not_refresh_prior_render (test_result_links.Renders.test_refreshed_source_inventory_does_not_refresh_prior_render) ... ok
+test_word_change_identifies_old_pdf (test_result_links.Renders.test_word_change_identifies_old_pdf) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.576s
+
+OK

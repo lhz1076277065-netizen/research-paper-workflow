@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "data-discovery",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "dataset_candidates.jsonl",
+  "output_roles": [
+    "data_search_report.md",
+    "data_manifest.json",
+    "acquisition_log.jsonl"
+  ],
+  "gates": [
+    "question_data_fit",
+    "lawful_access",
+    "actual_download_verified",
+    "provenance_and_checksums",
+    "coverage_and_missingness_exposed"
+  ]
+}

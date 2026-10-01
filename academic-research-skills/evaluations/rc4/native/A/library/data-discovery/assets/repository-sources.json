@@ -1,0 +1,97 @@
+{
+  "schema_version": "repository-sources-1",
+  "purpose": "User-designated external Skill sources. Discover current entries within these repositories; selecting a source outside this list needs the user to change the scope. Not a run-all list. Scientific literature/data/library access is separate.",
+  "repositories": [
+    {
+      "url": "https://github.com/microsoft/ResearchStudio",
+      "hints": [
+        "literature",
+        "novelty",
+        "ideation"
+      ]
+    },
+    {
+      "url": "https://github.com/Yuan1z0825/nature-skills",
+      "hints": [
+        "reading",
+        "figure",
+        "writing"
+      ]
+    },
+    {
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "hints": [
+        "data",
+        "methods",
+        "analysis",
+        "writing"
+      ]
+    },
+    {
+      "url": "https://github.com/Haojae/scipilot-figure-skill",
+      "hints": [
+        "figure"
+      ]
+    },
+    {
+      "url": "https://github.com/Galaxy-Dawn/claude-scholar",
+      "hints": [
+        "ideation",
+        "methods",
+        "figure",
+        "writing"
+      ]
+    },
+    {
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "hints": [
+        "literature",
+        "novelty",
+        "review"
+      ]
+    },
+    {
+      "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "hints": [
+        "experiment",
+        "review"
+      ]
+    },
+    {
+      "url": "https://github.com/karpathy/autoresearch",
+      "hints": [
+        "experiment"
+      ]
+    },
+    {
+      "url": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill",
+      "hints": [
+        "final_expression"
+      ]
+    },
+    {
+      "url": "https://github.com/rougier/scientific-visualization-book",
+      "hints": [
+        "figure_reference"
+      ]
+    },
+    {
+      "url": "https://github.com/nexu-io/open-design",
+      "hints": [
+        "presentation"
+      ]
+    },
+    {
+      "url": "https://github.com/ningzimu/codex-ppt-skill",
+      "hints": [
+        "presentation"
+      ]
+    },
+    {
+      "url": "https://github.com/WUBING2023/PaperSpine",
+      "hints": [
+        "workbench"
+      ]
+    }
+  ]
+}

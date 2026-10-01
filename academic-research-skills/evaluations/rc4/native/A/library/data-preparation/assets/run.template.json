@@ -1,0 +1,78 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "data-preparation",
+  "run_id": "RUN-template",
+  "created_at": "2026-09-29T00:00:00+00:00",
+  "updated_at": "2026-09-29T00:00:00+00:00",
+  "request": "",
+  "scope": "",
+  "status": "draft",
+  "inputs": [],
+  "sources": [],
+  "artifacts": [],
+  "outputs": [
+    {
+      "role": "data_quality_report.md",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "data_dictionary.json",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "sample_flow.json",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    },
+    {
+      "role": "release_manifest.json",
+      "required": true,
+      "status": "planned",
+      "artifact_id": null,
+      "reason": ""
+    }
+  ],
+  "gates": [
+    {
+      "id": "raw_immutable",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "schema_units_join_valid",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "exclusions_traceable",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "leakage_prevented",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    },
+    {
+      "id": "analysis_release_frozen",
+      "status": "unknown",
+      "reason": "",
+      "evidence_refs": []
+    }
+  ],
+  "unknowns": [],
+  "external_dependencies": [],
+  "next_actions": []
+}

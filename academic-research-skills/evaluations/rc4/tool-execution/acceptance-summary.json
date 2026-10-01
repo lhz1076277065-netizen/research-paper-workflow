@@ -1,0 +1,92 @@
+{
+  "focused_engineering_checks": 18,
+  "professional_results": {
+    "scope": "manufactured software correctness and professional API execution, not scientific novelty or a biological claim",
+    "symbolic_passed": true,
+    "molecule_count": 8,
+    "sdf_reload_passed": true,
+    "ethanol_formula": "C2H6O",
+    "ethanol_molecular_weight": 46.069,
+    "rdkit": "2026.03.6",
+    "model_heldout_n": 40,
+    "model_heldout_mse": 8.145315371126947e-08,
+    "model_research_role": "research_model",
+    "executor": "current_host",
+    "python": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/tool-execution/.academic/envs/5f5f58dff19b199d/bin/python"
+  },
+  "parameter_replay": {
+    "model_role": "research_model",
+    "executor": "current_host",
+    "saved_parameter_reload_passed": true,
+    "prediction_count": 40,
+    "max_replay_difference": 0.0,
+    "scope": "Manufactured algorithm parameter reload, not empirical validation"
+  },
+  "calibrations": {
+    "cpu": {
+      "backend": "cpu",
+      "version": "3.12.14",
+      "size": 48,
+      "dtype": "Python float",
+      "operation": "ones matrix product checksum",
+      "value": 110592.0,
+      "expected": 110592.0,
+      "numeric_check": true,
+      "compute_seconds": 0.003358874993864447,
+      "process_peak_rss_bytes": 17416192,
+      "accelerator_peak_allocated_bytes": null
+    },
+    "numpy": {
+      "backend": "numpy",
+      "version": "2.5.3",
+      "size": 128,
+      "dtype": "float32",
+      "operation": "ones matrix product checksum",
+      "value": 2097152.0,
+      "expected": 2097152.0,
+      "numeric_check": true,
+      "compute_seconds": 1.7874990589916706e-05,
+      "process_peak_rss_bytes": 29163520,
+      "accelerator_peak_allocated_bytes": null
+    },
+    "mlx-cpu": {
+      "backend": "mlx-cpu",
+      "version": "0.32.3",
+      "size": 128,
+      "dtype": "float32",
+      "operation": "ones matrix product checksum",
+      "value": 2097152.0,
+      "expected": 2097152.0,
+      "numeric_check": true,
+      "compute_seconds": 7.166602881625295e-05,
+      "process_peak_rss_bytes": 37666816,
+      "accelerator_peak_allocated_bytes": 131076
+    },
+    "mlx-gpu": {
+      "backend": "mlx-gpu",
+      "version": "0.32.3",
+      "size": 128,
+      "dtype": "float32",
+      "operation": "ones matrix product checksum",
+      "value": 2097152.0,
+      "expected": 2097152.0,
+      "numeric_check": true,
+      "compute_seconds": 0.0029960410320200026,
+      "process_peak_rss_bytes": 40763392,
+      "accelerator_peak_allocated_bytes": 131588
+    }
+  },
+  "upstream_source": {
+    "repository": "Haojae/scipilot-figure-skill",
+    "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "tree_sha": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64",
+    "checked_at": "2026-10-01T06:16:18.371145+00:00"
+  },
+  "upstream_usage_scope": {
+    "guidance_read": "selected entry plus profiler interface inspected for version/tool compatibility",
+    "research_work_done": false,
+    "functions_run": false,
+    "full_figure_workflow_claimed": false
+  },
+  "scientific_novelty_evaluated": false
+}

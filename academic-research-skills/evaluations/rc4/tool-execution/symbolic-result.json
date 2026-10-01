@@ -1,0 +1,7 @@
+{
+  "kind": "exact symbolic identities",
+  "function": "exp(-x)*sin(x)",
+  "derivative": "-exp(-x)*sin(x) + exp(-x)*cos(x)",
+  "integral": "2",
+  "sympy": "1.14.0"
+}

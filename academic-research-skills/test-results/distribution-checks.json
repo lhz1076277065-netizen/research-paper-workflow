@@ -1,7 +1,6 @@
 {
-  "version": "3.2.0-rc.3",
-  "scope": "Current pre-pack distribution layout and published-evidence identities. ZIP CRC/per-file digest/extraction and remote publication are recorded outside these archives to avoid self-reference.",
-  "capability_count": 19,
+  "version": "3.2.0-rc.4",
+  "scope": "Pre-pack checked source layout; final CRC/file hashes/extraction/installer/CI external to archives",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -23,16 +22,11 @@
     "submission-packaging",
     "topic-novelty"
   ],
+  "capability_count": 19,
+  "profiles": 16,
   "default_profile": "general",
-  "research_profile_count": 16,
-  "professional_sources_unchanged": true,
-  "published_evidence_files": 899,
-  "published_evidence_digests_verified": true,
-  "source_authoritative_diff": "source-diffs/v3.2.0-rc.2-to-v3.2.0-rc.3.patch",
-  "old_versions_preserved": true,
+  "professional_sources": 13,
+  "source_authoritative_diff": "source-diffs/v3.2.0-rc.3-to-v3.2.0-rc.4.patch",
   "global_install_performed": false,
-  "chosen_file_counts_including_package_manifest": {
-    "runtime": 1029,
-    "source": 2577
-  }
+  "active_stale_package_manifest_removed": true
 }

@@ -1,0 +1,74 @@
+{
+  "vertices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "graphs": {
+    "A_closure": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "B_integration": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        0
+      ]
+    ]
+  },
+  "operation": "deterministic synchronous SI, one seed, transmission probability 1, no recovery",
+  "steps": 3,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

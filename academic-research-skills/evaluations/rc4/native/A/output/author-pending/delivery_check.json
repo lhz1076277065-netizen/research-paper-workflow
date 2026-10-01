@@ -1,0 +1,22 @@
+{
+  "input_inventory": [
+    {
+      "name": "cases.json",
+      "is_file": true
+    },
+    {
+      "name": "snapshot.json",
+      "is_file": true
+    }
+  ],
+  "analysis_and_proof": "User reports complete; underlying records absent, not independently verified.",
+  "source_manuscript": "not supplied",
+  "pdf": "not supplied",
+  "figures": "not supplied",
+  "caption_audit": "not executable without captions/figures",
+  "abstract_value_audit": "not executable without abstract/frozen results",
+  "source_pdf_sync_audit": "not executable without source/PDF",
+  "author_identity_and_declarations": "awaiting human confirmation",
+  "delivery_state": "internal handoff only; not submission-ready",
+  "external_actions": []
+}

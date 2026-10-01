@@ -1,0 +1,38 @@
+{
+  "material_kind": "Fresh generic development scenarios; the local excerpt and pilot records below are synthetic",
+  "cases": [
+    {
+      "id": "direction-no-data",
+      "request": "想研究共享单车需求预测在罕见天气下怎样保持可靠，目前没有给你数据。请实际找一个免费、可合法研究使用的公开数据样例，取得字典和少量记录，判断时间、天气、结局和独立单位是否支持问题。然后提出一项具体、有增量可能的电脑内研究路线及下一项最有信息价值的动作。交付来源、实际样例和研究说明。"
+    },
+    {
+      "id": "human-collection",
+      "request": "原来想新访谈工人研究自动化如何改变工作任务，但本轮只能使用电脑和免费数字资源。保留重要问题，提出一条核心证据和决定性验证都能在当前电脑内完成的研究路线。明确转化后回答的问题、材料获取路径和贡献，完成本轮能推进的工作。"
+    },
+    {
+      "id": "theory-known-principle",
+      "request": "研究命题：对任意有限行随机矩阵 P，P^n 都收敛。直接推进数学判断、证明或构造；若原命题需要修正，说清条件、现有理论与一个值得进一步检验的增量方向。不要把已知原理演示称为新贡献。"
+    },
+    {
+      "id": "equal-predictions",
+      "request": "网络机制甲和乙在当前静态度分布上给出完全相同预测。请给出能使二者出现不同预测的数字研究操作；用明确的小型模型运行一次检验，保留代码、输入和输出，并说明什么判断得到了改变。"
+    },
+    {
+      "id": "initial-failure",
+      "request": "提出的新算法在开发验证集上平均误差 1.12，强基线 1.00，资源消耗是基线的两倍；正式测试集尚未打开。请选择下一项最有信息价值的研究动作，并说明如何发展方法或有意义的适用边界。原始记录仅作本开发场景的合成输入。"
+    },
+    {
+      "id": "citation-time",
+      "request": "仅修正这一句引用，给出修订文本和理由。原句：该干预持续提高了参与者表现。所给原文记录：两组在第六个月评估时有组间差异；未测量其他随访时间；分组随机，但没有依从性记录。本地记录为合成例子，不要发明真实论文身份。"
+    },
+    {
+      "id": "focused-paragraph",
+      "request": "仅改写这一段，保留数字和范围：模型在白葡萄酒样本的留出分区上误差为 0.757 分，训练均值基线为 0.898 分；尚未做跨来源验证。希望贡献表述清楚，但不夸大泛化。"
+    },
+    {
+      "id": "author-pending",
+      "request": "分析和证明都已完成，作者身份和声明尚待人工确认；图注、摘要数值和 PDF 与当前源稿的同步还未检查。本轮继续完成能推进的事项，列出科研、成果和外部事项，明确当前交付状态。不要外发或替作者确认。"
+    }
+  ],
+  "scope": "One native agent context per version, eight subcases; subcases are not independent model trials. Compare observed outputs, not an automatic scientific originality score."
+}

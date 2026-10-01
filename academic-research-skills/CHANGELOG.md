@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.2.0-rc.4
+
+- Default computer-closed original research with six separate dimensions and fourteen on-demand routes; retain all sixteen legacy research profiles and one optional orchestrator plus eighteen capabilities.
+- Actual free material acquisition and fit, nearest-work increments, distinguishable competing predictions, constructive iteration and three independent work queues.
+- Dynamic hardware/runtime inventory, measured backend calibration, project argv execution, free local research models and role-specific professional Skill selection.
+- Stable result occurrences in Markdown/LaTeX/DOCX/PDF with numeric/display/declared-semantic checks, and stale render dependency propagation with actual rebuilding acceptance.
+- Existing regression, new adversarial checks, real public-data/formal/optimization/professional chains and independent native comparison; report coverage and limits separately.
+
+
 ## 3.2.0-rc.3
 
 - Bind and inspect the indexed identities of explicitly selected upstream support files and adapters. Preserve locally adapted files; require matching reviewed digests when declared dependencies drift. Legacy bindings remain usable.
