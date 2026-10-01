@@ -1,0 +1,4 @@
+# Synthetic laptop test materials: emergency repair scheduling
+These are deliberately synthetic test jobs, not observed repairs or a scientific discovery.
+One nonpreemptive repair crew; all jobs available at t=0. Each job has duration, deadline, and value. Value is earned only if that job completes by its deadline. A job may be omitted; completion time is the sum of durations of jobs actually chosen before it. Current rule: sort by value/duration descending, admit a job if it can still finish by its own deadline, then continue. Jobs and initial strategy are the starting material, not a certified scientific model.
+The real motivation is limited emergency repair capacity with different deadlines and consequences. No health or operational benefit is observed here. Development and validation inputs are separately labeled; validation is available but retain honest exposure history. Establish what meaningful research can be done from these materials.

@@ -2,7 +2,7 @@
 
 本套Skill不指定具体学科。开发、优化或打包本套Skill时交付完整通用目录与软件验证记录；用户明确要求开展学术研究时才进入下述研究路线。
 
-单项任务直接读取skills下对应能力的SKILL.md；完整研究读取 [研究总控](skills/research-paper-workflow/SKILL.md)，按其 [科研主线](skills/research-paper-workflow/references/research-lifecycle.md) 推进问题、最近邻、设计、研究、正式图表与全文，在最后调用指定反防御性写作并复核。外部Skill从来源清单内仓库中动态选择，当前Agent负责实际执行，executor保留当前宿主，research_model可本地训练和评价。
+单项任务直接读取skills下对应能力的SKILL.md；完整研究读取 [研究总控](skills/research-paper-workflow/SKILL.md)，按其 [科研主线](skills/research-paper-workflow/references/research-lifecycle.md) 推进贡献搜索、最强近邻、决定性设计与发现循环，锁定核心贡献后再制作正式图表与全文，在最后调用指定反防御性写作并复核。外部Skill从来源清单内仓库中动态选择，当前Agent负责实际执行，executor保留当前宿主，research_model可本地训练和评价。
 
 工程smoke与软件回归是运行基础，不是论文完成标准。无需补其它宿主认证、旧版对照或重做整个工程验收才开始研究。首次本机依赖检查后，把主要资源用于解决科学问题。
 

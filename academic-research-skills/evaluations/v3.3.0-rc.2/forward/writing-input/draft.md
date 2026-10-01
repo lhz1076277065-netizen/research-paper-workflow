@@ -1,0 +1,2 @@
+# A new adaptive risk rule improves emergency decisions
+Our proposed score is probability times missed-event loss minus action cost. We act when this score is positive. Unlike probability-only thresholding, this rule accounts for different consequences. We claim a novel algorithm and a general improvement in real emergency response. The implementation has been completed; results and closest prior work still need checking. Please finish a formal paper from the provided materials.

@@ -1,0 +1,95 @@
+{
+  "audit_repair": "Initial independent raw-row check used abbreviated names p/c/L/y that are absent from the input header; corrected to actual CSV fields without changing author code or inputs. The author reruns had passed before that audit failure.",
+  "scope": "Same-environment independent rerun of copies, author checks plus separately coded raw-row arithmetic. No originality, deployment or publication certification. Runtime measurements excluded from deterministic equality.",
+  "python": "Python 3.12.14",
+  "frozen_library_files_verified": 1119,
+  "read_resources_verified": {
+    "repair": 17,
+    "writing": 9
+  },
+  "original_artifacts_verified": {
+    "repair": 26,
+    "writing": 24
+  },
+  "executed": [
+    {
+      "case": "repair",
+      "command": [
+        "research.py",
+        "final"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "repair",
+      "command": [
+        "uncertainty.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "repair",
+      "command": [
+        "objective_search.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "repair",
+      "command": [
+        "objective_search.py",
+        "constructed"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "writing",
+      "command": [
+        "analyze.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "compared": [
+    {
+      "file": "repair/results.json",
+      "scientific_payload_equal": true,
+      "timing_fields_excluded": true
+    },
+    {
+      "file": "repair/uncertainty_results.json",
+      "scientific_payload_equal": true,
+      "timing_fields_excluded": true
+    },
+    {
+      "file": "repair/objective_comparison.json",
+      "scientific_payload_equal": true,
+      "timing_fields_excluded": true
+    },
+    {
+      "file": "repair/objective_constructed.json",
+      "scientific_payload_equal": true,
+      "timing_fields_excluded": true
+    },
+    {
+      "file": "writing/results.json",
+      "scientific_payload_equal": true,
+      "timing_fields_excluded": false
+    }
+  ],
+  "csv_scientific_rows_equal": true,
+  "generated_jobs_sha256_equal": true,
+  "independent_writing_checks": {
+    "rows": 12,
+    "candidate_cost": 222,
+    "baseline_cost": 440,
+    "all_binary_outcomes": 4096,
+    "reversals": 144,
+    "gain_range": [
+      -102,
+      538
+    ],
+    "expected_margin_at_input_p": "169/2",
+    "zero_margin_radius": "149/1080"
+  }
+}

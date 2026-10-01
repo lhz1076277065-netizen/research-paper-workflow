@@ -1,0 +1,11 @@
+--- manuscript-before-expression.md
++++ manuscript.md
+@@ -4,7 +4,7 @@
+ 
+ ## Provisional synopsis
+ 
+-The supplied twelve-case synthetic packet permits a complete check of modeled decision costs. It does not establish a field effect. A rule that acts when probability times missed-event loss exceeds action cost costs 222, whereas the supplied probability-above-0.5 comparator costs 440. It should be noted that the rule is not a novel algorithm: classical expected-cost minimization gives exactly the same decisions. We also tried a stronger common-threshold comparator and obtained a minimum cost of 292. Unfortunately, a general realized-cost guarantee is not available. An exact expected-cost comparison under a specified per-case probability-error box gives a tie radius of 149/1080, approximately 0.137963. This is not a measured calibration error. These calculations provide a checked basis for a methods/results manuscript, but original-study contribution remains unestablished.
++On the supplied twelve-case synthetic packet, the established cost–loss rule reduces total modeled realized cost from 440 to 222 relative to the supplied probability-above-0.5 comparator, a reduction of 218 cost units (49.55%). An exhaustive search over common probability thresholds gives a stronger, outcome-selected benchmark of 292. Classical expected-cost minimization reproduces the cost–loss rule exactly. The packet also permits an exact comparison of two fixed policies under a per-case probability-error box: their worst-case expected-cost advantage reaches zero at an error radius of 149/1080 (approximately 0.137963). This conditional margin and explicit counterexamples distinguish the observed packet-level advantage from a general performance guarantee. The probability-error radius is a sensitivity parameter, not a measured calibration statistic.
+ 
+ ## 1. Study design and authoritative inputs
+ 

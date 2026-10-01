@@ -1,0 +1,41 @@
+{
+  "version": "3.3.0-rc.2",
+  "checked_at": "2026-10-01T19:54:44.081784+00:00",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "python": "3.9.6",
+  "passed": true,
+  "checks": [
+    {
+      "name": "local_python_scripts",
+      "status": "passed",
+      "detail": {
+        "files": 12
+      }
+    },
+    {
+      "name": "empty_default_provider_registry",
+      "status": "passed",
+      "detail": "dynamic source selection enabled"
+    },
+    {
+      "name": "designated_skill_source_scope",
+      "status": "passed",
+      "detail": {
+        "selected_sources": 14,
+        "outside_library_rejected": true,
+        "ordinary_scientific_software_restricted": false
+      }
+    },
+    {
+      "name": "focused_environment_needs_no_statistical_stack",
+      "status": "passed",
+      "detail": "no packages needed"
+    }
+  ],
+  "scientific_smoke_requested": false,
+  "native_host_activation_tested": false,
+  "model_ability_measured": false,
+  "real_paper_lifecycle_tested": false,
+  "output_directory": "{ITERATION_ROOT}/smoke"
+}

@@ -1,0 +1,26 @@
+{
+  "seed": 947,
+  "instances_searched": 1500,
+  "maximum_planned_instances": 1500,
+  "seconds": 0.6141551249966142,
+  "generation": {
+    "n": 5,
+    "p": [
+      1,
+      10
+    ],
+    "d": [
+      1,
+      30
+    ],
+    "w": [
+      1,
+      10
+    ]
+  },
+  "gamma": 1,
+  "deviation": "1/5",
+  "result": "no strict difference located within bounded search; not a proof of equivalence",
+  "analysis_status": "post-hoc adversarial formal model search, synthetic",
+  "novelty": "2026 nearest neighbor explicitly distinguishes these objectives; counterexample instantiates that distinction, not an original literature claim"
+}

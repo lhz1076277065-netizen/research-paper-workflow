@@ -1,0 +1,25 @@
+{
+  "subject": "{ITERATION_ROOT}/writing/manuscript.md",
+  "subject_sha256": "3fe8d921af1a4b6845bdc281897af551cbe4f80e6c32817eda3591559f65654a",
+  "html_sha256": "99714420afb6bb1b394a83b0a6d42cfb6b258b04f5935a152ab5db25bc2053ac",
+  "numeric_check": "passed: result totals, reductions, Bayes equality, radius, outcome counts, regenerated exact analysis",
+  "semantic_check": "current assistant manually reviewed the complete methods/results draft; not external peer review",
+  "checked_claims": [
+    "Fixed synthetic 12-case scope; no field, sampling or causal inference",
+    "Original primary total-cost endpoint retained",
+    "Common threshold selected on observed outcomes; no independent validation",
+    "Classic cost matrix and supplied rule equivalent for all cases",
+    "q is per-case marginal probability; box radius is hypothetical and not a calibration metric",
+    "No outcome independence needed for expectation",
+    "Enumeration counts not probability or failure rates",
+    "Oracle uses outcomes and is not deployable",
+    "No new-method, publication or submission-ready claim",
+    "Murphy indexed excerpt, Elkan relevant primary sections, Rothblum abstract/metadata citation scopes preserved"
+  ],
+  "expression_delta": "Rewrote the synopsis around verified costs and exact conditional margin; all other manuscript sections retained after complete review; no results, comparisons, adverse results or references removed",
+  "before_sha256": "86401f64b8166ae46683d5cb8e67edda39bcf7c68a5cdb97a67ebc1585a67eed",
+  "diff_sha256": "4166def8232063ca0aa7c4d90aae1e6c3b63412089a9906be4f48b3cc49ac8c1",
+  "render_check": "Local HTML HTTP 200; full accessibility tree including all three tables checked; first-screen screenshot visually inspected; not a full-page screenshot or PDF pagination check",
+  "render_source_sha256": "3fe8d921af1a4b6845bdc281897af551cbe4f80e6c32817eda3591559f65654a",
+  "remaining_scientific_gate": "Original contribution unestablished; important new problem and strongest-neighbor increment not locked"
+}

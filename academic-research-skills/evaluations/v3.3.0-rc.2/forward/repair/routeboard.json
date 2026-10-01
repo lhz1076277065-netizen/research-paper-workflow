@@ -1,0 +1,47 @@
+{
+  "status": "in_research_not_manuscript_ready",
+  "question": "Which losses of value/duration admission arise from sequencing versus subset selection, and does an EDD insertion repair survive stress tests?",
+  "model": "One nonpreemptive crew, all releases 0, integer positive durations/deadlines/values; omit jobs; reward only if completion <= deadline. No transport, precedence or shared restoration benefit observed.",
+  "candidate_routes": [
+    {
+      "route": "EDD insertion after density selection",
+      "prediction": "repairs ordering loss but may retain subset trap"
+    },
+    {
+      "route": "Known exact EDD dynamic program",
+      "prediction": "attains optimum in this model, no algorithmic novelty claim"
+    },
+    {
+      "route": "Fixed-plan duration stress and robust upper-bound planning",
+      "prediction": "nominal optimum can lose reward with duration inflation; robust planning trades nominal for guarantee, existing monotonic principle"
+    }
+  ],
+  "metric": "earned value and gap to exact optimum, feasibility, runtime; no real-world benefit claim",
+  "exposure": "Development first 7 rows and validation first 7 rows read in call 3; validation is exposed, exploratory. Full development will now be read; full validation only after methods are frozen.",
+  "pre_new_test_plan": {
+    "seed": 20261002,
+    "n": [
+      12,
+      30,
+      100
+    ],
+    "duration_range": [
+      1,
+      10
+    ],
+    "value_range": [
+      1,
+      100
+    ],
+    "deadline_tightness": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "deadline_generation": "ceil(sum(p)*tightness*U(0.25,1.0)), at least own duration",
+    "replicates_per_cell": 40,
+    "test_status": "new synthetic algorithm check, not independent field validation"
+  },
+  "next_decisive_action": "Compare density, EDD-insertion, exact DP on development, then diagnose a persistent loss and execute a revised candidate before fresh frozen test."
+}

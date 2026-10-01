@@ -1,0 +1,135 @@
+{
+  "development": {
+    "density": 352,
+    "insertion": 405,
+    "hybrid": 405,
+    "exact": 407
+  },
+  "validation_exposed": {
+    "density": 371,
+    "insertion": 496,
+    "hybrid": 496,
+    "exact": 503
+  },
+  "fresh_synthetic": {
+    "density": {
+      "instances": 480,
+      "mean_gap": 0.11603060771964238,
+      "worst_gap": 0.2898832684824903,
+      "optimal_count": 14,
+      "median_seconds": 3.7999998312443495e-05,
+      "max_seconds": 0.0002290839984198101
+    },
+    "insertion": {
+      "instances": 480,
+      "mean_gap": 0.005924585373382348,
+      "worst_gap": 0.2260061919504644,
+      "optimal_count": 262,
+      "median_seconds": 5.941700146649964e-05,
+      "max_seconds": 0.00048016700020525604
+    },
+    "hybrid": {
+      "instances": 480,
+      "mean_gap": 0.005814515725787098,
+      "worst_gap": 0.2260061919504644,
+      "optimal_count": 263,
+      "median_seconds": 0.0001324580007349141,
+      "max_seconds": 0.0008984169980976731
+    },
+    "exact": {
+      "instances": 480,
+      "mean_gap": 0.0,
+      "worst_gap": 0.0,
+      "optimal_count": 480,
+      "median_seconds": 9.202050205203705e-05,
+      "max_seconds": 0.002027624999755062
+    }
+  },
+  "checks": {
+    "permutation_cross_checks": 40,
+    "robust_scaled_cross_checks": 40,
+    "sequencing_and_subset_checks": "passed"
+  },
+  "stress": [
+    {
+      "dataset": "development.csv",
+      "factor": "1",
+      "nominal_fixed": 407,
+      "robust_1.2_fixed": 384,
+      "clairvoyant_optimum": 407
+    },
+    {
+      "dataset": "development.csv",
+      "factor": "21/20",
+      "nominal_fixed": 284,
+      "robust_1.2_fixed": 384,
+      "clairvoyant_optimum": 405
+    },
+    {
+      "dataset": "development.csv",
+      "factor": "11/10",
+      "nominal_fixed": 284,
+      "robust_1.2_fixed": 384,
+      "clairvoyant_optimum": 405
+    },
+    {
+      "dataset": "development.csv",
+      "factor": "6/5",
+      "nominal_fixed": 238,
+      "robust_1.2_fixed": 384,
+      "clairvoyant_optimum": 384
+    },
+    {
+      "dataset": "development.csv",
+      "factor": "3/2",
+      "nominal_fixed": 85,
+      "robust_1.2_fixed": 131,
+      "clairvoyant_optimum": 343
+    },
+    {
+      "dataset": "validation.csv",
+      "factor": "1",
+      "nominal_fixed": 503,
+      "robust_1.2_fixed": 485,
+      "clairvoyant_optimum": 503
+    },
+    {
+      "dataset": "validation.csv",
+      "factor": "21/20",
+      "nominal_fixed": 278,
+      "robust_1.2_fixed": 485,
+      "clairvoyant_optimum": 499
+    },
+    {
+      "dataset": "validation.csv",
+      "factor": "11/10",
+      "nominal_fixed": 278,
+      "robust_1.2_fixed": 485,
+      "clairvoyant_optimum": 490
+    },
+    {
+      "dataset": "validation.csv",
+      "factor": "6/5",
+      "nominal_fixed": 231,
+      "robust_1.2_fixed": 485,
+      "clairvoyant_optimum": 485
+    },
+    {
+      "dataset": "validation.csv",
+      "factor": "3/2",
+      "nominal_fixed": 183,
+      "robust_1.2_fixed": 260,
+      "clairvoyant_optimum": 448
+    }
+  ],
+  "worst_hybrid_instance": {
+    "instance": "n12_q0.25_r11",
+    "n": 12,
+    "tightness": 0.25,
+    "replicate": 11,
+    "method": "hybrid",
+    "value": 250,
+    "gap": 0.2260061919504644,
+    "seconds": 3.504099731799215e-05
+  }
+}

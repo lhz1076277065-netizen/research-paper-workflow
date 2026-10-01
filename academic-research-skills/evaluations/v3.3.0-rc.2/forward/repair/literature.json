@@ -1,0 +1,113 @@
+{
+  "search_type": "bounded narrative nearest-neighbor search, not systematic review",
+  "sources": [
+    {
+      "title": "A Functional Equation and its Application to Resource Allocation and Sequencing Problems",
+      "authors": [
+        "E. L. Lawler",
+        "J. M. Moore"
+      ],
+      "year": 1969,
+      "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.16.1.77",
+      "tier": "primary_publisher_abstract",
+      "read_scope": "abstract; original full text unknown",
+      "role": "classic source attribution; full algorithm reconstructed and checked against 2022 primary paper"
+    },
+    {
+      "title": "Minimizing the Weighted Number of Tardy Jobs via (max,+)-Convolutions",
+      "authors": [
+        "Danny Hermelin",
+        "Hendrik Molter",
+        "Dvir Shabtay"
+      ],
+      "year": 2022,
+      "url": "https://arxiv.org/pdf/2202.06841",
+      "tier": "primary_author_manuscript_key_fulltext",
+      "version": "v2",
+      "read_scope": "abstract, introduction, Lemma 9, algorithm overview and Lemma 11; advanced convolution proof not fully reviewed",
+      "role": "strong exact comparator and rejection of nominal DP novelty"
+    },
+    {
+      "title": "Scheduling Post-disaster Repairs in Electricity Distribution Networks with Uncertain Repair Times",
+      "year": 2019,
+      "url": "https://optimization-online.org/wp-content/uploads/2019/08/7344.pdf",
+      "tier": "primary_author_manuscript_partial_fulltext",
+      "read_scope": "abstract and introduction; actual network assumptions recognized; full stochastic policy not reproduced",
+      "role": "real-motivation boundary; weighted energization time differs from deadline rewards"
+    },
+    {
+      "title": "A Parameterized Complexity View on Robust Scheduling with Budgeted Uncertainty",
+      "authors": [
+        "Noam Goldberg",
+        "Dvir Shabtay"
+      ],
+      "year": 2026,
+      "url": "https://arxiv.org/pdf/2602.02748",
+      "publisher_doi": "10.1016/j.ejor.2026.08.046",
+      "tier": "primary_author_manuscript_key_fulltext",
+      "version": "v2 (30 Aug 2026); manuscript dated 1 Sep 2026",
+      "read_scope": "model definitions, Remark 1, Lemma 1, Section 3.2 top-Gamma state DP, pages 1-7 and 12; hardness proof not independently certified",
+      "role": "nearest robust counterpart; model-objective distinction; novelty limitation"
+    },
+    {
+      "title": "Single machine robust scheduling with budgeted uncertainty",
+      "authors": [
+        "Marin Bougeret",
+        "Artur Pessoa",
+        "Michael Poss"
+      ],
+      "year": 2023,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S016763772300007X",
+      "tier": "primary_publisher_search_result_only",
+      "read_scope": "publisher search abstract/snippets; HAL document blocked by challenge",
+      "role": "ex-post minimax objective; precise distinction additionally supported by 2026 Remark 1"
+    },
+    {
+      "title": "Minimizing the Weighted Number of Tardy Jobs is W[1]-hard",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2401.01740",
+      "tier": "primary_author_abstract",
+      "read_scope": "abstract only",
+      "role": "recent nominal complexity neighbor, not implemented"
+    },
+    {
+      "title": "Single-Machine Scheduling to Minimize the Number of Tardy Jobs with Release Dates",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2408.12967",
+      "tier": "primary_author_abstract",
+      "read_scope": "abstract only",
+      "role": "release-date extension, outside this experiment"
+    },
+    {
+      "title": "Minimizing the weighted number of tardy jobs on a single machine",
+      "year": 2003,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0377221702001807",
+      "tier": "primary_publisher_search_snippets",
+      "read_scope": "search excerpts; direct open failed",
+      "role": "large-instance practical exact algorithm, NOT reproduced; no speed superiority claim"
+    },
+    {
+      "title": "Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents",
+      "authors": [
+        "Timothy Kassis",
+        "Vinayak Agarwal",
+        "Yuhuan He",
+        "Darshil Patel",
+        "Aubrey M. Brueckner"
+      ],
+      "year": 2026,
+      "url": "https://doi.org/10.48550/arXiv.2609.00065",
+      "tier": "primary_author_record_and_abstract",
+      "read_scope": "current v2 metadata verified",
+      "role": "software/guidance citation; no paper claimed skill task-level efficacy"
+    }
+  ],
+  "important_version_change": "2026 search v1 abstract framed max-scenario total tardiness; current v2 clearly defines per-job advance guarantees and explicitly distinguishes ex-post minimax. Used v2 definitions.",
+  "blind_spots": [
+    "no exhaustive databases",
+    "no independent human review",
+    "no full 1969 source",
+    "no reproduced 2003 large-instance exact solver",
+    "novelty of weighted/proportional threshold unknown"
+  ]
+}
