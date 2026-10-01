@@ -1,0 +1,10 @@
+{
+  "tool": "compile_latex_document",
+  "kind": "compile-failed",
+  "message": "Compilation timed out",
+  "observed_log": "Tectonic was downloading the initial LaTeX format and multilingual hyphenation resources; no source syntax failure was reported.",
+  "source": "manuscript.tex",
+  "source_sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a",
+  "compilation_verified": false,
+  "editor_open_result": "queued"
+}

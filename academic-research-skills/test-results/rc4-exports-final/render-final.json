@@ -1,0 +1,49 @@
+{
+  "kind": "render-dependencies",
+  "passed": true,
+  "errors": [],
+  "pending": [],
+  "checks": [
+    "Actual input/output hashes and transitive render DAG; rebuild order is reported, no recorded command is executed"
+  ],
+  "coverage": {
+    "bytes": [
+      {
+        "id": "md",
+        "path": "manuscript.md",
+        "expected_sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840",
+        "actual_sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840",
+        "matched": true
+      },
+      {
+        "id": "word",
+        "path": "manuscript.docx",
+        "expected_sha256": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19",
+        "actual_sha256": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19",
+        "matched": true
+      },
+      {
+        "id": "tex",
+        "path": "manuscript.tex",
+        "expected_sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a",
+        "actual_sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a",
+        "matched": true
+      },
+      {
+        "id": "pdf",
+        "path": "manuscript.pdf",
+        "expected_sha256": "38a5b66bab45fbf0d0e30ce403cd42090c5eb9bca060f70d4405023ff55dd5b4",
+        "actual_sha256": "38a5b66bab45fbf0d0e30ce403cd42090c5eb9bca060f70d4405023ff55dd5b4",
+        "matched": true
+      }
+    ],
+    "numeric": [],
+    "declared_semantic": []
+  },
+  "scientific_validity_certified": false,
+  "semantic_truth_certified": false,
+  "actual_visual_inspection_performed": false,
+  "impacted_rebuild_targets": [],
+  "rebuild_order": [],
+  "commands_executed": false
+}

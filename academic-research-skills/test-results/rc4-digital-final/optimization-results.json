@@ -1,0 +1,221 @@
+{
+  "kind": "constructed finite optimization; no novel algorithm claim",
+  "compiler": "/usr/bin/clang",
+  "source_sha256": "8b96d9f4dcf32c4cf693165df845906be36a3913eb6ed1864e27f939f9e2c1e3",
+  "cases": [
+    {
+      "case": 0,
+      "capacity": 40,
+      "optimal_value": 119,
+      "greedy_value": 119,
+      "selected": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "independent_dp_verified": true
+    },
+    {
+      "case": 1,
+      "capacity": 41,
+      "optimal_value": 129,
+      "greedy_value": 123,
+      "selected": [
+        0,
+        1,
+        2,
+        4,
+        11,
+        12
+      ],
+      "independent_dp_verified": true
+    },
+    {
+      "case": 2,
+      "capacity": 42,
+      "optimal_value": 123,
+      "greedy_value": 108,
+      "selected": [
+        1,
+        3,
+        5,
+        9,
+        13
+      ],
+      "independent_dp_verified": true
+    },
+    {
+      "case": 3,
+      "capacity": 43,
+      "optimal_value": 97,
+      "greedy_value": 93,
+      "selected": [
+        5,
+        7,
+        8,
+        10,
+        11,
+        13
+      ],
+      "independent_dp_verified": true
+    }
+  ],
+  "executions": [
+    {
+      "execution": {
+        "command": [
+          "/usr/bin/clang",
+          "-O2",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack.c",
+          "-o",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack"
+        ],
+        "status": "passed",
+        "returncode": 0,
+        "started_at": "2026-10-01T06:12:31.013946+00:00",
+        "finished_at": "2026-10-01T06:12:31.200334+00:00",
+        "stdout": "tool-0.stdout.log",
+        "stderr": "tool-0.stderr.log",
+        "cwd": "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final",
+        "shell": false,
+        "wall_seconds": 0.18670120899332687,
+        "sampled_peak_rss_bytes": 33472512,
+        "rss_samples": 2,
+        "memory_scope": "Observed process-tree RSS samples about 0.1s apart; lower bound, not exact peak; unavailable is null",
+        "scope": "Actual subprocess, not scientific validation"
+      },
+      "outputs": [
+        {
+          "path": "knapsack",
+          "sha256": "b131d98a70b4ed4b85701303de1e0da0291df77990c381c67ae7ea7f43349744",
+          "size_bytes": 33688,
+          "created_or_changed": true
+        }
+      ]
+    },
+    {
+      "execution": {
+        "command": [
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack-0.txt",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack-0.result"
+        ],
+        "status": "passed",
+        "returncode": 0,
+        "started_at": "2026-10-01T06:12:31.593980+00:00",
+        "finished_at": "2026-10-01T06:12:32.429376+00:00",
+        "stdout": "tool-1.stdout.log",
+        "stderr": "tool-1.stderr.log",
+        "cwd": "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final",
+        "shell": false,
+        "wall_seconds": 0.8356278749997728,
+        "sampled_peak_rss_bytes": 32768,
+        "rss_samples": 6,
+        "memory_scope": "Observed process-tree RSS samples about 0.1s apart; lower bound, not exact peak; unavailable is null",
+        "scope": "Actual subprocess, not scientific validation"
+      },
+      "outputs": [
+        {
+          "path": "knapsack-0.result",
+          "sha256": "4d5e51a3a038ea03984e5a0cc450b6cd68cd8b56d036432ae1a5f36883ff2bdd",
+          "size_bytes": 10,
+          "created_or_changed": true
+        }
+      ]
+    },
+    {
+      "execution": {
+        "command": [
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack-1.txt",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack-1.result"
+        ],
+        "status": "passed",
+        "returncode": 0,
+        "started_at": "2026-10-01T06:12:32.762276+00:00",
+        "finished_at": "2026-10-01T06:12:32.799393+00:00",
+        "stdout": "tool-2.stdout.log",
+        "stderr": "tool-2.stderr.log",
+        "cwd": "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final",
+        "shell": false,
+        "wall_seconds": 0.03733883303357288,
+        "sampled_peak_rss_bytes": 0,
+        "rss_samples": 1,
+        "memory_scope": "Observed process-tree RSS samples about 0.1s apart; lower bound, not exact peak; unavailable is null",
+        "scope": "Actual subprocess, not scientific validation"
+      },
+      "outputs": [
+        {
+          "path": "knapsack-1.result",
+          "sha256": "565ca9effe0e45d10d7acea1e4a6b45aef1d92682d4ffbfa466c55d20a7e21ff",
+          "size_bytes": 9,
+          "created_or_changed": true
+        }
+      ]
+    },
+    {
+      "execution": {
+        "command": [
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack-2.txt",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack-2.result"
+        ],
+        "status": "passed",
+        "returncode": 0,
+        "started_at": "2026-10-01T06:12:33.134691+00:00",
+        "finished_at": "2026-10-01T06:12:33.168913+00:00",
+        "stdout": "tool-3.stdout.log",
+        "stderr": "tool-3.stderr.log",
+        "cwd": "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final",
+        "shell": false,
+        "wall_seconds": 0.03445854102028534,
+        "sampled_peak_rss_bytes": 0,
+        "rss_samples": 1,
+        "memory_scope": "Observed process-tree RSS samples about 0.1s apart; lower bound, not exact peak; unavailable is null",
+        "scope": "Actual subprocess, not scientific validation"
+      },
+      "outputs": [
+        {
+          "path": "knapsack-2.result",
+          "sha256": "c956f55ac4d8c6d4c063ce8e40765731b4b098c7147ffef547080d5b5e6bd8e5",
+          "size_bytes": 9,
+          "created_or_changed": true
+        }
+      ]
+    },
+    {
+      "execution": {
+        "command": [
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack-3.txt",
+          "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final/knapsack-3.result"
+        ],
+        "status": "passed",
+        "returncode": 0,
+        "started_at": "2026-10-01T06:12:33.516194+00:00",
+        "finished_at": "2026-10-01T06:12:33.553412+00:00",
+        "stdout": "tool-4.stdout.log",
+        "stderr": "tool-4.stderr.log",
+        "cwd": "/Users/luca/Documents/ChatGPT/学术skill/iteration-20260930061350/repository/academic-research-skills/test-results/rc4-digital-final",
+        "shell": false,
+        "wall_seconds": 0.037484291999135166,
+        "sampled_peak_rss_bytes": 0,
+        "rss_samples": 1,
+        "memory_scope": "Observed process-tree RSS samples about 0.1s apart; lower bound, not exact peak; unavailable is null",
+        "scope": "Actual subprocess, not scientific validation"
+      },
+      "outputs": [
+        {
+          "path": "knapsack-3.result",
+          "sha256": "f5c2f53cc1db01bb78622932c3f815c3bafa585683562a2a0b5cedccb9d9bd8c",
+          "size_bytes": 9,
+          "created_or_changed": true
+        }
+      ]
+    }
+  ]
+}

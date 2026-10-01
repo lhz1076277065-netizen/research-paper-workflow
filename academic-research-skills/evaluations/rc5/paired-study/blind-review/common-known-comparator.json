@@ -1,0 +1,11 @@
+{
+  "holdout_cases": 480,
+  "holdout_sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa",
+  "common_median_params": {
+    "window": 48,
+    "threshold": 4.0
+  },
+  "common_median_mean_loss": 33.885416666666664,
+  "post_holdout_tuning": false,
+  "scientific_or_publication_novelty_certified": false
+}

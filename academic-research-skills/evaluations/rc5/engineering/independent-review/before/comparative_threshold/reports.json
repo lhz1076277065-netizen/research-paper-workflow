@@ -1,0 +1,1198 @@
+{
+  "audit_links": {
+    "kind": "result-links",
+    "passed": true,
+    "errors": [],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "role": "frozen-results:frozen",
+          "expected_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "actual_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "matched": true
+        },
+        {
+          "path": "draft.md",
+          "role": "body",
+          "expected_sha256": "560dce6e923a8cbf529715cc03604d10c9802ace0dbc3e180cfb37436a269fa5",
+          "actual_sha256": "560dce6e923a8cbf529715cc03604d10c9802ace0dbc3e180cfb37436a269fa5",
+          "matched": true
+        },
+        {
+          "path": "measurements.json",
+          "role": "source-version:data",
+          "expected_sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf",
+          "actual_sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf",
+          "matched": true
+        },
+        {
+          "path": "compute.py",
+          "role": "source-version:code",
+          "expected_sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63",
+          "actual_sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63",
+          "matched": true
+        },
+        {
+          "path": "execution.json",
+          "role": "source-version:execution",
+          "expected_sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29",
+          "actual_sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29",
+          "matched": true
+        }
+      ],
+      "numeric": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "value",
+          "source_value": "0.41",
+          "display_text": "410.0",
+          "unit_factor": "1E+3",
+          "decimals": 1,
+          "rounding": "half-even",
+          "recomputation_checked": false,
+          "recomputation": null
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "lower",
+          "source_value": "0.39",
+          "display_text": "390.0",
+          "unit_factor": "1E+3",
+          "decimals": 1,
+          "rounding": "half-even",
+          "recomputation_checked": false,
+          "recomputation": null
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "upper",
+          "source_value": "0.43",
+          "display_text": "430.0",
+          "unit_factor": "1E+3",
+          "decimals": 1,
+          "rounding": "half-even",
+          "recomputation_checked": false,
+          "recomputation": null
+        }
+      ],
+      "declared_semantic": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "s",
+          "text": "ms"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "direction",
+          "source_value": "decrease",
+          "text": "lower"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "denominator",
+          "source_value": 4,
+          "text": "n=4"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "outcome",
+          "source_value": "latency",
+          "text": "latency"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "population",
+          "source_value": "digital instances",
+          "text": "digital instances"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "time",
+          "source_value": "one run",
+          "text": "one run"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "comparison",
+          "source_value": "Solver baseline",
+          "text": "Solver baseline"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "model",
+          "source_value": "solver-a",
+          "text": "Solver A"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "implementation",
+          "source_value": "loop",
+          "text": "loop"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "split",
+          "source_value": "holdout",
+          "text": "holdout"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "uncertainty",
+          "source_value": "95% CI",
+          "text": "95% CI"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "effect_type",
+          "source_value": "absolute mean",
+          "text": "absolute mean"
+        }
+      ],
+      "relationships": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "relationship": "interval_order",
+          "status": "checked"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "relationship": "primary_subject",
+          "field": "model",
+          "status": "checked"
+        }
+      ],
+      "occurrences": [
+        {
+          "result_id": "R-latency",
+          "source_id": "frozen",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "covered_fields": [
+            "comparison",
+            "denominator",
+            "direction",
+            "effect_type",
+            "implementation",
+            "lower",
+            "model",
+            "outcome",
+            "population",
+            "split",
+            "time",
+            "uncertainty",
+            "unit",
+            "upper",
+            "value"
+          ],
+          "fields_not_in_this_occurrence": []
+        }
+      ]
+    },
+    "coverage_gaps": [],
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "provider_runtime.audit_payload": {
+    "kind": "result-links",
+    "passed": true,
+    "errors": [],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "role": "frozen-results:frozen",
+          "expected_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "actual_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "matched": true
+        },
+        {
+          "path": "draft.md",
+          "role": "body",
+          "expected_sha256": "560dce6e923a8cbf529715cc03604d10c9802ace0dbc3e180cfb37436a269fa5",
+          "actual_sha256": "560dce6e923a8cbf529715cc03604d10c9802ace0dbc3e180cfb37436a269fa5",
+          "matched": true
+        },
+        {
+          "path": "measurements.json",
+          "role": "source-version:data",
+          "expected_sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf",
+          "actual_sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf",
+          "matched": true
+        },
+        {
+          "path": "compute.py",
+          "role": "source-version:code",
+          "expected_sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63",
+          "actual_sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63",
+          "matched": true
+        },
+        {
+          "path": "execution.json",
+          "role": "source-version:execution",
+          "expected_sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29",
+          "actual_sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29",
+          "matched": true
+        }
+      ],
+      "numeric": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "value",
+          "source_value": "0.41",
+          "display_text": "410.0",
+          "unit_factor": "1E+3",
+          "decimals": 1,
+          "rounding": "half-even",
+          "recomputation_checked": false,
+          "recomputation": null
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "lower",
+          "source_value": "0.39",
+          "display_text": "390.0",
+          "unit_factor": "1E+3",
+          "decimals": 1,
+          "rounding": "half-even",
+          "recomputation_checked": false,
+          "recomputation": null
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "upper",
+          "source_value": "0.43",
+          "display_text": "430.0",
+          "unit_factor": "1E+3",
+          "decimals": 1,
+          "rounding": "half-even",
+          "recomputation_checked": false,
+          "recomputation": null
+        }
+      ],
+      "declared_semantic": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "s",
+          "text": "ms"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "direction",
+          "source_value": "decrease",
+          "text": "lower"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "denominator",
+          "source_value": 4,
+          "text": "n=4"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "outcome",
+          "source_value": "latency",
+          "text": "latency"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "population",
+          "source_value": "digital instances",
+          "text": "digital instances"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "time",
+          "source_value": "one run",
+          "text": "one run"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "comparison",
+          "source_value": "Solver baseline",
+          "text": "Solver baseline"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "model",
+          "source_value": "solver-a",
+          "text": "Solver A"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "implementation",
+          "source_value": "loop",
+          "text": "loop"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "split",
+          "source_value": "holdout",
+          "text": "holdout"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "uncertainty",
+          "source_value": "95% CI",
+          "text": "95% CI"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "effect_type",
+          "source_value": "absolute mean",
+          "text": "absolute mean"
+        }
+      ],
+      "relationships": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "relationship": "interval_order",
+          "status": "checked"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "relationship": "primary_subject",
+          "field": "model",
+          "status": "checked"
+        }
+      ],
+      "occurrences": [
+        {
+          "result_id": "R-latency",
+          "source_id": "frozen",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "covered_fields": [
+            "comparison",
+            "denominator",
+            "direction",
+            "effect_type",
+            "implementation",
+            "lower",
+            "model",
+            "outcome",
+            "population",
+            "split",
+            "time",
+            "uncertainty",
+            "unit",
+            "upper",
+            "value"
+          ],
+          "fields_not_in_this_occurrence": []
+        }
+      ]
+    },
+    "coverage_gaps": [],
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "research31.audit": {
+    "kind": "result-links",
+    "passed": true,
+    "errors": [],
+    "pending": [],
+    "checks": [
+      "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+      "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+      "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+    ],
+    "coverage": {
+      "bytes": [
+        {
+          "path": "results.json",
+          "role": "frozen-results:frozen",
+          "expected_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "actual_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+          "matched": true
+        },
+        {
+          "path": "draft.md",
+          "role": "body",
+          "expected_sha256": "560dce6e923a8cbf529715cc03604d10c9802ace0dbc3e180cfb37436a269fa5",
+          "actual_sha256": "560dce6e923a8cbf529715cc03604d10c9802ace0dbc3e180cfb37436a269fa5",
+          "matched": true
+        },
+        {
+          "path": "measurements.json",
+          "role": "source-version:data",
+          "expected_sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf",
+          "actual_sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf",
+          "matched": true
+        },
+        {
+          "path": "compute.py",
+          "role": "source-version:code",
+          "expected_sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63",
+          "actual_sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63",
+          "matched": true
+        },
+        {
+          "path": "execution.json",
+          "role": "source-version:execution",
+          "expected_sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29",
+          "actual_sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29",
+          "matched": true
+        }
+      ],
+      "numeric": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "value",
+          "source_value": "0.41",
+          "display_text": "410.0",
+          "unit_factor": "1E+3",
+          "decimals": 1,
+          "rounding": "half-even",
+          "recomputation_checked": false,
+          "recomputation": null
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "lower",
+          "source_value": "0.39",
+          "display_text": "390.0",
+          "unit_factor": "1E+3",
+          "decimals": 1,
+          "rounding": "half-even",
+          "recomputation_checked": false,
+          "recomputation": null
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "upper",
+          "source_value": "0.43",
+          "display_text": "430.0",
+          "unit_factor": "1E+3",
+          "decimals": 1,
+          "rounding": "half-even",
+          "recomputation_checked": false,
+          "recomputation": null
+        }
+      ],
+      "declared_semantic": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "unit",
+          "source_value": "s",
+          "text": "ms"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "direction",
+          "source_value": "decrease",
+          "text": "lower"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "denominator",
+          "source_value": 4,
+          "text": "n=4"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "outcome",
+          "source_value": "latency",
+          "text": "latency"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "population",
+          "source_value": "digital instances",
+          "text": "digital instances"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "time",
+          "source_value": "one run",
+          "text": "one run"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "comparison",
+          "source_value": "Solver baseline",
+          "text": "Solver baseline"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "model",
+          "source_value": "solver-a",
+          "text": "Solver A"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "implementation",
+          "source_value": "loop",
+          "text": "loop"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "split",
+          "source_value": "holdout",
+          "text": "holdout"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "uncertainty",
+          "source_value": "95% CI",
+          "text": "95% CI"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "field": "effect_type",
+          "source_value": "absolute mean",
+          "text": "absolute mean"
+        }
+      ],
+      "relationships": [
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "relationship": "interval_order",
+          "status": "checked"
+        },
+        {
+          "result_id": "R-latency",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "relationship": "primary_subject",
+          "field": "model",
+          "status": "checked"
+        }
+      ],
+      "occurrences": [
+        {
+          "result_id": "R-latency",
+          "source_id": "frozen",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "covered_fields": [
+            "comparison",
+            "denominator",
+            "direction",
+            "effect_type",
+            "implementation",
+            "lower",
+            "model",
+            "outcome",
+            "population",
+            "split",
+            "time",
+            "uncertainty",
+            "unit",
+            "upper",
+            "value"
+          ],
+          "fields_not_in_this_occurrence": []
+        }
+      ]
+    },
+    "coverage_gaps": [],
+    "scientific_validity_certified": false,
+    "semantic_truth_certified": false,
+    "actual_visual_inspection_performed": false,
+    "claim_inventory_complete": false,
+    "unlinked": []
+  },
+  "provider_runtime.accept_result": {
+    "schema_version": "result-acceptance-1",
+    "status": "checked_for_handoff",
+    "passed": true,
+    "errors": [],
+    "pending": [],
+    "artifacts": [
+      {
+        "role": "draft",
+        "path": "draft.md",
+        "sha256": "560dce6e923a8cbf529715cc03604d10c9802ace0dbc3e180cfb37436a269fa5"
+      }
+    ],
+    "linkage_audits": [
+      {
+        "kind": "result-links",
+        "passed": true,
+        "errors": [],
+        "pending": [],
+        "checks": [
+          "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+          "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+          "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+        ],
+        "coverage": {
+          "bytes": [
+            {
+              "path": "results.json",
+              "role": "frozen-results:frozen",
+              "expected_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+              "actual_sha256": "36190b03dc7242533cbf7816f525063f4e93d116398e0afe8ef68e3c0b0c47e4",
+              "matched": true
+            },
+            {
+              "path": "draft.md",
+              "role": "body",
+              "expected_sha256": "560dce6e923a8cbf529715cc03604d10c9802ace0dbc3e180cfb37436a269fa5",
+              "actual_sha256": "560dce6e923a8cbf529715cc03604d10c9802ace0dbc3e180cfb37436a269fa5",
+              "matched": true
+            },
+            {
+              "path": "measurements.json",
+              "role": "source-version:data",
+              "expected_sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf",
+              "actual_sha256": "f8357cdd2c69e65a9f2f6f20a70df503b2634df533bef05d727a955e416497cf",
+              "matched": true
+            },
+            {
+              "path": "compute.py",
+              "role": "source-version:code",
+              "expected_sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63",
+              "actual_sha256": "e2efbabe81c32766b1938f14672c9c0686924e24a0535031fdc1183897156d63",
+              "matched": true
+            },
+            {
+              "path": "execution.json",
+              "role": "source-version:execution",
+              "expected_sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29",
+              "actual_sha256": "13edf7a430264728672c8022ec84d52279df945bb28aec125c562425c207bc29",
+              "matched": true
+            }
+          ],
+          "numeric": [
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "value",
+              "source_value": "0.41",
+              "display_text": "410.0",
+              "unit_factor": "1E+3",
+              "decimals": 1,
+              "rounding": "half-even",
+              "recomputation_checked": false,
+              "recomputation": null
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "lower",
+              "source_value": "0.39",
+              "display_text": "390.0",
+              "unit_factor": "1E+3",
+              "decimals": 1,
+              "rounding": "half-even",
+              "recomputation_checked": false,
+              "recomputation": null
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "upper",
+              "source_value": "0.43",
+              "display_text": "430.0",
+              "unit_factor": "1E+3",
+              "decimals": 1,
+              "rounding": "half-even",
+              "recomputation_checked": false,
+              "recomputation": null
+            }
+          ],
+          "declared_semantic": [
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "unit",
+              "source_value": "s",
+              "text": "ms"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "direction",
+              "source_value": "decrease",
+              "text": "lower"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "denominator",
+              "source_value": 4,
+              "text": "n=4"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "outcome",
+              "source_value": "latency",
+              "text": "latency"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "population",
+              "source_value": "digital instances",
+              "text": "digital instances"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "time",
+              "source_value": "one run",
+              "text": "one run"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "comparison",
+              "source_value": "Solver baseline",
+              "text": "Solver baseline"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "model",
+              "source_value": "solver-a",
+              "text": "Solver A"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "implementation",
+              "source_value": "loop",
+              "text": "loop"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "split",
+              "source_value": "holdout",
+              "text": "holdout"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "uncertainty",
+              "source_value": "95% CI",
+              "text": "95% CI"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "field": "effect_type",
+              "source_value": "absolute mean",
+              "text": "absolute mean"
+            }
+          ],
+          "relationships": [
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "relationship": "interval_order",
+              "status": "checked"
+            },
+            {
+              "result_id": "R-latency",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "relationship": "primary_subject",
+              "field": "model",
+              "status": "checked"
+            }
+          ],
+          "occurrences": [
+            {
+              "result_id": "R-latency",
+              "source_id": "frozen",
+              "role": "body",
+              "path": "draft.md",
+              "locator": {
+                "line": 1
+              },
+              "covered_fields": [
+                "comparison",
+                "denominator",
+                "direction",
+                "effect_type",
+                "implementation",
+                "lower",
+                "model",
+                "outcome",
+                "population",
+                "split",
+                "time",
+                "uncertainty",
+                "unit",
+                "upper",
+                "value"
+              ],
+              "fields_not_in_this_occurrence": []
+            }
+          ]
+        },
+        "coverage_gaps": [],
+        "scientific_validity_certified": false,
+        "semantic_truth_certified": false,
+        "actual_visual_inspection_performed": false,
+        "claim_inventory_complete": false,
+        "unlinked": []
+      }
+    ],
+    "task_sha256": "90272088f3c8caf3ebac0281b97e56ce80d10879e227a6bb01f19da5c23f5d80",
+    "checked_at": "2026-10-01T09:30:07.270057+00:00",
+    "checks_performed_here": [
+      "task/input/provider version",
+      "file identity",
+      "declared evidence constraints",
+      "review report binding"
+    ],
+    "scientific_validity_certified": false,
+    "semantic_review_performed_here": false,
+    "visual_review_performed_here": false,
+    "native_execution_observed_by_this_script": false
+  }
+}

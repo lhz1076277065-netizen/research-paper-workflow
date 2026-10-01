@@ -1,0 +1,57 @@
+{
+  "script_sha256": "471b32401fa0b2f35ac5cafd1b2eea67f20cc8b9eb728212dbfd58f274fb92a2",
+  "checks": {
+    "population_without_explicit_subject": {
+      "expected_passed": false,
+      "actual_passed": false,
+      "errors": [],
+      "pending": [
+        {
+          "result_id": "R1",
+          "role": "body",
+          "path": "draft.md",
+          "locator": {
+            "line": 1
+          },
+          "reason": "primary_subject_unbound",
+          "action": "Read the actual located statement and bind this relationship"
+        }
+      ]
+    },
+    "population_with_explicit_subject": {
+      "expected_passed": true,
+      "actual_passed": true,
+      "errors": [],
+      "pending": []
+    },
+    "coverage_within_same_artifact": {
+      "expected_passed": true,
+      "actual_passed": true,
+      "errors": [],
+      "pending": []
+    },
+    "coverage_across_separate_artifacts": {
+      "expected_passed": false,
+      "actual_passed": false,
+      "errors": [],
+      "pending": [
+        {
+          "source_id": "frozen",
+          "result_id": "R1",
+          "path": "caption.md",
+          "roles": [
+            "caption"
+          ],
+          "reason": "manuscript_fields_uncovered",
+          "fields": [
+            "lower",
+            "upper"
+          ],
+          "action": "Link these applicable fields elsewhere in this manuscript or record a located semantic review"
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "scope": "Synthetic actual-file migration behavior; no scientific certification."
+}

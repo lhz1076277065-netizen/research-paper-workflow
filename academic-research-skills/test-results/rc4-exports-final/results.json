@@ -1,0 +1,19 @@
+{
+  "RMSE-ridge": {
+    "value": 0.7569576952730187,
+    "unit": "quality score points",
+    "denominator": 915,
+    "population": "white wine",
+    "outcome": "wine quality",
+    "comparison": "training mean baseline",
+    "model": "ridge regression",
+    "split": "heldout",
+    "direction": "decrease",
+    "time": "not supplied"
+  },
+  "RMSE-baseline": {
+    "value": 0.898326141021648,
+    "unit": "quality score points",
+    "denominator": 915
+  }
+}

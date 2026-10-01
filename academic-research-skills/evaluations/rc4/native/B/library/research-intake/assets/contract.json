@@ -1,0 +1,18 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "research-intake",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "intake_records.jsonl",
+  "output_roles": [
+    "research_brief.md",
+    "domain_map.md",
+    "feasibility_report.md"
+  ],
+  "gates": [
+    "goal_defined",
+    "materials_inventoried",
+    "constraints_recorded",
+    "domain_unknowns_exposed"
+  ]
+}

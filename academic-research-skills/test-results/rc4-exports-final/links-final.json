@@ -1,0 +1,691 @@
+{
+  "kind": "result-links",
+  "passed": true,
+  "errors": [],
+  "pending": [],
+  "checks": [
+    "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+    "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+  ],
+  "coverage": {
+    "bytes": [
+      {
+        "path": "results.json",
+        "expected_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+        "actual_sha256": "19c6c54a4727f5773862077d439b1eed50acb05081a8d97feb587e85c42d6ed8",
+        "matched": true
+      },
+      {
+        "path": "manuscript.md",
+        "expected_sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840",
+        "actual_sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840",
+        "matched": true
+      },
+      {
+        "path": "wine-quality.zip",
+        "expected_sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4",
+        "actual_sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4",
+        "matched": true
+      },
+      {
+        "path": "executed-source.py",
+        "expected_sha256": "850cb08a805501fa5b92a7215d2c9015f265fa11a3fb7001f2eada8ca350b65b",
+        "actual_sha256": "850cb08a805501fa5b92a7215d2c9015f265fa11a3fb7001f2eada8ca350b65b",
+        "matched": true
+      },
+      {
+        "path": "public-results.json",
+        "expected_sha256": "4c2c0f0bd84fa60c2e392faee591208bd1620e407e8a3d3028b55024062735f5",
+        "actual_sha256": "4c2c0f0bd84fa60c2e392faee591208bd1620e407e8a3d3028b55024062735f5",
+        "matched": true
+      },
+      {
+        "path": "manuscript.md",
+        "expected_sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840",
+        "actual_sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840",
+        "matched": true
+      },
+      {
+        "path": "wine-quality.zip",
+        "expected_sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4",
+        "actual_sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4",
+        "matched": true
+      },
+      {
+        "path": "executed-source.py",
+        "expected_sha256": "850cb08a805501fa5b92a7215d2c9015f265fa11a3fb7001f2eada8ca350b65b",
+        "actual_sha256": "850cb08a805501fa5b92a7215d2c9015f265fa11a3fb7001f2eada8ca350b65b",
+        "matched": true
+      },
+      {
+        "path": "public-results.json",
+        "expected_sha256": "4c2c0f0bd84fa60c2e392faee591208bd1620e407e8a3d3028b55024062735f5",
+        "actual_sha256": "4c2c0f0bd84fa60c2e392faee591208bd1620e407e8a3d3028b55024062735f5",
+        "matched": true
+      },
+      {
+        "path": "manuscript.tex",
+        "expected_sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a",
+        "actual_sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a",
+        "matched": true
+      },
+      {
+        "path": "manuscript.tex",
+        "expected_sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a",
+        "actual_sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a",
+        "matched": true
+      },
+      {
+        "path": "manuscript.docx",
+        "expected_sha256": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19",
+        "actual_sha256": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19",
+        "matched": true
+      },
+      {
+        "path": "manuscript.docx",
+        "expected_sha256": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19",
+        "actual_sha256": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19",
+        "matched": true
+      },
+      {
+        "path": "manuscript.pdf",
+        "expected_sha256": "38a5b66bab45fbf0d0e30ce403cd42090c5eb9bca060f70d4405023ff55dd5b4",
+        "actual_sha256": "38a5b66bab45fbf0d0e30ce403cd42090c5eb9bca060f70d4405023ff55dd5b4",
+        "matched": true
+      },
+      {
+        "path": "manuscript.pdf",
+        "expected_sha256": "38a5b66bab45fbf0d0e30ce403cd42090c5eb9bca060f70d4405023ff55dd5b4",
+        "actual_sha256": "38a5b66bab45fbf0d0e30ce403cd42090c5eb9bca060f70d4405023ff55dd5b4",
+        "matched": true
+      }
+    ],
+    "numeric": [
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "value",
+        "source_value": "0.7569576952730187",
+        "display_text": "0.757",
+        "unit_factor": "1",
+        "decimals": 3,
+        "rounding": "half-even",
+        "recomputation_checked": false
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "value",
+        "source_value": "0.898326141021648",
+        "display_text": "0.898",
+        "unit_factor": "1",
+        "decimals": 3,
+        "rounding": "half-even",
+        "recomputation_checked": false
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "value",
+        "source_value": "0.7569576952730187",
+        "display_text": "0.757",
+        "unit_factor": "1",
+        "decimals": 3,
+        "rounding": "half-even",
+        "recomputation_checked": false
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "value",
+        "source_value": "0.898326141021648",
+        "display_text": "0.898",
+        "unit_factor": "1",
+        "decimals": 3,
+        "rounding": "half-even",
+        "recomputation_checked": false
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "value",
+        "source_value": "0.7569576952730187",
+        "display_text": "0.757",
+        "unit_factor": "1",
+        "decimals": 3,
+        "rounding": "half-even",
+        "recomputation_checked": false
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "value",
+        "source_value": "0.898326141021648",
+        "display_text": "0.898",
+        "unit_factor": "1",
+        "decimals": 3,
+        "rounding": "half-even",
+        "recomputation_checked": false
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "value",
+        "source_value": "0.7569576952730187",
+        "display_text": "0.757",
+        "unit_factor": "1",
+        "decimals": 3,
+        "rounding": "half-even",
+        "recomputation_checked": false
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "value",
+        "source_value": "0.898326141021648",
+        "display_text": "0.898",
+        "unit_factor": "1",
+        "decimals": 3,
+        "rounding": "half-even",
+        "recomputation_checked": false
+      }
+    ],
+    "declared_semantic": [
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "unit",
+        "source_value": "quality score points",
+        "text": "quality score points"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "lower"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "denominator",
+        "source_value": 915,
+        "text": "n=915"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "outcome",
+        "source_value": "wine quality",
+        "text": "wine quality"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "population",
+        "source_value": "white wine",
+        "text": "white wine"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "time",
+        "source_value": "not supplied",
+        "text": "not supplied"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "comparison",
+        "source_value": "training mean baseline",
+        "text": "training mean baseline"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "model",
+        "source_value": "ridge regression",
+        "text": "ridge regression"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "split",
+        "source_value": "heldout",
+        "text": "heldout"
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "unit",
+        "source_value": "quality score points",
+        "text": "quality score points"
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "denominator",
+        "source_value": 915,
+        "text": "n=915"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "unit",
+        "source_value": "quality score points",
+        "text": "quality score points"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "lower"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "denominator",
+        "source_value": 915,
+        "text": "n=915"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "outcome",
+        "source_value": "wine quality",
+        "text": "wine quality"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "population",
+        "source_value": "white wine",
+        "text": "white wine"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "time",
+        "source_value": "not supplied",
+        "text": "not supplied"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "comparison",
+        "source_value": "training mean baseline",
+        "text": "training mean baseline"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "model",
+        "source_value": "ridge regression",
+        "text": "ridge regression"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "split",
+        "source_value": "heldout",
+        "text": "heldout"
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "unit",
+        "source_value": "quality score points",
+        "text": "quality score points"
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.tex",
+        "locator": {
+          "line": 3
+        },
+        "field": "denominator",
+        "source_value": 915,
+        "text": "n=915"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "unit",
+        "source_value": "quality score points",
+        "text": "quality score points"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "lower"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "denominator",
+        "source_value": 915,
+        "text": "n=915"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "outcome",
+        "source_value": "wine quality",
+        "text": "wine quality"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "population",
+        "source_value": "white wine",
+        "text": "white wine"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "time",
+        "source_value": "not supplied",
+        "text": "not supplied"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "comparison",
+        "source_value": "training mean baseline",
+        "text": "training mean baseline"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "model",
+        "source_value": "ridge regression",
+        "text": "ridge regression"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "split",
+        "source_value": "heldout",
+        "text": "heldout"
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "unit",
+        "source_value": "quality score points",
+        "text": "quality score points"
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.docx",
+        "locator": {
+          "paragraph": 1
+        },
+        "field": "denominator",
+        "source_value": 915,
+        "text": "n=915"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "unit",
+        "source_value": "quality score points",
+        "text": "quality score points"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "direction",
+        "source_value": "decrease",
+        "text": "lower"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "denominator",
+        "source_value": 915,
+        "text": "n=915"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "outcome",
+        "source_value": "wine quality",
+        "text": "wine quality"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "population",
+        "source_value": "white wine",
+        "text": "white wine"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "time",
+        "source_value": "not supplied",
+        "text": "not supplied"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "comparison",
+        "source_value": "training mean baseline",
+        "text": "training mean baseline"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "model",
+        "source_value": "ridge regression",
+        "text": "ridge regression"
+      },
+      {
+        "result_id": "RMSE-ridge",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "split",
+        "source_value": "heldout",
+        "text": "heldout"
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "unit",
+        "source_value": "quality score points",
+        "text": "quality score points"
+      },
+      {
+        "result_id": "RMSE-baseline",
+        "path": "manuscript.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1,
+          "line_end": 2
+        },
+        "field": "denominator",
+        "source_value": 915,
+        "text": "n=915"
+      }
+    ]
+  },
+  "scientific_validity_certified": false,
+  "semantic_truth_certified": false,
+  "actual_visual_inspection_performed": false,
+  "claim_inventory_complete": false,
+  "unlinked": []
+}

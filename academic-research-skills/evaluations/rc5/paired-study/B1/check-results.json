@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "checks": [
+    "short-prefix, empty-calibration, zero-signal",
+    "two signs; bounded bursts; exact sustained-shift alarm; burst ablation; missing-run expiration",
+    "every prefix of all 40 training streams for both submitted detectors",
+    "independent direct-excision oracle matches all 120 development alarms"
+  ],
+  "prefix_calls": 28880,
+  "oracle_cases": 120,
+  "known_cases": [
+    {
+      "kind": "bounded isolated burst",
+      "sign": 1,
+      "onset": 64,
+      "alarm": -1
+    },
+    {
+      "kind": "bounded isolated burst",
+      "sign": 1,
+      "onset": 91,
+      "alarm": -1
+    },
+    {
+      "kind": "bounded isolated burst",
+      "sign": 1,
+      "onset": 150,
+      "alarm": -1
+    },
+    {
+      "kind": "sustained unit-z shift",
+      "sign": 1,
+      "onset": 96,
+      "alarms": {
+        "baseline": 120,
+        "initial": 123,
+        "refined": 114
+      }
+    },
+    {
+      "kind": "bounded isolated burst",
+      "sign": -1,
+      "onset": 64,
+      "alarm": -1
+    },
+    {
+      "kind": "bounded isolated burst",
+      "sign": -1,
+      "onset": 91,
+      "alarm": -1
+    },
+    {
+      "kind": "bounded isolated burst",
+      "sign": -1,
+      "onset": 150,
+      "alarm": -1
+    },
+    {
+      "kind": "sustained unit-z shift",
+      "sign": -1,
+      "onset": 96,
+      "alarms": {
+        "baseline": 120,
+        "initial": 123,
+        "refined": 114
+      }
+    },
+    {
+      "kind": "weak sustained shift below excision boundary",
+      "sign": 1,
+      "onset": 96,
+      "calibrated_delta": 0.7,
+      "alarms": {
+        "baseline": 156,
+        "initial": 136,
+        "refined": -1
+      }
+    },
+    {
+      "kind": "weak sustained shift below excision boundary",
+      "sign": -1,
+      "onset": 96,
+      "calibrated_delta": 0.7,
+      "alarms": {
+        "baseline": 156,
+        "initial": 136,
+        "refined": -1
+      }
+    },
+    {
+      "kind": "small baseline bias plus six-step burst",
+      "refined": -1,
+      "ablation": 154
+    },
+    {
+      "kind": "separated sub-bursts with missing run",
+      "refined": -1
+    }
+  ],
+  "elapsed_seconds": 7.480719374999808,
+  "scope": "Implementation/causality checks, not holdout validation or an average-run-length theorem."
+}

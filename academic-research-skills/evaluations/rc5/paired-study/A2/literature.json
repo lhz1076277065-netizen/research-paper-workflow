@@ -1,0 +1,31 @@
+{
+  "primary_sources": [
+    {
+      "work": "Page 1954",
+      "url": "https://doi.org/10.1093/biomet/41.1-2.100",
+      "read_scope": "Publisher metadata; paywalled full text not read; CUSUM recurrence verified in Lau and Tay."
+    },
+    {
+      "work": "Zhang, Mei, Shi 2022",
+      "url": "https://bpb-us-e1.wpmucdn.com/sites.gatech.edu/dist/4/216/files/2022/05/p141.pdf",
+      "read_scope": "Abstract, introduction, Sections 3.1-3.2 and robustness/results excerpts."
+    },
+    {
+      "work": "Lau and Tay 2019",
+      "url": "https://arxiv.org/html/1902.03460",
+      "read_scope": "Abstract, Sections I-III, nuisance model and equations 10-19."
+    },
+    {
+      "work": "Chen et al. 2024",
+      "url": "https://arxiv.org/html/2405.00842v1",
+      "read_scope": "Abstract, problem formulation, Section IV, Algorithms 1-2, equations 15-22."
+    },
+    {
+      "work": "Zou et al. 2018 revision",
+      "url": "https://arxiv.org/html/1711.02186",
+      "read_scope": "Abstract, introduction, related-work/model discussion; not a full derivation audit."
+    }
+  ],
+  "scope": "Focused mechanism search, not exhaustive novelty clearance.",
+  "tool": "web.run search/open/find"
+}

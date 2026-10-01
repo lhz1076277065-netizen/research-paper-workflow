@@ -1,0 +1,57 @@
+{
+  "kind": "render-dependencies",
+  "artifacts": [
+    {
+      "id": "md",
+      "path": "manuscript.md",
+      "sha256": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840"
+    },
+    {
+      "id": "word",
+      "path": "manuscript.docx",
+      "sha256": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19"
+    },
+    {
+      "id": "tex",
+      "path": "manuscript.tex",
+      "sha256": "5f1167ec0ac13a8e677add11847d028a187da92ce8c17c8749f1ec85c9cd886a"
+    },
+    {
+      "id": "pdf",
+      "path": "manuscript.pdf",
+      "sha256": "38a5b66bab45fbf0d0e30ce403cd42090c5eb9bca060f70d4405023ff55dd5b4"
+    }
+  ],
+  "renders": [
+    {
+      "output": "word",
+      "inputs": {
+        "md": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840"
+      },
+      "renderer": {
+        "name": "python-docx",
+        "version": "1.2.0"
+      }
+    },
+    {
+      "output": "tex",
+      "inputs": {
+        "md": "f13091d23c54f0eaa403f176d6152672c75cc8dcc7ac799eea44c5afeb742840"
+      },
+      "renderer": {
+        "name": "plain LaTeX source exporter",
+        "version": "1"
+      }
+    },
+    {
+      "output": "pdf",
+      "inputs": {
+        "word": "009f97389189bafde00a4ec9515cb24a7f71d6d949537ce9384ddf0112626f19"
+      },
+      "renderer": {
+        "name": "DOCX paragraph → ReportLab PDF",
+        "version": "4.4.9"
+      }
+    }
+  ]
+}

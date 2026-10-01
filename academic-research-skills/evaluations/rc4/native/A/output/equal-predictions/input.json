@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "initial_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "A": "Keep labeled edges unchanged at each time step.",
+  "B": "At each time step draw an independent uniform permutation of node labels of the six-cycle.",
+  "digital_operation": "Observe a second labeled snapshot; measure surviving edges / initial edges.",
+  "evaluation": "Exact enumeration of all 6! permutations, no Monte Carlo error."
+}

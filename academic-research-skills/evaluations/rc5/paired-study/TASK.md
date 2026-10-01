@@ -1,0 +1,19 @@
+# Native research task
+
+Study a causal first-alarm detector for sustained scalar mean shifts when transient bursts, heavy tails, and missing runs may occur. Supplied train/dev digital streams have an initial 64-step stable calibration prefix; targets are sustained shifts, transient bursts are nuisance. This specific problem is not an existing skill worked example. All contexts receive the same data, Python, reader/scorer and tool access. Develop a substantive, implemented change relative to a credible known baseline; do not call clipping or a known CUSUM formula a new method. A carefully established limit or failed idea may be a valid result.
+
+Use only your assigned library for this study's skill guidance, read via `harness.py library relative output_dir` so actual emitted file content is recorded. Read SKILL.md and task-relevant references as you normally would; choose further references by the problem, with no reading quota. The recorder counts actual emitted characters, not model tokens. Do not inspect other participants, changed repository guidance, or generation.py. You may browse primary papers and inspect the supplied harness/data. Do not read any holdout data; it will be generated independently after all submissions freeze.
+
+Python: /Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3. Harness and shared train/dev are next to this TASK.md. Known baseline `harness.baseline` is a two-sided clipped CUSUM with robust prefix center/scale and no update on missing entries; it is not an originality claim. Tune up to 16 baseline configurations, 12 initial proposed configurations and 12 refined configurations, using `harness.score` for every validation call and saving its actual rows. Reuse train for checks if useful. Keep any failed initial method and explain what evidence changed the design. These limits are the same for every participant; choose fewer if adequate. Aim for a compact complete study in about 15 minutes; elapsed/time limits are advisory and actual use will be reported.
+
+Deliver only in assigned output_dir:
+
+1. `methods.py` with `detect_initial(x, params)` and `detect_refined(x, params)` returning earliest zero-based alarm or -1. Every decision at time t uses only x[:t+1]; no hardcoded generator times or use of labels.
+2. `frozen.json` containing baseline/initial/refined parameter maps and an ablation parameter map/function if appropriate. Freeze chosen configurations before independent evaluation; no post-holdout change.
+3. Runnable `run_dev.py`, all recorded validation calls, and a meaningful causal/known-case check.
+4. `research.md`: question and competition; nearest related primary works and actual mechanism differences; initial idea, implemented diagnostic and improvement; paired per-case validation comparisons, tradeoffs/ablations; separate known method, task-level incremental change and unestablished publication novelty. Include a short manuscript result paragraph and table/figure built from actual output records.
+5. `usage.json`: elapsed seconds, actual validation call counts, tool/dependency use and limits. No fabricated token cost or independent-review claims.
+
+Use native tools yourself; do not delegate this isolated study. Root will freeze file digests, run causal prefix checks and evaluate all methods on common unseen data, then commission a separate content/nearest-neighbor review. Quality is assessed on the complete artifact and independent evidence, not exit code alone.
+
+Before finalizing this complete method study, also read your assigned library references/research-quality.md through the supplied reader and use relevant guidance for the final research self-check. Choose additional fragments only if the current scientific gap needs them. Keep the original validation budgets and blind holdout rules. Record whether this reading changed the interpretation or method.

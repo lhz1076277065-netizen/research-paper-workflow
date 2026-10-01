@@ -1,6 +1,6 @@
 {
   "schema_version": "environment-profiles-1",
-  "version": "3.2.0-rc.3",
+  "version": "3.2.0",
   "python_minimum": [
     3,
     10
@@ -128,6 +128,46 @@
         "spec": "packaging>=23.0",
         "import": "packaging"
       }
+    ],
+    "numerical": [
+      {
+        "spec": "numpy>=1.24",
+        "import": "numpy"
+      },
+      {
+        "spec": "scipy>=1.10",
+        "import": "scipy"
+      }
+    ],
+    "molecular": [
+      {
+        "spec": "rdkit>=2024.3",
+        "import": "rdkit"
+      }
+    ],
+    "optimization": [
+      {
+        "spec": "ortools>=9.10",
+        "import": "ortools"
+      }
+    ],
+    "simulation": [
+      {
+        "spec": "gymnasium>=1.0",
+        "import": "gymnasium"
+      }
+    ],
+    "torch": [
+      {
+        "spec": "torch",
+        "import": "torch"
+      }
+    ],
+    "mlx": [
+      {
+        "spec": "mlx",
+        "import": "mlx"
+      }
     ]
   },
   "not_a_lockfile": true,
@@ -141,5 +181,7 @@
       "checked_at": "2026-09-29",
       "scope": "required packages for plot; optional enhancements excluded"
     }
-  ]
+  ],
+  "backend_selection": "Probe current resources and selected framework availability; explicitly calibrate actual backend, operators and precision before scaling. Groups are opt-in and do not select a GPU.",
+  "tool_execution": "Explicit argv, project cwd and selected interpreter/PATH; external project environments retain their own package manager and lock."
 }

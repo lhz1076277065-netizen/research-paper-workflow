@@ -69,7 +69,21 @@
     },
     "evidence_checks": {
       "type": "array"
+    },
+    "result_links": {
+      "oneOf": [
+        {"$ref": "result-links.schema.json#/$defs/links"},
+        {"$ref": "result-links.schema.json#/$defs/artifact"}
+      ],
+      "description": "Optional actual-occurrence audit, inline or a hash-bound project-relative JSON manifest."
+    },
+    "render_dependencies": {
+      "oneOf": [
+        {"$ref": "result-links.schema.json#/$defs/render"},
+        {"$ref": "result-links.schema.json#/$defs/artifact"}
+      ],
+      "description": "Optional render DAG audit; reports stale rebuild targets without running render commands."
     }
   },
-  "description": "Actual file identity and report linkage are checked by accept-result; statements about human/AI work must be true and cannot be proven by this schema."
+  "description": "Legacy result envelopes remain valid. accept-result checks actual identities, optional linkage audits and review bindings; a schema or hash cannot prove scientific truth or actual human/AI work."
 }

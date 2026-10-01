@@ -1,0 +1,1299 @@
+{
+  "kind": "result-links",
+  "sources": [
+    {
+      "id": "study",
+      "path": "manuscript-build/results.json",
+      "versions": {
+        "data": {
+          "path": "independent/holdout.json",
+          "sha256": "b9a22153f1b505fff8920c140ae6615d9324d7a8ee477f8ee0a24c51287654fa"
+        },
+        "code": {
+          "path": "independent_eval.py",
+          "sha256": "c2f15cb9a85906948e28fd9953ac71909b699c316619a27792e9c7631afc8ce2"
+        },
+        "execution": {
+          "path": "manuscript-build/execution.json",
+          "sha256": "535f5efb01ff5cc26ca5aaf821d8e1593c1388366a5830ed7579001f12543e17"
+        },
+        "method_snapshots": {
+          "path": "independent/frozen-submissions.json",
+          "sha256": "c7344483031c1b3fc697eb6fa3602d9ce9be2b73f90f995bbc4b1389c6d1c8d4"
+        },
+        "render": {
+          "path": "render_actual.py",
+          "sha256": "e68a805279d283d7bcc8fa453c6238a9ebcac02bcd57900c3081bb7bc0d72bc0"
+        }
+      },
+      "sha256": "8159c764fa9123197b38b5e04f0b4e5d0f74d88f770ebad95ce000f3d1b1396f"
+    }
+  ],
+  "links": [
+    {
+      "result_id": "A1refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.md",
+        "sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547"
+      },
+      "locator": {
+        "line": 3
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "decrease"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "A1refined",
+          "text": "A1refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "23.68"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "20.98"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "26.47"
+        }
+      ]
+    },
+    {
+      "result_id": "A1refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.docx",
+        "sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66"
+      },
+      "locator": {
+        "paragraph": 2
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "decrease"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "A1refined",
+          "text": "A1refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "23.68"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "20.98"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "26.47"
+        }
+      ]
+    },
+    {
+      "result_id": "A1refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.pdf",
+        "sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b"
+      },
+      "locator": {
+        "page": 1,
+        "line_start": 4,
+        "line_end": 7
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "decrease"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "A1refined",
+          "text": "A1refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "23.68"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "20.98"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "26.47"
+        }
+      ]
+    },
+    {
+      "result_id": "A1refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.md",
+        "sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547"
+      },
+      "locator": {
+        "line": 4
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "A1refined",
+          "text": "A1refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "23.68"
+        }
+      ]
+    },
+    {
+      "result_id": "A1refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.docx",
+        "sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66"
+      },
+      "locator": {
+        "paragraph": 3
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "A1refined",
+          "text": "A1refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "23.68"
+        }
+      ]
+    },
+    {
+      "result_id": "A1refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.pdf",
+        "sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b"
+      },
+      "locator": {
+        "page": 1,
+        "line_start": 8,
+        "line_end": 9
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "A1refined",
+          "text": "A1refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "23.68"
+        }
+      ]
+    },
+    {
+      "result_id": "B1refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.md",
+        "sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547"
+      },
+      "locator": {
+        "line": 5
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "decrease"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "B1refined",
+          "text": "B1refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.60"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "19.86"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "25.36"
+        }
+      ]
+    },
+    {
+      "result_id": "B1refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.docx",
+        "sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66"
+      },
+      "locator": {
+        "paragraph": 4
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "decrease"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "B1refined",
+          "text": "B1refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.60"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "19.86"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "25.36"
+        }
+      ]
+    },
+    {
+      "result_id": "B1refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.pdf",
+        "sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b"
+      },
+      "locator": {
+        "page": 1,
+        "line_start": 10,
+        "line_end": 13
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "decrease"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "B1refined",
+          "text": "B1refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.60"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "19.86"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "25.36"
+        }
+      ]
+    },
+    {
+      "result_id": "B1refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.md",
+        "sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547"
+      },
+      "locator": {
+        "line": 6
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "B1refined",
+          "text": "B1refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.60"
+        }
+      ]
+    },
+    {
+      "result_id": "B1refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.docx",
+        "sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66"
+      },
+      "locator": {
+        "paragraph": 5
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "B1refined",
+          "text": "B1refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.60"
+        }
+      ]
+    },
+    {
+      "result_id": "B1refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.pdf",
+        "sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b"
+      },
+      "locator": {
+        "page": 1,
+        "line_start": 14,
+        "line_end": 15
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "B1refined",
+          "text": "B1refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.60"
+        }
+      ]
+    },
+    {
+      "result_id": "B2refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.md",
+        "sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547"
+      },
+      "locator": {
+        "line": 7
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "decrease"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "B2refined",
+          "text": "B2refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.38"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "19.84"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "25.06"
+        }
+      ]
+    },
+    {
+      "result_id": "B2refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.docx",
+        "sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66"
+      },
+      "locator": {
+        "paragraph": 6
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "decrease"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "B2refined",
+          "text": "B2refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.38"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "19.84"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "25.06"
+        }
+      ]
+    },
+    {
+      "result_id": "B2refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.pdf",
+        "sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b"
+      },
+      "locator": {
+        "page": 1,
+        "line_start": 16,
+        "line_end": 19
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "decrease",
+          "text": "decrease"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "B2refined",
+          "text": "B2refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.38"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "19.84"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "25.06"
+        }
+      ]
+    },
+    {
+      "result_id": "B2refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.md",
+        "sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547"
+      },
+      "locator": {
+        "line": 8
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "B2refined",
+          "text": "B2refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.38"
+        }
+      ]
+    },
+    {
+      "result_id": "B2refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.docx",
+        "sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66"
+      },
+      "locator": {
+        "paragraph": 7
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "B2refined",
+          "text": "B2refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.38"
+        }
+      ]
+    },
+    {
+      "result_id": "B2refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.pdf",
+        "sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b"
+      },
+      "locator": {
+        "page": 1,
+        "line_start": 20,
+        "line_end": 21
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "B2refined",
+          "text": "B2refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "22.38"
+        }
+      ]
+    },
+    {
+      "result_id": "A2refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.md",
+        "sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547"
+      },
+      "locator": {
+        "line": 9
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "increase",
+          "text": "increase"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "A2refined",
+          "text": "A2refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "25.77"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "22.79"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "28.81"
+        }
+      ]
+    },
+    {
+      "result_id": "A2refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.docx",
+        "sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66"
+      },
+      "locator": {
+        "paragraph": 8
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "increase",
+          "text": "increase"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "A2refined",
+          "text": "A2refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "25.77"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "22.79"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "28.81"
+        }
+      ]
+    },
+    {
+      "result_id": "A2refined",
+      "source_id": "study",
+      "role": "body",
+      "artifact": {
+        "path": "manuscript-build/study.pdf",
+        "sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b"
+      },
+      "locator": {
+        "page": 1,
+        "line_start": 22,
+        "line_end": 25
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "direction": {
+          "value": "increase",
+          "text": "increase"
+        },
+        "denominator": {
+          "value": 480,
+          "text": "n=480"
+        },
+        "outcome": {
+          "value": "penalty loss",
+          "text": "penalty loss"
+        },
+        "population": {
+          "value": "synthetic streams",
+          "text": "synthetic streams"
+        },
+        "time": {
+          "value": "360 steps",
+          "text": "360 steps"
+        },
+        "comparison": {
+          "value": "own tuned baseline",
+          "text": "own tuned baseline"
+        },
+        "model": {
+          "value": "A2refined",
+          "text": "A2refined"
+        },
+        "split": {
+          "value": "holdout",
+          "text": "holdout"
+        },
+        "uncertainty": {
+          "value": "bootstrap interval",
+          "text": "bootstrap interval"
+        },
+        "effect_type": {
+          "value": "arithmetic mean",
+          "text": "arithmetic mean"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "25.77"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "22.79"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "28.81"
+        }
+      ]
+    },
+    {
+      "result_id": "A2refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.md",
+        "sha256": "571f10e0b51455d167c5c4010bb665d1d0c1957b03ea8d97553e640e2f441547"
+      },
+      "locator": {
+        "line": 10
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "A2refined",
+          "text": "A2refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "25.77"
+        }
+      ]
+    },
+    {
+      "result_id": "A2refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.docx",
+        "sha256": "1208a54c6c7356d7e76b63863528f7b7c2a5bef9a48975ca733d809fc7deab66"
+      },
+      "locator": {
+        "paragraph": 9
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "A2refined",
+          "text": "A2refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "25.77"
+        }
+      ]
+    },
+    {
+      "result_id": "A2refined",
+      "source_id": "study",
+      "role": "caption",
+      "artifact": {
+        "path": "manuscript-build/study.pdf",
+        "sha256": "36efb48af9ea5cd15de3c79902fc0640eeeac81269aacc6b8511dd5bfb8a2a7b"
+      },
+      "locator": {
+        "page": 1,
+        "line_start": 26,
+        "line_end": 31
+      },
+      "semantics": {
+        "unit": {
+          "value": "loss-points",
+          "text": "loss-points"
+        },
+        "model": {
+          "value": "A2refined",
+          "text": "A2refined"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "25.77"
+        }
+      ]
+    }
+  ],
+  "claims": []
+}

@@ -1,0 +1,51 @@
+{
+  "checked_on": "2026-10-01",
+  "scope": "Official documentation and PyPI metadata verified before targeted installs; installed versions are in first-install-environment.json and setup logs",
+  "official_sources": [
+    {
+      "tool": "Python subprocess",
+      "url": "https://docs.python.org/3/library/subprocess.html",
+      "finding": "argv sequence with shell=False; cwd and env set per project"
+    },
+    {
+      "tool": "PyTorch MPS",
+      "url": "https://docs.pytorch.org/docs/stable/notes/mps.html",
+      "finding": "Backend availability and actual device operations must be checked; not installed or exercised in this acceptance"
+    },
+    {
+      "tool": "MLX",
+      "url": "https://ml-explore.github.io/mlx/build/html/install.html",
+      "finding": "Native Apple silicon Python>=3.10/macOS>=14 is a supported pip path; version0.32.3 CPU and GPU matmul actually calibrated here"
+    },
+    {
+      "tool": "SymPy",
+      "url": "https://www.sympy.org/en/index.html",
+      "finding": "Free BSD symbolic mathematics; version1.14.0 installed and exact derivative/integral verified"
+    },
+    {
+      "tool": "RDKit",
+      "url": "https://www.rdkit.org/docs/Install.html",
+      "finding": "Official documentation supports current rdkit PyPI wheels on macOS/Linux/Windows; version2026.3.6 BSD-3-Clause installed, descriptors and editable SDF reload actually verified"
+    },
+    {
+      "tool": "scikit-learn Ridge",
+      "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+      "finding": "Open-source Ridge algorithm version1.9.1 BSD-3-Clause; local training, fixed holdout evaluation and saved parameter reload; never used as an executing assistant"
+    },
+    {
+      "tool": "OR-Tools",
+      "url": "https://developers.google.com/optimization/introduction/python",
+      "finding": "Official Python setup consulted as candidate; not installed or exercised by this tool acceptance"
+    }
+  ],
+  "installation_event": "first-install-environment.json preserves installation_executed=true, while environment.json is a verified reuse snapshot; do not substitute the latter for actual install evidence",
+  "resolved_failure": "First follow-up calibration exposed ensure refusing verified project environment reuse without --apply. Root cause repaired; subsequent calibrations/professional chain passed; regression retained.",
+  "version_label": "Implementation-stage logs retain the source VERSION value present when executed (3.2.0-rc.3); they are not relabeled as a tagged release. The final release engineering run establishes rc.4 identity.",
+  "limits": [
+    "Manufactured cases verify software/API execution, not an original scientific finding",
+    "Small float32 dense matmul timing is not a formal throughput benchmark or guarantee of other operators/precisions",
+    "Generic RSS samples are an observed lower bound; exact calibration process peak uses the executed process own resource measurement",
+    "No R/Julia/Lean/GIS/CAD GUI or PyTorch/MPS execution is claimed; retained generic argv route supports verified tools at use time",
+    "First-download model weights were not required; fitted open-source prediction algorithm parameters were saved and reloaded locally"
+  ]
+}

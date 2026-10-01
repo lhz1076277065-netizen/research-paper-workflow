@@ -1,0 +1,23 @@
+{
+  "id": "REC-template",
+  "record_type": "analysis-execution",
+  "status": "draft",
+  "created_at": "2026-09-29T00:00:00+00:00",
+  "source_refs": [],
+  "artifact_refs": [],
+  "fields": {
+    "question_id": null,
+    "analysis_classification": null,
+    "dataset_version": null,
+    "method_and_code": null,
+    "execution_status": null,
+    "parameters_and_seed": null,
+    "sample_or_material_basis": null,
+    "estimate_and_units": null,
+    "uncertainty": null,
+    "diagnostics": null,
+    "comparators": null,
+    "artifact_ids": null,
+    "limitations": null
+  }
+}

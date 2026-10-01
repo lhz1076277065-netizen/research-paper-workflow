@@ -1,0 +1,90 @@
+[
+  {
+    "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/direction-no-data/raw/bike.zip",
+    "started_at": "2026-10-01T06:33:49.738109+00:00",
+    "status": 200,
+    "bytes": 279992,
+    "content_type": null,
+    "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401"
+  },
+  {
+    "url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/direction-no-data/source.html",
+    "started_at": "2026-10-01T06:33:51.652291+00:00",
+    "status": 200,
+    "bytes": 157041,
+    "content_type": "text/html",
+    "sha256": "bed39f6b5166df30a0fa4b76c261c9422b54d43b80b0df682cebb67e70ceff98"
+  },
+  {
+    "url": "https://www.onetcenter.org/database.html",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/database.html",
+    "started_at": "2026-10-01T06:33:53.461469+00:00",
+    "status": 200,
+    "bytes": 424356,
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "ea7f57b8a6f0d63e37eb21b04ef3f348fc53887210b9bfa4b21e1658332127a5"
+  },
+  {
+    "url": "https://www.onetcenter.org/db_releases.html",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/releases.html",
+    "started_at": "2026-10-01T06:33:58.437280+00:00",
+    "status": 200,
+    "bytes": 131136,
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "d8d125d47a9e0ba48b451fb1763688854afb138d00dee74ab0c0f8d52bbbef51"
+  },
+  {
+    "url": "https://www.onetcenter.org/license_db.html",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/license.html",
+    "started_at": "2026-10-01T06:34:00.811188+00:00",
+    "status": 200,
+    "bytes": 40520,
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "7e9d1d0185578cb8f6119afc69efa909904ed2e55727a7772d0cbe03febf53e6"
+  },
+  {
+    "url": "https://www.onetcenter.org/dl_files/database/db_20_0_text.zip",
+    "started_at": "2026-10-01T06:34:44.525341+00:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://www.onetcenter.org/dl_files/database/db_30_0_text.zip",
+    "started_at": "2026-10-01T06:34:44.526174+00:00",
+    "status": 200,
+    "bytes": 13462590,
+    "sha256": "b7388aadeb3edef2a59fd292ac4e9b72d3e9266c65a136b7b8cc42b23003ce5a",
+    "extracted": [
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/v30_0/Task Ratings.txt",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/v30_0/Occupation Data.txt",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/v30_0/Task Statements.txt"
+    ]
+  },
+  {
+    "url": "https://www.onetcenter.org/dl_files/db_20_0.zip",
+    "started_at": "2026-10-01T06:37:08.534444+00:00",
+    "status": 200,
+    "bytes": 11266024,
+    "sha256": "81e94b7a2956dd0382688a308c666a99fd67ebfcd52b6a6a83b467ac31dfc09f",
+    "extracted": [
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/v20_0/Task Statements.txt",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/v20_0/Occupation Data.txt",
+      "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/v20_0/Task Ratings.txt"
+    ]
+  },
+  {
+    "url": "https://www.onetcenter.org/dl_files/database/db_30_0_dictionary.pdf",
+    "status": 200,
+    "bytes": 652344,
+    "sha256": "0e54098b97e5f45fd05af6dfb5141b3b9ea40c39ccb6687abfcd0cdb1b59e988",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/v30_0/dictionary.pdf"
+  },
+  {
+    "url": "https://www.onetcenter.org/dl_files/DataDictionary20_0.pdf",
+    "status": 200,
+    "bytes": 454975,
+    "sha256": "b67e5159caf9327f4c5502badc64b47f92839af0cd6e8406bd6f08ceb7e01405",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc4-20261001/native/A/output/human-collection/v20_0/dictionary.pdf"
+  }
+]

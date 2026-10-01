@@ -1,0 +1,129 @@
+{
+  "kind": "result-links",
+  "passed": true,
+  "errors": [],
+  "pending": [],
+  "checks": [
+    "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+    "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+    "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+  ],
+  "coverage": {
+    "bytes": [
+      {
+        "path": "results.json",
+        "role": "frozen-results:frozen",
+        "expected_sha256": "68a815983e51b09275e08c129e0f690d0a306000081311f6292f13b188d6a5f3",
+        "actual_sha256": "68a815983e51b09275e08c129e0f690d0a306000081311f6292f13b188d6a5f3",
+        "matched": true
+      },
+      {
+        "path": "draft.md",
+        "role": "body",
+        "expected_sha256": "43aa242841c900c9705c25106759b00f764182420636894f3d4d125ca3587b94",
+        "actual_sha256": "43aa242841c900c9705c25106759b00f764182420636894f3d4d125ca3587b94",
+        "matched": true
+      },
+      {
+        "path": "data.csv",
+        "role": "source-version:data",
+        "expected_sha256": "3bd3b8d5b0169cffdaa78474c1eb145b516bb925d34543a97bc4ff5eb94af7fd",
+        "actual_sha256": "3bd3b8d5b0169cffdaa78474c1eb145b516bb925d34543a97bc4ff5eb94af7fd",
+        "matched": true
+      },
+      {
+        "path": "analysis.py",
+        "role": "source-version:code",
+        "expected_sha256": "47aae5487cc12ea2c4017d0eca89b42e0e704f79363818f4df6667359a74548e",
+        "actual_sha256": "47aae5487cc12ea2c4017d0eca89b42e0e704f79363818f4df6667359a74548e",
+        "matched": true
+      },
+      {
+        "path": "execution.json",
+        "role": "source-version:execution",
+        "expected_sha256": "ff7ac78c72db921c1f1783ab0687312ed4379e250de072f637a9c688e6ecd78b",
+        "actual_sha256": "ff7ac78c72db921c1f1783ab0687312ed4379e250de072f637a9c688e6ecd78b",
+        "matched": true
+      }
+    ],
+    "numeric": [
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "value",
+        "source_value": "0.41",
+        "display_text": "0.41",
+        "unit_factor": "1",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      }
+    ],
+    "declared_semantic": [
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "unit",
+        "source_value": "s",
+        "text": "s"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "population",
+        "source_value": "Cohort A",
+        "text": "Cohort A"
+      }
+    ],
+    "relationships": [
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "relationship": "primary_subject",
+        "field": "population",
+        "status": "checked"
+      }
+    ],
+    "occurrences": [
+      {
+        "result_id": "R1",
+        "source_id": "frozen",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "covered_fields": [
+          "population",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      }
+    ]
+  },
+  "coverage_gaps": [],
+  "scientific_validity_certified": false,
+  "semantic_truth_certified": false,
+  "actual_visual_inspection_performed": false,
+  "claim_inventory_complete": false,
+  "unlinked": []
+}

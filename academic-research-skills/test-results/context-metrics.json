@@ -1,491 +1,92 @@
 {
-  "scope": "Instrumented reader outputs only; whole unique file bytes and selected emitted characters are distinct; other tools, images, initial materials and actual model delivery are not fully measured; no token/cost estimate. Continuation traces may not cover every same-context action.",
-  "runs": [
-    {
-      "run_id": "chain-a.without-skill.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 0,
-      "read_events": 14,
-      "unique_resources": 13,
-      "unique_resource_bytes": 7161,
-      "resource_display_chars": 7819,
-      "exact_repeated_displays": 1,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 501.528637,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 0,
-        "material": 12,
-        "professional": 2
-      },
-      "project_entries_read": [],
-      "professional_entries_read": []
+  "version": "3.2.0",
+  "scope": "Current static Unicode counts vs rc.5; actual reading data is the preserved rc.4/rc.5 study, not current token/cost.",
+  "entries": {
+    "analysis-execution": {
+      "before_characters": 654,
+      "after_characters": 649
     },
-    {
-      "run_id": "chain-a.comparison.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 770,
-      "read_events": 27,
-      "unique_resources": 27,
-      "unique_resource_bytes": 70494,
-      "resource_display_chars": 45899,
-      "exact_repeated_displays": 0,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 197.436266,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 13,
-        "material": 12,
-        "professional": 2
-      },
-      "project_entries_read": [
-        "capabilities/literature-discovery/SKILL.md",
-        "capabilities/paper-deep-reading/SKILL.md",
-        "capabilities/research-design/SKILL.md",
-        "capabilities/topic-novelty/SKILL.md"
-      ],
-      "professional_entries_read": [
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/literature-review/SKILL.md"
-      ]
+    "citation-audit": {
+      "before_characters": 639,
+      "after_characters": 634
     },
-    {
-      "run_id": "chain-a.release.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 770,
-      "read_events": 30,
-      "unique_resources": 28,
-      "unique_resource_bytes": 83352,
-      "resource_display_chars": 49195,
-      "exact_repeated_displays": 0,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 273.531797,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 13,
-        "material": 12,
-        "professional": 5
-      },
-      "project_entries_read": [
-        "SKILL.md",
-        "capabilities/literature-discovery/SKILL.md",
-        "capabilities/paper-deep-reading/SKILL.md",
-        "capabilities/research-design/SKILL.md",
-        "capabilities/topic-novelty/SKILL.md"
-      ],
-      "professional_entries_read": [
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/literature-review/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/peer-review/SKILL.md"
-      ]
+    "data-discovery": {
+      "before_characters": 652,
+      "after_characters": 647
     },
-    {
-      "run_id": "chain-b.without-skill.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 0,
-      "read_events": 18,
-      "unique_resources": 17,
-      "unique_resource_bytes": 151130,
-      "resource_display_chars": 120433,
-      "exact_repeated_displays": 0,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 411.221698,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 0,
-        "material": 2,
-        "professional": 16
-      },
-      "project_entries_read": [],
-      "professional_entries_read": [
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Haojae/scipilot-figure-skill/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/scientific-writing/SKILL.md"
-      ]
+    "data-preparation": {
+      "before_characters": 644,
+      "after_characters": 639
     },
-    {
-      "run_id": "chain-b.comparison.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 770,
-      "read_events": 33,
-      "unique_resources": 29,
-      "unique_resource_bytes": 195194,
-      "resource_display_chars": 163254,
-      "exact_repeated_displays": 2,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 2066.650398,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 12,
-        "material": 2,
-        "professional": 19
-      },
-      "project_entries_read": [
-        "SKILL.md",
-        "capabilities/analysis-execution/SKILL.md",
-        "capabilities/data-discovery/SKILL.md",
-        "capabilities/data-preparation/SKILL.md",
-        "capabilities/manuscript-writing/SKILL.md",
-        "capabilities/robustness-reproducibility/SKILL.md",
-        "capabilities/scientific-visualization/SKILL.md"
-      ],
-      "professional_entries_read": [
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Adkid-Zephyr/anti-defensive-writing-Skill/skills/anti-defensive-writing-en/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Haojae/scipilot-figure-skill/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/scientific-writing/SKILL.md"
-      ]
+    "ethics-protocol": {
+      "before_characters": 641,
+      "after_characters": 636
     },
-    {
-      "run_id": "chain-b.release.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 770,
-      "read_events": 39,
-      "unique_resources": 35,
-      "unique_resource_bytes": 222628,
-      "resource_display_chars": 156630,
-      "exact_repeated_displays": 1,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 820.407723,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 16,
-        "material": 2,
-        "professional": 21
-      },
-      "project_entries_read": [
-        "SKILL.md",
-        "capabilities/analysis-execution/SKILL.md",
-        "capabilities/data-discovery/SKILL.md",
-        "capabilities/data-preparation/SKILL.md",
-        "capabilities/manuscript-writing/SKILL.md",
-        "capabilities/robustness-reproducibility/SKILL.md",
-        "capabilities/scientific-visualization/SKILL.md"
-      ],
-      "professional_entries_read": [
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Adkid-Zephyr/anti-defensive-writing-Skill/skills/anti-defensive-writing-en/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Haojae/scipilot-figure-skill/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/scientific-writing/SKILL.md"
-      ]
+    "journal-intelligence": {
+      "before_characters": 656,
+      "after_characters": 651
     },
-    {
-      "run_id": "chain-c.without-skill.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 0,
-      "read_events": 15,
-      "unique_resources": 15,
-      "unique_resource_bytes": 36508,
-      "resource_display_chars": 36460,
-      "exact_repeated_displays": 0,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 138.597557,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 0,
-        "material": 11,
-        "professional": 4
-      },
-      "project_entries_read": [],
-      "professional_entries_read": [
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/scientific-writing/SKILL.md"
-      ]
+    "literature-discovery": {
+      "before_characters": 646,
+      "after_characters": 641
     },
-    {
-      "run_id": "chain-c.comparison.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 770,
-      "read_events": 45,
-      "unique_resources": 43,
-      "unique_resource_bytes": 196232,
-      "resource_display_chars": 133720,
-      "exact_repeated_displays": 1,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 359.37107,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 20,
-        "material": 11,
-        "professional": 14
-      },
-      "project_entries_read": [
-        "SKILL.md",
-        "capabilities/citation-audit/SKILL.md",
-        "capabilities/ethics-protocol/SKILL.md",
-        "capabilities/journal-intelligence/SKILL.md",
-        "capabilities/manuscript-review/SKILL.md",
-        "capabilities/peer-review-response/SKILL.md",
-        "capabilities/publication-stewardship/SKILL.md",
-        "capabilities/submission-packaging/SKILL.md"
-      ],
-      "professional_entries_read": [
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Adkid-Zephyr/anti-defensive-writing-Skill/skills/anti-defensive-writing-en/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Haojae/scipilot-figure-skill/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/citation-management/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/peer-review/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/scientific-writing/SKILL.md"
-      ]
+    "manuscript-review": {
+      "before_characters": 700,
+      "after_characters": 695
     },
-    {
-      "run_id": "chain-c.release.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 770,
-      "read_events": 50,
-      "unique_resources": 45,
-      "unique_resource_bytes": 224489,
-      "resource_display_chars": 190807,
-      "exact_repeated_displays": 4,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 368.787935,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 19,
-        "material": 11,
-        "professional": 20
-      },
-      "project_entries_read": [
-        "capabilities/citation-audit/SKILL.md",
-        "capabilities/ethics-protocol/SKILL.md",
-        "capabilities/journal-intelligence/SKILL.md",
-        "capabilities/manuscript-review/SKILL.md",
-        "capabilities/peer-review-response/SKILL.md",
-        "capabilities/publication-stewardship/SKILL.md",
-        "capabilities/submission-packaging/SKILL.md"
-      ],
-      "professional_entries_read": [
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Adkid-Zephyr/anti-defensive-writing-Skill/skills/anti-defensive-writing-en/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Haojae/scipilot-figure-skill/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/citation-management/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/peer-review/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/scientific-writing/SKILL.md"
-      ]
+    "manuscript-writing": {
+      "before_characters": 720,
+      "after_characters": 715
     },
-    {
-      "run_id": "targeted-regression.release.0",
-      "coverage": "instrumented_reads_only",
-      "initial_entry_chars": 599,
-      "read_events": 28,
-      "unique_resources": 24,
-      "unique_resource_bytes": 154444,
-      "resource_display_chars": 105396,
-      "exact_repeated_displays": 1,
-      "input_tokens": null,
-      "cached_input_tokens": null,
-      "output_tokens": null,
-      "peak_context_tokens": null,
-      "cost": null,
-      "first_to_last_instrumented_read_seconds": 401.851465,
-      "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-      "resource_kinds": {
-        "project": 9,
-        "material": 8,
-        "professional": 11
-      },
-      "project_entries_read": [
-        "SKILL.md",
-        "capabilities/manuscript-writing/SKILL.md",
-        "capabilities/scientific-visualization/SKILL.md"
-      ],
-      "professional_entries_read": [
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Adkid-Zephyr/anti-defensive-writing-Skill/skills/anti-defensive-writing-en/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/Haojae/scipilot-figure-skill/SKILL.md",
-        "/Users/luca/Documents/ChatGPT/学术skill/iteration-rc3-20260930T132640Z/professional/K-Dense-AI/scientific-agent-skills/skills/scientific-writing/SKILL.md"
-      ]
+    "paper-deep-reading": {
+      "before_characters": 642,
+      "after_characters": 637
+    },
+    "peer-review-response": {
+      "before_characters": 692,
+      "after_characters": 687
+    },
+    "publication-stewardship": {
+      "before_characters": 646,
+      "after_characters": 641
+    },
+    "research-design": {
+      "before_characters": 694,
+      "after_characters": 689
+    },
+    "research-intake": {
+      "before_characters": 651,
+      "after_characters": 646
+    },
+    "research-paper-workflow": {
+      "before_characters": 798,
+      "after_characters": 793
+    },
+    "robustness-reproducibility": {
+      "before_characters": 648,
+      "after_characters": 643
+    },
+    "scientific-visualization": {
+      "before_characters": 714,
+      "after_characters": 709
+    },
+    "submission-packaging": {
+      "before_characters": 648,
+      "after_characters": 643
+    },
+    "topic-novelty": {
+      "before_characters": 694,
+      "after_characters": 689
     }
-  ],
-  "continuations": [
-    {
-      "run_id": "chain-b.without-skill.0.caption",
-      "parent_run_id": "chain-b.without-skill.0",
-      "role": "same_agent_continuation",
-      "phase": "caption",
-      "agent": "rc3_chain_b_control",
-      "status": "native_agent_completed",
-      "same_agent_continuation": true,
-      "independent_repeat": false,
-      "request_sha256": "5b08d7de143846123b56ce8ccc05afec748fec6f3615a193a3a67d0c27047c43",
-      "scope_check_sha256": "80c4eb9cca7dd83c8acd9470cf7e1141d3d7f1fa5d3acf50b2ff171c8c7ca6f2",
-      "operation_sha256": "990be15b8c15113c1162bf06c3a43479cd514e9ea67bbfb5f8f7493250d2db70",
-      "resource_metrics": {
-        "coverage": "same-context local phase; no separate reader trace asserted"
-      },
-      "full_task_wall_seconds": null
-    },
-    {
-      "run_id": "chain-b.without-skill.0.correction",
-      "parent_run_id": "chain-b.without-skill.0",
-      "role": "same_agent_continuation",
-      "phase": "correction",
-      "agent": "rc3_chain_b_control",
-      "status": "native_agent_completed",
-      "same_agent_continuation": true,
-      "independent_repeat": false,
-      "request_sha256": "ea75482353ab7f63318e06fd07b06eb473d2777f0a44e508a66ee1724d294a19",
-      "scope_check_sha256": "16d22b47995f4c57eb4b405d4429f6b4eb6697ea253e24bc75a9eed6c7c4445c",
-      "operation_sha256": "129ff557cf55f20d19b1f6e7177185e24fdc432584221532380bc91061373840",
-      "resource_metrics": {
-        "coverage": "instrumented_reads_only",
-        "initial_entry_chars": 0,
-        "read_events": 1,
-        "unique_resources": 1,
-        "unique_resource_bytes": 776,
-        "resource_display_chars": 776,
-        "exact_repeated_displays": 0,
-        "input_tokens": null,
-        "cached_input_tokens": null,
-        "output_tokens": null,
-        "peak_context_tokens": null,
-        "cost": null,
-        "first_to_last_instrumented_read_seconds": 0.0,
-        "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-        "resource_kinds": {
-          "project": 0,
-          "material": 1,
-          "professional": 0
-        },
-        "project_entries_read": [],
-        "professional_entries_read": []
-      },
-      "full_task_wall_seconds": null
-    },
-    {
-      "run_id": "chain-b.comparison.0.caption",
-      "parent_run_id": "chain-b.comparison.0",
-      "role": "same_agent_continuation",
-      "phase": "caption",
-      "agent": "rc3_chain_b_comparison",
-      "status": "native_agent_completed",
-      "same_agent_continuation": true,
-      "independent_repeat": false,
-      "request_sha256": "d36eb0ca1bdd9c54da031647b5759b2fca646f110c63a1555adcaea65a8a018a",
-      "scope_check_sha256": "2775acca9330a5176bce9eedb02236dc54d9d7f80c336bc2af297f5c21b162b6",
-      "operation_sha256": "dc0d505bac8b54047d03b858f2bc34c9329ddc3d3393bb9ba570ed554ff476dc",
-      "resource_metrics": {
-        "coverage": "same-context local phase; no separate reader trace asserted"
-      },
-      "full_task_wall_seconds": null
-    },
-    {
-      "run_id": "chain-b.comparison.0.correction",
-      "parent_run_id": "chain-b.comparison.0",
-      "role": "same_agent_continuation",
-      "phase": "correction",
-      "agent": "rc3_chain_b_comparison",
-      "status": "native_agent_completed",
-      "same_agent_continuation": true,
-      "independent_repeat": false,
-      "request_sha256": "64b3b32ef20cbd9b6a3c21d2164ca17fe557884da63df2ad59c29cedae914beb",
-      "scope_check_sha256": "29d29afb34cb4ed9719f8bbce0647a051584310315cf7a21ed595379c7288ae0",
-      "operation_sha256": "2462665aae122e01225597b7029aacc8c40925d0b555dc8475c10ccb96d4b8cd",
-      "resource_metrics": {
-        "coverage": "instrumented_reads_only",
-        "initial_entry_chars": 0,
-        "read_events": 1,
-        "unique_resources": 1,
-        "unique_resource_bytes": 776,
-        "resource_display_chars": 776,
-        "exact_repeated_displays": 0,
-        "input_tokens": null,
-        "cached_input_tokens": null,
-        "output_tokens": null,
-        "peak_context_tokens": null,
-        "cost": null,
-        "first_to_last_instrumented_read_seconds": 0.0,
-        "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-        "resource_kinds": {
-          "project": 0,
-          "material": 1,
-          "professional": 0
-        },
-        "project_entries_read": [],
-        "professional_entries_read": []
-      },
-      "full_task_wall_seconds": null
-    },
-    {
-      "run_id": "chain-b.release.0.caption",
-      "parent_run_id": "chain-b.release.0",
-      "role": "same_agent_continuation",
-      "phase": "caption",
-      "agent": "rc3_chain_b_candidate",
-      "status": "native_agent_completed",
-      "same_agent_continuation": true,
-      "independent_repeat": false,
-      "request_sha256": "4a3aa2cd4cef004768b4d4239ac0d2aede15e46644dba57f393b5b2c902fc374",
-      "scope_check_sha256": "903a6666acc686d8563fe8eb1eb710356c865fb478adb7520ad7586298fbc33a",
-      "operation_sha256": "4215c1925249abfd25cb7c5b1d44be4c02d119cbc65ee17faa55b104d93ad277",
-      "resource_metrics": {
-        "coverage": "same-context local phase; no separate reader trace asserted"
-      },
-      "full_task_wall_seconds": null
-    },
-    {
-      "run_id": "chain-b.release.0.correction",
-      "parent_run_id": "chain-b.release.0",
-      "role": "same_agent_continuation",
-      "phase": "correction",
-      "agent": "rc3_chain_b_candidate",
-      "status": "native_agent_completed",
-      "same_agent_continuation": true,
-      "independent_repeat": false,
-      "request_sha256": "96b38aa5b7d56757c3854163eedcfe3846d7bbde3c8b344ec54a16b4d721a999",
-      "scope_check_sha256": "b57c84d77e91f9ba2516c2e7afb6e6675bb9fd5027772d4cefee042e0396ee9f",
-      "operation_sha256": "a0b7a43117ffccd5eb7433cc000ad850c720d0d627aef8e4b11e9ebf728939a9",
-      "resource_metrics": {
-        "coverage": "instrumented_reads_only",
-        "initial_entry_chars": 0,
-        "read_events": 1,
-        "unique_resources": 1,
-        "unique_resource_bytes": 776,
-        "resource_display_chars": 776,
-        "exact_repeated_displays": 0,
-        "input_tokens": null,
-        "cached_input_tokens": null,
-        "output_tokens": null,
-        "peak_context_tokens": null,
-        "cost": null,
-        "first_to_last_instrumented_read_seconds": 0.0,
-        "time_scope": "Instrumented read-event span only, not full task, program execution, dispatch-to-completion or billing.",
-        "resource_kinds": {
-          "project": 0,
-          "material": 1,
-          "professional": 0
-        },
-        "project_entries_read": [],
-        "professional_entries_read": []
-      },
-      "full_task_wall_seconds": null
-    }
-  ]
+  },
+  "quality_core_before": 3152,
+  "quality_core_after": 1829,
+  "on_demand_example_shards": 3,
+  "actual_reading": {
+    "old_emitted_characters": 12666,
+    "candidate_emitted_characters": 10020,
+    "reduction_fraction": 0.2089057318806253,
+    "scope": "Actual supplied-reader emitted Unicode characters; not token cost, hidden model context or mental comprehension."
+  },
+  "token_cost_measured": false
 }

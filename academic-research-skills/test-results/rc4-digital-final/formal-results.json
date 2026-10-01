@@ -1,0 +1,34 @@
+{
+  "kind": "formal derivation with rational implementation checks",
+  "condition": "a>0, x in [0,1]",
+  "proof": "proof.md",
+  "proof_sha256": "aab2f653e5ff95a6443a9e07d3ea071449c12feaf966a2760a71c77490087c38",
+  "cases": [
+    {
+      "t": "-1/4",
+      "p": "0",
+      "rational_checks": 17
+    },
+    {
+      "t": "0",
+      "p": "0",
+      "rational_checks": 17
+    },
+    {
+      "t": "3/8",
+      "p": "3/8",
+      "rational_checks": 17
+    },
+    {
+      "t": "1",
+      "p": "1",
+      "rational_checks": 17
+    },
+    {
+      "t": "5/4",
+      "p": "1",
+      "rational_checks": 17
+    }
+  ],
+  "formal_proof_assistant_used": false
+}

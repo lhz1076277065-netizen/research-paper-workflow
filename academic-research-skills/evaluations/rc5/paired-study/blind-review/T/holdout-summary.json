@@ -1,0 +1,185 @@
+{
+  "baseline": {
+    "mean_loss": 24.35625,
+    "false_alarms": 13,
+    "hits": 184,
+    "runtime_seconds": 0.026875167000071087,
+    "groups": {
+      "bursts": {
+        "n": 120,
+        "false_alarms": 4,
+        "hits": 45,
+        "mean_loss": 26.116666666666667
+      },
+      "clean": {
+        "n": 120,
+        "false_alarms": 2,
+        "hits": 44,
+        "mean_loss": 24.5
+      },
+      "gaps": {
+        "n": 120,
+        "false_alarms": 5,
+        "hits": 42,
+        "mean_loss": 27.883333333333333
+      },
+      "heavy": {
+        "n": 120,
+        "false_alarms": 2,
+        "hits": 53,
+        "mean_loss": 18.925
+      }
+    }
+  },
+  "initial": {
+    "mean_loss": 24.35625,
+    "false_alarms": 13,
+    "hits": 184,
+    "runtime_seconds": 0.03163733300061722,
+    "groups": {
+      "bursts": {
+        "n": 120,
+        "false_alarms": 4,
+        "hits": 45,
+        "mean_loss": 26.116666666666667
+      },
+      "clean": {
+        "n": 120,
+        "false_alarms": 2,
+        "hits": 44,
+        "mean_loss": 24.5
+      },
+      "gaps": {
+        "n": 120,
+        "false_alarms": 5,
+        "hits": 42,
+        "mean_loss": 27.883333333333333
+      },
+      "heavy": {
+        "n": 120,
+        "false_alarms": 2,
+        "hits": 53,
+        "mean_loss": 18.925
+      }
+    }
+  },
+  "refined": {
+    "mean_loss": 25.766666666666666,
+    "false_alarms": 15,
+    "hits": 169,
+    "runtime_seconds": 0.03876608300015505,
+    "groups": {
+      "bursts": {
+        "n": 120,
+        "false_alarms": 4,
+        "hits": 38,
+        "mean_loss": 27.841666666666665
+      },
+      "clean": {
+        "n": 120,
+        "false_alarms": 2,
+        "hits": 40,
+        "mean_loss": 25.65
+      },
+      "gaps": {
+        "n": 120,
+        "false_alarms": 4,
+        "hits": 41,
+        "mean_loss": 27.05
+      },
+      "heavy": {
+        "n": 120,
+        "false_alarms": 5,
+        "hits": 50,
+        "mean_loss": 22.525
+      }
+    }
+  },
+  "ablation": {
+    "mean_loss": 26.258333333333333,
+    "false_alarms": 32,
+    "hits": 185,
+    "runtime_seconds": 0.04013429200040264,
+    "groups": {
+      "bursts": {
+        "n": 120,
+        "false_alarms": 10,
+        "hits": 45,
+        "mean_loss": 28.825
+      },
+      "clean": {
+        "n": 120,
+        "false_alarms": 3,
+        "hits": 45,
+        "mean_loss": 23.216666666666665
+      },
+      "gaps": {
+        "n": 120,
+        "false_alarms": 12,
+        "hits": 42,
+        "mean_loss": 31.141666666666666
+      },
+      "heavy": {
+        "n": 120,
+        "false_alarms": 7,
+        "hits": 53,
+        "mean_loss": 21.85
+      }
+    }
+  },
+  "baseline_to_refined": {
+    "mean_loss_reduction": -1.4104166666666667,
+    "bootstrap_95_percentile": [
+      -3.01046875,
+      0.05
+    ],
+    "improved_cases": 85,
+    "worsened_cases": 100,
+    "tied_cases": 295,
+    "n": 480,
+    "scope": "Paired independent synthetic streams; exploratory percentile interval, fixed loss and selected development configs."
+  },
+  "initial_to_refined": {
+    "mean_loss_reduction": -1.4104166666666667,
+    "bootstrap_95_percentile": [
+      -3.01046875,
+      0.05
+    ],
+    "improved_cases": 85,
+    "worsened_cases": 100,
+    "tied_cases": 295,
+    "n": 480,
+    "scope": "Paired independent synthetic streams; exploratory percentile interval, fixed loss and selected development configs."
+  },
+  "median_to_refined": {
+    "mean_loss_reduction": 8.11875,
+    "bootstrap_95_percentile": [
+      4.5811979166666665,
+      11.74458333333333
+    ],
+    "improved_cases": 120,
+    "worsened_cases": 164,
+    "tied_cases": 196,
+    "n": 480,
+    "scope": "Paired independent synthetic streams; exploratory percentile interval, fixed loss and selected development configs."
+  },
+  "ablation_to_refined": {
+    "mean_loss_reduction": 0.49166666666666664,
+    "bootstrap_95_percentile": [
+      -1.1021874999999999,
+      2.225
+    ],
+    "improved_cases": 17,
+    "worsened_cases": 31,
+    "tied_cases": 432,
+    "n": 480,
+    "scope": "Paired independent synthetic streams; exploratory percentile interval, fixed loss and selected development configs."
+  },
+  "ablation_parameter_differences": {
+    "two_blocks": [
+      false,
+      true
+    ]
+  },
+  "causal_prefix_checks": 18123
+}

@@ -1,0 +1,58 @@
+{
+  "search_queries": [
+    "Page 1954 continuous inspection schemes CUSUM Biometrika",
+    "robust sequential change detection transient changes window limited CUSUM primary paper",
+    "Fearnhead Rigaill changepoint detection presence outliers biweight primary paper",
+    "CUSUM confirmation delay runs rule burst rejection change detection"
+  ],
+  "primary_sources": [
+    {
+      "title": "Continuous Inspection Schemes",
+      "authors": [
+        "E. S. Page"
+      ],
+      "year": 1954,
+      "url": "https://doi.org/10.1093/biomet/41.1-2.100",
+      "access_scope": "Publisher bibliographic record; paper PDF paywalled. Baseline recurrence verified in supplied harness, not inferred from full paper access."
+    },
+    {
+      "title": "Changepoint Detection in the Presence of Outliers",
+      "authors": [
+        "Paul Fearnhead",
+        "Guillem Rigaill"
+      ],
+      "year": 2019,
+      "url": "https://doi.org/10.1080/01621459.2017.1385466",
+      "also_opened": "https://arxiv.org/html/1609.07363",
+      "access_scope": "Publisher indexed content emitted abstract, bounded-loss and minimum-segment discussion (Section 2.1), and online example. Arxiv HTML entry also opened. No exhaustive full-paper review claimed."
+    },
+    {
+      "title": "Quickest Change Detection in the Presence of a Nuisance Change",
+      "authors": [
+        "Tze Siong Lau",
+        "Wee Peng Tay"
+      ],
+      "year": 2019,
+      "url": "https://arxiv.org/html/1902.03460",
+      "doi": "10.1109/TSP.2019.2939080",
+      "access_scope": "Abstract plus HTML introduction, Sections II and III; four-regime distribution model, nuisance/critical GLR numerator and denominator, two-stage comparator."
+    },
+    {
+      "title": "Window-Limited CUSUM for Sequential Change Detection",
+      "authors": [
+        "Liyan Xie",
+        "George V. Moustakides",
+        "Yao Xie"
+      ],
+      "year": 2023,
+      "url": "https://arxiv.org/html/2206.06777",
+      "access_scope": "Abstract, introduction and related-work HTML passages; sliding-window post-change estimation feeding recursive CUSUM."
+    }
+  ],
+  "additional_primary_discovery": {
+    "title": "Sequential Detection of Transient Changes",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/07474946.2012.719443",
+    "access_scope": "Publisher search abstract; later open returned Internal Error; not relied on for authors or a detailed mechanism comparison."
+  },
+  "limits": "Focused primary-source mechanism search, not systematic literature coverage or proof of originality."
+}

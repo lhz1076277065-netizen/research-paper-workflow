@@ -1,0 +1,45 @@
+{
+  "rows": 17379,
+  "days": 731,
+  "unique_timestamps": 17379,
+  "missing_hours_on_731_day_grid": 165,
+  "weather": {
+    "1": {
+      "hours": 11413,
+      "dates": 700,
+      "years": {
+        "0": 5645,
+        "1": 5768
+      }
+    },
+    "2": {
+      "hours": 4544,
+      "dates": 567,
+      "years": {
+        "0": 2218,
+        "1": 2326
+      }
+    },
+    "3": {
+      "hours": 1419,
+      "dates": 300,
+      "years": {
+        "0": 781,
+        "1": 638
+      }
+    },
+    "4": {
+      "hours": 3,
+      "dates": 3,
+      "years": {
+        "0": 1,
+        "1": 2
+      }
+    }
+  },
+  "cnt_equals_casual_plus_registered": true,
+  "date_range": [
+    "2011-01-01",
+    "2012-12-31"
+  ]
+}

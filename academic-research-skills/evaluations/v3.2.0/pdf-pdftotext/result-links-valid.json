@@ -1,0 +1,300 @@
+{
+  "kind": "result-links",
+  "passed": true,
+  "errors": [],
+  "pending": [],
+  "checks": [
+    "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+    "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+    "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+  ],
+  "coverage": {
+    "bytes": [
+      {
+        "path": "results.json",
+        "role": "frozen-results:frozen",
+        "expected_sha256": "2a8e295615887274697cd44d95d222ec4a80605cc001e2ca78a4af6a869716a9",
+        "actual_sha256": "2a8e295615887274697cd44d95d222ec4a80605cc001e2ca78a4af6a869716a9",
+        "matched": true
+      },
+      {
+        "path": "draft.pdf",
+        "role": "body",
+        "expected_sha256": "682b0ea33afe6cfdac557ce25210c864533eb5e5cc85ded9dce9eef9e571b264",
+        "actual_sha256": "682b0ea33afe6cfdac557ce25210c864533eb5e5cc85ded9dce9eef9e571b264",
+        "matched": true
+      },
+      {
+        "path": "data.csv",
+        "role": "source-version:data",
+        "expected_sha256": "023e48507d077eb0fc7b25e6fe15104be434ab4eb9aba05c556acac93e4d669f",
+        "actual_sha256": "023e48507d077eb0fc7b25e6fe15104be434ab4eb9aba05c556acac93e4d669f",
+        "matched": true
+      },
+      {
+        "path": "analysis.py",
+        "role": "source-version:code",
+        "expected_sha256": "a87760dbd7af7022b0214c2b1e57059fffd1e497935c609d9225eef7b826a967",
+        "actual_sha256": "a87760dbd7af7022b0214c2b1e57059fffd1e497935c609d9225eef7b826a967",
+        "matched": true
+      },
+      {
+        "path": "execution.json",
+        "role": "source-version:execution",
+        "expected_sha256": "6cabf397ef7479ffa0a1f62c30be52b5674091c1d135d4ce34d012a2f4085cc2",
+        "actual_sha256": "6cabf397ef7479ffa0a1f62c30be52b5674091c1d135d4ce34d012a2f4085cc2",
+        "matched": true
+      }
+    ],
+    "numeric": [
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "value",
+        "source_value": "0.123456",
+        "display_text": "12.35",
+        "unit_factor": "1E+2",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "lower",
+        "source_value": "0.1",
+        "display_text": "10.00",
+        "unit_factor": "1E+2",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "upper",
+        "source_value": "0.15",
+        "display_text": "15.00",
+        "unit_factor": "1E+2",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      }
+    ],
+    "declared_semantic": [
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "unit",
+        "source_value": "ratio",
+        "text": "%"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "direction",
+        "source_value": "increase",
+        "text": "increased"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "denominator",
+        "source_value": 120,
+        "text": "n=120"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "outcome",
+        "source_value": "accuracy",
+        "text": "accuracy"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "population",
+        "source_value": "held-out cohort",
+        "text": "held-out cohort"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "time",
+        "source_value": "6 months",
+        "text": "6 months"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "comparison",
+        "source_value": "baseline",
+        "text": "baseline"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "model",
+        "source_value": "M1",
+        "text": "M1"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "split",
+        "source_value": "test",
+        "text": "test"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "uncertainty",
+        "source_value": "95% CI",
+        "text": "95% CI"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "field": "effect_type",
+        "source_value": "absolute",
+        "text": "absolute"
+      }
+    ],
+    "relationships": [
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "relationship": "primary_subject",
+        "field": "model",
+        "status": "checked"
+      }
+    ],
+    "occurrences": [
+      {
+        "result_id": "R1",
+        "source_id": "frozen",
+        "role": "body",
+        "path": "draft.pdf",
+        "locator": {
+          "page": 1,
+          "line": 1
+        },
+        "covered_fields": [
+          "comparison",
+          "denominator",
+          "direction",
+          "effect_type",
+          "lower",
+          "model",
+          "outcome",
+          "population",
+          "split",
+          "time",
+          "uncertainty",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      }
+    ]
+  },
+  "coverage_gaps": [],
+  "scientific_validity_certified": false,
+  "semantic_truth_certified": false,
+  "actual_visual_inspection_performed": false,
+  "claim_inventory_complete": false,
+  "unlinked": []
+}

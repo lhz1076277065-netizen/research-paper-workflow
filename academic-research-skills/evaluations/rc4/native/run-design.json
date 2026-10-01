@@ -1,0 +1,18 @@
+{
+  "conditions": {
+    "A": "v3.2.0-rc.3 tag archive",
+    "B": "rc.4 maintained guidance frozen after rebuild; later shared numeric/packaging engineering fixes do not alter evaluated research protocols"
+  },
+  "cases_sha256": "6bd8fcd921721954f3024c878fe58d5ce1bbb10f42c5fb27e9862ff0fa1c1ea6",
+  "same_requests": true,
+  "contexts": 2,
+  "subcases_per_context": 8,
+  "independent_repeats_per_version": 0,
+  "model": "inherited current host model; no override",
+  "exact_model_revision": null,
+  "tools": "same native host tools, supported Python, free public network; actual calls can differ",
+  "effort": "same approximately ten-minute instruction; not a hard measured time or token cap",
+  "tokens": null,
+  "cost": null,
+  "scope": "Eight subcases share each condition context, reviewer independent; not a population estimate"
+}

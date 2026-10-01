@@ -1,0 +1,74 @@
+{
+  "bursts": {
+    "baseline": {
+      "n": 30,
+      "false_alarms": 0,
+      "hits": 13,
+      "mean_loss": 18.966666666666665
+    },
+    "initial": {
+      "n": 30,
+      "false_alarms": 1,
+      "hits": 12,
+      "mean_loss": 24.266666666666666
+    },
+    "initial_better": 3,
+    "initial_worse": 11,
+    "initial_new_false_ids": [
+      "65109-bursts-22"
+    ]
+  },
+  "clean": {
+    "baseline": {
+      "n": 30,
+      "false_alarms": 1,
+      "hits": 12,
+      "mean_loss": 20.9
+    },
+    "initial": {
+      "n": 30,
+      "false_alarms": 1,
+      "hits": 11,
+      "mean_loss": 22.9
+    },
+    "initial_better": 2,
+    "initial_worse": 8,
+    "initial_new_false_ids": []
+  },
+  "gaps": {
+    "baseline": {
+      "n": 30,
+      "false_alarms": 1,
+      "hits": 13,
+      "mean_loss": 21
+    },
+    "initial": {
+      "n": 30,
+      "false_alarms": 1,
+      "hits": 12,
+      "mean_loss": 26.066666666666666
+    },
+    "initial_better": 2,
+    "initial_worse": 10,
+    "initial_new_false_ids": []
+  },
+  "heavy": {
+    "baseline": {
+      "n": 30,
+      "false_alarms": 2,
+      "hits": 14,
+      "mean_loss": 16.533333333333335
+    },
+    "initial": {
+      "n": 30,
+      "false_alarms": 3,
+      "hits": 13,
+      "mean_loss": 22.766666666666666
+    },
+    "initial_better": 2,
+    "initial_worse": 12,
+    "initial_new_false_ids": [
+      "65109-heavy-6"
+    ]
+  }
+}

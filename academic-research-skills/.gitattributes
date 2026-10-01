@@ -1,0 +1,8 @@
+# Preserve recorded/raw evidence bytes; source review still applies to maintained code.
+*.pdf binary
+source-diffs/*.patch -whitespace
+evaluations/** -whitespace
+history/** -whitespace
+test-results/** -whitespace
+evaluations/rc4/native/*/output/direction-no-data/raw/** binary
+evaluations/rc4/native/*/output/human-collection/*/*.txt binary

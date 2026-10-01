@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0-alpha.1",
+  "skill": "research-design",
+  "standalone": true,
+  "required_other_skills": [],
+  "records_file": "design_records.jsonl",
+  "output_roles": [
+    "research_protocol.md",
+    "method_decision.md",
+    "analysis_plan.md"
+  ],
+  "gates": [
+    "question_method_alignment",
+    "identification_or_inference_limits",
+    "information_adequacy",
+    "leakage_controls",
+    "protocol_and_changes_traceable"
+  ]
+}

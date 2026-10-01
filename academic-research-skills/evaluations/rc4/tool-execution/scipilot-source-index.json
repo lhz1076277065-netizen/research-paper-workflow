@@ -1,0 +1,109 @@
+{
+  "schema_version": "upstream-index-1",
+  "repository": "Haojae/scipilot-figure-skill",
+  "url": "https://github.com/Haojae/scipilot-figure-skill",
+  "requested_ref": null,
+  "default_branch": "main",
+  "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+  "tree_sha": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64",
+  "checked_at": "2026-10-01T06:16:18.371145+00:00",
+  "complete": true,
+  "unresolved_trees": [],
+  "skills": [
+    "SKILL.md"
+  ],
+  "files": {
+    ".gitignore": {
+      "path": ".gitignore",
+      "blob_sha": "b34d6a8cf139a328dea6fbf284e0754254ab9ab2",
+      "size": 513
+    },
+    "LICENSE": {
+      "path": "LICENSE",
+      "blob_sha": "897e469d1446e6cfc5a71858387e01fd1129197c",
+      "size": 1063
+    },
+    "README.md": {
+      "path": "README.md",
+      "blob_sha": "0c7bc1c5b92234322a841994be6085591e087e7b",
+      "size": 14453
+    },
+    "SKILL.md": {
+      "path": "SKILL.md",
+      "blob_sha": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+      "size": 17171
+    },
+    "references/chart_selection.md": {
+      "path": "references/chart_selection.md",
+      "blob_sha": "547e3ed795beb8c52c40d56107dd368e729f31d8",
+      "size": 11584
+    },
+    "references/data_profiling.md": {
+      "path": "references/data_profiling.md",
+      "blob_sha": "afb50d0afc6b36e43f6537324af78ec22d2968d8",
+      "size": 8566
+    },
+    "references/journal_specs.md": {
+      "path": "references/journal_specs.md",
+      "blob_sha": "b28162888c0bfc378b2292dc0356f5d7aaed674a",
+      "size": 7428
+    },
+    "references/plot_recipes.md": {
+      "path": "references/plot_recipes.md",
+      "blob_sha": "5d5edc17fa173f367e98839f27f6c3d2f5ad8cf2",
+      "size": 19204
+    },
+    "references/publication_checklist.md": {
+      "path": "references/publication_checklist.md",
+      "blob_sha": "2dd61367123aec7974d133d36bc9b6c204a30f6e",
+      "size": 5993
+    },
+    "references/visual_review.md": {
+      "path": "references/visual_review.md",
+      "blob_sha": "62a2d1b8ab54fdeacbfb972474d3c6c4b8f7527d",
+      "size": 7330
+    },
+    "references/viz_pitfalls.md": {
+      "path": "references/viz_pitfalls.md",
+      "blob_sha": "68fc0245ef4faf4e1f336a4d5fd432252a53bfe5",
+      "size": 15851
+    },
+    "requirements.txt": {
+      "path": "requirements.txt",
+      "blob_sha": "7f194bb3314bf45682386d5a6a65b677bc14ef55",
+      "size": 287
+    },
+    "scripts/check_figure.py": {
+      "path": "scripts/check_figure.py",
+      "blob_sha": "30d4bdeed5694e8690031235744d76093ee4176a",
+      "size": 9709
+    },
+    "scripts/export_figure.py": {
+      "path": "scripts/export_figure.py",
+      "blob_sha": "a3a4df7580f8d4275d822424a11aaa9f6f36df11",
+      "size": 6450
+    },
+    "scripts/layout_tools.py": {
+      "path": "scripts/layout_tools.py",
+      "blob_sha": "4eb29f13cea9bbe2e507919bb0412b9e2647d1ae",
+      "size": 9351
+    },
+    "scripts/profile_data.py": {
+      "path": "scripts/profile_data.py",
+      "blob_sha": "7bf54ec4ceb438974f4238e4b4ed4a13cd09ba67",
+      "size": 17764
+    },
+    "scripts/setup_style.py": {
+      "path": "scripts/setup_style.py",
+      "blob_sha": "35c5d3a8fb99b3477c544dccf331bb4d81af7657",
+      "size": 11794
+    },
+    "scripts/visual_qa.py": {
+      "path": "scripts/visual_qa.py",
+      "blob_sha": "02ec9fb6c9300986bdf4e5b257b96e00eb13e89c",
+      "size": 12677
+    }
+  },
+  "execution_performed": false,
+  "tree_calls": 1
+}

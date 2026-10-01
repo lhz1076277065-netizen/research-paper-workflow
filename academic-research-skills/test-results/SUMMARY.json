@@ -1,21 +1,28 @@
 {
-  "version": "3.2.0-rc.3",
-  "scope": "Complete discipline-neutral Skill candidate; synthetic development fixtures, not research-paper output",
+  "version": "3.2.0",
+  "baseline_tag": "v3.2.0-rc.5",
+  "baseline_commit": "9813b193a2cd6504205ede70393c22c7683e22c6",
+  "scope": "Stable release closure; frozen rc.5 interfaces. Current archive tests are new; scientific research remains preserved rc.5 evaluation.",
   "regression": {
-    "version": "3.2.0-rc.3",
-    "generated_at": "2026-09-30T13:38:25.835457+00:00",
-    "tests_run": 517,
+    "version": "3.2.0",
+    "generated_at": "2026-10-01T11:50:24.520923+00:00",
+    "tests_run": 608,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "passed": true,
     "groups": {
       "test_architecture": 86,
+      "test_computational_routes": 10,
       "test_integration": 78,
       "test_lean": 57,
+      "test_package_identity": 2,
+      "test_pdf_extract": 2,
       "test_portability": 50,
       "test_quality31": 68,
       "test_release": 57,
+      "test_research_tools": 18,
+      "test_result_links": 59,
       "test_suite": 121
     },
     "platform": "Darwin",
@@ -26,57 +33,83 @@
     "real_paper_lifecycle_tested": false,
     "macos_native_tested": true
   },
-  "retained_rc2_cases": 514,
-  "new_targeted_cases": 3,
+  "retained_cases": 608,
+  "new_targeted_cases": 0,
+  "root_legacy_tests": 30,
   "build": {
-    "generated_files": 797,
-    "drift": 0,
-    "evidence_in_source": "evaluations/results/rc3/engineering/final-build-check.json"
+    "generated_files": 937,
+    "drift": 0
   },
-  "smoke": {
-    "scientific_tests": 7,
-    "scientific_passed": true,
-    "manufactured_inputs": true
-  },
-  "structure": {
-    "skills_checked": 19,
-    "passed": true
-  },
+  "standalone_modules": 19,
+  "actual_isolated_basic_checks": 76,
   "preserved": {
-    "capabilities": 19,
-    "research_profiles": 16,
-    "default_profile": "general",
-    "extensions_allowed": true,
-    "external_professional_sources": 13,
-    "entry_body_and_description_changes": 0,
-    "UI_yaml_unchanged": true,
-    "frozen_candidate_bundles_and_materials_unchanged": true,
-    "old_reports_preserved": 7
+    "profiles": 16,
+    "routes": 14,
+    "designated_repositories": 13,
+    "existing_root_UI_unchanged": true,
+    "professional_protocols_unchanged": true
+  },
+  "independent_engineering_review": {
+    "actual_file_probes": 20,
+    "entrypoints": 4,
+    "unexpected": 0,
+    "initial_false_passes_repaired": 4
+  },
+  "actual_PDF_backends": [
+    "pdftotext",
+    "pypdf_only"
+  ],
+  "actual_exports": {
+    "formats": [
+      "Markdown",
+      "DOCX",
+      "PDF"
+    ],
+    "linked_occurrences": 24,
+    "passed": true,
+    "located_semantic_and_visual_review": true
   },
   "native_evaluation": {
-    "new_material_task_executions": 9,
-    "old_neighbor_task_contexts": 1,
-    "old_neighbor_operations_in_that_context": 4,
-    "task_executions": 10,
-    "same_agent_continuation_phases": 6,
-    "anonymous_content_reviews": 3,
-    "total_independent_evaluation_contexts": 13,
-    "manual_project_entry_contexts": 7,
-    "without_project_entry_contexts": 3,
-    "new_same_version_independent_repeats": 0,
-    "historical_rc2_repeats": 3,
-    "observed_distinct_project_entries": 18,
-    "research_intake_native_invocation_established": false,
-    "candidate_tuned_using_test_answers": false,
-    "configured_model_alias": "gpt-6.1-sol",
-    "exact_model_version": null,
-    "platform_registration_or_auto_discovery_established": false,
-    "uniform_quality_gain_established": false,
-    "per_trial_tokens": null,
-    "peak_effective_context": null,
-    "per_trial_cost": null,
-    "report_in_source": "evaluations/results/QUALITY_REPORT.zh-CN.md"
+    "contexts": 4,
+    "paired_repeats": 2,
+    "problems": 1,
+    "constructed_holdout_streams": 480,
+    "dev_score_calls_each": 40,
+    "extra_train_score_calls_B1": 3,
+    "causal_checkpoint_and_alarm_boundary_checks": 83211,
+    "positive_point_estimate_vs_own_baseline": 3,
+    "negative_point_estimate_vs_own_baseline": 1,
+    "publication_novelty_established": false,
+    "universal_guidance_gain_established": false,
+    "same_inherited_model": true,
+    "exact_model_revision": null,
+    "tokens": null,
+    "cost": null,
+    "independent_reproduced_method_rows": 8640,
+    "independent_reproduced_median_rows": 480,
+    "independent_reproduced_development_calls": 160,
+    "independent_reproduced_paired_statistics": 17,
+    "evidence_versions": [
+      "3.2.0-rc.4",
+      "3.2.0-rc.5"
+    ],
+    "new_research_experiment_run_for_stable_release": false,
+    "previous_holdout_retuned": false
   },
-  "real_research_project_or_manuscript_produced": false,
-  "scientific_quality_certified": false
+  "reading": {
+    "old_emitted_characters": 12666,
+    "candidate_emitted_characters": 10020,
+    "reduction_fraction": 0.2089057318806253,
+    "scope": "Preserved historical reader-emitted characters, not a new stable-version experiment or token/cost claim.",
+    "evidence_versions": [
+      "3.2.0-rc.4",
+      "3.2.0-rc.5"
+    ]
+  },
+  "stable_release_assessment": "Release stable software baseline within documented host/platform/semantic scope; no claim of general research creativity or publication novelty.",
+  "final_ZIP_commit_CI_installer_checks": "External v3.2.0 release receipt, created from final merged commit and verified final archives.",
+  "migration_examples": {
+    "population_subject": "Explicit subject_field=population; source canonical values retained.",
+    "coverage": "Same source/result/file only; cross-file coverage not automatically combined."
+  }
 }

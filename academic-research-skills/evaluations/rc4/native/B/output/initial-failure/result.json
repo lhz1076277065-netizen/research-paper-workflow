@@ -1,0 +1,41 @@
+{
+  "error_increase_fraction": 0.12,
+  "cost_increase_fraction": 1,
+  "aggregate_pareto_dominated": true,
+  "compatible_synthetic_worlds": {
+    "uniform_worse": {
+      "new_mean": 1.12,
+      "baseline_mean": 1.0,
+      "groups": [
+        [
+          0.2,
+          1.12,
+          1
+        ],
+        [
+          0.8,
+          1.12,
+          1
+        ]
+      ]
+    },
+    "boundary_advantage": {
+      "new_mean": 1.12,
+      "baseline_mean": 1.0,
+      "groups": [
+        [
+          0.2,
+          0.6,
+          1
+        ],
+        [
+          0.8,
+          1.25,
+          1
+        ]
+      ]
+    }
+  },
+  "next_action": "Recover paired development residuals and costs, validate identical inputs/splits/metric/budgets and implementation, then inspect prespecified failure regimes and remove expensive component in an ablation; keep formal test sealed.",
+  "not_inferable": "variance, paired uncertainty, significance, subgroup advantage, cause of failure, actual ablation result"
+}

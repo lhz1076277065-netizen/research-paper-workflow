@@ -2,7 +2,7 @@
 
 For full research, read skills/research-paper-workflow/SKILL.md with the real scientific objective and available materials. Establish the important problem, nearest prior art, expected knowledge gain and decisive evidence. Keep a concise visible research board and continue the highest-information work. Focused requests use only the applicable specialist.
 
-Use the current agent and its existing model. Native internal subagents are optional; do not discover another assistant host or local LLM service. Research models and numerical software remain available when justified by the scientific design.
+The current agent coordinates as executor; native subagents are optional. A research_model may run, train and be evaluated locally using free tools and suitable licensing. Choose numerical software for the scientific design.
 
 Select external professional Skills from the thirteen user-designated repositories; discover current entry paths using scripts/research31.py upstream, or use verified installed resources from those sources. Ordinary literature, data, libraries and original research code are unrestricted by this Skill list. Read only the selected task branch and necessary supporting resources.
 

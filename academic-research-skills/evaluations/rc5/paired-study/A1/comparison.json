@@ -1,0 +1,170 @@
+{
+  "summary": {
+    "baseline": {
+      "mean_loss": 22.691666666666666,
+      "false_alarms": 4,
+      "timely_hits": 44,
+      "critical_cases": 60,
+      "mean_delay_among_hits": 25.068181818181817,
+      "runtime_seconds": 0.006850291999853653,
+      "groups": {
+        "bursts": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 10,
+          "mean_loss": 27
+        },
+        "clean": {
+          "n": 30,
+          "false_alarms": 0,
+          "hits": 9,
+          "mean_loss": 25.066666666666666
+        },
+        "gaps": {
+          "n": 30,
+          "false_alarms": 0,
+          "hits": 12,
+          "mean_loss": 19.966666666666665
+        },
+        "heavy": {
+          "n": 30,
+          "false_alarms": 3,
+          "hits": 13,
+          "mean_loss": 18.733333333333334
+        }
+      }
+    },
+    "initial": {
+      "mean_loss": 20.883333333333333,
+      "false_alarms": 3,
+      "timely_hits": 49,
+      "critical_cases": 60,
+      "mean_delay_among_hits": 25.428571428571427,
+      "runtime_seconds": 0.006744541999978537,
+      "groups": {
+        "bursts": {
+          "n": 30,
+          "false_alarms": 2,
+          "hits": 10,
+          "mean_loss": 29.8
+        },
+        "clean": {
+          "n": 30,
+          "false_alarms": 0,
+          "hits": 11,
+          "mean_loss": 21.4
+        },
+        "gaps": {
+          "n": 30,
+          "false_alarms": 0,
+          "hits": 13,
+          "mean_loss": 17.866666666666667
+        },
+        "heavy": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 15,
+          "mean_loss": 14.466666666666667
+        }
+      }
+    },
+    "refined": {
+      "mean_loss": 20.825,
+      "false_alarms": 5,
+      "timely_hits": 52,
+      "critical_cases": 60,
+      "mean_delay_among_hits": 27.28846153846154,
+      "runtime_seconds": 0.24818479199984722,
+      "groups": {
+        "bursts": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 13,
+          "mean_loss": 21.966666666666665
+        },
+        "clean": {
+          "n": 30,
+          "false_alarms": 0,
+          "hits": 12,
+          "mean_loss": 20
+        },
+        "gaps": {
+          "n": 30,
+          "false_alarms": 1,
+          "hits": 13,
+          "mean_loss": 21.366666666666667
+        },
+        "heavy": {
+          "n": 30,
+          "false_alarms": 3,
+          "hits": 14,
+          "mean_loss": 19.966666666666665
+        }
+      }
+    },
+    "ablation": {
+      "mean_loss": 47.675,
+      "false_alarms": 53,
+      "timely_hits": 37,
+      "critical_cases": 60,
+      "mean_delay_among_hits": 18.405405405405407,
+      "runtime_seconds": 0.03690070899983766,
+      "groups": {
+        "bursts": {
+          "n": 30,
+          "false_alarms": 12,
+          "hits": 11,
+          "mean_loss": 47.3
+        },
+        "clean": {
+          "n": 30,
+          "false_alarms": 8,
+          "hits": 10,
+          "mean_loss": 33.333333333333336
+        },
+        "gaps": {
+          "n": 30,
+          "false_alarms": 14,
+          "hits": 9,
+          "mean_loss": 50.833333333333336
+        },
+        "heavy": {
+          "n": 30,
+          "false_alarms": 19,
+          "hits": 7,
+          "mean_loss": 59.233333333333334
+        }
+      }
+    }
+  },
+  "paired_differences": {
+    "baseline": {
+      "mean_paired_loss_difference": -1.8666666666666667,
+      "paired_standard_error": 2.0742159037363472,
+      "better": 24,
+      "tie": 69,
+      "worse": 27,
+      "common_timely_hit_n": 44,
+      "mean_delay_difference_on_common_hits": 0.6818181818181818
+    },
+    "initial": {
+      "mean_paired_loss_difference": -0.058333333333333334,
+      "paired_standard_error": 1.874467088911841,
+      "better": 24,
+      "tie": 65,
+      "worse": 31,
+      "common_timely_hit_n": 46,
+      "mean_delay_difference_on_common_hits": 1.673913043478261
+    },
+    "ablation": {
+      "mean_paired_loss_difference": -26.85,
+      "paired_standard_error": 3.966432154167451,
+      "better": 46,
+      "tie": 37,
+      "worse": 37,
+      "common_timely_hit_n": 35,
+      "mean_delay_difference_on_common_hits": 9.514285714285714
+    }
+  },
+  "uncertainty_scope": "Paired standard errors describe this tuned dev sample only; no selection adjustment or independent confidence interval."
+}

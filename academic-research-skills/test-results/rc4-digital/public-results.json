@@ -1,0 +1,53 @@
+{
+  "material": "actual public observations; digital reanalysis",
+  "rows": 4898,
+  "variables": [
+    "fixed acidity",
+    "volatile acidity",
+    "citric acid",
+    "residual sugar",
+    "chlorides",
+    "free sulfur dioxide",
+    "total sulfur dioxide",
+    "density",
+    "pH",
+    "sulphates",
+    "alcohol",
+    "quality"
+  ],
+  "missing": 0,
+  "duplicate_predictor_rows": 937,
+  "split": {
+    "train": 2964,
+    "validation": 1019,
+    "test": 915,
+    "key": "SHA256 of predictor tuple modulo 10"
+  },
+  "preprocessing": "training mean/standard deviation only",
+  "ridge_alpha": 1.0,
+  "validation_rmse": 0.7444137747602303,
+  "test_rmse": 0.7569576952730187,
+  "baseline_test_rmse": 0.898326141021648,
+  "unit": "quality score points",
+  "limits": [
+    "No sampling date or bottle ID supplied",
+    "One white-wine source; no external-source validation",
+    "Prespecified baseline implementation; no novel method claim"
+  ],
+  "attribution": "Cortez et al. (2009), Wine Quality, UCI, DOI 10.24432/C56S3T; CC BY 4.0",
+  "source": {
+    "url": "https://archive.ics.uci.edu/static/public/186/wine+quality.zip",
+    "resolved_url": "https://archive.ics.uci.edu/static/public/186/wine+quality.zip",
+    "sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4",
+    "bytes": 91353,
+    "retrieved_at": "2026-10-01T06:08:44.942015+00:00"
+  },
+  "license_source": {
+    "url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+    "resolved_url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+    "sha256": "5aa02a1a9c3b4da1e6209e58f63a8d36c1e8bfd4a6816c4bf3c3cc8f3344b1a5",
+    "bytes": 169231,
+    "retrieved_at": "2026-10-01T06:08:46.959370+00:00"
+  },
+  "numpy_version": "2.3.5"
+}

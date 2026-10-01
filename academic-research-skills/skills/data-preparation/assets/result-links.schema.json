@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional actual result occurrences and render dependencies v2",
+  "oneOf": [{"$ref": "#/$defs/links"}, {"$ref": "#/$defs/render"}],
+  "description": "Frozen output files own result values; mappings only select actual occurrences. Structural validity is not scientific, semantic or visual certification.",
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1, "description": "Project-relative bounded path; absolute paths, escapes and escaping symlinks are rejected."},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "locator": {
+      "oneOf": [{"$ref": "#/$defs/text_locator"}, {"$ref": "#/$defs/docx_locator"}, {"$ref": "#/$defs/pdf_locator"}],
+      "description": "Format-specific 1-based coordinates, never mixed: text line/range, DOCX paragraph or table/row/cell, PDF page plus extracted line/range. Actual extraction also rejects coordinates inapplicable to the artifact's file format."
+    },
+    "line_coordinates": {
+      "type": "object",
+      "properties": {
+        "line": {"type": "integer", "minimum": 1},
+        "line_start": {"type": "integer", "minimum": 1},
+        "line_end": {"type": "integer", "minimum": 1}
+      },
+      "oneOf": [{"required": ["line"]}, {"required": ["line_start"]}]
+    },
+    "text_locator": {"allOf": [{"$ref": "#/$defs/line_coordinates"}], "unevaluatedProperties": false},
+    "pdf_locator": {
+      "allOf": [{"$ref": "#/$defs/line_coordinates"}], "required": ["page"],
+      "properties": {"page": {"type": "integer", "minimum": 1}}, "unevaluatedProperties": false
+    },
+    "docx_locator": {
+      "oneOf": [
+        {"type": "object", "required": ["paragraph"], "properties": {"paragraph": {"type": "integer", "minimum": 1}}, "additionalProperties": false},
+        {"type": "object", "required": ["table", "row", "cell"], "properties": {"table": {"type": "integer", "minimum": 1}, "row": {"type": "integer", "minimum": 1}, "cell": {"type": "integer", "minimum": 1}}, "additionalProperties": false}
+      ]
+    },
+    "text_scope": {"properties": {"locator": {"$ref": "#/$defs/text_locator"}, "semantics": {"additionalProperties": {"properties": {"locator": {"$ref": "#/$defs/text_locator"}}}}}},
+    "docx_scope": {"properties": {"locator": {"$ref": "#/$defs/docx_locator"}, "semantics": {"additionalProperties": {"properties": {"locator": {"$ref": "#/$defs/docx_locator"}}}}}},
+    "pdf_scope": {"properties": {"locator": {"$ref": "#/$defs/pdf_locator"}, "semantics": {"additionalProperties": {"properties": {"locator": {"$ref": "#/$defs/pdf_locator"}}}}}},
+    "format_scope": {
+      "allOf": [
+        {"if": {"anyOf": [
+          {"required": ["artifact"], "properties": {"artifact": {"properties": {"path": {"pattern": "\\.([mM][dD]|[mM][aA][rR][kK][dD][oO][wW][nN]|[tT][eE][xX]|[tT][xX][tT])$"}}}}},
+          {"required": ["path"], "not": {"required": ["artifact"]}, "properties": {"path": {"pattern": "\\.([mM][dD]|[mM][aA][rR][kK][dD][oO][wW][nN]|[tT][eE][xX]|[tT][xX][tT])$"}}}
+        ]}, "then": {"$ref": "#/$defs/text_scope"}},
+        {"if": {"anyOf": [
+          {"required": ["artifact"], "properties": {"artifact": {"properties": {"path": {"pattern": "\\.[dD][oO][cC][xX]$"}}}}},
+          {"required": ["path"], "not": {"required": ["artifact"]}, "properties": {"path": {"pattern": "\\.[dD][oO][cC][xX]$"}}}
+        ]}, "then": {"$ref": "#/$defs/docx_scope"}},
+        {"if": {"anyOf": [
+          {"required": ["artifact"], "properties": {"artifact": {"properties": {"path": {"pattern": "\\.[pP][dD][fF]$"}}}}},
+          {"required": ["path"], "not": {"required": ["artifact"]}, "properties": {"path": {"pattern": "\\.[pP][dD][fF]$"}}}
+        ]}, "then": {"$ref": "#/$defs/pdf_scope"}}
+      ]
+    },
+    "source": {
+      "allOf": [{"$ref": "#/$defs/artifact"}],
+      "required": ["id"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "versions": {"type": "object", "additionalProperties": {"$ref": "#/$defs/artifact"}}
+      },
+      "description": "Actual frozen CSV/JSON, keyed by stable result_id or result_id records. Numeric sources bind data/code/execution files in versions here or in their original record. Semantic values may use frozen_semantic; labels are display text, never scientific equivalence."
+    },
+    "frozen_semantic": {
+      "oneOf": [
+        {"type": ["string", "number"]},
+        {"type": "object", "required": ["value"], "properties": {
+          "value": {"type": ["string", "number"]},
+          "labels": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "equivalent_values": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "Only frozen model/implementation declarations authorize these alternative canonical identities for recomputation. Their scientific equivalence still requires independent review."}
+        }}
+      ]
+    },
+    "semantic": {
+      "type": "object",
+      "required": ["value", "text"],
+      "properties": {
+        "value": {"type": ["string", "number"]},
+        "text": {"type": "string", "minLength": 1},
+        "locator": {"$ref": "#/$defs/locator"},
+        "position": {"enum": ["prefix", "suffix"]}
+      },
+      "description": "Canonical source meaning plus text actually found. Display aliases must be defined in frozen source labels; unit and direction use conservative built-in conversions/aliases. Local missing fields are reported separately from manuscript-wide coverage. Independent locators still receive negation checks; a unit locator alone cannot bind the number's unit without actual adjacency or a verified same-column DOCX header."
+    },
+    "numeric": {
+      "type": "object",
+      "required": ["field", "text"],
+      "properties": {
+        "field": {"type": "string", "minLength": 1},
+        "text": {"type": "string", "minLength": 1},
+        "offset": {"type": "integer", "minimum": 0},
+        "decimals": {"type": "integer", "minimum": 0, "maximum": 12},
+        "rounding": {"enum": ["half-even", "half-up"], "default": "half-even"},
+        "tolerance": {
+          "type": "object",
+          "properties": {"abs": {"type": "number", "minimum": 0, "description": "Absolute tolerance in the original source unit, after recomputed unit conversion."}, "rel": {"type": "number", "minimum": 0}},
+          "additionalProperties": false
+        },
+        "recomputed": {
+          "type": "object",
+          "required": ["source_id"],
+          "properties": {"source_id": {"type": "string", "minLength": 1}, "result_id": {"type": "string", "minLength": 1}, "field": {"type": "string", "minLength": 1}},
+          "description": "Same scientific identity and numeric role; unit dimensions must agree, then values are converted to the original source unit. Missing outcome/population/comparison/split/time/effect identity remains pending."
+        }
+      },
+      "dependentRequired": {"tolerance": ["recomputed"]},
+      "description": "Read this exact numeric token at the locator. Raw JSON decimals, conversion and tolerance arithmetic preserve input precision; decimal display rounding is independent of abs/rel tolerance against another hash-bound raw output. Checked tokens alone do not establish interval order, exact primary-value roles or subject/unit relations."
+    },
+    "link": {
+      "type": "object",
+      "allOf": [{"$ref": "#/$defs/format_scope"}],
+      "required": ["result_id", "role", "artifact", "locator"],
+      "properties": {
+        "result_id": {"type": "string", "minLength": 1},
+        "source_id": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1},
+        "claim_id": {"type": "string", "minLength": 1},
+        "subject_field": {"enum": ["model", "implementation", "outcome", "population"], "description": "Optional primary-value subject. Default selects locally mapped model, implementation, then outcome. Unsupported text relationships remain located pending."},
+        "artifact": {"$ref": "#/$defs/artifact"},
+        "locator": {"$ref": "#/$defs/locator"},
+        "numeric": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/numeric"}},
+        "semantics": {"type": "object", "additionalProperties": {"$ref": "#/$defs/semantic"}},
+        "bindings": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {"text": {"type": "string", "minLength": 1}, "texts": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}},
+            "anyOf": [{"required": ["text"]}, {"required": ["texts"]}]
+          }
+        }
+      },
+      "description": "An occurrence role need not repeat every frozen source field. Field coverage is also aggregated across declared occurrences of the same result in the same manuscript artifact."
+    },
+    "build_occurrence": {
+      "type": "object",
+      "allOf": [{"$ref": "#/$defs/format_scope"}],
+      "required": ["result_id", "role", "locator"],
+      "anyOf": [{"required": ["path"]}, {"required": ["artifact"]}],
+      "properties": {
+        "path": {"$ref": "#/$defs/artifact/properties/path"},
+        "artifact": {"type": "object", "required": ["path"], "properties": {"path": {"$ref": "#/$defs/artifact/properties/path"}, "sha256": {"$ref": "#/$defs/artifact/properties/sha256"}}},
+        "result_id": {"$ref": "#/$defs/link/properties/result_id"},
+        "source_id": {"$ref": "#/$defs/link/properties/source_id"},
+        "role": {"$ref": "#/$defs/link/properties/role"},
+        "locator": {"$ref": "#/$defs/locator"},
+        "unit": {"type": "string", "minLength": 1},
+        "subject_field": {"$ref": "#/$defs/link/properties/subject_field"},
+        "numeric": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["field"], "properties": {
+          "field": {"$ref": "#/$defs/numeric/properties/field"}, "text": {"$ref": "#/$defs/numeric/properties/text"},
+          "decimals": {"$ref": "#/$defs/numeric/properties/decimals"}, "rounding": {"$ref": "#/$defs/numeric/properties/rounding"},
+          "offset": {"$ref": "#/$defs/numeric/properties/offset"}, "tolerance": {"$ref": "#/$defs/numeric/properties/tolerance"},
+          "recomputed": {"$ref": "#/$defs/numeric/properties/recomputed"}
+        }, "dependentRequired": {"tolerance": ["recomputed"]}}},
+        "semantics": {"$ref": "#/$defs/link/properties/semantics"},
+        "claim_id": {"$ref": "#/$defs/link/properties/claim_id"},
+        "bindings": {"$ref": "#/$defs/link/properties/bindings"}
+      },
+      "description": "Existing build row accepted by build_links(root,sources,occurrences,claims=()). Sources own semantic values; source/target/version hashes are filled only when absent, pinned hashes are verified. Numeric defaults to value; text defaults to source conversion and explicit decimal rounding. This definition is an optional row shape, not a second ledger or new audit payload kind."
+    },
+    "claim": {
+      "type": "object",
+      "allOf": [{"$ref": "#/$defs/format_scope"}],
+      "required": ["id", "artifact", "locator", "text"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "artifact": {"$ref": "#/$defs/artifact"},
+        "locator": {"$ref": "#/$defs/locator"},
+        "text": {"type": "string", "minLength": 1},
+        "result_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      },
+      "description": "Unlinked critical claims remain pending with their actual location and next action; no claim discovery completeness is asserted."
+    },
+    "links": {
+      "type": "object",
+      "required": ["kind", "sources", "links"],
+      "properties": {
+        "kind": {"const": "result-links"},
+        "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+        "links": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/link"}},
+        "claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}}
+      }
+    },
+    "render": {
+      "type": "object",
+      "required": ["kind", "artifacts", "renders"],
+      "properties": {
+        "kind": {"const": "render-dependencies"},
+        "artifacts": {
+          "type": "array", "minItems": 1,
+          "items": {"allOf": [{"$ref": "#/$defs/artifact"}], "required": ["id"], "properties": {"id": {"type": "string", "minLength": 1}}}
+        },
+        "renders": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "required": ["output", "inputs", "renderer"],
+            "properties": {
+              "output": {"type": "string", "minLength": 1},
+              "output_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+              "inputs": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+              "renderer": {"type": "object", "required": ["name", "version"], "properties": {"name": {"type": "string", "minLength": 1}, "version": {"type": "string", "minLength": 1}}},
+              "command": {"type": "array", "items": {"type": "string"}, "description": "Recorded provenance only; audit never executes this argv."}
+            }
+          }
+        }
+      },
+      "description": "Current inventory hashes and prior render input/output snapshots may differ; stale ancestry is propagated and impacted targets reported in rebuild order."
+    }
+  }
+}

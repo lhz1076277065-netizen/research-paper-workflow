@@ -1,0 +1,42 @@
+{
+  "baseline_commit": "9813b193a2cd6504205ede70393c22c7683e22c6",
+  "checks": {
+    "src/common/scripts/result_links.py": {
+      "unchanged": true,
+      "sha256": "471b32401fa0b2f35ac5cafd1b2eea67f20cc8b9eb728212dbfd58f274fb92a2"
+    },
+    "src/common/assets/result-links.schema.json": {
+      "unchanged": true,
+      "sha256": "0224d44b59b9f8bd83ecc4564cbb122c5f33857bf914d939d74e9fc75bebb3ef"
+    },
+    "src/common/assets/task.schema.json": {
+      "unchanged": true,
+      "sha256": "025926bd5c8583f85dfb589a54f173eda1a07c286deb9fc750fb75fbf5ddd1dd"
+    },
+    "src/common/assets/result.schema.json": {
+      "unchanged": true,
+      "sha256": "dd19bda4674b7fafa290f52d9f2e6675e93331e85de55021fecacd7fefc686e2"
+    },
+    "src/common/references/research-quality.md": {
+      "unchanged": true,
+      "sha256": "2be115bd99804b413426a96a194276afea8016960ac9ec30e2ace19a2f033019"
+    },
+    "src/common/references/computational-routes.md": {
+      "unchanged": true,
+      "sha256": "57566bcdd183c2844848ee7618b5df786aecd650815d0832eddc80461a14d8d9"
+    },
+    "src/common/references/inference-examples.md": {
+      "unchanged": true,
+      "sha256": "7c9e9f97401d7997af41ac93acc43ef4a36a4ea041148b615b9d0813edc71814"
+    },
+    "src/common/references/interpretive-examples.md": {
+      "unchanged": true,
+      "sha256": "cfd3b23ce9cd913d520b53b8e14a27f0ec4c094dac8a676c7817dbc6c0c1576d"
+    },
+    "src/common/references/computation-examples.md": {
+      "unchanged": true,
+      "sha256": "d25ba8c38e587b2fd2ddbaca5e4e890af8d06cfcb8b8abe33eb707a353eb3638"
+    }
+  },
+  "all_unchanged": true
+}

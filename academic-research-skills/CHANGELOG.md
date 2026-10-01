@@ -1,5 +1,28 @@
 # Changelog
 
+## 3.2.0
+
+- Promote the reviewed rc.5 interface and nineteen independent skills to the stable release.
+- Clarify explicit population subjects and per-artifact manuscript coverage in migration examples.
+- Align default-branch installation links, version metadata and documented platform/semantic scope; rebuild and verify all final archives.
+- Preserve candidate tags, evaluated research data and prior failure evidence. Future 3.2.x changes address demonstrated defects and small compatibility needs.
+
+## 3.2.0-rc.5
+
+- Compare recomputed result identities before tolerances and convert compatible dimensions; explicit implementation equivalence is frozen in result sources.
+- Check ordered intervals, value/subject relationships and scoped negation; distinguish located semantic review, occurrence roles and manuscript coverage. Build links from current build rows.
+- Run real pdftotext and pypdf-only extraction in CI, save new-library regression and result-link reports.
+- Preserve detailed examples in three focused reference fragments and evaluate actual reads in paired method-development studies.
+
+## 3.2.0-rc.4
+
+- Default computer-closed original research with six separate dimensions and fourteen on-demand routes; retain all sixteen legacy research profiles and one optional orchestrator plus eighteen capabilities.
+- Actual free material acquisition and fit, nearest-work increments, distinguishable competing predictions, constructive iteration and three independent work queues.
+- Dynamic hardware/runtime inventory, measured backend calibration, project argv execution, free local research models and role-specific professional Skill selection.
+- Stable result occurrences in Markdown/LaTeX/DOCX/PDF with numeric/display/declared-semantic checks, and stale render dependency propagation with actual rebuilding acceptance.
+- Existing regression, new adversarial checks, real public-data/formal/optimization/professional chains and independent native comparison; report coverage and limits separately.
+
+
 ## 3.2.0-rc.3
 
 - Bind and inspect the indexed identities of explicitly selected upstream support files and adapters. Preserve locally adapted files; require matching reviewed digests when declared dependencies drift. Legacy bindings remain usable.

@@ -1,0 +1,2064 @@
+--- a/.github/workflows/validate-skill.yml
++++ b/.github/workflows/validate-skill.yml
+@@ -9,15 +9,39 @@
+     runs-on: ubuntu-latest
+     strategy:
+       matrix:
+-        python-version: ["3.11", "3.13"]
++        include:
++          - python-version: "3.11"
++            pdf-backend: pdftotext
++          - python-version: "3.13"
++            pdf-backend: pypdf
+     steps:
+       - uses: actions/checkout@v7
+       - uses: actions/setup-python@v6
+         with:
+           python-version: ${{ matrix.python-version }}
++      - name: Install real pdftotext backend
++        if: matrix.pdf-backend == 'pdftotext'
++        run: |
++          sudo apt-get update
++          sudo apt-get install --yes poppler-utils
++          command -v pdftotext
++          pdftotext -v
++      - name: Prepare pypdf-only backend
++        if: matrix.pdf-backend == 'pypdf'
++        run: |
++          sudo apt-get remove --yes poppler-utils
++          python -m pip install pypdf==6.10.0
++          python -c 'import pypdf, shutil; assert shutil.which("pdftotext") is None; print(pypdf.__version__)'
++      - name: Prepare fresh CI reports
++        run: >-
++          python -c 'from pathlib import Path;
++          [Path(p).unlink(missing_ok=True) for p in
++          ["validation-report.json", "academic-research-skills/test-results/regression.json",
++          "academic-research-skills/test-results/regression.txt"]]'
+       - name: Run unit and integration tests
+         run: python -m unittest discover -s tests -v
+       - name: Validate complete offline fixture
++        if: always()
+         run: >-
+           python research-paper-workflow/scripts/validate_research_package.py
+           tests/fixtures/complete-project
+@@ -26,11 +50,24 @@
+       - name: Check complete library build consistency
+         run: python academic-research-skills/scripts/build_release.py --check
+       - name: Run complete library regression
+-        run: python -m unittest discover -s academic-research-skills/tests -v
++        if: always()
++        run: python academic-research-skills/tests/run_all.py
++      - name: Save actual PDF result-link acceptance reports
++        if: always()
++        run: >-
++          python academic-research-skills/tests/report_pdf_links.py
++          --backend ${{ matrix.pdf-backend }}
++          --regression academic-research-skills/test-results/regression.json
++          --out "${{ runner.temp }}/pdf-result-links"
+       - name: Run portable basic smoke
+         run: python academic-research-skills/scripts/selftest.py --out "${{ runner.temp }}/academic-skill-smoke"
+       - name: Upload validation report
++        if: always()
+         uses: actions/upload-artifact@v7
+         with:
+-          name: validation-report-python-${{ matrix.python-version }}
+-          path: validation-report.json
++          name: validation-report-python-${{ matrix.python-version }}-${{ matrix.pdf-backend }}
++          path: |
++            validation-report.json
++            academic-research-skills/test-results/regression.json
++            academic-research-skills/test-results/regression.txt
++            ${{ runner.temp }}/pdf-result-links/
+
+--- a/academic-research-skills/CHANGELOG.md
++++ b/academic-research-skills/CHANGELOG.md
+@@ -1,4 +1,11 @@
+ # Changelog
++
++## 3.2.0-rc.5
++
++- Compare recomputed result identities before tolerances and convert compatible dimensions; explicit implementation equivalence is frozen in result sources.
++- Check ordered intervals, value/subject relationships and scoped negation; distinguish located semantic review, occurrence roles and manuscript coverage. Build links from current build rows.
++- Run real pdftotext and pypdf-only extraction in CI, save new-library regression and result-link reports.
++- Preserve detailed examples in three focused reference fragments and evaluate actual reads in paired method-development studies.
+ 
+ ## 3.2.0-rc.4
+ 
+
+--- a/academic-research-skills/MIGRATION.zh-CN.md
++++ b/academic-research-skills/MIGRATION.zh-CN.md
+@@ -1,13 +1,15 @@
+-# v3.2.0-rc.4 迁移
++# v3.2.0-rc.5 迁移
+ 
+-用本版完整能力目录替换选定的rc.3目录；1个可选总控与18个独立能力不变，任一能力无需src或邻居目录。保留项目数据、原始结果和已有专业适配。维护源仍为src/common、src/quality31/payload和各能力protocol.md；维护后运行build_release.py --write，再用--check核对。
++用本版完整能力目录替换选定的rc.4目录；仍为1个可选总控与18个独立能力。维护源仍为src/common、src/quality31/payload与各能力protocol.md，运行build_release.py --write后用--check检查；项目材料与原始输出保留。
+ 
+-默认执行模式是computational-autonomous，独立于学科、文章类型、证据类型、研究方法和工具后端。原study_types、method_family、evidence_basis与runtime.backend继续接受；新字段为research_context.execution_mode、evidence_type、research_methods、tool_backend、computational_routes。未提供数据先发现和实际取得适配材料；原人工采集路线转到公开数字资源、模型或理论，并明确改变的问题及证据范围。
++旧result-links封装继续接受。复算先核双方结果的单位量纲和科学身份，再把复算值换成原始结果单位使用容差。结局、总体、比较、分区、时间、效应类型等身份未绑定时进入有定位的pending；不适用字段可在冻结源明确声明。模型/实现的等价值只由冻结源semantics中的equivalent_values授权，labels仅作显示别名。正文舍入保持独立，容差不能放宽显示。
+ 
+-executor保留当前宿主；research_model是本地研究对象或算法，可训练、加载和评价。按实际任务复用免费工具、项目环境和已有授权软件。environment.py的doctor/plan不安装；ensure按项目选定依赖准备；exec以argv、项目cwd、日志和文件回执运行任意已准备的专业工具；calibrate实际检查候选后端的小任务。
++局部图注或表格不必重复全部设计字段：coverage.occurrences按角色列出当地覆盖与缺字段，coverage_gaps按同来源、结果与稿件汇总尚未覆盖的字段。主值归属、区间顺序、直接否定和有限表格坐标关系按已定义规则检查；复杂句式、未知否定范围或无法确定的关系进入pending。程序不发现全部论断，也不代替对关键句子科学含义的实际阅读。旧的词共现映射可能因此需要补关系定位。
+ 
+-现有result envelope与figure-values检查兼容。需要跨稿件关联时追加result-links检查，绑定实际冻结结果、版本和具体出现位置；明确舍入和复算容差。render-dependencies独立记录源、图表、引用与输出依赖，源改动后按rebuild_order重建。旧记录缺少关联时显示待关联范围，不冒充全面语义核查。
++比较阈值不能作为精确主值。独立单位定位仍核数字旁的实际单位；只有真正DOCX同列首行表头支持自动关联。定位须使用该文件格式的坐标，不能用Markdown上的伪表格坐标绕过主体检查。冻结JSON原值、换算与容差保留完整Decimal精度，零容差不会抹去高精度差异；数值语义scalar在公开payload中用精确字符串保持JSON可序列化。
+ 
+-科研、成果与external_items分别推进。provider_uses可追加guidance_read、research_work_done、functions_run三种进度；实际版本与所用入口继续记录。外部作者确认待办不阻止独立研究与成果工作，但仍不能宣称已正式提交。
++复用真实稿件构建行调用result_links.build_links(root, sources, occurrences, claims=())，由已有result_id、角色、文件、定位与显示精度生成链接和当前哈希，减少重复填表。已提供的哈希会校验，不会为消除错误而刷新。实际API示例和边界见docs/runtime.md与docs/integrity.md。
+ 
+-rc.3迁移、更新和目录清单存入history/rc3-reports。本轮软件、真实数字执行、原生行为和视觉检查分列报告；接口通过不代表原创性、科学正确性或期刊录用。
++详细推演保留在inference-examples.md、interpretive-examples.md和computation-examples.md，通过研究质量主线与原路线锚点按需到达。三个文件随每个独立模块生成，不要求新增总控、安装工具清单或更换执行模型。
++
++CI分别运行实际pdftotext与仅pypdf的后端，旧PDF定位用例在两条路径都需通过；只缺对侧后端时，其专属用例可以明确跳过。CI上传新库完整回归与实际结果链接报告。rc.4报告保留在history/rc4-reports及evaluations/rc4；rc.5属于候选版本，研究比较的实测改进与文献原创性分别评价。
+
+--- a/academic-research-skills/README.md
++++ b/academic-research-skills/README.md
+@@ -1,4 +1,4 @@
+-# Academic Research Skills 3.2.0-rc.4
++# Academic Research Skills 3.2.0-rc.5
+ 
+ One optional research orchestrator and eighteen standalone specialist skills. Full research defaults to computational-autonomous: acquire lawful free digital material, construct an original increment over nearest work and run a discriminating test with computer-executable tools. Focused requests use the relevant specialist directly.
+ 
+@@ -12,4 +12,4 @@
+ 
+ The library is discipline-neutral. Requests to develop, update or package this library produce Skill folders and software validation; they do not start a research project or manuscript.
+ 
+-rc.4 adds independent research/execution dimensions, fourteen on-demand computational routes, resource calibration and project tool execution, result occurrence checks and render dependency rebuilding. Read [migration](MIGRATION.zh-CN.md), [change evidence](UPDATE_REPORT.zh-CN.md) and [validation](evaluations/rc4/VALIDATION.zh-CN.md).
++rc.5 repairs recomputation identity and unit conversion, occurrence relationships and manuscript coverage, and generates links from actual build rows. PDF extraction is exercised through both real backends in CI. Detailed examples are loaded in focused fragments. Read [migration](MIGRATION.zh-CN.md), [change evidence](UPDATE_REPORT.zh-CN.md) and [validation](evaluations/rc5/VALIDATION.zh-CN.md).
+
+--- a/academic-research-skills/UPDATE_REPORT.zh-CN.md
++++ b/academic-research-skills/UPDATE_REPORT.zh-CN.md
+@@ -1,79 +1,24 @@
+-# v3.2.0-rc.4 逐文件变更与实际效果
++# v3.2.0-rc.5 变更与实际效果
+ 
+-基线为 `v3.2.0-rc.3`，commit `8985d90d7e3a599a8c06556b8d1c2cec6ccb8e21`；实施从现有 `c47c98a094fafac65b3beb283d35cf478ae6e2af` 开始，保留其后增加的安装说明。目标是升级通用 Skill，开发验收样例不作为原创论文交付。
++基线为v3.2.0-rc.4 / ed4c86ec00593de48d2cb88109afe4191d1bfe04。本版定向修补结果审计、实际研究验收与读取负担；保留19个独立模块、原有专业协议和已有工具路径。
+ 
+-## 入口、路由与研究协议
++| 权威文件 | 改变及原因 | 实际验收与边界 |
++|---|---|---|
++| src/common/scripts/result_links.py | 复算先核科学身份与量纲，再换成原源单位使用容差；等价实现须源授权 | 真换算相等、量纲/值不等、分区差异、显示别名与科学等价正反例；完整Decimal精度及JSON往返 |
++| 同一helper | 端点顺序、主值主体、否定范围；比较阈值不认作精确值；按格式拒绝混合定位，实际单位不能被远端映射掩盖 | 59项结果测试；独立20个实际文件探针在audit_links、provider audit、research31 audit及accept_result四入口一致 |
++| 同一helper的build_links | 复用稿件构建行和result_id生成链接、实际哈希；校验既有哈希而非自动刷新 | 真实研究汇总24处Markdown/DOCX/PDF出现位置；复杂关系仍需定位语义复核 |
++| src/common/assets/result-links.schema.json | 同步定位格式、出现角色、构建行与身份语义约束 | 实际Draft202012验证器检查合法输入及跨格式/混合坐标反例 |
++| src/common/references/runtime.md、integrity.md | 分开当地出现角色、全稿字段覆盖、自动关系与定位审阅 | 图注可局部覆盖，同稿正文补全；缺失不能靠重复端点获得通过 |
++| research-quality.md、computational-routes.md及三个examples文件 | 保留原推演内容，按问题加载；质量主线3152→1829字符 | 两对同路径实际读取合计12666→10020字符，减少20.9%；非token/账单测量 |
++| tests/test_result_links.py、test_pdf_extract.py、report_pdf_links.py | 增加19项结果回归及2项真实PDF后端测试；旧PDF装饰器认识两后端 | 本机608项完整回归零跳过；pypdf-only真正无pdftotext，坏PDF有诊断 |
++| 根.github/workflows/validate-skill.yml | pdftotext与pypdf-only两条真实CI路径，上传新库回归和PDF结果链接报告 | 所选后端及旧定位用例必须通过；对侧专属用例可跳过；远程结果在发行receipt |
++| evaluations/rc5/paired-study | 四个新原生上下文做完整基线→改动→实施→检验→修订；同开发材料与预算，冻结后480条共用留出 | 三种改善各自基线、一种变差；内容/最近邻与原始结果独立匿名审阅；不认证发表新颖性 |
++| evaluations/rc5/engineering | 保留首轮失败、四项假通过、修后探针、全回归、隔离模块验证及实际导出审计 | 工程事实与研究价值分别记录；原始失败未删除 |
++| release/make_package.py及tests/test_package_identity.py | 复用干净Git、tracked-only、文件摘要与固定版本安装器；运行包带当前三份验收报告 | ZIP绑定真实commit/tag，最终CRC/摘要/隔离安装外部验收 |
++| VERSION、README、CHANGELOG、MIGRATION、COMPATIBILITY、SUMMARY及source-diffs | 更新当前候选导航、逐项范围和权威源码差异 | rc.4报告移入history保留；不在补丁重复937个生成文件 |
+ 
+-19 个短入口及交接规则维护于 `src/quality31/payload/skills/`，公共参考维护于 `src/common/references/`。下表的专业协议直接维护于各 `skills/<名称>/references/protocol.md`。共用表述统一替换为计算机闭环、当前 executor、本地 research_model、原创方法与代码、实际成果和按需读取。1 个可选总控与 18 个独立能力继续保留。
++公共修复由现有build_release.py统一生成，937个文件无漂移。19个模块分别复制到隔离目录后实际运行，共76项基本检查通过；16画像、13来源内容与原根UI字节保留，14路线与旧知识仍可到达。
+ 
+-| 文件或能力 | 解决的问题与改变 | 预期效果及已验证范围 |
+-|---|---|---|
+-| research-paper-workflow/SKILL.md、START_HERE | 总控明确 computational-autonomous 数字完成路径；短入口分派必要能力 | 不预设新人工采集；入口长度、独立复制和原生任务记录可检查 |
+-| research-intake 协议/入口 | 分开学科、文章、证据、执行模式、方法、工具；未提供数据就实际发现材料 | 研究方向进入具体问题、证据与下一动作；路由与缺数据任务验收 |
+-| topic-novelty 协议/入口 | 最近邻能力→缺口→改变→新增知识→证据；已知原理作基线 | 建设性贡献选择；理论及初始失败原生输出审查，不自动给原创性分数 |
+-| research-design 协议/入口 | 竞争解释须给不同预测；同信息、分区、调参与计算预算比较 | 重合预测进入可区分数字操作；真实小模型与回归覆盖 |
+-| data-discovery 协议/入口 | 从论文数据声明到作者仓储、权威源、实际字典/样例/许可 | 材料取得改变研究选择；UCI 实际档案与样例检查 |
+-| literature-discovery 协议/入口 | 最近邻检索连接真实数据、代码和附件；访问事项单列 | 指向可取得材料；来源冻结和原生材料记录覆盖 |
+-| data-preparation 协议/入口 | 核定义、单位、连接键、时间、重复与独立单位；分区内预处理 | 防同来源泄漏；实际 4,898 条数据分组与训练内标准化 |
+-| ethics-protocol 协议/入口 | 分开公开元数据、免费访问、再使用许可；隐私归因与外部确认分流 | 免费合法资源选择；实际许可页面保留，未冒认所有公开资源许可 |
+-| analysis-execution 协议/入口 | 原创代码和多工具实施；先校准再正式规模；意外结果定位 | C 求解、NumPy、SymPy、RDKit、本地模型实际产物 |
+-| robustness-reproducibility 协议/入口 | 强基线、消融、替代、留出及适用边界；仿真正确性/收敛/适用性分开 | 开发集迭代与正式评价分离；真实留出、模型重载和独立 DP 检验 |
+-| paper-deep-reading 协议/入口 | 页段公式、假设、划分、关键图和失败进入设计选择 | 可定位的深读；协议保留原有专业知识；未将下载全文称完成精读 |
+-| citation-audit 协议/入口 | 对象、结局、比较、时间、样本、方向及支持范围 | 单随访点不称持续；新合成引用请求实际修订审查 |
+-| scientific-visualization 协议/入口 | 主图优先原创结论、最近邻、成本、消融和边界 | 主图选择服务贡献；旧科学制图 smoke、现有图值审计保持 |
+-| manuscript-writing 协议/入口 | 真实结果绑定关键文本与导出；指定表达 Skill 改善已成立贡献 | 四格式真实文本核验、局部段落请求；不扩大局部范围 |
+-| manuscript-review 协议/入口 | 具体科学缺口→最有信息价值的动作；三队列推进 | 外部等待继续稿件检查；审查结果与记录通过分开 |
+-| journal-intelligence 协议/入口 | 早期核计算/理论发表类型；最终按真实贡献选刊 | 保留聚焦选刊功能，软件回归覆盖；本轮未声称实际期刊录用评估 |
+-| submission-packaging 协议/入口 | 源版本、依赖、可编辑文件、声明与外部提交分开 | 字节/数值/声明语义/过期导出分别检查；不替用户正式提交 |
+-| peer-review-response 协议/入口 | 实际审稿输入进入回应、实做修改和版本定位 | 不凭空启动审稿；旧兼容回归保留 |
+-| publication-stewardship 协议/入口 | 实际校样/出版输入、来源与变更对应 | 不凭空启动出版；旧兼容回归保留 |
+-| research-lifecycle.md | 六环完成路径；科研、成果、外部三个轻量队列 | 外部确认不冻结独立工作；默认量级保持 |
+-| research-quality.md | 科学价值、最近邻增量、不同预测、公平比较与建设性迭代 | 原有三个深反例保留；新建设性推演按需，不给工程通过赋科学质量 |
+-| computational-routes.md（新增按需） | 14 条数字研究路线、具体证据与工具选择；两个深建设性推演 | 新知识/方法/设计/边界为目标，非固定软件清单；路由 10 项新回归 |
+-| research-types.md、figure-production.md、final-expression.md | 六维解释、贡献主图、结局与时间、实际数字复核 | 延续原有专业说明并连接新模式 |
+-| research-profiles.json、research_router.py | 原 16 画像逐字段保留；新执行模式与 14 路线独立匹配 | 未知扩展可保留；布尔事实标记不被认证为完成 |
++正式发布评估：工程边界和发行检查适合rc.5候选发布；两对、一个构造问题不足以宣称普遍创新提升。保持候选版，待更多问题的实际使用反馈再评估稳定版。
+ 
+-## 执行、来源与结果检查
+-
+-以下文件均在 `src/common/` 唯一维护，构建后进入根 `scripts/assets/docs` 及 19 个能力的同名独立资源。
+-
+-| 公共文件 | 改变与原因 | 证据与边界 |
+-|---|---|---|
+-| scripts/environment.py | 探测系统/架构/内存/磁盘/运行时/编译器/线程/后端；argv 在项目 cwd 与同一环境运行；真实校准；输出哈希、日志和采样 RSS | 实际安装及复用、编译执行、CPU/NumPy/MLX CPU/GPU；RSS 是采样下界，不称精确峰值 |
+-| scripts/provider_worker.py | 先验证任务与输出位置，保留现有适配器；科研模型区别于 executor | 边界与兼容回归；本地训练对象不是替换宿主 |
+-| scripts/provider_runtime.py | 接入结果链接/渲染依赖审计；输出版本绑定；可选择已准备解释器 | 旧封装兼容，新实际格式及故意损坏检查 |
+-| scripts/result_links.py（新增） | 从冻结 JSON/CSV 结果表绑定 result_id、源版本和实际定位；核主值/上下界、舍入、复算容差、单位、方向、分母、时间等；理论/解释证据定位；递归渲染失效 | 40 项针对性测试、8 个实际出现位置、5 类故意错配、过期检测与重建；只检查声明的位置与来源语义，未自动发现全文全部论断 |
+-| scripts/research31.py | 按科研角色选主实现/互补实现；区分指导读取、研究实做、函数执行；三队列与 audit CLI | 18 项工具/角色回归与实际 CLI，读取指导不冒称研究完成 |
+-| scripts/upstream.py | 当前发现后冻结实际 commit/tree/blob，并核对应与本地适配 | 实际 SciPilot 版本和 blob 记录；来源可用性不冒称图表工作完成 |
+-| assets/environment-profiles.json | 当前 executor 与本地免费 research_model；实际资源与依赖准备 | 实际 Ridge 训练/40 点留出/可编辑参数与重载 |
+-| assets/research31-policy.json | 九类科研角色、选择理由和完成状态 | 一个主实现，互补者目的明确；不强制凑调用数 |
+-| assets/result-links.schema.json（新增）、task.schema.json、result.schema.json | 新关联与维度字段，旧任务/封装保持兼容 | 正反输入回归与独立目录执行 |
+-| references/environment-setup.md、provider-policy.md、upstream.md、research31-usage.md、tooling.md、research-tools.md（新增按需） | 免费按需安装、软件 API/CLI/必要 GUI 的输入项目/参数/运行/提取/专业核验；准确的来源角色与版本 | 本轮实际 API 与 CLI；桌面 GUI 通路有操作说明，未称通用 CAD/GIS GUI 验收完成 |
+-| references/runtime.md、contract.md、integrity.md | 字节/数值/声明语义覆盖分报；主值不能被端点替代；实际导出依赖 | 审查发现的两处问题有真实复现与根因修复 |
+-
+-## 回归、验收与发行文件
+-
+-| 文件 | 改变和实际范围 |
+-|---|---|
+-| tests/test_computational_routes.py | 10 项新路由/证据模式回归；新材料与可执行转化 |
+-| tests/test_research_tools.py | 18 项安装、环境、argv、模型角色、来源、三队列与 audit 路径检查 |
+-| tests/test_result_links.py | 40 项实际 Markdown/DOCX/PDF、来源、舍入/容差/语义、理论/解释定位与导出 DAG 检查 |
+-| tests/test_package_identity.py | 真 Git 提交/ZIP 回归：忽略文件不入包，未提交修改拒打包，manifest 绑定真实 commit |
+-| tests/test_quality31.py | 原有文本断言迁移至 current executor/research_model 与自主改写代码；不保留禁止本地研究模型的旧断言 |
+-| tests/test_release.py | 来源 checkout 夹具改为真实 Git tree，避免伪 SHA 掩盖错误 |
+-| evaluations/rc4/run_digital_acceptance.py | 实际合法公开数据、训练与重载、条件证明/边界、编译 C 优化和独立 DP 验证；不是原创新算法 |
+-| evaluations/rc4/run_export_acceptance.py | 冻结实算值→Markdown/TeX/DOCX/PDF、错配与过期、重建；ReportLab 使用 DOCX 段落，不宣称任意 Word 排版保真 |
+-| evaluations/rc4/native-cases.json、native/ | 八个新通用请求，各版本一个独立原生上下文；真实产物与独立输出审查；不把八子例称八重复 |
+-| evaluations/rc4/tool-execution/、engineering/、VALIDATION.zh-CN.md | 实做依赖/工具/来源、回归与失败历史、验证分类及限制 |
+-| release/make_package.py | 发行前要求干净提交，仅取已跟踪文件；两个 ZIP 的 manifest 记录 tag/commit/文件摘要；复用固定版本/SHA 一键安装器 |
+-| release/installer/ | 复用 rc.3 安装/备份/恢复/异常回滚，发行时将版本和实际 ZIP SHA 写入模板；不运行本机全局安装 |
+-| VERSION、README、START_HERE、CHANGELOG、docs/ARCHITECTURE.zh-CN.md、COMPATIBILITY.zh-CN.md | 当前 rc.4 导航，保持历史兼容路径；科学研究目标与开发验证范围分开 |
+-| MIGRATION.zh-CN.md、INSTALLATION.zh-CN.md、本文件 | 兼容字段、使用与安装、逐文件原因和证据；无需日常默认读取 |
+-| test-results/SUMMARY*、context-metrics.json、distribution-checks.json | 当前检查数字与范围；旧文件移至 history/rc3-reports 保存 |
+-| source-diffs/v3.2.0-rc.3-to-v3.2.0-rc.4.* | 权威源码差异与前后摘要；生成重复副本不在补丁中重列 |
+-| .gitattributes | 原始CRLF表、PDF、历史证据与补丁保留字节，不按维护源码空格规范重写 |
+-| GENERATED-FILES.json | 每个构建副本的摘要；来源变化通过现有构建器统一同步 |
+-
+-默认示例的总控+生命周期+质量参考由 4,760 字变为 5,493 字（约 +15.4%）；19 个入口 639–798 字。14 路线及工具详情按需读取。字符数不是 token、缓存、实际账单或整个上下文的测量。实际原生读量、完成范围、完整回归与发行检查见 [验证报告](evaluations/rc4/VALIDATION.zh-CN.md) 和 [汇总](test-results/SUMMARY.json)。
+-
+-发行 ZIP、实际 tag/commit、远程 CI 和安装隔离测试的最终摘要在同次发行的外部 receipt 与 SHA256SUMS 中记录，避免把 ZIP 自身摘要写回 ZIP 形成自引用。
++[验收映射](evaluations/rc5/VALIDATION.zh-CN.md)、[研究比较](evaluations/rc5/paired-study/COMPARISON.zh-CN.md)和[独立工程审阅](evaluations/rc5/engineering/INDEPENDENT_REVIEW.zh-CN.md)可追溯。发行commit/tag、ZIP SHA256、远程CI及实际安装结果写入发行后的外部receipt，避免将包摘要写回包。
+
+--- a/academic-research-skills/VERSION
++++ b/academic-research-skills/VERSION
+@@ -1 +1 @@
+-3.2.0-rc.4
++3.2.0-rc.5
+
+--- a/academic-research-skills/docs/ARCHITECTURE.zh-CN.md
++++ b/academic-research-skills/docs/ARCHITECTURE.zh-CN.md
+@@ -1,4 +1,4 @@
+-# 3.2.0-rc.4 维护与执行架构
++# 3.2.0-rc.5 维护与执行架构
+ 
+ 1个可选总控与18个独立能力保留详细专业协议；总控组织正式研究的科学目标与阶段产物。局部任务直接处理适用范围。当前Agent及现有模型执行，原生内部协作可选，不依赖其他助手服务。
+ 
+
+--- a/academic-research-skills/docs/COMPATIBILITY.zh-CN.md
++++ b/academic-research-skills/docs/COMPATIBILITY.zh-CN.md
+@@ -1,9 +1,11 @@
+-# 3.2.0-rc.4 验证范围
++# 3.2.0-rc.5 验证范围
+ 
+-保留1个可选总控、18个独立能力、16个可扩展画像、general默认与13个指定来源。执行模式独立于学科/文章/证据，默认 computational-autonomous。旧任务与完成封装继续兼容；旧模型禁用表述已替换为当前executor与可本地研究的research_model。
++保留1个可选总控、18个独立能力、16个画像、14条计算路线及13个指定来源。公共修补仍从唯一维护源生成；既有入口正文、专业协议和根UI配置保留。详细推演分成三个按需参考文件。
+ 
+-587项工程回归、30项根仓库既有测试、19项结构检查、7项科学smoke通过；877个生成文件无漂移。实际公开数据、条件推导、C优化、专业API、依赖安装与后端校准都有输入/代码/日志/结果。四格式8处结果链接、5类错配、导出过期和重建，内置LaTeX编译及PDF视觉检查分别记录。
++本机Python 3.12.14执行608项完整工程回归，失败、错误和跳过均为0；937个生成文件无漂移。19个能力实际复制到隔离目录并分别运行，共76项基本检查通过。独立复核覆盖20个实际文件探针与四个审计入口，四个发现的假通过已修复。真实pdftotext和只有pypdf的提取均执行，旧PDF定位用例、坏PDF及越界页均有报告。
+ 
+-rc.3/rc.4各1个新原生上下文、8个共享子例与1次独立匿名审阅。实做成果和缺件如实表达，观察表现混合；不称16独立重复、普遍创新提升、正式新论文或原生自动发现已认证。读量是字符/file尺寸，token、费用、精确模型修订未知。
++研究比较包含rc.4/rc.5各两个独立原生上下文，同任务、数据、工具及40次开发评分预算。方法冻结后共同评价480条新构造数据流；三种修订改善各自基线，一种变差，两种小优势的探索区间包含0。独立匿名审阅检查方法内容、近邻文献与原始评分材料。不能由工程通过或有限比较认定论文新颖性、普遍研究质量增益。
+ 
+-[完整验证](../evaluations/rc4/VALIDATION.zh-CN.md)、[原生比较](../evaluations/rc4/native/COMPARISON.zh-CN.md)和[实际汇总](../test-results/SUMMARY.json)提供覆盖与限制。旧rc.3报告在history/rc3-reports，实际发行commit/tag/ZIP摘要、提取和隔离安装、远程CI在发行页外部receipt核验。
++实际指导读取输出字符合计减少20.9%，不是token或费用。研究汇总由真实构建行生成Markdown、DOCX、PDF的24处结果链接；数字/源语义、关系、角色与全稿覆盖分别报告，PDF另有实际视觉检查。程序只检查声明位置，复杂关系保留定位pending。
++
++[完整验收](../evaluations/rc5/VALIDATION.zh-CN.md)、[研究比较](../evaluations/rc5/paired-study/COMPARISON.zh-CN.md)、[工程复核](../evaluations/rc5/engineering/INDEPENDENT_REVIEW.zh-CN.md)和[当前汇总](../test-results/SUMMARY.json)提供证据。rc.4记录保留在history/rc4-reports及evaluations/rc4。实际commit/tag、ZIP摘要、提取安装与远程CI由同次发行外部receipt记录，避免自引用。
+
+--- a/academic-research-skills/release/make_package.py
++++ b/academic-research-skills/release/make_package.py
+@@ -11,7 +11,7 @@
+         rel=f.relative_to(ROOT)
+         if f.is_symlink() or not f.is_file() or set(rel.parts)&EXCLUDED or f.suffix in FONTS or f.suffix=='.pyc' or f.name=='.DS_Store' or rel.as_posix()=='PACKAGE-MANIFEST.json':continue
+         if kind=='runtime':
+-            reports={'evaluations/rc4/VALIDATION.zh-CN.md','evaluations/rc4/native/COMPARISON.zh-CN.md','evaluations/rc4/native/anonymous-review/review.md'}
++            reports={'evaluations/rc5/VALIDATION.zh-CN.md','evaluations/rc5/paired-study/COMPARISON.zh-CN.md','evaluations/rc5/paired-study/independent-review.md'}
+             if rel.parts[0] in {'src','tests','evaluations','history','previous-release','release','source-diffs'} and rel.as_posix() not in reports:continue
+             if rel.as_posix() in {'scripts/build_release.py','scripts/_v300_build_release.py','UPGRADE-RECEIPT.json','release/make_package.py','release/coverage-baseline.json','release/ci-matrix.example.yml'}:continue
+             if rel.parts[0]=='test-results' and rel.name not in {'SUMMARY.json','SUMMARY.zh-CN.md','context-metrics.json','distribution-checks.json'}:continue
+
+--- a/academic-research-skills/src/common/assets/environment-profiles.json
++++ b/academic-research-skills/src/common/assets/environment-profiles.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "environment-profiles-1",
+-  "version": "3.2.0-rc.4",
++  "version": "3.2.0-rc.5",
+   "python_minimum": [
+     3,
+     10
+
+--- a/academic-research-skills/src/common/assets/research-profiles.json
++++ b/academic-research-skills/src/common/assets/research-profiles.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "research-profiles-1",
+-  "version": "3.2.0-rc.4",
++  "version": "3.2.0-rc.5",
+   "profiles": {
+     "quantitative-observational": {
+       "title": "定量观察研究",
+
+--- a/academic-research-skills/src/common/assets/research31-policy.json
++++ b/academic-research-skills/src/common/assets/research31-policy.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "research31-policy-1",
+-  "version": "3.2.0-rc.4",
++  "version": "3.2.0-rc.5",
+   "host_scope": "current_host",
+   "external_skill_scope": "user_designated_repositories",
+   "native_subagents": "optional_same_host",
+
+--- a/academic-research-skills/src/common/assets/result-links.schema.json
++++ b/academic-research-skills/src/common/assets/result-links.schema.json
+@@ -1,6 +1,6 @@
+ {
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+-  "title": "Optional actual result occurrences and render dependencies v1",
++  "title": "Optional actual result occurrences and render dependencies v2",
+   "oneOf": [{"$ref": "#/$defs/links"}, {"$ref": "#/$defs/render"}],
+   "description": "Frozen output files own result values; mappings only select actual occurrences. Structural validity is not scientific, semantic or visual certification.",
+   "$defs": {
+@@ -13,20 +13,47 @@
+       }
+     },
+     "locator": {
++      "oneOf": [{"$ref": "#/$defs/text_locator"}, {"$ref": "#/$defs/docx_locator"}, {"$ref": "#/$defs/pdf_locator"}],
++      "description": "Format-specific 1-based coordinates, never mixed: text line/range, DOCX paragraph or table/row/cell, PDF page plus extracted line/range. Actual extraction also rejects coordinates inapplicable to the artifact's file format."
++    },
++    "line_coordinates": {
+       "type": "object",
+       "properties": {
+         "line": {"type": "integer", "minimum": 1},
+         "line_start": {"type": "integer", "minimum": 1},
+-        "line_end": {"type": "integer", "minimum": 1},
+-        "paragraph": {"type": "integer", "minimum": 1},
+-        "table": {"type": "integer", "minimum": 1},
+-        "row": {"type": "integer", "minimum": 1},
+-        "cell": {"type": "integer", "minimum": 1},
+-        "page": {"type": "integer", "minimum": 1}
+-      },
+-      "anyOf": [{"required": ["line"]}, {"required": ["line_start"]}, {"required": ["paragraph"]}, {"required": ["table", "row", "cell"]}],
+-      "additionalProperties": false,
+-      "description": "1-based source line/range; DOCX XML paragraph (including empty and table paragraphs) or body table/row/cell; PDF requires page plus extracted line/range."
++        "line_end": {"type": "integer", "minimum": 1}
++      },
++      "oneOf": [{"required": ["line"]}, {"required": ["line_start"]}]
++    },
++    "text_locator": {"allOf": [{"$ref": "#/$defs/line_coordinates"}], "unevaluatedProperties": false},
++    "pdf_locator": {
++      "allOf": [{"$ref": "#/$defs/line_coordinates"}], "required": ["page"],
++      "properties": {"page": {"type": "integer", "minimum": 1}}, "unevaluatedProperties": false
++    },
++    "docx_locator": {
++      "oneOf": [
++        {"type": "object", "required": ["paragraph"], "properties": {"paragraph": {"type": "integer", "minimum": 1}}, "additionalProperties": false},
++        {"type": "object", "required": ["table", "row", "cell"], "properties": {"table": {"type": "integer", "minimum": 1}, "row": {"type": "integer", "minimum": 1}, "cell": {"type": "integer", "minimum": 1}}, "additionalProperties": false}
++      ]
++    },
++    "text_scope": {"properties": {"locator": {"$ref": "#/$defs/text_locator"}, "semantics": {"additionalProperties": {"properties": {"locator": {"$ref": "#/$defs/text_locator"}}}}}},
++    "docx_scope": {"properties": {"locator": {"$ref": "#/$defs/docx_locator"}, "semantics": {"additionalProperties": {"properties": {"locator": {"$ref": "#/$defs/docx_locator"}}}}}},
++    "pdf_scope": {"properties": {"locator": {"$ref": "#/$defs/pdf_locator"}, "semantics": {"additionalProperties": {"properties": {"locator": {"$ref": "#/$defs/pdf_locator"}}}}}},
++    "format_scope": {
++      "allOf": [
++        {"if": {"anyOf": [
++          {"required": ["artifact"], "properties": {"artifact": {"properties": {"path": {"pattern": "\\.([mM][dD]|[mM][aA][rR][kK][dD][oO][wW][nN]|[tT][eE][xX]|[tT][xX][tT])$"}}}}},
++          {"required": ["path"], "not": {"required": ["artifact"]}, "properties": {"path": {"pattern": "\\.([mM][dD]|[mM][aA][rR][kK][dD][oO][wW][nN]|[tT][eE][xX]|[tT][xX][tT])$"}}}
++        ]}, "then": {"$ref": "#/$defs/text_scope"}},
++        {"if": {"anyOf": [
++          {"required": ["artifact"], "properties": {"artifact": {"properties": {"path": {"pattern": "\\.[dD][oO][cC][xX]$"}}}}},
++          {"required": ["path"], "not": {"required": ["artifact"]}, "properties": {"path": {"pattern": "\\.[dD][oO][cC][xX]$"}}}
++        ]}, "then": {"$ref": "#/$defs/docx_scope"}},
++        {"if": {"anyOf": [
++          {"required": ["artifact"], "properties": {"artifact": {"properties": {"path": {"pattern": "\\.[pP][dD][fF]$"}}}}},
++          {"required": ["path"], "not": {"required": ["artifact"]}, "properties": {"path": {"pattern": "\\.[pP][dD][fF]$"}}}
++        ]}, "then": {"$ref": "#/$defs/pdf_scope"}}
++      ]
+     },
+     "source": {
+       "allOf": [{"$ref": "#/$defs/artifact"}],
+@@ -35,7 +62,17 @@
+         "id": {"type": "string", "minLength": 1},
+         "versions": {"type": "object", "additionalProperties": {"$ref": "#/$defs/artifact"}}
+       },
+-      "description": "Actual frozen CSV/JSON, keyed by stable result_id or result_id records. Numeric sources bind data/code/execution files in versions here or in their original record."
++      "description": "Actual frozen CSV/JSON, keyed by stable result_id or result_id records. Numeric sources bind data/code/execution files in versions here or in their original record. Semantic values may use frozen_semantic; labels are display text, never scientific equivalence."
++    },
++    "frozen_semantic": {
++      "oneOf": [
++        {"type": ["string", "number"]},
++        {"type": "object", "required": ["value"], "properties": {
++          "value": {"type": ["string", "number"]},
++          "labels": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
++          "equivalent_values": {"type": "array", "items": {"type": "string", "minLength": 1}, "description": "Only frozen model/implementation declarations authorize these alternative canonical identities for recomputation. Their scientific equivalence still requires independent review."}
++        }}
++      ]
+     },
+     "semantic": {
+       "type": "object",
+@@ -46,7 +83,7 @@
+         "locator": {"$ref": "#/$defs/locator"},
+         "position": {"enum": ["prefix", "suffix"]}
+       },
+-      "description": "Canonical source meaning plus text actually found. Free aliases must be defined in frozen source labels; unit and direction use conservative built-in conversions/aliases."
++      "description": "Canonical source meaning plus text actually found. Display aliases must be defined in frozen source labels; unit and direction use conservative built-in conversions/aliases. Local missing fields are reported separately from manuscript-wide coverage. Independent locators still receive negation checks; a unit locator alone cannot bind the number's unit without actual adjacency or a verified same-column DOCX header."
+     },
+     "numeric": {
+       "type": "object",
+@@ -59,26 +96,29 @@
+         "rounding": {"enum": ["half-even", "half-up"], "default": "half-even"},
+         "tolerance": {
+           "type": "object",
+-          "properties": {"abs": {"type": "number", "minimum": 0}, "rel": {"type": "number", "minimum": 0}},
++          "properties": {"abs": {"type": "number", "minimum": 0, "description": "Absolute tolerance in the original source unit, after recomputed unit conversion."}, "rel": {"type": "number", "minimum": 0}},
+           "additionalProperties": false
+         },
+         "recomputed": {
+           "type": "object",
+           "required": ["source_id"],
+-          "properties": {"source_id": {"type": "string", "minLength": 1}, "result_id": {"type": "string", "minLength": 1}, "field": {"type": "string", "minLength": 1}}
++          "properties": {"source_id": {"type": "string", "minLength": 1}, "result_id": {"type": "string", "minLength": 1}, "field": {"type": "string", "minLength": 1}},
++          "description": "Same scientific identity and numeric role; unit dimensions must agree, then values are converted to the original source unit. Missing outcome/population/comparison/split/time/effect identity remains pending."
+         }
+       },
+       "dependentRequired": {"tolerance": ["recomputed"]},
+-      "description": "Read this exact numeric token at the locator. Decimal display rounding is independent of abs/rel tolerance against another hash-bound raw output."
++      "description": "Read this exact numeric token at the locator. Raw JSON decimals, conversion and tolerance arithmetic preserve input precision; decimal display rounding is independent of abs/rel tolerance against another hash-bound raw output. Checked tokens alone do not establish interval order, exact primary-value roles or subject/unit relations."
+     },
+     "link": {
+       "type": "object",
++      "allOf": [{"$ref": "#/$defs/format_scope"}],
+       "required": ["result_id", "role", "artifact", "locator"],
+       "properties": {
+         "result_id": {"type": "string", "minLength": 1},
+         "source_id": {"type": "string", "minLength": 1},
+         "role": {"type": "string", "minLength": 1},
+         "claim_id": {"type": "string", "minLength": 1},
++        "subject_field": {"enum": ["model", "implementation", "outcome", "population"], "description": "Optional primary-value subject. Default selects locally mapped model, implementation, then outcome. Unsupported text relationships remain located pending."},
+         "artifact": {"$ref": "#/$defs/artifact"},
+         "locator": {"$ref": "#/$defs/locator"},
+         "numeric": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/numeric"}},
+@@ -91,10 +131,38 @@
+             "anyOf": [{"required": ["text"]}, {"required": ["texts"]}]
+           }
+         }
+-      }
++      },
++      "description": "An occurrence role need not repeat every frozen source field. Field coverage is also aggregated across declared occurrences of the same result in the same manuscript artifact."
++    },
++    "build_occurrence": {
++      "type": "object",
++      "allOf": [{"$ref": "#/$defs/format_scope"}],
++      "required": ["result_id", "role", "locator"],
++      "anyOf": [{"required": ["path"]}, {"required": ["artifact"]}],
++      "properties": {
++        "path": {"$ref": "#/$defs/artifact/properties/path"},
++        "artifact": {"type": "object", "required": ["path"], "properties": {"path": {"$ref": "#/$defs/artifact/properties/path"}, "sha256": {"$ref": "#/$defs/artifact/properties/sha256"}}},
++        "result_id": {"$ref": "#/$defs/link/properties/result_id"},
++        "source_id": {"$ref": "#/$defs/link/properties/source_id"},
++        "role": {"$ref": "#/$defs/link/properties/role"},
++        "locator": {"$ref": "#/$defs/locator"},
++        "unit": {"type": "string", "minLength": 1},
++        "subject_field": {"$ref": "#/$defs/link/properties/subject_field"},
++        "numeric": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["field"], "properties": {
++          "field": {"$ref": "#/$defs/numeric/properties/field"}, "text": {"$ref": "#/$defs/numeric/properties/text"},
++          "decimals": {"$ref": "#/$defs/numeric/properties/decimals"}, "rounding": {"$ref": "#/$defs/numeric/properties/rounding"},
++          "offset": {"$ref": "#/$defs/numeric/properties/offset"}, "tolerance": {"$ref": "#/$defs/numeric/properties/tolerance"},
++          "recomputed": {"$ref": "#/$defs/numeric/properties/recomputed"}
++        }, "dependentRequired": {"tolerance": ["recomputed"]}}},
++        "semantics": {"$ref": "#/$defs/link/properties/semantics"},
++        "claim_id": {"$ref": "#/$defs/link/properties/claim_id"},
++        "bindings": {"$ref": "#/$defs/link/properties/bindings"}
++      },
++      "description": "Existing build row accepted by build_links(root,sources,occurrences,claims=()). Sources own semantic values; source/target/version hashes are filled only when absent, pinned hashes are verified. Numeric defaults to value; text defaults to source conversion and explicit decimal rounding. This definition is an optional row shape, not a second ledger or new audit payload kind."
+     },
+     "claim": {
+       "type": "object",
++      "allOf": [{"$ref": "#/$defs/format_scope"}],
+       "required": ["id", "artifact", "locator", "text"],
+       "properties": {
+         "id": {"type": "string", "minLength": 1},
+
+--- /dev/null
++++ b/academic-research-skills/src/common/references/computation-examples.md
+@@ -0,0 +1,7 @@
++# 从资源瓶颈发展算法与可执行设计
++
++仅在算法、求解或数字设计的资源瓶颈需要具体推演时读取。
++
++某方法在有价值的规模上耗时或内存不可承受时，先剖析读取、搜索和求解，确定瓶颈而非直接缩成琐碎小题。提出结构化候选、稀疏表示、分块或多保真筛选；针对“收益只是少算了难实例”这一替代解释，对齐输入、信息、精度要求和总预算。小实例用已知解/精确求解核正确性和最优性差距，正式留出困难实例及变化工况检验质量—时间—内存与失败率，纳入可信最近邻。
++
++例如先用廉价近似筛选、再用独立高精度求解确认数字设计，要保存未经筛选的对照抽样并检验近似误差是否系统排除最优区域。比较完整策略、去掉筛选、同预算均匀搜索与适用替代，区分“找到更好设计”和“搜索更省资源”的主张。性能未提高时核实现与预算公平性，再改筛选准则、边界条件或发展可信适用范围；不能只展示最佳设计。物理优势限于已校验模型/数值条件，未来实体试验另列。可行管线和已知算法作为基线，原创贡献需要新策略、可证条件或重要边界及决定性证据。
+
+--- a/academic-research-skills/src/common/references/computational-routes.md
++++ b/academic-research-skills/src/common/references/computational-routes.md
+@@ -40,14 +40,4 @@
+ <a id="constructive-iteration"></a>
+ ## 建设性研究推演
+ 
+-### 从可得代理信息发展估计与设计
+-
+-延续选择缺失例子，若合法公开材料提供分层S、总体权重w_s、层内p_s与q_s，并有可辩护约束l_s≤r_s≤u_s，则总体界为Σw_s[p_sq_s+(1−p_s)l_s]到Σw_s[p_sq_s+(1−p_s)u_s]。宽度为Σw_s(1−p_s)(u_s−l_s)，显示哪些层的额外信息最可能改变决策；只增加R=1记录未必解决它。核对权重覆盖、层定义、时间与重复来源，不能把其他总体的代理关系直接当约束。
+-
+-这给出建设性路线：比较最近邻的分层、约束与不确定性处理，再提出更可信的可取得代理、带测量误差的界估计或资源分配方法。新约束必须来自独立公开验证或可证明条件，不能由希望界变窄来设定。开发集估计代理误差，预先留出的独立来源检验迁移；有限样本同时传播w_s、p_s、q_s与约束估计的不确定性。与不分层界、既有方法、去掉新约束及替代代理作同信息比较，报告界宽、覆盖与失效条件。无新增可用约束时，界结论也可能有价值；已有公式本身是基线，投稿增量落在新估计/条件或重要发现，先核最近邻。
+-
+-### 从资源瓶颈发展算法与可执行设计
+-
+-某方法在有价值的规模上耗时或内存不可承受时，先剖析读取、搜索和求解，确定瓶颈而非直接缩成琐碎小题。提出结构化候选、稀疏表示、分块或多保真筛选；针对“收益只是少算了难实例”这一替代解释，对齐输入、信息、精度要求和总预算。小实例用已知解/精确求解核正确性和最优性差距，正式留出困难实例及变化工况检验质量—时间—内存与失败率，纳入可信最近邻。
+-
+-例如先用廉价近似筛选、再用独立高精度求解确认数字设计，要保存未经筛选的对照抽样并检验近似误差是否系统排除最优区域。比较完整策略、去掉筛选、同预算均匀搜索与适用替代，区分“找到更好设计”和“搜索更省资源”的主张。性能未提高时核实现与预算公平性，再改筛选准则、边界条件或发展可信适用范围；不能只展示最佳设计。物理优势限于已校验模型/数值条件，未来实体试验另列。可行管线和已知算法作为基线，原创贡献需要新策略、可证条件或重要边界及决定性证据。
++按问题读取[代理约束与估计](inference-examples.md#从可得代理信息发展估计与设计)或[算法与数字设计](computation-examples.md)，无需为一项方法研究读取整张工具表。
+
+--- /dev/null
++++ b/academic-research-skills/src/common/references/inference-examples.md
+@@ -0,0 +1,25 @@
++# 测量、选择缺失与建设性估计
++
++仅在当前问题涉及识别、测量偏移或代理约束时读取对应段。示例服务判断，不是固定研究配额。
++
++## 测量偏移与有限精度
++
++假设目标为常量θ，观测Z=θ+b+ε，Eε=0，b为未知固定偏移。重复测量、换估计器和引入已知参考是三条真正不同的路线。先检验信息障碍：任意t下(θ+t,b−t)与(θ,b)产生同一个完整Z分布，仍满足上述模型。故重复只能提高θ+b的精度，不能识别θ；这个结论限于该模型，不能据此证明含更多已知约束的原问题也不识别。
++
++参考对象真值c已知，若同一测量机制给出W=c+b+η、Eη=0且共享同一b，则θ=EZ−EW+c。新增参考修复了识别，有限样本仍需估计差值的不确定性；配对时保留协方差。若两个对象偏移不同，这个式子仍含偏移差，下一步应验证迁移条件、匹配校准或给有依据的界，而非把参考数量当作识别证明。
++
++配对边界：若原模型已知b=0，θ=EZ已识别，问题可能只是区间过宽。此时增加有效独立测量、改善测量精度或按研究损失配置预算，比重新寻找“不可识别反例”有效。所有方法比较先对齐可用信息与资源；具有额外真值的方案不能被包装成同信息算法优势。
++
++## 选择缺失与识别
++
++令Y为二元目标，R标记是否被观察；已知p=P(R=1)>0及q=P(Y=1|R=1)，没有Y与R独立的假设。候选路线是继续观察R=1、加一个代理变量或在R=0中做概率抽样。实际推导为E[Y]=pq+(1−p)r，其中r=P(Y=1|R=0)未观测。把r取0或1的两个联合分布保留同一p、q及全部已观测信息，均满足模型，得到锐界[pq,pq+1−p]。p=1时已无此缺口。
++
++更多同来源记录不缩小这个识别区间。若R=0内有已知纳入概率、覆盖目标单位的抽样，可以估计r，再组合目标均值；若只取得方便样本，仍需处理其选择机制。代理变量只有在明确的测量/迁移约束下才可能识别，不能凭相关性宣称修复。若原问题已给定并可辩护地使用条件独立与正值性，则先推导相应识别式，再诊断支持范围；不得用违反这些约束的世界作为原问题的反例。
++
++结果分支：界已足以决定问题时报告部分识别结论；界不能区分关键决策时比较新增资料的信息价值；校准或抽样条件不成立时重设计或保留范围。区分选择与真值的依赖、测量噪声和有限精度，避免把三种障碍都归成“需要更多数据”。
++
++## 从可得代理信息发展估计与设计
++
++延续选择缺失例子，若合法公开材料提供分层S、总体权重w_s、层内p_s与q_s，并有可辩护约束l_s≤r_s≤u_s，则总体界为Σw_s[p_sq_s+(1−p_s)l_s]到Σw_s[p_sq_s+(1−p_s)u_s]。宽度为Σw_s(1−p_s)(u_s−l_s)，显示哪些层的额外信息最可能改变决策；只增加R=1记录未必解决它。核对权重覆盖、层定义、时间与重复来源，不能把其他总体的代理关系直接当约束。
++
++这给出建设性路线：比较最近邻的分层、约束与不确定性处理，再提出更可信的可取得代理、带测量误差的界估计或资源分配方法。新约束必须来自独立公开验证或可证明条件，不能由希望界变窄来设定。开发集估计代理误差，预先留出的独立来源检验迁移；有限样本同时传播w_s、p_s、q_s与约束估计的不确定性。与不分层界、既有方法、去掉新约束及替代代理作同信息比较，报告界宽、覆盖与失效条件。无新增可用约束时，界结论也可能有价值；已有公式本身是基线，投稿增量落在新估计/条件或重要发现，先核最近邻。
+
+--- a/academic-research-skills/src/common/references/integrity.md
++++ b/academic-research-skills/src/common/references/integrity.md
+@@ -6,8 +6,10 @@
+ 
+ 关键结果使用原始冻结输出已有的稳定 `result_id`，正文、摘要、表格、图注与导出按需关联实际位置；不另抄一份数值台账。保留原始值、单位、分母、结局、总体、时间、比较条件、模型、评价划分、不确定性和数据／代码／执行版本。理论关联命题、条件及真正的证明位置；解释关联实际材料片段。
+ 
+-文件字节一致、数值一致和已声明语义对应分别报告：复算容差不能代替显示舍入，比例不能混作百分数，百分比变化不能混作百分点；同一数字不能代替对方向、时间与结局的核对。`result_links.py`读取实际文件的受限定位和源定义文本映射，不能证明完整句子、因果解释、原创性或科学真实性。尚未关联的关键论断记录实际位置与下一步，其他工作继续。
++文件字节一致、数值一致和已声明语义对应分别报告：复算先核结局、总体、比较、分区、时间、效应及其余已声明身份，再核量纲并换算到同一单位比较容差；模型／实现的科学等价须由冻结源明确声明，显示别名不代替等价。复算容差不能代替显示舍入，比例不能混作百分数，百分比变化不能混作百分点；同一数字不能代替对方向、时间与结局的核对。
++
++`result_links.py`可用`build_links`复用实际稿件构建行与冻结结果。出现角色与全稿字段覆盖分别报告：局部点值或图注无需重复全部设计；同一稿件内缺主值、区间或已声明语义时定位待补关联。自动关系检查只覆盖简单局部主体—精确主值关系、明确区间顺序／标签和实际格式的受限表格坐标；比较阈值不能冒充精确主值，独立单位说明不能掩盖数字旁错单位，混合定位不能伪装表格。直接否定或已知错绑报错，复杂连接、未确定单位关系与否定范围进入实际位置的语义复核pending。全段词语共现不能证明关系。该检查不能证明完整句子、因果解释、原创性或科学真实性。尚未关联的关键论断记录实际位置与下一步，其他工作继续。
+ 
+ 每次导出保存真实编辑源、图表、引用资源、渲染器版本与输入／输出哈希。源文件变更后按依赖图重建受影响产物；旧PDF的字节未变不表示它对应当前源稿。需要视觉检查时，实际打开对应页面观察布局、公式与图表，并将观察记录绑定到该版本。
+ 
+-数值结果的主值（value/estimate）与已声明的上下界都须关联实际出现位置，不能只核区间端点而遗漏主估计。
++数值结果的主值（value/estimate）与已声明的上下界在适用稿件位置关联；仅核端点不会获得主估计覆盖，也不能认定尚未检查的完整论断成立。
+
+--- /dev/null
++++ b/academic-research-skills/src/common/references/interpretive-examples.md
+@@ -0,0 +1,7 @@
++# 解释争议：选择能区分过程的材料
++
++仅在当前问题涉及文本来源、行动顺序或竞争解释时读取。
++
++若多份材料都称某项观念促成实践变化，候选解释可为“观念改变了行动”与“行动已改变，叙述后来赋予理由”。词频和更多转述不能单独区分它们。追溯各文本是否独立、写作时间与行动顺序，寻找行动前的可定位材料、实施过程及不符合预期的案例；用原始记录的语境比较两种解释各自应出现的证据。
++
++行动前的记录可能排除某种事后起源解释，却不独自证明因果充分性；没有找到记录也可能来自保存或访问缺失，不能直接反证。若作者、日期或传承关系未知，下一动作是核查相应来源；若这些已明确而竞争解释仍等价，寻找其预期不同的过程材料或调整问题。迁移的是证据选择逻辑，单项目的词汇、时间阈值与编码表留在项目中。
+
+--- a/academic-research-skills/src/common/references/research-quality.md
++++ b/academic-research-skills/src/common/references/research-quality.md
+@@ -35,34 +35,12 @@
+ 本套Skill的开发、更新和打包请求以通用Skill文件与软件验证为交付，不自动开展具体课题、获取研究数据或写论文。任何开发样例按其测试范围标注，不作为科研成果。
+ 
+ 
+-## 判断示例：按当前缺口展开
++## 按需推演
+ 
+-这些是可迁移的推理示例，不是固定科研配额，也不是所有任务都要执行的清单。
++按当前缺口选择一个相关段：
+ 
+-### 测量偏移与有限精度：相似现象需要不同动作
++- 测量偏移、选择缺失、代理约束与建设性估计：[推导示例](inference-examples.md)。
++- 文本来源、行动顺序与竞争解释：[材料示例](interpretive-examples.md)。
++- 算法、求解或数字设计的资源瓶颈：[建设性计算](computation-examples.md)。
+ 
+-假设目标为常量θ，观测Z=θ+b+ε，Eε=0，b为未知固定偏移。重复测量、换估计器和引入已知参考是三条真正不同的路线。先检验信息障碍：任意t下(θ+t,b−t)与(θ,b)产生同一个完整Z分布，仍满足上述模型。故重复只能提高θ+b的精度，不能识别θ；这个结论限于该模型，不能据此证明含更多已知约束的原问题也不识别。
+-
+-参考对象真值c已知，若同一测量机制给出W=c+b+η、Eη=0且共享同一b，则θ=EZ−EW+c。新增参考修复了识别，有限样本仍需估计差值的不确定性；配对时保留协方差。若两个对象偏移不同，这个式子仍含偏移差，下一步应验证迁移条件、匹配校准或给有依据的界，而非把参考数量当作识别证明。
+-
+-配对边界：若原模型已知b=0，θ=EZ已识别，问题可能只是区间过宽。此时增加有效独立测量、改善测量精度或按研究损失配置预算，比重新寻找“不可识别反例”有效。所有方法比较先对齐可用信息与资源；具有额外真值的方案不能被包装成同信息算法优势。
+-
+-### 选择缺失与识别：新增资料要回答未观测部分
+-
+-令Y为二元目标，R标记是否被观察；已知p=P(R=1)>0及q=P(Y=1|R=1)，没有Y与R独立的假设。候选路线是继续观察R=1、加一个代理变量或在R=0中做概率抽样。实际推导为E[Y]=pq+(1−p)r，其中r=P(Y=1|R=0)未观测。把r取0或1的两个联合分布保留同一p、q及全部已观测信息，均满足模型，得到锐界[pq,pq+1−p]。p=1时已无此缺口。
+-
+-更多同来源记录不缩小这个识别区间。若R=0内有已知纳入概率、覆盖目标单位的抽样，可以估计r，再组合目标均值；若只取得方便样本，仍需处理其选择机制。代理变量只有在明确的测量/迁移约束下才可能识别，不能凭相关性宣称修复。若原问题已给定并可辩护地使用条件独立与正值性，则先推导相应识别式，再诊断支持范围；不得用违反这些约束的世界作为原问题的反例。
+-
+-结果分支：界已足以决定问题时报告部分识别结论；界不能区分关键决策时比较新增资料的信息价值；校准或抽样条件不成立时重设计或保留范围。区分选择与真值的依赖、测量噪声和有限精度，避免把三种障碍都归成“需要更多数据”。
+-
+-### 解释争议：从重复叙述到能区分过程的材料
+-
+-若多份材料都称某项观念促成实践变化，候选解释可为“观念改变了行动”与“行动已改变，叙述后来赋予理由”。词频和更多转述不能单独区分它们。追溯各文本是否独立、写作时间与行动顺序，寻找行动前的可定位材料、实施过程及不符合预期的案例；用原始记录的语境比较两种解释各自应出现的证据。
+-
+-行动前的记录可能排除某种事后起源解释，却不独自证明因果充分性；没有找到记录也可能来自保存或访问缺失，不能直接反证。若作者、日期或传承关系未知，下一动作是核查相应来源；若这些已明确而竞争解释仍等价，寻找其预期不同的过程材料或调整问题。迁移的是证据选择逻辑，单项目的词汇、时间阈值与编码表留在项目中。
+-
+-### 建设性路线与决定性验证
+-
+-从信息缺口发展可信代理约束估计与资源配置，从计算瓶颈发展结构化搜索、稀疏/分块与数字设计；同信息/预算比较最近邻、消融与替代，检验质量、代价与失效。两条完整推演按需读[建设性研究路线](computational-routes.md#constructive-iteration)。
+-
+-这些推演服务当前真实问题：保持模型、联合信息与约束，完成推导、设计或可复算检验。开放探索可先产生信息再查最近邻更新路线，不要求先证明绝对新颖。证明与数值提示、识别与精度、实现错误与真实反例分别决定下一动作，不用同一缺口清单替代判断。
++保持模型、联合信息与约束，完成推导、设计或可复算检验。开放探索可先产生信息，再查最近邻更新路线；证明与数值提示、识别与精度、实现错误与真实反例分别决定下一动作。
+
+--- a/academic-research-skills/src/common/references/runtime.md
++++ b/academic-research-skills/src/common/references/runtime.md
+@@ -19,40 +19,43 @@
+ 来源直接使用实际冻结JSON／CSV：JSON可由`result_id`作键、以`results`列表保存，或是含`result_id`的记录列表；CSV需要唯一表头和`result_id`列。下面的数值仅说明协议，不构成研究证据：
+ 
+ ```json
+-{"R1": {"value": 0.123456, "unit": "ratio", "time": "6 months"}}
++{"R1": {"value": 0.123456, "unit": "ratio", "outcome": "accuracy", "time": "6 months"}}
+ ```
+ 
+-若正文实际为`At 6 months the value was 12.35%.`，可对已有文件构造最小审计（Python需能导入同目录`result_links.py`）：
++若正文实际为`Accuracy was 12.35% at 6 months.`，可直接复用稿件构建记录（Python需能导入同目录`result_links.py`）：
+ 
+ ```python
+-import hashlib
+ from pathlib import Path
+-from result_links import audit_links
++from result_links import build_links, audit_links
+ 
+ root = Path("PROJECT").resolve()
+-def artifact(name):
+-    return {"path": name, "sha256": hashlib.sha256((root / name).read_bytes()).hexdigest()}
+-
+-data = {"kind": "result-links", "sources": [{
+-    "id": "frozen", **artifact("results.json"),
+-    "versions": {"data": artifact("data.csv"), "code": artifact("analysis.py"),
+-                 "execution": artifact("execution.json")}}],
+-    "links": [{"result_id": "R1", "role": "body", "artifact": artifact("draft.md"),
+-        "locator": {"line": 1},
+-        "numeric": [{"field": "value", "text": "12.35", "decimals": 2}],
+-        "semantics": {"unit": {"value": "percent", "text": "%"},
+-                      "time": {"value": "6 months", "text": "6 months"}}}]}
++sources = [{"id": "frozen", "path": "results.json", "versions": {
++    "data": {"path": "data.csv"}, "code": {"path": "analysis.py"},
++    "execution": {"path": "execution.json"}}}]
++# Existing build rows supply locations and display rules, not another copy of results.
++rows = [{"path": "draft.md", "result_id": "R1", "role": "body",
++         "locator": {"line": 1}, "unit": "percent",
++         "numeric": [{"field": "value", "decimals": 2}]}]
++data = build_links(root, sources, rows)
+ report = audit_links(data, root)
+ assert report["passed"], report
+ ```
+ 
+-只在实际取得、运行或导出后冻结这些哈希；为修复失败而单独刷新哈希不会使错误文本通过。来源记录也可自带`versions`覆盖共享版本；数值来源缺少`data`、`code`或`execution`身份时报告pending，不宣称已完整绑定。
++`build_links(root, sources, occurrences, claims=())`只读已有输出，返回可交给`audit_links`的payload；不写新结果台账、不搜索全稿论断。来源清单使用`id,path,sha256?,versions?`；构建行的`path`可换成`artifact: {path,sha256?}`。缺哈希时按当前真实文件冻结，已有哈希不匹配时抛出`ValueError`，不能静默更新。构建行支持`source_id`（多来源时必需）、`role`、`locator`、`result_id`、目标`unit`，以及数值`field,decimals,rounding,text,offset,recomputed,tolerance`；省略`numeric`时生成`value`映射。`text`缺省按来源原值、单位换算及显示精度生成；显式显示文字也须经审计核对。语义仅复用源端标签并核对当前定位实际文字，表头等可用`semantics`提供独立定位。
+ 
+-`locator`均为1起算：Markdown／LaTeX／文本使用`line`或`line_start`和`line_end`；DOCX使用XML顺序`paragraph`（含空段与表内段）或正文表格的`table,row,cell`；PDF使用`page`加提取文本的行／范围。PDF调用已安装`pdftotext`或`pypdf`，缺失、扫描页无可提取文本时清楚报告未检查。DOCX读原始XML；这些定位不证明格式或视觉质量。数字重复时用零起算字符`offset`指定当前定位文本内的那一个。
++只在实际取得、运行或导出后冻结哈希；为修复失败而单独刷新哈希不会使错误文本通过。来源记录也可自带`versions`覆盖共享版本；数值来源缺少`data`、`code`或`execution`身份时报告pending，不宣称已完整绑定。直接使用审计payload的旧调用仍可继续。
+ 
+-来源声明的`unit,direction,denominator,outcome,population,sample,time,comparison,model,split,uncertainty,effect_type`都要对应实际文字；也可集中在来源`semantics`中。普通语义使用`{value, labels:[...]}`定义源端允许的文字，不允许目标自行发明同义关系。目标映射有自己的`locator`时可核对同一稿件的单位表头或模型说明；否则单位应紧邻数字。只自动处理明确的比例／百分数、s／ms、g／mg和m／cm／mm转换；百分比与百分点保持不同含义。分母为正整数计数，区间`lower,upper`应完整映射；区间类型用`uncertainty`或`uncertainty_type`记录。复核每个关键句子的整体语义仍由实际阅读完成。
++`locator`均为1起算：Markdown／LaTeX／文本使用`line`或`line_start`（二选一）及可选`line_end`；DOCX使用XML顺序`paragraph`（含空段与表内段）或正文表格的`table,row,cell`；PDF使用`page`加提取文本的行／范围。按实际文件格式拒绝混合或不适用坐标，给MD附加table字段不能获得表格关系。PDF调用已安装`pdftotext`或`pypdf`，缺失、扫描页无可提取文本时清楚报告未检查。DOCX读原始XML；这些定位不证明格式或视觉质量。数字重复时用零起算字符`offset`指定当前定位文本内的那一个。
+ 
+-显示以十进制`half-even`（默认）或`half-up`及`decimals: 0..12`核对。`tolerance: {abs, rel}`只能与`recomputed: {source_id, result_id?, field?}`共同使用，对另一份真实、哈希绑定的原始输出比较；容差不放宽正文显示。`coverage.bytes`、`coverage.numeric`与`coverage.declared_semantic`分别列出实际角色、位置和版本，任何通过都不代表科学真实性或视觉验收。
++来源声明的`unit,direction,denominator,outcome,population,sample,time,comparison,model,implementation,split,uncertainty,effect_type`可放在原记录或`semantics`中。普通语义用`{value, labels:[...]}`定义源端允许的显示文字。模型／实现复算等价另用冻结源的`equivalent_values`声明；显示标签不构成科学等价授权。目标映射有自己的`locator`时仍检查该真实范围的否定。单位也须绑定实际数字：独立单位定位只有真实DOCX同列首行表头等已定义关系可自动绑定；明确错单位报错，普通另一行的说明或未确定关联进入pending。`coverage.numeric.unit_binding`报告紧邻数字、同列表头或待复核。只自动处理明确的比例／百分数、s／ms、g／mg和m／cm／mm转换；百分比与百分点保持不同含义。分母为正整数计数；区间类型用`uncertainty`或`uncertainty_type`记录。
++
++显示以十进制`half-even`（默认）或`half-up`及`decimals: 0..12`核对。`tolerance: {abs, rel}`只能与`recomputed: {source_id, result_id?, field?}`共同使用；先核另一份真实、哈希绑定输出的科学身份与量纲，再转回原来源单位比较容差。冻结JSON数值和转换／差值／容差计算保留输入精度，零容差不会因默认28位Decimal上下文而抹平差异；数值语义scalar对外用精确字符串，payload和报告仍可JSON序列化。`abs`使用原来源单位；`rel`使用换算后两个绝对值的较大者。结局、总体、比较、分区、时间、效应身份缺失时进入定位pending；其余已声明字段也必须相符，模型／实现只接受源定义的明确等价。主值／estimate可互认，不能用上下界冒充主值。容差不放宽正文显示。
++
++局部点值、摘要或图注可只映射其实际字段；不要求每次重复完整设计。`coverage.occurrences`列角色、定位、覆盖字段与该次未覆盖字段；`coverage_gaps`按同一来源、结果、稿件文件汇总缺失的主值、区间及源语义，并产生`manuscript_fields_uncovered`待补关联。遗漏主值不能靠核对端点得到全稿覆盖。源未声明的科学信息不能由脚本补成证据。
++
++`coverage.relationships`限实际可定位的局部关系：同一句内简单主值与主体连接、区间端点顺序／明确上下限标签、DOCX相邻左侧主体单元格或同列首行结局表头。可用`subject_field`选模型、实现、结局或总体；默认为本地映射的模型、实现、结局。已知主体错绑、端点交换及直接否定报错；比较阈值（如`lower than 410 ms`）不能认作精确主值，进入定位pending。主体只在另一句出现、未知连接词、复杂否定范围或无法确认的表格关系也进入pending。全段词语共现不能代替关系核对，`not an increase`也不能借独立定位变成增加。对复杂语言、因果解释、完整科学真相仍需实际阅读审查。
++
++`coverage.bytes`、`coverage.numeric`与`coverage.declared_semantic`分别列出实际角色、位置和版本；关系覆盖及语义待复核单列，任何通过都不代表科学真实性或视觉验收。
+ 
+ 理论来源`type: theory`记录`proposition`、`conditions`列表和`proof: {path,sha256,locator,text}`；目标`bindings.proposition.text`及`bindings.conditions.texts`逐项绑定。解释来源`type: interpretive`记录`interpretation`及`snippets: [{path,sha256,locator,text}]`，目标绑定`bindings.interpretation.text`。审计读取证明／片段的真实定位和版本，但不宣称证明正确或解释充分。
+ 
+@@ -64,6 +67,9 @@
+ 
+ ```python
+ from result_links import audit_render
++import hashlib
++def artifact(name):
++    return {"path": name, "sha256": hashlib.sha256((root / name).read_bytes()).hexdigest()}
+ render = {"kind": "render-dependencies",
+     "artifacts": [{"id": "tex", **artifact("draft.tex")},
+                   {"id": "pdf", **artifact("draft.pdf")}],
+
+--- a/academic-research-skills/src/common/scripts/environment.py
++++ b/academic-research-skills/src/common/scripts/environment.py
+@@ -25,7 +25,7 @@
+ import time
+ import uuid
+ 
+-VERSION='3.2.0-rc.4'
++VERSION='3.2.0-rc.5'
+ SPEC=re.compile(r'^([A-Za-z0-9][A-Za-z0-9._-]*)(?:(>=|==)([0-9]+(?:\.[0-9]+)*))?$')
+ MODULE=re.compile(r'^[A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)*$')
+ TEXT_SERVICES={'read','extract','translate','draft','revise','review','figure-review','figure-plan','method-plan','landscape','matching','journal-match','ideate','novelty-check','synthesize','derive','prove','interpret','source-criticism'}
+
+--- a/academic-research-skills/src/common/scripts/provider_runtime.py
++++ b/academic-research-skills/src/common/scripts/provider_runtime.py
+@@ -19,7 +19,7 @@
+ import time
+ from datetime import datetime, timezone
+ 
+-VERSION = '3.2.0-rc.4'
++VERSION = '3.2.0-rc.5'
+ 
+ class ContractError(ValueError):
+     pass
+
+--- a/academic-research-skills/src/common/scripts/result_links.py
++++ b/academic-research-skills/src/common/scripts/result_links.py
+@@ -19,7 +19,8 @@
+ from xml.etree import ElementTree as ET
+ 
+ SEMANTICS = ('unit', 'direction', 'denominator', 'outcome', 'population', 'sample',
+-             'time', 'comparison', 'model', 'split', 'uncertainty', 'effect_type')
++             'time', 'comparison', 'model', 'implementation', 'split', 'uncertainty', 'effect_type')
++IDENTITY = ('outcome', 'population', 'comparison', 'split', 'time', 'effect_type')
+ DIRECTIONS = {'increase': ('increase', 'increased', 'increases', 'higher', 'positive'),
+               'decrease': ('decrease', 'decreased', 'decreases', 'lower', 'negative'),
+               'no-change': ('no-change', 'no change', 'unchanged')}
+@@ -111,14 +112,28 @@
+         return result.stdout.decode('utf-8').split('\f')
+     try:
+         from pypdf import PdfReader
++        from pypdf.errors import PyPdfError
+     except ImportError:
+         raise ValueError('PDF extraction needs installed pdftotext or pypdf; no PDF occurrence was checked') from None
+-    return [page.extract_text() or '' for page in PdfReader(str(path)).pages]
++    try:
++        return [page.extract_text() or '' for page in PdfReader(str(path)).pages]
++    except PyPdfError as error:
++        raise ValueError('PDF text extraction failed: ' + path.name + ': ' + str(error)) from error
+ 
+ 
+ def _located(path, locator, cache):
+     locator = _object(locator, 'locator')
+     extension = path.suffix.lower()
++    if extension in {'.md', '.markdown', '.tex', '.txt', '.pdf'}:
++        allowed = {'line', 'line_start', 'line_end'} | ({'page'} if extension == '.pdf' else set())
++        valid = not (set(locator) - allowed) and (('line' in locator) != ('line_start' in locator))
++        valid = valid and (extension != '.pdf' or 'page' in locator)
++    elif extension == '.docx':
++        valid = set(locator) == {'paragraph'} or set(locator) == {'table', 'row', 'cell'}
++    else:
++        raise ValueError('Occurrence format must be Markdown, LaTeX, text, DOCX or PDF')
++    if not valid:
++        raise ValueError('Mixed or inapplicable locator coordinates for ' + extension)
+     if path not in cache:
+         if extension == '.pdf':
+             cache[path] = _pdf_pages(path)
+@@ -191,6 +206,13 @@
+     return number
+ 
+ 
++def _precision(*values):
++    """Keep all finite decimal digits across conversion, subtraction and tolerance products."""
++    return max(50, sum(len(value.as_tuple().digits) for value in values)
++               + max(value.adjusted() for value in values)
++               - min(value.as_tuple().exponent for value in values) + 10)
++
++
+ def _records(path):
+     if path.suffix.lower() == '.csv':
+         with path.open(encoding='utf-8-sig', newline='') as handle:
+@@ -201,7 +223,7 @@
+             if any(None in row or any(v is None for v in row.values()) for row in data):
+                 raise ValueError('CSV rows must match header width')
+     elif path.suffix.lower() == '.json':
+-        data = json.loads(path.read_text(encoding='utf-8-sig'))
++        data = json.loads(path.read_text(encoding='utf-8-sig'), parse_float=Decimal)
+         if isinstance(data, dict) and isinstance(data.get('results'), list):
+             data = data['results']
+     else:
+@@ -243,7 +265,7 @@
+         value, labels = expected, [str(expected)]
+     if value is None or isinstance(value, (dict, list, bool)) or any(not isinstance(s, str) or not s.strip() for s in labels):
+         raise ValueError('Source semantic values must be scalar with nonempty source-defined labels')
+-    return value, labels
++    return str(value) if isinstance(value, Decimal) else value, labels
+ 
+ 
+ def _unit(value):
+@@ -251,30 +273,92 @@
+     return UNITS.get(normal, (normal, Decimal(1)))
+ 
+ 
+-def _semantics(record, link, text, path, cache, coverage):
++def _direction(value):
++    return next((key for key, words in DIRECTIONS.items() if _normal(value) in words), _normal(value))
++
++
++def _recomputed(record, other, field, other_field, pending, location):
++    """Compare a declared scientific identity before comparing converted raw values."""
++    if other.get('type', 'numeric') != 'numeric':
++        raise ValueError('Recomputed result must be numeric')
++    if field != other_field and {field, other_field} != {'value', 'estimate'}:
++        raise ValueError('Recomputed numeric field role differs')
++    original, repeated = _semantic_source(record), _semantic_source(other)
++    if 'unit' not in original or 'unit' not in repeated:
++        raise ValueError('Recomputed result must declare its unit')
++    source_unit = _unit(_value_and_labels(original['unit'])[0])
++    other_unit = _unit(_value_and_labels(repeated['unit'])[0])
++    if source_unit[0] != other_unit[0]:
++        raise ValueError('Recomputed unit dimensions differ')
++    checked = []
++    for name in sorted((set(original) | set(repeated)) - {'unit'}):
++        if name not in original or name not in repeated:
++            raise ValueError('Recomputed semantic identity missing: ' + name)
++        value = _value_and_labels(original[name])[0]
++        actual = _value_and_labels(repeated[name])[0]
++        equal = (_number(value, name) == _number(actual, name)) if name == 'denominator' else (
++            _direction(value) == _direction(actual) if name == 'direction' else _normal(value) == _normal(actual))
++        if not equal and name in {'model', 'implementation'} and isinstance(original[name], dict):
++            aliases = _list(original[name].get('equivalent_values', []), 'frozen equivalent_values')
++            equal = _normal(actual) in {_normal(_string(alias, 'equivalent value')) for alias in aliases}
++        if not equal:
++            raise ValueError('Recomputed semantic identity mismatch: ' + name)
++        checked.append(name)
++    missing = sorted(set(IDENTITY) - set(original))
++    if missing:
++        pending.append(dict(location, reason='recomputation_identity_unbound', fields=missing,
++                            action='Bind applicable scientific identity in both frozen results, including explicit not-applicable values'))
++    value = _number(other.get(other_field), 'recomputed value')
++    with localcontext() as context:
++        context.prec = _precision(value, other_unit[1], source_unit[1])
++        factor = other_unit[1] / source_unit[1]
++        if factor != 1:
++            value = value * factor
++    return value, sorted(checked), str(factor)
++
++
++def _negated(token, scoped):
++    for match in re.finditer(re.escape(_normal(token)), _normal(scoped)):
++        prefix = _normal(scoped)[:match.start()]
++        if re.search(r"(?:\b(?:not|never|no|without)\b|n't)\s+(?:(?:a|an|the|significantly|statistically|necessarily|actually|clearly)\s+){0,3}$", prefix):
++            raise ValueError('Negated actual occurrence: ' + str(token))
++
++
++def _unresolved_negation(scoped, tokens):
++    remainder=_normal(scoped)
++    for token in tokens:
++        token=_normal(token)
++        if re.search(r'\b(?:not|no|without)\b',token):remainder=remainder.replace(token,'')
++    remainder=re.sub(r'\bno missing (?:data|values|observations)\b','',remainder)
++    return re.search(r"\b(?:not|never|no|without|neither|nor|cannot)\b|\b\w+n['’]t\b|不是|并非|未",remainder) is not None
++
++
++def _semantics(record, link, text, path, cache, coverage, pending):
+     expected = _semantic_source(record)
+     mapped = _object(link.get('semantics', {}), 'link semantics')
+     if set(mapped) - set(expected):
+         raise ValueError('Semantic mapping lacks source meaning: ' + ','.join(sorted(set(mapped) - set(expected))))
+-    missing = set(expected) - set(mapped)
+-    if missing:
+-        raise ValueError('Missing semantic occurrence mappings: ' + ','.join(sorted(missing)))
+-    for field, original in expected.items():
++    # A caption can cover a point value while another occurrence covers its design.
++    for field, mapping in mapped.items():
++        original = expected[field]
+         value, labels = _value_and_labels(original)
+-        mapping = _object(mapped[field], field + ' mapping')
++        mapping = _object(mapping, field + ' mapping')
+         token = _string(mapping.get('text'), field + ' text')
+         actual = mapping.get('value')
+         scoped = _located(path, mapping['locator'], cache) if 'locator' in mapping else text
+         if not _present(scoped, token):
+             raise ValueError(field + ' text not found at actual locator: ' + token)
++        _negated(token,scoped)
++        if 'locator' in mapping and _unresolved_negation(scoped,[token]):
++            pending.append({'result_id':link['result_id'],'role':link['role'],'path':link['artifact']['path'],
++                'locator':mapping['locator'],'field':field,'reason':'semantic_negation_scope_unresolved',
++                'action':'Read the actual semantic scope and resolve its negation'})
+         if field == 'unit':
+             label_match = _normal(actual)==_normal(value) and _normal(token) in {_normal(s) for s in labels}
+             if _unit(value)[0] != _unit(actual)[0] or (_unit(actual) != _unit(token) and not label_match):
+                 raise ValueError('Unit mismatch or undeclared conversion')
+         elif field == 'direction':
+-            def canonical(item):
+-                return next((key for key, words in DIRECTIONS.items() if _normal(item) in words), _normal(item))
+-            if canonical(value) != canonical(actual) or canonical(token) != canonical(value):
++            if _direction(value) != _direction(actual) or _direction(token) != _direction(value):
+                 raise ValueError('Direction mismatch')
+         elif field == 'denominator':
+             denominator = _number(value, 'source denominator')
+@@ -294,14 +378,44 @@
+     return expected, mapped
+ 
+ 
+-def _numeric(record, link, text, expected, mapped, sources, coverage):
++def _numeric_unit(text, span, mapping, link, pending, location):
++    """A separate unit locator identifies text, not the number's unit relationship."""
++    before, after = _normal(text[:span[0]]), _normal(text[span[1]:])
++    def adjacent(label, prefix=False):
++        pattern = re.escape(_normal(label)).replace(r'\ ', r'\s+')
++        if prefix:
++            pattern = (r'(?<!\w)' if str(label)[0].isalnum() else '') + pattern + r'\s*$'
++            return re.search(pattern, before) is not None
++        pattern = r'^\s*' + pattern + (r'(?!\w)' if str(label)[-1].isalnum() else '')
++        return re.search(pattern, after) is not None
++    known = [unit for unit in UNITS if adjacent(unit) or (mapping.get('position') == 'prefix' and adjacent(unit, True))]
++    if any(_unit(unit) != _unit(mapping['value']) for unit in known):
++        raise ValueError('Actual numeric unit differs from mapped unit: ' + ','.join(known))
++    attached = adjacent(mapping['text'], mapping.get('position') == 'prefix')
++    if attached or known:
++        return 'attached'
++    if 'locator' not in mapping:
++        raise ValueError('Unit is not attached to the actual numeric occurrence')
++    number, unit = link['locator'], mapping['locator']
++    header = (Path(link['artifact']['path']).suffix.lower() == '.docx'
++              and number.get('table') is not None and number.get('table') == unit.get('table')
++              and number.get('cell') == unit.get('cell') and unit.get('row') == 1 and number.get('row',0) > 1)
++    if header and not re.match(r'\s*[a-z]', after):
++        return 'same-column-header'
++    pending.append(dict(location, field='unit', reason='numeric_unit_relationship_unresolved',
++                        unit_locator=unit, action='Bind the actual number unit or review its located unit relationship'))
++    return 'pending'
++
++
++def _numeric(record, link, text, expected, mapped, sources, coverage, pending):
+     numbers = _list(link.get('numeric', []), 'numeric mappings', True)
+     if record.get('lower') not in (None, '') and record.get('upper') not in (None, ''):
+         lower, upper = _number(record['lower'], 'lower bound'), _number(record['upper'], 'upper bound')
+         estimate = record.get('value', record.get('estimate'))
+         if lower > upper or (estimate is not None and not lower <= _number(estimate, 'estimate') <= upper):
+             raise ValueError('Source uncertainty interval is inconsistent')
+-    fields = set()
++    fields, positions = set(), {}
++    location = {'result_id': link['result_id'], 'role': link['role'], 'path': link['artifact']['path'], 'locator': link['locator']}
+     for mapping in numbers:
+         mapping = _object(mapping, 'numeric mapping')
+         field = _string(mapping.get('field'), 'numeric field')
+@@ -311,8 +425,14 @@
+         raw = _number(record.get(field), 'source ' + field)
+         token = _string(mapping.get('text'), 'numeric text')
+         displayed = _number(token, 'displayed number')
+-        # A range separator is not the sign of its upper endpoint; preserve offsets.
++        # A compact range separator is not the sign of its upper endpoint; preserve offsets.
+         numeric_text = re.sub(r'(?<=[\d%])[-–—](?=\d)', ' ', text.replace('−', '-'))
++        unit_text = mapped.get('unit', {}).get('text')
++        if unit_text:
++            pattern = r'(?<![\w.])[+-]?\d+(?:\.\d+)?\s*' + re.escape(unit_text) + r'([-–—])(?=\d)'
++            for separator in re.finditer(pattern, numeric_text):
++                start, end = separator.span(1)
++                numeric_text = numeric_text[:start] + ' ' + numeric_text[end:]
+         matches = list(re.finditer(r'(?<![\w.+-])' + re.escape(token) + r'(?![\w.])', numeric_text))
+         offset = mapping.get('offset')
+         if offset is not None:
+@@ -320,24 +440,25 @@
+                 raise ValueError('Numeric offset does not locate the actual token')
+         elif len(matches) != 1:
+             raise ValueError('Numeric token absent or ambiguous at locator: ' + token)
++        positions[field] = next(m.span() for m in matches if offset is None or m.start()==offset)
+         factor = Decimal(1)
+         if 'unit' not in expected:
+             raise ValueError('Numeric source must declare unit, including dimensionless')
+         source_unit = _value_and_labels(expected['unit'])[0]
+-        target_unit = mapped['unit']['value']
++        target_unit = mapped.get('unit', {}).get('value', source_unit)
+         factor = _unit(source_unit)[1] / _unit(target_unit)[1]
+-        unit_map = mapped['unit']
+-        if 'locator' not in unit_map:
+-            normalized = _normal(text)
+-            pair = str(unit_map['text']) + ' ' + token if unit_map.get('position') == 'prefix' else token + ' ' + str(unit_map['text'])
+-            if not re.search(re.escape(_normal(pair)).replace(r'\ ', r'\s*'), normalized):
+-                raise ValueError('Unit is not attached to the actual numeric occurrence')
++        unit_map = mapped.get('unit')
++        unit_binding = 'pending'
++        if unit_map is None:
++            pending.append(dict(location,reason='occurrence_unit_unbound',action='Bind the displayed unit at this occurrence or its actual table header'))
++        else:
++            unit_binding = _numeric_unit(text, positions[field], unit_map, link, pending, location)
+         decimals = mapping.get('decimals')
+         rounding = mapping.get('rounding', 'half-even')
+         if rounding not in {'half-even', 'half-up'}:
+             raise ValueError('Rounding must be half-even or half-up')
+         with localcontext() as context:
+-            context.prec = max(50, len(raw.as_tuple().digits) + abs(raw.adjusted()) + 20)
++            context.prec = _precision(raw, factor)
+             formatted = raw * factor
+             if decimals is not None:
+                 if type(decimals) is not int or not 0 <= decimals <= 12:
+@@ -351,6 +472,8 @@
+             elif displayed != formatted:
+                 raise ValueError('Displayed value mismatch: ' + field)
+         tolerance = _object(mapping.get('tolerance', {}), 'numeric tolerance')
++        if set(tolerance)-{'abs','rel'}:
++            raise ValueError('Unknown numeric tolerance field')
+         absolute = _number(tolerance.get('abs', 0), 'absolute tolerance')
+         relative = _number(tolerance.get('rel', 0), 'relative tolerance')
+         if absolute < 0 or relative < 0:
+@@ -358,6 +481,7 @@
+         recomputed = mapping.get('recomputed')
+         if tolerance and recomputed is None:
+             raise ValueError('Tolerance belongs to a hash-bound recomputation, not manuscript display')
++        recomputation = None
+         if recomputed is not None:
+             recomputed = _object(recomputed, 'recomputed reference')
+             source = sources.get(recomputed.get('source_id'))
+@@ -366,16 +490,207 @@
+             other = source['records'].get(recomputed.get('result_id', link['result_id']))
+             if other is None:
+                 raise ValueError('Unknown recomputed result_id')
+-            value = _number(other.get(recomputed.get('field', field)), 'recomputed value')
+-            if abs(raw - value) > max(absolute, relative * max(abs(raw), abs(value))):
+-                raise ValueError('Recomputed numeric value exceeds tolerance: ' + field)
++            value, identity, converted = _recomputed(record, other, field, recomputed.get('field', field), pending, location)
++            with localcontext() as context:
++                context.prec = _precision(raw, value, absolute, relative)
++                if abs(raw - value) > max(absolute, relative * max(abs(raw), abs(value))):
++                    raise ValueError('Recomputed numeric value exceeds tolerance: ' + field)
++            recomputation = {'identity_fields': identity, 'unit_factor_to_source': converted,
++                             'converted_value': str(value), 'absolute_tolerance_unit': str(source_unit)}
+         coverage.append({'result_id': link['result_id'], 'role': link['role'], 'path': link['artifact']['path'],
+                          'locator': link['locator'], 'field': field, 'source_value': str(raw),
+-                         'display_text': token, 'unit_factor': str(factor), 'decimals': decimals,
+-                         'rounding': rounding, 'recomputation_checked': recomputed is not None})
+-    for bound in ('value', 'estimate', 'lower', 'upper'):
+-        if record.get(bound) not in (None, '') and bound not in fields:
+-            raise ValueError('Missing numeric occurrence: ' + bound)
++                         'display_text': token, 'unit_factor': str(factor), 'unit_binding': unit_binding, 'decimals': decimals,
++                         'rounding': rounding, 'recomputation_checked': recomputed is not None,
++                         'recomputation': recomputation})
++    return positions
++
++
++def _relations(record, link, text, positions, sources, report):
++    """Check local literal relationships, leaving unsupported language for review."""
++    # ponytail: scoped literal/English grammar only; complex phrasing goes to located review.
++    normal = _normal(text)
++    location = {'result_id': link['result_id'], 'role': link['role'],
++                'path': link['artifact']['path'], 'locator': link['locator']}
++    spans = {}
++    for mapping in link['numeric']:
++        first, last = positions[mapping['field']]
++        start = len(_normal(text[:first])) + (1 if first and text[first-1].isspace() else 0)
++        spans[mapping['field']] = (start, start + len(_normal(mapping['text'])))
++    boundaries = [0] + [m.end() for m in re.finditer(r'[.!?](?=\s|$)', normal)] + [len(normal)]
++    def statement(span):
++        return next((a,b) for a,b in zip(boundaries,boundaries[1:]) if a<=span[0]<b)
++    def pending(reason, **details):
++        report['pending'].append(dict(location,reason=reason,action='Read the actual located statement and bind this relationship',**details))
++    for field,span in spans.items():
++        a,b = statement(span)
++        _negated(normal[span[0]:span[1]], normal[a:b])
++    for field,mapping in link.get('semantics',{}).items():
++        if 'locator' not in mapping:
++            _negated(mapping['text'], normal)
++    if {'lower','upper'}.issubset(spans):
++        low, high = spans['lower'], spans['upper']
++        labels = {'lower':r'(?:lower|lower bound|下限)\s*[:=]?\s*$',
++                  'upper':r'(?:upper|upper bound|上限)\s*[:=]?\s*$'}
++        explicit = all(re.search(labels[name],normal[max(0,spans[name][0]-35):spans[name][0]]) for name in labels)
++        if high[0]<low[0] and not explicit:
++            raise ValueError('Actual uncertainty endpoints are reversed')
++        if not explicit:
++            if statement(low)!=statement(high):
++                pending('interval_relationship_unresolved')
++            else:
++                bridge=normal[low[1]:high[0]]
++                unit=link.get('semantics',{}).get('unit',{}).get('text','')
++                bridge=bridge.replace(_normal(unit),'') if unit else bridge
++                bridge=re.sub(r'\b(?:to|through|and)\b|[\s,;:()[\]{}%–—-]','',bridge)
++                if bridge:
++                    pending('interval_relationship_unresolved')
++                else:
++                    report['coverage']['relationships'].append(dict(location,relationship='interval_order',status='checked'))
++        else:
++            report['coverage']['relationships'].append(dict(location,relationship='explicit_endpoint_labels',status='checked'))
++    primary = next((name for name in ('value','estimate') if name in spans),None)
++    if primary is None:
++        return
++    a,b = statement(spans[primary]);sentence=normal[a:b]
++    mapped=link.get('semantics',{})
++    subject=link.get('subject_field',next((name for name in ('model','implementation','outcome') if name in mapped),None))
++    threshold = re.search(r'\b(?:(?:lower|higher|less|more|greater|fewer|smaller|larger)\s+than|at least|at most|below|above|under|over)\s*$|[<>≤≥]\s*$', normal[a:spans[primary][0]])
++    if threshold:
++        pending('primary_value_is_comparison_threshold',field=primary)
++    elif subject not in {'model','implementation','outcome','population'}:
++        if subject is not None:
++            raise ValueError('Unknown subject_field')
++        pending('primary_subject_unbound')
++    elif subject not in mapped:
++        pending('primary_subject_relationship_unresolved',field=subject)
++    elif 'locator' in mapped[subject]:
++        value_locator,subject_locator=link['locator'],mapped[subject]['locator']
++        same_table=value_locator.get('table') is not None and value_locator.get('table')==subject_locator.get('table')
++        same_row=same_table and value_locator.get('row')==subject_locator.get('row') and subject_locator.get('cell')==value_locator.get('cell',0)-1
++        header=same_table and value_locator.get('cell')==subject_locator.get('cell') and subject_locator.get('row')==1 and value_locator.get('row',0)>1
++        if (subject in {'model','implementation','population'} and same_row) or (subject=='outcome' and header):
++            report['coverage']['relationships'].append(dict(location,relationship='table_subject_coordinates',field=subject,status='checked'))
++        else:
++            pending('primary_subject_relationship_unresolved',field=subject)
++    else:
++        expected=_value_and_labels(_semantic_source(record)[subject])[0]
++        candidates=[]
++        for source in sources.values():
++            for row in source['records'].values():
++                source_semantics=_semantic_source(row)
++                if subject not in source_semantics:continue
++                value,labels=_value_and_labels(source_semantics[subject])
++                for label in labels:
++                    for match in re.finditer(r'(?<!\w)'+re.escape(_normal(label))+r'(?!\w)',sentence):
++                        candidates.append((match.start()+a,match.end()+a,value))
++        before=[item for item in candidates if item[1]<=spans[primary][0]]
++        selected=max(before,key=lambda item:item[1]) if before else None
++        if selected is None:
++            after=[item for item in candidates if item[0]>=spans[primary][1]
++                   and re.search(r'\b(?:using|for|from|by|of)\s*$',normal[a:item[0]])]
++            selected=min(after,key=lambda item:item[0]) if after else None
++        if selected is None:
++            pending('primary_subject_relationship_unresolved',field=subject)
++        elif _normal(selected[2])!=_normal(expected):
++            raise ValueError('Primary value belongs to a different ' + subject)
++        else:
++            first,last=(selected[1],spans[primary][0]) if selected[1]<=spans[primary][0] else (spans[primary][1],selected[0])
++            bridge=normal[first:last]
++            for name,span in spans.items():
++                if name!=primary:
++                    bridge=bridge.replace(normal[span[0]:span[1]],'')
++            for mapping in sorted(mapped.values(),key=lambda item:len(_normal(item['text'])),reverse=True):
++                bridge=bridge.replace(_normal(mapping['text']),'')
++            if re.search(r'(?<![\w.])\d+(?:\.\d+)?(?![\w.])',bridge):
++                pending('primary_subject_relationship_ambiguous',field=subject)
++            else:
++                residue=re.sub(r'\b(?:is|was|were|equals|equal|mean|estimate|estimated|of|has|had|at|to|for|using|in|on|versus|against|with|the|a|an|than|from|by|and|ci|n|bound|bounds|confidence|interval|increased|decreased|higher|lower)\b|[\s=,:;()[\]{}%–—-]','',bridge)
++                if residue:
++                    pending('primary_subject_connector_unresolved',field=subject,text=normal[first:last])
++                else:
++                    report['coverage']['relationships'].append(dict(location,relationship='primary_subject',field=subject,status='checked'))
++    # Source-defined negative metadata (e.g. "not supplied") is not a negated result.
++    if _unresolved_negation(sentence,[mapping['text'] for mapping in mapped.values()]):
++        pending('negation_scope_unresolved',text=sentence)
++
++
++def build_links(root, sources, occurrences, claims=()):
++    """Reuse manuscript build rows; do not discover claims or write another ledger.
++
++    Example after a real build (paths and locators come from that build):
++      rows = [{"path":"draft.md", "locator":{"line":1}, "result_id":"R1",
++               "role":"body", "unit":"percent",
++               "numeric":[{"field":"value", "decimals":2}]}]
++      payload = build_links(root, [{"id":"analysis", "path":"results.json",
++          "versions":{"data":{"path":"data.csv"}, "code":{"path":"run.py"},
++                      "execution":{"path":"execution.json"}}}], rows)
++      report = audit_links(payload, root)
++
++    Frozen sources define meaning. Only labels found at each actual locator are
++    linked; absent fields and uncertain relationships stay in report.pending,
++    coverage_gaps and coverage.occurrences. This does not certify claim truth.
++    An existing sha256 is checked, never silently refreshed to hide source drift.
++    """
++    root=Path(root).resolve();cache={};records={};output=[]
++    def artifact(spec):
++        spec=dict(_object(spec,'build artifact'))
++        path=_path(root,spec.get('path'))
++        spec.setdefault('sha256',_sha(path))
++        _artifact(spec,root,[])
++        return spec
++    for source in _list(sources,'sources',True):
++        source=artifact(source);sid=_string(source.get('id'),'source id')
++        if sid in records:raise ValueError('Duplicate source id: '+sid)
++        source['versions']={name:artifact(spec) for name,spec in _object(source.get('versions',{}),'source versions').items()}
++        records[sid]=_records(_path(root,source['path']));output.append(source)
++    links=[]
++    for row in _list(occurrences,'build occurrences',True):
++        row=_object(row,'build occurrence');sid=row.get('source_id',next(iter(records)) if len(records)==1 else None)
++        rid=_string(row.get('result_id'),'result_id')
++        if sid not in records or rid not in records[sid]:raise ValueError('Unknown build source_id/result_id')
++        original=records[sid][rid];source_semantics=_semantic_source(original)
++        target=artifact(row.get('artifact',{'path':row.get('path')}))
++        text=_located(_path(root,target['path']),row.get('locator'),cache)
++        link={name:row[name] for name in ('claim_id','subject_field','bindings') if name in row}
++        link.update(result_id=rid,source_id=sid,role=_string(row.get('role'),'role'),artifact=target,locator=row['locator'])
++        mapped={}
++        target_unit=row.get('unit',_value_and_labels(source_semantics['unit'])[0] if 'unit' in source_semantics else None)
++        for field,expected in source_semantics.items():
++            value,labels=_value_and_labels(expected)
++            if field=='unit':
++                value=target_unit
++                labels=[label for label in UNITS if _unit(label)==_unit(target_unit)]+(labels if _normal(value)==_normal(_value_and_labels(expected)[0]) else [])
++            elif field=='direction':
++                labels=DIRECTIONS.get(_direction(value),labels)
++            elif field=='denominator':
++                n=str(_number(value,'denominator'))
++                found=re.search(r'\b[nN]\s*=\s*'+re.escape(n)+r'(?![\w.])',text)
++                labels=[found.group()] if found else []
++            token=next((label for label in sorted(labels,key=len,reverse=True) if _present(text,label)),None)
++            if token is not None:mapped[field]={'value':value,'text':token}
++        mapped.update(_object(row.get('semantics',{}),'build semantic overrides'))
++        link['semantics']=mapped
++        if original.get('type','numeric')=='numeric':
++            numeric=[]
++            for item in _list(row.get('numeric',[{'field':row.get('field','value'),**({'decimals':row['decimals']} if 'decimals' in row else {})}]),'build numeric fields',True):
++                item=dict(_object(item,'build numeric field'));field=_string(item.get('field'),'numeric field')
++                value=_number(original.get(field),'source '+field)
++                unit=_value_and_labels(source_semantics.get('unit'))[0]
++                if _unit(unit)[0]!=_unit(target_unit)[0]:raise ValueError('Build unit dimensions differ')
++                decimals=item.get('decimals');rounding=item.get('rounding','half-even')
++                if rounding not in {'half-even','half-up'}:raise ValueError('Unknown build rounding')
++                with localcontext() as context:
++                    context.prec = _precision(value, _unit(unit)[1], _unit(target_unit)[1])
++                    value=value*_unit(unit)[1]/_unit(target_unit)[1]
++                    if decimals is not None:
++                        if type(decimals)is not int or not 0<=decimals<=12:raise ValueError('Invalid build decimals')
++                        value=value.quantize(Decimal(1).scaleb(-decimals),rounding=ROUND_HALF_EVEN if rounding=='half-even' else ROUND_HALF_UP)
++                if value.is_zero():value=abs(value)
++                item.setdefault('text',format(value,'.'+str(decimals)+'f') if decimals is not None else format(value,'f'))
++                numeric.append(item)
++            link['numeric']=numeric
++        links.append(link)
++    return {'kind':'result-links','sources':output,'links':links,'claims':list(claims)}
+ 
+ 
+ def _evidence(record, root, cache, byte_coverage, semantic_coverage):
+@@ -399,7 +714,8 @@
+ 
+ def _report(kind):
+     return {'kind': kind, 'passed': False, 'errors': [], 'pending': [], 'checks': [],
+-            'coverage': {'bytes': [], 'numeric': [], 'declared_semantic': []},
++            'coverage': {'bytes': [], 'numeric': [], 'declared_semantic': [], 'relationships': [], 'occurrences': []},
++            'coverage_gaps': [],
+             'scientific_validity_certified': False, 'semantic_truth_certified': False,
+             'actual_visual_inspection_performed': False}
+ 
+@@ -412,7 +728,7 @@
+     """Audit actual occurrences; invalid mappings return diagnostics, never execute."""
+     report = _report('result-links')
+     root = Path(root).resolve()
+-    sources, cache, checked_versions, successful = {}, {}, set(), []
++    sources, cache, checked_versions, successful, manuscript = {}, {}, set(), [], {}
+     try:
+         data = _object(data, 'result-links payload')
+         for source in _list(data.get('sources'), 'sources', True):
+@@ -436,10 +752,19 @@
+                 path = _artifact(dict(_object(link.get('artifact'),'artifact'),role=link.get('role')), root, report['coverage']['bytes'])
+                 text = _located(path, link.get('locator'), cache)
+                 _string(link.get('role'), 'occurrence role')
+-                expected, mapped = _semantics(record, link, text, path, cache, report['coverage']['declared_semantic'])
++                expected, mapped = _semantics(record, link, text, path, cache, report['coverage']['declared_semantic'],report['pending'])
+                 kind = record.get('type', 'numeric')
+                 if kind == 'numeric':
+-                    _numeric(record, link, text, expected, mapped, sources, report['coverage']['numeric'])
++                    positions = _numeric(record, link, text, expected, mapped, sources, report['coverage']['numeric'], report['pending'])
++                    _relations(record, link, text, positions, sources, report)
++                    required=set(expected)|{field for field in ('value','estimate','lower','upper') if record.get(field) not in (None,'')}
++                    covered=set(mapped)|set(positions)
++                    key=(sid,rid,link['artifact']['path'])
++                    group=manuscript.setdefault(key,{'expected':required,'covered':set(),'roles':set()})
++                    group['covered'].update(covered);group['roles'].add(link['role'])
++                    report['coverage']['occurrences'].append({'result_id':rid,'source_id':sid,'role':link['role'],
++                        'path':link['artifact']['path'],'locator':link['locator'],'covered_fields':sorted(covered),
++                        'fields_not_in_this_occurrence':sorted(required-covered)})
+                 elif kind in {'theory', 'interpretive'}:
+                     required = ('proposition', 'conditions') if kind == 'theory' else ('interpretation',)
+                     for field in required:
+@@ -471,6 +796,13 @@
+                 successful.append(link)
+             except AUDIT_ERRORS as error:
+                 report['errors'].append(label + ': ' + str(error))
++        for (sid,rid,path),group in manuscript.items():
++            missing=sorted(group['expected']-group['covered'])
++            if missing:
++                gap={'source_id':sid,'result_id':rid,'path':path,'roles':sorted(group['roles']),
++                     'reason':'manuscript_fields_uncovered','fields':missing,
++                     'action':'Link these applicable fields elsewhere in this manuscript or record a located semantic review'}
++                report['coverage_gaps'].append(gap);report['pending'].append(gap)
+         claims = _list(data.get('claims', []), 'claims')
+         claim_ids = set()
+         for claim in claims:
+@@ -496,6 +828,7 @@
+     except AUDIT_ERRORS as error:
+         report['errors'].append(str(error))
+     report['unlinked'] = [item for item in report['pending'] if isinstance(item,dict) and 'claim_id' in item]
++    report['checks'].append('Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending')
+     report['checks'].append('Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification')
+     report['passed'] = not report['errors'] and not report['pending']
+     return report
+
+--- a/academic-research-skills/src/common/scripts/selftest.py
++++ b/academic-research-skills/src/common/scripts/selftest.py
+@@ -78,7 +78,7 @@
+             if checks[-1]['status']=='passed':
+                 check('actual_output_handoff',lambda: output_handoff(b,out))
+     passed=all(c['status']=='passed' for c in checks)
+-    result={'version':'3.2.0-rc.4','checked_at':datetime.now(timezone.utc).isoformat(),
++    result={'version':'3.2.0-rc.5','checked_at':datetime.now(timezone.utc).isoformat(),
+             'platform':platform.system(),'architecture':platform.machine(),'python':sys.version.split()[0],
+             'passed':passed,'checks':checks,'scientific_smoke_requested':scientific_smoke,
+             'native_host_activation_tested':False,'model_ability_measured':False,
+
+--- a/academic-research-skills/src/common/scripts/validate_run.py
++++ b/academic-research-skills/src/common/scripts/validate_run.py
+@@ -112,7 +112,7 @@
+     errors: list[str] = []
+     warnings: list[str] = []
+     report: dict[str, Any] = {
+-        'validator': 'academic-run-structural-checker', 'version': '3.2.0-rc.4',
++        'validator': 'academic-run-structural-checker', 'version': '3.2.0-rc.5',
+         'run_directory': str(root.resolve()), 'checks': [
+             'bundled_schema_subset', 'file_existence_and_hashes',
+             'local_reference_resolution', 'declared_gate_and_output_consistency'],
+
+--- a/academic-research-skills/src/quality31/payload/skills/analysis-execution/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/analysis-execution/SKILL.md
+@@ -2,7 +2,7 @@
+ name: analysis-execution
+ description: "当需要实际统计分析、数值计算、模型评价、理论推导或证明时使用；按研究类型执行并核查结果，基础证明无需安装统计环境。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 实际分析、实验、仿真与推导
+
+--- a/academic-research-skills/src/quality31/payload/skills/citation-audit/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/citation-audit/SKILL.md
+@@ -2,7 +2,7 @@
+ name: citation-audit
+ description: "当需要核查引文、参考文献、来源身份或论断与出处的对应关系时使用；区分实际取得的正文证据与尚未核实的信息。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 引用真实性与论断支持核验
+
+--- a/academic-research-skills/src/quality31/payload/skills/data-discovery/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/data-discovery/SKILL.md
+@@ -2,7 +2,7 @@
+ name: data-discovery
+ description: "当研究需要定位数据、材料、语料或资源并核查覆盖和许可时使用；根据科学问题选择来源，不将易下载当作研究价值。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 支持研究问题的数据与材料获取
+
+--- a/academic-research-skills/src/quality31/payload/skills/data-preparation/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/data-preparation/SKILL.md
+@@ -2,7 +2,7 @@
+ name: data-preparation
+ description: "当已有研究数据或材料需要清理、整合、转换和质量检查时使用；保留来源与处理记录，避免改变目标量或泄漏验证信息。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 真实材料整理与可复现处理
+
+--- a/academic-research-skills/src/quality31/payload/skills/ethics-protocol/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/ethics-protocol/SKILL.md
+@@ -2,7 +2,7 @@
+ name: ethics-protocol
+ description: "当研究涉及伦理、许可、参与者、敏感材料或方案准备时使用；依据实际研究和现行要求准备材料，不声称已获批准。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 研究权限与真实披露
+
+--- a/academic-research-skills/src/quality31/payload/skills/journal-intelligence/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/journal-intelligence/SKILL.md
+@@ -2,7 +2,7 @@
+ name: journal-intelligence
+ description: "当用户只要求选刊、比较目标期刊或核对投稿适配时使用；按主题、方法、贡献、读者和当前官方要求给候选，不启动实验或整稿重写。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 标杆学习与投稿期刊匹配
+
+--- a/academic-research-skills/src/quality31/payload/skills/literature-discovery/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/literature-discovery/SKILL.md
+@@ -2,7 +2,7 @@
+ name: literature-discovery
+ description: "当需要定向或系统检索学术文献、核对来源和综合相关证据时使用；建立可追溯覆盖，不将一次搜索命中当作完成综述。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 检索、筛选与证据地图
+
+--- a/academic-research-skills/src/quality31/payload/skills/manuscript-review/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/manuscript-review/SKILL.md
+@@ -2,7 +2,7 @@
+ name: manuscript-review
+ description: "当需要科学内容审查、论证诊断或稿件一致性检查时使用；指出影响结论的缺口和可执行修订，不自动重建研究。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 科学贡献、证据与表达审查
+
+--- a/academic-research-skills/src/quality31/payload/skills/manuscript-writing/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/manuscript-writing/SKILL.md
+@@ -2,7 +2,7 @@
+ name: manuscript-writing
+ description: "当需要起草、整合或改写学术稿件时使用；完整稿按证据组织全文并终审，单段或摘要请求只处理指定范围。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 证据与贡献驱动的完整论文写作
+
+--- a/academic-research-skills/src/quality31/payload/skills/paper-deep-reading/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/paper-deep-reading/SKILL.md
+@@ -2,7 +2,7 @@
+ name: paper-deep-reading
+ description: "当给定论文、摘要或图表需要精读、解释方法和证据时使用；按已取得原文定位，摘要任务不补造全文细节。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 顶刊问题、模型和图表精读
+
+--- a/academic-research-skills/src/quality31/payload/skills/peer-review-response/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/peer-review-response/SKILL.md
+@@ -2,7 +2,7 @@
+ name: peer-review-response
+ description: "当给定真实审稿或编辑意见需要逐点回应和修订稿件时使用；定位改动与证据，保留不接受意见的有据说明。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 审稿意见驱动的修订与回应
+
+--- a/academic-research-skills/src/quality31/payload/skills/publication-stewardship/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/publication-stewardship/SKILL.md
+@@ -2,7 +2,7 @@
+ name: publication-stewardship
+ description: "当论文进入校样、发表、归档、更正或版本维护时使用；处理实际状态和文件，不伪造尚未发生的发表流程。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 校样、版本与发表后维护
+
+--- a/academic-research-skills/src/quality31/payload/skills/research-design/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/research-design/SKILL.md
+@@ -2,7 +2,7 @@
+ name: research-design
+ description: "当需要选择方法、比较方案、规划能区分解释的验证或制作方案稿时使用；由问题和材料决定设计，不编造未来结果。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 问题导向的研究设计
+
+--- a/academic-research-skills/src/quality31/payload/skills/research-intake/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/research-intake/SKILL.md
+@@ -2,7 +2,7 @@
+ name: research-intake
+ description: "当研究材料零散、目标或已有进展需要整理时使用；识别当前请求、可复用成果与真正缺口，形成可续接的任务边界。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 研究目标与科学价值定位
+
+--- a/academic-research-skills/src/quality31/payload/skills/research-paper-workflow/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/research-paper-workflow/SKILL.md
+@@ -2,7 +2,7 @@
+ name: research-paper-workflow
+ description: "当用户要求跨阶段开展学术研究或完成整篇研究成果时协调问题、设计、证据、图稿与交付；单项请求直接用对应能力，更新Skill本身不启动论文研究。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 实际学术研究到完整成果的当前Agent总控
+
+--- a/academic-research-skills/src/quality31/payload/skills/robustness-reproducibility/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/robustness-reproducibility/SKILL.md
+@@ -2,7 +2,7 @@
+ name: robustness-reproducibility
+ description: "当需要复算、独立验证、敏感性、失败诊断或整理可复现材料时使用；检查与主张有关的脆弱处，保存关键反例。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 关键结论的验证与复现
+
+--- a/academic-research-skills/src/quality31/payload/skills/scientific-visualization/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/scientific-visualization/SKILL.md
+@@ -2,7 +2,7 @@
+ name: scientific-visualization
+ description: "当需要规划、制作、审查或实质修改论文图表时使用；让关键比较与反例可读，交付正式图和核查，局部标签请求只改当前范围。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 正式论文图表的专业生产
+
+--- a/academic-research-skills/src/quality31/payload/skills/submission-packaging/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/submission-packaging/SKILL.md
+@@ -2,7 +2,7 @@
+ name: submission-packaging
+ description: "当已有稿件需要整理投稿文件、格式、声明与期刊清单时使用；核对实际产物和官方要求，正式提交按用户授权执行。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 真实研究稿的投稿准备
+
+--- a/academic-research-skills/src/quality31/payload/skills/topic-novelty/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/topic-novelty/SKILL.md
+@@ -2,7 +2,7 @@
+ name: topic-novelty
+ description: "当需要从方向、文献或已有结果提出有知识增量的选题，或判断方案是否已被完成时使用；比较最近邻、竞争路线与决定性验证。"
+ metadata:
+-  version: "3.2.0-rc.4"
++  version: "3.2.0-rc.5"
+ ---
+ 
+ # 重要问题与可验证创新
+
+--- /dev/null
++++ b/academic-research-skills/tests/report_pdf_links.py
+@@ -0,0 +1,63 @@
++#!/usr/bin/env python3
++"""Save actual PDF/result-link reports and require the CI backend to have run."""
++import argparse
++from datetime import datetime, timezone
++import hashlib
++import json
++import os
++from pathlib import Path
++import platform
++import sys
++
++from test_pdf_extract import SCRIPT, prepare_project, probe
++
++
++def main(argv=None):
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--backend', choices=['pdftotext', 'pypdf'], required=True)
++    parser.add_argument('--out', type=Path, required=True)
++    parser.add_argument('--regression', type=Path)
++    args = parser.parse_args(argv)
++    root = args.out.resolve()
++    if root.exists() and any(root.iterdir()):
++        parser.error('Use a new output directory to retain prior acceptance records')
++    root.mkdir(parents=True, exist_ok=True)
++    prepare_project(root)
++    result = probe(root, args.backend)
++    checks = {'valid_pdf_audit': result['valid']['passed'],
++              'numeric_occurrences_checked': len(result['valid']['coverage']['numeric']) == 3,
++              'declared_semantic_occurrences_checked': bool(result['valid']['coverage']['declared_semantic']),
++              'malformed_pdf_rejected': not result['malformed']['passed'] and bool(result['malformed']['errors']),
++              'missing_pdf_page_rejected': not result['page_outside']['passed'] and bool(result['page_outside']['errors'])}
++    if args.regression:
++        regression = json.loads(args.regression.read_text())
++        ids = ['test_result_links.Links.test_actual_pdf_page_line',
++               'test_pdf_extract.PdfExtraction.test_' + args.backend + ('_only' if args.backend == 'pypdf' else '') + '_actual_pdf_and_malformed_boundary']
++        cases = {case['id']: case['status'] for case in regression['cases']}
++        checks['complete_library_regression_passed'] = regression['passed']
++        for id in ids:
++            checks[id] = cases.get(id) == 'passed'
++        regression_identity = {'path': str(args.regression), 'sha256': hashlib.sha256(args.regression.read_bytes()).hexdigest(),
++                               'tests_run': regression['tests_run'], 'skipped': regression['skipped']}
++    else:
++        regression_identity = None
++    for name in ['valid', 'malformed', 'page_outside']:
++        (root / ('result-links-' + name + '.json')).write_text(json.dumps(result[name], indent=2) + '\n')
++    summary = {'generated_at': datetime.now(timezone.utc).isoformat(), 'backend': args.backend,
++               'python': sys.version.split()[0], 'platform': platform.platform(),
++               'audit_script_sha256': hashlib.sha256(SCRIPT.read_bytes()).hexdigest(),
++               'pdftotext_path': result['pdftotext_path'], 'pypdf_version': result['pypdf_version'],
++               'passed': all(checks.values()), 'checks': checks, 'regression': regression_identity,
++               'scope': 'Actual PDF extraction and declared result-link engineering fixtures; no scientific/visual certification',
++               'execution_environment': 'github_actions' if os.environ.get('GITHUB_ACTIONS') == 'true' else 'local',
++               'github_run_id': os.environ.get('GITHUB_RUN_ID') if os.environ.get('GITHUB_ACTIONS') == 'true' else None}
++    (root / 'pdf-acceptance.json').write_text(json.dumps(summary, indent=2) + '\n')
++    manifest = [hashlib.sha256(path.read_bytes()).hexdigest() + '  ' + path.name
++                for path in sorted(root.iterdir()) if path.is_file() and path.name != 'SHA256SUMS']
++    (root / 'SHA256SUMS').write_text('\n'.join(manifest) + '\n')
++    print(json.dumps(summary, indent=2))
++    return 0 if summary['passed'] else 1
++
++
++if __name__ == '__main__':
++    raise SystemExit(main())
+
+--- a/academic-research-skills/tests/test_package_identity.py
++++ b/academic-research-skills/tests/test_package_identity.py
+@@ -2,16 +2,16 @@
+ import importlib.util,json,subprocess,tempfile,unittest,zipfile
+ from pathlib import Path
+ ROOT=Path(__file__).resolve().parents[1]
+-spec=importlib.util.spec_from_file_location('rc4_pack',ROOT/'release/make_package.py')
++spec=importlib.util.spec_from_file_location('release_pack',ROOT/'release/make_package.py')
+ pack=importlib.util.module_from_spec(spec);spec.loader.exec_module(pack)
+ 
+ class PackageIdentity(unittest.TestCase):
+     def test_commit_binding_excludes_ignored_files_and_rejects_changes(self):
+         with tempfile.TemporaryDirectory() as tmp:
+-            root=Path(tmp);(root/'VERSION').write_text('3.2.0-rc.4\n')
++            root=Path(tmp);(root/'VERSION').write_text('3.2.0-rc.5\n')
+             (root/'.gitignore').write_text('validation-report.json\nout/\n')
+             (root/'entry.md').write_text('committed release source\n')
+-            (root/'evaluations/rc4').mkdir(parents=True);(root/'evaluations/rc4/VALIDATION.zh-CN.md').write_text('source evidence scope\n')
++            (root/'evaluations/rc5').mkdir(parents=True);(root/'evaluations/rc5/VALIDATION.zh-CN.md').write_text('source evidence scope\n')
+             (root/'history').mkdir();(root/'history/PACKAGE-MANIFEST.json').write_text('historical identity\n')
+             def git(*args):
+                 return subprocess.check_output(['git',*args],cwd=root,stderr=subprocess.DEVNULL,text=True).strip()
+@@ -23,11 +23,11 @@
+                 self.assertIn(root/'history/PACKAGE-MANIFEST.json',pack.chosen('source'))
+                 receipt=pack.pack('runtime',root/'out')
+                 with zipfile.ZipFile(root/'out'/receipt['file']) as archive:
+-                    manifest=json.loads(archive.read('academic-research-skills-v3.2.0-rc.4/PACKAGE-MANIFEST.json'))
++                    manifest=json.loads(archive.read('academic-research-skills-v3.2.0-rc.5/PACKAGE-MANIFEST.json'))
+                     self.assertEqual(manifest['source_commit'],git('rev-parse','HEAD'))
+                     self.assertNotIn('validation-report.json',manifest['files'])
+-                    self.assertIn('evaluations/rc4/VALIDATION.zh-CN.md',manifest['files'])
+-                    self.assertEqual(archive.read('academic-research-skills-v3.2.0-rc.4/entry.md'),b'committed release source\n')
++                    self.assertIn('evaluations/rc5/VALIDATION.zh-CN.md',manifest['files'])
++                    self.assertEqual(archive.read('academic-research-skills-v3.2.0-rc.5/entry.md'),b'committed release source\n')
+                 (root/'entry.md').write_text('uncommitted source change\n')
+                 with self.assertRaisesRegex(ValueError,'Commit the release source'):
+                     pack.pack('runtime',root/'other-out')
+
+--- /dev/null
++++ b/academic-research-skills/tests/test_pdf_extract.py
+@@ -0,0 +1,108 @@
++"""Real PDF backend checks; synthetic result values do not prove scientific truth."""
++import copy
++import hashlib
++import importlib.util
++import json
++import os
++from pathlib import Path
++import shutil
++import subprocess
++import sys
++import tempfile
++import unittest
++
++import test_result_links as fixtures
++
++SCRIPT = Path(__file__).resolve().parents[1] / 'src/common/scripts/result_links.py'
++
++
++def prepare_project(root):
++    """Reuse the existing result/semantic fixture and actual PDF bytes."""
++    root = Path(root)
++    fixture = fixtures.Links()
++    fixture.setUp()
++    try:
++        for source in fixture.root.iterdir():
++            if source.is_file():
++                shutil.copyfile(source, root / source.name)
++        (root / 'draft.pdf').write_bytes(fixtures.pdf_bytes(fixture.TEXT))
++        payload = copy.deepcopy(fixture.payload)
++        payload['links'][0].update(artifact={
++            'path': 'draft.pdf', 'sha256': hashlib.sha256((root / 'draft.pdf').read_bytes()).hexdigest()},
++            locator={'page': 1, 'line': 1})
++        (root / 'links.json').write_text(json.dumps(payload, indent=2) + '\n')
++        (root / 'broken.pdf').write_bytes(b'%PDF-1.4\nnot a PDF object tree\n%%EOF\n')
++    finally:
++        fixture.tearDown()
++
++
++PROBE = r'''
++import copy,hashlib,importlib.util,json,shutil,sys
++from pathlib import Path
++script,root,backend=Path(sys.argv[1]),Path(sys.argv[2]),sys.argv[3]
++binary=shutil.which('pdftotext')
++if backend=='pypdf':
++    assert binary is None, 'pypdf-only probe must have no pdftotext on PATH'
++    import pypdf
++    version=pypdf.__version__
++else:
++    assert binary is not None, 'pdftotext probe requires the real executable'
++    version=None
++spec=importlib.util.spec_from_file_location('pdf_backend_audit',script)
++audit=importlib.util.module_from_spec(spec);spec.loader.exec_module(audit)
++payload=json.loads((root/'links.json').read_text())
++text=audit._located(root/'draft.pdf',{'page':1,'line':1},{})
++valid=audit.audit_links(payload,root)
++bad=copy.deepcopy(payload)
++bad['links'][0]['artifact']={'path':'broken.pdf','sha256':hashlib.sha256((root/'broken.pdf').read_bytes()).hexdigest()}
++malformed=audit.audit_links(bad,root)
++outside=copy.deepcopy(payload);outside['links'][0]['locator']['page']=99
++boundary=audit.audit_links(outside,root)
++print(json.dumps({'backend':backend,'pdftotext_path':binary,'pypdf_version':version,
++                  'extracted_text':text,'valid':valid,'malformed':malformed,'page_outside':boundary},ensure_ascii=False))
++'''
++
++
++def probe(root, backend):
++    env = os.environ.copy()
++    if backend == 'pypdf':
++        env['PATH'] = ''  # Real subprocess isolation; no mocked discovery or extraction.
++    result = subprocess.run([sys.executable, '-I', '-c', PROBE, str(SCRIPT), str(root), backend],
++                            env=env, capture_output=True, text=True, timeout=60)
++    (Path(root) / 'probe.stdout.log').write_text(result.stdout, encoding='utf-8')
++    (Path(root) / 'probe.stderr.log').write_text(result.stderr, encoding='utf-8')
++    if result.returncode:
++        raise RuntimeError('Actual PDF probe failed: ' + result.stderr[-4000:])
++    return json.loads(result.stdout)
++
++
++class PdfExtraction(unittest.TestCase):
++    def run_backend(self, backend):
++        with tempfile.TemporaryDirectory() as directory:
++            root = Path(directory)
++            prepare_project(root)
++            result = probe(root, backend)
++        self.assertTrue(result['valid']['passed'], result['valid'])
++        self.assertIn('12.35%', result['extracted_text'])
++        self.assertEqual(len(result['valid']['coverage']['numeric']), 3)
++        self.assertTrue(result['valid']['coverage']['declared_semantic'])
++        self.assertFalse(result['malformed']['passed'])
++        self.assertTrue(result['malformed']['errors'])
++        self.assertFalse(result['page_outside']['passed'])
++        self.assertIn('PDF page', str(result['page_outside']['errors']))
++        return result
++
++    @unittest.skipUnless(importlib.util.find_spec('pypdf'), 'pypdf is not installed')
++    def test_pypdf_only_actual_pdf_and_malformed_boundary(self):
++        result = self.run_backend('pypdf')
++        self.assertIsNone(result['pdftotext_path'])
++        self.assertTrue(result['pypdf_version'])
++
++    @unittest.skipUnless(shutil.which('pdftotext'), 'pdftotext is not installed')
++    def test_pdftotext_actual_pdf_and_malformed_boundary(self):
++        result = self.run_backend('pdftotext')
++        self.assertTrue(Path(result['pdftotext_path']).is_file())
++
++
++if __name__ == '__main__':
++    unittest.main(verbosity=2)
+
+--- a/academic-research-skills/tests/test_result_links.py
++++ b/academic-research-skills/tests/test_result_links.py
+@@ -104,7 +104,7 @@
+         self.payload['links'][0]['numeric'] = self.payload['links'][0]['numeric'][1:]
+         result = self.result()
+         self.assertFalse(result['passed'])
+-        self.assertIn('Missing numeric occurrence: value', str(result['errors']))
++        self.assertTrue(any('value' in gap['fields'] for gap in result['coverage_gaps']))
+         self.assertTrue(result['coverage']['bytes'])
+         self.assertTrue(result['coverage']['declared_semantic'])
+         self.assertFalse(result['semantic_truth_certified'])
+@@ -128,7 +128,7 @@
+         self.payload['links'][0].update(artifact=self.artifact('draft.docx'), locator={'table': 1, 'row': 1, 'cell': 1})
+         self.assertTrue(self.result()['passed'])
+ 
+-    @unittest.skipUnless(shutil.which('pdftotext'), 'actual PDF extraction requires pdftotext')
++    @unittest.skipUnless(shutil.which('pdftotext') or importlib.util.find_spec('pypdf'), 'actual PDF extraction requires pdftotext or pypdf')
+     def test_actual_pdf_page_line(self):
+         (self.root / 'draft.pdf').write_bytes(pdf_bytes(self.TEXT))
+         self.payload['links'][0].update(artifact=self.artifact('draft.pdf'), locator={'page': 1, 'line': 1})
+@@ -185,7 +185,7 @@
+         self.assertTrue(self.result()['passed'], self.result())
+ 
+     def test_recomputation_tolerance_does_not_relax_display_rounding(self):
+-        (self.root / 'recomputed.json').write_text(json.dumps({'R1': {'value': .12345600001}}))
++        (self.root / 'recomputed.json').write_text(json.dumps({'R1': dict(self.record,value=.12345600001)}))
+         self.payload['sources'].append(dict(self.artifact('recomputed.json'), id='recomputed'))
+         link = self.payload['links'][0]
+         link['source_id'] = 'frozen'
+@@ -196,7 +196,7 @@
+         self.assertFalse(self.result()['passed'])
+ 
+     def test_recomputation_outside_tolerance_fails(self):
+-        (self.root / 'recomputed.json').write_text(json.dumps({'R1': {'value': .124}}))
++        (self.root / 'recomputed.json').write_text(json.dumps({'R1': dict(self.record,value=.124)}))
+         self.payload['sources'].append(dict(self.artifact('recomputed.json'), id='recomputed'))
+         self.payload['links'][0]['source_id'] = 'frozen'
+         self.payload['links'][0]['numeric'][0].update(recomputed={'source_id': 'recomputed'}, tolerance={'abs': 1e-9})
+@@ -266,7 +266,9 @@
+         self.payload['sources'][0].update(self.artifact('results.csv'))
+         self.payload['links'][0]['numeric'] = self.payload['links'][0]['numeric'][:1]
+         self.payload['links'][0]['semantics'] = {'unit': {'value': 'percent', 'text': '%'}}
+-        self.assertTrue(self.result()['passed'])
++        result=self.result()
++        self.assertTrue(result['coverage']['numeric'])
++        self.assertTrue(any(item.get('reason')=='primary_subject_unbound' for item in result['pending'] if isinstance(item,dict)))
+ 
+     def test_theory_proposition_conditions_and_actual_proof(self):
+         (self.root / 'proof.md').write_text('Proof: summing nonnegative terms gives the bound.\n')
+@@ -372,6 +374,264 @@
+         self.assertEqual(result.returncode, 0, result.stderr)
+ 
+ 
++class Rc5Relations(unittest.TestCase):
++    """Fresh computed latency material, independent of the rc4 wine/export packet."""
++    TEXT=('Solver A latency was 410.0 ms (95% CI 390.0 ms-430.0 ms), lower than Solver baseline '
++          'on digital instances (n=4), holdout at one run; absolute mean; loop.')
++
++    def setUp(self):
++        self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name)
++        (self.root/'measurements.json').write_text('["0.40", "0.42", "0.41", "0.41"]')
++        code=self.root/'compute.py'
++        code.write_text('import json,sys\nfrom pathlib import Path\nfrom decimal import Decimal\nx=json.loads(Path(sys.argv[1]).read_text())\nprint(json.dumps({"value":str(sum(map(Decimal,x))/len(x))}))\n')
++        run=subprocess.run([sys.executable,str(code),str(self.root/'measurements.json')],capture_output=True,text=True,check=True)
++        (self.root/'execution.json').write_text(run.stdout)
++        self.record={'value':json.loads(run.stdout)['value'],'unit':'s','lower':'0.39','upper':'0.43',
++            'model':{'value':'solver-a','labels':['Solver A'],'equivalent_values':['solver-a-fast']},
++            'implementation':{'value':'loop','labels':['loop'],'equivalent_values':['vectorized']},
++            'outcome':'latency','direction':'decrease','population':'digital instances','denominator':4,
++            'comparison':'Solver baseline','split':'holdout','time':'one run','effect_type':'absolute mean','uncertainty':'95% CI'}
++        self.records={'R-latency':self.record}
++        self.sources=[{'id':'frozen','path':'results.json','versions':{name:{'path':path} for name,path in [
++            ('data','measurements.json'),('code','compute.py'),('execution','execution.json')]}}]
++        self.rows=[{'path':'draft.md','result_id':'R-latency','role':'body','locator':{'line':1},'unit':'ms',
++                    'numeric':[{'field':field,'decimals':1} for field in ('value','lower','upper')]}]
++        self.text=self.TEXT;self.save()
++
++    def tearDown(self):self.temp.cleanup()
++
++    def save(self):
++        (self.root/'results.json').write_text(json.dumps(self.records))
++        (self.root/'draft.md').write_text(self.text+'\n')
++
++    def payload(self):return audit.build_links(self.root,self.sources,self.rows)
++
++    def result(self):return audit.audit_links(self.payload(),self.root)
++
++    def recomputation(self,other):
++        (self.root/'repeated.json').write_text(json.dumps({'R-latency':other}))
++        data=self.payload();data['sources'].append({'id':'repeated','path':'repeated.json','sha256':audit._sha(self.root/'repeated.json')})
++        data['links'][0]['numeric'][0].update(recomputed={'source_id':'repeated'},tolerance={'abs':0,'rel':0})
++        return audit.audit_links(data,self.root)
++
++    def test_actual_build_rows_reuse_frozen_semantics_and_display(self):
++        data=self.payload();report=audit.audit_links(data,self.root)
++        self.assertEqual(data['links'][0]['numeric'][0]['text'],'410.0')
++        self.assertTrue(report['passed'],report)
++        self.assertTrue(report['coverage']['relationships'])
++        self.assertFalse(report['semantic_truth_certified'])
++
++    def test_recomputed_true_unit_equivalence_not_equal_bare_numbers(self):
++        other=copy.deepcopy(self.record);other.update(unit='ms',value='410',lower='390',upper='430')
++        result=self.recomputation(other)
++        self.assertTrue(result['passed'],result)
++        self.assertEqual(result['coverage']['numeric'][0]['recomputation']['converted_value'],'0.410')
++        other['value']='0.41'
++        self.assertIn('exceeds tolerance',str(self.recomputation(other)['errors']))
++        other['unit']='g'
++        self.assertIn('dimensions differ',str(self.recomputation(other)['errors']))
++
++    def test_recomputed_context_and_field_roles_must_agree(self):
++        for field in ('split','time','outcome','population','comparison','effect_type'):
++            with self.subTest(field=field):
++                other=copy.deepcopy(self.record);other[field]='another '+field
++                self.assertIn('identity mismatch: '+field,str(self.recomputation(other)['errors']))
++        data=self.payload();data['sources'].append({'id':'repeated','path':'results.json','sha256':audit._sha(self.root/'results.json')})
++        data['links'][0]['numeric'][0]['recomputed']={'source_id':'repeated','field':'lower'}
++        self.assertIn('field role differs',str(audit.audit_links(data,self.root)['errors']))
++
++    def test_only_frozen_scientific_equivalence_aliases_authorize_models(self):
++        other=copy.deepcopy(self.record);other['model']['value']='solver-a-fast';other['implementation']['value']='vectorized'
++        self.assertTrue(self.recomputation(other)['passed'])
++        other['model']['value']='Solver A'  # A display label is not scientific equivalence.
++        self.assertIn('identity mismatch: model',str(self.recomputation(other)['errors']))
++        other['model']['value']='solver-a-fast';self.record['model'].pop('equivalent_values');self.save()
++        self.assertIn('identity mismatch: model',str(self.recomputation(other)['errors']))
++
++    def test_missing_recomputation_identity_remains_located_pending(self):
++        self.record.pop('split');self.save();other=copy.deepcopy(self.record)
++        report=self.recomputation(other)
++        self.assertFalse(report['passed']);self.assertFalse(report['errors'])
++        self.assertTrue(any(item.get('reason')=='recomputation_identity_unbound' and item['locator']=={'line':1} for item in report['pending']))
++
++    def test_swapped_intervals_fail_but_explicit_upper_lower_labels_are_valid(self):
++        self.text=self.TEXT.replace('390.0 ms-430.0 ms','430.0 ms-390.0 ms');self.save()
++        self.assertIn('endpoints are reversed',str(self.result()['errors']))
++        self.text=self.TEXT.replace('390.0 ms-430.0 ms','upper: 430.0 ms, lower: 390.0 ms');self.save()
++        self.assertTrue(self.result()['passed'],self.result())
++
++    def test_range_separator_does_not_hide_a_negative_primary_value(self):
++        self.text=self.TEXT.replace('was 410.0 ms','was -410.0 ms');self.save()
++        self.assertIn('Numeric token absent',str(self.result()['errors']))
++        self.text=self.TEXT.replace('was 410.0 ms','was −410.0 ms');self.save()
++        self.assertIn('Numeric token absent',str(self.result()['errors']))
++
++    def test_known_wrong_subject_and_paragraph_cooccurrence_cannot_pass(self):
++        other=copy.deepcopy(self.record);other['model']={'value':'solver-b','labels':['Solver B']}
++        self.records['R-other']=other
++        self.text=self.TEXT.replace('Solver A latency was 410.0 ms','Solver A latency was 500.0 ms; Solver B latency was 410.0 ms');self.save()
++        self.assertIn('different model',str(self.result()['errors']))
++        self.text=self.TEXT.replace('Solver A latency was','Solver A is background. An unknown method latency was');self.save()
++        result=self.result()
++        self.assertFalse(result['passed'])
++        self.assertTrue(any(item.get('reason')=='primary_subject_relationship_unresolved' for item in result['pending']))
++
++    def test_unknown_connectors_are_review_pending_not_certified(self):
++        for connector in ('was reported incorrectly as','contrasted with unknown B at'):
++            with self.subTest(connector=connector):
++                self.text=self.TEXT.replace('latency was','latency '+connector);self.save()
++                result=self.result()
++                self.assertFalse(result['passed']);self.assertFalse(result['errors'])
++                self.assertTrue(any(item.get('reason')=='primary_subject_connector_unresolved' for item in result['pending']))
++
++    def test_comparison_threshold_cannot_be_an_exact_primary_value(self):
++        for comparison in ('lower than','higher than','at least','below','<'):
++            with self.subTest(comparison=comparison):
++                self.text=self.TEXT.replace('was 410.0','was '+comparison+' 410.0');self.save()
++                result=self.result();self.assertFalse(result['passed']);self.assertFalse(result['errors'],result)
++                self.assertTrue(any(item.get('reason')=='primary_value_is_comparison_threshold' for item in result['pending']))
++                self.assertFalse(any(item['relationship']=='primary_subject' for item in result['coverage']['relationships']))
++
++    def test_independent_unit_locator_still_checks_the_actual_number(self):
++        self.text=self.TEXT.replace('was 410.0 ms','was 410.0 g')+'\nms';self.save()
++        data=self.payload();data['links'][0]['semantics']['unit']={'value':'ms','text':'ms','locator':{'line':2}}
++        self.assertIn('Actual numeric unit differs',str(audit.audit_links(data,self.root)['errors']))
++        self.text=self.TEXT.replace('was 410.0 ms','was 410.0')+'\nms';self.save()
++        data=self.payload();data['links'][0]['semantics']['unit']={'value':'ms','text':'ms','locator':{'line':2}}
++        result=audit.audit_links(data,self.root);self.assertFalse(result['passed']);self.assertFalse(result['errors'],result)
++        self.assertTrue(any(item.get('reason')=='numeric_unit_relationship_unresolved' for item in result['pending']))
++        self.text=self.TEXT+'\nms';self.save()
++        data=self.payload();data['links'][0]['semantics']['unit']={'value':'ms','text':'ms','locator':{'line':2}}
++        self.assertTrue(audit.audit_links(data,self.root)['passed'])
++
++    def test_fake_table_coordinates_and_mixed_locators_are_rejected(self):
++        original=self.payload();data=copy.deepcopy(original);link=data['links'][0]
++        link['locator'].update(table=1,row=2,cell=2)
++        link['semantics']['model']['locator']={'line':1,'table':1,'row':2,'cell':1}
++        self.assertIn('inapplicable locator',str(audit.audit_links(data,self.root)['errors']))
++        for locator in ({'line':1,'paragraph':1},{'line':1,'page':1},{'line':1,'line_start':1},{'table':1,'row':1,'cell':1}):
++            with self.subTest(locator=locator):
++                data=copy.deepcopy(original);data['links'][0]['locator']=locator
++                self.assertIn('inapplicable locator',str(audit.audit_links(data,self.root)['errors']))
++        data=copy.deepcopy(original);data['links'][0]['semantics']['model']['locator']={'line':1,'table':1,'row':2,'cell':1}
++        self.assertIn('inapplicable locator',str(audit.audit_links(data,self.root)['errors']))
++        for extension,locator in [('tex',{'line':1,'paragraph':1}),('pdf',{'page':1,'line':1,'table':1,'row':2,'cell':2}),
++                                  ('docx',{'paragraph':1,'table':1,'row':2,'cell':2})]:
++            with self.subTest(extension=extension):
++                path=self.root/('draft.'+extension)
++                if extension=='pdf':path.write_bytes(pdf_bytes(self.TEXT))
++                elif extension=='docx':
++                    with zipfile.ZipFile(path,'w') as archive:
++                        archive.writestr('word/document.xml','<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body><w:p><w:r><w:t>'+self.TEXT+'</w:t></w:r></w:p></w:body></w:document>')
++                else:path.write_text(self.TEXT)
++                data=copy.deepcopy(original);data['links'][0].update(artifact={'path':path.name,'sha256':audit._sha(path)},locator=locator)
++                self.assertIn('inapplicable locator',str(audit.audit_links(data,self.root)['errors']))
++
++    def test_zero_tolerance_preserves_all_decimal_digits_during_conversion(self):
++        for unit,value in [('s','0.41000000000000000000000000001'),
++                           ('ms','410.00000000000000000000000001')]:
++            with self.subTest(unit=unit):
++                other=copy.deepcopy(self.record);other.update(unit=unit,value=value)
++                self.assertIn('exceeds tolerance',str(self.recomputation(other)['errors']))
++        other=copy.deepcopy(self.record);other['value']='0.41000000000000000000000000001'
++        data=self.payload();(self.root/'repeated.json').write_text(json.dumps({'R-latency':other}))
++        data['sources'].append({'id':'repeated','path':'repeated.json','sha256':audit._sha(self.root/'repeated.json')})
++        data['links'][0]['numeric'][0].update(recomputed={'source_id':'repeated'},tolerance={'abs':1e-29,'rel':0})
++        self.assertTrue(audit.audit_links(data,self.root)['passed'])
++        data['links'][0]['numeric'][0]['tolerance']['abs']=1e-30
++        self.assertIn('exceeds tolerance',str(audit.audit_links(data,self.root)['errors']))
++        # JSON numeric literals must preserve precision just as string-valued raw outputs do.
++        numeric_json=json.dumps({'R-latency':other}).replace('"'+other['value']+'"',other['value'])
++        (self.root/'repeated.json').write_text(numeric_json)
++        data['sources'][-1]['sha256']=audit._sha(self.root/'repeated.json')
++        data['links'][0]['numeric'][0]['tolerance']['abs']=0
++        self.assertIn('exceeds tolerance',str(audit.audit_links(data,self.root)['errors']))
++
++    def test_numeric_semantic_json_remains_serializable_through_actual_cli(self):
++        self.record['time']=0.5;self.text=self.TEXT.replace('one run','0.5');self.save()
++        payload=self.payload()
++        encoded=json.dumps(payload,allow_nan=False)
++        self.assertEqual(payload['links'][0]['semantics']['time']['value'],'0.5')
++        report=audit.audit_links(payload,self.root);self.assertTrue(report['passed'],report)
++        json.dumps(report,allow_nan=False)
++        manifest=self.root/'links.json';manifest.write_text(encoded)
++        registry=self.root/'registry.json';registry.write_text('{"providers":[]}')
++        execution=subprocess.run([sys.executable,str(ROOT/'src/common/scripts/provider_runtime.py'),
++            '--registry',str(registry),'audit','--input',str(manifest),'--root',str(self.root)],capture_output=True,text=True)
++        self.assertEqual(execution.returncode,0,execution.stderr+execution.stdout)
++        returned=json.loads(execution.stdout)
++        self.assertTrue(returned['passed'],returned)
++        self.assertEqual(next(item['source_value'] for item in returned['coverage']['declared_semantic'] if item['field']=='time'),'0.5')
++
++    def test_negation_scope_direct_nonlocal_and_unrelated(self):
++        self.text=self.TEXT.replace('was 410.0','was not 410.0');self.save()
++        self.assertIn('Negated actual occurrence',str(self.result()['errors']))
++        self.text='It is not true that '+self.TEXT;self.save()
++        result=self.result();self.assertFalse(result['passed'])
++        self.assertTrue(any(item.get('reason')=='negation_scope_unresolved' for item in result['pending']))
++        self.text='No values were excluded. '+self.TEXT;self.save()
++        self.assertTrue(self.result()['passed'],self.result())
++
++    def test_separate_semantic_locator_cannot_hide_negated_direction(self):
++        self.record['direction']='increase';self.text=self.TEXT.replace('lower','increased')+'\nThis is not an increase.';self.save()
++        data=self.payload();data['links'][0]['semantics']['direction']={'value':'increase','text':'increase','locator':{'line':2}}
++        self.assertIn('Negated actual occurrence',str(audit.audit_links(data,self.root)['errors']))
++        self.text=self.TEXT.replace('lower','increased')+'\nIt is not known whether this is an increase.';self.save()
++        data=self.payload();data['links'][0]['semantics']['direction']={'value':'increase','text':'increase','locator':{'line':2}}
++        report=audit.audit_links(data,self.root)
++        self.assertTrue(any(item.get('reason')=='semantic_negation_scope_unresolved' for item in report['pending']))
++
++    def test_local_caption_and_whole_manuscript_coverage_are_separate(self):
++        self.text=self.TEXT+'\nSolver A latency was 410.0 ms.';self.save()
++        caption={'path':'draft.md','result_id':'R-latency','role':'caption','locator':{'line':2},'unit':'ms',
++                 'numeric':[{'field':'value','decimals':1}]}
++        self.rows.append(caption);report=self.result()
++        self.assertTrue(report['passed'],report)
++        self.assertTrue(report['coverage']['occurrences'][1]['fields_not_in_this_occurrence'])
++        self.assertFalse(report['coverage_gaps'])
++        self.rows=[caption];report=self.result()
++        self.assertFalse(report['passed']);self.assertFalse(report['errors']);self.assertTrue(report['coverage_gaps'])
++        self.assertIn('lower',report['coverage_gaps'][0]['fields'])
++
++    def test_actual_table_subject_cell_and_header_have_limited_coverage(self):
++        ns='http://schemas.openxmlformats.org/wordprocessingml/2006/main'
++        rows=[['Model (ms)','latency (ms)'],['Solver A','410.0'],['Solver A','410.0']]
++        xml='<w:document xmlns:w="'+ns+'"><w:body><w:tbl>'
++        for row in rows:
++            xml+='<w:tr>'+''.join('<w:tc><w:p><w:r><w:t>'+cell+'</w:t></w:r></w:p></w:tc>' for cell in row)+'</w:tr>'
++        xml+='</w:tbl></w:body></w:document>'
++        with zipfile.ZipFile(self.root/'table.docx','w') as archive:archive.writestr('word/document.xml',xml)
++        self.rows=[{'path':'table.docx','result_id':'R-latency','role':'table','locator':{'table':1,'row':2,'cell':2},'unit':'ms',
++            'numeric':[{'field':'value','decimals':1}], 'subject_field':'model',
++            'semantics':{'model':{'value':'solver-a','text':'Solver A','locator':{'table':1,'row':2,'cell':1}},
++                         'outcome':{'value':'latency','text':'latency','locator':{'table':1,'row':1,'cell':2}},
++                         'unit':{'value':'ms','text':'ms','locator':{'table':1,'row':1,'cell':2}}}}]
++        report=self.result()
++        self.assertFalse(report['errors'],report)
++        self.assertEqual(report['coverage']['numeric'][0]['unit_binding'],'same-column-header')
++        self.assertTrue(any(item['relationship']=='table_subject_coordinates' for item in report['coverage']['relationships']))
++        self.assertTrue(report['coverage_gaps'])  # This table does not bind the full study design.
++        self.rows[0]['subject_field']='outcome';report=self.result()
++        self.assertTrue(any(item.get('field')=='outcome' for item in report['coverage']['relationships']))
++        self.rows[0]['subject_field']='model'
++        self.rows[0]['semantics']['model']['locator']['row']=3
++        report=self.result();self.assertFalse(report['errors'],report)
++        self.assertTrue(any(item.get('reason')=='primary_subject_relationship_unresolved' for item in report['pending']))
++        self.rows[0]['semantics']['model']['locator']['row']=2
++        self.rows[0]['semantics']['unit']['locator']['cell']=1
++        report=self.result();self.assertFalse(report['errors'],report)
++        self.assertTrue(any(item.get('reason')=='numeric_unit_relationship_unresolved' for item in report['pending']))
++        self.rows[0]['semantics']['unit']['locator']['cell']=2
++        with zipfile.ZipFile(self.root/'table.docx','w') as archive:
++            archive.writestr('word/document.xml',xml.replace('410.0','410.0 g'))
++        self.assertIn('Actual numeric unit differs',str(self.result()['errors']))
++
++    def test_build_preserves_pinned_source_identity(self):
++        self.sources[0]['sha256']=audit._sha(self.root/'results.json')
++        self.record['value']='0.42';self.save()
++        with self.assertRaisesRegex(ValueError,'version mismatch'):self.payload()
++
++
+ class Renders(unittest.TestCase):
+     def setUp(self):
+         self.temp = tempfile.TemporaryDirectory()

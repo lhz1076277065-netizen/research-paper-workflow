@@ -1,0 +1,248 @@
+{
+  "baseline_tag": "v3.2.0-rc.4",
+  "baseline_commit": "ed4c86ec00593de48d2cb88109afe4191d1bfe04",
+  "candidate_version": "3.2.0-rc.5",
+  "scope": "Authoritative source, tests, CI and navigation/report changes; generated copies and raw evaluation evidence excluded from patch, retained in full source release.",
+  "files": [
+    {
+      "path": ".github/workflows/validate-skill.yml",
+      "before_sha256": "8ed2f21b6d1b06467a17dc7ee87db24db9d42755c4c454a3ab2f91a7221a2af1",
+      "after_sha256": "e520b204530514756b348b7dcc4cc181471d6a3cee1c2f04a23ced07d81f1f1d"
+    },
+    {
+      "path": "academic-research-skills/CHANGELOG.md",
+      "before_sha256": "750b4ccaec4173d09de926aaf025cfc04773359f3eb990ec12a28508f38d59a6",
+      "after_sha256": "4dcb0cd681be66511e5ec29a65f5c33be7297515833a3bba3a7ba7f6bdef84d6"
+    },
+    {
+      "path": "academic-research-skills/MIGRATION.zh-CN.md",
+      "before_sha256": "34084b996dc3dd30694bb02306d5c4428fa8c3fa68b42fc11ad4a5a06e1012e6",
+      "after_sha256": "4e236e0f63716ab2c247c102486d6e8b44c129a28a3c63e7cb842cf3f49f56fe"
+    },
+    {
+      "path": "academic-research-skills/README.md",
+      "before_sha256": "0d85d63f1214d3ac8f707b2c909a9a1b7c853ee072009ba623d6d4f6bdd34d1f",
+      "after_sha256": "494f2f0ec0bd01fbb2bead9f3f5efd0446218fec767585d8a7490cc27e23ee6d"
+    },
+    {
+      "path": "academic-research-skills/UPDATE_REPORT.zh-CN.md",
+      "before_sha256": "6a966a6047d3ef4c47906acaf5f54cf626eb6f38cdeee48091ed8cae173764c1",
+      "after_sha256": "f28abd67ffb31586a2c642a91956621419d7b4e88a2ca5a55d97e31ca418ee3b"
+    },
+    {
+      "path": "academic-research-skills/VERSION",
+      "before_sha256": "9ae576fbe1fd11f04bb8eb004b27ddd292e144b5ecfbc706b28f21372e13f20e",
+      "after_sha256": "92e9e6e9c5f8666c93601c86a17bf63e171272e853db0a49ef57484c4e1c8256"
+    },
+    {
+      "path": "academic-research-skills/docs/ARCHITECTURE.zh-CN.md",
+      "before_sha256": "f84a7753ad378eeeb264bffc7c0727401f5c8efc3340bf48038c8f0ffa33dfc7",
+      "after_sha256": "3183c5b477a5ddf7842134fe3d950d1b88374df2ecd0c2ed200f516d65579668"
+    },
+    {
+      "path": "academic-research-skills/docs/COMPATIBILITY.zh-CN.md",
+      "before_sha256": "a737bfc7a0bd82a74127afd27c645e5cc421dd638aa439ef32d26384fd83064c",
+      "after_sha256": "a3e90034475240a1d2b72a8c1b37ea1d4e6add9eaae52a0498e7978f018154ee"
+    },
+    {
+      "path": "academic-research-skills/release/make_package.py",
+      "before_sha256": "00ccab2a3d3a532ba3ee6fde963be6b6accd504024506d8779d139c857ed3aad",
+      "after_sha256": "0201feafa7f9edda7bb5f45a07718bd07030ccb01eb6dd15e7bd779560b2479d"
+    },
+    {
+      "path": "academic-research-skills/src/common/assets/environment-profiles.json",
+      "before_sha256": "ed06879018afffe0daeaa14473c511c480566b07d71bfca0b7ea1001e7aeaf10",
+      "after_sha256": "769faa57c16eac46dd8e2bcede51836d7f87d89e2f4c5f61d987c31d10e894d5"
+    },
+    {
+      "path": "academic-research-skills/src/common/assets/research-profiles.json",
+      "before_sha256": "43400a46dcd93323906ee2e5f905de567b2c3ad356b3059253dae3e7bce947fe",
+      "after_sha256": "eefffc756764db6e745f76f85c16936d122aa043a287fa7c62b8372dbeac3676"
+    },
+    {
+      "path": "academic-research-skills/src/common/assets/research31-policy.json",
+      "before_sha256": "1c8a4d5d928840a66df5e20159319fb762de464c8b57f803da85ca280c250ce0",
+      "after_sha256": "52c068b289db37a6427568f21b2f9916b58e81378d0187714bc5817e998441d3"
+    },
+    {
+      "path": "academic-research-skills/src/common/assets/result-links.schema.json",
+      "before_sha256": "37697216441ad6afbfdd6d92c80e68d2a3f02290df81da3fbf5404a3ff589e1f",
+      "after_sha256": "0224d44b59b9f8bd83ecc4564cbb122c5f33857bf914d939d74e9fc75bebb3ef"
+    },
+    {
+      "path": "academic-research-skills/src/common/references/computation-examples.md",
+      "before_sha256": null,
+      "after_sha256": "d25ba8c38e587b2fd2ddbaca5e4e890af8d06cfcb8b8abe33eb707a353eb3638"
+    },
+    {
+      "path": "academic-research-skills/src/common/references/computational-routes.md",
+      "before_sha256": "a39c0248e61dc9d0579b30fd20e3b020d694190b0581b15fbf26d0d868cb2096",
+      "after_sha256": "57566bcdd183c2844848ee7618b5df786aecd650815d0832eddc80461a14d8d9"
+    },
+    {
+      "path": "academic-research-skills/src/common/references/inference-examples.md",
+      "before_sha256": null,
+      "after_sha256": "7c9e9f97401d7997af41ac93acc43ef4a36a4ea041148b615b9d0813edc71814"
+    },
+    {
+      "path": "academic-research-skills/src/common/references/integrity.md",
+      "before_sha256": "61460799bd49f764464462306a81b421bc9862214031a19f7b13222014cb4bc9",
+      "after_sha256": "4cf02933e5e2c749729c8a43a80bd358a734c385940654857fe388a0a89ba1fb"
+    },
+    {
+      "path": "academic-research-skills/src/common/references/interpretive-examples.md",
+      "before_sha256": null,
+      "after_sha256": "cfd3b23ce9cd913d520b53b8e14a27f0ec4c094dac8a676c7817dbc6c0c1576d"
+    },
+    {
+      "path": "academic-research-skills/src/common/references/research-quality.md",
+      "before_sha256": "064e0ab1f7119d73ffd8dd01d6dc23c3644f1d5d7ebd545b7d2c3eb61da757c3",
+      "after_sha256": "2be115bd99804b413426a96a194276afea8016960ac9ec30e2ace19a2f033019"
+    },
+    {
+      "path": "academic-research-skills/src/common/references/runtime.md",
+      "before_sha256": "f2c016cba6aa074df8a213316714b5c91e3cc48aa57981bdd5b7dee45c7a8cd5",
+      "after_sha256": "76647e0dd08a6fc0d924393f1080fed416890bcd264cd26e09d7b007591098dc"
+    },
+    {
+      "path": "academic-research-skills/src/common/scripts/environment.py",
+      "before_sha256": "4eadacdd52ba6adfdd81f0979c537301682ac7d2319ba235e957314396aec4af",
+      "after_sha256": "a1c9371b7736d013fc83a1a69d31af3f6deef0fb8c5bf07fa927ff36a1c929a8"
+    },
+    {
+      "path": "academic-research-skills/src/common/scripts/provider_runtime.py",
+      "before_sha256": "1233bfa5c0a57d493905b80f7e9b95621df76b824c184184e2509313f45cd8d1",
+      "after_sha256": "4ebe8f990a1ae58162a1b123bb0ea7326dc0070028923a9734fd5383d8cc4ff9"
+    },
+    {
+      "path": "academic-research-skills/src/common/scripts/result_links.py",
+      "before_sha256": "cfc59aae199c036b72047757c57478a30d46ad1fa1fa965b0defd47af89617d5",
+      "after_sha256": "471b32401fa0b2f35ac5cafd1b2eea67f20cc8b9eb728212dbfd58f274fb92a2"
+    },
+    {
+      "path": "academic-research-skills/src/common/scripts/selftest.py",
+      "before_sha256": "dae17ae407a3203026b793680826859e6750513b83b809ebc000b9243c3d5096",
+      "after_sha256": "446c8583d4205a72740161aaacb16d67f8fa31c8993a9410ad11da2d593f891e"
+    },
+    {
+      "path": "academic-research-skills/src/common/scripts/validate_run.py",
+      "before_sha256": "e03f5b9fa32fd7554ec034f6adfe139724d971a4843e8942795560663a58ffbd",
+      "after_sha256": "d92cb2ed88f21700478740dfcb5a0e4f9cdeff4f6445d102a9ca9874ac916946"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/analysis-execution/SKILL.md",
+      "before_sha256": "60c5d9ab3640bf4b4c42b850f05b1fcdbb69258ce23d3b878e654b7c91d19905",
+      "after_sha256": "bf5c5887fcade6da0f38f60b880cffd2c7d4a2ac6d11442dde30fdedded46c5e"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/citation-audit/SKILL.md",
+      "before_sha256": "93ec7d940195ba6f83f3500e0015fab9bec1b705bff28a1d3620ed504b2e261c",
+      "after_sha256": "3144f656554d30c9d38de71f4d2a04f44941d681ad8ddb99665203d7d42ed35c"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/data-discovery/SKILL.md",
+      "before_sha256": "eb658e53955194f922b80964fa645a81401ca501342baac1020e882ae92107f8",
+      "after_sha256": "17a568c8c0bba64714d7ac26ff45cb6f18f496e4bf933d163069f8d0f75f2e85"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/data-preparation/SKILL.md",
+      "before_sha256": "3ecb471e82b36b29df9a4de38672a5294008fd84045436f2739f65eb6c278c18",
+      "after_sha256": "8a7337a6a4b5da8b60690218f78b005ab964b6eb383b06b6a39a1b7d51f54354"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/ethics-protocol/SKILL.md",
+      "before_sha256": "4e7b7220326f6029c317e052433fa9440c24141e3800306fc93958a2a8087ada",
+      "after_sha256": "ef182cb6e12ba61b6d75947a6983906b54f7dd532f19cb8133973830c0a592a9"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/journal-intelligence/SKILL.md",
+      "before_sha256": "f85f2696677896c25d028db1c9635f2e1129bb877ad54f467d565073beac0e7c",
+      "after_sha256": "23be0d3e2d253e70fdc4998664b1c3e9d3358a989f6cf82ea1510fa5341a2758"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/literature-discovery/SKILL.md",
+      "before_sha256": "fe90445450cc9ec04df4b60d0693d29fd184d82052321b67711386227233f8ad",
+      "after_sha256": "9a913134f99e85ee537c8e35bd69c615c0cc36a3be4270577c76ce36ef1c71a9"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/manuscript-review/SKILL.md",
+      "before_sha256": "fb2b4bf623bc7e3037bc18e0ea92e9456b0c81e83a8da2522c21a4eeb8923d57",
+      "after_sha256": "925fdfb7912ab6633fccb960e2391f22d8fdce898ca26a3b87246ff78931e99d"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/manuscript-writing/SKILL.md",
+      "before_sha256": "4a2809085e681ab3f2c756928d5fd5c7ad090605df8a4db7d36910c45be17b00",
+      "after_sha256": "1309aa7caa5d7cfcd846c406562069937771d2614b90c02cb8ef86e706200bd9"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/paper-deep-reading/SKILL.md",
+      "before_sha256": "e583b397ae3850dfdd4ff1a75216e6766d73635ff208919feacf4661addece90",
+      "after_sha256": "10619539b41d7899ffe417aa9ebf1b40477792aef9fc362a295edfdc0d2238f2"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/peer-review-response/SKILL.md",
+      "before_sha256": "49357195c3d2bb3ff7b0ce2e8b71594eabf21c9a10f9a8765133432c7b455b4f",
+      "after_sha256": "9b96eb1591acce65b44b67e2a9290534a6c4c940b937dc8271b948be86382eb3"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/publication-stewardship/SKILL.md",
+      "before_sha256": "c1f6e821603a0c35b1af896a6e1f6613c5cf390ade21f0c64c87b5a4db7fce89",
+      "after_sha256": "7d37f11aac9934f243d192180579bd3801b493b04b33bd5c015cf72e4e8a0596"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/research-design/SKILL.md",
+      "before_sha256": "8d8d639b375b4d0e54733e113964a397de3a24c32a9829f7b8eea694688c1e63",
+      "after_sha256": "71b98136e4ef950e9b9e7e34c5e9c37b3616a32ed557c0e3bd3ad695f1a76b4d"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/research-intake/SKILL.md",
+      "before_sha256": "a63e5434a78eeda6ad18cd6f8d5e1f62df19782f678fa9d404962c69957a9a6c",
+      "after_sha256": "1e40e22f63de8b1ae7c07cf6d6770f7ee5559abf9be44bd7e1fcb3b87076f57c"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/research-paper-workflow/SKILL.md",
+      "before_sha256": "1d3a6843c0542594bec3b02e0ef1181b76d9cf465b62cb023c87f9732e090a04",
+      "after_sha256": "b205384f2b6a0ae24d6d36b280f66b30e3e01cfbc19cf5f3296330567ad08383"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/robustness-reproducibility/SKILL.md",
+      "before_sha256": "dbea55cc907a3c22730ed2c0b25d5d740f96f1ffb700d57658a4a0f2626c32d7",
+      "after_sha256": "ccfa667531731c7bb0242d9d1afd718c5f95b54c306ec757ed0bb28a93af5bed"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/scientific-visualization/SKILL.md",
+      "before_sha256": "117a0ad82ba32754bbf49a0441a51b3d781a8e1047fbc9c490169ede0b06fa98",
+      "after_sha256": "5c1eec0820231e75e38067a054f9629639a5b4ef9d99d462a55c38bf59d281f8"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/submission-packaging/SKILL.md",
+      "before_sha256": "bd0374316626023a587d77c3c3df4e84fde5f38a4946a98781eedf6a2cd69727",
+      "after_sha256": "136b8363f1441a8713f4596b61bb53c6a7d310b484f2797ecc56a69fe10cb5d4"
+    },
+    {
+      "path": "academic-research-skills/src/quality31/payload/skills/topic-novelty/SKILL.md",
+      "before_sha256": "965e2d4ade7e31d353e20ebf6f7c4cca9f3ee05663582aa06dec97ca239fc877",
+      "after_sha256": "449d7c036077b8b904ae2f6f14feaf100dcb9fe02420feefec890ea2ee206f45"
+    },
+    {
+      "path": "academic-research-skills/tests/report_pdf_links.py",
+      "before_sha256": null,
+      "after_sha256": "b23e9ec502af8458a10e29c7fe99f4ec9bccb5ef4104d66a9fd40314b359f142"
+    },
+    {
+      "path": "academic-research-skills/tests/test_package_identity.py",
+      "before_sha256": "94d122f4d81b99d31ea6dbb42a506416804b67437a9fa7c9556c038b21e4d750",
+      "after_sha256": "06128dc5644e41b07ee4d5e1c41341158a9acd44ffb1b344be58388fa623a3e0"
+    },
+    {
+      "path": "academic-research-skills/tests/test_pdf_extract.py",
+      "before_sha256": null,
+      "after_sha256": "25d1cc2c534b99e6dbad8bdfa5cd1053cbf325a77b3481f9c7c1bf2f95f119ff"
+    },
+    {
+      "path": "academic-research-skills/tests/test_result_links.py",
+      "before_sha256": "0af4a37d5792dafcb2b64509a2e95a6083f0070989501016edd3d535a500ae82",
+      "after_sha256": "758b7f6ceced7f7fc5aa316d4b8fbc5aef3c526c5b44fdfd271a354685cf1e61"
+    }
+  ]
+}

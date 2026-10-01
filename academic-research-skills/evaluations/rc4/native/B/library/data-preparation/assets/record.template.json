@@ -1,0 +1,21 @@
+{
+  "id": "REC-template",
+  "record_type": "data-preparation",
+  "status": "draft",
+  "created_at": "2026-09-29T00:00:00+00:00",
+  "source_refs": [],
+  "artifact_refs": [],
+  "fields": {
+    "operation": null,
+    "input_artifacts": null,
+    "output_artifacts": null,
+    "code_reference": null,
+    "parameters": null,
+    "row_counts_before_after": null,
+    "join_cardinality": null,
+    "missingness_policy": null,
+    "exclusion_reason": null,
+    "leakage_check": null,
+    "validation_result": null
+  }
+}

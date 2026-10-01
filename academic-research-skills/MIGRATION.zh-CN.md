@@ -1,11 +1,31 @@
-# v3.2.0-rc.3 迁移
+# v3.2.0 迁移与接口冻结
 
-使用完整能力目录替换副本；保留已有项目、用户修改和产物。未进行全局自动安装。无需新增日常 JSON、重做研究或重新执行所有专业来源。原 19 能力、16 类配置、13 来源与 general 默认保留；新增专家说明按任务读取。
+本版以已验收rc.5为基础，仍为1个可选总控与18个独立能力、16画像及14条按需研究路线。用完整能力目录替换所选旧目录；专业协议、三个详细推演分片和实际项目材料保留。维护源仍为src/common、src/quality31/payload及各能力protocol.md，由现有build_release.py生成。
 
-研究记录仍沿用既有格式。v3.1.1 对布尔复核、对象版本和真实输入/输出关联的要求继续适用，缺失关联按 [记录说明](docs/research31-usage.md) 补真正发生的操作，不补造执行。方案交付与整个实证研究完成仍分开。
+冻结rc.5的任务/返回封装、result-links schema和调用形状：build_links(root, sources, occurrences, claims=())、audit_links(data, root)继续使用。正式版只更新版本元数据、迁移解释、导航和发行证据，不新增检查流程。后续3.2.x仅按真实缺陷或小型兼容需求改动；新能力以新的真实研究任务验证。
 
-评估请求现在可携带完整模块冻结身份及实际读取记录；新比较使用新目录重新 prepare，明确 development、same_version_repeat、unseen_material 或 deployment。历史已发布请求中的本机路径属于观察记录，不能在别处直接运行；应按当前源码重新准备并核查材料。旧执行结果不因改版变成新候选的同版本重复。
+复算先核双方科学身份与量纲，再换到原源单位比较容差；模型/实现的equivalent_values由冻结源授权，labels只定义显示文字。正文舍入不被容差放宽。原始JSON、换算和容差保留Decimal精度，公开数值语义scalar可序列化为精确字符串。复杂关系保留带实际定位的pending。
 
-新绑定为明确选中的入口、支持文件与适配脚本保存 Git 索引身份。旧绑定无此字段时继续兼容；新绑定中所选依赖变化需复核，不能仅凭布尔“已检查”跳过。保留本地改造，用当前文件的 reviewed_file_sha256 表明实际复核对象；之后再修改需再次核验。未登记的传递依赖和语义兼容仍按任务检查。
+## 总体作为主体时显式指定
 
-原 rc.1、rc.2 报告分别存入 history/rc1-reports、history/rc2-reports。本次 native 测试素材在公开后成为可复算样例，不能继续称秘密保留集。同一 Agent 的图注或输入更正续接不是新的独立重复。逐次 token/费用和平台自动发现没有观察证据时保持未知。
+冻结源的population为Cohort A、unit为s，实际句子为“Cohort A mean = 0.41 s”。已有link的数字映射和文件定位照旧，关系字段可写为：
+
+```json
+{"subject_field":"population",
+ "semantics":{"population":{"value":"Cohort A","text":"Cohort A"},
+              "unit":{"value":"s","text":"s"}}}
+```
+
+这是已有link的字段片段。若只映射population而省略subject_field，自动主体只从本地model、implementation、outcome选取，可能报告primary_subject_unbound；显式指定population后才按总体核主值关系。多个主体、跨句归属或未知连接仍需要定位阅读，不通过补一个字段认证句子的完整科学含义。
+
+## 跨文件覆盖不自动合并
+
+同一source_id/result_id在draft.md正文映射了value、unit、model，而caption.md只映射value和unit：draft.md的model不会补齐caption.md。coverage.occurrences列出各次角色与当地字段；coverage_gaps按(source_id, result_id, artifact.path)汇总。即使两个文件属于同一稿件、或是DOCX/PDF两种导出，路径不同就各自报告。
+
+需要检查caption.md的该字段时，补它自身真实文字和定位。若主文与图注都在同一artifact.path，不同角色的实际出现可以在该文件内补全覆盖。这个范围解释延续现有接口，不增加跨文件合并或新的人工流程。
+
+## 其他使用边界
+
+比较阈值不当作精确主值。独立单位定位仍核数字旁单位；仅真正DOCX同列首行表头等已定义关系支持自动绑定。定位须与实际格式相符，Markdown不能附伪表格坐标绕过检查。旧的词共现映射可能需要补关系定位。程序只检查声明位置和源语义，不自动发现全文论断，不判断科学真相或发表新颖性。
+
+三个examples参考文件仍经质量主线与路线锚点按需到达；19个模块不依赖相邻能力或src。rc.5标签、evaluations/rc5及历史报告保留为已评估证据；已经查看的480条留出不再用于后续方法调参。正式包由最终提交重新构建，摘要/CI/归档/安装验收见同次发行收据。[当前支持范围](docs/COMPATIBILITY.zh-CN.md)。

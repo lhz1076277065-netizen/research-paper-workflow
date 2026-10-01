@@ -1,0 +1,205 @@
+{
+  "version_record_counts": {
+    "28_0": 19281,
+    "29_0": 18796
+  },
+  "common_keys": 18778,
+  "wording_changed": 44,
+  "added_keys": 18,
+  "removed_keys": 503,
+  "automation_keyword_changed": 1,
+  "keyword_definition": [
+    "automat",
+    "robot",
+    "computer",
+    "programm",
+    "machine"
+  ],
+  "pilot_scope": "Archive difference, not a causal estimate or validated automation label",
+  "automation_change_examples": [
+    {
+      "occupation": "29-1127.00",
+      "task_id": "1882",
+      "before": "Communicate with non-speaking students, using sign language or computer technology.",
+      "after": "Communicate with students who use an alternative method of communications, using sign language or computer technology.",
+      "old_date": "08/2022",
+      "new_date": "08/2022"
+    }
+  ],
+  "all_first_changes": [
+    {
+      "occupation": "19-3033.00",
+      "task_id": "22181",
+      "before": "Observe individuals at play, in group interactions, or in other contexts to detect indications of mental deficiency, abnormal behavior, or maladjustment.",
+      "after": "Observe individuals at play, in group interactions, or in other contexts to detect indications of cognitive, intellectual, or developmental disabilities.",
+      "old_date": "08/2022",
+      "new_date": "08/2024"
+    },
+    {
+      "occupation": "21-1012.00",
+      "task_id": "5634",
+      "before": "Provide disabled students with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "after": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "old_date": "08/2018",
+      "new_date": "08/2024"
+    },
+    {
+      "occupation": "25-2011.00",
+      "task_id": "6494",
+      "before": "Provide disabled students with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "after": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "old_date": "08/2019",
+      "new_date": "08/2019"
+    },
+    {
+      "occupation": "25-2012.00",
+      "task_id": "6534",
+      "before": "Provide disabled students with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "after": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "old_date": "08/2018",
+      "new_date": "08/2018"
+    },
+    {
+      "occupation": "25-2021.00",
+      "task_id": "6571",
+      "before": "Provide disabled students with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "after": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "old_date": "08/2018",
+      "new_date": "08/2024"
+    },
+    {
+      "occupation": "25-2022.00",
+      "task_id": "6606",
+      "before": "Provide disabled students with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "after": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "old_date": "08/2018",
+      "new_date": "08/2024"
+    },
+    {
+      "occupation": "25-2023.00",
+      "task_id": "6628",
+      "before": "Provide disabled students with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "after": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "old_date": "08/2018",
+      "new_date": "08/2018"
+    },
+    {
+      "occupation": "25-2031.00",
+      "task_id": "6670",
+      "before": "Provide disabled students with assistive devices, supportive technology, and assistance accessing facilities such as restrooms.",
+      "after": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities such as restrooms.",
+      "old_date": "08/2018",
+      "new_date": "08/2018"
+    },
+    {
+      "occupation": "25-2032.00",
+      "task_id": "6703",
+      "before": "Provide disabled students with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "after": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "old_date": "08/2018",
+      "new_date": "08/2018"
+    },
+    {
+      "occupation": "25-2051.00",
+      "task_id": "19074",
+      "before": "Modify the general preschool curriculum for special-needs students.",
+      "after": "Modify the general preschool curriculum for students with disabilities.",
+      "old_date": "08/2019",
+      "new_date": "08/2019"
+    }
+  ],
+  "added_examples": [
+    {
+      "O*NET-SOC Code": "11-9171.00",
+      "Task ID": "23984",
+      "Task": "Deliver death certificates to medical facilities or offices to obtain signatures from legally authorized persons.",
+      "Task Type": "Core",
+      "Incumbents Responding": "52",
+      "Date": "08/2024",
+      "Domain Source": "Incumbent"
+    },
+    {
+      "O*NET-SOC Code": "13-1141.00",
+      "Task ID": "23985",
+      "Task": "Develop and administer compensation programs, such as merit or incentive pay.",
+      "Task Type": "Supplemental",
+      "Incumbents Responding": "21",
+      "Date": "08/2024",
+      "Domain Source": "Occupational Expert"
+    },
+    {
+      "O*NET-SOC Code": "15-2031.00",
+      "Task ID": "23986",
+      "Task": "Review research literature.",
+      "Task Type": "Core",
+      "Incumbents Responding": "21",
+      "Date": "08/2024",
+      "Domain Source": "Occupational Expert"
+    },
+    {
+      "O*NET-SOC Code": "17-2081.00",
+      "Task ID": "23987",
+      "Task": "Attend professional conferences to share information.",
+      "Task Type": "Core",
+      "Incumbents Responding": "21",
+      "Date": "08/2024",
+      "Domain Source": "Occupational Expert"
+    },
+    {
+      "O*NET-SOC Code": "19-3011.00",
+      "Task ID": "23988",
+      "Task": "Review documents written by others.",
+      "Task Type": "Core",
+      "Incumbents Responding": "24",
+      "Date": "08/2024",
+      "Domain Source": "Occupational Expert"
+    }
+  ],
+  "removed_examples": [
+    {
+      "O*NET-SOC Code": "11-3031.00",
+      "Task ID": "21324",
+      "Task": "Analyze and classify risks and investments to determine their potential impacts on companies.",
+      "Task Type": "Supplemental",
+      "Incumbents Responding": "61",
+      "Date": "08/2022",
+      "Domain Source": "Incumbent"
+    },
+    {
+      "O*NET-SOC Code": "11-3031.00",
+      "Task ID": "21328",
+      "Task": "Plan, direct, and coordinate risk and insurance programs of establishments to control risks and losses.",
+      "Task Type": "Supplemental",
+      "Incumbents Responding": "61",
+      "Date": "08/2022",
+      "Domain Source": "Incumbent"
+    },
+    {
+      "O*NET-SOC Code": "11-3031.00",
+      "Task ID": "21330",
+      "Task": "Direct insurance negotiations, select insurance brokers or carriers, and place insurance.",
+      "Task Type": "Supplemental",
+      "Incumbents Responding": "61",
+      "Date": "08/2022",
+      "Domain Source": "Incumbent"
+    },
+    {
+      "O*NET-SOC Code": "11-3031.00",
+      "Task ID": "21331",
+      "Task": "Submit delinquent accounts to attorneys or outside agencies for collection.",
+      "Task Type": "Supplemental",
+      "Incumbents Responding": "61",
+      "Date": "08/2022",
+      "Domain Source": "Incumbent"
+    },
+    {
+      "O*NET-SOC Code": "11-3051.06",
+      "Task ID": "15511",
+      "Task": "Negotiate power generation contracts with other public or private utilities.",
+      "Task Type": "Supplemental",
+      "Incumbents Responding": "85",
+      "Date": "07/2016",
+      "Domain Source": "Incumbent"
+    }
+  ]
+}

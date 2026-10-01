@@ -1,0 +1,23 @@
+{
+  "known_cases": {
+    "burst_sign-1.0_duration1": -1,
+    "burst_sign-1.0_duration4": -1,
+    "burst_sign-1.0_duration8": -1,
+    "sustained_sign-1.0": 102,
+    "burst_sign1.0_duration1": -1,
+    "burst_sign1.0_duration4": -1,
+    "burst_sign1.0_duration8": -1,
+    "sustained_sign1.0": 102,
+    "long_burst_indistinguishability": {
+      "sustained_alarm": 99,
+      "burst_alarm": 99,
+      "burst_length": 16
+    },
+    "long_gap_alarm": 157
+  },
+  "train_cases": 40,
+  "prefix_checks": 28880,
+  "all_passed": true,
+  "runtime_seconds": 7.725619583000025,
+  "note": "Checks establish these examples and prefix consistency, not statistical validity or holdout performance."
+}

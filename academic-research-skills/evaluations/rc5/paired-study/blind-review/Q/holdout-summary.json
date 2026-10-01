@@ -1,0 +1,185 @@
+{
+  "baseline": {
+    "mean_loss": 27.702083333333334,
+    "false_alarms": 26,
+    "hits": 164,
+    "runtime_seconds": 0.02853870899980393,
+    "groups": {
+      "bursts": {
+        "n": 120,
+        "false_alarms": 8,
+        "hits": 40,
+        "mean_loss": 30.608333333333334
+      },
+      "clean": {
+        "n": 120,
+        "false_alarms": 0,
+        "hits": 39,
+        "mean_loss": 24.966666666666665
+      },
+      "gaps": {
+        "n": 120,
+        "false_alarms": 8,
+        "hits": 38,
+        "mean_loss": 29.616666666666667
+      },
+      "heavy": {
+        "n": 120,
+        "false_alarms": 10,
+        "hits": 47,
+        "mean_loss": 25.616666666666667
+      }
+    }
+  },
+  "initial": {
+    "mean_loss": 28.466666666666665,
+    "false_alarms": 32,
+    "hits": 163,
+    "runtime_seconds": 0.027913541999623703,
+    "groups": {
+      "bursts": {
+        "n": 120,
+        "false_alarms": 11,
+        "hits": 36,
+        "mean_loss": 33.68333333333333
+      },
+      "clean": {
+        "n": 120,
+        "false_alarms": 1,
+        "hits": 41,
+        "mean_loss": 23.891666666666666
+      },
+      "gaps": {
+        "n": 120,
+        "false_alarms": 10,
+        "hits": 36,
+        "mean_loss": 30.541666666666668
+      },
+      "heavy": {
+        "n": 120,
+        "false_alarms": 10,
+        "hits": 50,
+        "mean_loss": 25.75
+      }
+    }
+  },
+  "refined": {
+    "mean_loss": 23.68125,
+    "false_alarms": 21,
+    "hits": 188,
+    "runtime_seconds": 0.9876092500007871,
+    "groups": {
+      "bursts": {
+        "n": 120,
+        "false_alarms": 8,
+        "hits": 44,
+        "mean_loss": 27.425
+      },
+      "clean": {
+        "n": 120,
+        "false_alarms": 2,
+        "hits": 50,
+        "mean_loss": 20.441666666666666
+      },
+      "gaps": {
+        "n": 120,
+        "false_alarms": 5,
+        "hits": 42,
+        "mean_loss": 26.45
+      },
+      "heavy": {
+        "n": 120,
+        "false_alarms": 6,
+        "hits": 52,
+        "mean_loss": 20.408333333333335
+      }
+    }
+  },
+  "ablation": {
+    "mean_loss": 45.479166666666664,
+    "false_alarms": 194,
+    "hits": 172,
+    "runtime_seconds": 0.14063370800067787,
+    "groups": {
+      "bursts": {
+        "n": 120,
+        "false_alarms": 58,
+        "hits": 43,
+        "mean_loss": 51.75
+      },
+      "clean": {
+        "n": 120,
+        "false_alarms": 18,
+        "hits": 54,
+        "mean_loss": 24.441666666666666
+      },
+      "gaps": {
+        "n": 120,
+        "false_alarms": 54,
+        "hits": 36,
+        "mean_loss": 51.725
+      },
+      "heavy": {
+        "n": 120,
+        "false_alarms": 64,
+        "hits": 39,
+        "mean_loss": 54
+      }
+    }
+  },
+  "baseline_to_refined": {
+    "mean_loss_reduction": 4.020833333333333,
+    "bootstrap_95_percentile": [
+      1.9395312500000002,
+      6.052135416666666
+    ],
+    "improved_cases": 121,
+    "worsened_cases": 78,
+    "tied_cases": 281,
+    "n": 480,
+    "scope": "Paired independent synthetic streams; exploratory percentile interval, fixed loss and selected development configs."
+  },
+  "initial_to_refined": {
+    "mean_loss_reduction": 4.785416666666666,
+    "bootstrap_95_percentile": [
+      2.8371354166666665,
+      6.8711458333333315
+    ],
+    "improved_cases": 107,
+    "worsened_cases": 96,
+    "tied_cases": 277,
+    "n": 480,
+    "scope": "Paired independent synthetic streams; exploratory percentile interval, fixed loss and selected development configs."
+  },
+  "median_to_refined": {
+    "mean_loss_reduction": 10.204166666666667,
+    "bootstrap_95_percentile": [
+      6.887291666666667,
+      13.558697916666665
+    ],
+    "improved_cases": 124,
+    "worsened_cases": 155,
+    "tied_cases": 201,
+    "n": 480,
+    "scope": "Paired independent synthetic streams; exploratory percentile interval, fixed loss and selected development configs."
+  },
+  "ablation_to_refined": {
+    "mean_loss_reduction": 21.797916666666666,
+    "bootstrap_95_percentile": [
+      17.79953125,
+      25.987604166666667
+    ],
+    "improved_cases": 165,
+    "worsened_cases": 166,
+    "tied_cases": 149,
+    "n": 480,
+    "scope": "Paired independent synthetic streams; exploratory percentile interval, fixed loss and selected development configs."
+  },
+  "ablation_parameter_differences": {
+    "budget": [
+      0,
+      8
+    ]
+  },
+  "causal_prefix_checks": 18526
+}

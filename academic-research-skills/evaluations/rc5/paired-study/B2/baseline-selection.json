@@ -1,0 +1,39 @@
+{
+  "mean_loss": 19.35,
+  "false_alarms": 4,
+  "hits": 52,
+  "runtime_seconds": 0.006771957999717415,
+  "groups": {
+    "bursts": {
+      "n": 30,
+      "false_alarms": 0,
+      "hits": 13,
+      "mean_loss": 18.966666666666665
+    },
+    "clean": {
+      "n": 30,
+      "false_alarms": 1,
+      "hits": 12,
+      "mean_loss": 20.9
+    },
+    "gaps": {
+      "n": 30,
+      "false_alarms": 1,
+      "hits": 13,
+      "mean_loss": 21
+    },
+    "heavy": {
+      "n": 30,
+      "false_alarms": 2,
+      "hits": 14,
+      "mean_loss": 16.533333333333335
+    }
+  },
+  "name": "baseline-05",
+  "params": {
+    "k": 0.35,
+    "h": 20.0,
+    "clip": 2.0
+  },
+  "data_sha256": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f"
+}

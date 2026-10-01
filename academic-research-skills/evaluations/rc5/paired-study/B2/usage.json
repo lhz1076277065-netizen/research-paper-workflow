@@ -1,0 +1,71 @@
+{
+  "elapsed_seconds": 758.6678309440613,
+  "elapsed_measurement": "From filesystem creation of the first recorded guidance read through final audit; TASK intake immediately preceded this. Root separately measures dispatch elapsed.",
+  "validation_calls": {
+    "baseline": 16,
+    "initial": 12,
+    "refined_including_ablations": 12,
+    "total": 40
+  },
+  "limits": {
+    "baseline": 16,
+    "initial": 12,
+    "refined_including_ablations": 12
+  },
+  "validation_rows": 4800,
+  "data_sha256": {
+    "train": "b89b87c1833a281f7d27be46811495b513beafc143b30cbb763a6e4f060254f2",
+    "dev": "bb3822e32f65cdfb5a3dfa08a517c5605d74d92e101a52bd2ebfbe2295c8907f"
+  },
+  "skill_reads": [
+    {
+      "path": "SKILL.md",
+      "characters_emitted": 654,
+      "bytes": 1422,
+      "sha256": "60c5d9ab3640bf4b4c42b850f05b1fcdbb69258ce23d3b878e654b7c91d19905"
+    },
+    {
+      "path": "references/protocol.md",
+      "characters_emitted": 1535,
+      "bytes": 4183,
+      "sha256": "4eb7ddab7725354732f5622d4ea8c75f5543c7daad7822eaab934e5057f6e020"
+    },
+    {
+      "path": "references/research-quality.md",
+      "characters_emitted": 1829,
+      "bytes": 5095,
+      "sha256": "2be115bd99804b413426a96a194276afea8016960ac9ec30e2ace19a2f033019"
+    }
+  ],
+  "characters_emitted": 4018,
+  "python_executable": "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "python_version": "3.12.14",
+  "dependencies": "Python stdlib only; no installs, external packages, GPU, API inference or delegated agents.",
+  "native_tools": [
+    "functions.exec / exec_command",
+    "web.run primary-source search/open",
+    "task harness reader and scorer"
+  ],
+  "tool_failures": [
+    "Initial diagnostic used a relative data path and failed after saving its aggregate; corrected absolute path and saved traces.",
+    "Publisher full text Lucas/Crosier returned 403; abstract checked through primary publisher search.",
+    "First Zhang author-hosted PDF URL returned 502; second author-hosted URL was accessible."
+  ],
+  "holdout_read": false,
+  "generation_source_read": false,
+  "participant_content_read": false,
+  "inspection_note": "One rg inventory inadvertently emitted other participant filenames; no contents were opened or used. Subsequent reads were explicit harness/shared-data/assigned-library/B2 only.",
+  "token_cost": "Not measured; no fabricated estimate.",
+  "independent_review": "Not performed by this agent.",
+  "research_quality_read_effect": "Changed interpretation and added algebraic/shared-prefix self-check narrative; did not change detector or frozen parameters.",
+  "measured_start_unix": 1790846186.1685781,
+  "artifact_sha256": {
+    "methods.py": "c2eb4031ccf979120b935e2c0928286bb247c857c486d9a2b5a7a25109e8eff3",
+    "run_dev.py": "d06adab99c2bb74e561dc636b8248d1a7d7cc475ff2c0158f48772f68af0c9c9",
+    "frozen.json": "56b7cfaa42675656f6e263c079f9a1dedf1e6ec2cdb9a5740068359026077d9b",
+    "research.md": "c221cb6f7b9f9260fddd51b90cb691e235d64e92902f4ad09379357551afaf18",
+    "score-events.jsonl": "834bd1f090ec3eb684d052ec4ced3de162b8a9099da95eea0b495ae1b1bb42f5",
+    "checks.json": "7a79200fce4f9f50eb35cc26f55a5cdf891aa22ea7d0b116669f37759d2f0d97",
+    "paired-dev.csv": "c5bd1b9a5e6e24ae46016d488f1a293a35dbfd132ca50b79b8706bfd587c4409"
+  }
+}

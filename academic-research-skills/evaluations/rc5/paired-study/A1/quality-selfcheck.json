@@ -1,0 +1,27 @@
+{
+  "guidance": "references/research-quality.md",
+  "guidance_read_via_task_reader": true,
+  "method_changed": false,
+  "parameters_changed": false,
+  "interpretation_changed": true,
+  "change": "Made the ordinary-threshold alternative explicit: deletion is a data-adaptive penalty bounded by 21.6 at frozen settings. Fixed-threshold ablation does not show superiority over a separately tuned moving sum. Treat plateau/burst-duration boundaries as the clearest mechanistic result; dev mean-loss gain over initial is nearly zero.",
+  "quality_diagnosis": {
+    "importance": "Suppressing nuisance alarms without missing weak sustained shifts is a concrete sequential decision problem. This study quantifies a duration/sensitivity tradeoff rather than establishing a broad methodological advance.",
+    "nearest_neighbor_gap": "Mechanism distinctions documented for primary robust segmentation, nuisance GLR, and windowed CUSUM; exhaustive originality remains unestablished.",
+    "fairness_gap": "Baseline 16 configurations versus initial 12 and refined-stage 12; equal task budgets do not guarantee equally optimized families. Matched deletion-off scan was not retuned.",
+    "decisive_evidence": "Common unseen evaluation already assigned to coordinator; to identify structured deletion advantage specifically, separately tune the moving-sum comparator on fresh development data before another frozen test.",
+    "independent_review": "This is the executing agent self-check, not external or independent review."
+  },
+  "analytical_boundary": {
+    "deletion_penalty_range": [
+      0,
+      21.6
+    ],
+    "pointwise_score_bounds": "E-21.6 <= R <= E",
+    "alarm_implications": "R>10 implies E>10; E>31.6 implies R>10, with identical window and coverage.",
+    "numeric_bound_assertions": 300,
+    "numeric_seed": 617,
+    "scope": "Random synthetic evidence arrays check algebra/implementation; no validation scoring or holdout access."
+  },
+  "validation_calls_added": 0
+}

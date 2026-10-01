@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-10-01T09:24:22.357250+00:00",
+  "backend": "pdftotext",
+  "python": "3.12.14",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "audit_script_sha256": "efc12d7e5474005e96b70cb0abff1a446df4458dd82cdc7ee5da1bfe4d05003e",
+  "pdftotext_path": "/opt/homebrew/bin/pdftotext",
+  "pypdf_version": null,
+  "passed": false,
+  "checks": {
+    "valid_pdf_audit": true,
+    "numeric_occurrences_checked": true,
+    "declared_semantic_occurrences_checked": true,
+    "malformed_pdf_rejected": true,
+    "missing_pdf_page_rejected": true,
+    "complete_library_regression_passed": false,
+    "test_result_links.Links.test_actual_pdf_page_line": true,
+    "test_pdf_extract.PdfExtraction.test_pdftotext_actual_pdf_and_malformed_boundary": true
+  },
+  "regression": {
+    "path": "test-results/regression.json",
+    "sha256": "26d5b4fa2cbf1ed4ae932b73304966ffbfb7e66d161ed83887d11c0c0c60e6c6",
+    "tests_run": 603,
+    "skipped": 0
+  },
+  "scope": "Actual PDF extraction and declared result-link engineering fixtures; no scientific/visual certification",
+  "execution_environment": "local",
+  "github_run_id": null
+}

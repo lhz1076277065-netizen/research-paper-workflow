@@ -1,0 +1,250 @@
+{
+  "kind": "result-links",
+  "passed": true,
+  "errors": [],
+  "pending": [],
+  "checks": [
+    "Actual hash-bound occurrences; coverage is declared links/claims only, not automatic claim discovery",
+    "Occurrence roles and manuscript field coverage are separate; literal relationships beyond automatic scope remain located pending",
+    "Byte identity, numeric display/recomputation and source-defined semantic text are separate; no visual or scientific certification"
+  ],
+  "coverage": {
+    "bytes": [
+      {
+        "path": "results.json",
+        "role": "frozen-results:frozen",
+        "expected_sha256": "c28dfac0ac79943270c33538a2fcd5f3a4f2674d8c49c72a005dd519cdd64817",
+        "actual_sha256": "c28dfac0ac79943270c33538a2fcd5f3a4f2674d8c49c72a005dd519cdd64817",
+        "matched": true
+      },
+      {
+        "path": "draft.md",
+        "role": "body",
+        "expected_sha256": "b38264d70ca42b48ae2a57c078950057073733945a02e58888b505af41c13480",
+        "actual_sha256": "b38264d70ca42b48ae2a57c078950057073733945a02e58888b505af41c13480",
+        "matched": true
+      },
+      {
+        "path": "data.csv",
+        "role": "source-version:data",
+        "expected_sha256": "3bd3b8d5b0169cffdaa78474c1eb145b516bb925d34543a97bc4ff5eb94af7fd",
+        "actual_sha256": "3bd3b8d5b0169cffdaa78474c1eb145b516bb925d34543a97bc4ff5eb94af7fd",
+        "matched": true
+      },
+      {
+        "path": "analysis.py",
+        "role": "source-version:code",
+        "expected_sha256": "47aae5487cc12ea2c4017d0eca89b42e0e704f79363818f4df6667359a74548e",
+        "actual_sha256": "47aae5487cc12ea2c4017d0eca89b42e0e704f79363818f4df6667359a74548e",
+        "matched": true
+      },
+      {
+        "path": "execution.json",
+        "role": "source-version:execution",
+        "expected_sha256": "ff7ac78c72db921c1f1783ab0687312ed4379e250de072f637a9c688e6ecd78b",
+        "actual_sha256": "ff7ac78c72db921c1f1783ab0687312ed4379e250de072f637a9c688e6ecd78b",
+        "matched": true
+      },
+      {
+        "path": "draft.md",
+        "role": "caption",
+        "expected_sha256": "b38264d70ca42b48ae2a57c078950057073733945a02e58888b505af41c13480",
+        "actual_sha256": "b38264d70ca42b48ae2a57c078950057073733945a02e58888b505af41c13480",
+        "matched": true
+      }
+    ],
+    "numeric": [
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "value",
+        "source_value": "0.25",
+        "display_text": "25.00",
+        "unit_factor": "1E+2",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "lower",
+        "source_value": "0.20",
+        "display_text": "20.00",
+        "unit_factor": "1E+2",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "upper",
+        "source_value": "0.30",
+        "display_text": "30.00",
+        "unit_factor": "1E+2",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      },
+      {
+        "result_id": "R1",
+        "role": "caption",
+        "path": "draft.md",
+        "locator": {
+          "line": 2
+        },
+        "field": "value",
+        "source_value": "0.25",
+        "display_text": "25.00",
+        "unit_factor": "1E+2",
+        "unit_binding": "attached",
+        "decimals": 2,
+        "rounding": "half-even",
+        "recomputation_checked": false,
+        "recomputation": null
+      }
+    ],
+    "declared_semantic": [
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "unit",
+        "source_value": "ratio",
+        "text": "%"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "field": "population",
+        "source_value": "cohort-a",
+        "text": "Cohort A"
+      },
+      {
+        "result_id": "R1",
+        "role": "caption",
+        "path": "draft.md",
+        "locator": {
+          "line": 2
+        },
+        "field": "unit",
+        "source_value": "ratio",
+        "text": "%"
+      },
+      {
+        "result_id": "R1",
+        "role": "caption",
+        "path": "draft.md",
+        "locator": {
+          "line": 2
+        },
+        "field": "population",
+        "source_value": "cohort-a",
+        "text": "Cohort A"
+      }
+    ],
+    "relationships": [
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "relationship": "interval_order",
+        "status": "checked"
+      },
+      {
+        "result_id": "R1",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "relationship": "primary_subject",
+        "field": "population",
+        "status": "checked"
+      },
+      {
+        "result_id": "R1",
+        "role": "caption",
+        "path": "draft.md",
+        "locator": {
+          "line": 2
+        },
+        "relationship": "primary_subject",
+        "field": "population",
+        "status": "checked"
+      }
+    ],
+    "occurrences": [
+      {
+        "result_id": "R1",
+        "source_id": "frozen",
+        "role": "body",
+        "path": "draft.md",
+        "locator": {
+          "line": 1
+        },
+        "covered_fields": [
+          "lower",
+          "population",
+          "unit",
+          "upper",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": []
+      },
+      {
+        "result_id": "R1",
+        "source_id": "frozen",
+        "role": "caption",
+        "path": "draft.md",
+        "locator": {
+          "line": 2
+        },
+        "covered_fields": [
+          "population",
+          "unit",
+          "value"
+        ],
+        "fields_not_in_this_occurrence": [
+          "lower",
+          "upper"
+        ]
+      }
+    ]
+  },
+  "coverage_gaps": [],
+  "scientific_validity_certified": false,
+  "semantic_truth_certified": false,
+  "actual_visual_inspection_performed": false,
+  "claim_inventory_complete": false,
+  "unlinked": []
+}

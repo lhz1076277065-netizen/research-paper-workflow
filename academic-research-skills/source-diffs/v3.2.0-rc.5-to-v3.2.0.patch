@@ -1,0 +1,919 @@
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # Academic Research Skills
+ 
+-Version **3.2.0-rc.4** supports computational-autonomous original research: obtain public digital materials, develop a testable contribution, execute with suitable free tools, and bind actual results to editable manuscripts and exports. The library keeps one optional orchestrator, eighteen independent specialist Skills, sixteen extensible research profiles and thirteen professional source repositories. Use a focused Skill for a focused request. Stable **3.1.1** remains available in [Releases](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.1.1).
++Version **3.2.0** supports computational-autonomous original research: obtain public digital materials, develop a testable contribution, execute with suitable free tools, and bind actual results to editable manuscripts and exports. The library keeps one optional orchestrator, eighteen independent specialist Skills, sixteen extensible research profiles and thirteen professional source repositories. Use a focused Skill for a focused request. Previous stable **3.1.1** remains available in [Releases](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.1.1).
+ 
+ The complete source lives in [academic-research-skills/](academic-research-skills/). Runtime and source ZIPs are published in [GitHub Releases](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases). Start with its [中文说明](academic-research-skills/README.zh-CN.md), [English guide](academic-research-skills/README.md), or the chosen `skills/<capability>/SKILL.md`.
+ 
+@@ -8,16 +8,16 @@
+ 
+ ### 一句话让 AI Agent 安装
+ 
+-> 请按照 https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0-rc.4 中的部署教程，将全部19项通用学术Skill安装到本机Codex，核验安装包SHA256、备份同名旧版，并在安装后报告实际路径、版本和检查结果。
++> 请按照 https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0 中的部署教程，将全部19项通用学术Skill安装到本机Codex，核验安装包SHA256、备份同名旧版，并在安装后报告实际路径、版本和检查结果。
+ 
+-[完整中文教程](academic-research-skills/INSTALLATION.zh-CN.md) · [macOS 一键安装包](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.2.0-rc.4/academic-research-skills-v3.2.0-rc.4-one-click.zip) · [后续发行要求](installation/RELEASE_CHECKLIST.zh-CN.md)
++[完整中文教程](academic-research-skills/INSTALLATION.zh-CN.md) · [macOS 一键安装包](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.2.0/academic-research-skills-v3.2.0-one-click.zip) · [后续发行要求](installation/RELEASE_CHECKLIST.zh-CN.md)
+ 
+ 本次 SHA256 以发行页的校验文件为准；安装器绑定实际日常包摘要。文件安装检查与宿主实际加载分别确认。
+ 
+ Use the existing Codex installer to install one capability from this repository:
+ 
+ ```bash
+-python "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --ref v3.2.0-rc.4 --path academic-research-skills/skills/research-paper-workflow --dest "$HOME/.agents/skills"
++python "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --ref v3.2.0 --path academic-research-skills/skills/research-paper-workflow --dest "$HOME/.agents/skills"
+ ```
+ 
+ Replace the path's final name with the capability you need, for example `journal-intelligence` or `scientific-visualization`. Installing all nineteen is optional. Codex detects local Skill changes; restart it if new Skills do not appear. Other Agents may load a selected folder or use the library's documented export tools; file loading is distinct from native automatic routing.
+@@ -28,7 +28,7 @@
+ 
+ Ask `$journal-intelligence` to match journals, `$manuscript-writing` to edit the supplied text, or `$research-paper-workflow` to pursue a complete authorized research project. The current Agent uses its existing model, chooses necessary professional implementations and preserves the actual scientific objective. Native internal delegation is optional. Optional record checkers verify artifact identity and applicable completion; they do not certify scientific quality.
+ 
+-rc.4 adds six separate research dimensions, fourteen on-demand computational routes, discriminating experiments, project-environment tool execution and local research-model evaluation. Result auditing checks declared numeric/semantic occurrences and render dependencies, while three lightweight queues keep research and artifact progress moving during external waiting. See [migration](academic-research-skills/MIGRATION.zh-CN.md), [file changes](academic-research-skills/UPDATE_REPORT.zh-CN.md) and [validation](academic-research-skills/evaluations/rc4/VALIDATION.zh-CN.md). Earlier reports and source diffs remain in the package.
++The stable interface includes six separate research dimensions, fourteen on-demand computational routes, discriminating experiments, project-environment tool execution and local research-model evaluation. Result auditing checks declared numeric/semantic occurrences and render dependencies, while three lightweight queues keep research and artifact progress moving during external waiting. See [migration](academic-research-skills/MIGRATION.zh-CN.md), [file changes](academic-research-skills/UPDATE_REPORT.zh-CN.md) and [validation](academic-research-skills/evaluations/v3.2.0/VALIDATION.zh-CN.md). Earlier reports and source diffs remain in the package.
+ 
+ ```bash
+ python academic-research-skills/scripts/build_release.py --check
+@@ -36,7 +36,9 @@
+ python academic-research-skills/scripts/selftest.py --out /tmp/academic-skill-smoke
+ ```
+ 
+-Read the [actual test summary](academic-research-skills/test-results/SUMMARY.json) and [rc.4 validation report](academic-research-skills/evaluations/rc4/VALIDATION.zh-CN.md) for engineering, actual digital operations and native output-review scope. Tests and development examples do not certify originality or publication quality. Existing root tests, legacy helpers and unrelated experiments are preserved; release manifests bind exact source commit and file hashes.
++Read the [actual test summary](academic-research-skills/test-results/SUMMARY.json) and [stable validation report](academic-research-skills/evaluations/v3.2.0/VALIDATION.zh-CN.md) for engineering, actual digital operations and native output-review scope. Tests and development examples do not certify originality or publication quality. Existing root tests, legacy helpers and unrelated experiments are preserved; release manifests bind exact source commit and file hashes.
++
++Formal 3.2.0 freezes the reviewed rc.5 interface and clarifies explicit population subjects and per-file coverage. See [supported platforms and semantic scope](academic-research-skills/docs/COMPATIBILITY.zh-CN.md). macOS ARM64 installation and Linux engineering CLI have evidence; other native hosts/platform installations are unverified. 3.2.x addresses actual defects and small compatibility needs. The previously evaluated holdout remains preserved rather than reused for method tuning.
+ 
+ ## License
+ 
+
+--- a/academic-research-skills/CHANGELOG.md
++++ b/academic-research-skills/CHANGELOG.md
+@@ -1,4 +1,11 @@
+ # Changelog
++
++## 3.2.0
++
++- Promote the reviewed rc.5 interface and nineteen independent skills to the stable release.
++- Clarify explicit population subjects and per-artifact manuscript coverage in migration examples.
++- Align default-branch installation links, version metadata and documented platform/semantic scope; rebuild and verify all final archives.
++- Preserve candidate tags, evaluated research data and prior failure evidence. Future 3.2.x changes address demonstrated defects and small compatibility needs.
+ 
+ ## 3.2.0-rc.5
+ 
+
+--- a/academic-research-skills/INSTALLATION.zh-CN.md
++++ b/academic-research-skills/INSTALLATION.zh-CN.md
+@@ -1,17 +1,17 @@
+-# Academic Research Skills v3.2.0-rc.4 一键安装与部署教程
++# Academic Research Skills v3.2.0 一键安装与部署教程
+ 
+-适用：macOS 上已经可以使用的 Codex。固定安装通用学术 Skill v3.2.0-rc.4，共 19 项独立能力。核对日期：2026-10-01，Asia/Shanghai。
++适用：macOS 上已经可以使用的 Codex。固定安装通用学术 Skill v3.2.0，共 19 项独立能力。核对日期：2026-10-01，Asia/Shanghai。
+ 
+ ## 最快安装：解压后双击
+ 
+-1. 解压 `academic-research-skills-v3.2.0-rc.4-one-click.zip`，把整个文件夹放在电脑任意位置。保留文件夹内的脚本和日常版 ZIP。
++1. 解压 `academic-research-skills-v3.2.0-one-click.zip`，把整个文件夹放在电脑任意位置。保留文件夹内的脚本和日常版 ZIP。
+ 2. 双击 **一键安装.command**。终端窗口会显示校验、安装结果、安装位置和旧版本备份位置。
+-3. 看到 **“安装完成：19 个 Skill，版本 3.2.0-rc.4”** 即表示本机文件安装完成。如果已是该完整版本，会显示无需重复安装。
++3. 看到 **“安装完成：19 个 Skill，版本 3.2.0”** 即表示本机文件安装完成。如果已是该完整版本，会显示无需重复安装。
+ 4. 回到 Codex，在下一轮消息中按名字使用 Skill。如果没有出现，重启 Codex 后再试。
+ 
+ 安装到当前用户的 `~/.agents/skills/`。该目录是官方当前文档列出的用户级 Skill 位置；Codex 会检测新文件。如果同名 Skill 有两份，选择器可能同时显示，因此本脚本会把所选能力在用户 `.agents/skills`、`.codex/skills` 及自定义 CODEX_HOME 中的旧副本移到备份位置，然后保留一份新目录。[官方本地 Skill 说明](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
+ 
+-你这台 Mac 已核实默认 `python3` 为 3.9.6，能运行这个安装器。安装器还使用 Codex 已有的系统 `skill-installer`。它们已在本机隔离目录验证，不需要为安装步骤新增 Python 包。其他电脑应先具备可用 Codex、Python 3.9+ 和 Codex 系统安装器。
++安装器要求Python 3.9+，复用已有Codex系统skill-installer；研究工程脚本要求Python 3.10+。本机macOS ARM64安装验收使用Python 3.9.6，工程回归使用3.12.14。其他系统/宿主范围见[支持说明](https://github.com/lhz1076277065-netizen/research-paper-workflow/blob/v3.2.0/academic-research-skills/docs/COMPATIBILITY.zh-CN.md)。
+ 
+ 这里的“部署”是把专业工作流放入本机 Codex 能读取的位置，之后由当前 Agent 和现有模型执行。日常安装包已经内置，安装阶段无需联网；首次任务需要在线文献或专业来源时再使用网络。
+ 
+@@ -22,13 +22,13 @@
+ | 一键安装.command | 双击安装全部 19 项能力 |
+ | 检查安装.command | 双击检查已安装文件与原版的身份 |
+ | install.py | 实际安装、备份、检查及恢复脚本 |
+-| academic-research-skills-v3.2.0-rc.4.zip | 已核验的完整日常版，全部必要 Skill 文件在其中 |
++| academic-research-skills-v3.2.0.zip | 已核验的完整日常版，全部必要 Skill 文件在其中 |
+ | README.zh-CN.md | 本教程 |
+-| selfcheck.py / selfcheck-results.json | 隔离目录验证程序和实际结果 |
+-| launcher-check-results.json | 两个终端启动文件的实际运行结果 |
++| selfcheck.py | 运行隔离安装、备份恢复与异常回退检查；实际结果另附在发行页 |
++
+ | SHA256SUMS.txt | 安装器、教程与内置日常包的文件摘要 |
+ 
+-本安装包是日常使用安装包；完整维护源码和开发证据另见 [rc.4 GitHub 发行页](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0-rc.4)。
++本安装包是日常使用安装包；完整维护源码和开发证据另见 [v3.2.0 GitHub 发行页](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0)。
+ 
+ ## 怎么确认真的装好了
+ 
+@@ -36,7 +36,7 @@
+ 
+ ```json
+ {
+-  "version": "3.2.0-rc.4",
++  "version": "3.2.0",
+   "selected": 19,
+   "matching": 19,
+   "missing_or_changed": [],
+@@ -47,13 +47,13 @@
+ 这一步核对全部所选目录的必需文件集合及 SHA-256，忽略 Python 的 __pycache__/pyc 和 Finder 的 .DS_Store 缓存。其他新增文件或原文件修改会列为变化。然后在 Codex 下一轮发送下面这段，用实际入口确认本机加载：
+ 
+ ```text
+-请检查通用学术 Skill v3.2.0-rc.4 的本机安装。
++请检查通用学术 Skill v3.2.0 的本机安装。
+ 先确认 research-paper-workflow 和 journal-intelligence 是否出现在当前可用 Skill 中；
+ 读取它们的真实 SKILL.md，报告路径、名称和版本。
+ 这里只做安装自查，不开展论文研究。
+ ```
+ 
+-应取得两个真实入口路径及 `metadata.version: 3.2.0-rc.4`。在默认安装中路径为：
++应取得两个真实入口路径及 `metadata.version: 3.2.0`。在默认安装中路径为：
+ 
+ ```text
+ ~/.agents/skills/research-paper-workflow/SKILL.md
+@@ -131,7 +131,7 @@
+ 若解压在默认下载目录，也可以直接运行：
+ 
+ ```bash
+-bash "$HOME/Downloads/academic-research-skills-v3.2.0-rc.4-one-click/一键安装.command"
++bash "$HOME/Downloads/academic-research-skills-v3.2.0-one-click/一键安装.command"
+ ```
+ 
+ 如果提示找不到 `python3`，先准备 Python 3.9+，或让 Codex 查找应用已有 Python 来运行 `install.py`。如果提示未找到系统安装器，在 Codex 中使用 `skill-installer`，或采用下面的官方命令/手动目录方式。安装器验证失败时会显示非零退出码和具体原因。
+@@ -147,12 +147,12 @@
+ 
+ 此操作只备份和更新该能力的用户目录；其他能力不受影响。检查部分安装时，应带上同样的 `--skill` 参数。
+ 
+-已有官方系统安装器，也可以从 GitHub 的固定提交安装单个能力：
++已有官方系统安装器，也可以从 GitHub 的固定发行标签安装单个能力：
+ 
+ ```bash
+ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+   --repo lhz1076277065-netizen/research-paper-workflow \
+-  --ref 8985d90d7e3a599a8c06556b8d1c2cec6ccb8e21 \
++  --ref v3.2.0 \
+   --path academic-research-skills/skills/journal-intelligence \
+   --dest "$HOME/.agents/skills"
+ ```
+@@ -173,10 +173,8 @@
+ 
+ 脚本先确认本次新 Skill 原字节未改变，再恢复旧目录；新版本副本保留在备份的 `new-after-restore/`。如果你已经编辑新 Skill，会停止恢复并保留当前文件，避免丢失你的修改。安装写入过程中发生普通错误会尝试回退并保存失败收据；断电等进程无法继续的情况，可依据备份内的路径记录进行恢复。
+ 
+-## 已完成的验证
++## 正式归档验证与支持范围
+ 
+-安装器复用 rc.3 已在隔离目录检查的安装、旧版/断链备份、缓存、同版重复、用户修改保护、优化模式、恢复、异常回退、错误 ZIP 与单能力安装路径。本次 rc.4 对实际发行包再次运行隔离检查与两个 .command 启动文件，结果放在发行页的 receipt 中；全局用户 Skill 不在制作发行时替换。
++正式版重新构建三个包，并针对最终归档运行构建一致性、完整回归、双PDF后端、隔离安装/备份恢复与异常回退；实际结果和最终提交摘要以同次发行的release-receipt.json为准。可运行python3 selfcheck.py重现隔离安装检查。正式包摘要与rc.5不同，安装器绑定本次实际日常包SHA256。
+ 
+-可运行 `python3 selfcheck.py` 重现隔离检查。实际日常包 SHA-256 在发行页 SHA256SUMS 中；一键包的 install.py 固定绑定该摘要，内部 SHA256SUMS 同时绑定教程和脚本。
+-
+-本教程是 rc.4 安装与本机启用说明；rc.3 历史发行附件保留。本次实际 ZIP 摘要在发行校验文件中，安装器由构建器绑定该摘要。
++一键包面向macOS及已有Codex系统安装器，原生文件加载应在用户的下一轮任务中另行确认。Linux工程CLI由双后端CI验证，未认证Linux宿主安装；Windows、macOS Intel及其他Agent的原生加载尚未覆盖。本次不替换全局用户Skill。[完整支持范围](https://github.com/lhz1076277065-netizen/research-paper-workflow/blob/v3.2.0/academic-research-skills/docs/COMPATIBILITY.zh-CN.md)。rc.5标签、原始研究和旧发行附件保留。
+
+--- a/academic-research-skills/MIGRATION.zh-CN.md
++++ b/academic-research-skills/MIGRATION.zh-CN.md
+@@ -1,15 +1,31 @@
+-# v3.2.0-rc.5 迁移
++# v3.2.0 迁移与接口冻结
+ 
+-用本版完整能力目录替换选定的rc.4目录；仍为1个可选总控与18个独立能力。维护源仍为src/common、src/quality31/payload与各能力protocol.md，运行build_release.py --write后用--check检查；项目材料与原始输出保留。
++本版以已验收rc.5为基础，仍为1个可选总控与18个独立能力、16画像及14条按需研究路线。用完整能力目录替换所选旧目录；专业协议、三个详细推演分片和实际项目材料保留。维护源仍为src/common、src/quality31/payload及各能力protocol.md，由现有build_release.py生成。
+ 
+-旧result-links封装继续接受。复算先核双方结果的单位量纲和科学身份，再把复算值换成原始结果单位使用容差。结局、总体、比较、分区、时间、效应类型等身份未绑定时进入有定位的pending；不适用字段可在冻结源明确声明。模型/实现的等价值只由冻结源semantics中的equivalent_values授权，labels仅作显示别名。正文舍入保持独立，容差不能放宽显示。
++冻结rc.5的任务/返回封装、result-links schema和调用形状：build_links(root, sources, occurrences, claims=())、audit_links(data, root)继续使用。正式版只更新版本元数据、迁移解释、导航和发行证据，不新增检查流程。后续3.2.x仅按真实缺陷或小型兼容需求改动；新能力以新的真实研究任务验证。
+ 
+-局部图注或表格不必重复全部设计字段：coverage.occurrences按角色列出当地覆盖与缺字段，coverage_gaps按同来源、结果与稿件汇总尚未覆盖的字段。主值归属、区间顺序、直接否定和有限表格坐标关系按已定义规则检查；复杂句式、未知否定范围或无法确定的关系进入pending。程序不发现全部论断，也不代替对关键句子科学含义的实际阅读。旧的词共现映射可能因此需要补关系定位。
++复算先核双方科学身份与量纲，再换到原源单位比较容差；模型/实现的equivalent_values由冻结源授权，labels只定义显示文字。正文舍入不被容差放宽。原始JSON、换算和容差保留Decimal精度，公开数值语义scalar可序列化为精确字符串。复杂关系保留带实际定位的pending。
+ 
+-比较阈值不能作为精确主值。独立单位定位仍核数字旁的实际单位；只有真正DOCX同列首行表头支持自动关联。定位须使用该文件格式的坐标，不能用Markdown上的伪表格坐标绕过主体检查。冻结JSON原值、换算与容差保留完整Decimal精度，零容差不会抹去高精度差异；数值语义scalar在公开payload中用精确字符串保持JSON可序列化。
++## 总体作为主体时显式指定
+ 
+-复用真实稿件构建行调用result_links.build_links(root, sources, occurrences, claims=())，由已有result_id、角色、文件、定位与显示精度生成链接和当前哈希，减少重复填表。已提供的哈希会校验，不会为消除错误而刷新。实际API示例和边界见docs/runtime.md与docs/integrity.md。
++冻结源的population为Cohort A、unit为s，实际句子为“Cohort A mean = 0.41 s”。已有link的数字映射和文件定位照旧，关系字段可写为：
+ 
+-详细推演保留在inference-examples.md、interpretive-examples.md和computation-examples.md，通过研究质量主线与原路线锚点按需到达。三个文件随每个独立模块生成，不要求新增总控、安装工具清单或更换执行模型。
++```json
++{"subject_field":"population",
++ "semantics":{"population":{"value":"Cohort A","text":"Cohort A"},
++              "unit":{"value":"s","text":"s"}}}
++```
+ 
+-CI分别运行实际pdftotext与仅pypdf的后端，旧PDF定位用例在两条路径都需通过；只缺对侧后端时，其专属用例可以明确跳过。CI上传新库完整回归与实际结果链接报告。rc.4报告保留在history/rc4-reports及evaluations/rc4；rc.5属于候选版本，研究比较的实测改进与文献原创性分别评价。
++这是已有link的字段片段。若只映射population而省略subject_field，自动主体只从本地model、implementation、outcome选取，可能报告primary_subject_unbound；显式指定population后才按总体核主值关系。多个主体、跨句归属或未知连接仍需要定位阅读，不通过补一个字段认证句子的完整科学含义。
++
++## 跨文件覆盖不自动合并
++
++同一source_id/result_id在draft.md正文映射了value、unit、model，而caption.md只映射value和unit：draft.md的model不会补齐caption.md。coverage.occurrences列出各次角色与当地字段；coverage_gaps按(source_id, result_id, artifact.path)汇总。即使两个文件属于同一稿件、或是DOCX/PDF两种导出，路径不同就各自报告。
++
++需要检查caption.md的该字段时，补它自身真实文字和定位。若主文与图注都在同一artifact.path，不同角色的实际出现可以在该文件内补全覆盖。这个范围解释延续现有接口，不增加跨文件合并或新的人工流程。
++
++## 其他使用边界
++
++比较阈值不当作精确主值。独立单位定位仍核数字旁单位；仅真正DOCX同列首行表头等已定义关系支持自动绑定。定位须与实际格式相符，Markdown不能附伪表格坐标绕过检查。旧的词共现映射可能需要补关系定位。程序只检查声明位置和源语义，不自动发现全文论断，不判断科学真相或发表新颖性。
++
++三个examples参考文件仍经质量主线与路线锚点按需到达；19个模块不依赖相邻能力或src。rc.5标签、evaluations/rc5及历史报告保留为已评估证据；已经查看的480条留出不再用于后续方法调参。正式包由最终提交重新构建，摘要/CI/归档/安装验收见同次发行收据。[当前支持范围](docs/COMPATIBILITY.zh-CN.md)。
+
+--- a/academic-research-skills/README.md
++++ b/academic-research-skills/README.md
+@@ -1,15 +1,15 @@
+-# Academic Research Skills 3.2.0-rc.5
++# Academic Research Skills 3.2.0
+ 
+-One optional research orchestrator and eighteen standalone specialist skills. Full research defaults to computational-autonomous: acquire lawful free digital material, construct an original increment over nearest work and run a discriminating test with computer-executable tools. Focused requests use the relevant specialist directly.
++One optional research orchestrator and eighteen standalone specialists. Full research uses computer-executable routes: actively acquire lawful digital materials, develop an original increment over nearest work, implement it with the current Agent and existing model, reuse suitable professional tools and run fair, discriminating tests. Focused requests use the relevant specialist directly.
+ 
+-Start at [START_HERE.en.md](START_HERE.en.md) or the chosen skills/<capability>/SKILL.md. Load only the references needed for the task. Execute with the current agent and its existing model; native internal subagents are optional. Scientific computation can use justified research models without switching the executing assistant.
++Start at [START_HERE.en.md](START_HERE.en.md) or skills/<capability>/SKILL.md. Load only necessary references. Nineteen complete independent folders, sixteen profiles, fourteen computational routes and detailed professional protocols remain available. Native internal delegation is optional.
+ 
+-External professional Skills are selected from the user's thirteen repositories in assets/repository-sources.json. Discover their actual current entries and record the source used for this work. Scientific literature, public data, ordinary libraries and original code are separate from this Skill-source scope. Main figures need actual professional planning, production or substantive revision, numerical checks and inspection of the final image. Complete manuscripts receive an evidence-preserving final expression pass using the designated anti-defensive-writing Skill.
++Professional Skills are discovered from the thirteen designated repositories. Scientific literature, data, ordinary libraries and original code are separate from that source scope. Main figures require actual professional work, numeric checks and inspection of the final image; complete manuscripts retain evidence-preserving review and expression revision.
+ 
+-This is the complete merged release. Detailed professional protocols and existing optional tools are retained. Use scripts/research31.py upstream for source-scoped discovery; it neither launches assistants nor certifies scientific quality. Optional engineering checks require Python 3.10+: scripts/selftest.py and tests/run_all.py in the source package. Their results concern software behavior, not a publication claim.
++The frozen rc.5 result-links interface checks declared numeric/source-semantic occurrences, limited local relationships and stale rendering dependencies. It neither discovers every claim nor certifies source truth, scientific novelty or publication quality. See [migration examples](MIGRATION.zh-CN.md), [supported scope](docs/COMPATIBILITY.zh-CN.md), [stable validation](evaluations/v3.2.0/VALIDATION.zh-CN.md) and [installation](INSTALLATION.zh-CN.md).
+ 
+-[中文说明](README.zh-CN.md) · [Validation scope](docs/COMPATIBILITY.zh-CN.md)
++The macOS one-click installer requires Python3.9+ and an existing Codex system installer; engineering scripts require Python3.10+. macOS ARM64 local execution and Linux CLI dual-PDF CI are covered; other native hosts/platform installations are unverified. Software versioning does not guarantee general research creativity or acceptance probability.
+ 
+-The library is discipline-neutral. Requests to develop, update or package this library produce Skill folders and software validation; they do not start a research project or manuscript.
++[中文说明](README.zh-CN.md) · [Stable release and archives](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0)
+ 
+-rc.5 repairs recomputation identity and unit conversion, occurrence relationships and manuscript coverage, and generates links from actual build rows. PDF extraction is exercised through both real backends in CI. Detailed examples are loaded in focused fragments. Read [migration](MIGRATION.zh-CN.md), [change evidence](UPDATE_REPORT.zh-CN.md) and [validation](evaluations/rc5/VALIDATION.zh-CN.md).
++Candidate evidence and tags remain preserved. The previously inspected 480-stream holdout is evaluated evidence; future method changes use new development/evaluation arrangements. 3.2.x handles demonstrated defects and small compatibility improvements. Updating this library delivers Skills and software validation without starting a manuscript project.
+
+--- a/academic-research-skills/README.zh-CN.md
++++ b/academic-research-skills/README.zh-CN.md
+@@ -1,21 +1,13 @@
+-# Academic Research Skills · 3.2.0-rc.4
++# Academic Research Skills · 3.2.0
+ 
+-本版由真实v3.0.0源码合并科研质量升级层，并在新副本修正实际接口与维护问题。保留1个可选总控、18个独立专业能力及全部详细专业协议；原包、已有研究材料和历史验证继续保留。
++正式版保留1个可选总控与18个独立专业能力、16研究画像和14条按需计算路线。支持计算机内研究：主动取得合法数字材料，由当前Agent及现有模型实施，用适合的专业工具开发原创方法、做公平检验并据结果推进研究。局部阅读、改稿、审图和选刊直接使用对应能力。
+ 
+-完整研究从重要问题、最近邻工作、知识增量和决定性检验推进。局部改稿、单篇阅读、审图和选刊直接使用对应能力，不额外启动整套研究。入口见 [开始使用](START_HERE.md)；只展开当前需要的参考。
++从[开始使用](START_HERE.md)或所选skills/<能力>/SKILL.md进入，按任务展开参考。详细专业协议和三个推演分片保留；运行一个完整能力目录不依赖src或相邻能力。内部协作可选，不要求更换执行模型。
+ 
+-由当前Agent及其现有模型执行，原生内部子代理可选。外部专业Skill从用户指定13仓库中动态选择当前入口或已核验本地版本；普通文献、数据、科学库与原创研究代码不受该来源表限制。不寻找其他助手模型或宿主作为研究前置。
++专业Skill从指定13仓库动态选择实际入口或已核验本地版本；普通文献、数据、科学库与原创研究代码不限于该表。专业图稿要实际设计/制作、核值和看最终画面；正式全文保留专业审查、表达修订与事实核验。可选工具检查声明位置、文件/数值/源语义与渲染依赖，不判断科学真相或发表新颖性。
+ 
+-正式主图由选定专业Skill参与设计与制作或实质修订，核对数值并实际打开最终画面。正式全文经过专业审查后，实际使用指定反防御性写作Skill整理论证与表达，保留修改前后和事实核验。单个搜索、IQR、导出或摘要操作按真实范围记录。
++[安装、检查与备份恢复](INSTALLATION.zh-CN.md) · [正式发行](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0) · [迁移实例及冻结接口](MIGRATION.zh-CN.md) · [支持范围](docs/COMPATIBILITY.zh-CN.md) · [正式验收](evaluations/v3.2.0/VALIDATION.zh-CN.md)
+ 
+-工具是可选辅助：可用 scripts/research31.py sources 查看指定来源，用其 upstream 子命令发现真实入口，assess 核对已有记录与文件版本。检查器不判断新颖性、科学正确性或顶刊录用；日常任务无需先填JSON。
++一键包的实际验收为macOS ARM64与已有Codex系统安装器，Python3.9+；研究工程脚本Python3.10+。Linux CLI有双PDF后端CI，其他宿主/平台的安装加载尚未认证。软件版本不保证研究新颖性、普遍方法创造力或论文录用。
+ 
+-Python工具要求>=3.10。明确需要工程验证时运行 scripts/selftest.py；源码版还提供 tests/run_all.py 和 scripts/build_release.py --check。原版首次失败、修复后结果和升级层测试分列；具体执行范围见 [验证说明](docs/COMPATIBILITY.zh-CN.md)。
+-
+-日常版可复制一个完整能力目录使用，不依赖src或相邻能力。源码版额外保留维护源、回归与历史开发材料。版本号表示本次软件迭代，不表示已验证全部学科或产出顶刊论文。
+-
+-本套Skill面向各学科，按实际研究类型选择专业路线，不默认绑定研究领域。开发/更新本套Skill时只完成软件与完整目录交付，不自动开展具体论文工作。
+-
+-v3.1.1已修复记录与版本关联；rc.1完善导航与专业交接；rc.2深化研究推演、读者主图和全文事实/语义比较，并冻结评估资源。rc.3补齐所选上游依赖身份检查，沉淀时间/定义对齐、反例首读与量值/方向的短专家说明；开发验证和实际边界见docs/COMPATIBILITY.zh-CN.md。
+-
+-rc.4默认计算机闭环原创研究：十四条按需路线、六个独立维度、实际公开材料适配、动态后端校准、科研模型角色、结果出现位置与渲染依赖检查。详见[迁移](MIGRATION.zh-CN.md)、[变更证据](UPDATE_REPORT.zh-CN.md)及[本轮验证](evaluations/rc4/VALIDATION.zh-CN.md)。
++rc.5标签、原研究及失败记录保持原范围，480条已查看留出不用于继续调参。3.2.x聚焦真实缺陷与小型兼容改进；下一轮升级以新的实际研究任务检验。开发本库只完成Skill与软件交付，不自动启动论文研究。
+
+--- a/academic-research-skills/UPDATE_REPORT.zh-CN.md
++++ b/academic-research-skills/UPDATE_REPORT.zh-CN.md
+@@ -1,24 +1,17 @@
+-# v3.2.0-rc.5 变更与实际效果
++# v3.2.0 正式发布收尾
+ 
+-基线为v3.2.0-rc.4 / ed4c86ec00593de48d2cb88109afe4191d1bfe04。本版定向修补结果审计、实际研究验收与读取负担；保留19个独立模块、原有专业协议和已有工具路径。
++以v3.2.0-rc.5（9813b193a2cd6504205ede70393c22c7683e22c6）为稳定基线。本次只完成迁移说明、版本/导航一致、PR正式评审合并及新归档验收发布。19能力、16画像、14路线、按需参考、专业协议和审计接口保留。
+ 
+-| 权威文件 | 改变及原因 | 实际验收与边界 |
+-|---|---|---|
+-| src/common/scripts/result_links.py | 复算先核科学身份与量纲，再换成原源单位使用容差；等价实现须源授权 | 真换算相等、量纲/值不等、分区差异、显示别名与科学等价正反例；完整Decimal精度及JSON往返 |
+-| 同一helper | 端点顺序、主值主体、否定范围；比较阈值不认作精确值；按格式拒绝混合定位，实际单位不能被远端映射掩盖 | 59项结果测试；独立20个实际文件探针在audit_links、provider audit、research31 audit及accept_result四入口一致 |
+-| 同一helper的build_links | 复用稿件构建行和result_id生成链接、实际哈希；校验既有哈希而非自动刷新 | 真实研究汇总24处Markdown/DOCX/PDF出现位置；复杂关系仍需定位语义复核 |
+-| src/common/assets/result-links.schema.json | 同步定位格式、出现角色、构建行与身份语义约束 | 实际Draft202012验证器检查合法输入及跨格式/混合坐标反例 |
+-| src/common/references/runtime.md、integrity.md | 分开当地出现角色、全稿字段覆盖、自动关系与定位审阅 | 图注可局部覆盖，同稿正文补全；缺失不能靠重复端点获得通过 |
+-| research-quality.md、computational-routes.md及三个examples文件 | 保留原推演内容，按问题加载；质量主线3152→1829字符 | 两对同路径实际读取合计12666→10020字符，减少20.9%；非token/账单测量 |
+-| tests/test_result_links.py、test_pdf_extract.py、report_pdf_links.py | 增加19项结果回归及2项真实PDF后端测试；旧PDF装饰器认识两后端 | 本机608项完整回归零跳过；pypdf-only真正无pdftotext，坏PDF有诊断 |
+-| 根.github/workflows/validate-skill.yml | pdftotext与pypdf-only两条真实CI路径，上传新库回归和PDF结果链接报告 | 所选后端及旧定位用例必须通过；对侧专属用例可跳过；远程结果在发行receipt |
+-| evaluations/rc5/paired-study | 四个新原生上下文做完整基线→改动→实施→检验→修订；同开发材料与预算，冻结后480条共用留出 | 三种改善各自基线、一种变差；内容/最近邻与原始结果独立匿名审阅；不认证发表新颖性 |
+-| evaluations/rc5/engineering | 保留首轮失败、四项假通过、修后探针、全回归、隔离模块验证及实际导出审计 | 工程事实与研究价值分别记录；原始失败未删除 |
+-| release/make_package.py及tests/test_package_identity.py | 复用干净Git、tracked-only、文件摘要与固定版本安装器；运行包带当前三份验收报告 | ZIP绑定真实commit/tag，最终CRC/摘要/隔离安装外部验收 |
+-| VERSION、README、CHANGELOG、MIGRATION、COMPATIBILITY、SUMMARY及source-diffs | 更新当前候选导航、逐项范围和权威源码差异 | rc.4报告移入history保留；不在补丁重复937个生成文件 |
++| 文件 | 实际改变 |
++|---|---|
++| MIGRATION.zh-CN.md | 增加population主体显式指定和跨文件字段不自动合并两个短例；说明冻结已有封装/schema/API。 |
++| VERSION、src/common版本字段、src/quality31/payload入口元数据 | 更新3.2.0，经原构建器同步937副本；运行时算法不改。 |
++| 根README、library双语README、INSTALLATION、installation导航/checklist | 指向正式v3.2.0与正确能力路径；修旧固定提交；安装正文只维护一份，旧文档存history/rc5-reports。 |
++| COMPATIBILITY.zh-CN.md | 明确macOS ARM64安装、Linux CLI双后端、未验证宿主/平台及有限结果/导出语义；记录实际s/was保守pending边界。 |
++| release/make_package.py、test_package_identity.py | 复用既有归档机制，运行包带当前短验收/评审报告；真实Git/ZIP回归固定正式版本。 |
++| test-results、evaluations/v3.2.0 | 当前608回归、双PDF、隔离模块、迁移例与独立PR评审；rc.5研究保留原范围，未重新调参。 |
++| source-diffs、history/rc5-reports | 权威源差异和旧导航/汇总保留；rc.5标签与1104份既有评估文件字节保持。 |
+ 
+-公共修复由现有build_release.py统一生成，937个文件无漂移。19个模块分别复制到隔离目录后实际运行，共76项基本检查通过；16画像、13来源内容与原根UI字节保留，14路线与旧知识仍可到达。
++正式包从PR合并后的最终提交重新生成运行/源码/一键ZIP，不能复用候选包摘要。所有文件摘要、最终tag/commit、解压后回归、双后端CI、安装/备份恢复和异常回退由同次发行外部receipt核验。当前源内报告不写包自身SHA，避免自引用。
+ 
+-正式发布评估：工程边界和发行检查适合rc.5候选发布；两对、一个构造问题不足以宣称普遍创新提升。保持候选版，待更多问题的实际使用反馈再评估稳定版。
+-
+-[验收映射](evaluations/rc5/VALIDATION.zh-CN.md)、[研究比较](evaluations/rc5/paired-study/COMPARISON.zh-CN.md)和[独立工程审阅](evaluations/rc5/engineering/INDEPENDENT_REVIEW.zh-CN.md)可追溯。发行commit/tag、ZIP SHA256、远程CI及实际安装结果写入发行后的外部receipt，避免将包摘要写回包。
++稳定版表示已有软件接口在列明范围内的稳定基线；研究新颖性、普遍方法创造力及论文录用仍按实际研究判断。3.2.x只处理真实缺陷/小型兼容改进；后续能力升级使用新的研究任务和新的开发/独立评价安排，已查看480条流保持已评估证据。
+
+--- a/academic-research-skills/VERSION
++++ b/academic-research-skills/VERSION
+@@ -1 +1 @@
+-3.2.0-rc.5
++3.2.0
+
+--- a/academic-research-skills/docs/ARCHITECTURE.zh-CN.md
++++ b/academic-research-skills/docs/ARCHITECTURE.zh-CN.md
+@@ -1,4 +1,4 @@
+-# 3.2.0-rc.5 维护与执行架构
++# 3.2.0 维护与执行架构
+ 
+ 1个可选总控与18个独立能力保留详细专业协议；总控组织正式研究的科学目标与阶段产物。局部任务直接处理适用范围。当前Agent及现有模型执行，原生内部协作可选，不依赖其他助手服务。
+ 
+
+--- a/academic-research-skills/docs/COMPATIBILITY.zh-CN.md
++++ b/academic-research-skills/docs/COMPATIBILITY.zh-CN.md
+@@ -1,11 +1,20 @@
+-# 3.2.0-rc.5 验证范围
++# v3.2.0 支持与验证范围
+ 
+-保留1个可选总控、18个独立能力、16个画像、14条计算路线及13个指定来源。公共修补仍从唯一维护源生成；既有入口正文、专业协议和根UI配置保留。详细推演分成三个按需参考文件。
++正式版提供计算机内研究路线、主动取得合法数字材料、当前Agent与现有模型自主实施、专业工具复用及原创方法开发指导，并提供有范围的结果与导出检查。保留19个独立能力、16画像、14条按需路线、13个专业Skill来源和原协议；科学文献、数据、普通研究库和原创代码不受该专业来源表限制。
+ 
+-本机Python 3.12.14执行608项完整工程回归，失败、错误和跳过均为0；937个生成文件无漂移。19个能力实际复制到隔离目录并分别运行，共76项基本检查通过。独立复核覆盖20个实际文件探针与四个审计入口，四个发现的假通过已修复。真实pdftotext和只有pypdf的提取均执行，旧PDF定位用例、坏PDF及越界页均有报告。
++| 范围 | 支持及实际覆盖 |
++|---|---|
++| macOS ARM64 + 当前Codex | 本机实际Skill研究任务与隔离目录执行；一键安装器Python3.9+，工程脚本Python3.10+。正式归档检查安装、备份/恢复、用户修改保护、重复安装、错误包和异常回退；文件安装与用户下一轮原生加载分别确认。 |
++| Linux x86_64 CLI | GitHub Ubuntu runner的Python3.11/pdftotext及3.13/pypdf-only完整工程回归与真实PDF路径；没有据此认证Linux宿主的原生安装/自动路由。 |
++| 未覆盖平台/宿主 | Windows一键安装不支持当前POSIX安装器；macOS Intel及其他Agent的原生安装、加载、模型行为尚未验收。目录复制/导出说明属于使用方式，不能冒称这些宿主已通过。 |
++| 数字来源与定位 | JSON/CSV冻结结果；Markdown/文本/LaTeX源行、DOCX XML段/表格坐标、可提取文本的PDF页行。扫描PDF无可提取文字时报告未检查；没有OCR、任意Word排版保真或跨格式视觉认证。 |
++| 数值与语义 | 声明的主值、区间、舍入/容差、有限单位换算及源定义身份；有限局部英文/文字、表格关系和否定规则。复杂主体/因果含义、未支持数值写法及未知关系保留定位pending。主体总体需显式subject_field；全稿字段只在同来源、结果、文件路径内合并。 |
++| 科学与工具 | 软件只核声明、实际文件、数值/源语义及渲染依赖；不自动发现所有论断，不认证源结果为真。各专业工具API/GUI须由具体任务实际使用验证，未完成通用CAD/GIS及全部专业软件操作认证。 |
+ 
+-研究比较包含rc.4/rc.5各两个独立原生上下文，同任务、数据、工具及40次开发评分预算。方法冻结后共同评价480条新构造数据流；三种修订改善各自基线，一种变差，两种小优势的探索区间包含0。独立匿名审阅检查方法内容、近邻文献与原始评分材料。不能由工程通过或有限比较认定论文新颖性、普遍研究质量增益。
++最终版本的构建一致性、完整回归、双PDF后端、19目录和归档安装证据见[正式验收](../evaluations/v3.2.0/VALIDATION.zh-CN.md)及发行收据。单后端CI仅允许跳过缺失对侧后端的专属用例，旧PDF定位和所选后端必须执行；本机装有两后端时完整回归不跳过。
+ 
+-实际指导读取输出字符合计减少20.9%，不是token或费用。研究汇总由真实构建行生成Markdown、DOCX、PDF的24处结果链接；数字/源语义、关系、角色与全稿覆盖分别报告，PDF另有实际视觉检查。程序只检查声明位置，复杂关系保留定位pending。
++当前有限文字关系检查可保守地留下有效句子待复核：本轮实测unit=s与“mean was”连接会产生primary_subject_connector_unresolved，等号连接可自动核对。该pending保留实际位置，不属于科学否定结论；本次接口冻结不扩写解析器，真实使用案例可进入后续小版本修复。
+ 
+-[完整验收](../evaluations/rc5/VALIDATION.zh-CN.md)、[研究比较](../evaluations/rc5/paired-study/COMPARISON.zh-CN.md)、[工程复核](../evaluations/rc5/engineering/INDEPENDENT_REVIEW.zh-CN.md)和[当前汇总](../test-results/SUMMARY.json)提供证据。rc.4记录保留在history/rc4-reports及evaluations/rc4。实际commit/tag、ZIP摘要、提取安装与远程CI由同次发行外部receipt记录，避免自引用。
++rc.5的两对原生比较、480条构造留出、三种改善/一种变差及20.9%指导输出字符减少仍作为历史评估保存；没有重新优化该留出，也未将其重标为正式版新研究。研究新颖性、一般性方法创造力及论文录用概率继续由具体研究与使用评价判断，软件版本号不提供保证。
++
++3.2.x只处理实际缺陷和小型兼容改进，尽量不增加默认上下文；下一轮能力升级用新的公开数据、算法或计算设计任务及新的开发/独立评价安排。当前正式发布确立稳定软件基线。
+
+--- a/academic-research-skills/release/make_package.py
++++ b/academic-research-skills/release/make_package.py
+@@ -11,7 +11,7 @@
+         rel=f.relative_to(ROOT)
+         if f.is_symlink() or not f.is_file() or set(rel.parts)&EXCLUDED or f.suffix in FONTS or f.suffix=='.pyc' or f.name=='.DS_Store' or rel.as_posix()=='PACKAGE-MANIFEST.json':continue
+         if kind=='runtime':
+-            reports={'evaluations/rc5/VALIDATION.zh-CN.md','evaluations/rc5/paired-study/COMPARISON.zh-CN.md','evaluations/rc5/paired-study/independent-review.md'}
++            reports={'evaluations/v3.2.0/VALIDATION.zh-CN.md','evaluations/v3.2.0/PR_REVIEW.zh-CN.md'}
+             if rel.parts[0] in {'src','tests','evaluations','history','previous-release','release','source-diffs'} and rel.as_posix() not in reports:continue
+             if rel.as_posix() in {'scripts/build_release.py','scripts/_v300_build_release.py','UPGRADE-RECEIPT.json','release/make_package.py','release/coverage-baseline.json','release/ci-matrix.example.yml'}:continue
+             if rel.parts[0]=='test-results' and rel.name not in {'SUMMARY.json','SUMMARY.zh-CN.md','context-metrics.json','distribution-checks.json'}:continue
+
+--- a/academic-research-skills/src/common/assets/environment-profiles.json
++++ b/academic-research-skills/src/common/assets/environment-profiles.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "environment-profiles-1",
+-  "version": "3.2.0-rc.5",
++  "version": "3.2.0",
+   "python_minimum": [
+     3,
+     10
+
+--- a/academic-research-skills/src/common/assets/research-profiles.json
++++ b/academic-research-skills/src/common/assets/research-profiles.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "research-profiles-1",
+-  "version": "3.2.0-rc.5",
++  "version": "3.2.0",
+   "profiles": {
+     "quantitative-observational": {
+       "title": "定量观察研究",
+
+--- a/academic-research-skills/src/common/assets/research31-policy.json
++++ b/academic-research-skills/src/common/assets/research31-policy.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": "research31-policy-1",
+-  "version": "3.2.0-rc.5",
++  "version": "3.2.0",
+   "host_scope": "current_host",
+   "external_skill_scope": "user_designated_repositories",
+   "native_subagents": "optional_same_host",
+
+--- a/academic-research-skills/src/common/scripts/environment.py
++++ b/academic-research-skills/src/common/scripts/environment.py
+@@ -25,7 +25,7 @@
+ import time
+ import uuid
+ 
+-VERSION='3.2.0-rc.5'
++VERSION='3.2.0'
+ SPEC=re.compile(r'^([A-Za-z0-9][A-Za-z0-9._-]*)(?:(>=|==)([0-9]+(?:\.[0-9]+)*))?$')
+ MODULE=re.compile(r'^[A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)*$')
+ TEXT_SERVICES={'read','extract','translate','draft','revise','review','figure-review','figure-plan','method-plan','landscape','matching','journal-match','ideate','novelty-check','synthesize','derive','prove','interpret','source-criticism'}
+
+--- a/academic-research-skills/src/common/scripts/provider_runtime.py
++++ b/academic-research-skills/src/common/scripts/provider_runtime.py
+@@ -19,7 +19,7 @@
+ import time
+ from datetime import datetime, timezone
+ 
+-VERSION = '3.2.0-rc.5'
++VERSION = '3.2.0'
+ 
+ class ContractError(ValueError):
+     pass
+
+--- a/academic-research-skills/src/common/scripts/selftest.py
++++ b/academic-research-skills/src/common/scripts/selftest.py
+@@ -78,7 +78,7 @@
+             if checks[-1]['status']=='passed':
+                 check('actual_output_handoff',lambda: output_handoff(b,out))
+     passed=all(c['status']=='passed' for c in checks)
+-    result={'version':'3.2.0-rc.5','checked_at':datetime.now(timezone.utc).isoformat(),
++    result={'version':'3.2.0','checked_at':datetime.now(timezone.utc).isoformat(),
+             'platform':platform.system(),'architecture':platform.machine(),'python':sys.version.split()[0],
+             'passed':passed,'checks':checks,'scientific_smoke_requested':scientific_smoke,
+             'native_host_activation_tested':False,'model_ability_measured':False,
+
+--- a/academic-research-skills/src/common/scripts/validate_run.py
++++ b/academic-research-skills/src/common/scripts/validate_run.py
+@@ -112,7 +112,7 @@
+     errors: list[str] = []
+     warnings: list[str] = []
+     report: dict[str, Any] = {
+-        'validator': 'academic-run-structural-checker', 'version': '3.2.0-rc.5',
++        'validator': 'academic-run-structural-checker', 'version': '3.2.0',
+         'run_directory': str(root.resolve()), 'checks': [
+             'bundled_schema_subset', 'file_existence_and_hashes',
+             'local_reference_resolution', 'declared_gate_and_output_consistency'],
+
+--- a/academic-research-skills/src/quality31/payload/skills/analysis-execution/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/analysis-execution/SKILL.md
+@@ -2,7 +2,7 @@
+ name: analysis-execution
+ description: "当需要实际统计分析、数值计算、模型评价、理论推导或证明时使用；按研究类型执行并核查结果，基础证明无需安装统计环境。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 实际分析、实验、仿真与推导
+
+--- a/academic-research-skills/src/quality31/payload/skills/citation-audit/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/citation-audit/SKILL.md
+@@ -2,7 +2,7 @@
+ name: citation-audit
+ description: "当需要核查引文、参考文献、来源身份或论断与出处的对应关系时使用；区分实际取得的正文证据与尚未核实的信息。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 引用真实性与论断支持核验
+
+--- a/academic-research-skills/src/quality31/payload/skills/data-discovery/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/data-discovery/SKILL.md
+@@ -2,7 +2,7 @@
+ name: data-discovery
+ description: "当研究需要定位数据、材料、语料或资源并核查覆盖和许可时使用；根据科学问题选择来源，不将易下载当作研究价值。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 支持研究问题的数据与材料获取
+
+--- a/academic-research-skills/src/quality31/payload/skills/data-preparation/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/data-preparation/SKILL.md
+@@ -2,7 +2,7 @@
+ name: data-preparation
+ description: "当已有研究数据或材料需要清理、整合、转换和质量检查时使用；保留来源与处理记录，避免改变目标量或泄漏验证信息。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 真实材料整理与可复现处理
+
+--- a/academic-research-skills/src/quality31/payload/skills/ethics-protocol/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/ethics-protocol/SKILL.md
+@@ -2,7 +2,7 @@
+ name: ethics-protocol
+ description: "当研究涉及伦理、许可、参与者、敏感材料或方案准备时使用；依据实际研究和现行要求准备材料，不声称已获批准。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 研究权限与真实披露
+
+--- a/academic-research-skills/src/quality31/payload/skills/journal-intelligence/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/journal-intelligence/SKILL.md
+@@ -2,7 +2,7 @@
+ name: journal-intelligence
+ description: "当用户只要求选刊、比较目标期刊或核对投稿适配时使用；按主题、方法、贡献、读者和当前官方要求给候选，不启动实验或整稿重写。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 标杆学习与投稿期刊匹配
+
+--- a/academic-research-skills/src/quality31/payload/skills/literature-discovery/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/literature-discovery/SKILL.md
+@@ -2,7 +2,7 @@
+ name: literature-discovery
+ description: "当需要定向或系统检索学术文献、核对来源和综合相关证据时使用；建立可追溯覆盖，不将一次搜索命中当作完成综述。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 检索、筛选与证据地图
+
+--- a/academic-research-skills/src/quality31/payload/skills/manuscript-review/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/manuscript-review/SKILL.md
+@@ -2,7 +2,7 @@
+ name: manuscript-review
+ description: "当需要科学内容审查、论证诊断或稿件一致性检查时使用；指出影响结论的缺口和可执行修订，不自动重建研究。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 科学贡献、证据与表达审查
+
+--- a/academic-research-skills/src/quality31/payload/skills/manuscript-writing/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/manuscript-writing/SKILL.md
+@@ -2,7 +2,7 @@
+ name: manuscript-writing
+ description: "当需要起草、整合或改写学术稿件时使用；完整稿按证据组织全文并终审，单段或摘要请求只处理指定范围。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 证据与贡献驱动的完整论文写作
+
+--- a/academic-research-skills/src/quality31/payload/skills/paper-deep-reading/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/paper-deep-reading/SKILL.md
+@@ -2,7 +2,7 @@
+ name: paper-deep-reading
+ description: "当给定论文、摘要或图表需要精读、解释方法和证据时使用；按已取得原文定位，摘要任务不补造全文细节。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 顶刊问题、模型和图表精读
+
+--- a/academic-research-skills/src/quality31/payload/skills/peer-review-response/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/peer-review-response/SKILL.md
+@@ -2,7 +2,7 @@
+ name: peer-review-response
+ description: "当给定真实审稿或编辑意见需要逐点回应和修订稿件时使用；定位改动与证据，保留不接受意见的有据说明。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 审稿意见驱动的修订与回应
+
+--- a/academic-research-skills/src/quality31/payload/skills/publication-stewardship/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/publication-stewardship/SKILL.md
+@@ -2,7 +2,7 @@
+ name: publication-stewardship
+ description: "当论文进入校样、发表、归档、更正或版本维护时使用；处理实际状态和文件，不伪造尚未发生的发表流程。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 校样、版本与发表后维护
+
+--- a/academic-research-skills/src/quality31/payload/skills/research-design/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/research-design/SKILL.md
+@@ -2,7 +2,7 @@
+ name: research-design
+ description: "当需要选择方法、比较方案、规划能区分解释的验证或制作方案稿时使用；由问题和材料决定设计，不编造未来结果。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 问题导向的研究设计
+
+--- a/academic-research-skills/src/quality31/payload/skills/research-intake/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/research-intake/SKILL.md
+@@ -2,7 +2,7 @@
+ name: research-intake
+ description: "当研究材料零散、目标或已有进展需要整理时使用；识别当前请求、可复用成果与真正缺口，形成可续接的任务边界。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 研究目标与科学价值定位
+
+--- a/academic-research-skills/src/quality31/payload/skills/research-paper-workflow/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/research-paper-workflow/SKILL.md
+@@ -2,7 +2,7 @@
+ name: research-paper-workflow
+ description: "当用户要求跨阶段开展学术研究或完成整篇研究成果时协调问题、设计、证据、图稿与交付；单项请求直接用对应能力，更新Skill本身不启动论文研究。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 实际学术研究到完整成果的当前Agent总控
+
+--- a/academic-research-skills/src/quality31/payload/skills/robustness-reproducibility/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/robustness-reproducibility/SKILL.md
+@@ -2,7 +2,7 @@
+ name: robustness-reproducibility
+ description: "当需要复算、独立验证、敏感性、失败诊断或整理可复现材料时使用；检查与主张有关的脆弱处，保存关键反例。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 关键结论的验证与复现
+
+--- a/academic-research-skills/src/quality31/payload/skills/scientific-visualization/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/scientific-visualization/SKILL.md
+@@ -2,7 +2,7 @@
+ name: scientific-visualization
+ description: "当需要规划、制作、审查或实质修改论文图表时使用；让关键比较与反例可读，交付正式图和核查，局部标签请求只改当前范围。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 正式论文图表的专业生产
+
+--- a/academic-research-skills/src/quality31/payload/skills/submission-packaging/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/submission-packaging/SKILL.md
+@@ -2,7 +2,7 @@
+ name: submission-packaging
+ description: "当已有稿件需要整理投稿文件、格式、声明与期刊清单时使用；核对实际产物和官方要求，正式提交按用户授权执行。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 真实研究稿的投稿准备
+
+--- a/academic-research-skills/src/quality31/payload/skills/topic-novelty/SKILL.md
++++ b/academic-research-skills/src/quality31/payload/skills/topic-novelty/SKILL.md
+@@ -2,7 +2,7 @@
+ name: topic-novelty
+ description: "当需要从方向、文献或已有结果提出有知识增量的选题，或判断方案是否已被完成时使用；比较最近邻、竞争路线与决定性验证。"
+ metadata:
+-  version: "3.2.0-rc.5"
++  version: "3.2.0"
+ ---
+ 
+ # 重要问题与可验证创新
+
+--- a/academic-research-skills/tests/test_package_identity.py
++++ b/academic-research-skills/tests/test_package_identity.py
+@@ -8,10 +8,10 @@
+ class PackageIdentity(unittest.TestCase):
+     def test_commit_binding_excludes_ignored_files_and_rejects_changes(self):
+         with tempfile.TemporaryDirectory() as tmp:
+-            root=Path(tmp);(root/'VERSION').write_text('3.2.0-rc.5\n')
++            root=Path(tmp);(root/'VERSION').write_text('3.2.0\n')
+             (root/'.gitignore').write_text('validation-report.json\nout/\n')
+             (root/'entry.md').write_text('committed release source\n')
+-            (root/'evaluations/rc5').mkdir(parents=True);(root/'evaluations/rc5/VALIDATION.zh-CN.md').write_text('source evidence scope\n')
++            (root/'evaluations/v3.2.0').mkdir(parents=True);(root/'evaluations/v3.2.0/VALIDATION.zh-CN.md').write_text('source evidence scope\n')
+             (root/'history').mkdir();(root/'history/PACKAGE-MANIFEST.json').write_text('historical identity\n')
+             def git(*args):
+                 return subprocess.check_output(['git',*args],cwd=root,stderr=subprocess.DEVNULL,text=True).strip()
+@@ -23,11 +23,11 @@
+                 self.assertIn(root/'history/PACKAGE-MANIFEST.json',pack.chosen('source'))
+                 receipt=pack.pack('runtime',root/'out')
+                 with zipfile.ZipFile(root/'out'/receipt['file']) as archive:
+-                    manifest=json.loads(archive.read('academic-research-skills-v3.2.0-rc.5/PACKAGE-MANIFEST.json'))
++                    manifest=json.loads(archive.read('academic-research-skills-v3.2.0/PACKAGE-MANIFEST.json'))
+                     self.assertEqual(manifest['source_commit'],git('rev-parse','HEAD'))
+                     self.assertNotIn('validation-report.json',manifest['files'])
+-                    self.assertIn('evaluations/rc5/VALIDATION.zh-CN.md',manifest['files'])
+-                    self.assertEqual(archive.read('academic-research-skills-v3.2.0-rc.5/entry.md'),b'committed release source\n')
++                    self.assertIn('evaluations/v3.2.0/VALIDATION.zh-CN.md',manifest['files'])
++                    self.assertEqual(archive.read('academic-research-skills-v3.2.0/entry.md'),b'committed release source\n')
+                 (root/'entry.md').write_text('uncommitted source change\n')
+                 with self.assertRaisesRegex(ValueError,'Commit the release source'):
+                     pack.pack('runtime',root/'other-out')
+
+--- a/installation/README.zh-CN.md
++++ b/installation/README.zh-CN.md
+@@ -1,188 +1,5 @@
+-# Academic Research Skills v3.2.0-rc.3 一键安装与部署教程
++# v3.2.0 安装导航
+ 
+-当前 rc.4 教程见 [计算研究新版安装说明](../academic-research-skills/INSTALLATION.zh-CN.md)。下文保留 rc.3 历史安装信息。
++[完整安装、检查和备份恢复教程](../academic-research-skills/INSTALLATION.zh-CN.md)是本仓库唯一当前教程；[正式发行页](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0)提供运行包、源码包、一键安装包、SHA256与实际验收收据。
+ 
+-适用：macOS 上已经可以使用的 Codex。固定安装通用学术 Skill v3.2.0-rc.3，共 19 项独立能力。核对日期：2026-10-01，Asia/Shanghai。
+-
+-## 最快安装：解压后双击
+-
+-1. 解压 `academic-research-skills-v3.2.0-rc.3-one-click.zip`，把整个文件夹放在电脑任意位置。保留文件夹内的脚本和日常版 ZIP。
+-2. 双击 **一键安装.command**。终端窗口会显示校验、安装结果、安装位置和旧版本备份位置。
+-3. 看到 **“安装完成：19 个 Skill，版本 3.2.0-rc.3”** 即表示本机文件安装完成。如果已是该完整版本，会显示无需重复安装。
+-4. 回到 Codex，在下一轮消息中按名字使用 Skill。如果没有出现，重启 Codex 后再试。
+-
+-安装到当前用户的 `~/.agents/skills/`。该目录是官方当前文档列出的用户级 Skill 位置；Codex 会检测新文件。如果同名 Skill 有两份，选择器可能同时显示，因此本脚本会把所选能力在用户 `.agents/skills`、`.codex/skills` 及自定义 CODEX_HOME 中的旧副本移到备份位置，然后保留一份新目录。[官方本地 Skill 说明](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
+-
+-你这台 Mac 已核实默认 `python3` 为 3.9.6，能运行这个安装器。安装器还使用 Codex 已有的系统 `skill-installer`。它们已在本机隔离目录验证，不需要为安装步骤新增 Python 包。其他电脑应先具备可用 Codex、Python 3.9+ 和 Codex 系统安装器。
+-
+-这里的“部署”是把专业工作流放入本机 Codex 能读取的位置，之后由当前 Agent 和现有模型执行。日常安装包已经内置，安装阶段无需联网；首次任务需要在线文献或专业来源时再使用网络。
+-
+-## 安装包内有什么
+-
+-| 文件 | 用途 |
+-|---|---|
+-| 一键安装.command | 双击安装全部 19 项能力 |
+-| 检查安装.command | 双击检查已安装文件与原版的身份 |
+-| install.py | 实际安装、备份、检查及恢复脚本 |
+-| academic-research-skills-v3.2.0-rc.3.zip | 已核验的完整日常版，全部必要 Skill 文件在其中 |
+-| README.zh-CN.md | 本教程 |
+-| selfcheck.py / selfcheck-results.json | 隔离目录验证程序和实际结果 |
+-| launcher-check-results.json | 两个终端启动文件的实际运行结果 |
+-| SHA256SUMS.txt | 安装器、教程与内置日常包的文件摘要 |
+-
+-本安装包是日常使用安装包；完整维护源码和开发证据另见 [rc.3 GitHub 发行页](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0-rc.3)。
+-
+-## 怎么确认真的装好了
+-
+-先双击 **检查安装.command**。完整安装应显示：
+-
+-```json
+-{
+-  "version": "3.2.0-rc.3",
+-  "selected": 19,
+-  "matching": 19,
+-  "missing_or_changed": [],
+-  "other_user_copies": []
+-}
+-```
+-
+-这一步核对全部所选目录的必需文件集合及 SHA-256，忽略 Python 的 __pycache__/pyc 和 Finder 的 .DS_Store 缓存。其他新增文件或原文件修改会列为变化。然后在 Codex 下一轮发送下面这段，用实际入口确认本机加载：
+-
+-```text
+-请检查通用学术 Skill v3.2.0-rc.3 的本机安装。
+-先确认 research-paper-workflow 和 journal-intelligence 是否出现在当前可用 Skill 中；
+-读取它们的真实 SKILL.md，报告路径、名称和版本。
+-这里只做安装自查，不开展论文研究。
+-```
+-
+-应取得两个真实入口路径及 `metadata.version: 3.2.0-rc.3`。在默认安装中路径为：
+-
+-```text
+-~/.agents/skills/research-paper-workflow/SKILL.md
+-~/.agents/skills/journal-intelligence/SKILL.md
+-```
+-
+-文件检查与 Agent 实际读取是两项不同验证。如果文件检查通过但当前聊天未出现新 Skill，先换下一轮，再重启 Codex。不要以旧聊天的入口或旧版本缓存证明新版本已启用。[官方检测与启用说明](https://learn.chatgpt.com/docs/build-skills#create-a-skill)
+-
+-## 安装后怎样使用
+-
+-局部任务直接点名相应能力。安装全部 19 项使它们可供选择，任务仍按需要读取对应资源。[官方 Skill 调用方式](https://learn.chatgpt.com/docs/build-skills#how-chatgpt-and-codex-use-skills)
+-
+-| 你想做的工作 | 能力名称 |
+-|---|---|
+-| 梳理已有材料与目标 | research-intake |
+-| 判断适合哪些期刊 | journal-intelligence |
+-| 查找和整理文献 | literature-discovery |
+-| 精读单篇论文 | paper-deep-reading |
+-| 判断创新和选题价值 | topic-novelty |
+-| 设计研究与决定性验证 | research-design |
+-| 伦理、研究协议与许可 | ethics-protocol |
+-| 寻找数据 | data-discovery |
+-| 清理、连接和准备数据 | data-preparation |
+-| 执行分析、计算或证明 | analysis-execution |
+-| 稳健性与复现 | robustness-reproducibility |
+-| 专业论文图表 | scientific-visualization |
+-| 正式稿件撰写与修改 | manuscript-writing |
+-| 核查引用身份和支持范围 | citation-audit |
+-| 审稿与科学内容核查 | manuscript-review |
+-| 整理投稿文件 | submission-packaging |
+-| 回复审稿意见 | peer-review-response |
+-| 版本、更正和发表后维护 | publication-stewardship |
+-| 已授权研究的全生命周期协调 | research-paper-workflow |
+-
+-可以直接复制这些请求，把附件或资料放进同一聊天或工作目录：
+-
+-```text
+-请使用 paper-deep-reading 精读我提供的论文，区分已经证明的结论、假设和待核对问题。
+-```
+-
+-```text
+-请使用 manuscript-writing 修改我提供的全文，保留数据、比较对象和证据支持的结论，并说明关键修改。
+-```
+-
+-```text
+-请使用 journal-intelligence，依据我的稿件类型、研究内容和投稿约束比较合适的期刊。
+-```
+-
+-明确要开展一个研究项目时，再使用总控：
+-
+-```text
+-请使用 research-paper-workflow。
+-这是一个已授权的研究任务。先读取我提供的资料，梳理当前问题、已完成产物和最重要的证据缺口，
+-建立简短路线板，然后推进下一项有信息价值的工作。
+-```
+-
+-Codex CLI/IDE 可用 `$技能名称` 明确调用；桌面端也可以用上述自然语言点名，或从实际界面的 Skill 选择器选取。
+-
+-## 计算与绘图环境
+-
+-安装器本身支持 Python 3.9+。附带的研究工程工具要求 Python 3.10+；需要的数值、绘图或其他运行依赖由具体任务决定。先让 Codex 查找并复用已有可用环境：
+-
+-```text
+-请为本次任务检查本机现有工具和 Python 环境。
+-如果需要运行 Skill 附带的 Python 工具，选择 Python 3.10 或以上；
+-优先复用已有环境，必要依赖安装到本项目的独立环境，并实际运行相关检查。
+-```
+-
+-Skill 的模型使用、网络、文件读写和研究操作仍采用当前 Codex 的实际配置。安装完成不等于科学计算环境全部准备完成，也不代表已运行第三方专业工作流。
+-
+-## 双击没有启动时
+-
+-打开 macOS“终端”，输入 `bash` 和一个空格，把 **一键安装.command** 拖到终端窗口，再按回车。这样不需要手工拼路径。
+-
+-若解压在默认下载目录，也可以直接运行：
+-
+-```bash
+-bash "$HOME/Downloads/academic-research-skills-v3.2.0-rc.3-one-click/一键安装.command"
+-```
+-
+-如果提示找不到 `python3`，先准备 Python 3.9+，或让 Codex 查找应用已有 Python 来运行 `install.py`。如果提示未找到系统安装器，在 Codex 中使用 `skill-installer`，或采用下面的官方命令/手动目录方式。安装器验证失败时会显示非零退出码和具体原因。
+-
+-## 只安装一个能力
+-
+-在安装包文件夹中打开终端，例如只装选刊能力：
+-
+-```bash
+-python3 install.py --skill journal-intelligence
+-python3 install.py --check --skill journal-intelligence
+-```
+-
+-此操作只备份和更新该能力的用户目录；其他能力不受影响。检查部分安装时，应带上同样的 `--skill` 参数。
+-
+-已有官方系统安装器，也可以从 GitHub 的固定提交安装单个能力：
+-
+-```bash
+-python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+-  --repo lhz1076277065-netizen/research-paper-workflow \
+-  --ref 8985d90d7e3a599a8c06556b8d1c2cec6ccb8e21 \
+-  --path academic-research-skills/skills/journal-intelligence \
+-  --dest "$HOME/.agents/skills"
+-```
+-
+-官方命令需要联网，并在目标目录已存在时停止；处理旧版升级优先用本教程的一键脚本。其内部复用本机系统安装器的 Skill 验证和复制实现；若这些接口改变，会在更换旧目录前停止。
+-
+-手动安装时，完整复制日常版 `skills/` 下所需能力文件夹到 `~/.agents/skills/`；确保直接路径是 `~/.agents/skills/能力名称/SKILL.md`，并保留该目录内的 scripts、references、assets、agents。对已有同名目录先移到 Skill 扫描范围以外的备份目录。不要把整个发行包作为一个 Skill，也不要只复制 SKILL.md。
+-
+-## 备份与恢复
+-
+-备份位于 `${CODEX_HOME:-~/.codex}/academic-research-skills-backups/`；每次实际更新有独立子目录及 `receipt.json`，终端会输出其完整位置。备份不会混入 Skill 扫描目录。
+-
+-恢复时，在安装包目录运行以下命令，把路径替换为安装时输出的真实备份目录：
+-
+-```bash
+-python3 install.py --restore "/完整路径/academic-research-skills-backups/本次备份目录"
+-```
+-
+-脚本先确认本次新 Skill 原字节未改变，再恢复旧目录；新版本副本保留在备份的 `new-after-restore/`。如果你已经编辑新 Skill，会停止恢复并保留当前文件，避免丢失你的修改。安装写入过程中发生普通错误会尝试回退并保存失败收据；断电等进程无法继续的情况，可依据备份内的路径记录进行恢复。
+-
+-## 已完成的验证
+-
+-在本机 Python 3.9.6 下，使用实际 Codex 系统安装器的验证/复制函数，在隔离用户目录完成 9 项检查：全部安装及旧版/断链备份、正常缓存处理、同版重复、恢复时保留用户修改、Python 优化模式下恢复保护仍生效、原字节恢复、写入中失败回退、错误 ZIP 拒绝、单能力安装。两个 .command 启动文件另在含空格/中文的临时用户目录实际运行通过。正式用户 Skill 目录没有在制作教程时安装或替换。
+-
+-可运行 `python3 selfcheck.py` 重现隔离检查。完整原日常版 ZIP 的 SHA-256 固定为：
+-
+-```text
+-98345ef13622025e2b1c0093410eec04a339339f9903eb948f241d225956b24a
+-```
+-
+-本教程是安装与本机启用说明；原 rc.3 日常版、源码版、历史工作报告和 GitHub 发行附件均保持原字节。
++安装路径为academic-research-skills/skills/<能力>，固定引用v3.2.0，按需安装1至19个完整能力目录。支持范围见[兼容性](../academic-research-skills/docs/COMPATIBILITY.zh-CN.md)。旧教程保留在源包history/rc5-reports/repository/installation/README.zh-CN.md。
+
+--- a/installation/RELEASE_CHECKLIST.zh-CN.md
++++ b/installation/RELEASE_CHECKLIST.zh-CN.md
+@@ -2,6 +2,6 @@
+ 
+ 每次发行说明必须包含部署教程、一键安装包、SHA256和下面可复制给 AI Agent 的一句话：
+ 
+-> 请按照 https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0-rc.4 中的部署教程，将全部19项通用学术Skill安装到本机Codex，核验安装包SHA256、备份同名旧版，并在安装后报告实际路径、版本和检查结果。
++> 请按照 https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0 中的部署教程，将全部19项通用学术Skill安装到本机Codex，核验安装包SHA256、备份同名旧版，并在安装后报告实际路径、版本和检查结果。
+ 
+-后续发行替换为本次实际版本和发行链接，同步更新安装器固定版本及校验值，重新检查安装、备份、恢复和异常回滚；不得沿用旧校验值。注明操作系统和 Python 要求，区分文件检查与宿主实际加载。当前一键包适用于 macOS/POSIX，未验证 Windows。核对所有下载链接并保留历史发行资产。
++后续发行替换为本次实际版本和发行链接，同步更新安装器固定版本及校验值，重新检查安装、备份、恢复和异常回滚；不得沿用旧校验值。注明操作系统和 Python 要求，区分文件检查与宿主实际加载。当前一键包验收范围为macOS ARM64及已有Codex系统安装器；Linux仅工程CLI有CI，Windows和其他宿主安装未验证。核对所有下载链接并保留历史发行资产。

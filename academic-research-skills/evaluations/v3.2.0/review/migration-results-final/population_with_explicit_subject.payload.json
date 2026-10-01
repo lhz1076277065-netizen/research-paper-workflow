@@ -1,0 +1,67 @@
+{
+  "kind": "result-links",
+  "sources": [
+    {
+      "id": "frozen",
+      "path": "results.json",
+      "versions": {
+        "data": {
+          "path": "data.csv",
+          "sha256": "3bd3b8d5b0169cffdaa78474c1eb145b516bb925d34543a97bc4ff5eb94af7fd"
+        },
+        "code": {
+          "path": "analysis.py",
+          "sha256": "47aae5487cc12ea2c4017d0eca89b42e0e704f79363818f4df6667359a74548e"
+        },
+        "execution": {
+          "path": "execution.json",
+          "sha256": "ff7ac78c72db921c1f1783ab0687312ed4379e250de072f637a9c688e6ecd78b"
+        }
+      },
+      "sha256": "c28dfac0ac79943270c33538a2fcd5f3a4f2674d8c49c72a005dd519cdd64817"
+    }
+  ],
+  "links": [
+    {
+      "subject_field": "population",
+      "result_id": "R1",
+      "source_id": "frozen",
+      "role": "body",
+      "artifact": {
+        "path": "draft.md",
+        "sha256": "b38264d70ca42b48ae2a57c078950057073733945a02e58888b505af41c13480"
+      },
+      "locator": {
+        "line": 1
+      },
+      "semantics": {
+        "unit": {
+          "value": "percent",
+          "text": "%"
+        },
+        "population": {
+          "value": "cohort-a",
+          "text": "Cohort A"
+        }
+      },
+      "numeric": [
+        {
+          "field": "value",
+          "decimals": 2,
+          "text": "25.00"
+        },
+        {
+          "field": "lower",
+          "decimals": 2,
+          "text": "20.00"
+        },
+        {
+          "field": "upper",
+          "decimals": 2,
+          "text": "30.00"
+        }
+      ]
+    }
+  ],
+  "claims": []
+}
