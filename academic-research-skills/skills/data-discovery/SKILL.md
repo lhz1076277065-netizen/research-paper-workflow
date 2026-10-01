@@ -2,14 +2,14 @@
 name: data-discovery
 description: "当研究需要定位数据、材料、语料或资源并核查覆盖和许可时使用；根据科学问题选择来源，不将易下载当作研究价值。"
 metadata:
-  version: "3.2.0"
+  version: "3.3.0-rc.1"
 ---
 
 # 支持研究问题的数据与材料获取
 
 从最近邻的数据声明与附件追到作者仓储、权威领域来源和公开仓储；实际取得字典与代表记录，核对概念、对象、结局、时间、独立单位和许可，再取得匹配的正式材料。
 
-默认 computational-autonomous：在线取得或电脑内构造材料，用数字工具检验结论。executor 为当前Agent，原生子代理按需分工；research_model 可本地加载、训练和评价。专业Skill按角色选指定13仓库的已安装/当前版本；自主选择方法，改造或新写代码。免费工具按需准备、验证，以API、CLI或GUI保存输出和可编辑项目。
+默认 computational-autonomous：在线取得或电脑内构造材料，用数字工具检验结论。executor 为当前Agent，原生子代理按需分工；research_model 可本地加载、训练和评价。专业Skill按角色选来源清单内的已安装/当前版本；自主选择方法，改造或新写代码。免费工具按需准备、验证，以API、CLI或GUI保存输出和可编辑项目。
 
 专业细节按需查 [原专业参考](references/protocol.md)。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。
 

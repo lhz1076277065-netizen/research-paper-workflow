@@ -1,0 +1,23 @@
+test_all_19_source_entry_count_wording_updated (test_patch.PatchTests.test_all_19_source_entry_count_wording_updated) ... ok
+test_apply_adds_exactly_one_candidate (test_patch.PatchTests.test_apply_adds_exactly_one_candidate) ... ok
+test_both_source_indexes_agree (test_patch.PatchTests.test_both_source_indexes_agree) ... ok
+test_candidate_roles_are_ideation_not_arbitrary_execution (test_patch.PatchTests.test_candidate_roles_are_ideation_not_arbitrary_execution) ... ok
+test_changed_context_detected_before_write (test_patch.PatchTests.test_changed_context_detected_before_write) ... ok
+test_conflicting_new_reference_preserved (test_patch.PatchTests.test_conflicting_new_reference_preserved) ... ok
+test_diff_is_inspectable (test_patch.PatchTests.test_diff_is_inspectable) ... ok
+test_dry_run_does_not_change_sources (test_patch.PatchTests.test_dry_run_does_not_change_sources) ... ok
+test_exact_published_entry_snapshots (test_patch.PatchTests.test_exact_published_entry_snapshots) ... ok
+test_existing_repositories_preserved (test_patch.PatchTests.test_existing_repositories_preserved) ... ok
+test_local_same_type_skill_remains_candidate (test_patch.PatchTests.test_local_same_type_skill_remains_candidate) ... ok
+test_matching_preexisting_source_not_duplicated (test_patch.PatchTests.test_matching_preexisting_source_not_duplicated) ... ok
+test_minimal_entry_context_not_bloated (test_patch.PatchTests.test_minimal_entry_context_not_bloated) ... ok
+test_new_reference_links_resolve_within_overlay (test_patch.PatchTests.test_new_reference_links_resolve_within_overlay) ... ok
+test_preserves_original_backup (test_patch.PatchTests.test_preserves_original_backup) ... ok
+test_repeat_application_idempotent (test_patch.PatchTests.test_repeat_application_idempotent) ... ok
+test_runtime_scripts_and_versions_not_modified (test_patch.PatchTests.test_runtime_scripts_and_versions_not_modified) ... ok
+test_source_entry_paths_remain_dynamic (test_patch.PatchTests.test_source_entry_paths_remain_dynamic) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.275s
+
+OK

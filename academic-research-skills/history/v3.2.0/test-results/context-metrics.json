@@ -1,0 +1,92 @@
+{
+  "version": "3.2.0",
+  "scope": "Current static Unicode counts vs rc.5; actual reading data is the preserved rc.4/rc.5 study, not current token/cost.",
+  "entries": {
+    "analysis-execution": {
+      "before_characters": 654,
+      "after_characters": 649
+    },
+    "citation-audit": {
+      "before_characters": 639,
+      "after_characters": 634
+    },
+    "data-discovery": {
+      "before_characters": 652,
+      "after_characters": 647
+    },
+    "data-preparation": {
+      "before_characters": 644,
+      "after_characters": 639
+    },
+    "ethics-protocol": {
+      "before_characters": 641,
+      "after_characters": 636
+    },
+    "journal-intelligence": {
+      "before_characters": 656,
+      "after_characters": 651
+    },
+    "literature-discovery": {
+      "before_characters": 646,
+      "after_characters": 641
+    },
+    "manuscript-review": {
+      "before_characters": 700,
+      "after_characters": 695
+    },
+    "manuscript-writing": {
+      "before_characters": 720,
+      "after_characters": 715
+    },
+    "paper-deep-reading": {
+      "before_characters": 642,
+      "after_characters": 637
+    },
+    "peer-review-response": {
+      "before_characters": 692,
+      "after_characters": 687
+    },
+    "publication-stewardship": {
+      "before_characters": 646,
+      "after_characters": 641
+    },
+    "research-design": {
+      "before_characters": 694,
+      "after_characters": 689
+    },
+    "research-intake": {
+      "before_characters": 651,
+      "after_characters": 646
+    },
+    "research-paper-workflow": {
+      "before_characters": 798,
+      "after_characters": 793
+    },
+    "robustness-reproducibility": {
+      "before_characters": 648,
+      "after_characters": 643
+    },
+    "scientific-visualization": {
+      "before_characters": 714,
+      "after_characters": 709
+    },
+    "submission-packaging": {
+      "before_characters": 648,
+      "after_characters": 643
+    },
+    "topic-novelty": {
+      "before_characters": 694,
+      "after_characters": 689
+    }
+  },
+  "quality_core_before": 3152,
+  "quality_core_after": 1829,
+  "on_demand_example_shards": 3,
+  "actual_reading": {
+    "old_emitted_characters": 12666,
+    "candidate_emitted_characters": 10020,
+    "reduction_fraction": 0.2089057318806253,
+    "scope": "Actual supplied-reader emitted Unicode characters; not token cost, hidden model context or mental comprehension."
+  },
+  "token_cost_measured": false
+}

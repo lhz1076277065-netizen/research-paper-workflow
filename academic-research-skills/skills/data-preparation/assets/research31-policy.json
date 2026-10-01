@@ -1,6 +1,6 @@
 {
   "schema_version": "research31-policy-1",
-  "version": "3.2.0",
+  "version": "3.3.0-rc.1",
   "host_scope": "current_host",
   "external_skill_scope": "user_designated_repositories",
   "native_subagents": "optional_same_host",
@@ -30,7 +30,9 @@
         "data",
         "methods",
         "analysis",
-        "writing"
+        "writing",
+        "ideation",
+        "novelty"
       ]
     },
     {
@@ -97,6 +99,13 @@
       "repository": "WUBING2023/PaperSpine",
       "roles": [
         "workbench"
+      ]
+    },
+    {
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "roles": [
+        "ideation",
+        "novelty"
       ]
     }
   ],

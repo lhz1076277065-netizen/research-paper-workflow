@@ -23,7 +23,26 @@ class Temp(unittest.TestCase):
         return {'path':name,'sha256':Q.sha(path)}
 
 class PolicyTests(unittest.TestCase):
-    def test_exact_13_user_sources(self):self.assertEqual(len(POL['sources']),13)
+    def test_preserves_baseline_sources_and_adds_ideation(self):
+        baseline={
+            'microsoft/ResearchStudio','Yuan1z0825/nature-skills',
+            'K-Dense-AI/scientific-agent-skills','Haojae/scipilot-figure-skill',
+            'Galaxy-Dawn/claude-scholar','Imbad0202/academic-research-skills',
+            'wanshuiyin/Auto-claude-code-research-in-sleep','karpathy/autoresearch',
+            'Adkid-Zephyr/anti-defensive-writing-Skill','rougier/scientific-visualization-book',
+            'nexu-io/open-design','ningzimu/codex-ppt-skill','WUBING2023/PaperSpine'}
+        sources={s['repository']:s for s in POL['sources']}
+        self.assertEqual(set(sources),baseline|{'Orchestra-Research/AI-Research-SKILLs'})
+        self.assertEqual(len(sources),len(POL['sources']))
+        self.assertEqual(sources['Orchestra-Research/AI-Research-SKILLs']['roles'],['ideation','novelty'])
+        self.assertTrue({'ideation','novelty'}<=set(sources['K-Dense-AI/scientific-agent-skills']['roles']))
+    def test_new_ideation_source_is_selectable_with_dynamic_entry(self):
+        candidate={'id':'orchestra','repository':'Orchestra-Research/AI-Research-SKILLs',
+                   'entry':'new-location/SKILL.md','commit':'a'*40,'available':True,
+                   'roles':['ideation'],'tasks':['problem-discovery']}
+        result=Q.select_role('ideation',[candidate],{'tasks':['problem-discovery']},POL)
+        self.assertEqual(result['primary'],candidate)
+        self.assertFalse(result['research_work_done'])
     def test_known_alias(self):self.assertEqual(Q.allowed_repo('K-Dense-AI/claude-scientific-skills',POL),'K-Dense-AI/scientific-agent-skills')
     def test_case_normalization(self):self.assertEqual(Q.allowed_repo('HAOJAE/scipilot-figure-skill',POL),'Haojae/scipilot-figure-skill')
     def test_repo_url(self):self.assertEqual(Q.allowed_repo('https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill.git',POL),POL['final_expression_repository'])

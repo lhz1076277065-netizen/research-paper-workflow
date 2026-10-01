@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0-rc.1
+
+Problem-led topic development connects cross-paper journal learning, real needs, scientific unknowns, data/scales and testable use consequences. Add optional Orchestra ideation/novelty discovery and K-Dense ideation hints while retaining every prior source. Preserve independent Skills, detailed writing protocols and the existing runtime interfaces. This is a capability candidate; behavioral observations and engineering checks are reported separately.
+
 ## 3.2.0
 
 - Promote the reviewed rc.5 interface and nineteen independent skills to the stable release.

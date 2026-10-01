@@ -1,23 +1,25 @@
 # Academic Research Skills
 
-Version **3.2.0** supports computational-autonomous original research: obtain public digital materials, develop a testable contribution, execute with suitable free tools, and bind actual results to editable manuscripts and exports. The library keeps one optional orchestrator, eighteen independent specialist Skills, sixteen extensible research profiles and thirteen professional source repositories. Use a focused Skill for a focused request. Previous stable **3.1.1** remains available in [Releases](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.1.1).
+Candidate **3.3.0-rc.1** strengthens problem-led topic selection and supports computational-autonomous original research: obtain public digital materials, develop a testable contribution, execute with suitable free tools, and bind actual results to editable manuscripts and exports. The library keeps one optional orchestrator, eighteen independent specialist Skills, sixteen extensible research profiles and the approved professional source repositories. Use a focused Skill for a focused request. Stable baseline **3.2.0** remains available in [Releases](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0).
 
 The complete source lives in [academic-research-skills/](academic-research-skills/). Runtime and source ZIPs are published in [GitHub Releases](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases). Start with its [中文说明](academic-research-skills/README.zh-CN.md), [English guide](academic-research-skills/README.md), or the chosen `skills/<capability>/SKILL.md`.
+
+This candidate connects journal and cross-paper learning to real needs, scientific unknowns, data/scales and decisive research actions. Orchestra is an optional ideation source. See [behavioral observations](academic-research-skills/evaluations/v3.3.0-rc.1/BEHAVIOR.zh-CN.md); this release does not establish a general increase in creativity.
 
 ## Install
 
 ### 一句话让 AI Agent 安装
 
-> 请按照 https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0 中的部署教程，将全部19项通用学术Skill安装到本机Codex，核验安装包SHA256、备份同名旧版，并在安装后报告实际路径、版本和检查结果。
+> 请按照 https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.3.0-rc.1 中的部署教程，将全部19项通用学术Skill安装到本机Codex，核验安装包SHA256、备份同名旧版，并在安装后报告实际路径、版本和检查结果。
 
-[完整中文教程](academic-research-skills/INSTALLATION.zh-CN.md) · [macOS 一键安装包](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.2.0/academic-research-skills-v3.2.0-one-click.zip) · [后续发行要求](installation/RELEASE_CHECKLIST.zh-CN.md)
+[完整中文教程](academic-research-skills/INSTALLATION.zh-CN.md) · [macOS 一键安装包](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.3.0-rc.1/academic-research-skills-v3.3.0-rc.1-one-click.zip) · [后续发行要求](installation/RELEASE_CHECKLIST.zh-CN.md)
 
 本次 SHA256 以发行页的校验文件为准；安装器绑定实际日常包摘要。文件安装检查与宿主实际加载分别确认。
 
 Use the existing Codex installer to install one capability from this repository:
 
 ```bash
-python "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --ref v3.2.0 --path academic-research-skills/skills/research-paper-workflow --dest "$HOME/.agents/skills"
+python "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" --repo lhz1076277065-netizen/research-paper-workflow --ref v3.3.0-rc.1 --path academic-research-skills/skills/research-paper-workflow --dest "$HOME/.agents/skills"
 ```
 
 Replace the path's final name with the capability you need, for example `journal-intelligence` or `scientific-visualization`. Installing all nineteen is optional. Codex detects local Skill changes; restart it if new Skills do not appear. Other Agents may load a selected folder or use the library's documented export tools; file loading is distinct from native automatic routing.
@@ -28,7 +30,7 @@ The previous installation path `research-paper-workflow/` retains its rc.1 compa
 
 Ask `$journal-intelligence` to match journals, `$manuscript-writing` to edit the supplied text, or `$research-paper-workflow` to pursue a complete authorized research project. The current Agent uses its existing model, chooses necessary professional implementations and preserves the actual scientific objective. Native internal delegation is optional. Optional record checkers verify artifact identity and applicable completion; they do not certify scientific quality.
 
-The stable interface includes six separate research dimensions, fourteen on-demand computational routes, discriminating experiments, project-environment tool execution and local research-model evaluation. Result auditing checks declared numeric/semantic occurrences and render dependencies, while three lightweight queues keep research and artifact progress moving during external waiting. See [migration](academic-research-skills/MIGRATION.zh-CN.md), [file changes](academic-research-skills/UPDATE_REPORT.zh-CN.md) and [validation](academic-research-skills/evaluations/v3.2.0/VALIDATION.zh-CN.md). Earlier reports and source diffs remain in the package.
+The stable interface includes six separate research dimensions, fourteen on-demand computational routes, discriminating experiments, project-environment tool execution and local research-model evaluation. Result auditing checks declared numeric/semantic occurrences and render dependencies, while three lightweight queues keep research and artifact progress moving during external waiting. See [migration](academic-research-skills/MIGRATION.zh-CN.md), [file changes](academic-research-skills/UPDATE_REPORT.zh-CN.md) and [candidate validation](academic-research-skills/evaluations/v3.3.0-rc.1/VALIDATION.zh-CN.md). Earlier reports and source diffs remain in the package.
 
 ```bash
 python academic-research-skills/scripts/build_release.py --check
@@ -36,9 +38,9 @@ python -m unittest discover -s academic-research-skills/tests -v
 python academic-research-skills/scripts/selftest.py --out /tmp/academic-skill-smoke
 ```
 
-Read the [actual test summary](academic-research-skills/test-results/SUMMARY.json) and [stable validation report](academic-research-skills/evaluations/v3.2.0/VALIDATION.zh-CN.md) for engineering, actual digital operations and native output-review scope. Tests and development examples do not certify originality or publication quality. Existing root tests, legacy helpers and unrelated experiments are preserved; release manifests bind exact source commit and file hashes.
+Read the [actual test summary](academic-research-skills/test-results/regression.json) and [candidate validation report](academic-research-skills/evaluations/v3.3.0-rc.1/VALIDATION.zh-CN.md) for engineering, actual digital operations and native output-review scope. Tests and development examples do not certify originality or publication quality. Existing root tests, legacy helpers and unrelated experiments are preserved; release manifests bind exact source commit and file hashes.
 
-Formal 3.2.0 freezes the reviewed rc.5 interface and clarifies explicit population subjects and per-file coverage. See [supported platforms and semantic scope](academic-research-skills/docs/COMPATIBILITY.zh-CN.md). macOS ARM64 installation and Linux engineering CLI have evidence; other native hosts/platform installations are unverified. 3.2.x addresses actual defects and small compatibility needs. The previously evaluated holdout remains preserved rather than reused for method tuning.
+Stable 3.2.0 freezes the reviewed rc.5 interface and clarifies explicit population subjects and per-file coverage. See [supported platforms and semantic scope](academic-research-skills/docs/COMPATIBILITY.zh-CN.md). macOS ARM64 installation and Linux engineering CLI have evidence; other native hosts/platform installations are unverified. 3.2.x addresses actual defects and small compatibility needs. The previously evaluated holdout remains preserved rather than reused for method tuning.
 
 ## License
 
