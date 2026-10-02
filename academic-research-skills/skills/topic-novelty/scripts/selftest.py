@@ -78,7 +78,7 @@ def run(out,scientific_smoke=False):
             if checks[-1]['status']=='passed':
                 check('actual_output_handoff',lambda: output_handoff(b,out))
     passed=all(c['status']=='passed' for c in checks)
-    result={'version':'3.3.0-rc.2','checked_at':datetime.now(timezone.utc).isoformat(),
+    result={'version':'3.3.0-rc.3','checked_at':datetime.now(timezone.utc).isoformat(),
             'platform':platform.system(),'architecture':platform.machine(),'python':sys.version.split()[0],
             'passed':passed,'checks':checks,'scientific_smoke_requested':scientific_smoke,
             'native_host_activation_tested':False,'model_ability_measured':False,

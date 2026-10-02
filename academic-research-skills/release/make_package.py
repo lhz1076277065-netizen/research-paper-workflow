@@ -11,19 +11,9 @@ def chosen(kind):
         rel=f.relative_to(ROOT)
         if f.is_symlink() or not f.is_file() or set(rel.parts)&EXCLUDED or f.suffix in FONTS or f.suffix=='.pyc' or f.name=='.DS_Store' or rel.as_posix()=='PACKAGE-MANIFEST.json':continue
         if kind=='runtime':
-            reports={'evaluations/v3.3.0-rc.2/VALIDATION.zh-CN.md',
-                     'evaluations/v3.3.0-rc.2/BEHAVIOR.zh-CN.md',
-                     'evaluations/v3.3.0-rc.2/ORCHESTRATOR.md',
-                     'evaluations/v3.2.0/VALIDATION.zh-CN.md','evaluations/v3.2.0/PR_REVIEW.zh-CN.md',
-                     'evaluations/v3.3.0-rc.1/VALIDATION.zh-CN.md',
-                     'evaluations/v3.3.0-rc.1/BEHAVIOR.zh-CN.md',
-                     'evaluations/v3.3.0-rc.1/context-metrics.json',
-                     'evaluations/v3.3.0-rc.1/SOURCE-OBSERVATIONS.json',
-                     'evaluations/v3.3.0-rc.1/CHANGES.json',
-                     'evaluations/v3.3.0-rc.1/ORCHESTRATOR.md'}
-            if rel.parts[0] in {'src','tests','evaluations','history','previous-release','release','source-diffs'} and rel.as_posix() not in reports:continue
-            if rel.as_posix() in {'scripts/build_release.py','scripts/_v300_build_release.py','UPGRADE-RECEIPT.json','release/make_package.py','release/coverage-baseline.json','release/ci-matrix.example.yml'}:continue
-            if rel.parts[0]=='test-results' and rel.name not in {'SUMMARY.json','SUMMARY.zh-CN.md','context-metrics.json','distribution-checks.json'}:continue
+            if set(rel.parts)&{'tests','evaluations','test-results'}:continue
+            if rel.parts[0] in {'src','tests','evaluations','test-results','history','previous-release','release','source-diffs'}:continue
+            if rel.as_posix() in {'scripts/build_release.py','scripts/_v300_build_release.py','UPGRADE-RECEIPT.json','UPDATE_REPORT.zh-CN.md','docs/CONFLICTS-FIXED.zh-CN.md'}:continue
         files.append(f)
     return files
 

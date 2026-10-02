@@ -2,7 +2,7 @@
 name: analysis-execution
 description: "当需要计算、实验、推导或从异常发展新假设、方法与设计时使用；执行检验—诊断—构思—再检验，基础证明无需安装统计环境。"
 metadata:
-  version: "3.3.0-rc.2"
+  version: "3.3.0-rc.3"
 ---
 
 # 计算研究与发现循环

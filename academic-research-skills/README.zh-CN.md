@@ -1,4 +1,4 @@
-# Academic Research Skills · 3.3.0-rc.2
+# Academic Research Skills · 3.3.0-rc.3
 
 候选版保留1个可选总控与18个独立专业能力、16研究画像和14条按需计算路线。支持计算机内研究：主动取得合法数字材料，由当前Agent及现有模型实施，用专业工具寻找相对最强适用近邻的知识、方法或设计增量，做决定性检验并形成发现循环。核心贡献锁定后才正式写稿；弱贡献回研究。局部阅读、改稿、审图和选刊直接使用对应能力。
 
@@ -6,10 +6,10 @@
 
 专业Skill从来源清单内仓库动态选择实际入口或已核验本地版本；普通文献、数据、科学库与原创研究代码不限于该表。专业图稿要实际设计/制作、核值和看最终画面；正式全文保留专业审查、表达修订与事实核验。可选工具检查声明位置、文件/数值/源语义与渲染依赖，不判断科学真相或发表新颖性。
 
-[安装、检查与备份恢复](INSTALLATION.zh-CN.md) · [候选发行](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.3.0-rc.2) · [迁移实例及冻结接口](MIGRATION.zh-CN.md) · [支持范围](docs/COMPATIBILITY.zh-CN.md) · [本轮验收](evaluations/v3.3.0-rc.2/VALIDATION.zh-CN.md)
+[安装、检查与备份恢复](INSTALLATION.zh-CN.md) · [候选发行](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.3.0-rc.3) · [迁移实例及冻结接口](MIGRATION.zh-CN.md) · [支持范围](docs/COMPATIBILITY.zh-CN.md) · [开发验收档案](https://github.com/lhz1076277065-netizen/research-paper-workflow/tree/main/academic-research-skills/evaluations)
 
 一键包的实际验收为macOS ARM64与已有Codex系统安装器，Python3.9+；研究工程脚本Python3.10+。Linux CLI有双PDF后端CI，其他宿主/平台的安装加载尚未认证。软件版本不保证研究新颖性、普遍方法创造力或论文录用。
 
-rc.5标签、原研究及失败记录保持原范围，480条已查看留出不用于继续调参。3.2.x聚焦真实缺陷与小型兼容改进；下一轮升级以新的实际研究任务检验。开发本库只完成Skill与软件交付，不自动启动论文研究。
+日常运行包只携带通用Skill和使用资源；测试任务、答案、结果和开发报告保留在源码档案中。开发本库不自动启动论文研究。
 
-本轮贡献搜索与行为验收见[更新报告](UPDATE_REPORT.zh-CN.md)与[行为观察](evaluations/v3.3.0-rc.2/BEHAVIOR.zh-CN.md)。稳定[v3.2.0](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0)继续作为回退基线。
+稳定[v3.2.0](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0)继续作为回退基线。
