@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0-rc.3
+
+Keep evaluation tasks, answers, results and development reports in source archives only. Remove runtime packaging exceptions for evaluation summaries and remove historical trial counts/time limits from usage guides. Preserve general research guidance, standalone Skills, scientific validation principles and optional software self-checks.
+
 ## 3.3.0-rc.2
 
 Promote novelty checking to contribution search, map each core claim to its strongest applicable competitor and decisive evidence, and make execution a discovery loop. Feed weak manuscript claims back into research; require evidence-supported core contributions before full original manuscript production. Preserve focused editing, protocols/registered reports, nineteen Skills and the existing professional source pool. Engineering checks and bounded behavioral tests do not certify general originality or publication.

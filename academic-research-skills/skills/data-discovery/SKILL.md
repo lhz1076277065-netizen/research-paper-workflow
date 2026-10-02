@@ -2,7 +2,7 @@
 name: data-discovery
 description: "当研究需要定位数据、材料、语料或资源并核查覆盖和许可时使用；根据科学问题选择来源，不将易下载当作研究价值。"
 metadata:
-  version: "3.3.0-rc.2"
+  version: "3.3.0-rc.3"
 ---
 
 # 支持研究问题的数据与材料获取

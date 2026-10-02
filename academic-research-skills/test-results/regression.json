@@ -1,6 +1,6 @@
 {
-  "version": "3.3.0-rc.2",
-  "generated_at": "2026-10-01T19:46:52.349686+00:00",
+  "version": "3.3.0-rc.3",
+  "generated_at": "2026-10-02T08:40:33.889920+00:00",
   "tests_run": 610,
   "failures": 0,
   "errors": 0,
@@ -957,7 +957,7 @@
       "status": "passed"
     },
     {
-      "id": "test_package_identity.PackageIdentity.test_runtime_keeps_update_report_local_targets",
+      "id": "test_package_identity.PackageIdentity.test_runtime_keeps_usage_links_without_development_reports",
       "status": "passed"
     },
     {
