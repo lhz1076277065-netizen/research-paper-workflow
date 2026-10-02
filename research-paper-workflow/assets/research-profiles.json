@@ -1,6 +1,6 @@
 {
   "schema_version": "research-profiles-1",
-  "version": "3.2.0-rc.1",
+  "version": "3.3.0-rc.4",
   "profiles": {
     "quantitative-observational": {
       "title": "定量观察研究",
@@ -407,5 +407,289 @@
     }
   },
   "default": "general",
-  "extensions_allowed": true
+  "extensions_allowed": true,
+  "default_execution_mode": "computational-autonomous",
+  "dimensions": [
+    "discipline",
+    "article_type",
+    "evidence_type",
+    "execution_mode",
+    "research_methods",
+    "tool_backend"
+  ],
+  "execution_modes": {
+    "computational-autonomous": {
+      "scope": "核心材料在线取得或电脑内构造，研究操作由数字工具执行，主要结论在该证据范围内检验。",
+      "completion_path": [
+        "关键科学问题",
+        "所需证据",
+        "可取得的数字材料或形式对象",
+        "软件与算法",
+        "区分主要解释的验证",
+        "预期学术贡献"
+      ],
+      "material_action": "未给材料时主动寻找免费且许可适配的公开资源，取得字典与代表记录后核验匹配，再取得正式材料。",
+      "external_collection": "原需人工采集或实体实验的主题转向合法公开记录、计算模型或可检验理论，明确实际回答的问题与证据范围。",
+      "resource_action": "代表性任务校准成本后通过分解、稀疏化、降阶、多保真、流式或分块求解形成有效研究规模。",
+      "executor": "当前宿主 Agent 组织执行；research_model 是被加载、训练或评价的研究对象/算法。",
+      "claim_boundary": "仿真、设计和分子候选按已完成计算证据定位，不声称完成未来物理验证。"
+    }
+  },
+  "computational_routes": {
+    "public-data": {
+      "title": "公开数据计算研究",
+      "study_types": [
+        "quantitative-observational",
+        "causal-quasi-experimental",
+        "experimental",
+        "data-resource"
+      ],
+      "evidence_objects": [
+        "data"
+      ],
+      "original_goal": "新规律、异质性、边界或测量方法",
+      "decisive_evidence": "公开数据重分析、跨来源比较、识别与敏感性检查",
+      "candidate_backends": [
+        "python",
+        "r"
+      ],
+      "reference": "references/computational-routes.md#public-data"
+    },
+    "representation-learning": {
+      "title": "机器学习与表示学习",
+      "study_types": [
+        "predictive-ml"
+      ],
+      "evidence_objects": [
+        "data",
+        "code"
+      ],
+      "original_goal": "新目标、学习策略、结构、校准或数据效率",
+      "decisive_evidence": "强基线、同条件评价、消融、跨时间或跨域验证",
+      "candidate_backends": [
+        "python",
+        "training-framework"
+      ],
+      "reference": "references/computational-routes.md#representation-learning"
+    },
+    "efficient-inference": {
+      "title": "高效模型与推理方法",
+      "study_types": [
+        "predictive-ml",
+        "methods-software"
+      ],
+      "evidence_objects": [
+        "code",
+        "evaluation-tasks"
+      ],
+      "original_goal": "压缩、量化、蒸馏、检索、缓存或推理算法",
+      "decisive_evidence": "精度—延迟—内存曲线、留出任务与机制消融",
+      "candidate_backends": [
+        "local-research-model",
+        "profiler"
+      ],
+      "reference": "references/computational-routes.md#efficient-inference"
+    },
+    "optimization": {
+      "title": "优化与运筹算法",
+      "study_types": [
+        "methods-software",
+        "theory-proof"
+      ],
+      "evidence_objects": [
+        "code",
+        "problem-instances"
+      ],
+      "original_goal": "求解策略、约束处理、近似或调度算法",
+      "decisive_evidence": "解质量、最优性差距、复杂度、扩展与困难实例",
+      "candidate_backends": [
+        "solver",
+        "compiled-language"
+      ],
+      "reference": "references/computational-routes.md#optimization"
+    },
+    "formal-theory": {
+      "title": "理论、数学与形式化方法",
+      "study_types": [
+        "theory-proof"
+      ],
+      "evidence_objects": [
+        "formal-statements"
+      ],
+      "original_goal": "命题、更紧界、更弱条件、构造或重要反例",
+      "decisive_evidence": "完整推导、证明依赖、边界与适用的形式检查",
+      "candidate_backends": [
+        "symbolic",
+        "proof-assistant"
+      ],
+      "reference": "references/computational-routes.md#formal-theory"
+    },
+    "numerical-methods": {
+      "title": "科学计算与数值方法",
+      "study_types": [
+        "simulation-numerical"
+      ],
+      "evidence_objects": [
+        "executable-model",
+        "code"
+      ],
+      "original_goal": "离散化、求解器、误差估计或逆问题",
+      "decisive_evidence": "已知解、网格收敛、稳定性、参考解与跨工况验证",
+      "candidate_backends": [
+        "numerical-solver",
+        "python"
+      ],
+      "reference": "references/computational-routes.md#numerical-methods"
+    },
+    "simulation-control": {
+      "title": "仿真、控制与强化学习",
+      "study_types": [
+        "simulation-numerical",
+        "predictive-ml"
+      ],
+      "evidence_objects": [
+        "executable-model",
+        "code"
+      ],
+      "original_goal": "控制规律、规划、辨识或鲁棒策略",
+      "decisive_evidence": "留出任务、扰动、参数范围与样本效率",
+      "candidate_backends": [
+        "simulator",
+        "training-framework"
+      ],
+      "reference": "references/computational-routes.md#simulation-control"
+    },
+    "digital-design": {
+      "title": "计算设计与数字发明",
+      "study_types": [
+        "simulation-numerical",
+        "methods-software"
+      ],
+      "evidence_objects": [
+        "executable-design",
+        "code"
+      ],
+      "original_goal": "结构、拓扑、部件、逆向设计或设计优化",
+      "decisive_evidence": "物理约束、独立求解、变化工况与比较设计",
+      "candidate_backends": [
+        "cad",
+        "numerical-solver"
+      ],
+      "reference": "references/computational-routes.md#digital-design"
+    },
+    "geospatial": {
+      "title": "遥感、地理与环境计算",
+      "study_types": [
+        "quantitative-observational",
+        "predictive-ml",
+        "simulation-numerical"
+      ],
+      "evidence_objects": [
+        "data"
+      ],
+      "original_goal": "检测、重建、预测、空间规律或模型",
+      "decisive_evidence": "公开遥感材料、时空留出、尺度与测量检查",
+      "candidate_backends": [
+        "gis",
+        "python",
+        "r"
+      ],
+      "reference": "references/computational-routes.md#geospatial"
+    },
+    "bio-materials": {
+      "title": "生物信息与分子/材料信息学",
+      "study_types": [
+        "quantitative-observational",
+        "predictive-ml"
+      ],
+      "evidence_objects": [
+        "data",
+        "code"
+      ],
+      "original_goal": "组学模式、表示、性质预测或计算筛选",
+      "decisive_evidence": "独立分组、结构/序列或时间划分",
+      "candidate_backends": [
+        "domain-software",
+        "python"
+      ],
+      "reference": "references/computational-routes.md#bio-materials"
+    },
+    "networks": {
+      "title": "复杂网络与多主体系统",
+      "study_types": [
+        "simulation-numerical",
+        "quantitative-observational",
+        "methods-software"
+      ],
+      "evidence_objects": [
+        "network-or-model",
+        "code"
+      ],
+      "original_goal": "传播、协调机制、网络结构或算法",
+      "decisive_evidence": "公开网络、可解释模拟、参数范围与竞争机制",
+      "candidate_backends": [
+        "simulator",
+        "python"
+      ],
+      "reference": "references/computational-routes.md#networks"
+    },
+    "software-systems": {
+      "title": "软件系统与计算机工程",
+      "study_types": [
+        "methods-software"
+      ],
+      "evidence_objects": [
+        "code",
+        "workloads"
+      ],
+      "original_goal": "编译、数据库、检索、并发、存储或调度改进",
+      "decisive_evidence": "真实工作负载、性能剖析与正确性测试",
+      "candidate_backends": [
+        "compiled-language",
+        "database",
+        "python"
+      ],
+      "reference": "references/computational-routes.md#software-systems"
+    },
+    "digital-humanities": {
+      "title": "计算文本与数字人文",
+      "study_types": [
+        "humanities-interpretive",
+        "qualitative",
+        "mixed-methods",
+        "narrative-conceptual"
+      ],
+      "evidence_objects": [
+        "sources"
+      ],
+      "original_goal": "文本现象、跨语料规律、可检查解释或分析方法",
+      "decisive_evidence": "合法语料、版本语境、定位片段与替代解释",
+      "candidate_backends": [
+        "text-analysis",
+        "python",
+        "r"
+      ],
+      "reference": "references/computational-routes.md#digital-humanities"
+    },
+    "evidence-synthesis": {
+      "title": "证据综合与开放基准",
+      "study_types": [
+        "systematic-review",
+        "scoping-review",
+        "meta-analysis",
+        "narrative-conceptual"
+      ],
+      "evidence_objects": [
+        "sources"
+      ],
+      "original_goal": "证据综合、评价体系或系统性误判",
+      "decisive_evidence": "实际检索提取、纳入规则、独立划分与综合",
+      "candidate_backends": [
+        "synthesis",
+        "python",
+        "r"
+      ],
+      "reference": "references/computational-routes.md#evidence-synthesis"
+    }
+  }
 }

@@ -31,7 +31,7 @@ python3 scripts/research31.py assess --state research-route.json --root /path/to
 
 3.1.0记录缺少新关联时返回具体下一步，保留原文件；不假造subjects、bindings或已复核标记以凑齐记录。
 
-## rc.4按需字段与检查
+## 可选字段与检查
 
 `select --role ROLE --input candidates.json --out selection.json`接收`candidates`数组及可选`requirements`。候选包含唯一id、repository、实际entry/commit、roles、available布尔值、installed布尔值、missing_dependencies，以及已检查的domains/tasks/materials/outputs字符串数组。requirements使用后四个数组要求完全覆盖；这些是实际检查记录，不是工具自动认定。主实现优先匹配的已安装者；互补者注明`complement_role: complementary_coverage | independent_evaluation | fallback`与具体`selection_reason`。
 
