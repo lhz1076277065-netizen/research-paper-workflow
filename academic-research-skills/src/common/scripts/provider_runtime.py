@@ -19,7 +19,7 @@ import sys
 import time
 from datetime import datetime, timezone
 
-VERSION = '3.3.0-rc.4'
+VERSION = '3.3.0'
 
 class ContractError(ValueError):
     pass
