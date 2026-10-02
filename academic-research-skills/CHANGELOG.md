@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0
+
+Promote the audited rc.4 research instructions without functional changes. Refresh release metadata, installation links and documentation; rebuild and verify final archives with per-file digests, isolated installer checks and Linux dual-PDF CI. Acceptance is instruction and engineering review; research-case validation was cancelled by the user. Preserve all earlier releases and development archives.
+
 ## 3.3.0-rc.4
 
 Audit all research instructions and routes. Define the strongest applicable competitor, stop uninformative routes, preserve fixed user questions and restrict experiments/research feedback to authorized scope. Align journal landscape discovery and contribution-gated manuscript routing; invalidate only affected outputs and generalize continuation checks. No further research-case validation is required. Keep development tasks and results out of runtime packages.
