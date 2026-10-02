@@ -1,6 +1,7 @@
 """Merged-release record checks. Synthetic records exercise software contracts;
 these tests do not establish scientific novelty or real provider execution.
 """
+import copy
 import importlib.util
 import json
 from pathlib import Path
@@ -137,9 +138,32 @@ class RecordTests(Temp):
     def test_download_not_execution(self):
         s=self.complete();s['provider_uses'][0]['status']='downloaded';self.assertEqual(self.assess(s)['status'],'research_in_progress')
     def test_expression_missing_is_next_work(self):
-        s=self.complete();s.pop('final_expression');self.assertTrue(any('anti-defensive' in x for x in self.assess(s)['next_actions']))
-    def test_expression_is_designated_source(self):
-        s=self.complete();s['provider_uses'][-1]['repository']='Yuan1z0825/nature-skills';self.assertTrue(any('designated' in x for x in self.assess(s)['next_actions']))
+        s=self.complete();s.pop('final_expression');self.assertTrue(any('evidence-preserving' in x for x in self.assess(s)['next_actions']))
+    def test_expression_preferred_source_is_required_only_when_user_requests_it(self):
+        s=self.complete();s['provider_uses'][-1]['repository']='Yuan1z0825/nature-skills'
+        self.assertEqual(self.assess(s)['status'],'ready_for_content_review')
+        s['final_expression']['required_repository']=POL['final_expression_repository']
+        self.assertTrue(any('user-required' in x for x in self.assess(s)['external_items']))
+        s['provider_uses'][-1]['repository']=POL['final_expression_repository']
+        self.assertEqual(self.assess(s)['status'],'ready_for_content_review')
+    def test_local_expression_preserves_actual_work_and_final_review_requirements(self):
+        s=self.complete();use=s['provider_uses'].pop();end=s['final_expression'];end.pop('provider_use')
+        end['operation']={k:use[k] for k in ['actor_scope','scope','inputs','outputs','evidence']}
+        end['operation']['steps']=['argument_review','evidence_preservation']
+        self.assertEqual(self.assess(s)['status'],'ready_for_content_review')
+        for key,value in [('scope','abstract'),('outputs',[]),('evidence',[]),('steps',[])]:
+            with self.subTest(key=key):
+                bad=copy.deepcopy(s);bad['final_expression']['operation'][key]=value
+                self.assertEqual(self.assess(bad)['status'],'research_in_progress')
+        for value in [False,'true']:
+            bad=copy.deepcopy(s);bad['final_expression']['facts_rechecked']=value
+            self.assertNotEqual(self.assess(bad)['status'],'ready_for_content_review')
+        bad=copy.deepcopy(s);bad['final_expression']['review'].pop('subjects')
+        self.assertEqual(self.assess(bad)['status'],'research_in_progress')
+        bad=copy.deepcopy(s);bad['final_expression']['operation']['inputs'][0]['sha256']='0'*64
+        self.assertEqual(self.assess(bad)['status'],'record_error')
+        end['required_repository']=POL['final_expression_repository']
+        self.assertTrue(any('user-required' in x for x in self.assess(s)['external_items']))
     def test_abstract_writing_does_not_complete_full_paper_role(self):
         s=self.complete();s['provider_uses'][2]['scope']='abstract'
         self.assertTrue(any('writing' in x for x in self.assess(s)['next_actions']))

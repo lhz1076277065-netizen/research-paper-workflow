@@ -1,10 +1,10 @@
 {
-  "version": "3.3.0-rc.4",
-  "generated_at": "2026-10-02T15:01:46.578272+00:00",
-  "tests_run": 610,
+  "version": "3.3.1",
+  "generated_at": "2026-10-02T17:15:59.599260+00:00",
+  "tests_run": 611,
   "failures": 0,
   "errors": 0,
-  "skipped": 1,
+  "skipped": 0,
   "passed": true,
   "groups": {
     "test_architecture": 86,
@@ -14,7 +14,7 @@
     "test_package_identity": 3,
     "test_pdf_extract": 2,
     "test_portability": 50,
-    "test_quality31": 69,
+    "test_quality31": 70,
     "test_release": 57,
     "test_research_tools": 18,
     "test_result_links": 59,
@@ -966,8 +966,7 @@
     },
     {
       "id": "test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary",
-      "status": "skipped",
-      "reason": "pypdf is not installed"
+      "status": "passed"
     },
     {
       "id": "test_portability.InstallTests.test_failed_install_prevents_research_script",
@@ -1322,11 +1321,11 @@
       "status": "passed"
     },
     {
-      "id": "test_quality31.RecordTests.test_expression_is_designated_source",
+      "id": "test_quality31.RecordTests.test_expression_missing_is_next_work",
       "status": "passed"
     },
     {
-      "id": "test_quality31.RecordTests.test_expression_missing_is_next_work",
+      "id": "test_quality31.RecordTests.test_expression_preferred_source_is_required_only_when_user_requests_it",
       "status": "passed"
     },
     {
@@ -1363,6 +1362,10 @@
     },
     {
       "id": "test_quality31.RecordTests.test_legacy_unbound_review_requests_migration_not_silent_readiness",
+      "status": "passed"
+    },
+    {
+      "id": "test_quality31.RecordTests.test_local_expression_preserves_actual_work_and_final_review_requirements",
       "status": "passed"
     },
     {

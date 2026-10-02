@@ -156,11 +156,16 @@ def assess(state,root,config=None):
     if not isinstance(state,dict):raise ResearchError('state must be an object')
     for key in ['documents','research_goal','final_expression','research_context','applicability']:
         if not isinstance(state.get(key,{}),dict):raise ResearchError(key+' must be an object')
+    end=state.get('final_expression',{})
+    if not isinstance(end.get('operation',{}),dict):raise ResearchError('final_expression.operation must be an object')
+    required_repository=allowed_repo(end['required_repository'],config) if 'required_repository' in end else None
     def sequence(obj,key,item_type):
         value=obj.get(key,[])
         if not isinstance(value,list) or any(not isinstance(x,item_type) for x in value):
             raise ResearchError(key+' must be a list of '+('objects' if item_type is dict else 'strings'))
         return value
+    for key in ['inputs','outputs','evidence']:sequence(end.get('operation',{}),key,dict)
+    sequence(end.get('operation',{}),'steps',str)
     sequence(state,'additional_skill_roles',str)
     actions=state.get('host_actions',[])
     if not isinstance(actions,list) or any(not isinstance(x,(str,dict)) for x in actions):raise ResearchError('host_actions must be a list of action names or objects')
@@ -244,7 +249,7 @@ def assess(state,root,config=None):
                     expected={k:verified.get(k) for k in ['research_brief','prior_art']}
                     matching=[x for x in matching if all(same_artifact(x.get('document_bindings',{}).get(k),ref) for k,ref in expected.items())]
                 if role=='writing':
-                    end_use=uses.get(state.get('final_expression',{}).get('provider_use'),{})
+                    end_use=uses.get(end.get('provider_use'),end.get('operation',{}))
                     manuscript_versions=[verified.get('manuscript')]+end_use.get('inputs',[])
                     identities={(x['path'],x['sha256']) for x in manuscript_versions if x and 'path' in x and 'sha256' in x}
                     matching=[x for x in matching if x.get('scope')=='full_manuscript' and any((f.get('path'),f.get('sha256')) in identities for f in x.get('outputs',[]))]
@@ -265,17 +270,23 @@ def assess(state,root,config=None):
         if not verified.get('figure_plan'):missing('Document the main-figure evidence structure and compare suitable visual choices','artifact_work')
     full_text=stage=='delivery' and mode=='publication_research'
     if full_text:
-        end=state.get('final_expression',{});use=uses.get(end.get('provider_use'))
-        if not use:missing('Apply the designated anti-defensive writing Skill to the final manuscript','artifact_work')
+        use=uses.get(end.get('provider_use'));operation=use or end.get('operation')
+        if required_repository and (not use or allowed_repo(use.get('repository'),config)!=required_repository):
+            missing('Complete the explicitly user-required final expression Skill: '+required_repository,'external_items')
+        if not operation:missing('Perform evidence-preserving argument revision and factual review on the final manuscript','artifact_work')
         else:
-            try:repository=allowed_repo(use.get('repository'),config)
-            except ResearchError:repository=None
-            if repository!=config['final_expression_repository']:missing('Use the designated anti-defensive writing source, not a token substitute','artifact_work')
-            if 'final_expression' not in use.get('roles',[]) or progress[use['id']]['research_work_done'] is not True or use.get('mode') not in {'native_in_host','adapted_in_host'}:missing('Perform the final expression pass on this manuscript','artifact_work')
-            if use.get('scope')!='full_manuscript':missing('Apply final expression to the full manuscript, not only an excerpt or abstract','artifact_work')
-            if not use.get('inputs'):missing('Retain the pre-expression manuscript','artifact_work')
+            if use:
+                if 'final_expression' not in use.get('roles',[]) or progress[use['id']]['research_work_done'] is not True or use.get('mode') not in {'native_in_host','adapted_in_host'}:missing('Perform the final expression pass on this manuscript','artifact_work')
+            else:
+                if operation.get('actor_scope')!='current_host':problems.append('final_expression.operation must execute in current host')
+                if not {'argument_review','evidence_preservation'}<=set(sequence(operation,'steps',str)):missing('Complete evidence-preserving argument revision on the full manuscript','artifact_work')
+                if not sequence(operation,'evidence',dict):missing('Provide evidence of the actual final expression operation','artifact_work')
+                for key in ['inputs','outputs','evidence']:
+                    for ref in sequence(operation,key,dict):check_ref(ref,'final expression '+key)
+            if operation.get('scope')!='full_manuscript':missing('Apply final expression to the full manuscript, not only an excerpt or abstract','artifact_work')
+            if not operation.get('inputs'):missing('Retain the pre-expression manuscript','artifact_work')
             main=verified.get('manuscript')
-            if main and (main['path'],main['sha256']) not in [(x.get('path'),x.get('sha256')) for x in use.get('outputs',[])]:missing('Expression pass must cover this final manuscript version','artifact_work')
+            if main and (main['path'],main['sha256']) not in [(x.get('path'),x.get('sha256')) for x in operation.get('outputs',[])]:missing('Expression pass must cover this final manuscript version','artifact_work')
             if 'facts_rechecked' in end and type(end['facts_rechecked']) is not bool:problems.append('facts_rechecked must be a boolean')
             if end.get('facts_rechecked') is not True:missing('Recheck claims, numbers, comparisons and important counterevidence after rewriting','artifact_work')
             review=check_ref(end.get('review'),'post-expression factual review') if end.get('review') else None

@@ -2,7 +2,7 @@
 name: journal-intelligence
 description: "当需要学习领域标杆期刊、比较投稿候选或核对期刊适配时使用；依据实际论文和当前官方要求判断，不启动实验或整稿重写。"
 metadata:
-  version: "3.3.0"
+  version: "3.3.1"
 ---
 
 # 标杆学习与投稿期刊匹配

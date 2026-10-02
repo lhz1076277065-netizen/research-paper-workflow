@@ -233,7 +233,7 @@ test_commit_binding_excludes_ignored_files_and_rejects_changes (test_package_ide
 test_one_click_refuses_preexisting_output (test_package_identity.PackageIdentity.test_one_click_refuses_preexisting_output) ... ok
 test_runtime_keeps_usage_links_without_development_reports (test_package_identity.PackageIdentity.test_runtime_keeps_usage_links_without_development_reports) ... ok
 test_pdftotext_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pdftotext_actual_pdf_and_malformed_boundary) ... ok
-test_pypdf_only_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary) ... skipped 'pypdf is not installed'
+test_pypdf_only_actual_pdf_and_malformed_boundary (test_pdf_extract.PdfExtraction.test_pypdf_only_actual_pdf_and_malformed_boundary) ... ok
 test_failed_install_prevents_research_script (test_portability.InstallTests.test_failed_install_prevents_research_script) ... ok
 test_managed_marker_required (test_portability.InstallTests.test_managed_marker_required) ... ok
 test_missing_binary_blocks_install (test_portability.InstallTests.test_missing_binary_blocks_install) ... ok
@@ -322,8 +322,8 @@ test_equal_form_index_and_bad_index_container (test_quality31.RecordTests.test_e
 test_explicit_external_actor_is_rejected (test_quality31.RecordTests.test_explicit_external_actor_is_rejected) ... ok
 test_explicit_external_assistant_target_is_rejected_for_any_verb (test_quality31.RecordTests.test_explicit_external_assistant_target_is_rejected_for_any_verb) ... ok
 test_export_only_not_full_figure (test_quality31.RecordTests.test_export_only_not_full_figure) ... ok
-test_expression_is_designated_source (test_quality31.RecordTests.test_expression_is_designated_source) ... ok
 test_expression_missing_is_next_work (test_quality31.RecordTests.test_expression_missing_is_next_work) ... ok
+test_expression_preferred_source_is_required_only_when_user_requests_it (test_quality31.RecordTests.test_expression_preferred_source_is_required_only_when_user_requests_it) ... ok
 test_focused_figure_keeps_only_local_record_checks (test_quality31.RecordTests.test_focused_figure_keeps_only_local_record_checks) ... ok
 test_focused_no_full_project_admin (test_quality31.RecordTests.test_focused_no_full_project_admin) ... ok
 test_full_expression_cannot_be_only_an_abstract (test_quality31.RecordTests.test_full_expression_cannot_be_only_an_abstract) ... ok
@@ -333,6 +333,7 @@ test_invalid_container_types_have_specific_errors (test_quality31.RecordTests.te
 test_invalid_record_cli_has_json_diagnostic (test_quality31.RecordTests.test_invalid_record_cli_has_json_diagnostic) ... ok
 test_legacy_role_labels_need_associations (test_quality31.RecordTests.test_legacy_role_labels_need_associations) ... ok
 test_legacy_unbound_review_requests_migration_not_silent_readiness (test_quality31.RecordTests.test_legacy_unbound_review_requests_migration_not_silent_readiness) ... ok
+test_local_expression_preserves_actual_work_and_final_review_requirements (test_quality31.RecordTests.test_local_expression_preserves_actual_work_and_final_review_requirements) ... ok
 test_missing_goal_produces_next_research_action (test_quality31.RecordTests.test_missing_goal_produces_next_research_action) ... ok
 test_missing_novelty_operation_not_hidden (test_quality31.RecordTests.test_missing_novelty_operation_not_hidden) ... ok
 test_new_current_host_research_verb_is_permitted (test_quality31.RecordTests.test_new_current_host_research_verb_is_permitted) ... ok
@@ -610,6 +611,6 @@ test_wrong_contract (test_suite.ValidatorNegativeTests.test_wrong_contract) ... 
 test_wrong_output_artifact (test_suite.ValidatorNegativeTests.test_wrong_output_artifact) ... ok
 
 ----------------------------------------------------------------------
-Ran 610 tests in 31.363s
+Ran 611 tests in 31.944s
 
-OK (skipped=1)
+OK

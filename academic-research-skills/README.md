@@ -1,6 +1,8 @@
-# Academic Research Skills 3.3.0
+# Academic Research Skills 3.3.1
 
 One optional research orchestrator and eighteen standalone specialists. Full research uses computer-executable routes: actively acquire lawful digital materials, search and test contributions against the strongest applicable prior work, use a discovery loop to develop knowledge/methods/designs, and lock supported core contributions before full original manuscript production. Weak manuscript claims return to research. Focused requests use the relevant specialist directly.
+
+Version 3.3.1 makes contribution significance and pre-lock adversarial review explicit, connects observations to proposed changes and different predictions, and separates necessary research from optional extensions. Final expression requires evidence-preserving argument revision and factual review; its preferred external Skill is mandatory only when explicitly requested by the user.
 
 Start at [START_HERE.en.md](START_HERE.en.md) or skills/<capability>/SKILL.md. Load only necessary references. Nineteen complete independent folders, sixteen profiles, fourteen computational routes and detailed professional protocols remain available. Native internal delegation is optional.
 
@@ -10,7 +12,7 @@ The retained rc.5 result-links interface checks declared numeric/source-semantic
 
 The macOS one-click installer requires Python3.9+ and an existing Codex system installer; engineering scripts require Python3.10+. macOS ARM64 local execution and Linux CLI dual-PDF CI are covered; other native hosts/platform installations are unverified. Software versioning does not guarantee general research creativity or acceptance probability.
 
-[中文说明](README.zh-CN.md) · [Stable release](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.3.0)
+[中文说明](README.zh-CN.md) · [Stable release](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.3.1)
 
 Runtime packages contain general Skills and usage resources. Evaluation tasks, answers, results and development reports remain in the source archive. Updating this library does not start a manuscript project.
 
