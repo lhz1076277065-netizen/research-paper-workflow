@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0-rc.4
+
+Audit all research instructions and routes. Define the strongest applicable competitor, stop uninformative routes, preserve fixed user questions and restrict experiments/research feedback to authorized scope. Align journal landscape discovery and contribution-gated manuscript routing; invalidate only affected outputs and generalize continuation checks. No further research-case validation is required. Keep development tasks and results out of runtime packages.
+
 ## 3.3.0-rc.3
 
 Keep evaluation tasks, answers, results and development reports in source archives only. Remove runtime packaging exceptions for evaluation summaries and remove historical trial counts/time limits from usage guides. Preserve general research guidance, standalone Skills, scientific validation principles and optional software self-checks.

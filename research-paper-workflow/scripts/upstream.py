@@ -16,6 +16,7 @@ from pathlib import Path, PurePosixPath
 import re
 import sys
 import time
+import subprocess
 from urllib.error import HTTPError
 from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
@@ -132,6 +133,7 @@ def discover(repo, *, ref=None, api=None, max_tree_calls=100):
     tree_sha = _sha(commit_record['commit']['tree']['sha'])
     prefix = '/repos/'+canonical+'/git/trees/'
     tree = api(prefix+tree_sha+'?recursive=1')
+    if tree.get('sha') is not None and _sha(tree['sha'])!=tree_sha:raise UpstreamError('Tree response differs from resolved commit tree')
     entries, calls, queue = tree.get('tree',[]), 1, []
     if tree.get('truncated', False):
         entries = []
@@ -139,6 +141,7 @@ def discover(repo, *, ref=None, api=None, max_tree_calls=100):
         while queue and calls < max_tree_calls:
             directory, sha = queue.pop(0)
             node = api(prefix+sha)
+            if node.get('sha') is not None and _sha(node['sha'])!=sha:raise UpstreamError('Subtree response differs from indexed tree')
             calls += 1
             if node.get('truncated',False):
                 queue.insert(0,(directory,sha))
@@ -204,12 +207,16 @@ def fetch_snapshot(index,entry,destination,*,apply=False,allow_network=False,mir
     result=fetch_provider(candidate['id'],_sha(index['commit']),destination,apply=apply,
         allow_network=allow_network,mirror=mirror,registry={'providers':[candidate]},timeout=timeout)
     if result.get('status') in {'source_checked_out_needs_review','source_reused_needs_review'}:
+        actual_tree=subprocess.check_output(['git','-C',str(Path(destination).expanduser()),'rev-parse','HEAD^{tree}'],text=True,timeout=timeout).strip()
         # Verify only the selected entry/support; other dependencies are read as needed.
         mismatches=[]
         for rel in required:
             data=(Path(destination).expanduser()/rel).read_bytes()
             actual=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
             if actual!=index['files'][rel]['blob_sha']:mismatches.append(rel)
+        if actual_tree!=_sha(index['tree_sha']):mismatches.append('commit tree')
+        result['source_identity']={'repository':index['repository'],'commit':index['commit'],'tree_sha':actual_tree,
+                                   'selected_blobs':{p:index['files'][p]['blob_sha'] for p in required}}
         if mismatches:result.update(status='source_index_mismatch',mismatched_paths=mismatches,configuration_fragment=None)
     return result
 
@@ -242,6 +249,7 @@ def bind(index, entry, capability, service, *, requires_host=(), requires_facts=
                 'requires_host':list(requires_host),'requires_facts':list(requires_facts),
                 'entry_git_blob_sha':None,  # discovery is not a semantic/source review
                 'discovered_blob_sha':index['files'][entry]['blob_sha'],
+                'discovered_file_blob_sha':{path:_sha(index['files'][path]['blob_sha']) for path in required},
                 'resolved_commit':index['commit'],'script':None,
                 'purpose':'Run-local selection for '+service,'notes':'Read selected current source and actual dependencies.',
                 'adaptations':[],
@@ -252,7 +260,7 @@ def bind(index, entry, capability, service, *, requires_host=(), requires_facts=
         provider['services'][service]['mode']='script-adapter'
         provider['script']={'adapter':adapter,'path':script,'git_blob_sha':None,'network':adapter=='researchstudio-search'}
     return {'schema_version':'runtime-providers-1','capabilities':[capability],'providers':[provider],
-            'source_index':{k:index[k] for k in ['repository','commit','checked_at','complete']}}
+            'source_index':{k:index[k] for k in ['repository','commit','tree_sha','checked_at','complete']}}
 
 def candidates(index, query='', limit=12):
     if limit < 1:
@@ -291,6 +299,7 @@ def main(argv=None):
             index = read_json(a.index);out=Path(a.out).expanduser();reused=out.exists()
             text = read_source(index,a.entry,api=api,cache=out)
             result = {'status':'source_reused' if reused else 'source_read','path':str(out.absolute()),'commit':index['commit'],
+                      'tree_sha':index['tree_sha'],'blob_sha':index['files'][a.entry]['blob_sha'],
                       'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'characters':len(text),'cache_reused':reused,'execution_performed':False}
         elif a.action == 'bind':
             result = bind(read_json(a.index),a.entry,a.capability,a.service,requires_host=a.requires_host,
@@ -301,7 +310,7 @@ def main(argv=None):
                        allow_network=a.allow_network,mirror=a.mirror,timeout=a.timeout,support=a.support)
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 3 if result.get('status','') in {'source_fetch_failed','source_missing_required_paths','git_required','blocked_network_authorization','source_local_changes','source_index_mismatch'} else 0
-    except (OSError,ValueError,TypeError,KeyError) as exc:
+    except (OSError,ValueError,TypeError,KeyError,subprocess.SubprocessError) as exc:
         print(json.dumps({'status':'needs_attention','error':str(exc),'execution_performed':False},ensure_ascii=False),file=sys.stderr)
         return 2
 if __name__ == '__main__':

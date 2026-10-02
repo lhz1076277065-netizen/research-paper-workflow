@@ -19,7 +19,7 @@ import sys
 import time
 from datetime import datetime, timezone
 
-VERSION = '3.2.0-rc.1'
+VERSION = '3.3.0-rc.4'
 
 class ContractError(ValueError):
     pass
@@ -106,10 +106,17 @@ def inspect_provider(provider, config):
     out['entry_version']='matched_observation' if actual==expected else 'changed' if expected else 'unrecorded'
     reviewed=spec.get('reviewed_file_sha256',{})
     if not isinstance(reviewed,dict):raise ContractError('reviewed_file_sha256 must be an object')
+    indexed=provider.get('discovered_file_blob_sha',{})
+    if not isinstance(indexed,dict) or any(rel not in paths or not isinstance(dig,str) or len(dig)!=40 or any(c not in '0123456789abcdefABCDEF' for c in dig) for rel,dig in indexed.items()):
+        raise ContractError('Invalid declared source file identities')
+    for rel in indexed:
+        if not paths[rel].is_file() and rel not in out['missing_paths']:out['missing_paths'].append(rel)
+    changed=[rel for rel,dig in indexed.items() if paths[rel].is_file() and blob(paths[rel])!=dig.lower()]
+    out['indexed_files_changed']=changed
     drift=[rel for rel,dig in reviewed.items() if rel not in paths or not paths[rel].is_file() or sha(paths[rel])!=dig]
     out['reviewed_files_changed']=drift
     out['review_record']='digest_bound' if reviewed else 'legacy_boolean' if spec.get('source_reviewed') else 'observation_only'
-    if drift:out['status']='source_review_required'
+    if drift or any(reviewed.get(rel)!=sha(paths[rel]) for rel in changed):out['status']='source_review_required'
     elif out['missing_paths']:out['status']='missing_files'
     elif provider.get('discovered_blob_sha')==actual:
         out['status']='files_available';out['review_record']='read_selected_source_during_execution'
@@ -281,8 +288,14 @@ def normalize_search(raw, source_path):
 
 def audit_payload(data, root):
     """Check declared evidence relationships, NOT semantic truth or rendered images."""
+    if not isinstance(data,dict):raise ContractError('audit payload must be an object')
     kind=data.get('kind');errors=[];checks=[]
     root=Path(root).resolve()
+    if kind in {'result-links','render-dependencies'}:
+        # Load the sibling copy, including when a host imports this script by path.
+        spec=importlib.util.spec_from_file_location('_academic_result_links',Path(__file__).with_name('result_links.py'))
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        return (module.audit_links if kind=='result-links' else module.audit_render)(data,root)
     if kind=='reading':
         for r in data.get('records',[]):
             coverage=r.get('coverage',{})
@@ -396,9 +409,43 @@ def accept_result(directory, result, artifact_root):
     if not expected:errors.append('Handoff must name requested output roles before accepting a result')
     absent=expected-roles
     if absent:pending.append('missing_output_roles:'+','.join(sorted(absent)))
-    for ev in result.get('evidence_checks',[]):
+    evidence=result.get('evidence_checks',[])
+    if not isinstance(evidence,list):raise ContractError('evidence_checks must be a list')
+    evidence=list(evidence);linkage=[]
+    for field,kind in [('result_links','result-links'),('render_dependencies','render-dependencies')]:
+        if field not in result:continue
+        payload=result[field]
+        if not isinstance(payload,dict):raise ContractError(field+' must be an audit object or hash-bound manifest reference')
+        if 'path' in payload:
+            path=bounded(root,payload['path'])
+            if not path.is_file() or sha(path)!=payload.get('sha256'):
+                errors.append('Linkage manifest changed or missing: '+field);continue
+            payload=load(path)
+            if not isinstance(payload,dict):raise ContractError(field+' manifest must be an object')
+        if payload.get('kind',kind)!=kind:raise ContractError(field+' has the wrong audit kind')
+        evidence.append({**payload,'kind':kind})
+    for ev in evidence:
         check=audit_payload(ev,root)
         if not check['passed']:errors.extend(check['errors'])
+        pending.extend(check.get('pending',[]))
+        if check.get('kind') in {'result-links','render-dependencies'}:
+            linkage.append(check)
+            # Numeric coverage of an unrelated file cannot validate returned output.
+            if check['kind']=='result-links':
+                targets=ev.get('links',[])
+            else:
+                steps=ev.get('renders',[]);steps=steps if isinstance(steps,list) else []
+                leaves={step.get('output') for step in steps if isinstance(step,dict) and isinstance(step.get('output'),str)}
+                dependencies={identity for step in steps if isinstance(step,dict) and isinstance(step.get('inputs'),dict) for identity in step['inputs']}
+                inventory=ev.get('artifacts',[]);inventory=inventory if isinstance(inventory,list) else []
+                targets=[item for item in inventory if isinstance(item,dict) and item.get('id') in leaves-dependencies]
+            if not isinstance(targets,list):targets=[]
+            for target in targets:
+                if not isinstance(target,dict):continue
+                artifact=target.get('artifact',{}) if check['kind']=='result-links' else target
+                if not isinstance(artifact,dict):continue
+                if not any(a['path']==artifact.get('path') and a['sha256']==artifact.get('sha256') for a in artifacts):
+                    errors.append('Linkage target is not a returned output version: '+str(artifact.get('path')))
     reviews=result.get('reviews',[])
     if not isinstance(reviews,list):raise ContractError('reviews must be a list')
     names=set()
@@ -444,7 +491,7 @@ def accept_result(directory, result, artifact_root):
         if not expected_scope.issubset(binding):
             errors.append('Review does not cover its required output roles: '+str(kind))
     return {'schema_version':'result-acceptance-1','status':'rejected' if errors else 'received_needs_review' if pending else 'checked_for_handoff',
-            'passed':not errors and not pending,'errors':errors,'pending':pending,'artifacts':artifacts,
+            'passed':not errors and not pending,'errors':errors,'pending':pending,'artifacts':artifacts,'linkage_audits':linkage,
             'task_sha256':sha(directory/'task.json'),'checked_at':now(),
             'checks_performed_here':['task/input/provider version','file identity','declared evidence constraints','review report binding'],
             'scientific_validity_certified':False,'semantic_review_performed_here':False,
@@ -470,7 +517,7 @@ def _terminate_tree(proc):
     if proc.poll() is None:proc.kill()
     proc.wait(timeout=10)
 
-def run_adapter(provider,config,request,out,allow_network=False,timeout=60):
+def run_adapter(provider,config,request,out,allow_network=False,timeout=60,interpreter=None,workspace=None):
     """Actually execute a known local upstream API. Native mode is not executed here."""
     if type(timeout) not in (int,float) or not math.isfinite(timeout) or timeout<=0:raise ContractError('Positive finite timeout required')
     spec=provider.get('script')
@@ -486,6 +533,13 @@ def run_adapter(provider,config,request,out,allow_network=False,timeout=60):
         raise ContractError('Upstream script changed; inspect new API before executing')
     if not expected and local.get('script_reviewed') is not True and local.get('reviewed_file_sha256',{}).get(spec['path'])!=sha(script):
         raise ContractError('Unpinned upstream script needs explicit local review')
+    python=sys.executable;env=None
+    cwd=Path(workspace).expanduser().resolve() if workspace is not None else None
+    if cwd is not None and not cwd.is_dir():raise ContractError('workspace must be an existing project directory')
+    if interpreter is not None:
+        module_spec=importlib.util.spec_from_file_location('_academic_adapter_environment',Path(__file__).with_name('environment.py'))
+        environment=importlib.util.module_from_spec(module_spec);module_spec.loader.exec_module(environment)
+        python=environment.python_path(interpreter);env=environment.project_env(python)
     out=Path(out).resolve()
     if out.exists():raise ContractError('Execution directory must be new')
     out.mkdir(parents=True)
@@ -495,13 +549,13 @@ def run_adapter(provider,config,request,out,allow_network=False,timeout=60):
         request={**request,'input':str(inp),'input_sha256':sha(inp)}
     write(out/'request.json',request);write(out/'provider-inspection.json',inspection)
     worker=Path(__file__).with_name('provider_worker.py')
-    command=[sys.executable,str(worker),'--adapter',spec['adapter'],'--script',str(script),
+    command=[python,str(worker),'--adapter',spec['adapter'],'--script',str(script),
              '--request',str(out/'request.json'),'--out',str(out/'raw.json')]
     # No shell command interpolation, installers, secrets probing or backend model calls.
     before_script_sha=sha(script)
-    status='failed';start=now();code=None
+    status='failed';start=now();clock=time.perf_counter();code=None
     with (out/'stdout.log').open('w') as sout,(out/'stderr.log').open('w') as serr:
-        proc=subprocess.Popen(command,cwd=str(out),stdout=sout,stderr=serr,start_new_session=(os.name=='posix'))
+        proc=subprocess.Popen(command,cwd=str(cwd or out),env=env,stdout=sout,stderr=serr,start_new_session=(os.name=='posix'))
         try:code=proc.wait(timeout=timeout);status='executed_needs_review' if code==0 else 'failed'
         except subprocess.TimeoutExpired:_terminate_tree(proc);status='timeout'
     if status=='executed_needs_review' and not (out/'raw.json').is_file():status='failed_missing_output'
@@ -509,6 +563,7 @@ def run_adapter(provider,config,request,out,allow_network=False,timeout=60):
              'status':status,'returncode':code,'upstream_script_sha256':before_script_sha,'upstream_script_git_blob_sha':actual,
              'request_sha256':sha(out/'request.json'),'input_sha256':request.get('input_sha256'),
              'raw_output_sha256':sha(out/'raw.json') if (out/'raw.json').exists() else None,
+             'python':python,'workspace':str(cwd or out),'wall_seconds':time.perf_counter()-clock,
              'stdout':'stdout.log','stderr':'stderr.log','network_authorized':bool(allow_network),
              'native_skill_workflow_completed':False,'source_completeness':'unassessed',
              'semantic_or_visual_review_performed':False,'scientific_validity_certified':False}
@@ -536,6 +591,7 @@ def main(argv=None):
     s=sub.add_parser('run-script');s.add_argument('--provider',required=True);s.add_argument('--config',required=True)
     s.add_argument('--request',required=True);s.add_argument('--out',required=True)
     s.add_argument('--allow-network',action='store_true');s.add_argument('--timeout',type=float,default=60)
+    s.add_argument('--python');s.add_argument('--workspace')
     s=sub.add_parser('normalize-search');s.add_argument('--input',required=True);s.add_argument('--out',required=True)
     s=sub.add_parser('audit');s.add_argument('--input',required=True);s.add_argument('--root',required=True)
     s=sub.add_parser('accept-result');s.add_argument('--dir',required=True);s.add_argument('--result',required=True);s.add_argument('--root',required=True);s.add_argument('--report')
@@ -547,7 +603,7 @@ def main(argv=None):
         elif a.action=='inspect':result=inspect_provider(find_provider(reg,a.provider),load(a.config))
         elif a.action=='plan':result=plan(load(a.task),load(a.config),reg)
         elif a.action=='handoff':result=prepare_handoff(load(a.task),load(a.config),reg,a.out)
-        elif a.action=='run-script':result=run_adapter(find_provider(reg,a.provider),load(a.config),load(a.request),a.out,a.allow_network,a.timeout)
+        elif a.action=='run-script':result=run_adapter(find_provider(reg,a.provider),load(a.config),load(a.request),a.out,a.allow_network,a.timeout,a.python,a.workspace)
         elif a.action=='accept-result':
             result=accept_result(a.dir,load(a.result),a.root)
             if a.report:write(a.report,result)
