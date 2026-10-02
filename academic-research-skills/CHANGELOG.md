@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.1
+
+Make contribution sufficiency explicit on the existing route board; connect observations, limitations, proposed changes and different predictions in discovery, including opportunities from successful results, theory and new materials. Challenge core claims before locking, then finish supported papers without treating optional extensions as mandatory. Final expression requires evidence-preserving argument revision and factual review; its preferred external Skill becomes mandatory only when explicitly requested by the user. Align the optional record checker with alternative and current-agent implementations while retaining actual manuscript identities and post-revision review. No research-case or model-capability experiments in this release.
+
 ## 3.3.0
 
 Promote the audited rc.4 research instructions without functional changes. Refresh release metadata, installation links and documentation; rebuild and verify final archives with per-file digests, isolated installer checks and Linux dual-PDF CI. Acceptance is instruction and engineering review; research-case validation was cancelled by the user. Preserve all earlier releases and development archives.

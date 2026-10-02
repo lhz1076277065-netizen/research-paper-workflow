@@ -2,7 +2,7 @@
 name: topic-novelty
 description: "当需要发现重要未解问题、寻找并检验核心贡献，或判断已有结果能否超过最强适用近邻时使用；不以表述未见过证明创新。"
 metadata:
-  version: "3.3.0"
+  version: "3.3.1"
 ---
 
 # 重要问题与贡献搜索

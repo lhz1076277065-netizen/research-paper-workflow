@@ -18,6 +18,10 @@ python3 scripts/research31.py assess --state research-route.json --root /path/to
 
 完整全文角色还关联本稿文件：专业writing输出须是最终稿或反防御性修订的输入；末次final_expression标scope=full_manuscript。focused单图/图注任务核对其文件版本，不追加整份论文的主图设计前置。
 
+最终表达必须完成实际论证整理、证据保持与事实复核；`assets/research31-policy.json`中的`final_expression_repository`是优先来源，不是默认必需来源。使用其他库内匹配实现时沿用`provider_use`；当前Agent直接按本库协议完成时，可在`final_expression.operation`中记录`actor_scope: current_host`、`scope: full_manuscript`、含`argument_review`与`evidence_preservation`的`steps`，以及实际`inputs`、`outputs`、`evidence`文件的path/SHA-256，无需伪造外部仓库或commit。两种方式均须保留原稿，关联真正最终稿，并按上述`facts_rechecked`和`review.subjects`规则复核。
+
+仅用户明确要求某来源时，在`final_expression.required_repository`记录其库内仓库；未完成该来源的实际步骤列为外部必需事项，同时继续其他工作。检查器不验证这项用户要求的真实性，不得根据优先来源自行填写；记录与文件齐全仍不等于语义或科学质量已获认证。
+
 
 ## 从3.1.0迁移记录
 
