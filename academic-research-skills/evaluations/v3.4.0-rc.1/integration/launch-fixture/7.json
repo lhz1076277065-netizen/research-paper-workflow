@@ -1,0 +1,46 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "b2a68a6eeca44c69b51777acb1d6eb9b",
+  "scope": "full",
+  "objective": "software launch acceptance fixture",
+  "latest_instruction": "software launch acceptance fixture",
+  "status": "active",
+  "stage": "feasibility",
+  "started_at": "2026-10-04T07:54:35.580229+00:00",
+  "deadline": 1791100535.580229,
+  "project_deadline": 1791100535.580229,
+  "reserve_seconds": 6.0,
+  "budget_kind": "initial_feasibility",
+  "authorization": null,
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [],
+  "artifacts": [],
+  "history": [
+    {
+      "at": "2026-10-04T07:54:35.793286+00:00",
+      "event": "command_finished",
+      "command": [
+        "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-env/bin/python",
+        "-c",
+        "from pathlib import Path;Path('/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-fixture/7-phase_control.txt').write_text(\"executed fixture command\")"
+      ],
+      "returncode": 0,
+      "claim": "expired jobs must not start",
+      "decision": "reject start when expired",
+      "stop_reasons": null
+    }
+  ],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": null,
+  "owned_processes": [],
+  "host_goal_state": "not_modified"
+}

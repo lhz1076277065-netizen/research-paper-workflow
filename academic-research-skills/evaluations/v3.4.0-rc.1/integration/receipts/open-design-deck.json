@@ -1,0 +1,48 @@
+{
+  "id": "open-design-deck",
+  "repository": "nexu-io/open-design",
+  "entry": "design-templates/html-ppt-tech-sharing/SKILL.md",
+  "commit": "53231d40b778d88eba23f35547bf99485d3ae9fc",
+  "actor_scope": "current_host",
+  "mode": "adapted_in_host",
+  "roles": [
+    "presentation"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/final-report.md",
+      "sha256": "6acf1b285539e01197492e229a260c9429eaecb17cf4fb1f71fbd128712c88da"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/figure-values.json",
+      "sha256": "9d4f7e3507184e9c14128600eec04d0d87a4e3443c645775c05ecbcc3f4f84fa"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/deck-plan.md",
+      "sha256": "fda13ea27add43b3a3bfd5f178465be2565aea8cc0bfe14424453090f3672164"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/deck/index.html",
+      "sha256": "eca682b7d91ba05b6db2cef8908711bcd00031bf6cabc18e5493b18c42c2b2fa"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/open-design-deck-work.md",
+      "sha256": "faf45d16445e6332a13f01e9402a341002b9a1cd025dd85f6644c190ba63dae8"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in open-design-deck-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": false
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": "Use HTML template with real local runtime paths and source-backed content; do not claim full Open Design daemon was installed."
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "46cc33f9fb0f4505b1614b8cae1c80e2",
+  "scope": "full",
+  "objective": "SOFTWARE_FIXTURE: sufficient-evidence",
+  "latest_instruction": "软件试用：已有暂停与阳性对照证据，只据此成稿，不新增检验",
+  "status": "completed",
+  "stage": "delivery",
+  "started_at": "2026-10-04T08:07:59.026939+00:00",
+  "deadline": 1791101339.0741382,
+  "project_deadline": 1791101519.026939,
+  "reserve_seconds": 24.0,
+  "budget_kind": "software_stage_fixture",
+  "authorization": null,
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [
+    "software-report-delivered"
+  ],
+  "artifacts": [
+    {
+      "path": "S5-evidence.md",
+      "sha256": "f32919c2aab5c7a2eccb4b203ede35ef3d249a674625bac23b93efe832a82266"
+    },
+    {
+      "path": "S5-software-manuscript.md",
+      "sha256": "006f059c29a0f7da7c03b22d4949c7c7ff486497ddfd02b9683f6907fd556a91"
+    },
+    {
+      "path": "S5-software-manuscript.md",
+      "sha256": "006f059c29a0f7da7c03b22d4949c7c7ff486497ddfd02b9683f6907fd556a91"
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-10-04T08:07:59.074139+00:00",
+      "event": "stage_exit",
+      "stage": "research",
+      "evidence": {
+        "path": "S5-evidence.md",
+        "sha256": "f32919c2aab5c7a2eccb4b203ede35ef3d249a674625bac23b93efe832a82266"
+      }
+    },
+    {
+      "at": "2026-10-04T08:07:59.116191+00:00",
+      "event": "stage_exit",
+      "stage": "manuscript",
+      "evidence": {
+        "path": "S5-software-manuscript.md",
+        "sha256": "006f059c29a0f7da7c03b22d4949c7c7ff486497ddfd02b9683f6907fd556a91"
+      }
+    }
+  ],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": "交付软件报告与限制",
+  "owned_processes": [],
+  "host_goal_state": "not_modified",
+  "exit_reason": "原范围内的软件短稿已交付，不新增研究"
+}

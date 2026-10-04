@@ -1,0 +1,52 @@
+{
+  "id": "scipilot-figure",
+  "repository": "Haojae/scipilot-figure-skill",
+  "entry": "SKILL.md",
+  "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+  "actor_scope": "current_host",
+  "mode": "native_in_host",
+  "roles": [
+    "figure"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-results.csv",
+      "sha256": "ee4e87ec39ce31513e5493799ce41d10659451edda460950a5b9b2802d53488b"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/kdense-profile.json",
+      "sha256": "8e4fa3949016c7a4eb4cbe4782a2ef9f90ae00098e050ac4db1261b66da67985"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-figure.png",
+      "sha256": "f776579a34d451b2a4ae0de242cf9ff420c215efa402a6f065e0496c7bee05f4"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-figure.pdf",
+      "sha256": "735a57ba43fef76b2eaaa23c7e0d05acea3ddb0e0ad12c3648fc23057130da2d"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/scipilot-figure-work.md",
+      "sha256": "32d6f58fa0c86c1b9413e25e2334b1214ecedc83804f895b4d442265cd55783c"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/layout-qa.json",
+      "sha256": "d29730209b5f266d1e889e8ec45ebcb66a81a460732568ea3b5003aaaef8dffe"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in scipilot-figure-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": true
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": null
+}

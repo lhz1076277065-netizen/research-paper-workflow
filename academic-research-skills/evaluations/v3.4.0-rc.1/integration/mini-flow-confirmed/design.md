@@ -1,0 +1,1 @@
+Claim C1: an active allowed runner creates its fixed JSON output. Anti-claim: state says success but no artifact. Must-run: one real command; metric: event file exists and matches expected. No optional tests or models.

@@ -1,0 +1,1231 @@
+{
+  "schema_version": "capability-index-1",
+  "version": "3.4.0-rc.1",
+  "note": "Pinned entry/subflow seeds, not all repository capabilities; runtime readiness and role completion require actual work. Source-only is not execution.",
+  "capabilities": [
+    {
+      "id": "researchstudio-search",
+      "repository": "microsoft/ResearchStudio",
+      "commit": "063f10088af49909e1a4a7ea8d29efe19633f34e",
+      "tree": "2ffbb2cc23a25abc2f52a0ba692a4126b274ed8a",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "ResearchStudio-Idea/skills/paper_search/SKILL.md",
+      "roles": [
+        "literature"
+      ],
+      "dependencies": [
+        "Python >=3.10",
+        "requests",
+        "Network to selected metadata API; bounded timeout"
+      ],
+      "inputs": [
+        "query/year/source limits"
+      ],
+      "outputs": [
+        "deduped source records and screened evidence"
+      ],
+      "host_adaptation": "Use current-host CLI and screen records; exclude model recall from verified sources; budget and network limits override default run-all searches. CLI --json in guidance is absent in this commit; call search_papers with inspected signature and serialize returned records, then screen actual records.",
+      "required_files": [
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/SKILL.md",
+          "blob": "e840090d3a87d08c7ea2a6772673fe4bf4bccb38"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/references/programmatic_api.md",
+          "blob": "d39db3475fea51fc1b052dee1a0155fa7fa4a613"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/_env.py",
+          "blob": "08a87526951218c353b7fc3c6c01eca525695e82"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/_http_runtime.py",
+          "blob": "19af540319d3474ddacb2e195e7d8f354b13a0b9"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/postprocess.py",
+          "blob": "2399446376560d7654424677f0f85102e555da5f"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers.py",
+          "blob": "1bb3d2ca452d743db2c266ba8de9fe03225e1270"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_arxiv.py",
+          "blob": "4ebf1d1dbb6c3b3453402398fcc9a1cea5c41f81"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_crossref.py",
+          "blob": "5cc1e62b32abc3da1bf95e3c03ffc8c7bad1a360"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_dblp.py",
+          "blob": "c448ae235340806f9e8b4befbd1098eeddcd3fa9"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_google_scholar.py",
+          "blob": "8e9ed45040b0c9b0a1ff748fcc761a87112c7a2d"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_open_alex.py",
+          "blob": "2429a01681626794546a33411ce01e20ae0b9425"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_openreview.py",
+          "blob": "3e3980cee501ad85be804c60f6ca441a67293c1a"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_semantic_scholar.py",
+          "blob": "53169f587b30322fa6032c36754c5e5222efe44d"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/selftest_postprocess.py",
+          "blob": "489582fd558e9404960f0195aa027c354c9a4aee"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/selftest_runtime.py",
+          "blob": "7f0c4828df5de4d1ecfcfdf8e2154f4b5e2effc0"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/source_worker.py",
+          "blob": "d7b1554c9864f909d8029f66198070bf7b847ab0"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "e5e946a0371af9920be22ea4adb584000fface8c"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/researchstudio-search-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "nature-reader",
+      "repository": "Yuan1z0825/nature-skills",
+      "commit": "84880815fb37317b3766bff2c2abba395b8993c3",
+      "tree": "466490e175c148a6dce31e0e5961f63e2cde4e8f",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "skills/nature-reader/SKILL.md",
+      "roles": [
+        "reading"
+      ],
+      "dependencies": [
+        "Current-host source extraction/translation; OCR only for scans"
+      ],
+      "inputs": [
+        "paper or excerpt with source locations"
+      ],
+      "outputs": [
+        "source-grounded reader or answer"
+      ],
+      "host_adaptation": "Use only format-selected core and grounding resources. Source-linked question does not require whole-paper translation.",
+      "required_files": [
+        {
+          "path": "skills/nature-reader/README.md",
+          "blob": "98ba2ff831be7ef95a93f29c912972f3c9759ada"
+        },
+        {
+          "path": "skills/nature-reader/README_EN.md",
+          "blob": "0550454b0d6b2e3ce13e8685c564c701af6d7eea"
+        },
+        {
+          "path": "skills/nature-reader/SKILL.md",
+          "blob": "cf8d3cbe6917d962fbb43de9218d4fad5c01e89f"
+        },
+        {
+          "path": "skills/nature-reader/agents/openai.yaml",
+          "blob": "e9bb4c9796fb676cd4b34536b71543e79b11567e"
+        },
+        {
+          "path": "skills/nature-reader/evals/evals.json",
+          "blob": "97e5673812935c712f7cada8b41d38d937c5fd5b"
+        },
+        {
+          "path": "skills/nature-reader/manifest.yaml",
+          "blob": "3ed6df0cec8f27bea44a64e0780df367c926175f"
+        },
+        {
+          "path": "skills/nature-reader/references/article-anatomy.md",
+          "blob": "0c85335fec334fff4454ca73685412d2530dcb06"
+        },
+        {
+          "path": "skills/nature-reader/references/equation-handling.md",
+          "blob": "f257650999d8dff00a4cf60db29d923a537235a7"
+        },
+        {
+          "path": "skills/nature-reader/references/figure-extraction.md",
+          "blob": "f256f06b2603b56237769293d5b984431df78b9f"
+        },
+        {
+          "path": "skills/nature-reader/references/grounding-rules.md",
+          "blob": "44ddd8d3d1af95765ed1d50a10d9f6c26f4f89ed"
+        },
+        {
+          "path": "skills/nature-reader/references/output-spec.md",
+          "blob": "fbbce2855360dbc820c58960f83dc3c282e90f6e"
+        },
+        {
+          "path": "skills/nature-reader/scripts/validate_reader_math.py",
+          "blob": "4180ffcdd1f1d4815f27735202cacd60d73d6a47"
+        },
+        {
+          "path": "skills/nature-reader/static/core/output-contract.md",
+          "blob": "e901feebe26af76e7c8a58c8e90a17e62b54ad46"
+        },
+        {
+          "path": "skills/nature-reader/static/core/principles.md",
+          "blob": "1075068f23267e9f17e28ad306f40c5908169e59"
+        },
+        {
+          "path": "skills/nature-reader/static/core/workflow.md",
+          "blob": "fba7467ae6aaacdad1c3efb50970653b17e94478"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/doi-arxiv.md",
+          "blob": "6dfb9a1a1f82e19cc01513c35453dc19c5cd80e8"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/html.md",
+          "blob": "4cd42fd9fed3bf5b632dcedc05951fe14657b74c"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/pasted-text.md",
+          "blob": "44a1180c5458c9570c0e9988a6acae4bbf18db48"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/pdf-text.md",
+          "blob": "7d48d48582690ab4854aa43c8b9b10bde0ee895b"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/scanned-pdf.md",
+          "blob": "6ee0c228ef2420d42b84e93cbcffc87ec9ef72a2"
+        },
+        {
+          "path": "skills/nature-shared/core/consistency-sweep.md",
+          "blob": "8b7e03263c808b914b57de7c701156f2de5ac8d5"
+        },
+        {
+          "path": "skills/nature-shared/core/discussion-argument-language.md",
+          "blob": "1f0bb0dfe6873d1a2d8d9f87bb9c4e0bf31939af"
+        },
+        {
+          "path": "skills/nature-shared/core/ethics.md",
+          "blob": "a6e6d063a8a41bc2294f02820265700272024c37"
+        },
+        {
+          "path": "skills/nature-shared/core/main-text-discipline.md",
+          "blob": "ec34c0648aedf42c7c18b5445ea4af6b5208aeb2"
+        },
+        {
+          "path": "skills/nature-shared/core/nature-abstract.md",
+          "blob": "19dbbd69703c7c898734c295782875b90637d4a5"
+        },
+        {
+          "path": "skills/nature-shared/core/nature-introduction.md",
+          "blob": "6d6ffe0c263f03a67a7dd66342241b8b714dd225"
+        },
+        {
+          "path": "skills/nature-shared/core/nature-results-discussion.md",
+          "blob": "11631fb861f557f9253ed07557f5aa2b2dcaccf9"
+        },
+        {
+          "path": "skills/nature-shared/core/paper-type-taxonomy.md",
+          "blob": "7f5c84f0a8e5f37e13604b473c0b8c6262ef8403"
+        },
+        {
+          "path": "skills/nature-shared/core/reader-workflow.md",
+          "blob": "d34e9374b7989c75bf86db0df04af8ab5bb90a02"
+        },
+        {
+          "path": "skills/nature-shared/core/research-compliance.md",
+          "blob": "ff555158b2109463f16c266c347d2ab459bbdd02"
+        },
+        {
+          "path": "skills/nature-shared/core/terminology-ledger.md",
+          "blob": "d59c6c838638949e035b8c6f76054a05b633e9e3"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/nature-reader-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "kdense-eda",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "skills/exploratory-data-analysis/SKILL.md",
+      "roles": [
+        "data",
+        "analysis"
+      ],
+      "dependencies": [
+        "Python>=3.11 for core stdlib CLIs; optional format libraries installed only as needed"
+      ],
+      "inputs": [
+        "authorized local CSV/TSV/JSON"
+      ],
+      "outputs": [
+        "aggregate profile/missingness/sensitivity report"
+      ],
+      "host_adaptation": "Core local CLI is native; unsupported scientific formats need separately checked tools, never claim universal format support.",
+      "required_files": [
+        {
+          "path": "skills/exploratory-data-analysis/SKILL.md",
+          "blob": "c461f99dea057872298ce6f04e7c090a83d80d01"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/assets/report_template.md",
+          "blob": "cf651d8d360f702230d03c124a2ff0f5b2e2e97c"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md",
+          "blob": "c82fb3679a4e7db3be07bf11c98666166e9b4605"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/chemistry_molecular_formats.md",
+          "blob": "40d5dff9437c596e79bf53d98ce5135e8d1bec49"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/general_scientific_formats.md",
+          "blob": "1fcfd35ac18b2caa932ca2009b987ae0b1261550"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/microscopy_imaging_formats.md",
+          "blob": "4159a6bd6aaeddbc5147b9e71ade65359fce13b2"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md",
+          "blob": "f04246379bca90d2a8bf0e27633da55dfd276596"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md",
+          "blob": "429ddc84592a6deee21c13b69d6ae16eefa972d3"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/__init__.py",
+          "blob": "7fb9dd8fa120dd2d00eb2be0c5a4c1c4349c908a"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/_capabilities.py",
+          "blob": "9aa1327f23a58324baabb777c98a01b577787fa1"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/_common.py",
+          "blob": "d098fc4e0acf3a0f67c8a4f6596ba69e29388b1b"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/_structured.py",
+          "blob": "714ec59a5d187359c0a329c3d81b5b3196af9ee9"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/_tabular.py",
+          "blob": "5311d1a9aef4995210442792e6a75221e8ad60f1"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/capability_manifest.py",
+          "blob": "a1ee36326ea6889b38428714283ce2f4952db461"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/distribution_sensitivity.py",
+          "blob": "f8db91f4b7391152ae2b808387d67543bf52bb38"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/eda_analyzer.py",
+          "blob": "40781abbc7879354c3430fc6f35ebad2331f195e"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/image_inspector.py",
+          "blob": "a051fd39b64f3d511e3b764eda78b9f72d776db4"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py",
+          "blob": "af3f1e98588547674dbfc6bc56644fe749b747c8"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/report_scaffold.py",
+          "blob": "a816e5f422078b7fddbe6bd4c465422c9a5ea651"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+          "blob": "66e985e15ef369ba26cbdd65cc2a6ec4460d7a0c"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/tabular_profile.py",
+          "blob": "874ef86b871eb72b8f95a87cfc4cad29f72be148"
+        },
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": true,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "native CSV subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/kdense-eda-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "scipilot-figure",
+      "repository": "Haojae/scipilot-figure-skill",
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "tree": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "SKILL.md",
+      "roles": [
+        "figure"
+      ],
+      "dependencies": [
+        "matplotlib/numpy/pandas/seaborn; SciencePlots optional"
+      ],
+      "inputs": [
+        "data and argument goal"
+      ],
+      "outputs": [
+        "figure plan/editable code/vector figure/visual QA"
+      ],
+      "host_adaptation": "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function.",
+      "required_files": [
+        {
+          "path": "SKILL.md",
+          "blob": "212a6088c115b8903885b80f2b54a2c9b52fef7f"
+        },
+        {
+          "path": "references/chart_selection.md",
+          "blob": "547e3ed795beb8c52c40d56107dd368e729f31d8"
+        },
+        {
+          "path": "references/data_profiling.md",
+          "blob": "afb50d0afc6b36e43f6537324af78ec22d2968d8"
+        },
+        {
+          "path": "references/journal_specs.md",
+          "blob": "b28162888c0bfc378b2292dc0356f5d7aaed674a"
+        },
+        {
+          "path": "references/plot_recipes.md",
+          "blob": "5d5edc17fa173f367e98839f27f6c3d2f5ad8cf2"
+        },
+        {
+          "path": "references/publication_checklist.md",
+          "blob": "2dd61367123aec7974d133d36bc9b6c204a30f6e"
+        },
+        {
+          "path": "references/visual_review.md",
+          "blob": "62a2d1b8ab54fdeacbfb972474d3c6c4b8f7527d"
+        },
+        {
+          "path": "references/viz_pitfalls.md",
+          "blob": "68fc0245ef4faf4e1f336a4d5fd432252a53bfe5"
+        },
+        {
+          "path": "requirements.txt",
+          "blob": "7f194bb3314bf45682386d5a6a65b677bc14ef55"
+        },
+        {
+          "path": "scripts/check_figure.py",
+          "blob": "30d4bdeed5694e8690031235744d76093ee4176a"
+        },
+        {
+          "path": "scripts/export_figure.py",
+          "blob": "a3a4df7580f8d4275d822424a11aaa9f6f36df11"
+        },
+        {
+          "path": "scripts/layout_tools.py",
+          "blob": "4eb29f13cea9bbe2e507919bb0412b9e2647d1ae"
+        },
+        {
+          "path": "scripts/profile_data.py",
+          "blob": "7bf54ec4ceb438974f4238e4b4ed4a13cd09ba67"
+        },
+        {
+          "path": "scripts/setup_style.py",
+          "blob": "35c5d3a8fb99b3477c544dccf331bb4d81af7657"
+        },
+        {
+          "path": "scripts/visual_qa.py",
+          "blob": "02ec9fb6c9300986bdf4e5b257b96e00eb13e89c"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "897e469d1446e6cfc5a71858387e01fd1129197c"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": true,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "native data-figure subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/scipilot-figure-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "scholar-analysis",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "tree": "d7f61d97768bcaa4442e2481da680073da7528bc",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "skills/results-analysis/SKILL.md",
+      "roles": [
+        "analysis",
+        "methods"
+      ],
+      "dependencies": [
+        "Current-host statistics; actual repeat units required for inference"
+      ],
+      "inputs": [
+        "experiment tables/logs and comparison protocol"
+      ],
+      "outputs": [
+        "analysis report/stats appendix/figure catalog"
+      ],
+      "host_adaptation": "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim.",
+      "required_files": [
+        {
+          "path": "skills/results-analysis/SKILL.md",
+          "blob": "22e34019d8bef9bc8d1a0f86528f61c0288e3cb1"
+        },
+        {
+          "path": "skills/results-analysis/USAGE.md",
+          "blob": "6890d42f299f7532ad598babce3c3619e571a35a"
+        },
+        {
+          "path": "skills/results-analysis/references/analysis-depth.md",
+          "blob": "5713c629d64739245a3a013b274393ab8bfd7f57"
+        },
+        {
+          "path": "skills/results-analysis/references/common-pitfalls.md",
+          "blob": "559f29a65f9c606a70b721ff2b83b47080e961e2"
+        },
+        {
+          "path": "skills/results-analysis/references/figure-interpretation.md",
+          "blob": "75e25db265e94be44b979a6a3a47ab31cb5abe6d"
+        },
+        {
+          "path": "skills/results-analysis/references/statistical-methods.md",
+          "blob": "db3e74fc295d3c1f171305437dcf919a76d2ab81"
+        },
+        {
+          "path": "skills/results-analysis/references/statistical-reporting.md",
+          "blob": "9719b36a13da6ee09946cd40e99b825d34963ca0"
+        },
+        {
+          "path": "skills/results-analysis/references/visualization-best-practices.md",
+          "blob": "1571cba9cd8487401cd56df77d6f4d8f29944e10"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/scholar-analysis-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "academic-reviewer",
+      "repository": "Imbad0202/academic-research-skills",
+      "commit": "6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+      "tree": "4763972aa93d8c7b742434f6dcfa3c36a890b9f3",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "academic-paper-reviewer/SKILL.md",
+      "roles": [
+        "review"
+      ],
+      "dependencies": [
+        "Current-host reviewer; independent agents only if authorized/available"
+      ],
+      "inputs": [
+        "draft and evidence files"
+      ],
+      "outputs": [
+        "review and revision priorities"
+      ],
+      "host_adaptation": "Quick assessment is role-separated current-host critique; not independent peer review. Full panel mode has additional requirements.",
+      "required_files": [
+        {
+          "path": "academic-paper-reviewer/SKILL.md",
+          "blob": "319d39cd8ab0eef1d12dde02d293c780188895d7"
+        },
+        {
+          "path": "academic-paper-reviewer/references/calibration_mode_protocol.md",
+          "blob": "5c020d42493c0623532745dbb1ada4187db3d71f"
+        },
+        {
+          "path": "academic-paper-reviewer/references/changelog.md",
+          "blob": "f228376bf5d8cdd34d277801b394ad8011e0d727"
+        },
+        {
+          "path": "academic-paper-reviewer/references/editorial_decision_standards.md",
+          "blob": "85ad97ca94d8c9694de40906bcc04e367e2687c1"
+        },
+        {
+          "path": "academic-paper-reviewer/references/guided_mode_protocol.md",
+          "blob": "dc045b1ea3a88ff171431acde4288abd9aedea82"
+        },
+        {
+          "path": "academic-paper-reviewer/references/integration_guide.md",
+          "blob": "a356c37346c117f8bf45c1a024925e667499e211"
+        },
+        {
+          "path": "academic-paper-reviewer/references/quality_rubrics.md",
+          "blob": "13a628ffa3fa0f20fe8544c242c8adaebc3cf875"
+        },
+        {
+          "path": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "blob": "322ec5e666953c6faafdefc08b38aefe13008692"
+        },
+        {
+          "path": "academic-paper-reviewer/references/review_criteria_framework.md",
+          "blob": "68677ca06aefe894de71a0240e82a2e19279c7ad"
+        },
+        {
+          "path": "academic-paper-reviewer/references/review_panel_provenance_protocol.md",
+          "blob": "d4f86af33ffc5a56412428b5c94090bfc76e2988"
+        },
+        {
+          "path": "academic-paper-reviewer/references/review_quality_thinking.md",
+          "blob": "8b551a930b5ee8a2727c04f2c3c567a699d38923"
+        },
+        {
+          "path": "academic-paper-reviewer/references/reviewer_sprint_prompt_source.md",
+          "blob": "d876ce951b75af6f8c8dfca7c915ec20bdcf39bf"
+        },
+        {
+          "path": "academic-paper-reviewer/references/sprint_contract_protocol.md",
+          "blob": "5d7f3d5e895844804f3be58a0d55a3f176a54c23"
+        },
+        {
+          "path": "academic-paper-reviewer/references/statistical_reporting_standards.md",
+          "blob": "21ea230fb962e05dfb12f93c0cb8de441bed9e0d"
+        },
+        {
+          "path": "academic-paper-reviewer/references/top_journals_by_field.md",
+          "blob": "21e698b3e0ecc07857a820454b12a885f4158fd2"
+        },
+        {
+          "path": "shared/references/authority_content_coverage_advisory_protocol.md",
+          "blob": "680918cc5fde28e5d7457e7c4d3c6017e926cbab"
+        },
+        {
+          "path": "shared/references/claim_standing_candidate_ledger_protocol.md",
+          "blob": "f68b0f0d38f858d5b7dbafd77da898d84821e154"
+        },
+        {
+          "path": "shared/references/claim_strength_ladder.md",
+          "blob": "07fc64de5669819e5f70dbd7311b0f3ed84aca12"
+        },
+        {
+          "path": "shared/references/cross_document_consistency_advisory_protocol.md",
+          "blob": "99e59bbb6ab655278d4bcc7b25281c7cedd05ea9"
+        },
+        {
+          "path": "shared/references/evidence_row_protocol.md",
+          "blob": "86f977845db5a4365dbfb789013dd848b1a6af16"
+        },
+        {
+          "path": "shared/references/firm_rules.md",
+          "blob": "c177fb73e90657808fe6b970499faadbaeb5a9c2"
+        },
+        {
+          "path": "shared/references/human_subjects_authority_protocol.md",
+          "blob": "62839259c79f04217b3c340096ec207a954353dd"
+        },
+        {
+          "path": "shared/references/intent_clarification_protocol.md",
+          "blob": "32fb0fd1646ee4450aff24b657bc79d2e3b61410"
+        },
+        {
+          "path": "shared/references/irb_terminology_glossary.md",
+          "blob": "33b642b01f59d044e149204fc4a0e2dba1a87046"
+        },
+        {
+          "path": "shared/references/per_source_method_weaknesses.md",
+          "blob": "bfb5eb47c0059615a9f0f52579a2401d289e8fe7"
+        },
+        {
+          "path": "shared/references/protected_hedging_phrases.md",
+          "blob": "02a3ae512ff5f52f942c87a3da4b6f97e582cbfb"
+        },
+        {
+          "path": "shared/references/psychometric_terminology_glossary.md",
+          "blob": "1f60bae64f4e47cc8775584d474c9ec253bc8c6b"
+        },
+        {
+          "path": "shared/references/review_criteria_consumer_protocol.md",
+          "blob": "2dc89f92f94dbd31aae5290a4d5ad4749f6fcc37"
+        },
+        {
+          "path": "shared/references/review_form_note.md",
+          "blob": "fd17fd4c2e4399421f22745c9a7b542d6cae32d6"
+        },
+        {
+          "path": "shared/references/review_pathway_rule_trace_protocol.md",
+          "blob": "ff03207e30e8d60b0fd0751233cc49a4901f4478"
+        },
+        {
+          "path": "shared/references/routing_core.md",
+          "blob": "572ac5a3c2015e22eccdd2ed2e2a87afa583a8c7"
+        },
+        {
+          "path": "shared/references/submission_packet_manifest_protocol.md",
+          "blob": "86d3681541ac5eb17d7491c11a8907e5e5b794c3"
+        },
+        {
+          "path": "shared/references/word_count_conventions.md",
+          "blob": "ddb97620e326ced9f2b1352be8993c2c0c80988b"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "dedfb8b7880e51fe623fa5ea7e27c118eed4e2b9"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/academic-reviewer-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "sleep-experiment-plan",
+      "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+      "tree": "368ff746e2f12976b8fa6e7b2448861f44e3efd9",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "skills/experiment-plan/SKILL.md",
+      "roles": [
+        "experiment",
+        "methods"
+      ],
+      "dependencies": [
+        "Current-host claim/evidence planning"
+      ],
+      "inputs": [
+        "proposal, constraints and failure concerns"
+      ],
+      "outputs": [
+        "claim-driven run order and stopping rules"
+      ],
+      "host_adaptation": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists.",
+      "required_files": [
+        {
+          "path": "skills/experiment-plan/SKILL.md",
+          "blob": "bc7021bcc7a1a081c02cd02bc14f0ccd774292e2"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "8fe03d26d87a5e5d4934ee50039ff255eb67406a"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/sleep-experiment-plan-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "autoresearch-protocol",
+      "repository": "karpathy/autoresearch",
+      "commit": "228791fb499afffb54b46200aca536f79142f117",
+      "tree": "04fa7a1a3ad211e97d894bb42df7698dae5d92ba",
+      "verified_at": "2026-10-04",
+      "kind": "code_tool",
+      "entry": "program.md",
+      "roles": [
+        "experiment"
+      ],
+      "dependencies": [
+        "Native training requires CUDA GPU/H100-class environment, uv and torch; not verified on this Mac"
+      ],
+      "inputs": [
+        "model experiment and fixed validation"
+      ],
+      "outputs": [
+        "native val_bpb experiment ledger or adapted bounded development ledger"
+      ],
+      "host_adaptation": "Native training blocked on current Mac; can apply experiment bookkeeping to a local software fixture with adapted_in_host, never claim native training or val_bpb.",
+      "required_files": [
+        {
+          "path": "README.md",
+          "blob": "953ea55d5599c45c1be7dad93ec03e47dfa7df9d"
+        },
+        {
+          "path": "prepare.py",
+          "blob": "06bea9165abd3ae94ea82dd733997aec7928f40c"
+        },
+        {
+          "path": "program.md",
+          "blob": "dea9bcc0174f1502d0ba64000b94b81ba605855b"
+        },
+        {
+          "path": "pyproject.toml",
+          "blob": "94ae3298925ddae47821f703faf44d4e3b8381bb"
+        },
+        {
+          "path": "train.py",
+          "blob": "2e743974c7f06b54311643b314712303fbb26e65"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/autoresearch-protocol-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "anti-defensive",
+      "repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "tree": "99d78a3e655ed010f6840b9929676494df54cca9",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "skills/anti-defensive-writing/SKILL.md",
+      "roles": [
+        "final_expression"
+      ],
+      "dependencies": [
+        "Current-host full-text editing and fact recheck"
+      ],
+      "inputs": [
+        "original draft and claim/evidence map"
+      ],
+      "outputs": [
+        "revised draft and change/fact review"
+      ],
+      "host_adaptation": "Keep evidence and scope; rhetorical advice cannot remove material uncertainty or overstate results.",
+      "required_files": [
+        {
+          "path": "skills/anti-defensive-writing/SKILL.md",
+          "blob": "59879391d4e7eda0d0017cff89f1ecf0b2566b8c"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "f2fddc5f2ad65725f5f95a3ca48c90c6d146ecd5"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/anti-defensive-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "rougier-reference",
+      "repository": "rougier/scientific-visualization-book",
+      "commit": "62fa569f30333c817c13e4dc757877c1192fd15a",
+      "tree": "16946d8960b3b82df1ead6e8e6b70b6e9eed578c",
+      "verified_at": "2026-10-04",
+      "kind": "reference_code",
+      "entry": "code/ornaments/legend-alternatives.py",
+      "roles": [
+        "figure_reference"
+      ],
+      "dependencies": [
+        "numpy/matplotlib for executable example"
+      ],
+      "inputs": [
+        "figure labeling problem"
+      ],
+      "outputs": [
+        "label design comparison and edited figure"
+      ],
+      "host_adaptation": "BSD example/reference, not an Agent Skill; execute in isolated example directory and apply label design to actual figure.",
+      "required_files": [
+        {
+          "path": "README.md",
+          "blob": "015656850f4881bba60f3a106656fc30fa1df0e2"
+        },
+        {
+          "path": "code/ornaments/legend-alternatives.py",
+          "blob": "5b63b63ba04cd09d184029b3409188a685d7b0e0"
+        },
+        {
+          "path": "LICENSE.txt",
+          "blob": "211a8b2f1c4180a1a96a2f282822e8fb189e8d0c"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": true,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "unmodified reference-code execution",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/rougier-reference-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "open-design-deck",
+      "repository": "nexu-io/open-design",
+      "commit": "53231d40b778d88eba23f35547bf99485d3ae9fc",
+      "tree": "841eb221ce85f2328d4cbee0887cd8b5329f77f0",
+      "verified_at": "2026-10-04",
+      "kind": "workbench_protocol",
+      "entry": "design-templates/html-ppt-tech-sharing/SKILL.md",
+      "roles": [
+        "presentation"
+      ],
+      "dependencies": [
+        "Browser for HTML deck; full daemon/app installation not needed for template adapter"
+      ],
+      "inputs": [
+        "source-backed presentation and audience"
+      ],
+      "outputs": [
+        "HTML deck, notes and local assets"
+      ],
+      "host_adaptation": "Use HTML template with real local runtime paths and source-backed content; do not claim full Open Design daemon was installed.",
+      "required_files": [
+        {
+          "path": "design-templates/html-ppt-tech-sharing/SKILL.md",
+          "blob": "e1a3c2003333b04b55a6034b80a8ffbf1e240b6f"
+        },
+        {
+          "path": "design-templates/html-ppt/LICENSE",
+          "blob": "6c44d346dc52cedc04c104a6ff10dd5ae021d5f8"
+        },
+        {
+          "path": "design-templates/html-ppt/SKILL.md",
+          "blob": "9a4ead71e39ccf2b6974412cb93b57c990793908"
+        },
+        {
+          "path": "design-templates/html-ppt/assets/animations/animations.css",
+          "blob": "1d00263c73eaef83e4a86c998f4993a28e3865cc"
+        },
+        {
+          "path": "design-templates/html-ppt/assets/base.css",
+          "blob": "b8c1107330a2c8d7dadf3889db7e4d78478747bc"
+        },
+        {
+          "path": "design-templates/html-ppt/assets/fonts.css",
+          "blob": "64feb7222db4caab11b9f7944eff7510d99a60ab"
+        },
+        {
+          "path": "design-templates/html-ppt/assets/runtime.js",
+          "blob": "535907de7a0d6cab98eced30d1050ec9bece6446"
+        },
+        {
+          "path": "design-templates/html-ppt/references/full-decks.md",
+          "blob": "c1e3dd67df6643bc915076aeca4bd03e187dab59"
+        },
+        {
+          "path": "design-templates/html-ppt/templates/full-decks/tech-sharing/README.md",
+          "blob": "0ff49467d9b57da02985a57576ea3bbd95f595d7"
+        },
+        {
+          "path": "design-templates/html-ppt/templates/full-decks/tech-sharing/index.html",
+          "blob": "a64d1326bee10e807f941d85b4091b2906805a1f"
+        },
+        {
+          "path": "design-templates/html-ppt/templates/full-decks/tech-sharing/style.css",
+          "blob": "10aaf6f3dd8cbd71e64df5253b7de89d48962586"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "eb79c35bd865477e525b18e56f35d56fbe0f7110"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/open-design-deck-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "codex-ppt",
+      "repository": "ningzimu/codex-ppt-skill",
+      "commit": "6d76c0eded7f8a8b0c4e304697e6f2bda7c408b2",
+      "tree": "3252e62ce6ba77940eeba21082e51ec6ee514c5f",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "skills/codex-ppt/SKILL.md",
+      "roles": [
+        "presentation"
+      ],
+      "dependencies": [
+        "Generated slide images; python-pptx/Pillow for assembly; generation backend and sample authorization for full native deck"
+      ],
+      "inputs": [
+        "approved outline and generated slide images"
+      ],
+      "outputs": [
+        "image-page PPTX and assembly receipt"
+      ],
+      "host_adaptation": "Native image generation/sample gates retained; local integration may test existing-image assembly only and must label it function_only, not full-deck generation or editable-text PPT.",
+      "required_files": [
+        {
+          "path": "skills/codex-ppt/SKILL.md",
+          "blob": "1cbcd9a82532e4214d591f217a12e5525d3d7b92"
+        },
+        {
+          "path": "skills/codex-ppt/docs/backend-selection.md",
+          "blob": "955bf463dbbd681814444d8600c6f3e764cf3967"
+        },
+        {
+          "path": "skills/codex-ppt/docs/cli-api-fallback.md",
+          "blob": "3c68cbac31cf869b89ae8e4b2fb05465ff823cc6"
+        },
+        {
+          "path": "skills/codex-ppt/docs/image-model-configuration.md",
+          "blob": "4db90da059f31b579b4f9af213345bc6007cda2c"
+        },
+        {
+          "path": "skills/codex-ppt/docs/outline-style-and-sample.md",
+          "blob": "fda7518843d59d10bb8d69bd8b691ed101ca2457"
+        },
+        {
+          "path": "skills/codex-ppt/docs/project-assembly-and-reporting.md",
+          "blob": "83d8213af233e2d4aa9a5f59807cafaff4bca9db"
+        },
+        {
+          "path": "skills/codex-ppt/docs/slide-generation-and-subagents.md",
+          "blob": "684b7c7c1c1e577174a687e9fda38c47d5d5af44"
+        },
+        {
+          "path": "skills/codex-ppt/docs/style-library.md",
+          "blob": "cca07d25189017ae028292f5543ac5c69d47db1f"
+        },
+        {
+          "path": "skills/codex-ppt/docs/user-supplied-assets.md",
+          "blob": "6ce0f1ab8e259b7abe71f4afa5fa7f11a0cbc40d"
+        },
+        {
+          "path": "skills/codex-ppt/docs/workflow-gates-and-progress.md",
+          "blob": "83d9530a807ea5875502c7d9f1544633baf4cc27"
+        },
+        {
+          "path": "skills/codex-ppt/prompts/slide-worker.md",
+          "blob": "5da582801df27e449402b836c811473a5aab8e38"
+        },
+        {
+          "path": "skills/codex-ppt/requirements.txt",
+          "blob": "e55acc710a7d99fc13498a8e8b6a0f46b7d9d54f"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/assemble_ppt.py",
+          "blob": "a56a7822cc4ba4e1094bb1c52527900bc485ca0a"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/codex_ppt_runtime.py",
+          "blob": "4cae03e354145f08d82ded5bf1f7b129d5f743c4"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_gen.py",
+          "blob": "4b7403ba1cad93ee67f8d51f327587c1992c59bf"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/__init__.py",
+          "blob": "9c678c0c93d63bf5cb0296102ccc5abfbad1ca0f"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/atlascloud.py",
+          "blob": "4a14ed5018cfa5218ec54a3770298d26d10e3708"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/base.py",
+          "blob": "1438bb6896e42bd0aa932008e93bca00263db153"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/factory.py",
+          "blob": "bcf59bbc1ac7df056504d4a7a9296632bfb4631e"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/openai_compatible.py",
+          "blob": "2184a79074af94d9217bba9064ec175b51160812"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/prepare_slide_prompts.py",
+          "blob": "1cf3e681db419528ecc727b6f0a5ef917a5ded9a"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/record_slide_blocker.py",
+          "blob": "c5098f752976eb57553d49e9bdff5a95bb6f3677"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/record_slide_dispatch.py",
+          "blob": "4dd529e8f63450b00ca48e9e843afa4c72236bd2"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/record_slide_result.py",
+          "blob": "e0d8d622f3199cacc41d9fcc6b1fe4878c742166"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/remove_chroma_key.py",
+          "blob": "5311f287b080c2f565bd9f931748b4a2a11d4d6c"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/slide_job_status.py",
+          "blob": "09ee4104178e18c9e9d6f190539c4cbbf882cd81"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/slide_run_state.py",
+          "blob": "dc1f5d21573f34bf922aa99a63f165f8eed30924"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "f769fc5582d3f8ee0f9eb4da5fbf95ac85834c17"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "existing-image assembly function only",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/codex-ppt-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "paperspine-workbench",
+      "repository": "WUBING2023/PaperSpine",
+      "commit": "f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3",
+      "tree": "756d00c6851247eeab632b3420de5d76ca31e81e",
+      "verified_at": "2026-10-04",
+      "kind": "workbench_protocol",
+      "entry": "dist/codex/skills/paper-spine/SKILL.md",
+      "roles": [
+        "workbench",
+        "writing",
+        "review"
+      ],
+      "dependencies": [
+        "Python local checker; full workbench launch has separate app/runtime dependencies"
+      ],
+      "inputs": [
+        "claim/evidence bound artifacts"
+      ],
+      "outputs": [
+        "local validation/recovery contract or workbench task"
+      ],
+      "host_adaptation": "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run.",
+      "required_files": [
+        {
+          "path": "dist/codex/skills/paper-spine/SKILL.md",
+          "blob": "3c46bf599ce7aef5e6d85806b57b713e9aeae679"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/references/paper-spine-production-protocol.md",
+          "blob": "68be84d9e7de78cdd1162c016d6242d864a925dc"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/references/phase-contracts.md",
+          "blob": "b1bda67f81e1e38faf841488e2d3a1841ea98e44"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/references/results-validation.md",
+          "blob": "02b24c97905392a7da13a9a1345fffa86c30ef26"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/references/resume.md",
+          "blob": "51db0edb6c2a9f4fda6b2392e738dbc29fac9fb0"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/scripts/_paper_spine_utils.py",
+          "blob": "2eecf1ab87b81b6fb09177e48c1f6b91a4cbc057"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/scripts/results_validation_check.py",
+          "blob": "23da399824666316c7439ea3996e4dad9ba9fe95"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "175cd14038081d3c5f085041415b1331a38e9980"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/paperspine-workbench-work.md",
+        "repository_wide_certification": false
+      }
+    },
+    {
+      "id": "orchestra-ideation",
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "tree": "eb544e88f08d76170d17050b10c18a317afd0314",
+      "verified_at": "2026-10-04",
+      "kind": "skill_protocol",
+      "entry": "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "roles": [
+        "ideation",
+        "novelty"
+      ],
+      "dependencies": [
+        "Current-host ideation, no extra model runtime"
+      ],
+      "inputs": [
+        "open problem/pivot and existing evidence"
+      ],
+      "outputs": [
+        "problem-first candidates with discriminating tests"
+      ],
+      "host_adaptation": "Use selected relevant ideation lenses; explicit fixed questions do not require repeated brainstorming or new research scope.",
+      "required_files": [
+        {
+          "path": "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+          "blob": "f5427a507c009fe0a91e51e213b340987334adb4"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "943d5753a5f02f9ef352ff8a1706f167004d6e6d"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false,
+      "integration_validation": {
+        "date": "2026-10-04",
+        "scope": "current-host adapted task subflow",
+        "evidence": "evaluations/v3.4.0-rc.1/integration/orchestra-ideation-work.md",
+        "repository_wide_certification": false
+      }
+    }
+  ]
+}

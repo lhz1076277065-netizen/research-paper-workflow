@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.3.1",
+  "package_version": "3.4.0-rc.1",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -26,6 +26,6 @@
     "workbench"
   ],
   "providers": [],
-  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
   "capability": "data-discovery"
 }

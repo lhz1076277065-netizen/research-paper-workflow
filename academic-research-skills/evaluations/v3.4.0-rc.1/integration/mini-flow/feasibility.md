@@ -1,0 +1,1 @@
+Question: does an active controlled local command create the promised artifact? Fixed software scope, no scholarly novelty. Decisive check: write event.json through runner, inspect value. Dependency: stdlib Python, available. Cost <1 second, budget 5 minutes. Failure: deliver software blocker, do not start research.

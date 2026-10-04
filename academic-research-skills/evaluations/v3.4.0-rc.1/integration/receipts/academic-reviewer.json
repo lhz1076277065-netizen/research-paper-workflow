@@ -1,0 +1,40 @@
+{
+  "id": "academic-reviewer",
+  "repository": "Imbad0202/academic-research-skills",
+  "entry": "academic-paper-reviewer/SKILL.md",
+  "commit": "6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+  "actor_scope": "current_host",
+  "mode": "adapted_in_host",
+  "roles": [
+    "review"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/final-report.md",
+      "sha256": "6acf1b285539e01197492e229a260c9429eaecb17cf4fb1f71fbd128712c88da"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-results.csv",
+      "sha256": "ee4e87ec39ce31513e5493799ce41d10659451edda460950a5b9b2802d53488b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/academic-reviewer-work.md",
+      "sha256": "7034ced2fb00af3d7d9688d9326565a13fe94bb96779b6de192535d25a1f29e2"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in academic-reviewer-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": false
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": "Quick assessment is role-separated current-host critique; not independent peer review. Full panel mode has additional requirements."
+}

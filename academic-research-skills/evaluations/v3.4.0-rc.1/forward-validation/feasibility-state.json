@@ -1,0 +1,38 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "9a068ebc1c854195a3f60fed9ac5e3e3",
+  "scope": "full",
+  "objective": "软件试用：仅初步可行性判断，具体科研假设尚未提供；fixture仅模拟材料",
+  "latest_instruction": "软件试用：仅初步可行性判断，具体科研假设尚未提供；fixture仅模拟材料",
+  "status": "route_closed",
+  "stage": "feasibility",
+  "started_at": "2026-10-04T07:53:44.451529+00:00",
+  "deadline": 1791103124.451529,
+  "project_deadline": 1791103124.451529,
+  "reserve_seconds": 270.0,
+  "budget_kind": "initial_feasibility",
+  "authorization": null,
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [],
+  "artifacts": [
+    {
+      "path": "feasibility.md",
+      "sha256": "2174044e8276fe86286dbab240c47526d1f676e3f37f97abc60b88c80d3f9be2"
+    }
+  ],
+  "history": [],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": null,
+  "owned_processes": [],
+  "host_goal_state": "not_modified",
+  "exit_reason": "具体假设与科学材料未提供，初步判断交付障碍报告"
+}

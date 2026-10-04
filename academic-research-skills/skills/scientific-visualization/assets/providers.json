@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.3.1",
+  "package_version": "3.4.0-rc.1",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -25,7 +25,122 @@
     "dissemination",
     "workbench"
   ],
-  "providers": [],
-  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "providers": [
+    {
+      "id": "scipilot-figure",
+      "repository": "Haojae/scipilot-figure-skill",
+      "repo": "Haojae/scipilot-figure-skill",
+      "entrypoint": "SKILL.md",
+      "required_paths": [
+        "SKILL.md",
+        "references/chart_selection.md",
+        "references/data_profiling.md",
+        "references/journal_specs.md",
+        "references/plot_recipes.md",
+        "references/publication_checklist.md",
+        "references/visual_review.md",
+        "references/viz_pitfalls.md",
+        "requirements.txt",
+        "scripts/check_figure.py",
+        "scripts/export_figure.py",
+        "scripts/layout_tools.py",
+        "scripts/profile_data.py",
+        "scripts/setup_style.py",
+        "scripts/visual_qa.py",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+      "discovered_file_blob_sha": {
+        "SKILL.md": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+        "references/chart_selection.md": "547e3ed795beb8c52c40d56107dd368e729f31d8",
+        "references/data_profiling.md": "afb50d0afc6b36e43f6537324af78ec22d2968d8",
+        "references/journal_specs.md": "b28162888c0bfc378b2292dc0356f5d7aaed674a",
+        "references/plot_recipes.md": "5d5edc17fa173f367e98839f27f6c3d2f5ad8cf2",
+        "references/publication_checklist.md": "2dd61367123aec7974d133d36bc9b6c204a30f6e",
+        "references/visual_review.md": "62a2d1b8ab54fdeacbfb972474d3c6c4b8f7527d",
+        "references/viz_pitfalls.md": "68fc0245ef4faf4e1f336a4d5fd432252a53bfe5",
+        "requirements.txt": "7f194bb3314bf45682386d5a6a65b677bc14ef55",
+        "scripts/check_figure.py": "30d4bdeed5694e8690031235744d76093ee4176a",
+        "scripts/export_figure.py": "a3a4df7580f8d4275d822424a11aaa9f6f36df11",
+        "scripts/layout_tools.py": "4eb29f13cea9bbe2e507919bb0412b9e2647d1ae",
+        "scripts/profile_data.py": "7bf54ec4ceb438974f4238e4b4ed4a13cd09ba67",
+        "scripts/setup_style.py": "35c5d3a8fb99b3477c544dccf331bb4d81af7657",
+        "scripts/visual_qa.py": "02ec9fb6c9300986bdf4e5b257b96e00eb13e89c",
+        "LICENSE": "897e469d1446e6cfc5a71858387e01fd1129197c"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "figure"
+      ],
+      "capabilities": [
+        "scientific-visualization"
+      ],
+      "purpose": "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/Haojae/scipilot-figure-skill/blob/43098ddb9e6a6d142218540c114f9ed38922fc42/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function.",
+      "adaptations": [
+        "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "matplotlib/numpy/pandas/seaborn; SciencePlots optional"
+      ],
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "tree": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64"
+    },
+    {
+      "id": "rougier-reference",
+      "repository": "rougier/scientific-visualization-book",
+      "repo": "rougier/scientific-visualization-book",
+      "entrypoint": "code/ornaments/legend-alternatives.py",
+      "required_paths": [
+        "README.md",
+        "code/ornaments/legend-alternatives.py",
+        "LICENSE.txt"
+      ],
+      "entry_git_blob_sha": "5b63b63ba04cd09d184029b3409188a685d7b0e0",
+      "discovered_file_blob_sha": {
+        "README.md": "015656850f4881bba60f3a106656fc30fa1df0e2",
+        "code/ornaments/legend-alternatives.py": "5b63b63ba04cd09d184029b3409188a685d7b0e0",
+        "LICENSE.txt": "211a8b2f1c4180a1a96a2f282822e8fb189e8d0c"
+      },
+      "kind": "reference_code",
+      "roles": [
+        "figure_reference"
+      ],
+      "capabilities": [
+        "scientific-visualization"
+      ],
+      "purpose": "BSD example/reference, not an Agent Skill; execute in isolated example directory and apply label design to actual figure.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/rougier/scientific-visualization-book/blob/62fa569f30333c817c13e4dc757877c1192fd15a/code/ornaments/legend-alternatives.py",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "BSD example/reference, not an Agent Skill; execute in isolated example directory and apply label design to actual figure.",
+      "adaptations": [
+        "BSD example/reference, not an Agent Skill; execute in isolated example directory and apply label design to actual figure."
+      ],
+      "phase": 1,
+      "mode": "reference-only",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "numpy/matplotlib for executable example"
+      ],
+      "commit": "62fa569f30333c817c13e4dc757877c1192fd15a",
+      "tree": "16946d8960b3b82df1ead6e8e6b70b6e9eed578c"
+    }
+  ],
+  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
   "capability": "scientific-visualization"
 }

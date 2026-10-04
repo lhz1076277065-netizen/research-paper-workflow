@@ -1,3 +1,7 @@
+# 3.4.0-rc.1 — local candidate, 2026-10-04
+
+Executable bounded phases and durable recovery; fourteen verified source entrypoints and task-linked adaptations; nineteen generated independent skills. Fixed feasibility/engineering priorities, finite repair and reassessment, actual token-delta accounting, owned process stop and terminal restart denial. Local packages and reversible installation only; no GitHub publication. See evaluations/v3.4.0-rc.1 and release/VALIDATION-v3.4.0-rc.1.zh-CN.md for actual evidence and limitations.
+
 # Changelog
 
 ## 3.3.1

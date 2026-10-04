@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.3.1",
+  "package_version": "3.4.0-rc.1",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -25,7 +25,51 @@
     "dissemination",
     "workbench"
   ],
-  "providers": [],
-  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "providers": [
+    {
+      "id": "orchestra-ideation",
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "entrypoint": "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "required_paths": [
+        "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "f5427a507c009fe0a91e51e213b340987334adb4",
+      "discovered_file_blob_sha": {
+        "21-research-ideation/brainstorming-research-ideas/SKILL.md": "f5427a507c009fe0a91e51e213b340987334adb4",
+        "LICENSE": "943d5753a5f02f9ef352ff8a1706f167004d6e6d"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "ideation",
+        "novelty"
+      ],
+      "capabilities": [
+        "topic-novelty"
+      ],
+      "purpose": "Use selected relevant ideation lenses; explicit fixed questions do not require repeated brainstorming or new research scope.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/773a52944ba4747a18bd4ae9ade53fff041adcbc/21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Use selected relevant ideation lenses; explicit fixed questions do not require repeated brainstorming or new research scope.",
+      "adaptations": [
+        "Use selected relevant ideation lenses; explicit fixed questions do not require repeated brainstorming or new research scope."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Current-host ideation, no extra model runtime"
+      ],
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "tree": "eb544e88f08d76170d17050b10c18a317afd0314"
+    }
+  ],
+  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
   "capability": "topic-novelty"
 }

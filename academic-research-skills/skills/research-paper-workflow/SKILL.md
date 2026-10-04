@@ -1,20 +1,16 @@
 ---
 name: research-paper-workflow
-description: "当用户要求跨阶段开展学术研究或完成整篇研究成果时协调问题、设计、证据、图稿与交付；单项请求直接用对应能力，更新Skill本身不启动论文研究。"
+description: "协调跨阶段学术研究与完整成果：可行性、阶段预算、专业来源、决定性证据与图稿交付；单项请求直达对应能力，Skill维护不启动研究。"
 metadata:
-  version: "3.3.1"
+  version: "3.4.0-rc.1"
 ---
 
-# 实际学术研究到完整成果的当前Agent总控
+# 有界研究到真实成果
 
-发现重要未解问题，在电脑中寻找并检验相对最强近邻的贡献；失败驱动新思路，贡献不足回研究。核心贡献成立后再正式写稿与期刊适配，方法服务科学问题及现实需要。
+先识别维护、局部工作或完整研究；沿用最新用户指令与授权，已完成安装不重复执行或播报。完整研究先读 [阶段出口与预算](references/phase-control.md) 和 [科研主线](references/research-lifecycle.md)：无预算先最多45分钟可行性，再一次确定后续总预算；已有预算直接沿用。
 
-默认 computational-autonomous：在线取得或电脑内构造材料，用数字工具检验结论。executor 为当前Agent，原生子代理按需分工；research_model 可本地加载、训练和评价。专业Skill按角色选来源清单内的已安装/当前版本；自主选择方法，改造或新写代码。免费工具按需准备、验证，以API、CLI或GUI保存输出和可编辑项目。
+默认 computational-autonomous，executor为当前Agent；research_model是科研算法/对象。自主选择方法，改造或新写代码，免费工具按需准备。专业工作从 [能力索引](references/capability-routing.md) 找真实入口，读取必要资源、实施并将输出接入本稿；不全量调用，不把下载或导出当专业角色完成。
 
-完整项目先读 [科研主线](references/research-lifecycle.md) 和 [研究质量](references/research-quality.md)，建立一份可见路线板后持续推进。来源选择见 [执行规则](references/provider-policy.md)。只加载当前相关资源，共享材料在同一任务中复用。
+路线板连接主张与实际证据。高成本动作先guard；两次修复/两轮无信息增量复评。证据足够就成稿，否则按出口交付报告。按需查 [研究质量](references/research-quality.md)。
 
-交付真实成果、实际证据、Skill作用与完成范围。局部任务直接做；完整研究保留科学目标与下一步，自检和试跑只证明其检查范围。
-
-脚本是可选工具，不作为日常前置；需记录检查时读 [实际交接](references/execution-handoff.md)。
-
-开发、更新或打包本套Skill时，交付通用Skill文件与软件验证，不自动选具体课题或撰稿。
+恢复只读阶段、指令、产物与下一动作；触顶不启动新工作，不伪称goal暂停。维护不恢复原课题。局部任务的脚本是可选工具，不作为日常前置。

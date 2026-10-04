@@ -1,0 +1,1 @@
+证据限定：前案真实paused run退出2且无marker；独立active run退出0并创建CONTROL_STARTED.marker。原scope内软件启动阻断报告的证据足够，不足以形成科研论文。

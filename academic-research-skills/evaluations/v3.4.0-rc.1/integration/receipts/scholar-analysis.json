@@ -1,0 +1,41 @@
+{
+  "id": "scholar-analysis",
+  "repository": "Galaxy-Dawn/claude-scholar",
+  "entry": "skills/results-analysis/SKILL.md",
+  "commit": "903787345d6aec134086afa2b97715a78fbde519",
+  "actor_scope": "current_host",
+  "mode": "adapted_in_host",
+  "roles": [
+    "analysis",
+    "methods"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-results.csv",
+      "sha256": "ee4e87ec39ce31513e5493799ce41d10659451edda460950a5b9b2802d53488b"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/figure-values.json",
+      "sha256": "9d4f7e3507184e9c14128600eec04d0d87a4e3443c645775c05ecbcc3f4f84fa"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/scholar-analysis-work.md",
+      "sha256": "e049b900357fc7606748e68a5a9db3b57d3e2fb35a70b762ee8270a671b56e81"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in scholar-analysis-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": false
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim."
+}

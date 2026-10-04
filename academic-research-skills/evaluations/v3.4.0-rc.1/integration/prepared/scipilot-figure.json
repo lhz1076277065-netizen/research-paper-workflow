@@ -1,0 +1,98 @@
+{
+  "status": "source_prepared",
+  "id": "scipilot-figure",
+  "repository": "Haojae/scipilot-figure-skill",
+  "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+  "tree": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64",
+  "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42/SKILL.md",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "blob": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+      "sha256": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc"
+    },
+    {
+      "path": "references/chart_selection.md",
+      "blob": "547e3ed795beb8c52c40d56107dd368e729f31d8",
+      "sha256": "71fe5970b4a9aee66d6c02d1e0696b367f7dafd9c7e17502ee66c56f36870852"
+    },
+    {
+      "path": "references/data_profiling.md",
+      "blob": "afb50d0afc6b36e43f6537324af78ec22d2968d8",
+      "sha256": "ec2f87a5a09db0db00198b6b462b374c2640a57dfc41e2e884928c15145e27be"
+    },
+    {
+      "path": "references/journal_specs.md",
+      "blob": "b28162888c0bfc378b2292dc0356f5d7aaed674a",
+      "sha256": "a8e9654f55994d692d585e69fb3a68f5618ecf766d8ce0e95fdda6d12e786263"
+    },
+    {
+      "path": "references/plot_recipes.md",
+      "blob": "5d5edc17fa173f367e98839f27f6c3d2f5ad8cf2",
+      "sha256": "3d4f47a6e320d1c0635ee2fc329484952d4e528b1fe9b552e79828b88336c002"
+    },
+    {
+      "path": "references/publication_checklist.md",
+      "blob": "2dd61367123aec7974d133d36bc9b6c204a30f6e",
+      "sha256": "9e2c5f0725c57e71eee0ff66ebac61d2d89c8cec4bd9c958db0184eea4c8abf6"
+    },
+    {
+      "path": "references/visual_review.md",
+      "blob": "62a2d1b8ab54fdeacbfb972474d3c6c4b8f7527d",
+      "sha256": "c4ca4a28a315e7de46f67b5972b3765b979f01fe30616c0681dd2595bed554a1"
+    },
+    {
+      "path": "references/viz_pitfalls.md",
+      "blob": "68fc0245ef4faf4e1f336a4d5fd432252a53bfe5",
+      "sha256": "f103ae47611c6c7429629cb3161c5cdc8a0c9fba7f14d9f83159c96f848a9818"
+    },
+    {
+      "path": "requirements.txt",
+      "blob": "7f194bb3314bf45682386d5a6a65b677bc14ef55",
+      "sha256": "0cda86f15f4006c4be606cc2a991c1a250c4f8a49782ef634d440fb0f37acade"
+    },
+    {
+      "path": "scripts/check_figure.py",
+      "blob": "30d4bdeed5694e8690031235744d76093ee4176a",
+      "sha256": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06"
+    },
+    {
+      "path": "scripts/export_figure.py",
+      "blob": "a3a4df7580f8d4275d822424a11aaa9f6f36df11",
+      "sha256": "40ce3bcd31dfc4b33e38a1cb180c75dc730ee6fa046f04934c79f285c6f890c1"
+    },
+    {
+      "path": "scripts/layout_tools.py",
+      "blob": "4eb29f13cea9bbe2e507919bb0412b9e2647d1ae",
+      "sha256": "68e1d25774148fe78f5d87035d651f5e3707382502505cb11f62f9ec7ae88e49"
+    },
+    {
+      "path": "scripts/profile_data.py",
+      "blob": "7bf54ec4ceb438974f4238e4b4ed4a13cd09ba67",
+      "sha256": "d8a2a72c2607c390f2d3ed1508209d515ad4fbf833fa1602ab9da519b3596ec4"
+    },
+    {
+      "path": "scripts/setup_style.py",
+      "blob": "35c5d3a8fb99b3477c544dccf331bb4d81af7657",
+      "sha256": "d58ef81684577bb605a92733dd2ca48ade03b4f819b3d255fd62f319be7fea82"
+    },
+    {
+      "path": "scripts/visual_qa.py",
+      "blob": "02ec9fb6c9300986bdf4e5b257b96e00eb13e89c",
+      "sha256": "67675709e523c76e2748d50749de7bc6332f07df865379b26d024321fb40120f"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "897e469d1446e6cfc5a71858387e01fd1129197c",
+      "sha256": "9138113e804093683aea49033b274c7ab35babce90c3acb86eae115d44585671"
+    }
+  ],
+  "kind": "skill_protocol",
+  "dependency_installation_performed": false,
+  "research_work_done": false,
+  "host_adaptation": "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function.",
+  "known_requirements": [
+    "matplotlib/numpy/pandas/seaborn; SciencePlots optional"
+  ]
+}

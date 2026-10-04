@@ -1,0 +1,18 @@
+{
+  "version": "3.4.0-rc.1",
+  "engineering": {
+    "tests": 639,
+    "passed": true,
+    "python": "3.12.14",
+    "log": "evaluations/v3.4.0-rc.1/regression-v340-final-verified.log"
+  },
+  "legacy_compatibility": {
+    "tests": 30,
+    "passed": true,
+    "log": "evaluations/v3.4.0-rc.1/compatibility-regression.log"
+  },
+  "independent_agent_cases": 9,
+  "source_integration_scopes": 14,
+  "scientific_originality_certified": false,
+  "strict_maintenance_token_budget_certified": false
+}

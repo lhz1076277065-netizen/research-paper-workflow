@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation/supplement/dependency_actual_checks.py", line 15, in <module>
+    assert callable(getattr(adapter,'fit',None)), 'Adapter lacks required fit API'
+AssertionError: Adapter lacks required fit API

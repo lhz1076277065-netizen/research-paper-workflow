@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.3.1",
+  "package_version": "3.4.0-rc.1",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -25,7 +25,110 @@
     "dissemination",
     "workbench"
   ],
-  "providers": [],
-  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "providers": [
+    {
+      "id": "nature-reader",
+      "repository": "Yuan1z0825/nature-skills",
+      "repo": "Yuan1z0825/nature-skills",
+      "entrypoint": "skills/nature-reader/SKILL.md",
+      "required_paths": [
+        "skills/nature-reader/README.md",
+        "skills/nature-reader/README_EN.md",
+        "skills/nature-reader/SKILL.md",
+        "skills/nature-reader/agents/openai.yaml",
+        "skills/nature-reader/evals/evals.json",
+        "skills/nature-reader/manifest.yaml",
+        "skills/nature-reader/references/article-anatomy.md",
+        "skills/nature-reader/references/equation-handling.md",
+        "skills/nature-reader/references/figure-extraction.md",
+        "skills/nature-reader/references/grounding-rules.md",
+        "skills/nature-reader/references/output-spec.md",
+        "skills/nature-reader/scripts/validate_reader_math.py",
+        "skills/nature-reader/static/core/output-contract.md",
+        "skills/nature-reader/static/core/principles.md",
+        "skills/nature-reader/static/core/workflow.md",
+        "skills/nature-reader/static/fragments/source/doi-arxiv.md",
+        "skills/nature-reader/static/fragments/source/html.md",
+        "skills/nature-reader/static/fragments/source/pasted-text.md",
+        "skills/nature-reader/static/fragments/source/pdf-text.md",
+        "skills/nature-reader/static/fragments/source/scanned-pdf.md",
+        "skills/nature-shared/core/consistency-sweep.md",
+        "skills/nature-shared/core/discussion-argument-language.md",
+        "skills/nature-shared/core/ethics.md",
+        "skills/nature-shared/core/main-text-discipline.md",
+        "skills/nature-shared/core/nature-abstract.md",
+        "skills/nature-shared/core/nature-introduction.md",
+        "skills/nature-shared/core/nature-results-discussion.md",
+        "skills/nature-shared/core/paper-type-taxonomy.md",
+        "skills/nature-shared/core/reader-workflow.md",
+        "skills/nature-shared/core/research-compliance.md",
+        "skills/nature-shared/core/terminology-ledger.md",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "cf8d3cbe6917d962fbb43de9218d4fad5c01e89f",
+      "discovered_file_blob_sha": {
+        "skills/nature-reader/README.md": "98ba2ff831be7ef95a93f29c912972f3c9759ada",
+        "skills/nature-reader/README_EN.md": "0550454b0d6b2e3ce13e8685c564c701af6d7eea",
+        "skills/nature-reader/SKILL.md": "cf8d3cbe6917d962fbb43de9218d4fad5c01e89f",
+        "skills/nature-reader/agents/openai.yaml": "e9bb4c9796fb676cd4b34536b71543e79b11567e",
+        "skills/nature-reader/evals/evals.json": "97e5673812935c712f7cada8b41d38d937c5fd5b",
+        "skills/nature-reader/manifest.yaml": "3ed6df0cec8f27bea44a64e0780df367c926175f",
+        "skills/nature-reader/references/article-anatomy.md": "0c85335fec334fff4454ca73685412d2530dcb06",
+        "skills/nature-reader/references/equation-handling.md": "f257650999d8dff00a4cf60db29d923a537235a7",
+        "skills/nature-reader/references/figure-extraction.md": "f256f06b2603b56237769293d5b984431df78b9f",
+        "skills/nature-reader/references/grounding-rules.md": "44ddd8d3d1af95765ed1d50a10d9f6c26f4f89ed",
+        "skills/nature-reader/references/output-spec.md": "fbbce2855360dbc820c58960f83dc3c282e90f6e",
+        "skills/nature-reader/scripts/validate_reader_math.py": "4180ffcdd1f1d4815f27735202cacd60d73d6a47",
+        "skills/nature-reader/static/core/output-contract.md": "e901feebe26af76e7c8a58c8e90a17e62b54ad46",
+        "skills/nature-reader/static/core/principles.md": "1075068f23267e9f17e28ad306f40c5908169e59",
+        "skills/nature-reader/static/core/workflow.md": "fba7467ae6aaacdad1c3efb50970653b17e94478",
+        "skills/nature-reader/static/fragments/source/doi-arxiv.md": "6dfb9a1a1f82e19cc01513c35453dc19c5cd80e8",
+        "skills/nature-reader/static/fragments/source/html.md": "4cd42fd9fed3bf5b632dcedc05951fe14657b74c",
+        "skills/nature-reader/static/fragments/source/pasted-text.md": "44a1180c5458c9570c0e9988a6acae4bbf18db48",
+        "skills/nature-reader/static/fragments/source/pdf-text.md": "7d48d48582690ab4854aa43c8b9b10bde0ee895b",
+        "skills/nature-reader/static/fragments/source/scanned-pdf.md": "6ee0c228ef2420d42b84e93cbcffc87ec9ef72a2",
+        "skills/nature-shared/core/consistency-sweep.md": "8b7e03263c808b914b57de7c701156f2de5ac8d5",
+        "skills/nature-shared/core/discussion-argument-language.md": "1f0bb0dfe6873d1a2d8d9f87bb9c4e0bf31939af",
+        "skills/nature-shared/core/ethics.md": "a6e6d063a8a41bc2294f02820265700272024c37",
+        "skills/nature-shared/core/main-text-discipline.md": "ec34c0648aedf42c7c18b5445ea4af6b5208aeb2",
+        "skills/nature-shared/core/nature-abstract.md": "19dbbd69703c7c898734c295782875b90637d4a5",
+        "skills/nature-shared/core/nature-introduction.md": "6d6ffe0c263f03a67a7dd66342241b8b714dd225",
+        "skills/nature-shared/core/nature-results-discussion.md": "11631fb861f557f9253ed07557f5aa2b2dcaccf9",
+        "skills/nature-shared/core/paper-type-taxonomy.md": "7f5c84f0a8e5f37e13604b473c0b8c6262ef8403",
+        "skills/nature-shared/core/reader-workflow.md": "d34e9374b7989c75bf86db0df04af8ab5bb90a02",
+        "skills/nature-shared/core/research-compliance.md": "ff555158b2109463f16c266c347d2ab459bbdd02",
+        "skills/nature-shared/core/terminology-ledger.md": "d59c6c838638949e035b8c6f76054a05b633e9e3",
+        "LICENSE": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "reading"
+      ],
+      "capabilities": [
+        "paper-deep-reading"
+      ],
+      "purpose": "Use only format-selected core and grounding resources. Source-linked question does not require whole-paper translation.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/Yuan1z0825/nature-skills/blob/84880815fb37317b3766bff2c2abba395b8993c3/skills/nature-reader/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Use only format-selected core and grounding resources. Source-linked question does not require whole-paper translation.",
+      "adaptations": [
+        "Use only format-selected core and grounding resources. Source-linked question does not require whole-paper translation."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Current-host source extraction/translation; OCR only for scans"
+      ],
+      "commit": "84880815fb37317b3766bff2c2abba395b8993c3",
+      "tree": "466490e175c148a6dce31e0e5961f63e2cde4e8f"
+    }
+  ],
+  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
   "capability": "paper-deep-reading"
 }

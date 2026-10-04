@@ -1,0 +1,44 @@
+{
+  "id": "anti-defensive",
+  "repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+  "entry": "skills/anti-defensive-writing/SKILL.md",
+  "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+  "actor_scope": "current_host",
+  "mode": "adapted_in_host",
+  "roles": [
+    "final_expression"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/before-after.md",
+      "sha256": "aae019da51e0b79660dc9be5c847138a27a1314636b734d1aadb70b057d4dc34"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-results.csv",
+      "sha256": "ee4e87ec39ce31513e5493799ce41d10659451edda460950a5b9b2802d53488b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/final-report.md",
+      "sha256": "6acf1b285539e01197492e229a260c9429eaecb17cf4fb1f71fbd128712c88da"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/anti-defensive-work.md",
+      "sha256": "1097359e5c9bb8c09daa787fca19fbe8eb06d06cf5a55242b98e84e113f58309"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in anti-defensive-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": false
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": "Keep evidence and scope; rhetorical advice cannot remove material uncertainty or overstate results."
+}

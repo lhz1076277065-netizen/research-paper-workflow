@@ -1,0 +1,188 @@
+{
+  "status": "source_prepared",
+  "id": "academic-reviewer",
+  "repository": "Imbad0202/academic-research-skills",
+  "commit": "6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+  "tree": "4763972aa93d8c7b742434f6dcfa3c36a890b9f3",
+  "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/academic-reviewer/6ab4b03bf70a118a1b3ee7f3263ed9f19031061b/academic-paper-reviewer/SKILL.md",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/academic-reviewer/6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+  "files": [
+    {
+      "path": "academic-paper-reviewer/SKILL.md",
+      "blob": "319d39cd8ab0eef1d12dde02d293c780188895d7",
+      "sha256": "dd44856b3c87eac3335e47fbc1a9bba609f74a17d75485bc07b3678e8d875869"
+    },
+    {
+      "path": "academic-paper-reviewer/references/calibration_mode_protocol.md",
+      "blob": "5c020d42493c0623532745dbb1ada4187db3d71f",
+      "sha256": "f6ebedf09fd7810372f1150227065aad03f5bf30f49be47226b1be26fc771bfd"
+    },
+    {
+      "path": "academic-paper-reviewer/references/changelog.md",
+      "blob": "f228376bf5d8cdd34d277801b394ad8011e0d727",
+      "sha256": "aabe2ccbd96dc70280ea10f6eb7e5dce59cea48ee633dc736273e5dadf662d7c"
+    },
+    {
+      "path": "academic-paper-reviewer/references/editorial_decision_standards.md",
+      "blob": "85ad97ca94d8c9694de40906bcc04e367e2687c1",
+      "sha256": "88e186e8d743ee40a83842ab2f00f442cd23de417e7e3ba0a7b9b8b5dc91e76d"
+    },
+    {
+      "path": "academic-paper-reviewer/references/guided_mode_protocol.md",
+      "blob": "dc045b1ea3a88ff171431acde4288abd9aedea82",
+      "sha256": "0f5ca4d432a4e10ba5c404c0e3cffc823513c3d2de2bab50996ea200579f6297"
+    },
+    {
+      "path": "academic-paper-reviewer/references/integration_guide.md",
+      "blob": "a356c37346c117f8bf45c1a024925e667499e211",
+      "sha256": "5f0f4a9a386e603d8f7ed50a8ec67073153e2391bfb4b60bf25eacd9dca3ca01"
+    },
+    {
+      "path": "academic-paper-reviewer/references/quality_rubrics.md",
+      "blob": "13a628ffa3fa0f20fe8544c242c8adaebc3cf875",
+      "sha256": "7335aa653d3573a323d9de522b0bc98f3230b7c639b673fc812fa46d607e01e1"
+    },
+    {
+      "path": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+      "blob": "322ec5e666953c6faafdefc08b38aefe13008692",
+      "sha256": "e71c5e5fc477f19aef0c72a621cb313832b54abe42497642481dc681f6b1f036"
+    },
+    {
+      "path": "academic-paper-reviewer/references/review_criteria_framework.md",
+      "blob": "68677ca06aefe894de71a0240e82a2e19279c7ad",
+      "sha256": "6af77dc4a0b86c84dd3b1b7c9849294deb869899c9d82ff100816aca7c1eead9"
+    },
+    {
+      "path": "academic-paper-reviewer/references/review_panel_provenance_protocol.md",
+      "blob": "d4f86af33ffc5a56412428b5c94090bfc76e2988",
+      "sha256": "0e3e8c7e64dc4ac61a5a6a973698515a387eb71dd10e8131b9c2ea617859d439"
+    },
+    {
+      "path": "academic-paper-reviewer/references/review_quality_thinking.md",
+      "blob": "8b551a930b5ee8a2727c04f2c3c567a699d38923",
+      "sha256": "ee4fa6bf144a30810ebe0bbbffa71a79c739398afeb06ca97cb7f1090d3bdb90"
+    },
+    {
+      "path": "academic-paper-reviewer/references/reviewer_sprint_prompt_source.md",
+      "blob": "d876ce951b75af6f8c8dfca7c915ec20bdcf39bf",
+      "sha256": "fb11e4ebb5dd72b17018486409623f0e7bae21728830adf2c7ea1093ae2b0b8b"
+    },
+    {
+      "path": "academic-paper-reviewer/references/sprint_contract_protocol.md",
+      "blob": "5d7f3d5e895844804f3be58a0d55a3f176a54c23",
+      "sha256": "501c9c42a592e625df46a18027af9d8023b680ba9bdf87b2ae3f77bc84eb2810"
+    },
+    {
+      "path": "academic-paper-reviewer/references/statistical_reporting_standards.md",
+      "blob": "21ea230fb962e05dfb12f93c0cb8de441bed9e0d",
+      "sha256": "cfab6520a3d758a94dd165e74cdfee5dbe4e66fdb8f9590462ce94bd77eb93f0"
+    },
+    {
+      "path": "academic-paper-reviewer/references/top_journals_by_field.md",
+      "blob": "21e698b3e0ecc07857a820454b12a885f4158fd2",
+      "sha256": "9a163c97714ddcd4f3d7bcb2beb72ca454c880fe08c255afb43177f3db17ed57"
+    },
+    {
+      "path": "shared/references/authority_content_coverage_advisory_protocol.md",
+      "blob": "680918cc5fde28e5d7457e7c4d3c6017e926cbab",
+      "sha256": "d644b929eb173adfa7748a0341467080ac1c6a6ee595dc3e5fadfe7928a3569f"
+    },
+    {
+      "path": "shared/references/claim_standing_candidate_ledger_protocol.md",
+      "blob": "f68b0f0d38f858d5b7dbafd77da898d84821e154",
+      "sha256": "afe85e8cb8986f125b7807f5f2f8a4839e636750a417fa231a6f1b779167b276"
+    },
+    {
+      "path": "shared/references/claim_strength_ladder.md",
+      "blob": "07fc64de5669819e5f70dbd7311b0f3ed84aca12",
+      "sha256": "22f51a6fefb2525e685b6938cc446fa658bdfb6e43157b5d2e6d5051f2212dfe"
+    },
+    {
+      "path": "shared/references/cross_document_consistency_advisory_protocol.md",
+      "blob": "99e59bbb6ab655278d4bcc7b25281c7cedd05ea9",
+      "sha256": "dae21751708126647394ffa39f1294b48094e2f3678f4549014d4e7395306894"
+    },
+    {
+      "path": "shared/references/evidence_row_protocol.md",
+      "blob": "86f977845db5a4365dbfb789013dd848b1a6af16",
+      "sha256": "ea343e10550f7fe8fa93aa9a7a101cdafe3a60e4842eba12c92d6c8f04b77d24"
+    },
+    {
+      "path": "shared/references/firm_rules.md",
+      "blob": "c177fb73e90657808fe6b970499faadbaeb5a9c2",
+      "sha256": "b2da465f5098101ae866074cf6fed5902611263cc69ba3f007ff447cafda7411"
+    },
+    {
+      "path": "shared/references/human_subjects_authority_protocol.md",
+      "blob": "62839259c79f04217b3c340096ec207a954353dd",
+      "sha256": "5f6e6929d30a0ae757b7468b74a2c82ff1d7997f5c0b706136b9015d03ebb3a1"
+    },
+    {
+      "path": "shared/references/intent_clarification_protocol.md",
+      "blob": "32fb0fd1646ee4450aff24b657bc79d2e3b61410",
+      "sha256": "d3d8fe83f944d1e1886d0ccceaffe695f6e6748be9cdfe0a76fb538e52270d3f"
+    },
+    {
+      "path": "shared/references/irb_terminology_glossary.md",
+      "blob": "33b642b01f59d044e149204fc4a0e2dba1a87046",
+      "sha256": "9ce43e279dbccf38776f9fa875377bde5d406dcc937368a5b7bc09a256ce3b40"
+    },
+    {
+      "path": "shared/references/per_source_method_weaknesses.md",
+      "blob": "bfb5eb47c0059615a9f0f52579a2401d289e8fe7",
+      "sha256": "048eb312fdffb218b22fd7bd667e7169d6237a27ea9fe1e6b94fdf4e58efaef7"
+    },
+    {
+      "path": "shared/references/protected_hedging_phrases.md",
+      "blob": "02a3ae512ff5f52f942c87a3da4b6f97e582cbfb",
+      "sha256": "39e483f2d90ab56559ee0c0c55bf7f083a9dd65008af0c4ddf20712734b0986e"
+    },
+    {
+      "path": "shared/references/psychometric_terminology_glossary.md",
+      "blob": "1f60bae64f4e47cc8775584d474c9ec253bc8c6b",
+      "sha256": "da5f152a4c351f73f97a8389d76bcd5a1296a49394141b9af4fa3821662a5fc3"
+    },
+    {
+      "path": "shared/references/review_criteria_consumer_protocol.md",
+      "blob": "2dc89f92f94dbd31aae5290a4d5ad4749f6fcc37",
+      "sha256": "575cc8c4d286c07fbd56f035c1dad3a65ff34a5b581bedca602dd286df54e1c7"
+    },
+    {
+      "path": "shared/references/review_form_note.md",
+      "blob": "fd17fd4c2e4399421f22745c9a7b542d6cae32d6",
+      "sha256": "03ee2893d18f3d6826a8be93302643e4e8501bef73cc00b47590c752b7115a86"
+    },
+    {
+      "path": "shared/references/review_pathway_rule_trace_protocol.md",
+      "blob": "ff03207e30e8d60b0fd0751233cc49a4901f4478",
+      "sha256": "7ca31c60cfb0b858727eb7b6e0cd7730ded4faa142cc9ad30434470066972058"
+    },
+    {
+      "path": "shared/references/routing_core.md",
+      "blob": "572ac5a3c2015e22eccdd2ed2e2a87afa583a8c7",
+      "sha256": "680f30be9386fe423fd05bd2b8198de54318bbe533f356b714f47949c7c7b729"
+    },
+    {
+      "path": "shared/references/submission_packet_manifest_protocol.md",
+      "blob": "86d3681541ac5eb17d7491c11a8907e5e5b794c3",
+      "sha256": "18192c0350c711c16442252a9996d68a1750ba341824a2fe65f464f15fb0b6dc"
+    },
+    {
+      "path": "shared/references/word_count_conventions.md",
+      "blob": "ddb97620e326ced9f2b1352be8993c2c0c80988b",
+      "sha256": "c226c7961febf5e2179d0885d2c6f32a67a661efe288d602d8debd083a3cc8c8"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "dedfb8b7880e51fe623fa5ea7e27c118eed4e2b9",
+      "sha256": "b3848009d12a173f549ef98d9ee486e64459e8eb5d9f895bff53782b4aa86d7c"
+    }
+  ],
+  "kind": "skill_protocol",
+  "dependency_installation_performed": false,
+  "research_work_done": false,
+  "host_adaptation": "Quick assessment is role-separated current-host critique; not independent peer review. Full panel mode has additional requirements.",
+  "known_requirements": [
+    "Current-host reviewer; independent agents only if authorized/available"
+  ]
+}

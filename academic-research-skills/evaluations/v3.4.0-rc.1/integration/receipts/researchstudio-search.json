@@ -1,0 +1,40 @@
+{
+  "id": "researchstudio-search",
+  "repository": "microsoft/ResearchStudio",
+  "entry": "ResearchStudio-Idea/skills/paper_search/SKILL.md",
+  "commit": "063f10088af49909e1a4a7ea8d29efe19633f34e",
+  "actor_scope": "current_host",
+  "mode": "adapted_in_host",
+  "roles": [
+    "literature"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/software-problem.md",
+      "sha256": "c21ad9f6b33108b7c9cede66933e1822d43bcbe4e1d560baa4813b5e15899408"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/search-results.json",
+      "sha256": "c34ac02ac9331d3909288f868a085c5a515b05ef50f6179bee93d8abaac308ef"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/researchstudio-search-work.md",
+      "sha256": "ff302d5084139a43bfa4bec23943a2da1ae2b286e296e9cc468833e9d912885a"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in researchstudio-search-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": true
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": "Use current-host CLI and screen records; exclude model recall from verified sources; budget and network limits override default run-all searches. CLI --json in guidance is absent in this commit; call search_papers with inspected signature and serialize returned records, then screen actual records."
+}

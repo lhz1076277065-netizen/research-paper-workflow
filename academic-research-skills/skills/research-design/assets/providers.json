@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.3.1",
+  "package_version": "3.4.0-rc.1",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -25,7 +25,110 @@
     "dissemination",
     "workbench"
   ],
-  "providers": [],
-  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "providers": [
+    {
+      "id": "scholar-analysis",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "repo": "Galaxy-Dawn/claude-scholar",
+      "entrypoint": "skills/results-analysis/SKILL.md",
+      "required_paths": [
+        "skills/results-analysis/SKILL.md",
+        "skills/results-analysis/USAGE.md",
+        "skills/results-analysis/references/analysis-depth.md",
+        "skills/results-analysis/references/common-pitfalls.md",
+        "skills/results-analysis/references/figure-interpretation.md",
+        "skills/results-analysis/references/statistical-methods.md",
+        "skills/results-analysis/references/statistical-reporting.md",
+        "skills/results-analysis/references/visualization-best-practices.md",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "22e34019d8bef9bc8d1a0f86528f61c0288e3cb1",
+      "discovered_file_blob_sha": {
+        "skills/results-analysis/SKILL.md": "22e34019d8bef9bc8d1a0f86528f61c0288e3cb1",
+        "skills/results-analysis/USAGE.md": "6890d42f299f7532ad598babce3c3619e571a35a",
+        "skills/results-analysis/references/analysis-depth.md": "5713c629d64739245a3a013b274393ab8bfd7f57",
+        "skills/results-analysis/references/common-pitfalls.md": "559f29a65f9c606a70b721ff2b83b47080e961e2",
+        "skills/results-analysis/references/figure-interpretation.md": "75e25db265e94be44b979a6a3a47ab31cb5abe6d",
+        "skills/results-analysis/references/statistical-methods.md": "db3e74fc295d3c1f171305437dcf919a76d2ab81",
+        "skills/results-analysis/references/statistical-reporting.md": "9719b36a13da6ee09946cd40e99b825d34963ca0",
+        "skills/results-analysis/references/visualization-best-practices.md": "1571cba9cd8487401cd56df77d6f4d8f29944e10",
+        "LICENSE": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "analysis",
+        "methods"
+      ],
+      "capabilities": [
+        "analysis-execution",
+        "research-design"
+      ],
+      "purpose": "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/Galaxy-Dawn/claude-scholar/blob/903787345d6aec134086afa2b97715a78fbde519/skills/results-analysis/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim.",
+      "adaptations": [
+        "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Current-host statistics; actual repeat units required for inference"
+      ],
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "tree": "d7f61d97768bcaa4442e2481da680073da7528bc"
+    },
+    {
+      "id": "sleep-experiment-plan",
+      "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "entrypoint": "skills/experiment-plan/SKILL.md",
+      "required_paths": [
+        "skills/experiment-plan/SKILL.md",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "bc7021bcc7a1a081c02cd02bc14f0ccd774292e2",
+      "discovered_file_blob_sha": {
+        "skills/experiment-plan/SKILL.md": "bc7021bcc7a1a081c02cd02bc14f0ccd774292e2",
+        "LICENSE": "8fe03d26d87a5e5d4934ee50039ff255eb67406a"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "experiment",
+        "methods"
+      ],
+      "capabilities": [
+        "analysis-execution",
+        "research-design"
+      ],
+      "purpose": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/2132036060e03e8d0df69a4b21e5971819c0c2d6/skills/experiment-plan/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists.",
+      "adaptations": [
+        "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Current-host claim/evidence planning"
+      ],
+      "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+      "tree": "368ff746e2f12976b8fa6e7b2448861f44e3efd9"
+    }
+  ],
+  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
   "capability": "research-design"
 }

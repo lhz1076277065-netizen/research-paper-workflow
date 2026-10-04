@@ -1,0 +1,32 @@
+# Data profile: /Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-results.csv
+
+**Shape:** 24 rows × 6 cols
+
+## Columns
+
+| Column | Type | n | missing | summary |
+|---|---|---|---|---|
+| `trial` | continuous | 24 | 0 | mean=5.5, sd=3.53, range=[0, 11], skew=0.00 (approximately symmetric) |
+| `state` | unknown | 24 | 0 |  |
+| `method` | unknown | 24 | 0 |  |
+| `started` | boolean | 24 | 0 | 2 levels: 1(18), 0(6); min_group_n=6 |
+| `wall_seconds` | continuous | 24 | 0 | mean=0.0692, sd=0.0856, range=[0.00123, 0.216], skew=1.01 (highly skewed); outliers=6 (IQR); -> log axis |
+| `expected_controlled_start` | boolean | 24 | 0 | 2 levels: 0(12), 1(12); min_group_n=12 |
+
+## Group structure
+- Grouped by: `method`
+- Number of groups: 2
+- Group size: min=12, median=12, max=12
+
+## Correlations (Pearson, sorted by |r|)
+- `trial` ↔ `wall_seconds` : r = 0.512 (strong)
+
+## Warnings
+- 列 'started' 至少有一个类别 n<10 — 小样本必须展示原始数据点，不要只画均值柱状图。
+
+## Chart suggestions (preliminary)
+- 分类 vs 连续，样本量充足 → 箱线图 / 小提琴图，或带误差棒的柱状图（误差棒说明 SD/SEM/CI）
+- 两连续变量 trial vs wall_seconds → 散点图（含回归拟合 + r 值）
+- wall_seconds 跨数个量级（0.00123 ~ 0.216）→ 用对数 y 轴
+
+> 这是基于数据形态的**初步建议**。最终图型选择必须结合**论证目标**（你想说什么）—— 详见 `references/chart_selection.md`。

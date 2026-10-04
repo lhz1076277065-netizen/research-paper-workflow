@@ -1,0 +1,78 @@
+{
+  "status": "source_prepared",
+  "id": "open-design-deck",
+  "repository": "nexu-io/open-design",
+  "commit": "53231d40b778d88eba23f35547bf99485d3ae9fc",
+  "tree": "841eb221ce85f2328d4cbee0887cd8b5329f77f0",
+  "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/open-design-deck/53231d40b778d88eba23f35547bf99485d3ae9fc/design-templates/html-ppt-tech-sharing/SKILL.md",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/open-design-deck/53231d40b778d88eba23f35547bf99485d3ae9fc",
+  "files": [
+    {
+      "path": "design-templates/html-ppt-tech-sharing/SKILL.md",
+      "blob": "e1a3c2003333b04b55a6034b80a8ffbf1e240b6f",
+      "sha256": "15341f4df540a71cee63bf9efc3ea5cd4f0108f1cb99d743d233fa4346b0f557"
+    },
+    {
+      "path": "design-templates/html-ppt/LICENSE",
+      "blob": "6c44d346dc52cedc04c104a6ff10dd5ae021d5f8",
+      "sha256": "a5ed4059e25a3ec35e439abd2623753d1f42d4aa4989ffb5c6b7a97b61f6a949"
+    },
+    {
+      "path": "design-templates/html-ppt/SKILL.md",
+      "blob": "9a4ead71e39ccf2b6974412cb93b57c990793908",
+      "sha256": "b5795fce89e2291afc829691a6a842a1a0b79a4be93e642e1251da4eea4f1b35"
+    },
+    {
+      "path": "design-templates/html-ppt/assets/animations/animations.css",
+      "blob": "1d00263c73eaef83e4a86c998f4993a28e3865cc",
+      "sha256": "3bc36127d7e491b0a723fe5788682824c9b9e8849cf2a5ceb72dc3ebb951e3e8"
+    },
+    {
+      "path": "design-templates/html-ppt/assets/base.css",
+      "blob": "b8c1107330a2c8d7dadf3889db7e4d78478747bc",
+      "sha256": "04e7c427d1d9401ff080bf72c5c9c0161c1a4759b5efdb2a64bed4e09830e688"
+    },
+    {
+      "path": "design-templates/html-ppt/assets/fonts.css",
+      "blob": "64feb7222db4caab11b9f7944eff7510d99a60ab",
+      "sha256": "1e93c54e2a4c5f27a2404cc2c8f682d50f5d41a95ebecd11ed41f925e3a79572"
+    },
+    {
+      "path": "design-templates/html-ppt/assets/runtime.js",
+      "blob": "535907de7a0d6cab98eced30d1050ec9bece6446",
+      "sha256": "d7b066a96b99fcf5c9e15b593283a57a3d43ac2bcf795d172adc7f3ba0844f79"
+    },
+    {
+      "path": "design-templates/html-ppt/references/full-decks.md",
+      "blob": "c1e3dd67df6643bc915076aeca4bd03e187dab59",
+      "sha256": "c623b261744239ad4d057440beb130190afafee671f79af51cd66d4c9b75c700"
+    },
+    {
+      "path": "design-templates/html-ppt/templates/full-decks/tech-sharing/README.md",
+      "blob": "0ff49467d9b57da02985a57576ea3bbd95f595d7",
+      "sha256": "05f352191afb8421bff65aa4b0b7f2709e04375b036ce44c4ca02af7dabe3e67"
+    },
+    {
+      "path": "design-templates/html-ppt/templates/full-decks/tech-sharing/index.html",
+      "blob": "a64d1326bee10e807f941d85b4091b2906805a1f",
+      "sha256": "972e0750360efc61cfd1887cbce3ae33fdf4b06c521d7db7ebc88b9e77b9e25e"
+    },
+    {
+      "path": "design-templates/html-ppt/templates/full-decks/tech-sharing/style.css",
+      "blob": "10aaf6f3dd8cbd71e64df5253b7de89d48962586",
+      "sha256": "bbdcd19c201f82812828343e47304999dce301a6dafdd27056a99d82a99e37f7"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "eb79c35bd865477e525b18e56f35d56fbe0f7110",
+      "sha256": "9d95806a26532623360eb84bb17d298f394b55ef73fb4c0796d99b4319b2b0da"
+    }
+  ],
+  "kind": "workbench_protocol",
+  "dependency_installation_performed": false,
+  "research_work_done": false,
+  "host_adaptation": "Use HTML template with real local runtime paths and source-backed content; do not claim full Open Design daemon was installed.",
+  "known_requirements": [
+    "Browser for HTML deck; full daemon/app installation not needed for template adapter"
+  ]
+}

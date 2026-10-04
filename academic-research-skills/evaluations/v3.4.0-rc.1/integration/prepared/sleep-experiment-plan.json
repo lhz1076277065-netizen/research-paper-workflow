@@ -1,0 +1,28 @@
+{
+  "status": "source_prepared",
+  "id": "sleep-experiment-plan",
+  "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+  "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+  "tree": "368ff746e2f12976b8fa6e7b2448861f44e3efd9",
+  "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/sleep-experiment-plan/2132036060e03e8d0df69a4b21e5971819c0c2d6/skills/experiment-plan/SKILL.md",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/sleep-experiment-plan/2132036060e03e8d0df69a4b21e5971819c0c2d6",
+  "files": [
+    {
+      "path": "skills/experiment-plan/SKILL.md",
+      "blob": "bc7021bcc7a1a081c02cd02bc14f0ccd774292e2",
+      "sha256": "c5b53692ff95b0b55e80702e33afc79d9fe8d4f55a69e2a39714013f97ac595e"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "8fe03d26d87a5e5d4934ee50039ff255eb67406a",
+      "sha256": "e30cf5dd5f49b4f9b656590e23d782b4756c924a9f0ff0162b3e7b5d87006bf5"
+    }
+  ],
+  "kind": "skill_protocol",
+  "dependency_installation_performed": false,
+  "research_work_done": false,
+  "host_adaptation": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists.",
+  "known_requirements": [
+    "Current-host claim/evidence planning"
+  ]
+}

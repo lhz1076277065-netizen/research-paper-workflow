@@ -1,0 +1,50 @@
+{
+  "id": "paperspine-workbench",
+  "repository": "WUBING2023/PaperSpine",
+  "entry": "dist/codex/skills/paper-spine/SKILL.md",
+  "commit": "f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3",
+  "actor_scope": "current_host",
+  "mode": "adapted_in_host",
+  "roles": [
+    "workbench",
+    "writing",
+    "review"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-results.csv",
+      "sha256": "ee4e87ec39ce31513e5493799ce41d10659451edda460950a5b9b2802d53488b"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/final-report.md",
+      "sha256": "6acf1b285539e01197492e229a260c9429eaecb17cf4fb1f71fbd128712c88da"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/spine/results_validation.md",
+      "sha256": "809b8c718413456eef5185b6a24d66abf823d4fd1dca6bbbd65c309696062e9a"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/spine/results_validation_check.md",
+      "sha256": "18647033266cd26aa7a505d3f8d1927ee7095261183b16799e0cdb89fa0c98dc"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/paperspine-workbench-work.md",
+      "sha256": "7ab38784b44508a421b1f7e54494c76ba89ae3a5b2a96bee356946b7da026ea3"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in paperspine-workbench-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": true
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run."
+}

@@ -1,13 +1,11 @@
-# Start research in the current agent
+# Start with the current request
 
-For full research, read skills/research-paper-workflow/SKILL.md with the real scientific objective and available materials. Search for an important unresolved problem and test contributions against the strongest applicable prior work. Develop new hypotheses/methods/designs from actual findings; lock evidence-supported core contributions before full original manuscript writing. Feed weak manuscript claims back into research. Keep a concise visible research board, estimate the next decisive step and stop routes that no longer reduce a core uncertainty. Preserve fixed user questions and resource boundaries. Focused requests use only the applicable specialist.
+Finish maintenance after version/install verification. Route focused writing, reading and figure tasks directly to the matching specialist. Full research uses skills/research-paper-workflow/SKILL.md and [bounded phases](docs/phase-control.md).
 
-The current agent coordinates as executor; native subagents are optional. A research_model may run, train and be evaluated locally using free tools and suitable licensing. Choose numerical software for the scientific design.
+Without a budget, feasibility lasts at most 45 minutes; shorter user/parent limits take precedence. Establish claims, nearest alternatives, decisive tests, dependencies and cost before expensive work. Set one subsequent total budget and stage plan. Two different repairs or two uninformative rounds require reassessment. Write methods/argument drafts during research; final conclusions require evidence. Enough evidence leads to writing, no feasible decisive test leads to a report.
 
-Select external professional Skills from the user-designated source repositories; discover current entry paths using scripts/research31.py upstream, or use verified installed resources from those sources. Ordinary literature, data, libraries and original research code are unrestricted by this Skill list. Read only the selected task branch and necessary supporting resources.
+Select real implementations from [fourteen pinned sources](docs/capability-routing.md), then connect actual task inputs, professional steps and outputs. Preparation is not execution. Retain native limitations and distinguish functions, protocols and reference use.
 
-Main figures require professional reasoning, production or substantial revision, numerical checks and actual viewing of the final image. Full manuscripts receive the designated evidence-preserving anti-defensive expression pass after scientific review. Retain the earlier manuscript and factual checks.
+Guard expensive actions and run owned processes through phase_control. Resume latest instructions, current stage, key artifacts, failures and next action without resetting counters/budgets or repeating completed maintenance. Local state never substitutes for authorized host-goal management.
 
-Optional Python tools require Python>=3.10. Inspect --help before using a script. selftest.py checks analytic software fixtures; tests/run_all.py is source-package regression. Both are engineering evidence. Neither replaces the scientific question or its decisive test. Portable text export stays short by default; use --detail only when the professional reference is needed.
-
-The library is discipline-neutral. Requests to develop, update or package this library produce Skill folders and software validation; they do not start a research project or manuscript.
+This local 3.4.0-rc.1 candidate has not been published to GitHub. Software verification does not certify scholarly originality or paper completion. See [installation and rollback](INSTALLATION.zh-CN.md).

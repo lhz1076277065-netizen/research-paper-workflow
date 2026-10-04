@@ -1,0 +1,14 @@
+{
+  "updated_paused_resume_rc": 2,
+  "expired_marker_absent": true,
+  "expired_log_absent": true,
+  "paused_marker_absent": true,
+  "paused_log_absent": true,
+  "actual_dependency_attempts": [
+    "local-cache",
+    "standard-library-adapter"
+  ],
+  "third_repair_not_executed": true,
+  "paused_original_state_unchanged": true,
+  "S9_local_phase_created": false
+}

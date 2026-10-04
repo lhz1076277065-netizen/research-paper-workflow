@@ -1,0 +1,1 @@
+The active controlled command created event.json with executed=true and scope=software. Evidence is the actual artifact and child exit0. This validates one software path, not scholarly novelty, autonomous research quality or all host tools. Evidence sufficient for this short report; no additional experiments.

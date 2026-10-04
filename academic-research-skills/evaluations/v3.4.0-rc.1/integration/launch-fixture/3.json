@@ -1,0 +1,43 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "998d379d9bad4493a9585ffdfda182d9",
+  "scope": "full",
+  "objective": "software launch acceptance fixture",
+  "latest_instruction": "software launch acceptance fixture",
+  "status": "closed_limit",
+  "stage": "feasibility",
+  "started_at": "2026-10-04T07:54:35.237853+00:00",
+  "deadline": 1791100474.23791,
+  "project_deadline": 1791100474.23791,
+  "reserve_seconds": 6.0,
+  "budget_kind": "initial_feasibility",
+  "authorization": null,
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [],
+  "artifacts": [],
+  "history": [
+    {
+      "at": "2026-10-04T07:54:35.240681+00:00",
+      "event": "closed_limit",
+      "reasons": [
+        "time_limit_or_delivery_reserve"
+      ]
+    }
+  ],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": null,
+  "owned_processes": [],
+  "host_goal_state": "not_modified",
+  "exit_reason": [
+    "time_limit_or_delivery_reserve"
+  ]
+}

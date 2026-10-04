@@ -1,0 +1,33 @@
+{
+  "status": "source_prepared",
+  "id": "rougier-reference",
+  "repository": "rougier/scientific-visualization-book",
+  "commit": "62fa569f30333c817c13e4dc757877c1192fd15a",
+  "tree": "16946d8960b3b82df1ead6e8e6b70b6e9eed578c",
+  "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/rougier-reference/62fa569f30333c817c13e4dc757877c1192fd15a/code/ornaments/legend-alternatives.py",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/rougier-reference/62fa569f30333c817c13e4dc757877c1192fd15a",
+  "files": [
+    {
+      "path": "README.md",
+      "blob": "015656850f4881bba60f3a106656fc30fa1df0e2",
+      "sha256": "9561a33051c1b7997fabce766e4d04aaf947cfebd5d45d8b37811e885b4efce6"
+    },
+    {
+      "path": "code/ornaments/legend-alternatives.py",
+      "blob": "5b63b63ba04cd09d184029b3409188a685d7b0e0",
+      "sha256": "b84143a4751e8b2d98a4fd6d1c45f29f98623f79de221044926288d287035893"
+    },
+    {
+      "path": "LICENSE.txt",
+      "blob": "211a8b2f1c4180a1a96a2f282822e8fb189e8d0c",
+      "sha256": "f0b8e098275d9fa8b70665e944211e751aa5063ee9a9731c11e35ba0a6933440"
+    }
+  ],
+  "kind": "reference_code",
+  "dependency_installation_performed": false,
+  "research_work_done": false,
+  "host_adaptation": "BSD example/reference, not an Agent Skill; execute in isolated example directory and apply label design to actual figure.",
+  "known_requirements": [
+    "numpy/matplotlib for executable example"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "c1814898f95647348fc13afbec76b0ce",
+  "scope": "full",
+  "objective": "SOFTWARE_FIXTURE: insufficient-decisive-test",
+  "latest_instruction": "SOFTWARE_FIXTURE: insufficient-decisive-test",
+  "status": "route_closed",
+  "stage": "feasibility",
+  "started_at": "2026-10-04T08:07:58.167816+00:00",
+  "deadline": 1791101518.167816,
+  "project_deadline": 1791101518.167816,
+  "reserve_seconds": 24.0,
+  "budget_kind": "initial_feasibility",
+  "authorization": null,
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [],
+  "artifacts": [
+    {
+      "path": "S3-closed-route.md",
+      "sha256": "8d69b4073437f863f82c53c68d78137b7bcc06266660db50225cdf4b5eece916"
+    }
+  ],
+  "history": [],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": null,
+  "owned_processes": [],
+  "host_goal_state": "not_modified",
+  "exit_reason": "fixture预测重合且无可用决定性检验"
+}

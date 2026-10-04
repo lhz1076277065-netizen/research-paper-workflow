@@ -1,0 +1,44 @@
+{
+  "id": "rougier-reference",
+  "repository": "rougier/scientific-visualization-book",
+  "entry": "code/ornaments/legend-alternatives.py",
+  "commit": "62fa569f30333c817c13e4dc757877c1192fd15a",
+  "actor_scope": "current_host",
+  "mode": "reference_only",
+  "roles": [
+    "figure_reference"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/rougier-reference/62fa569f30333c817c13e4dc757877c1192fd15a/code/ornaments/legend-alternatives.py",
+      "sha256": "b84143a4751e8b2d98a4fd6d1c45f29f98623f79de221044926288d287035893"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/rougier/figures/ornaments/legend-alternatives.pdf",
+      "sha256": "8bb82403fcf72f10f5ff866a60d8adf7925c19a532df9c1eb51a4988987eb51e"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/rougier-reference-work.md",
+      "sha256": "f9da4815fcec36efb7d847c5952aec9962ff675eeb88a99602205ec4097ac574"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-figure.png",
+      "sha256": "f776579a34d451b2a4ae0de242cf9ff420c215efa402a6f065e0496c7bee05f4"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in rougier-reference-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": false,
+    "functions_run": true
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": null
+}

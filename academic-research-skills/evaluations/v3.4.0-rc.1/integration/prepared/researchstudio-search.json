@@ -1,0 +1,103 @@
+{
+  "status": "source_prepared",
+  "id": "researchstudio-search",
+  "repository": "microsoft/ResearchStudio",
+  "commit": "063f10088af49909e1a4a7ea8d29efe19633f34e",
+  "tree": "2ffbb2cc23a25abc2f52a0ba692a4126b274ed8a",
+  "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/researchstudio-search/063f10088af49909e1a4a7ea8d29efe19633f34e/ResearchStudio-Idea/skills/paper_search/SKILL.md",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/researchstudio-search/063f10088af49909e1a4a7ea8d29efe19633f34e",
+  "files": [
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/SKILL.md",
+      "blob": "e840090d3a87d08c7ea2a6772673fe4bf4bccb38",
+      "sha256": "9249f89d84d8d6ba86419898376841e19ed531885c91ff1b5290d7c92af07159"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/references/programmatic_api.md",
+      "blob": "d39db3475fea51fc1b052dee1a0155fa7fa4a613",
+      "sha256": "aa63ff10541e6256aa7a9226d7571140c5734351c8729d30851d617b0b31b832"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/_env.py",
+      "blob": "08a87526951218c353b7fc3c6c01eca525695e82",
+      "sha256": "d050425ca84a2bc32f9ceb05b035d708f68b7cc1c1ea1ac330b43051336632dc"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/_http_runtime.py",
+      "blob": "19af540319d3474ddacb2e195e7d8f354b13a0b9",
+      "sha256": "bfbbf76a8bb4c7bb0b0f1eb68d2c7a1c8b307449aa2a645435e7c67a96907604"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/postprocess.py",
+      "blob": "2399446376560d7654424677f0f85102e555da5f",
+      "sha256": "cc91b05c55f06832483a655a0cdcf0980da6b3c1102342c4020e379927b0f036"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers.py",
+      "blob": "1bb3d2ca452d743db2c266ba8de9fe03225e1270",
+      "sha256": "2d32c4f8f3e74a55ac2ffde17cee5a00649d62ed6eca0add4fdcd29f6e45de43"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_arxiv.py",
+      "blob": "4ebf1d1dbb6c3b3453402398fcc9a1cea5c41f81",
+      "sha256": "d7b8ace270f3893c4e5f1b6a844390f0902107aca517043ee59ae96d479eaf11"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_crossref.py",
+      "blob": "5cc1e62b32abc3da1bf95e3c03ffc8c7bad1a360",
+      "sha256": "f6bd334a7aa95ba3597b66b8a39a3c92210272877f8c5dc5ab554b180cab2768"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_dblp.py",
+      "blob": "c448ae235340806f9e8b4befbd1098eeddcd3fa9",
+      "sha256": "678789a0dd1afad500bb114dd4c54eae6d06612ec6a87e90e6798c79e2e58009"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_google_scholar.py",
+      "blob": "8e9ed45040b0c9b0a1ff748fcc761a87112c7a2d",
+      "sha256": "5bb4eb6a40494de770faf50cc2f1b300942e083628b709e57e96762b8e62b28c"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_open_alex.py",
+      "blob": "2429a01681626794546a33411ce01e20ae0b9425",
+      "sha256": "df12ed36f22eb67233840b154278b94578a3ea5781056c597794778915848eb3"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_openreview.py",
+      "blob": "3e3980cee501ad85be804c60f6ca441a67293c1a",
+      "sha256": "3ed426d514814a847554ea324c374c94c8a2856550ebf2ae3afcdf00cfc326b4"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_semantic_scholar.py",
+      "blob": "53169f587b30322fa6032c36754c5e5222efe44d",
+      "sha256": "87c3c6ec0799b6a6a26da5fa3c07d09c3e275544580bf7e07175e170ef093d5b"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/selftest_postprocess.py",
+      "blob": "489582fd558e9404960f0195aa027c354c9a4aee",
+      "sha256": "b94ee238de608e42a3d3f53841170b04b3d59e0c01c77d881b092f6ec39c4a47"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/selftest_runtime.py",
+      "blob": "7f0c4828df5de4d1ecfcfdf8e2154f4b5e2effc0",
+      "sha256": "b3afda2daa0149d41a0fe81fd6b72cf78dbda0da64b6a1a74abdc1785e2cdd2f"
+    },
+    {
+      "path": "ResearchStudio-Idea/skills/paper_search/scripts/source_worker.py",
+      "blob": "d7b1554c9864f909d8029f66198070bf7b847ab0",
+      "sha256": "073588655b61f80bcce27d6e7ac4a61f057f2beca2ad7736c2f3555eeeff3493"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "e5e946a0371af9920be22ea4adb584000fface8c",
+      "sha256": "db60a6df93f1786929a223558ca0c202ef61095600785cf7503fbcd4bac1bd02"
+    }
+  ],
+  "kind": "skill_protocol",
+  "dependency_installation_performed": false,
+  "research_work_done": false,
+  "host_adaptation": "Use current-host CLI and screen records; exclude model recall from verified sources; budget and network limits override default run-all searches.",
+  "known_requirements": [
+    "Python3; source API network access; stdlib connectors"
+  ]
+}

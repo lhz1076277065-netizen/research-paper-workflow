@@ -1,0 +1,63 @@
+{
+  "status": "source_prepared",
+  "id": "scholar-analysis",
+  "repository": "Galaxy-Dawn/claude-scholar",
+  "commit": "903787345d6aec134086afa2b97715a78fbde519",
+  "tree": "d7f61d97768bcaa4442e2481da680073da7528bc",
+  "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/scholar-analysis/903787345d6aec134086afa2b97715a78fbde519/skills/results-analysis/SKILL.md",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/scholar-analysis/903787345d6aec134086afa2b97715a78fbde519",
+  "files": [
+    {
+      "path": "skills/results-analysis/SKILL.md",
+      "blob": "22e34019d8bef9bc8d1a0f86528f61c0288e3cb1",
+      "sha256": "2232f74d141fad4a3e23635be0109217713d34bf0cb7be8d120e6296f4b79782"
+    },
+    {
+      "path": "skills/results-analysis/USAGE.md",
+      "blob": "6890d42f299f7532ad598babce3c3619e571a35a",
+      "sha256": "d42167b0dc110d20f048037b9a60da2e7d5dfb142884e66040d6388857f84fed"
+    },
+    {
+      "path": "skills/results-analysis/references/analysis-depth.md",
+      "blob": "5713c629d64739245a3a013b274393ab8bfd7f57",
+      "sha256": "8c4c42f24701895084d96e41575ba95b6d7e2ef28f74aefe76606353a4ce47b3"
+    },
+    {
+      "path": "skills/results-analysis/references/common-pitfalls.md",
+      "blob": "559f29a65f9c606a70b721ff2b83b47080e961e2",
+      "sha256": "f16c6528d21fa75c4e5bcadba4e8b14d9d64343c581336e26849caf887d4d22b"
+    },
+    {
+      "path": "skills/results-analysis/references/figure-interpretation.md",
+      "blob": "75e25db265e94be44b979a6a3a47ab31cb5abe6d",
+      "sha256": "e45c750f06636f0ef9ba01a7b4ad53b122adffbde918a35dbbf31ae2c4e3a2d8"
+    },
+    {
+      "path": "skills/results-analysis/references/statistical-methods.md",
+      "blob": "db3e74fc295d3c1f171305437dcf919a76d2ab81",
+      "sha256": "8e9a556c65e1b5d6df562399640a69ee7d1df4da0bc525a590dd3f9abadb458b"
+    },
+    {
+      "path": "skills/results-analysis/references/statistical-reporting.md",
+      "blob": "9719b36a13da6ee09946cd40e99b825d34963ca0",
+      "sha256": "020d5d045067299b625df9c68e3486b917eaaf6b0277d250ec103c362eda6cf6"
+    },
+    {
+      "path": "skills/results-analysis/references/visualization-best-practices.md",
+      "blob": "1571cba9cd8487401cd56df77d6f4d8f29944e10",
+      "sha256": "28c2a9b9ab51abcd697b5db63fb78597b86b2f87cfa91902613fcb5d2c17b3fe"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf",
+      "sha256": "5a1e92b9b489ec750c774555a7840af3978bc574e1395f6796695ffc67a62bef"
+    }
+  ],
+  "kind": "skill_protocol",
+  "dependency_installation_performed": false,
+  "research_work_done": false,
+  "host_adaptation": "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim.",
+  "known_requirements": [
+    "Current-host statistics; actual repeat units required for inference"
+  ]
+}

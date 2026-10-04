@@ -1,0 +1,41 @@
+{
+  "id": "orchestra-ideation",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "entry": "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "actor_scope": "current_host",
+  "mode": "adapted_in_host",
+  "roles": [
+    "ideation",
+    "novelty"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/software-problem.md",
+      "sha256": "c21ad9f6b33108b7c9cede66933e1822d43bcbe4e1d560baa4813b5e15899408"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/orchestra-ideation-work.md",
+      "sha256": "05b43188d80f8d4f11dfa14107f4a283c4996f44aa56ff040c2789988424c5c2"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/experiment-plan.md",
+      "sha256": "9e6b4fd863c4cee8eb637ecb5a9fcd1151e8af4be5036d7673bfdf1a73083f8d"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in orchestra-ideation-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": false
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": "Use selected relevant ideation lenses; explicit fixed questions do not require repeated brainstorming or new research scope."
+}

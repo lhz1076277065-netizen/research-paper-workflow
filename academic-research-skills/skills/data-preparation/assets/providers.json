@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.3.1",
+  "package_version": "3.4.0-rc.1",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -25,7 +25,92 @@
     "dissemination",
     "workbench"
   ],
-  "providers": [],
-  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "providers": [
+    {
+      "id": "kdense-eda",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/exploratory-data-analysis/SKILL.md",
+      "required_paths": [
+        "skills/exploratory-data-analysis/SKILL.md",
+        "skills/exploratory-data-analysis/assets/report_template.md",
+        "skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md",
+        "skills/exploratory-data-analysis/references/chemistry_molecular_formats.md",
+        "skills/exploratory-data-analysis/references/general_scientific_formats.md",
+        "skills/exploratory-data-analysis/references/microscopy_imaging_formats.md",
+        "skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md",
+        "skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md",
+        "skills/exploratory-data-analysis/scripts/__init__.py",
+        "skills/exploratory-data-analysis/scripts/_capabilities.py",
+        "skills/exploratory-data-analysis/scripts/_common.py",
+        "skills/exploratory-data-analysis/scripts/_structured.py",
+        "skills/exploratory-data-analysis/scripts/_tabular.py",
+        "skills/exploratory-data-analysis/scripts/capability_manifest.py",
+        "skills/exploratory-data-analysis/scripts/distribution_sensitivity.py",
+        "skills/exploratory-data-analysis/scripts/eda_analyzer.py",
+        "skills/exploratory-data-analysis/scripts/image_inspector.py",
+        "skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py",
+        "skills/exploratory-data-analysis/scripts/report_scaffold.py",
+        "skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+        "skills/exploratory-data-analysis/scripts/tabular_profile.py",
+        "LICENSE.md"
+      ],
+      "entry_git_blob_sha": "c461f99dea057872298ce6f04e7c090a83d80d01",
+      "discovered_file_blob_sha": {
+        "skills/exploratory-data-analysis/SKILL.md": "c461f99dea057872298ce6f04e7c090a83d80d01",
+        "skills/exploratory-data-analysis/assets/report_template.md": "cf651d8d360f702230d03c124a2ff0f5b2e2e97c",
+        "skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md": "c82fb3679a4e7db3be07bf11c98666166e9b4605",
+        "skills/exploratory-data-analysis/references/chemistry_molecular_formats.md": "40d5dff9437c596e79bf53d98ce5135e8d1bec49",
+        "skills/exploratory-data-analysis/references/general_scientific_formats.md": "1fcfd35ac18b2caa932ca2009b987ae0b1261550",
+        "skills/exploratory-data-analysis/references/microscopy_imaging_formats.md": "4159a6bd6aaeddbc5147b9e71ade65359fce13b2",
+        "skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md": "f04246379bca90d2a8bf0e27633da55dfd276596",
+        "skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md": "429ddc84592a6deee21c13b69d6ae16eefa972d3",
+        "skills/exploratory-data-analysis/scripts/__init__.py": "7fb9dd8fa120dd2d00eb2be0c5a4c1c4349c908a",
+        "skills/exploratory-data-analysis/scripts/_capabilities.py": "9aa1327f23a58324baabb777c98a01b577787fa1",
+        "skills/exploratory-data-analysis/scripts/_common.py": "d098fc4e0acf3a0f67c8a4f6596ba69e29388b1b",
+        "skills/exploratory-data-analysis/scripts/_structured.py": "714ec59a5d187359c0a329c3d81b5b3196af9ee9",
+        "skills/exploratory-data-analysis/scripts/_tabular.py": "5311d1a9aef4995210442792e6a75221e8ad60f1",
+        "skills/exploratory-data-analysis/scripts/capability_manifest.py": "a1ee36326ea6889b38428714283ce2f4952db461",
+        "skills/exploratory-data-analysis/scripts/distribution_sensitivity.py": "f8db91f4b7391152ae2b808387d67543bf52bb38",
+        "skills/exploratory-data-analysis/scripts/eda_analyzer.py": "40781abbc7879354c3430fc6f35ebad2331f195e",
+        "skills/exploratory-data-analysis/scripts/image_inspector.py": "a051fd39b64f3d511e3b764eda78b9f72d776db4",
+        "skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py": "af3f1e98588547674dbfc6bc56644fe749b747c8",
+        "skills/exploratory-data-analysis/scripts/report_scaffold.py": "a816e5f422078b7fddbe6bd4c465422c9a5ea651",
+        "skills/exploratory-data-analysis/scripts/sequence_inspector.py": "66e985e15ef369ba26cbdd65cc2a6ec4460d7a0c",
+        "skills/exploratory-data-analysis/scripts/tabular_profile.py": "874ef86b871eb72b8f95a87cfc4cad29f72be148",
+        "LICENSE.md": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "data",
+        "analysis"
+      ],
+      "capabilities": [
+        "data-preparation",
+        "analysis-execution"
+      ],
+      "purpose": "Core local CLI is native; unsupported scientific formats need separately checked tools, never claim universal format support.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/exploratory-data-analysis/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Core local CLI is native; unsupported scientific formats need separately checked tools, never claim universal format support.",
+      "adaptations": [
+        "Core local CLI is native; unsupported scientific formats need separately checked tools, never claim universal format support."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Python>=3.11 for core stdlib CLIs; optional format libraries installed only as needed"
+      ],
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0"
+    }
+  ],
+  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
   "capability": "data-preparation"
 }

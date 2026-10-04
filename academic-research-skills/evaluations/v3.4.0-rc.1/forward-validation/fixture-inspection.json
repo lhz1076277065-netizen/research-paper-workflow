@@ -1,0 +1,13 @@
+{
+  "rows": 8,
+  "columns": [
+    "fixture_id",
+    "material_type",
+    "scenario",
+    "synthetic_deadline_offset_seconds",
+    "expected_software_behavior"
+  ],
+  "material_type_verified": true,
+  "scientific_analysis_started": false,
+  "finding": "仅验证fixture可读与显式标记；没有从合成材料推断科学可行性"
+}

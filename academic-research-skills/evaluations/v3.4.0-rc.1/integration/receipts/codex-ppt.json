@@ -1,0 +1,48 @@
+{
+  "id": "codex-ppt",
+  "repository": "ningzimu/codex-ppt-skill",
+  "entry": "skills/codex-ppt/SKILL.md",
+  "commit": "6d76c0eded7f8a8b0c4e304697e6f2bda7c408b2",
+  "actor_scope": "current_host",
+  "mode": "function_only",
+  "roles": [
+    "presentation"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-figure.png",
+      "sha256": "f776579a34d451b2a4ae0de242cf9ff420c215efa402a6f065e0496c7bee05f4"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/ppt/fixture-deck/speech.md",
+      "sha256": "bf01e99f4d021c70b131b1fa7b68fd0ff59c3cfa23e60383a7f9f9777385cba3"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/ppt/fixture-deck/fixture-deck.pptx",
+      "sha256": "e90afddb087b739fbac5c8855e0f1b4792105a10a8f16a20c8a9e4ac0a9b41ea"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/ppt-inspection.json",
+      "sha256": "ea16daaf008ab1d03d0d42efc8941336ff3371c4f1ba5142c45a96237f2e633b"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/codex-ppt-work.md",
+      "sha256": "aa6ea8bb8f99efaa142b44786b766764b159da33612d68d245ee54e0aee28306"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in codex-ppt-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": false,
+    "functions_run": true
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": null
+}

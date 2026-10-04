@@ -1,19 +1,11 @@
-# Academic Research Skills 3.3.1
+# Academic Research Skills 3.4.0-rc.1 — local candidate
 
-One optional research orchestrator and eighteen standalone specialists. Full research uses computer-executable routes: actively acquire lawful digital materials, search and test contributions against the strongest applicable prior work, use a discovery loop to develop knowledge/methods/designs, and lock supported core contributions before full original manuscript production. Weak manuscript claims return to research. Focused requests use the relevant specialist directly.
+One orchestrator and eighteen standalone specialists, generated from maintained source. Full research starts with bounded feasibility (up to 45 minutes without a budget; shorter user/parent limits take precedence), then uses one authorized total budget through design, necessary research, manuscript review and delivery. Two materially different repairs or two uninformative rounds require reassessment. Supported evidence leads to writing; an infeasible route leads to a blocker report. Maintenance and focused writing finish within their requested scope.
 
-Version 3.3.1 makes contribution significance and pre-lock adversarial review explicit, connects observations to proposed changes and different predictions, and separates necessary research from optional extensions. Final expression requires evidence-preserving argument revision and factual review; its preferred external Skill is mandatory only when explicitly requested by the user.
+[Start](START_HERE.en.md), [phase control](docs/phase-control.md), [capability routing](docs/capability-routing.md), [installation and rollback](INSTALLATION.zh-CN.md), [中文](README.zh-CN.md).
 
-Start at [START_HERE.en.md](START_HERE.en.md) or skills/<capability>/SKILL.md. Load only necessary references. Nineteen complete independent folders, sixteen profiles, fourteen computational routes and detailed professional protocols remain available. Native internal delegation is optional.
+Fourteen existing source repositories now have pinned, verified entrypoints, support files, capability types, dependencies, inputs and outputs. Preparation does not execute professional work. Select implementations by task, record real input/output evidence, and distinguish current-host adaptations, native functions, references and workbench subflows. Do not require every repository for every paper or claim unsupported native workflows passed.
 
-Professional Skills are discovered from the approved source repositories. Scientific literature, data, ordinary libraries and original code are separate from that source scope. Main figures require actual professional work, numeric checks and inspection of the final image; complete manuscripts retain evidence-preserving review and expression revision.
+The phase tool retains budgets and latest instructions, denies stopped work and manages only the process groups it creates. It is not a host/OS sandbox. Token deltas require actual host accounting; unavailable accounting cannot certify a ceiling. Platform capacity and remote compaction failures remain external limitations.
 
-The retained rc.5 result-links interface checks declared numeric/source-semantic occurrences, limited local relationships and stale rendering dependencies. It neither discovers every claim nor certifies source truth, scientific novelty or publication quality. See [migration examples](MIGRATION.zh-CN.md), [supported scope](docs/COMPATIBILITY.zh-CN.md), [development validation archive](https://github.com/lhz1076277065-netizen/research-paper-workflow/tree/main/academic-research-skills/evaluations) and [installation](INSTALLATION.zh-CN.md).
-
-The macOS one-click installer requires Python3.9+ and an existing Codex system installer; engineering scripts require Python3.10+. macOS ARM64 local execution and Linux CLI dual-PDF CI are covered; other native hosts/platform installations are unverified. Software versioning does not guarantee general research creativity or acceptance probability.
-
-[中文说明](README.zh-CN.md) · [Stable release](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.3.1)
-
-Runtime packages contain general Skills and usage resources. Evaluation tasks, answers, results and development reports remain in the source archive. Updating this library does not start a manuscript project.
-
-Stable [v3.2.0](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.2.0) remains available.
+This candidate was maintained from v3.3.1 and delivered locally, without GitHub publication. Software regressions, bounded independent behavior exercises, fourteen integration scopes and a miniature complete software flow are archived under evaluations/v3.4.0-rc.1 in the source package. They do not certify scientific novelty, long-running agent quality or acceptance probability.

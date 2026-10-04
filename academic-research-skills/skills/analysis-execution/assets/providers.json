@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.3.1",
+  "package_version": "3.4.0-rc.1",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -25,7 +25,242 @@
     "dissemination",
     "workbench"
   ],
-  "providers": [],
-  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "providers": [
+    {
+      "id": "kdense-eda",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/exploratory-data-analysis/SKILL.md",
+      "required_paths": [
+        "skills/exploratory-data-analysis/SKILL.md",
+        "skills/exploratory-data-analysis/assets/report_template.md",
+        "skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md",
+        "skills/exploratory-data-analysis/references/chemistry_molecular_formats.md",
+        "skills/exploratory-data-analysis/references/general_scientific_formats.md",
+        "skills/exploratory-data-analysis/references/microscopy_imaging_formats.md",
+        "skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md",
+        "skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md",
+        "skills/exploratory-data-analysis/scripts/__init__.py",
+        "skills/exploratory-data-analysis/scripts/_capabilities.py",
+        "skills/exploratory-data-analysis/scripts/_common.py",
+        "skills/exploratory-data-analysis/scripts/_structured.py",
+        "skills/exploratory-data-analysis/scripts/_tabular.py",
+        "skills/exploratory-data-analysis/scripts/capability_manifest.py",
+        "skills/exploratory-data-analysis/scripts/distribution_sensitivity.py",
+        "skills/exploratory-data-analysis/scripts/eda_analyzer.py",
+        "skills/exploratory-data-analysis/scripts/image_inspector.py",
+        "skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py",
+        "skills/exploratory-data-analysis/scripts/report_scaffold.py",
+        "skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+        "skills/exploratory-data-analysis/scripts/tabular_profile.py",
+        "LICENSE.md"
+      ],
+      "entry_git_blob_sha": "c461f99dea057872298ce6f04e7c090a83d80d01",
+      "discovered_file_blob_sha": {
+        "skills/exploratory-data-analysis/SKILL.md": "c461f99dea057872298ce6f04e7c090a83d80d01",
+        "skills/exploratory-data-analysis/assets/report_template.md": "cf651d8d360f702230d03c124a2ff0f5b2e2e97c",
+        "skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md": "c82fb3679a4e7db3be07bf11c98666166e9b4605",
+        "skills/exploratory-data-analysis/references/chemistry_molecular_formats.md": "40d5dff9437c596e79bf53d98ce5135e8d1bec49",
+        "skills/exploratory-data-analysis/references/general_scientific_formats.md": "1fcfd35ac18b2caa932ca2009b987ae0b1261550",
+        "skills/exploratory-data-analysis/references/microscopy_imaging_formats.md": "4159a6bd6aaeddbc5147b9e71ade65359fce13b2",
+        "skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md": "f04246379bca90d2a8bf0e27633da55dfd276596",
+        "skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md": "429ddc84592a6deee21c13b69d6ae16eefa972d3",
+        "skills/exploratory-data-analysis/scripts/__init__.py": "7fb9dd8fa120dd2d00eb2be0c5a4c1c4349c908a",
+        "skills/exploratory-data-analysis/scripts/_capabilities.py": "9aa1327f23a58324baabb777c98a01b577787fa1",
+        "skills/exploratory-data-analysis/scripts/_common.py": "d098fc4e0acf3a0f67c8a4f6596ba69e29388b1b",
+        "skills/exploratory-data-analysis/scripts/_structured.py": "714ec59a5d187359c0a329c3d81b5b3196af9ee9",
+        "skills/exploratory-data-analysis/scripts/_tabular.py": "5311d1a9aef4995210442792e6a75221e8ad60f1",
+        "skills/exploratory-data-analysis/scripts/capability_manifest.py": "a1ee36326ea6889b38428714283ce2f4952db461",
+        "skills/exploratory-data-analysis/scripts/distribution_sensitivity.py": "f8db91f4b7391152ae2b808387d67543bf52bb38",
+        "skills/exploratory-data-analysis/scripts/eda_analyzer.py": "40781abbc7879354c3430fc6f35ebad2331f195e",
+        "skills/exploratory-data-analysis/scripts/image_inspector.py": "a051fd39b64f3d511e3b764eda78b9f72d776db4",
+        "skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py": "af3f1e98588547674dbfc6bc56644fe749b747c8",
+        "skills/exploratory-data-analysis/scripts/report_scaffold.py": "a816e5f422078b7fddbe6bd4c465422c9a5ea651",
+        "skills/exploratory-data-analysis/scripts/sequence_inspector.py": "66e985e15ef369ba26cbdd65cc2a6ec4460d7a0c",
+        "skills/exploratory-data-analysis/scripts/tabular_profile.py": "874ef86b871eb72b8f95a87cfc4cad29f72be148",
+        "LICENSE.md": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "data",
+        "analysis"
+      ],
+      "capabilities": [
+        "data-preparation",
+        "analysis-execution"
+      ],
+      "purpose": "Core local CLI is native; unsupported scientific formats need separately checked tools, never claim universal format support.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/exploratory-data-analysis/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Core local CLI is native; unsupported scientific formats need separately checked tools, never claim universal format support.",
+      "adaptations": [
+        "Core local CLI is native; unsupported scientific formats need separately checked tools, never claim universal format support."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Python>=3.11 for core stdlib CLIs; optional format libraries installed only as needed"
+      ],
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0"
+    },
+    {
+      "id": "scholar-analysis",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "repo": "Galaxy-Dawn/claude-scholar",
+      "entrypoint": "skills/results-analysis/SKILL.md",
+      "required_paths": [
+        "skills/results-analysis/SKILL.md",
+        "skills/results-analysis/USAGE.md",
+        "skills/results-analysis/references/analysis-depth.md",
+        "skills/results-analysis/references/common-pitfalls.md",
+        "skills/results-analysis/references/figure-interpretation.md",
+        "skills/results-analysis/references/statistical-methods.md",
+        "skills/results-analysis/references/statistical-reporting.md",
+        "skills/results-analysis/references/visualization-best-practices.md",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "22e34019d8bef9bc8d1a0f86528f61c0288e3cb1",
+      "discovered_file_blob_sha": {
+        "skills/results-analysis/SKILL.md": "22e34019d8bef9bc8d1a0f86528f61c0288e3cb1",
+        "skills/results-analysis/USAGE.md": "6890d42f299f7532ad598babce3c3619e571a35a",
+        "skills/results-analysis/references/analysis-depth.md": "5713c629d64739245a3a013b274393ab8bfd7f57",
+        "skills/results-analysis/references/common-pitfalls.md": "559f29a65f9c606a70b721ff2b83b47080e961e2",
+        "skills/results-analysis/references/figure-interpretation.md": "75e25db265e94be44b979a6a3a47ab31cb5abe6d",
+        "skills/results-analysis/references/statistical-methods.md": "db3e74fc295d3c1f171305437dcf919a76d2ab81",
+        "skills/results-analysis/references/statistical-reporting.md": "9719b36a13da6ee09946cd40e99b825d34963ca0",
+        "skills/results-analysis/references/visualization-best-practices.md": "1571cba9cd8487401cd56df77d6f4d8f29944e10",
+        "LICENSE": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "analysis",
+        "methods"
+      ],
+      "capabilities": [
+        "analysis-execution",
+        "research-design"
+      ],
+      "purpose": "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/Galaxy-Dawn/claude-scholar/blob/903787345d6aec134086afa2b97715a78fbde519/skills/results-analysis/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim.",
+      "adaptations": [
+        "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Current-host statistics; actual repeat units required for inference"
+      ],
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "tree": "d7f61d97768bcaa4442e2481da680073da7528bc"
+    },
+    {
+      "id": "sleep-experiment-plan",
+      "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "entrypoint": "skills/experiment-plan/SKILL.md",
+      "required_paths": [
+        "skills/experiment-plan/SKILL.md",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "bc7021bcc7a1a081c02cd02bc14f0ccd774292e2",
+      "discovered_file_blob_sha": {
+        "skills/experiment-plan/SKILL.md": "bc7021bcc7a1a081c02cd02bc14f0ccd774292e2",
+        "LICENSE": "8fe03d26d87a5e5d4934ee50039ff255eb67406a"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "experiment",
+        "methods"
+      ],
+      "capabilities": [
+        "analysis-execution",
+        "research-design"
+      ],
+      "purpose": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/2132036060e03e8d0df69a4b21e5971819c0c2d6/skills/experiment-plan/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists.",
+      "adaptations": [
+        "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Current-host claim/evidence planning"
+      ],
+      "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+      "tree": "368ff746e2f12976b8fa6e7b2448861f44e3efd9"
+    },
+    {
+      "id": "autoresearch-protocol",
+      "repository": "karpathy/autoresearch",
+      "repo": "karpathy/autoresearch",
+      "entrypoint": "program.md",
+      "required_paths": [
+        "README.md",
+        "prepare.py",
+        "program.md",
+        "pyproject.toml",
+        "train.py"
+      ],
+      "entry_git_blob_sha": "dea9bcc0174f1502d0ba64000b94b81ba605855b",
+      "discovered_file_blob_sha": {
+        "README.md": "953ea55d5599c45c1be7dad93ec03e47dfa7df9d",
+        "prepare.py": "06bea9165abd3ae94ea82dd733997aec7928f40c",
+        "program.md": "dea9bcc0174f1502d0ba64000b94b81ba605855b",
+        "pyproject.toml": "94ae3298925ddae47821f703faf44d4e3b8381bb",
+        "train.py": "2e743974c7f06b54311643b314712303fbb26e65"
+      },
+      "kind": "code_tool",
+      "roles": [
+        "experiment"
+      ],
+      "capabilities": [
+        "analysis-execution"
+      ],
+      "purpose": "Native training blocked on current Mac; can apply experiment bookkeeping to a local software fixture with adapted_in_host, never claim native training or val_bpb.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/program.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Native training blocked on current Mac; can apply experiment bookkeeping to a local software fixture with adapted_in_host, never claim native training or val_bpb.",
+      "adaptations": [
+        "Native training blocked on current Mac; can apply experiment bookkeeping to a local software fixture with adapted_in_host, never claim native training or val_bpb."
+      ],
+      "phase": 1,
+      "mode": "reference-only",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Native training requires CUDA GPU/H100-class environment, uv and torch; not verified on this Mac"
+      ],
+      "commit": "228791fb499afffb54b46200aca536f79142f117",
+      "tree": "04fa7a1a3ad211e97d894bb42df7698dae5d92ba"
+    }
+  ],
+  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
   "capability": "analysis-execution"
 }

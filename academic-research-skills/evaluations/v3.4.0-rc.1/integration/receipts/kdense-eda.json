@@ -1,0 +1,41 @@
+{
+  "id": "kdense-eda",
+  "repository": "K-Dense-AI/scientific-agent-skills",
+  "entry": "skills/exploratory-data-analysis/SKILL.md",
+  "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+  "actor_scope": "current_host",
+  "mode": "native_in_host",
+  "roles": [
+    "data",
+    "analysis"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-results.csv",
+      "sha256": "ee4e87ec39ce31513e5493799ce41d10659451edda460950a5b9b2802d53488b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/kdense-profile.json",
+      "sha256": "8e4fa3949016c7a4eb4cbe4782a2ef9f90ae00098e050ac4db1261b66da67985"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/kdense-eda-work.md",
+      "sha256": "8168fc19ab57f20f71feaa203a3fc7c7be05b7fed3b4e14dbfe18c529760df74"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in kdense-eda-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": true
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": null
+}

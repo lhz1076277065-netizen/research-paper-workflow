@@ -311,6 +311,8 @@ def assess(state,root,config=None):
 def main(argv=None):
     ap=argparse.ArgumentParser(description=__doc__);sub=ap.add_subparsers(dest='command',required=True)
     a=sub.add_parser('sources');a.add_argument('--role')
+    a=sub.add_parser('capabilities');a.add_argument('--role')
+    a=sub.add_parser('phase');a.add_argument('args',nargs=argparse.REMAINDER)
     a=sub.add_parser('action');a.add_argument('action')
     a=sub.add_parser('select');a.add_argument('--role',required=True);a.add_argument('--input',required=True);a.add_argument('--out')
     a=sub.add_parser('audit');a.add_argument('--input',required=True);a.add_argument('--root',required=True);a.add_argument('--out')
@@ -320,6 +322,11 @@ def main(argv=None):
     try:
         if args.command=='sources':
             sources=policy()['sources'];result={'sources':[s for s in sources if not args.role or args.role in s['roles']],'entry_paths':'Discover the current entry in the selected repository','execution_started':False}
+        elif args.command=='capabilities':
+            import capabilities
+            result=capabilities.listing(load(capabilities.index_path()),args.role)
+        elif args.command=='phase':
+            return subprocess.run([sys.executable,str(Path(__file__).with_name('phase_control.py')),*args.args],check=False).returncode
         elif args.command=='action':result=host_action(args.action)
         elif args.command=='select':
             data=load(args.input);result=select_role(args.role,data['candidates'],data.get('requirements'))

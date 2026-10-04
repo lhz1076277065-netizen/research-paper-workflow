@@ -1,0 +1,44 @@
+{
+  "id": "autoresearch-protocol",
+  "repository": "karpathy/autoresearch",
+  "entry": "program.md",
+  "commit": "228791fb499afffb54b46200aca536f79142f117",
+  "actor_scope": "current_host",
+  "mode": "adapted_in_host",
+  "roles": [
+    "experiment"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/experiment-plan.md",
+      "sha256": "9e6b4fd863c4cee8eb637ecb5a9fcd1151e8af4be5036d7673bfdf1a73083f8d"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/launch-results.csv",
+      "sha256": "ee4e87ec39ce31513e5493799ce41d10659451edda460950a5b9b2802d53488b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/results.tsv",
+      "sha256": "ba657484a0e9998aa8e13ef7f1015a0421b85250c2b330dbe910622dc4aa438d"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/autoresearch-protocol-work.md",
+      "sha256": "8f8ac29382b58a169cb52a127826271b499bbae3c83652cb37bbd8ca8fb44f72"
+    }
+  ],
+  "steps": [
+    "Read verified entry and task-relevant support",
+    "Apply steps and limits recorded in autoresearch-protocol-work.md",
+    "Connect actual task output to final software validation report"
+  ],
+  "progress": {
+    "guidance_read": true,
+    "research_work_done": true,
+    "functions_run": false
+  },
+  "status": "executed",
+  "semantic_execution_verified_by_tool": false,
+  "adaptation": "Native training blocked on current Mac; can apply experiment bookkeeping to a local software fixture with adapted_in_host, never claim native training or val_bpb."
+}

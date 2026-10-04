@@ -1,0 +1,39 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "a5be7307215f4e0d93e4cf2f8aea28da",
+  "scope": "focused",
+  "objective": "软件fixture：恢复查看暂停测试工作，保持暂停意图",
+  "latest_instruction": "上次安装维护已完成，这次恢复暂停的测试工作；保持paused，只读取恢复信息并检验启动被拒绝",
+  "status": "paused",
+  "stage": "focused",
+  "started_at": "2026-10-04T07:53:44.633103+00:00",
+  "deadline": 1791101024.6331031,
+  "project_deadline": 1791101024.6331031,
+  "reserve_seconds": 60.0,
+  "budget_kind": "local_task",
+  "authorization": null,
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [
+    "installation-v340"
+  ],
+  "artifacts": [
+    {
+      "path": "maintenance-receipt.md",
+      "fixture": true
+    }
+  ],
+  "history": [],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": "保持暂停，等待明确取消暂停后再启动测试计算",
+  "owned_processes": [],
+  "host_goal_state": "not_modified"
+}

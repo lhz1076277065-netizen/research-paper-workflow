@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.3.1",
+  "package_version": "3.4.0-rc.1",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -25,7 +25,172 @@
     "dissemination",
     "workbench"
   ],
-  "providers": [],
-  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "providers": [
+    {
+      "id": "academic-reviewer",
+      "repository": "Imbad0202/academic-research-skills",
+      "repo": "Imbad0202/academic-research-skills",
+      "entrypoint": "academic-paper-reviewer/SKILL.md",
+      "required_paths": [
+        "academic-paper-reviewer/SKILL.md",
+        "academic-paper-reviewer/references/calibration_mode_protocol.md",
+        "academic-paper-reviewer/references/changelog.md",
+        "academic-paper-reviewer/references/editorial_decision_standards.md",
+        "academic-paper-reviewer/references/guided_mode_protocol.md",
+        "academic-paper-reviewer/references/integration_guide.md",
+        "academic-paper-reviewer/references/quality_rubrics.md",
+        "academic-paper-reviewer/references/re_review_mode_protocol.md",
+        "academic-paper-reviewer/references/review_criteria_framework.md",
+        "academic-paper-reviewer/references/review_panel_provenance_protocol.md",
+        "academic-paper-reviewer/references/review_quality_thinking.md",
+        "academic-paper-reviewer/references/reviewer_sprint_prompt_source.md",
+        "academic-paper-reviewer/references/sprint_contract_protocol.md",
+        "academic-paper-reviewer/references/statistical_reporting_standards.md",
+        "academic-paper-reviewer/references/top_journals_by_field.md",
+        "shared/references/authority_content_coverage_advisory_protocol.md",
+        "shared/references/claim_standing_candidate_ledger_protocol.md",
+        "shared/references/claim_strength_ladder.md",
+        "shared/references/cross_document_consistency_advisory_protocol.md",
+        "shared/references/evidence_row_protocol.md",
+        "shared/references/firm_rules.md",
+        "shared/references/human_subjects_authority_protocol.md",
+        "shared/references/intent_clarification_protocol.md",
+        "shared/references/irb_terminology_glossary.md",
+        "shared/references/per_source_method_weaknesses.md",
+        "shared/references/protected_hedging_phrases.md",
+        "shared/references/psychometric_terminology_glossary.md",
+        "shared/references/review_criteria_consumer_protocol.md",
+        "shared/references/review_form_note.md",
+        "shared/references/review_pathway_rule_trace_protocol.md",
+        "shared/references/routing_core.md",
+        "shared/references/submission_packet_manifest_protocol.md",
+        "shared/references/word_count_conventions.md",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "319d39cd8ab0eef1d12dde02d293c780188895d7",
+      "discovered_file_blob_sha": {
+        "academic-paper-reviewer/SKILL.md": "319d39cd8ab0eef1d12dde02d293c780188895d7",
+        "academic-paper-reviewer/references/calibration_mode_protocol.md": "5c020d42493c0623532745dbb1ada4187db3d71f",
+        "academic-paper-reviewer/references/changelog.md": "f228376bf5d8cdd34d277801b394ad8011e0d727",
+        "academic-paper-reviewer/references/editorial_decision_standards.md": "85ad97ca94d8c9694de40906bcc04e367e2687c1",
+        "academic-paper-reviewer/references/guided_mode_protocol.md": "dc045b1ea3a88ff171431acde4288abd9aedea82",
+        "academic-paper-reviewer/references/integration_guide.md": "a356c37346c117f8bf45c1a024925e667499e211",
+        "academic-paper-reviewer/references/quality_rubrics.md": "13a628ffa3fa0f20fe8544c242c8adaebc3cf875",
+        "academic-paper-reviewer/references/re_review_mode_protocol.md": "322ec5e666953c6faafdefc08b38aefe13008692",
+        "academic-paper-reviewer/references/review_criteria_framework.md": "68677ca06aefe894de71a0240e82a2e19279c7ad",
+        "academic-paper-reviewer/references/review_panel_provenance_protocol.md": "d4f86af33ffc5a56412428b5c94090bfc76e2988",
+        "academic-paper-reviewer/references/review_quality_thinking.md": "8b551a930b5ee8a2727c04f2c3c567a699d38923",
+        "academic-paper-reviewer/references/reviewer_sprint_prompt_source.md": "d876ce951b75af6f8c8dfca7c915ec20bdcf39bf",
+        "academic-paper-reviewer/references/sprint_contract_protocol.md": "5d7f3d5e895844804f3be58a0d55a3f176a54c23",
+        "academic-paper-reviewer/references/statistical_reporting_standards.md": "21ea230fb962e05dfb12f93c0cb8de441bed9e0d",
+        "academic-paper-reviewer/references/top_journals_by_field.md": "21e698b3e0ecc07857a820454b12a885f4158fd2",
+        "shared/references/authority_content_coverage_advisory_protocol.md": "680918cc5fde28e5d7457e7c4d3c6017e926cbab",
+        "shared/references/claim_standing_candidate_ledger_protocol.md": "f68b0f0d38f858d5b7dbafd77da898d84821e154",
+        "shared/references/claim_strength_ladder.md": "07fc64de5669819e5f70dbd7311b0f3ed84aca12",
+        "shared/references/cross_document_consistency_advisory_protocol.md": "99e59bbb6ab655278d4bcc7b25281c7cedd05ea9",
+        "shared/references/evidence_row_protocol.md": "86f977845db5a4365dbfb789013dd848b1a6af16",
+        "shared/references/firm_rules.md": "c177fb73e90657808fe6b970499faadbaeb5a9c2",
+        "shared/references/human_subjects_authority_protocol.md": "62839259c79f04217b3c340096ec207a954353dd",
+        "shared/references/intent_clarification_protocol.md": "32fb0fd1646ee4450aff24b657bc79d2e3b61410",
+        "shared/references/irb_terminology_glossary.md": "33b642b01f59d044e149204fc4a0e2dba1a87046",
+        "shared/references/per_source_method_weaknesses.md": "bfb5eb47c0059615a9f0f52579a2401d289e8fe7",
+        "shared/references/protected_hedging_phrases.md": "02a3ae512ff5f52f942c87a3da4b6f97e582cbfb",
+        "shared/references/psychometric_terminology_glossary.md": "1f60bae64f4e47cc8775584d474c9ec253bc8c6b",
+        "shared/references/review_criteria_consumer_protocol.md": "2dc89f92f94dbd31aae5290a4d5ad4749f6fcc37",
+        "shared/references/review_form_note.md": "fd17fd4c2e4399421f22745c9a7b542d6cae32d6",
+        "shared/references/review_pathway_rule_trace_protocol.md": "ff03207e30e8d60b0fd0751233cc49a4901f4478",
+        "shared/references/routing_core.md": "572ac5a3c2015e22eccdd2ed2e2a87afa583a8c7",
+        "shared/references/submission_packet_manifest_protocol.md": "86d3681541ac5eb17d7491c11a8907e5e5b794c3",
+        "shared/references/word_count_conventions.md": "ddb97620e326ced9f2b1352be8993c2c0c80988b",
+        "LICENSE": "dedfb8b7880e51fe623fa5ea7e27c118eed4e2b9"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "review"
+      ],
+      "capabilities": [
+        "manuscript-review"
+      ],
+      "purpose": "Quick assessment is role-separated current-host critique; not independent peer review. Full panel mode has additional requirements.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/Imbad0202/academic-research-skills/blob/6ab4b03bf70a118a1b3ee7f3263ed9f19031061b/academic-paper-reviewer/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Quick assessment is role-separated current-host critique; not independent peer review. Full panel mode has additional requirements.",
+      "adaptations": [
+        "Quick assessment is role-separated current-host critique; not independent peer review. Full panel mode has additional requirements."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Current-host reviewer; independent agents only if authorized/available"
+      ],
+      "commit": "6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+      "tree": "4763972aa93d8c7b742434f6dcfa3c36a890b9f3"
+    },
+    {
+      "id": "paperspine-workbench",
+      "repository": "WUBING2023/PaperSpine",
+      "repo": "WUBING2023/PaperSpine",
+      "entrypoint": "dist/codex/skills/paper-spine/SKILL.md",
+      "required_paths": [
+        "dist/codex/skills/paper-spine/SKILL.md",
+        "dist/codex/skills/paper-spine/references/paper-spine-production-protocol.md",
+        "dist/codex/skills/paper-spine/references/phase-contracts.md",
+        "dist/codex/skills/paper-spine/references/results-validation.md",
+        "dist/codex/skills/paper-spine/references/resume.md",
+        "dist/codex/skills/paper-spine/scripts/_paper_spine_utils.py",
+        "dist/codex/skills/paper-spine/scripts/results_validation_check.py",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "3c46bf599ce7aef5e6d85806b57b713e9aeae679",
+      "discovered_file_blob_sha": {
+        "dist/codex/skills/paper-spine/SKILL.md": "3c46bf599ce7aef5e6d85806b57b713e9aeae679",
+        "dist/codex/skills/paper-spine/references/paper-spine-production-protocol.md": "68be84d9e7de78cdd1162c016d6242d864a925dc",
+        "dist/codex/skills/paper-spine/references/phase-contracts.md": "b1bda67f81e1e38faf841488e2d3a1841ea98e44",
+        "dist/codex/skills/paper-spine/references/results-validation.md": "02b24c97905392a7da13a9a1345fffa86c30ef26",
+        "dist/codex/skills/paper-spine/references/resume.md": "51db0edb6c2a9f4fda6b2392e738dbc29fac9fb0",
+        "dist/codex/skills/paper-spine/scripts/_paper_spine_utils.py": "2eecf1ab87b81b6fb09177e48c1f6b91a4cbc057",
+        "dist/codex/skills/paper-spine/scripts/results_validation_check.py": "23da399824666316c7439ea3996e4dad9ba9fe95",
+        "LICENSE": "175cd14038081d3c5f085041415b1331a38e9980"
+      },
+      "kind": "workbench_protocol",
+      "roles": [
+        "workbench",
+        "writing",
+        "review"
+      ],
+      "capabilities": [
+        "workbench",
+        "manuscript-writing",
+        "manuscript-review"
+      ],
+      "purpose": "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/WUBING2023/PaperSpine/blob/f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3/dist/codex/skills/paper-spine/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run.",
+      "adaptations": [
+        "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Python local checker; full workbench launch has separate app/runtime dependencies"
+      ],
+      "commit": "f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3",
+      "tree": "756d00c6851247eeab632b3420de5d76ca31e81e"
+    }
+  ],
+  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
   "capability": "manuscript-review"
 }

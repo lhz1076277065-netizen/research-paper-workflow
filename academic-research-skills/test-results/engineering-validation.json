@@ -1,0 +1,503 @@
+{
+  "timestamp": "2026-10-04T07:51:39.967266+00:00",
+  "python_version": "3.9.6",
+  "scope": "Engineering structure and isolated filesystem tests only",
+  "skill_directories_tested": 19,
+  "tests_run": 121,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "cases": [
+    {
+      "test": "test_suite.IsolatedSkillTests.test_analysis_execution__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_analysis_execution__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_analysis_execution__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_analysis_execution__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_citation_audit__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_citation_audit__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_citation_audit__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_citation_audit__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_data_discovery__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_data_discovery__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_data_discovery__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_data_discovery__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_data_preparation__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_data_preparation__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_data_preparation__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_data_preparation__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_ethics_protocol__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_ethics_protocol__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_ethics_protocol__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_ethics_protocol__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_journal_intelligence__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_journal_intelligence__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_journal_intelligence__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_journal_intelligence__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_literature_discovery__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_literature_discovery__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_literature_discovery__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_literature_discovery__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_manuscript_review__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_manuscript_review__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_manuscript_review__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_manuscript_review__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_manuscript_writing__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_manuscript_writing__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_manuscript_writing__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_manuscript_writing__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_paper_deep_reading__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_paper_deep_reading__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_paper_deep_reading__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_paper_deep_reading__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_peer_review_response__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_peer_review_response__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_peer_review_response__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_peer_review_response__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_publication_stewardship__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_publication_stewardship__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_publication_stewardship__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_publication_stewardship__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_design__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_design__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_design__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_design__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_intake__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_intake__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_intake__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_intake__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_paper_workflow__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_paper_workflow__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_paper_workflow__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_research_paper_workflow__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_robustness_reproducibility__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_robustness_reproducibility__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_robustness_reproducibility__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_robustness_reproducibility__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_scientific_visualization__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_scientific_visualization__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_scientific_visualization__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_scientific_visualization__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_submission_packaging__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_submission_packaging__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_submission_packaging__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_submission_packaging__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_topic_novelty__empty_cannot_complete",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_topic_novelty__initialize_and_check",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_topic_novelty__links_and_frontmatter",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.IsolatedSkillTests.test_topic_novelty__synthetic_completion_structure",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_absolute_path",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_artifact_cycle",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_blocked_external_dependency",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_checksum_tamper",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_dependency_unknown_evidence",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_draft_record",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_duplicate_artifact_id",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_duplicate_physical_file",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_duplicate_source_id",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_empty_request",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_gate_no_evidence",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_gate_no_reason",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_gate_unknown",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_gate_unresolved_reference",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_init_refuses_overwrite",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_input_dependency_is_recognized",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_missing_artifact",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_missing_output_declaration",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_missing_required_gate",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_narrowed_scope_without_reason",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_no_records",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_other_skill",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_output_role_mismatch",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_parent_traversal",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_record_missing_field",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_record_no_evidence",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_record_unknown_source",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_register_real_file_no_gate_changes",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_register_refuses_duplicate",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_register_refuses_existing_lock",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_register_refuses_missing_file",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_register_refuses_path_escape",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_register_refuses_self_registration",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_schema_boolean_not_integer",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_schema_rejects_unknown_keywords",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_self_dependency",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_symlink_escape",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_template_record_not_observation",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_timestamp_missing_zone",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_unknown_dependency",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_unproduced_output",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_verified_source_requires_timestamp",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_windows_absolute_path",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_wrong_contract",
+      "status": "passed"
+    },
+    {
+      "test": "test_suite.ValidatorNegativeTests.test_wrong_output_artifact",
+      "status": "passed"
+    }
+  ],
+  "synthetic_fixtures_are_research_evidence": false,
+  "agent_behavior_evaluations_executed": false,
+  "real_paper_end_to_end_executed": false,
+  "journal_or_dataset_integrations_tested": false,
+  "host_installation_tested": false,
+  "scientific_validity_certified": false
+}

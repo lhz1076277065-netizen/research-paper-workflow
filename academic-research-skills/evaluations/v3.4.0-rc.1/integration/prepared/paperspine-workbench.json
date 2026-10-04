@@ -1,0 +1,58 @@
+{
+  "status": "source_prepared",
+  "id": "paperspine-workbench",
+  "repository": "WUBING2023/PaperSpine",
+  "commit": "f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3",
+  "tree": "756d00c6851247eeab632b3420de5d76ca31e81e",
+  "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/paperspine-workbench/f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3/dist/codex/skills/paper-spine/SKILL.md",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/paperspine-workbench/f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3",
+  "files": [
+    {
+      "path": "dist/codex/skills/paper-spine/SKILL.md",
+      "blob": "3c46bf599ce7aef5e6d85806b57b713e9aeae679",
+      "sha256": "61d8bd7fc8724f46140e436cf071c29bc05db1676a2013e3baf8cbe27b530288"
+    },
+    {
+      "path": "dist/codex/skills/paper-spine/references/paper-spine-production-protocol.md",
+      "blob": "68be84d9e7de78cdd1162c016d6242d864a925dc",
+      "sha256": "8991d3739736c12e440ac9f729c3eff55096463da01cbd590c18a3b01c873f25"
+    },
+    {
+      "path": "dist/codex/skills/paper-spine/references/phase-contracts.md",
+      "blob": "b1bda67f81e1e38faf841488e2d3a1841ea98e44",
+      "sha256": "3721929182f9229b4cd09d267d9602956499a25e2febbd4fc19136ce603f74e6"
+    },
+    {
+      "path": "dist/codex/skills/paper-spine/references/results-validation.md",
+      "blob": "02b24c97905392a7da13a9a1345fffa86c30ef26",
+      "sha256": "5c6f1339a46f4f1aa3e07d0ccb3c2c6d3ebfc71f62e01f3bec6c06f1977be710"
+    },
+    {
+      "path": "dist/codex/skills/paper-spine/references/resume.md",
+      "blob": "51db0edb6c2a9f4fda6b2392e738dbc29fac9fb0",
+      "sha256": "99c4fca4eff89b056326559523ca00c264c278442ec8bcbe33e8139be2808673"
+    },
+    {
+      "path": "dist/codex/skills/paper-spine/scripts/_paper_spine_utils.py",
+      "blob": "2eecf1ab87b81b6fb09177e48c1f6b91a4cbc057",
+      "sha256": "0833b58634fc324b28c7f4dfda02cfaf7bcae03e4c66379bb1424bf1e12259ec"
+    },
+    {
+      "path": "dist/codex/skills/paper-spine/scripts/results_validation_check.py",
+      "blob": "23da399824666316c7439ea3996e4dad9ba9fe95",
+      "sha256": "f977562f3edfc990a6a9bd95cb11c7278cf4bb194668a2b139db7d70ffe23195"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "175cd14038081d3c5f085041415b1331a38e9980",
+      "sha256": "e89308aa6fe435bd6c8967ed865c613732888329176cc4c6fb020825812bec2d"
+    }
+  ],
+  "kind": "workbench_protocol",
+  "dependency_installation_performed": false,
+  "research_work_done": false,
+  "host_adaptation": "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run.",
+  "known_requirements": [
+    "Python local checker; full workbench launch has separate app/runtime dependencies"
+  ]
+}

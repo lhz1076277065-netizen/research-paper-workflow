@@ -1,0 +1,47 @@
+{
+  "scope": "focused",
+  "objective": "SOFTWARE_FIXTURE: compact-recovery",
+  "latest_instruction": "最新用户指令：保持固定软件假设，两个依赖修复失败，下一步交付障碍说明",
+  "stage": "focused",
+  "status": "active",
+  "project_deadline": 1791101519.326933,
+  "deadline": 1791101519.326933,
+  "authorization": null,
+  "completed_tasks": [
+    "installation-v340"
+  ],
+  "artifacts": [
+    {
+      "path": "S7-round-evidence.txt",
+      "sha256": "616df14227aee4834e33d326847c91353ac0f12e03f9ecfd18ffba3dc376c7f8"
+    },
+    {
+      "path": "S7-round-evidence.txt",
+      "sha256": "616df14227aee4834e33d326847c91353ac0f12e03f9ecfd18ffba3dc376c7f8"
+    }
+  ],
+  "next_action": "交付软件障碍说明",
+  "exit_reason": null,
+  "repairs": {
+    "fixture-dependency": [
+      "local-cache",
+      "standard-library-adapter"
+    ]
+  },
+  "reassessment_required": true,
+  "owned_processes": [],
+  "host_goal_state": "not_modified",
+  "guard": {
+    "allowed": false,
+    "reasons": [
+      "reassessment_required"
+    ],
+    "status": "active",
+    "stage": "focused",
+    "seconds_to_work_cutoff": 164.54296398162842,
+    "usage": null,
+    "token_meter_verified": false,
+    "host_goal_state": "not_modified",
+    "scientific_completion_verified": false
+  }
+}

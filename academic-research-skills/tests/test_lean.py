@@ -170,10 +170,16 @@ class Sources(unittest.TestCase):
         with self.assertRaises(u.UpstreamError):self.index()
 
 class LeanDefaults(unittest.TestCase):
-    def test_no_runtime_static_provider_whitelist(self):
-        self.assertEqual(json.loads((ROOT/'docs/provider-catalog.json').read_text())['providers'],[])
-        for s in (ROOT/'skills').iterdir():
-            if s.is_dir():self.assertEqual(json.loads((s/'assets/providers.json').read_text())['providers'],[])
+    def test_pinned_seed_catalog_does_not_execute_or_autoselect(self):
+        catalog=json.loads((ROOT/'docs/provider-catalog.json').read_text())
+        policy=json.loads((ROOT/'assets/research31-policy.json').read_text())
+        self.assertEqual({p['repository'] for p in catalog['providers']},{p['repository'] for p in policy['sources']})
+        for p in catalog['providers']:
+            self.assertFalse(p['default_candidate'])
+            self.assertEqual(len(p['commit']),40)
+            self.assertIn(p['entrypoint'],p['discovered_file_blob_sha'])
+        for skill in (ROOT/'skills').iterdir():
+            if skill.is_dir():self.assertEqual(json.loads((skill/'assets/providers.json').read_text())['providers'],[p for p in catalog['providers'] if skill.name=='research-paper-workflow' or skill.name in p['capabilities']])
     def test_sources_are_unpinned_repository_pointers(self):
         d=json.loads((ROOT/'assets/repository-sources.json').read_text())
         policy=json.loads((ROOT/'assets/research31-policy.json').read_text())

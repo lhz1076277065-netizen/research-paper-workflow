@@ -10,10 +10,23 @@ def generated(root=ROOT):
     skills=sorted(p for p in (root/'skills').iterdir() if p.is_dir())
     version=(root/'VERSION').read_text().strip()
     capabilities=[s.name for s in skills]+['presentation','dissemination','workbench']
-    # Deliberately empty: providers are discovered and selected for the actual task.
+    # Pinned seed entries are prepared explicitly; source preparation is not execution.
+    index_path=common/'assets/capability-index.json'
+    seeds=json.loads(index_path.read_text())['capabilities'] if index_path.exists() else []
+    roles={'literature':'literature-discovery','reading':'paper-deep-reading','data':'data-preparation','analysis':'analysis-execution','methods':'research-design','figure':'scientific-visualization','figure_reference':'scientific-visualization','review':'manuscript-review','writing':'manuscript-writing','final_expression':'manuscript-writing','experiment':'analysis-execution','ideation':'topic-novelty','novelty':'topic-novelty','presentation':'presentation','workbench':'workbench'}
+    providers=[]
+    for c in seeds:
+        files={f['path']:f['blob'] for f in c['required_files']}
+        providers.append({'id':c['id'],'repository':c['repository'],'repo':c['repository'],
+            'entrypoint':c['entry'],'required_paths':list(files),'entry_git_blob_sha':files[c['entry']],
+            'discovered_file_blob_sha':files,'kind':c['kind'],'roles':c['roles'],
+            'capabilities':list(dict.fromkeys(roles[r] for r in c['roles'])),
+            'purpose':c['host_adaptation'],'source_review_status':'pinned_entry_and_support_verified','source_url':'https://github.com/'+c['repository']+'/blob/'+c['commit']+'/'+c['entry'],'license':'See upstream license file/metadata; no blanket permission claim','notes':c['host_adaptation'],'adaptations':[c['host_adaptation']],'phase':1,'mode':'adapted-protocol' if c['kind'] in {'skill_protocol','workbench_protocol'} else 'reference-only',
+            'default_candidate':False,'requires_host':['local-files'],'requires_facts':[],
+            'dependencies':c['dependencies'],'commit':c['commit'],'tree':c['tree']})
     catalog={'schema_version':'runtime-providers-1','package_version':version,
-             'capabilities':capabilities,'providers':[],
-             'discovery':'Use installed skills or current GitHub entries; source URLs are optional seeds.'}
+             'capabilities':capabilities,'providers':providers,
+             'discovery':'Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.'}
     out={'docs/provider-catalog.json':encoded(catalog)}
     for f in (common/'scripts').glob('*.py'):
         if f.name not in {'init_run.py','register_artifact.py','validate_run.py'}:
@@ -25,7 +38,7 @@ def generated(root=ROOT):
     for f in (common/'assets').glob('*.json'):
         out['assets/'+f.name]=f.read_bytes()
         for s in skills:out[f'skills/{s.name}/assets/{f.name}']=f.read_bytes()
-    for s in skills:out[f'skills/{s.name}/assets/providers.json']=encoded({**catalog,'capability':s.name})
+    for s in skills:out[f'skills/{s.name}/assets/providers.json']=encoded({**catalog,'capability':s.name,'providers':[p for p in providers if s.name=='research-paper-workflow' or s.name in p['capabilities']]})
     graph=root/'scripts/workgraph.py'
     if graph.is_file():out['skills/research-paper-workflow/scripts/workgraph.py']=graph.read_bytes()
     return out

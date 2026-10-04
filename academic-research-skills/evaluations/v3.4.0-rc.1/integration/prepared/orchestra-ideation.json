@@ -1,0 +1,28 @@
+{
+  "status": "source_prepared",
+  "id": "orchestra-ideation",
+  "repository": "Orchestra-Research/AI-Research-SKILLs",
+  "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "tree": "eb544e88f08d76170d17050b10c18a317afd0314",
+  "entry": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/orchestra-ideation/773a52944ba4747a18bd4ae9ade53fff041adcbc/21-research-ideation/brainstorming-research-ideas/SKILL.md",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration-cache/orchestra-ideation/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+  "files": [
+    {
+      "path": "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "blob": "f5427a507c009fe0a91e51e213b340987334adb4",
+      "sha256": "8422a1a6dc0a88d05f02b9fbe0f8c2ae06a77024856d18125efa13d19d855d46"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "943d5753a5f02f9ef352ff8a1706f167004d6e6d",
+      "sha256": "80b5899a9ab121a2d4aae63724f0c11defba7f23da487086932bb9abfb0f2a00"
+    }
+  ],
+  "kind": "skill_protocol",
+  "dependency_installation_performed": false,
+  "research_work_done": false,
+  "host_adaptation": "Use selected relevant ideation lenses; explicit fixed questions do not require repeated brainstorming or new research scope.",
+  "known_requirements": [
+    "Current-host ideation, no extra model runtime"
+  ]
+}

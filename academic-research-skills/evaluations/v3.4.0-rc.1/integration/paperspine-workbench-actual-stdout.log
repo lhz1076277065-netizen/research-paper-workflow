@@ -1,0 +1,10 @@
+{
+  "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/integration/spine/negative/results_validation.md",
+  "ok": false,
+  "row_count": 1,
+  "mapped_rows": 0,
+  "findings": [
+    "Bad metric: empty `Contribution Claim Tested` — a metric-only row that validates no contribution promise. Map it to a contribution (C1, C2, ...) or cut the subsection."
+  ],
+  "warnings": []
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "47eb37600f564388ac29e4e4e9bfd114",
+  "scope": "maintenance",
+  "objective": "软件fixture：上次安装维护已完成",
+  "latest_instruction": "安装已完成；最新请求仅续接研究初步判断，未提供具体科学假设，不重复安装。软件fixture测试。",
+  "status": "completed",
+  "stage": "maintenance",
+  "started_at": "2026-10-04T07:53:44.559970+00:00",
+  "deadline": 1791101024.5599701,
+  "project_deadline": 1791101024.5599701,
+  "reserve_seconds": 60.0,
+  "budget_kind": "local_task",
+  "authorization": null,
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [
+    "installation-v340"
+  ],
+  "artifacts": [
+    {
+      "path": "maintenance-receipt.md",
+      "sha256": "e10388dd17f2ef0329de3058d34310a5a6d1c69e5649792e1ad81099fd6357cd"
+    }
+  ],
+  "history": [],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": null,
+  "owned_processes": [],
+  "host_goal_state": "not_modified",
+  "exit_reason": "软件fixture：上次维护已完成"
+}

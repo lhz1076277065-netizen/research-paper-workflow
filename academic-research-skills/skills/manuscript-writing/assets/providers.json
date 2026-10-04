@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.3.1",
+  "package_version": "3.4.0-rc.1",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -25,7 +25,108 @@
     "dissemination",
     "workbench"
   ],
-  "providers": [],
-  "discovery": "Use installed skills or current GitHub entries; source URLs are optional seeds.",
+  "providers": [
+    {
+      "id": "anti-defensive",
+      "repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "repo": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "entrypoint": "skills/anti-defensive-writing/SKILL.md",
+      "required_paths": [
+        "skills/anti-defensive-writing/SKILL.md",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "59879391d4e7eda0d0017cff89f1ecf0b2566b8c",
+      "discovered_file_blob_sha": {
+        "skills/anti-defensive-writing/SKILL.md": "59879391d4e7eda0d0017cff89f1ecf0b2566b8c",
+        "LICENSE": "f2fddc5f2ad65725f5f95a3ca48c90c6d146ecd5"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "final_expression"
+      ],
+      "capabilities": [
+        "manuscript-writing"
+      ],
+      "purpose": "Keep evidence and scope; rhetorical advice cannot remove material uncertainty or overstate results.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/102c8b21acf5eda3a0aef3d9779a65db646c8980/skills/anti-defensive-writing/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Keep evidence and scope; rhetorical advice cannot remove material uncertainty or overstate results.",
+      "adaptations": [
+        "Keep evidence and scope; rhetorical advice cannot remove material uncertainty or overstate results."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Current-host full-text editing and fact recheck"
+      ],
+      "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "tree": "99d78a3e655ed010f6840b9929676494df54cca9"
+    },
+    {
+      "id": "paperspine-workbench",
+      "repository": "WUBING2023/PaperSpine",
+      "repo": "WUBING2023/PaperSpine",
+      "entrypoint": "dist/codex/skills/paper-spine/SKILL.md",
+      "required_paths": [
+        "dist/codex/skills/paper-spine/SKILL.md",
+        "dist/codex/skills/paper-spine/references/paper-spine-production-protocol.md",
+        "dist/codex/skills/paper-spine/references/phase-contracts.md",
+        "dist/codex/skills/paper-spine/references/results-validation.md",
+        "dist/codex/skills/paper-spine/references/resume.md",
+        "dist/codex/skills/paper-spine/scripts/_paper_spine_utils.py",
+        "dist/codex/skills/paper-spine/scripts/results_validation_check.py",
+        "LICENSE"
+      ],
+      "entry_git_blob_sha": "3c46bf599ce7aef5e6d85806b57b713e9aeae679",
+      "discovered_file_blob_sha": {
+        "dist/codex/skills/paper-spine/SKILL.md": "3c46bf599ce7aef5e6d85806b57b713e9aeae679",
+        "dist/codex/skills/paper-spine/references/paper-spine-production-protocol.md": "68be84d9e7de78cdd1162c016d6242d864a925dc",
+        "dist/codex/skills/paper-spine/references/phase-contracts.md": "b1bda67f81e1e38faf841488e2d3a1841ea98e44",
+        "dist/codex/skills/paper-spine/references/results-validation.md": "02b24c97905392a7da13a9a1345fffa86c30ef26",
+        "dist/codex/skills/paper-spine/references/resume.md": "51db0edb6c2a9f4fda6b2392e738dbc29fac9fb0",
+        "dist/codex/skills/paper-spine/scripts/_paper_spine_utils.py": "2eecf1ab87b81b6fb09177e48c1f6b91a4cbc057",
+        "dist/codex/skills/paper-spine/scripts/results_validation_check.py": "23da399824666316c7439ea3996e4dad9ba9fe95",
+        "LICENSE": "175cd14038081d3c5f085041415b1331a38e9980"
+      },
+      "kind": "workbench_protocol",
+      "roles": [
+        "workbench",
+        "writing",
+        "review"
+      ],
+      "capabilities": [
+        "workbench",
+        "manuscript-writing",
+        "manuscript-review"
+      ],
+      "purpose": "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/WUBING2023/PaperSpine/blob/f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3/dist/codex/skills/paper-spine/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run.",
+      "adaptations": [
+        "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": false,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "dependencies": [
+        "Python local checker; full workbench launch has separate app/runtime dependencies"
+      ],
+      "commit": "f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3",
+      "tree": "756d00c6851247eeab632b3420de5d76ca31e81e"
+    }
+  ],
+  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
   "capability": "manuscript-writing"
 }

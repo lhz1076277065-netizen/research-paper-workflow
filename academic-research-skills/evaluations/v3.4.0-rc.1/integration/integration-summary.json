@@ -1,0 +1,146 @@
+[
+  {
+    "id": "researchstudio-search",
+    "mode": "adapted_in_host",
+    "functions_run": true,
+    "outputs": [
+      "search-results.json",
+      "researchstudio-search-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "nature-reader",
+    "mode": "adapted_in_host",
+    "functions_run": false,
+    "outputs": [
+      "nature-reader-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "kdense-eda",
+    "mode": "native_in_host",
+    "functions_run": true,
+    "outputs": [
+      "kdense-profile.json",
+      "kdense-eda-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "scholar-analysis",
+    "mode": "adapted_in_host",
+    "functions_run": false,
+    "outputs": [
+      "scholar-analysis-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "scipilot-figure",
+    "mode": "native_in_host",
+    "functions_run": true,
+    "outputs": [
+      "launch-figure.png",
+      "launch-figure.pdf",
+      "scipilot-figure-work.md",
+      "layout-qa.json"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "sleep-experiment-plan",
+    "mode": "adapted_in_host",
+    "functions_run": false,
+    "outputs": [
+      "experiment-plan.md",
+      "tracker.md",
+      "sleep-experiment-plan-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "autoresearch-protocol",
+    "mode": "adapted_in_host",
+    "functions_run": false,
+    "outputs": [
+      "results.tsv",
+      "autoresearch-protocol-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "rougier-reference",
+    "mode": "reference_only",
+    "functions_run": true,
+    "outputs": [
+      "rougier/figures/ornaments/legend-alternatives.pdf",
+      "rougier-reference-work.md",
+      "launch-figure.png"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "orchestra-ideation",
+    "mode": "adapted_in_host",
+    "functions_run": false,
+    "outputs": [
+      "orchestra-ideation-work.md",
+      "experiment-plan.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "academic-reviewer",
+    "mode": "adapted_in_host",
+    "functions_run": false,
+    "outputs": [
+      "academic-reviewer-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "anti-defensive",
+    "mode": "adapted_in_host",
+    "functions_run": false,
+    "outputs": [
+      "final-report.md",
+      "anti-defensive-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "open-design-deck",
+    "mode": "adapted_in_host",
+    "functions_run": false,
+    "outputs": [
+      "deck-plan.md",
+      "deck/index.html",
+      "open-design-deck-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "codex-ppt",
+    "mode": "function_only",
+    "functions_run": true,
+    "outputs": [
+      "ppt/fixture-deck/fixture-deck.pptx",
+      "ppt-inspection.json",
+      "codex-ppt-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  },
+  {
+    "id": "paperspine-workbench",
+    "mode": "adapted_in_host",
+    "functions_run": true,
+    "outputs": [
+      "spine/results_validation.md",
+      "spine/results_validation_check.md",
+      "paperspine-workbench-work.md"
+    ],
+    "semantic_scope": "See dedicated work artifact; software integration only"
+  }
+]

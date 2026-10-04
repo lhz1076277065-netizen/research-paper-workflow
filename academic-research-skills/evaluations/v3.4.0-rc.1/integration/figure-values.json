@@ -1,0 +1,12 @@
+{
+  "expired": {
+    "direct": 6,
+    "phase_control": 0
+  },
+  "active": {
+    "direct": 6,
+    "phase_control": 6
+  },
+  "n_per_cell": 6,
+  "uncertainty": "no inferential interval; deterministic local fixture"
+}

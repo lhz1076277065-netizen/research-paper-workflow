@@ -1,0 +1,34 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "cfde6558b9194ed8bc50451c563720a8",
+  "scope": "focused",
+  "objective": "软件fixture:暂停单独阻断，不与过期混淆",
+  "latest_instruction": "软件fixture:暂停单独阻断，不与过期混淆",
+  "status": "paused",
+  "stage": "focused",
+  "started_at": "2026-10-04T08:08:50.515608+00:00",
+  "deadline": 1791101570.515608,
+  "project_deadline": 1791101570.515608,
+  "reserve_seconds": 24.0,
+  "budget_kind": "local_task",
+  "authorization": null,
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [
+    "installation-v340"
+  ],
+  "artifacts": [],
+  "history": [],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": null,
+  "owned_processes": [],
+  "host_goal_state": "not_modified"
+}
