@@ -1,31 +1,31 @@
 {
   "schema_version": "professional-completion-1",
   "status": "completed_for_handoff",
-  "step_id": "7d03e03fc4a6457195885c9df086cbd2",
+  "step_id": "e7513705e5f6432097eafec3d007b5dc",
   "capability": "manuscript-writing",
   "task": {
-    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/request.md",
     "sha256": "880339b1ce25e1c33048c2e22abede7fd152b960aff66c041a692757a8de90df"
   },
   "inputs": [
     {
-      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis.md",
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis.md",
       "sha256": "c78ba89d5317eba55dd58dc1bf3846321a90697bbd4ffeaeb107f0684f69f485"
     },
     {
-      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/counts.json",
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/counts.json",
       "sha256": "cf858192eab80c9f2cb2df21f263a6e000404885e247a827b6d5d22288a04874"
     }
   ],
   "outputs": [
     {
-      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/draft.md",
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/draft.md",
       "sha256": "a72ae30a1b59b0d142dd4ed68ab170e883d460bc560fa9a3472cffde75922f16"
     }
   ],
   "work_report": {
-    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-work.json",
-    "sha256": "3531e75c493fb7f4d39e7199fbfc2b0b35e4798dd8ca35aa09b5326a95ba7776"
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-work.json",
+    "sha256": "2551810943a3e974cfadef932375769ae1e4bdca0f0a3a22acea290dd81830b1"
   },
   "use": {
     "id": "kdense-writing",
@@ -41,17 +41,17 @@
     ],
     "inputs": [
       {
-        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis.md",
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis.md",
         "sha256": "c78ba89d5317eba55dd58dc1bf3846321a90697bbd4ffeaeb107f0684f69f485"
       },
       {
-        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/counts.json",
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/counts.json",
         "sha256": "cf858192eab80c9f2cb2df21f263a6e000404885e247a827b6d5d22288a04874"
       }
     ],
     "outputs": [
       {
-        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/draft.md",
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/draft.md",
         "sha256": "a72ae30a1b59b0d142dd4ed68ab170e883d460bc560fa9a3472cffde75922f16"
       }
     ],

@@ -115,6 +115,25 @@ class InterruptedFlow(unittest.TestCase):
 
 
 class Routing(unittest.TestCase):
+ def test_portable_selftest_checks_real_registry_without_network(self):
+  with tempfile.TemporaryDirectory() as temp:
+   p=subprocess.run([sys.executable,str(ROOT/'scripts/selftest.py'),'--out',temp],capture_output=True,text=True,timeout=10)
+   self.assertEqual(p.returncode,0,p.stdout+p.stderr);r=json.loads(p.stdout)
+   self.assertEqual(r['version'],(ROOT/'VERSION').read_text().strip());self.assertTrue(r['passed'])
+   registry=next(x for x in r['checks'] if x['name']=='mandatory_pinned_provider_registry')
+   self.assertEqual(registry['detail']['sources'],14);self.assertEqual(registry['detail']['entries'],23)
+   self.assertFalse(registry['detail']['source_execution_verified'])
+ def test_cold_source_download_stops_before_a_second_request(self):
+  import io,time
+  from unittest.mock import patch
+  data=b'Actual pinned source guide for the software fixture.'
+  c=dict(id='fixture',repository='owner/repo',commit='a'*40,tree='b'*40,entry='SKILL.md',kind='skill_protocol',dependencies=[],host_adaptation='Fixture',required_files=[dict(path='SKILL.md',blob=C.blob(data)),dict(path='support.md',blob=C.blob(data))])
+  class SlowResponse(io.BytesIO):
+   def read(self,*args):time.sleep(.06);return super().read(*args)
+  with tempfile.TemporaryDirectory() as temp,patch.object(C,'urlopen',return_value=SlowResponse(data)) as call:
+   with self.assertRaises(C.CapabilityError):C.prepare(c,temp,True,deadline=time.time()+.03)
+   self.assertEqual(call.call_count,1);self.assertLessEqual(call.call_args.kwargs['timeout'],.03)
+   self.assertFalse((Path(temp)/'fixture'/('a'*40)/'support.md').exists())
  def test_current_service_alias_can_select_verified_source(self):
   import provider_runtime as B
   registry=C.load(ROOT/'docs/provider-catalog.json')

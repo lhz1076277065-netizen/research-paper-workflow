@@ -1,16 +1,16 @@
 {
   "schema_version": "professional-step-1",
-  "id": "0ec1cb4e5020492385c288554a7730c2",
+  "id": "cfeea1c6f539403ab7d1c58d56841fc3",
   "capability": "research-intake",
   "status": "awaiting_professional_work",
-  "started_ns": 1791186366066366000,
+  "started_ns": 1791187024017958000,
   "task": {
-    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/request.md",
     "sha256": "880339b1ce25e1c33048c2e22abede7fd152b960aff66c041a692757a8de90df"
   },
   "inputs": [
     {
-      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/appointments.csv",
       "sha256": "f27f8c7ae109fedbf2fd793da80f32693205f6aa464e3af6998f79cc272f18e7"
     }
   ],
@@ -86,8 +86,8 @@
   "required_work": "Research Question Card, evidence needs, support/falsification criteria and minimal next action",
   "boundary": "Intake only; preserve latest user scope and existing fixed question.",
   "phase": {
-    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
-    "id": "0bbc659aa75843b29249a284fc378fc7",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
+    "id": "88fcc78337e148e59211c78475030b4b",
     "stage": "feasibility",
     "latest_instruction": "Authorized small synthetic skill behavior validation; no real research"
   },

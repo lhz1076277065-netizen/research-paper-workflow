@@ -65,7 +65,7 @@ def run(out,scientific_smoke=False):
         for p in files:compile(p.read_text(encoding='utf-8'),str(p),'exec')
         return {'files':len(files)}
     check('local_python_scripts',compile_files)
-    check('empty_default_provider_registry',lambda: empty_registry(b))
+    check('mandatory_pinned_provider_registry',lambda: pinned_registry(b))
     check('designated_skill_source_scope',lambda: source_scope(q))
     task={'capability':'journal-intelligence','service':'matching','operation':'plan','request':'Local software check only'}
     check('focused_environment_needs_no_statistical_stack',lambda: no_packages(e,task))
@@ -76,9 +76,9 @@ def run(out,scientific_smoke=False):
         if checks[-1]['status']=='passed':
             check('analytic_compute_plot_report',lambda: scientific(out))
             if checks[-1]['status']=='passed':
-                check('actual_output_handoff',lambda: output_handoff(b,out))
+                check('analytic_artifact_consistency',lambda: output_handoff(b,out))
     passed=all(c['status']=='passed' for c in checks)
-    result={'version':'3.3.1','checked_at':datetime.now(timezone.utc).isoformat(),
+    result={'version':e.VERSION,'checked_at':datetime.now(timezone.utc).isoformat(),
             'platform':platform.system(),'architecture':platform.machine(),'python':sys.version.split()[0],
             'passed':passed,'checks':checks,'scientific_smoke_requested':scientific_smoke,
             'native_host_activation_tested':False,'model_ability_measured':False,
@@ -93,10 +93,20 @@ def source_scope(q):
     except q.ResearchError:return {'selected_sources':len(config['sources']),'outside_library_rejected':True,'ordinary_scientific_software_restricted':False}
     raise ValueError('Outside-library Skill was silently accepted')
 
-def empty_registry(b):
+def pinned_registry(b):
+    import capabilities as C
     data=b.load(b.registry_path())
-    if data['providers']:raise ValueError('Default runtime registry unexpectedly contains fixed providers')
-    return 'dynamic source selection enabled'
+    index=C.load(C.index_path());approved={x['repository'] for x in index['capabilities']}
+    if len(approved)!=14 or data.get('professional_source_policy')!='required_before_every_professional_step_no_host_fallback':
+        raise ValueError('Mandatory designated-source registry is missing')
+    expected={x['id'] for x in index['capabilities']+index.get('additional_entries',[])}
+    providers=data['providers']
+    if len(providers)!=len(expected) or {x['id'] for x in providers}!=expected:raise ValueError('Pinned source entries are missing or duplicated')
+    for p in providers:
+        c=C.entry(index,p['id'])
+        if p['repository'] not in approved or p['commit']!=c['commit'] or p['entrypoint']!=c['entry']:
+            raise ValueError('Provider identity differs from the verified source index')
+    return {'sources':len(approved),'entries':len(expected),'policy':'mandatory source-first, no host fallback','source_execution_verified':False}
 
 def no_packages(e,task):
     d=e.requirements_for(task)
@@ -109,20 +119,17 @@ def verify_environment(e,task,out):
     return {'status':d['status'],'python':d['python']}
 
 def output_handoff(b,out):
-    reg=b.load(b.registry_path())
-    task={'capability':reg.get('capability') or 'analysis-execution','service':'analyze','request':'Manufactured analytic smoke test only',
-          'facts':{'has_data':True},'inputs':[{'path':str(out/'analytic-input.csv')}],
-          'requested_outputs':['results','figure','report'],'operation':'execute'}
-    b.prepare_handoff(task,{},reg,out/'handoff')
+    # A maintenance fixture does not impersonate source-guided professional work.
     files=[('results','results.json'),('figure','figure.svg'),('report','report.md')]
-    r={'capability':task['capability'],'task_sha256':b.sha(out/'handoff/task.json'),
-       'provider_id':'host_fallback','execution_mode':'host_fallback','execution_status':'executed',
-       'outputs':[{'role':role,'path':path,'sha256':b.sha(out/path)} for role,path in files],
-       'reviews':[],'evidence_checks':[]}
-    b.write(out/'returned.json',r)
-    d=b.accept_result(out/'handoff',r,out);b.write(out/'acceptance.json',d)
-    if not d['passed']:raise ValueError('Output contract check failed: '+str(d))
-    return {'status':d['status'],'semantic_or_visual_review_performed_here':False}
+    results=json.loads((out/'results.json').read_text());report=(out/'report.md').read_text()
+    for text in [f"{results['n']} points",f"slope {results['slope']:.12g}",f"intercept {results['intercept']:.12g}",f"is {results['integral_sin_0_pi']:.12g}"]:
+        if text not in report:raise ValueError('Analytic report differs from the actual result: '+text)
+    for _,path in files:
+        if not (out/path).is_file() or not (out/path).stat().st_size:raise ValueError('Missing analytic artifact: '+path)
+    receipt={'status':'engineering_fixture_checked','outputs':[{'role':role,'path':path,'sha256':b.sha(out/path)} for role,path in files],
+        'professional_workflow_completed':False,'semantic_or_visual_review_performed_here':False,'scientific_validity_certified':False}
+    b.write(out/'acceptance.json',receipt)
+    return receipt
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)

@@ -1,7 +1,7 @@
 {
   "version": "3.4.1",
-  "generated_at": "2026-10-05T07:46:15.153524+00:00",
-  "tests_run": 684,
+  "generated_at": "2026-10-05T07:56:27.419939+00:00",
+  "tests_run": 686,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
@@ -20,7 +20,7 @@
     "test_release": 57,
     "test_research_tools": 18,
     "test_result_links": 59,
-    "test_stage_recovery": 16,
+    "test_stage_recovery": 18,
     "test_suite": 121
   },
   "platform": "Darwin",
@@ -2268,11 +2268,19 @@
       "status": "passed"
     },
     {
+      "id": "test_stage_recovery.Routing.test_cold_source_download_stops_before_a_second_request",
+      "status": "passed"
+    },
+    {
       "id": "test_stage_recovery.Routing.test_current_service_alias_can_select_verified_source",
       "status": "passed"
     },
     {
       "id": "test_stage_recovery.Routing.test_focused_source_resolution_preserves_profile_before_work",
+      "status": "passed"
+    },
+    {
+      "id": "test_stage_recovery.Routing.test_portable_selftest_checks_real_registry_without_network",
       "status": "passed"
     },
     {

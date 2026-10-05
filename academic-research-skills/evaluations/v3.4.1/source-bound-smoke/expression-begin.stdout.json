@@ -1,20 +1,20 @@
 {
   "schema_version": "professional-step-1",
-  "id": "f6a026cfb6be41ccb15de4229cc45714",
+  "id": "19e6352fce444db7add4f7da5c82075a",
   "capability": "final-expression",
   "status": "awaiting_professional_work",
-  "started_ns": 1791186367796797000,
+  "started_ns": 1791187024974878000,
   "task": {
-    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/request.md",
     "sha256": "880339b1ce25e1c33048c2e22abede7fd152b960aff66c041a692757a8de90df"
   },
   "inputs": [
     {
-      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/draft.md",
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/draft.md",
       "sha256": "a72ae30a1b59b0d142dd4ed68ab170e883d460bc560fa9a3472cffde75922f16"
     },
     {
-      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/counts.json",
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/counts.json",
       "sha256": "cf858192eab80c9f2cb2df21f263a6e000404885e247a827b6d5d22288a04874"
     }
   ],
@@ -38,8 +38,8 @@
   "required_work": "Revise actual expression and argument while preserving evidence, then recheck facts and scope",
   "boundary": "Cannot remove material uncertainty or strengthen unsupported claims.",
   "phase": {
-    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
-    "id": "0bbc659aa75843b29249a284fc378fc7",
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
+    "id": "88fcc78337e148e59211c78475030b4b",
     "stage": "delivery",
     "latest_instruction": "Authorized small synthetic skill behavior validation; no real research"
   },
@@ -48,5 +48,5 @@
   "professional_work_done": false,
   "host_fallback_allowed": false,
   "support_file_count": 2,
-  "full_receipt": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-start.json"
+  "full_receipt": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-start.json"
 }

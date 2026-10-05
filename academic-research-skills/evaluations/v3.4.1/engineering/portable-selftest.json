@@ -1,0 +1,46 @@
+{
+  "version": "3.4.1",
+  "checked_at": "2026-10-05T07:56:28.166451+00:00",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "python": "3.12.14",
+  "passed": true,
+  "checks": [
+    {
+      "name": "local_python_scripts",
+      "status": "passed",
+      "detail": {
+        "files": 15
+      }
+    },
+    {
+      "name": "mandatory_pinned_provider_registry",
+      "status": "passed",
+      "detail": {
+        "sources": 14,
+        "entries": 23,
+        "policy": "mandatory source-first, no host fallback",
+        "source_execution_verified": false
+      }
+    },
+    {
+      "name": "designated_skill_source_scope",
+      "status": "passed",
+      "detail": {
+        "selected_sources": 14,
+        "outside_library_rejected": true,
+        "ordinary_scientific_software_restricted": false
+      }
+    },
+    {
+      "name": "focused_environment_needs_no_statistical_stack",
+      "status": "passed",
+      "detail": "no packages needed"
+    }
+  ],
+  "scientific_smoke_requested": false,
+  "native_host_activation_tested": false,
+  "model_ability_measured": false,
+  "real_paper_lifecycle_tested": false,
+  "output_directory": "/tmp/v341-portable-smoke"
+}

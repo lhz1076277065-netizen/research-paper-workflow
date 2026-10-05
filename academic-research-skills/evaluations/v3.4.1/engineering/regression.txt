@@ -558,8 +558,10 @@ test_malformed_work_report_is_a_bounded_error (test_stage_recovery.InterruptedFl
 test_pause_and_actual_resume_preserve_original_budget_and_unfinished_step (test_stage_recovery.InterruptedFlow.test_pause_and_actual_resume_preserve_original_budget_and_unfinished_step) ... ok
 test_resume_records_active_step_and_completed_output_without_restart (test_stage_recovery.InterruptedFlow.test_resume_records_active_step_and_completed_output_without_restart) ... ok
 test_stage_exit_cannot_omit_a_started_step (test_stage_recovery.InterruptedFlow.test_stage_exit_cannot_omit_a_started_step) ... ok
+test_cold_source_download_stops_before_a_second_request (test_stage_recovery.Routing.test_cold_source_download_stops_before_a_second_request) ... ok
 test_current_service_alias_can_select_verified_source (test_stage_recovery.Routing.test_current_service_alias_can_select_verified_source) ... ok
 test_focused_source_resolution_preserves_profile_before_work (test_stage_recovery.Routing.test_focused_source_resolution_preserves_profile_before_work) ... ok
+test_portable_selftest_checks_real_registry_without_network (test_stage_recovery.Routing.test_portable_selftest_checks_real_registry_without_network) ... ok
 test_review_template_and_roles_are_required_source_files (test_stage_recovery.Routing.test_review_template_and_roles_are_required_source_files) ... ok
 test_analysis_execution__empty_cannot_complete (test_suite.IsolatedSkillTests.test_analysis_execution__empty_cannot_complete) ... ok
 test_analysis_execution__initialize_and_check (test_suite.IsolatedSkillTests.test_analysis_execution__initialize_and_check) ... ok
@@ -684,6 +686,6 @@ test_wrong_contract (test_suite.ValidatorNegativeTests.test_wrong_contract) ... 
 test_wrong_output_artifact (test_suite.ValidatorNegativeTests.test_wrong_output_artifact) ... ok
 
 ----------------------------------------------------------------------
-Ran 684 tests in 86.243s
+Ran 686 tests in 36.684s
 
 OK

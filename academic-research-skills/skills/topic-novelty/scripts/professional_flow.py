@@ -72,7 +72,13 @@ def begin(index, capability, task, inputs, cache, selected=None, allow_network=F
         raise FlowError('Source outside the fourteen approved repositories')
     task_ref=ref(task); input_refs=[ref(p) for p in inputs]
     if not input_refs:raise FlowError('Actual task inputs are required')
-    prepared=C.prepare(cap,cache,allow_network)
+    if phase:
+        cutoff=min(state['deadline'],state['project_deadline']-state['reserve_seconds'])
+        def still_current():
+            current=P.load(phase)
+            return P.guard(current)['allowed'] and all(current.get(k)==context[k] for k in ('id','stage','latest_instruction'))
+        prepared=C.prepare(cap,cache,allow_network,deadline=cutoff,guard=still_current)
+    else:prepared=C.prepare(cap,cache,allow_network)
     guide=Path(prepared['entry']).read_text(encoding='utf-8')
     return {'schema_version':'professional-step-1','id':uuid.uuid4().hex,
         'capability':capability,'status':'awaiting_professional_work','started_ns':time.time_ns(),

@@ -12,6 +12,7 @@ import os
 from pathlib import Path, PurePosixPath
 import sys
 import tempfile
+import time
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
@@ -33,13 +34,19 @@ def entry(index, uid):
 def listing(index, role=None):
     return {'schema_version':index['schema_version'], 'capabilities':[x for x in index['capabilities']+index.get('additional_entries',[]) if role is None or role in x['roles']],
         'execution_started':False, 'scientific_quality_certified':False}
-def prepare(capability, root, allow_network=False):
+def prepare(capability, root, allow_network=False, deadline=None, guard=None):
     # Separate subfolders prevent one repo's shared dependencies overwriting another.
     base=Path(root)/capability['id']/capability['commit'];refs=[]
     import re
     if not re.fullmatch(r'[A-Za-z0-9_-]+',capability['id']) or not re.fullmatch(r'[A-Za-z0-9_-]+/[A-Za-z0-9_.-]+',capability['repository']) or not re.fullmatch(r'[a-f0-9]{40}',capability['commit']):
         raise CapabilityError('Invalid repository or pinned commit')
+    def remaining():
+        if guard is not None and not guard():raise CapabilityError('Source preparation stopped by phase budget/instruction; preserve its partial verified cache')
+        left=30 if deadline is None else deadline-time.time()
+        if left<=0:raise CapabilityError('Source preparation reached the work deadline; preserve its partial verified cache')
+        return min(30,left)
     for f in capability['required_files']:
+        timeout=remaining()
         target=path_under(base,f['path'])
         if target.exists():
             if not target.is_file() or blob(target.read_bytes())!=f['blob']:raise CapabilityError('Cache changed; preserve it and choose a fresh cache root: '+f['path'])
@@ -47,7 +54,8 @@ def prepare(capability, root, allow_network=False):
             if not allow_network: raise CapabilityError('Source not cached; enable network explicitly: '+f['path'])
             url='https://raw.githubusercontent.com/'+capability['repository']+'/'+capability['commit']+'/'+quote(f['path'],safe='/')
             req=Request(url,headers={'User-Agent':'academic-research-skills/3.4'})
-            with urlopen(req,timeout=30) as response: data=response.read(4*1024*1024+1)
+            with urlopen(req,timeout=timeout) as response: data=response.read(4*1024*1024+1)
+            remaining()
             if len(data)>4*1024*1024:raise CapabilityError('Source file exceeds 4 MiB; inspect separately')
             if blob(data)!=f['blob']:raise CapabilityError('Upstream blob mismatch: '+f['path'])
             target.parent.mkdir(parents=True,exist_ok=True)
@@ -60,6 +68,7 @@ def prepare(capability, root, allow_network=False):
                     if blob(target.read_bytes())!=f['blob']:raise CapabilityError('Concurrent cache mismatch')
             finally:os.unlink(tmp)
         refs.append({'path':f['path'],'blob':f['blob'],'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
+    remaining()
     return {'status':'source_prepared','id':capability['id'],'repository':capability['repository'],
         'commit':capability['commit'],'tree':capability['tree'],'entry':str(path_under(base,capability['entry'])),
         'root':str(base.resolve()),'files':refs,'kind':capability['kind'],

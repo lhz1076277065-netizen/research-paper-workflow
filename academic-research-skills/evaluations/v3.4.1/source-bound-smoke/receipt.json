@@ -1,41 +1,41 @@
 {
   "scope": "Synthetic software flow only; not scientific validation",
-  "elapsed_seconds": 2.2587649822235107,
+  "elapsed_seconds": 1.2083919048309326,
   "professional_steps": [
     {
       "capability": "research-intake",
       "source": "scholar-intake",
-      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-start.json",
-      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-finish.json",
-      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/question-card.md"
+      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-finish.json",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/question-card.md"
     },
     {
       "capability": "research-design",
       "source": "sleep-experiment-plan",
-      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-start.json",
-      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-finish.json",
-      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design.md"
+      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-finish.json",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design.md"
     },
     {
       "capability": "analysis-execution",
       "source": "kdense-statistics",
-      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-start.json",
-      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-finish.json",
-      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis.md"
+      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-finish.json",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis.md"
     },
     {
       "capability": "manuscript-writing",
       "source": "kdense-writing",
-      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-start.json",
-      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-finish.json",
-      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/draft.md"
+      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-finish.json",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/draft.md"
     },
     {
       "capability": "final-expression",
       "source": "anti-defensive",
-      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-start.json",
-      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-finish.json",
-      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/final.md"
+      "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-finish.json",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/final.md"
     }
   ],
   "source_first_steps_completed": 5,
@@ -43,15 +43,15 @@
   "terminal_restart_denied": true,
   "state": {
     "schema_version": "research-phase-1",
-    "id": "0bbc659aa75843b29249a284fc378fc7",
+    "id": "88fcc78337e148e59211c78475030b4b",
     "scope": "full",
     "objective": "Authorized small synthetic skill behavior validation; no real research",
     "latest_instruction": "Authorized small synthetic skill behavior validation; no real research",
     "status": "completed",
     "stage": "delivery",
-    "started_at": "2026-10-05T07:46:05.990188+00:00",
-    "deadline": 1791186665.9901881,
-    "project_deadline": 1791186665.9901881,
+    "started_at": "2026-10-05T07:57:03.980781+00:00",
+    "deadline": 1791187323.980781,
+    "project_deadline": 1791187323.980781,
     "reserve_seconds": 30.0,
     "budget_kind": "authorized_total",
     "authorization": "User authorized a five-minute total synthetic acceptance test",
@@ -90,7 +90,7 @@
     ],
     "history": [
       {
-        "at": "2026-10-05T07:46:06.324736+00:00",
+        "at": "2026-10-05T07:57:04.144869+00:00",
         "event": "stage_exit",
         "stage": "feasibility",
         "evidence": {
@@ -100,7 +100,7 @@
         "skip_reason": null
       },
       {
-        "at": "2026-10-05T07:46:06.637375+00:00",
+        "at": "2026-10-05T07:57:04.304304+00:00",
         "event": "stage_exit",
         "stage": "design",
         "evidence": {
@@ -110,13 +110,13 @@
         "skip_reason": null
       },
       {
-        "at": "2026-10-05T07:46:07.025991+00:00",
+        "at": "2026-10-05T07:57:04.595350+00:00",
         "event": "command_finished",
         "command": [
           "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
-          "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/count.py",
-          "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
-          "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/counts.json"
+          "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/count.py",
+          "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/appointments.csv",
+          "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/counts.json"
         ],
         "returncode": 0,
         "claim": "Validate exact descriptive counts",
@@ -124,7 +124,7 @@
         "stop_reasons": null
       },
       {
-        "at": "2026-10-05T07:46:07.282568+00:00",
+        "at": "2026-10-05T07:57:04.728101+00:00",
         "event": "stage_exit",
         "stage": "research",
         "evidence": {
@@ -134,7 +134,7 @@
         "skip_reason": null
       },
       {
-        "at": "2026-10-05T07:46:07.714484+00:00",
+        "at": "2026-10-05T07:57:04.934100+00:00",
         "event": "stage_exit",
         "stage": "manuscript",
         "evidence": {
@@ -150,83 +150,83 @@
     "next_action": "Continue only the declared synthetic validation",
     "owned_processes": [],
     "professional_pending": [],
-    "stage_started_at": "2026-10-05T07:46:07.714484+00:00",
+    "stage_started_at": "2026-10-05T07:57:04.934100+00:00",
     "host_goal_state": "not_modified",
     "professional_steps": [
       {
         "status": "eligible_for_handoff",
-        "step_id": "0ec1cb4e5020492385c288554a7730c2",
+        "step_id": "cfeea1c6f539403ab7d1c58d56841fc3",
         "capability": "research-intake",
         "outputs": [
           {
-            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/question-card.md",
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/question-card.md",
             "sha256": "fbfb672006d19cf694e8dc6ccb08953b48637a5c531d166f6d4f4be77d00bbe7"
           }
         ],
         "semantic_work_verified_by_tool": false,
         "stage": "feasibility",
-        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-start.json",
-        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-finish.json"
+        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-start.json",
+        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-finish.json"
       },
       {
         "status": "eligible_for_handoff",
-        "step_id": "c55f0dd387b0423280bfe6016bc74528",
+        "step_id": "68c6117bddee47d7bd1ce17b8f80d6c3",
         "capability": "research-design",
         "outputs": [
           {
-            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design.md",
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design.md",
             "sha256": "c236f2fa49ea058e9f60b287323a0715aa7489f18bd678ad54c5d6d47048c5be"
           }
         ],
         "semantic_work_verified_by_tool": false,
         "stage": "design",
-        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-start.json",
-        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-finish.json"
+        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-start.json",
+        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-finish.json"
       },
       {
         "status": "eligible_for_handoff",
-        "step_id": "542277fffa424d13851579675da20ac3",
+        "step_id": "05842b1089f44df583fc3bfe713d69bf",
         "capability": "analysis-execution",
         "outputs": [
           {
-            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis.md",
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis.md",
             "sha256": "c78ba89d5317eba55dd58dc1bf3846321a90697bbd4ffeaeb107f0684f69f485"
           }
         ],
         "semantic_work_verified_by_tool": false,
         "stage": "research",
-        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-start.json",
-        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-finish.json"
+        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-start.json",
+        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-finish.json"
       },
       {
         "status": "eligible_for_handoff",
-        "step_id": "7d03e03fc4a6457195885c9df086cbd2",
+        "step_id": "e7513705e5f6432097eafec3d007b5dc",
         "capability": "manuscript-writing",
         "outputs": [
           {
-            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/draft.md",
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/draft.md",
             "sha256": "a72ae30a1b59b0d142dd4ed68ab170e883d460bc560fa9a3472cffde75922f16"
           }
         ],
         "semantic_work_verified_by_tool": false,
         "stage": "manuscript",
-        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-start.json",
-        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-finish.json"
+        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-start.json",
+        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-finish.json"
       },
       {
         "status": "eligible_for_handoff",
-        "step_id": "f6a026cfb6be41ccb15de4229cc45714",
+        "step_id": "19e6352fce444db7add4f7da5c82075a",
         "capability": "final-expression",
         "outputs": [
           {
-            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/final.md",
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/final.md",
             "sha256": "a3fb9dc187609c227fd440aec811a701dddc0fa56e8862199264f82b9d6e1936"
           }
         ],
         "semantic_work_verified_by_tool": false,
         "stage": "delivery",
-        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-start.json",
-        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-finish.json"
+        "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-start.json",
+        "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-finish.json"
       }
     ],
     "exit_reason": "Synthetic source-bound five-stage fixture delivered; not a paper"
@@ -237,7 +237,7 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/phase_control.py",
         "--state",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "init",
         "--scope",
         "full",
@@ -249,7 +249,7 @@
         "User authorized a five-minute total synthetic acceptance test"
       ],
       "returncode": 0,
-      "at": 1791186365.998559
+      "at": 1791187023.985541
     },
     {
       "command": [
@@ -259,16 +259,16 @@
         "--capability",
         "research-intake",
         "--task",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/request.md",
         "--phase",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "--input",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/appointments.csv",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-start.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-start.json"
       ],
       "returncode": 0,
-      "at": 1791186366.0800169
+      "at": 1791187024.025331
     },
     {
       "command": [
@@ -276,16 +276,16 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "finish",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-start.json",
         "--output",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/question-card.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/question-card.md",
         "--work-report",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-work.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-work.json",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186366.1652129
+      "at": 1791187024.065344
     },
     {
       "command": [
@@ -293,35 +293,35 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "check",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-start.json",
         "--finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186366.244222
+      "at": 1791187024.1067479
     },
     {
       "command": [
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/phase_control.py",
         "--state",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "advance",
         "--stage",
         "design",
         "--evidence",
         "question-card.md",
         "--root",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release",
         "--next-action",
         "Continue only the declared synthetic validation",
         "--professional-started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-start.json",
         "--professional-finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/intake-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186366.336183
+      "at": 1791187024.151039
     },
     {
       "command": [
@@ -331,18 +331,18 @@
         "--capability",
         "research-design",
         "--task",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/request.md",
         "--phase",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "--input",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/question-card.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/question-card.md",
         "--input",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/appointments.csv",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-start.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-start.json"
       ],
       "returncode": 0,
-      "at": 1791186366.411665
+      "at": 1791187024.1898592
     },
     {
       "command": [
@@ -350,16 +350,16 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "finish",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-start.json",
         "--output",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design.md",
         "--work-report",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-work.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-work.json",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186366.491094
+      "at": 1791187024.233702
     },
     {
       "command": [
@@ -367,35 +367,35 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "check",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-start.json",
         "--finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186366.5646038
+      "at": 1791187024.269588
     },
     {
       "command": [
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/phase_control.py",
         "--state",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "advance",
         "--stage",
         "research",
         "--evidence",
         "design.md",
         "--root",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release",
         "--next-action",
         "Continue only the declared synthetic validation",
         "--professional-started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-start.json",
         "--professional-finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186366.6497228
+      "at": 1791187024.311317
     },
     {
       "command": [
@@ -405,42 +405,42 @@
         "--capability",
         "analysis-execution",
         "--task",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/request.md",
         "--phase",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "--input",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/design.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/design.md",
         "--input",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/appointments.csv",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-start.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-start.json"
       ],
       "returncode": 0,
-      "at": 1791186366.7355158
+      "at": 1791187024.350104
     },
     {
       "command": [
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/phase_control.py",
         "--state",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "run",
         "--log",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/count.log",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/count.log",
         "--claim",
         "Validate exact descriptive counts",
         "--decision",
         "Mismatch closes the fixture route",
         "--professional-started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-start.json",
         "--",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/count.py",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/counts.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/count.py",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/appointments.csv",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/counts.json"
       ],
       "returncode": 0,
-      "at": 1791186367.041672
+      "at": 1791187024.6040719
     },
     {
       "command": [
@@ -448,16 +448,16 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "finish",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-start.json",
         "--output",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis.md",
         "--work-report",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-work.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-work.json",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186367.124938
+      "at": 1791187024.647169
     },
     {
       "command": [
@@ -465,35 +465,35 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "check",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-start.json",
         "--finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186367.20499
+      "at": 1791187024.6878998
     },
     {
       "command": [
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/phase_control.py",
         "--state",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "advance",
         "--stage",
         "manuscript",
         "--evidence",
         "analysis.md",
         "--root",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release",
         "--next-action",
         "Continue only the declared synthetic validation",
         "--professional-started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-start.json",
         "--professional-finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186367.2950609
+      "at": 1791187024.735053
     },
     {
       "command": [
@@ -503,18 +503,18 @@
         "--capability",
         "manuscript-writing",
         "--task",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/request.md",
         "--phase",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "--input",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/analysis.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/analysis.md",
         "--input",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/counts.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/counts.json",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-start.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-start.json"
       ],
       "returncode": 0,
-      "at": 1791186367.3943
+      "at": 1791187024.7836869
     },
     {
       "command": [
@@ -522,16 +522,16 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "finish",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-start.json",
         "--output",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/draft.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/draft.md",
         "--work-report",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-work.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-work.json",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186367.492666
+      "at": 1791187024.834616
     },
     {
       "command": [
@@ -539,35 +539,35 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "check",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-start.json",
         "--finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186367.600579
+      "at": 1791187024.886336
     },
     {
       "command": [
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/phase_control.py",
         "--state",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "advance",
         "--stage",
         "delivery",
         "--evidence",
         "draft.md",
         "--root",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release",
         "--next-action",
         "Continue only the declared synthetic validation",
         "--professional-started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-start.json",
         "--professional-finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/writing-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/writing-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186367.7252889
+      "at": 1791187024.940593
     },
     {
       "command": [
@@ -577,18 +577,18 @@
         "--capability",
         "final-expression",
         "--task",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/request.md",
         "--phase",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "--input",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/draft.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/draft.md",
         "--input",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/counts.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/counts.json",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-start.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-start.json"
       ],
       "returncode": 0,
-      "at": 1791186367.810522
+      "at": 1791187024.9822688
     },
     {
       "command": [
@@ -596,16 +596,16 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "finish",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-start.json",
         "--output",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/final.md",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/final.md",
         "--work-report",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-work.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-work.json",
         "--out",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186367.9011462
+      "at": 1791187025.0270631
     },
     {
       "command": [
@@ -613,19 +613,19 @@
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
         "check",
         "--started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-start.json",
         "--finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186367.988527
+      "at": 1791187025.0708952
     },
     {
       "command": [
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/phase_control.py",
         "--state",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "close",
         "--status",
         "completed",
@@ -634,39 +634,39 @@
         "--evidence",
         "final.md",
         "--root",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release",
         "--task-id",
         "synthetic-source-flow",
         "--professional-started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-start.json",
         "--professional-finished",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-finish.json"
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-finish.json"
       ],
       "returncode": 0,
-      "at": 1791186368.0867908
+      "at": 1791187025.118498
     },
     {
       "command": [
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/phase_control.py",
         "--state",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/phase.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/phase.json",
         "run",
         "--log",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/restart.log",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/restart.log",
         "--claim",
         "fixture",
         "--decision",
         "must stay stopped",
         "--professional-started",
-        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/expression-start.json",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/expression-start.json",
         "--",
         "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/validation-env/bin/python",
         "-c",
-        "open('/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-final/restarted',\"w\").write(\"bad\")"
+        "open('/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/source-bound-smoke-v341-release/restarted',\"w\").write(\"bad\")"
       ],
       "returncode": 2,
-      "at": 1791186368.19446
+      "at": 1791187025.1611269
     }
   ],
   "scientific_validity_certified": false

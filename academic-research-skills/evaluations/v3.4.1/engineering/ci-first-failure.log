@@ -1,0 +1,53 @@
+test (3.13, pypdf)	Run portable basic smoke	﻿2026-10-05T07:51:20.0521449Z ##[group]Run python academic-research-skills/scripts/selftest.py --out "/home/runner/work/_temp/academic-skill-smoke"
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0522858Z ^[[36;1mpython academic-research-skills/scripts/selftest.py --out "/home/runner/work/_temp/academic-skill-smoke"^[[0m
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0598394Z shell: /usr/bin/bash -e {0}
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0598805Z env:
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0599226Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0599899Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0600564Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0601155Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0601662Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0602078Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.0602717Z ##[endgroup]
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1908938Z {
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1909404Z   "version": "3.3.1",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1909957Z   "checked_at": "2026-10-05T07:51:20.190379+00:00",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1910371Z   "platform": "Linux",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1910635Z   "architecture": "x86_64",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1910902Z   "python": "3.13.15",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1911148Z   "passed": false,
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1911375Z   "checks": [
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1911586Z     {
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1911813Z       "name": "local_python_scripts",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1912121Z       "status": "passed",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1912368Z       "detail": {
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1912591Z         "files": 15
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1912815Z       }
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1913010Z     },
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1913209Z     {
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1913446Z       "name": "empty_default_provider_registry",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1913765Z       "status": "failed",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1914127Z       "error": "Default runtime registry unexpectedly contains fixed providers"
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1914536Z     },
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1915018Z     {
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1915301Z       "name": "designated_skill_source_scope",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1915614Z       "status": "passed",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1915863Z       "detail": {
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1916095Z         "selected_sources": 14,
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1916456Z         "outside_library_rejected": true,
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1916832Z         "ordinary_scientific_software_restricted": false
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1917149Z       }
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1917356Z     },
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1917552Z     {
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1917813Z       "name": "focused_environment_needs_no_statistical_stack",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1918159Z       "status": "passed",
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1918414Z       "detail": "no packages needed"
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1918677Z     }
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1918866Z   ],
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1919084Z   "scientific_smoke_requested": false,
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1919385Z   "native_host_activation_tested": false,
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1919692Z   "model_ability_measured": false,
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1919977Z   "real_paper_lifecycle_tested": false,
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1920366Z   "output_directory": "/home/runner/work/_temp/academic-skill-smoke"
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.1920806Z }
+test (3.13, pypdf)	Run portable basic smoke	2026-10-05T07:51:20.2012058Z ##[error]Process completed with exit code 1.
