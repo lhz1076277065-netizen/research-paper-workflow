@@ -1,5 +1,7 @@
 # v3.4.1 安装与回退
 
+当前说明、14库入口及后续文档补充见[发行与文件导航](docs/RELEASE-v3.4.1.zh-CN.md)。程序包固定到正式标签；文档补充单独提供提交和校验。
+
 从[正式发行](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.4.1)下载academic-research-skills-v3.4.1-one-click.zip及SHA256SUMS。已验收macOS ARM64与已有Codex系统skill-installer；安装器Python3.9+，工程CLI Python3.10+，部分上游入口要求3.11+。Windows安装未认证，Linux工程CLI由CI检查。
 
 解压一键包，保留目录中install.py与日常版ZIP，运行“一键安装.command”或在该目录执行：

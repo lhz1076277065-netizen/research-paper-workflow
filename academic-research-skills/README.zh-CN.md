@@ -9,3 +9,5 @@
 阶段工具只约束经检查的动作和自己启动的进程组，不能保证宿主停止采样。真实token计量按输入、缓存输入、输出分别报告，计量不可用时不声称严格达标。来源准备、专业实施和原生函数执行不是同一件事；当前Mac不冒称通过H100训练或完整工作台验收。
 
 全流程复核与实际验证见源码包[evaluations/v3.4.1/VALIDATION.zh-CN.md](https://github.com/lhz1076277065-netizen/research-paper-workflow/blob/v3.4.1/academic-research-skills/evaluations/v3.4.1/VALIDATION.zh-CN.md)；历史诊断、14来源真实集成和边界保留在rc.1/rc.2档案。工程及小型行为验证不保证科研原创性、长期任务质量或录用。稳定版保留可回退安装；原测试会话与课题未被修改、续接或消息触达。
+
+[下载与14来源导航](docs/RELEASE-v3.4.1.zh-CN.md) · [正式更新日志](CHANGELOG.md) · [迁移](MIGRATION.zh-CN.md) · [兼容性](docs/COMPATIBILITY.zh-CN.md)。GitHub main为最新说明，文档补充包有独立提交与校验；原程序包固定到正式标签。

@@ -1,9 +1,9 @@
-# 本版选中上游与参考
+# v3.4.1 上游来源与参考
 
-用户来源清单内仓库保存在assets/repository-sources.json，按任务选择，不预装或运行全部。实际原始入口和版本见本轮操作记录，第三方完整源码不随发行包重分发。
+当前14库、23个固定入口的权威身份在[能力索引](../assets/capability-index.json)，可读表格见[发行与来源导航](../docs/RELEASE-v3.4.1.zh-CN.md)。索引同时记录能力类型、必要文件blob、依赖、输入输出、宿主适配及原生限制；专业路由从其中选择匹配入口。
 
-- Nature Writing: https://github.com/Yuan1z0825/nature-skills/tree/84880815fb37317b3766bff2c2abba395b8993c3/skills/nature-writing
-- Anti-defensive writing: https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/102c8b21acf5eda3a0aef3d9779a65db646c8980/skills/anti-defensive-writing/SKILL.md
-- SciPilot: https://github.com/Haojae/scipilot-figure-skill/tree/43098ddb9e6a6d142218540c114f9ed38922fc42
+每个专业步骤执行[必调流程](../docs/mandatory-professional-flow.md)，读取并实施当前输入所需工作，再用finish/check绑定真实成果。专业来源不可用时只选同14库内已核实的匹配替代，不使用host_fallback；参考代码、缓存下载和函数导出不等于完整专业执行。
 
-这些版本记录本轮选定来源，未来任务仍应定位当前入口。使用当前Agent内的证据保持适配时标明范围，不把下载、读入口、单函数或局部写作当完整科研过程。
+源文件按固定commit缓存并核验，后续来源更新另建快照；不在任务执行中自动漂移到上游最新分支，也不需要每篇研究调用所有仓库。普通科学文献、数据与科研库不受专业来源表限制。上游许可与必要通知分别保留，不笼统声称所有资源都允许相同用途。
+
+逐来源适配证据和曾用版本保留在历史验收档案；实际软件、指导、专业工作和原生执行分开披露。第三方完整源码缓存不随发行包重分发。

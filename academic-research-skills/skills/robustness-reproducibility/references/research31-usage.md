@@ -1,4 +1,6 @@
-# 可选研究记录检查器
+# 可选研究记录检查器与必调流程的边界
+
+v3.4.1每个当前专业步骤必须先执行[必调流程](mandatory-professional-flow.md)，调用14库内匹配的固定入口，实施工作并通过finish/check。本文的可选旧记录检查只核对声明及文件；旧记录可被解析不代表它满足当前调用规则。
 
 `research31.py`是标准库工具，不运行模型、不判断论文是否达到顶刊，也不是操作系统沙箱。日常用一份Markdown路线板即可；准备最终交接、需要发现遗漏时可把现有记录映射到示例JSON，再检查实际文件与专业步骤覆盖。
 
@@ -18,9 +20,11 @@ python3 scripts/research31.py assess --state research-route.json --root /path/to
 
 完整全文角色还关联本稿文件：专业writing输出须是最终稿或反防御性修订的输入；末次final_expression标scope=full_manuscript。focused单图/图注任务核对其文件版本，不追加整份论文的主图设计前置。
 
-最终表达必须完成实际论证整理、证据保持与事实复核；`assets/research31-policy.json`中的`final_expression_repository`是优先来源，不是默认必需来源。使用其他库内匹配实现时沿用`provider_use`；当前Agent直接按本库协议完成时，可在`final_expression.operation`中记录`actor_scope: current_host`、`scope: full_manuscript`、含`argument_review`与`evidence_preservation`的`steps`，以及实际`inputs`、`outputs`、`evidence`文件的path/SHA-256，无需伪造外部仓库或commit。两种方式均须保留原稿，关联真正最终稿，并按上述`facts_rechecked`和`review.subjects`规则复核。
+最终表达同样必须调用匹配的真实来源入口；当前默认路由是 `anti-defensive`，读取并实施后保留原稿、终稿及受影响事实的复核。指定另一入口必须来自同14库、已核实且匹配该能力，不能仅记录当前Agent操作来替代调用。
 
-仅用户明确要求某来源时，在`final_expression.required_repository`记录其库内仓库；未完成该来源的实际步骤列为外部必需事项，同时继续其他工作。检查器不验证这项用户要求的真实性，不得根据优先来源自行填写；记录与文件齐全仍不等于语义或科学质量已获认证。
+为兼容历史，旧检查器仍能解析 `final_expression.operation` 的 `actor_scope: current_host`、输入输出及步骤字段，也保留 `final_expression_repository` 的旧优先来源字段。这是历史数据兼容，不是v3.4.1的执行许可；缺少真实专业调用的旧记录保持未核验，不补造仓库、commit或完成标记。两类历史记录均保留 `facts_rechecked` 和 `review.subjects` 的稿件版本关联要求。
+
+用户明确指定某来源时用 `final_expression.required_repository` 保存实际要求；来源缺失时报告受阻步骤，不改为通用推理完成。检查器不会验证用户授权真实性；即使记录与文件齐全，专业语义和科学质量仍需实际复核。
 
 
 ## 从3.1.0迁移记录

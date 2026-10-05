@@ -1,12 +1,25 @@
-# 3.4.0-rc.2 — mandatory professional sources, 2026-10-05
+# Changelog
+
+## 3.4.1 — stable, 2026-10-05
+
+Publish one orchestrator and eighteen source-generated professional skills. Every professional step must invoke a matching verified entry from the fourteen designated repositories; 23 pinned entries and 413 entry/file bindings (404 distinct repository/commit/path files) are indexed. Preserve source-first begin/read/apply/finish/check, actual task/output identities, and explicit native/adaptation limits without host fallback.
+
+Register professional steps durably, reject omitted stage work and duplicate restarts, preserve existing budget authority and total deadlines, support authorized pause/resume, bound cold source preparation, and move sufficient evidence directly from design to writing. Add compact guide handoff, focused review routing, missing full-review resources, explicit requested-step delivery scope, and the corrected portable registry smoke.
+
+Validation: 686 library regressions, 30 compatibility checks, nineteen entry checks, generated consistency, dual Linux/PDF CI, nine installer/rollback checks, a five-stage synthetic flow and a bounded independent writing task. First failures and native limits remain in evaluations/v3.4.1; these checks do not certify scientific validity. Release packages are bound to de8bf4a63bf7081ef9760bf7e3f9fffe469f587c.
+
+### Documentation follow-up, 2026-10-05
+
+Update GitHub installation navigation, architecture, compatibility, migration, update report and download links. Clarify that optional legacy record tools cannot replace mandatory professional calls; regenerate matching references for all nineteen skills and the root compatibility copy. Publish an independently identified documentation supplement while preserving the original stable tag and package checksums. See docs/RELEASE-v3.4.1.zh-CN.md.
+
+## 3.4.0-rc.2 — mandatory professional sources, 2026-10-05
 
 Every professional step invokes a verified matching entry from the fourteen approved repositories before work. Automatic topic routing and pinned-cache resolution, task-bound begin/finish/check, blocked host fallback, source-bound research runners and phase exits. Twenty-three real entries and 403 source files; nineteen generated skills. See evaluations/v3.4.0-rc.2 for actual behavior, regression and known native limitations. Local reversible update only.
 
-# 3.4.0-rc.1 — local candidate, 2026-10-04
+## 3.4.0-rc.1 — local candidate, 2026-10-04
 
 Executable bounded phases and durable recovery; fourteen verified source entrypoints and task-linked adaptations; nineteen generated independent skills. Fixed feasibility/engineering priorities, finite repair and reassessment, actual token-delta accounting, owned process stop and terminal restart denial. Local packages and reversible installation only; no GitHub publication. See evaluations/v3.4.0-rc.1 and release/VALIDATION-v3.4.0-rc.1.zh-CN.md for actual evidence and limitations.
 
-# Changelog
 
 ## 3.3.1
 
