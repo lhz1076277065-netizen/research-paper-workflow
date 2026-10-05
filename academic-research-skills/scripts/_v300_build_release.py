@@ -12,7 +12,9 @@ def generated(root=ROOT):
     capabilities=[s.name for s in skills]+['presentation','dissemination','workbench']
     # Pinned seed entries are prepared explicitly; source preparation is not execution.
     index_path=common/'assets/capability-index.json'
-    seeds=json.loads(index_path.read_text())['capabilities'] if index_path.exists() else []
+    index=json.loads(index_path.read_text()) if index_path.exists() else {}
+    seeds=index.get('capabilities',[])+index.get('additional_entries',[])
+    routes=index.get('professional_routes',{})
     roles={'literature':'literature-discovery','reading':'paper-deep-reading','data':'data-preparation','analysis':'analysis-execution','methods':'research-design','figure':'scientific-visualization','figure_reference':'scientific-visualization','review':'manuscript-review','writing':'manuscript-writing','final_expression':'manuscript-writing','experiment':'analysis-execution','ideation':'topic-novelty','novelty':'topic-novelty','presentation':'presentation','workbench':'workbench'}
     providers=[]
     for c in seeds:
@@ -20,13 +22,15 @@ def generated(root=ROOT):
         providers.append({'id':c['id'],'repository':c['repository'],'repo':c['repository'],
             'entrypoint':c['entry'],'required_paths':list(files),'entry_git_blob_sha':files[c['entry']],
             'discovered_file_blob_sha':files,'kind':c['kind'],'roles':c['roles'],
-            'capabilities':list(dict.fromkeys(roles[r] for r in c['roles'])),
+            'capabilities':list(dict.fromkeys([roles[r] for r in c['roles'] if r in roles]+[k for k,v in routes.items() if c['id'] in [v['primary']]+v.get('alternatives',[])])),
             'purpose':c['host_adaptation'],'source_review_status':'pinned_entry_and_support_verified','source_url':'https://github.com/'+c['repository']+'/blob/'+c['commit']+'/'+c['entry'],'license':'See upstream license file/metadata; no blanket permission claim','notes':c['host_adaptation'],'adaptations':[c['host_adaptation']],'phase':1,'mode':'adapted-protocol' if c['kind'] in {'skill_protocol','workbench_protocol'} else 'reference-only',
-            'default_candidate':False,'requires_host':['local-files'],'requires_facts':[],
+            'default_candidate':any(c['id']==v['primary'] for v in routes.values()),'requires_host':['local-files'],'requires_facts':[],
+            'resolve_pinned_cache':True,
             'dependencies':c['dependencies'],'commit':c['commit'],'tree':c['tree']})
     catalog={'schema_version':'runtime-providers-1','package_version':version,
-             'capabilities':capabilities,'providers':providers,
-             'discovery':'Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.'}
+             'capabilities':capabilities,'providers':providers,'professional_routes':routes,
+             'professional_source_policy':index.get('professional_source_policy'),
+             'discovery':'Source-first professional steps are mandatory; missing matching source blocks the step. Preparation alone is not execution.'}
     out={'docs/provider-catalog.json':encoded(catalog)}
     for f in (common/'scripts').glob('*.py'):
         if f.name not in {'init_run.py','register_artifact.py','validate_run.py'}:

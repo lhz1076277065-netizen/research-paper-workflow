@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.4.0-rc.1",
+  "package_version": "3.4.0-rc.2",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -25,7 +25,236 @@
     "dissemination",
     "workbench"
   ],
-  "providers": [],
-  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
+  "providers": [
+    {
+      "id": "kdense-citation",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "entrypoint": "skills/citation-management/SKILL.md",
+      "required_paths": [
+        "LICENSE.md",
+        "skills/citation-management/SKILL.md",
+        "skills/citation-management/assets/bibtex_template.bib",
+        "skills/citation-management/assets/citation_checklist.md",
+        "skills/citation-management/references/api_contracts.md",
+        "skills/citation-management/references/best_practices.md",
+        "skills/citation-management/references/bibtex_formatting.md",
+        "skills/citation-management/references/citation_validation.md",
+        "skills/citation-management/references/core_workflow.md",
+        "skills/citation-management/references/example_workflows.md",
+        "skills/citation-management/references/google_scholar_search.md",
+        "skills/citation-management/references/metadata_extraction.md",
+        "skills/citation-management/references/pubmed_search.md",
+        "skills/citation-management/references/script_reference.md",
+        "skills/citation-management/references/search_strategies.md",
+        "skills/citation-management/scripts/_common.py",
+        "skills/citation-management/scripts/doi_to_bibtex.py",
+        "skills/citation-management/scripts/extract_metadata.py",
+        "skills/citation-management/scripts/format_bibtex.py",
+        "skills/citation-management/scripts/search_google_scholar.py",
+        "skills/citation-management/scripts/search_openalex.py",
+        "skills/citation-management/scripts/search_pubmed.py",
+        "skills/citation-management/scripts/validate_citations.py"
+      ],
+      "entry_git_blob_sha": "b63b589d4d423969a63e032e62c2b74969147c1c",
+      "discovered_file_blob_sha": {
+        "LICENSE.md": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+        "skills/citation-management/SKILL.md": "b63b589d4d423969a63e032e62c2b74969147c1c",
+        "skills/citation-management/assets/bibtex_template.bib": "4cc74a8ed142e441a53f9957f1feef39e59f4cf1",
+        "skills/citation-management/assets/citation_checklist.md": "d321768a3b4520f9981a6ac9ae90c1d8c570b00e",
+        "skills/citation-management/references/api_contracts.md": "99e5b1bcf3d181a22ebcf57f8b5387847dfab352",
+        "skills/citation-management/references/best_practices.md": "bc4ed3b0f1f3a6f751c4376b5caf0929ea53ca07",
+        "skills/citation-management/references/bibtex_formatting.md": "31d05a016583c59a9b55671c6e09d1698848fa79",
+        "skills/citation-management/references/citation_validation.md": "2474645bf7482c70483467507e77bcfe992c0a15",
+        "skills/citation-management/references/core_workflow.md": "0b8dab6057e63d3c84f5fda84c3d83450d8b1850",
+        "skills/citation-management/references/example_workflows.md": "8685e5bd11c05cdd6649d478429173c05c0823a2",
+        "skills/citation-management/references/google_scholar_search.md": "15149523b3570d0444e35e3d864731385ea5a398",
+        "skills/citation-management/references/metadata_extraction.md": "ae972e9511a9cc790cfb5aa495ea822806e51413",
+        "skills/citation-management/references/pubmed_search.md": "0927bbb262be116ba76e711af67acd3289791a10",
+        "skills/citation-management/references/script_reference.md": "ea8df755381fe63d90ddd5da6600c44d98d7ca0b",
+        "skills/citation-management/references/search_strategies.md": "5e1d501e01daace93a9896a48c206301019d8545",
+        "skills/citation-management/scripts/_common.py": "645d6beed8601c63a46f6148f1ad4f035a1cdf5f",
+        "skills/citation-management/scripts/doi_to_bibtex.py": "f6412724860834f68bcc600a342a4a8ab27b9e34",
+        "skills/citation-management/scripts/extract_metadata.py": "d3c3a7e0ab9ad358c9b6ef8aebf04486475a3bec",
+        "skills/citation-management/scripts/format_bibtex.py": "dd05a9f728e52cdcae035cff975454de1d23d5ff",
+        "skills/citation-management/scripts/search_google_scholar.py": "ddec828873708b3fac52cad160319848e76b461e",
+        "skills/citation-management/scripts/search_openalex.py": "e66a6bddeec8309da379f4e71da218ad364be721",
+        "skills/citation-management/scripts/search_pubmed.py": "9d9967a3650ff3ff426cbc259e8cf8eec8bb9c40",
+        "skills/citation-management/scripts/validate_citations.py": "0513c351ba734443a0fbd9ee57e97100592a2503"
+      },
+      "kind": "skill_protocol",
+      "roles": [
+        "citation"
+      ],
+      "capabilities": [
+        "citation-audit"
+      ],
+      "purpose": "Verify actual bibliographic records and proposition locators. Network queries bounded; optional Scholar library not required if authoritative API suffices.",
+      "source_review_status": "pinned_entry_and_support_verified",
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/citation-management/SKILL.md",
+      "license": "See upstream license file/metadata; no blanket permission claim",
+      "notes": "Verify actual bibliographic records and proposition locators. Network queries bounded; optional Scholar library not required if authoritative API suffices.",
+      "adaptations": [
+        "Verify actual bibliographic records and proposition locators. Network queries bounded; optional Scholar library not required if authoritative API suffices."
+      ],
+      "phase": 1,
+      "mode": "adapted-protocol",
+      "default_candidate": true,
+      "requires_host": [
+        "local-files"
+      ],
+      "requires_facts": [],
+      "resolve_pinned_cache": true,
+      "dependencies": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0"
+    }
+  ],
+  "professional_routes": {
+    "research-intake": {
+      "primary": "scholar-intake",
+      "alternatives": [],
+      "work": "Research Question Card, evidence needs, support/falsification criteria and minimal next action",
+      "boundary": "Intake only; preserve latest user scope and existing fixed question."
+    },
+    "topic-novelty": {
+      "primary": "orchestra-ideation",
+      "alternatives": [
+        "scholar-intake"
+      ],
+      "work": "Apply suitable ideation lenses to the given problem; compare candidates and decisive tests",
+      "boundary": "Open topics use brainstorming; fixed questions use scholar-intake evidence/gap subflow, without restarting open ideation."
+    },
+    "literature-discovery": {
+      "primary": "researchstudio-search",
+      "alternatives": [],
+      "work": "Bounded retrieval, screen real records and synthesize source-supported findings",
+      "boundary": "No abstract or search snippet treated as full-text evidence."
+    },
+    "paper-deep-reading": {
+      "primary": "nature-reader",
+      "alternatives": [],
+      "work": "Read the relevant original material, extract grounded findings and record exact locators",
+      "boundary": "Partial material remains partial; no full-paper reading claim from an abstract."
+    },
+    "research-design": {
+      "primary": "sleep-experiment-plan",
+      "alternatives": [
+        "kdense-design",
+        "scholar-intake"
+      ],
+      "work": "Map claims to decisive checks, controls, dependencies, run order and stopping rules",
+      "boundary": "Study design invokes kdense-design when assignment/randomization is the actual task; no native cross-model audit claimed."
+    },
+    "data-discovery": {
+      "primary": "kdense-database",
+      "alternatives": [],
+      "work": "Define retrieval contract, select authoritative source, verify filters and record access/provenance",
+      "boundary": "Existing provided sources may be assessed without downloading; unknown rights remain unresolved."
+    },
+    "data-preparation": {
+      "primary": "kdense-eda",
+      "alternatives": [],
+      "work": "Profile actual format and units, diagnose missingness and apply justified transformations",
+      "boundary": "Only real data and actual performed transformations."
+    },
+    "analysis-execution": {
+      "primary": "kdense-statistics",
+      "alternatives": [
+        "scholar-analysis",
+        "kdense-eda"
+      ],
+      "work": "Apply appropriate analysis to real inputs, compare baselines and bound interpretation",
+      "boundary": "Statistical/descriptive tasks use KDense; ML analysis bundles use Scholar. Formal proof or interpretive tasks require a verified matching entry before proceeding."
+    },
+    "robustness-reproducibility": {
+      "primary": "kdense-critical",
+      "alternatives": [],
+      "work": "Appraise units, bias, assumptions and replication; perform the requested rerun/check and bind findings",
+      "boundary": "Appraisal alone cannot certify software rerun; retain executed commands/results when rerun requested."
+    },
+    "scientific-visualization": {
+      "primary": "scipilot-figure",
+      "alternatives": [],
+      "work": "Plan claim, choose chart, produce/edit and review numeric accuracy and final-size visual expression",
+      "boundary": "Reference examples may supplement this main professional workflow, not replace it."
+    },
+    "manuscript-writing": {
+      "primary": "kdense-writing",
+      "alternatives": [],
+      "work": "Evidence outline, draft within facts, reconcile methods/results and review affected content",
+      "boundary": "Partial writing stays within requested section; no forced full study or human approval claim."
+    },
+    "manuscript-review": {
+      "primary": "academic-reviewer",
+      "alternatives": [
+        "kdense-critical"
+      ],
+      "work": "Review actual manuscript/evidence and return grounded issues with revision priorities",
+      "boundary": "Current-host review is not independent cross-model peer review."
+    },
+    "citation-audit": {
+      "primary": "kdense-citation",
+      "alternatives": [],
+      "work": "Check actual identifiers/metadata, cited propositions and source locators; correct or flag gaps",
+      "boundary": "Metadata success alone is not proposition verification."
+    },
+    "journal-intelligence": {
+      "primary": "kdense-venue",
+      "alternatives": [],
+      "work": "Resolve exact target and article type, consult official guidance, assess scope/audience and document fit limits",
+      "boundary": "Ranking/matching must use actual journal scope sources; no invented acceptance likelihood."
+    },
+    "ethics-protocol": {
+      "primary": "kdense-writing",
+      "alternatives": [],
+      "work": "Apply confidentiality, authorship, permissions and actual ethics/declaration evidence; prepare unresolved items",
+      "boundary": "Authorship/declaration subflow; institutional approval or jurisdiction-specific advice needs actual authoritative sources; never fabricate approval."
+    },
+    "peer-review-response": {
+      "primary": "scholar-response",
+      "alternatives": [],
+      "work": "Classify all comments, choose strategies, revise evidence/prose and write evidence-based responses with locations",
+      "boundary": "Preserve confidential boundary; no invented completed changes or experiments."
+    },
+    "submission-packaging": {
+      "primary": "kdense-venue",
+      "alternatives": [
+        "kdense-writing"
+      ],
+      "work": "Check official current target rules, assemble actual manuscript/supplements and check package consistency",
+      "boundary": "Preparation only; external submission requires actual user authorization."
+    },
+    "publication-stewardship": {
+      "primary": "kdense-writing",
+      "alternatives": [],
+      "work": "Apply integrity/declaration and revision workflows to affected published claims, evidence and correction materials",
+      "boundary": "Prepare accountable correction/version records; no automatic contact, publishing or platform mutation."
+    },
+    "final-expression": {
+      "primary": "anti-defensive",
+      "alternatives": [],
+      "work": "Revise actual expression and argument while preserving evidence, then recheck facts and scope",
+      "boundary": "Cannot remove material uncertainty or strengthen unsupported claims."
+    },
+    "presentation": {
+      "primary": "open-design-deck",
+      "alternatives": [
+        "codex-ppt"
+      ],
+      "work": "Apply audience/storyboard and actual deck workflow with source-backed content and rendering review",
+      "boundary": "Image-page assembly is function-only, insufficient for the full presentation workflow."
+    },
+    "workbench": {
+      "primary": "paperspine-workbench",
+      "alternatives": [],
+      "work": "Apply requested local production/validation/recovery subflow to current claim-bound artifacts",
+      "boundary": "Do not claim app/backend launch or full workbench execution from a local checker."
+    }
+  },
+  "professional_source_policy": "required_before_every_professional_step_no_host_fallback",
+  "discovery": "Source-first professional steps are mandatory; missing matching source blocks the step. Preparation alone is not execution.",
   "capability": "citation-audit"
 }

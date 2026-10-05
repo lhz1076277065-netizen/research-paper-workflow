@@ -1,6 +1,6 @@
 {
   "schema_version": "capability-index-1",
-  "version": "3.4.0-rc.1",
+  "version": "3.4.0-rc.2",
   "note": "Pinned entry/subflow seeds, not all repository capabilities; runtime readiness and role completion require actual work. Source-only is not execution.",
   "capabilities": [
     {
@@ -1227,5 +1227,1235 @@
         "repository_wide_certification": false
       }
     }
-  ]
+  ],
+  "additional_entries": [
+    {
+      "id": "kdense-writing",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "verified_at": "2026-10-05",
+      "kind": "skill_protocol",
+      "entry": "skills/scientific-writing/SKILL.md",
+      "roles": [
+        "writing",
+        "ethics",
+        "publication"
+      ],
+      "dependencies": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "inputs": [
+        "Current requested step and its actual materials"
+      ],
+      "outputs": [
+        "Source-guided professional output for this step"
+      ],
+      "host_adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload.",
+      "required_files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+        },
+        {
+          "path": "skills/scientific-writing/SKILL.md",
+          "blob": "446993fcd4716ae54ab74bc2a91e3bc5af5235c7"
+        },
+        {
+          "path": "skills/scientific-writing/assets/REPORT_FORMATTING_GUIDE.md",
+          "blob": "c8e67f3539929acd5c95e9926e9b730090322ef9"
+        },
+        {
+          "path": "skills/scientific-writing/assets/authorship_template.json",
+          "blob": "5dd0cd83269684612a82af798bc99f922b140c98"
+        },
+        {
+          "path": "skills/scientific-writing/assets/claim_evidence_template.csv",
+          "blob": "1745c057b4487456d07c3f20d00181050d972c39"
+        },
+        {
+          "path": "skills/scientific-writing/assets/consistency_manifest_template.json",
+          "blob": "97d8c9a8c1815269c14f01ef9d3426bc6e1c8209"
+        },
+        {
+          "path": "skills/scientific-writing/assets/manuscript_manifest_template.json",
+          "blob": "7e68378e36fa8120eca16bfac3d69f1d8007c1d7"
+        },
+        {
+          "path": "skills/scientific-writing/assets/manuscript_scaffold.md",
+          "blob": "96cdd508ad5caed48bd97a504d3be98287b2250f"
+        },
+        {
+          "path": "skills/scientific-writing/assets/reporting_coverage_template.json",
+          "blob": "7ef65f95f4e09d45d76b6a068c5eff74ca3a98f6"
+        },
+        {
+          "path": "skills/scientific-writing/assets/reporting_guidelines.json",
+          "blob": "97daa2730c606a9b8060db7f952560d7ee12bfa3"
+        },
+        {
+          "path": "skills/scientific-writing/assets/source_manifest_template.json",
+          "blob": "666c084b4dc530e1260442e24790e35b7e1c14ec"
+        },
+        {
+          "path": "skills/scientific-writing/references/authorship_ai_confidentiality.md",
+          "blob": "dcddcb4ecde28f93a1a5c23b9fac182d0716bc54"
+        },
+        {
+          "path": "skills/scientific-writing/references/citation_styles.md",
+          "blob": "7f82a625fa96c5abef58659a64c65070b4807c67"
+        },
+        {
+          "path": "skills/scientific-writing/references/cli_reference.md",
+          "blob": "05c1d113720af67cad6458e8bddadcdbcc49ebdd"
+        },
+        {
+          "path": "skills/scientific-writing/references/evidence_workflow.md",
+          "blob": "6a54eb95d87be854d38046851c87f2a08a487390"
+        },
+        {
+          "path": "skills/scientific-writing/references/figures_tables.md",
+          "blob": "7022338d438e439aa475b4ecacf6ba7314b26aed"
+        },
+        {
+          "path": "skills/scientific-writing/references/imrad_structure.md",
+          "blob": "c53506c127ee6f5feb9f6a262398dc85243e73bb"
+        },
+        {
+          "path": "skills/scientific-writing/references/journal_policies.md",
+          "blob": "6750fd916fcddc53077a1de5fbf50ca9015835b2"
+        },
+        {
+          "path": "skills/scientific-writing/references/professional_report_formatting.md",
+          "blob": "6238874aa69129b4f206d5b552325463a9b33653"
+        },
+        {
+          "path": "skills/scientific-writing/references/reporting_guidelines.md",
+          "blob": "fe55f07c153bd1e939f612247fc53ff836d34e35"
+        },
+        {
+          "path": "skills/scientific-writing/references/research_integrity_open_science.md",
+          "blob": "63eb73027c03d25170649a2d10a67c1eef365585"
+        },
+        {
+          "path": "skills/scientific-writing/references/source_ledger.md",
+          "blob": "f5cf28854c089fb9c7fd2afe30cd29312ee426ea"
+        },
+        {
+          "path": "skills/scientific-writing/references/writing_principles.md",
+          "blob": "5fcd5012957fe6670e1e31e103c51d8cfbefa048"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/_common.py",
+          "blob": "fd4a863823f76529f26531142d26a87bfca47ffa"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/audit_claims.py",
+          "blob": "299f73fe51111471b697f0c7ce1f251e611d5945"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/check_consistency.py",
+          "blob": "415be5ce6dae79965f00a3c7cada62a9f012e547"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/check_references.py",
+          "blob": "dbc3830643883f785ddc41a9b7a18bef1f4a7c5a"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/lint_manuscript.py",
+          "blob": "81472e6e476a31c582a193761a03fb66e9d0fdfe"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/scaffold_manuscript.py",
+          "blob": "f60dd74b9b4f2c65faf1f4703e193cb7e8f1fe80"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/select_reporting_guidelines.py",
+          "blob": "7d23b877cef342ba21074fcfaec7dd47c00a7607"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/validate_authorship.py",
+          "blob": "5b62a08b2433a54544b3a578a12735cc6cc91885"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/validate_manifest.py",
+          "blob": "8ad84a317a904b6f7b137691ca7d1cb27d1bb30f"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false
+    },
+    {
+      "id": "kdense-design",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "verified_at": "2026-10-05",
+      "kind": "skill_protocol",
+      "entry": "skills/experimental-design/SKILL.md",
+      "roles": [
+        "methods"
+      ],
+      "dependencies": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "inputs": [
+        "Current requested step and its actual materials"
+      ],
+      "outputs": [
+        "Source-guided professional output for this step"
+      ],
+      "host_adaptation": "Apply question, units, allocation, confounding and design logic before data collection. DOE matrix functions need their actual Python/pydoe dependencies; no native run claimed without execution.",
+      "required_files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+        },
+        {
+          "path": "skills/experimental-design/SKILL.md",
+          "blob": "ee14f9ed795c791ac80e3ea946858d97d09c3e50"
+        },
+        {
+          "path": "skills/experimental-design/references/design_types.md",
+          "blob": "f4ff1908a6c0d967375abb5447e5c8e62ec7d628"
+        },
+        {
+          "path": "skills/experimental-design/references/factorial_and_doe.md",
+          "blob": "9e7558fcbfa301e1507b9779cc57e33749e2252b"
+        },
+        {
+          "path": "skills/experimental-design/references/randomization_and_blocking.md",
+          "blob": "1b0dd39fee22c4fd0347cd30e6163d8c9d1fa731"
+        },
+        {
+          "path": "skills/experimental-design/references/sequential_and_adaptive.md",
+          "blob": "ee93386737a996b34519932b62fd07a89b01682a"
+        },
+        {
+          "path": "skills/experimental-design/scripts/doe_designs.py",
+          "blob": "4b8033c43cc5c885d7102a896f21dd0ae5ed808e"
+        },
+        {
+          "path": "skills/experimental-design/scripts/randomization.py",
+          "blob": "b4ef4355289ef556fcde40a703eb383597564b78"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false
+    },
+    {
+      "id": "kdense-critical",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "verified_at": "2026-10-05",
+      "kind": "skill_protocol",
+      "entry": "skills/scientific-critical-thinking/SKILL.md",
+      "roles": [
+        "robustness",
+        "review"
+      ],
+      "dependencies": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "inputs": [
+        "Current requested step and its actual materials"
+      ],
+      "outputs": [
+        "Source-guided professional output for this step"
+      ],
+      "host_adaptation": "Apply appraisal workflow to evidence and independent units; include actual reproducibility rerun via local protocol when requested. Do not claim clinical recommendations or cross-model review.",
+      "required_files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/SKILL.md",
+          "blob": "2a2fc151b5b13e4e11ece7410f21a14d5b25e30d"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/common_biases.md",
+          "blob": "0acba93293aaf6df629cc00212c9e86a184efdb0"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/core_capabilities.md",
+          "blob": "ca7fec36594abd20921d2aa2ae15e9363d3d58b1"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/evidence_hierarchy.md",
+          "blob": "e4b4946886cee0b1e35b24309e162e0f9ca6f14b"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/experimental_design.md",
+          "blob": "4be76ae49eb6339e6a72c8d3ee69338c4ea3e347"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/logical_fallacies.md",
+          "blob": "336a0407f4397f8ad9b218fc4156ef3473d19f70"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/review_sources.md",
+          "blob": "0241f4aa470f86473cd8be196edeff07a274b261"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/scientific_method.md",
+          "blob": "4dee3644c01de3bec9250d19efa58a0a13cbee59"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/statistical_pitfalls.md",
+          "blob": "1e78cb2d3c6873e7d8289009cc7c9fb772def542"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false
+    },
+    {
+      "id": "kdense-venue",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "verified_at": "2026-10-05",
+      "kind": "skill_protocol",
+      "entry": "skills/venue-templates/SKILL.md",
+      "roles": [
+        "journal",
+        "submission"
+      ],
+      "dependencies": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "inputs": [
+        "Current requested step and its actual materials"
+      ],
+      "outputs": [
+        "Source-guided professional output for this step"
+      ],
+      "host_adaptation": "Read current official venue sources before exact rules. Audience/style fit guidance does not establish acceptance probability or journal ranking.",
+      "required_files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+        },
+        {
+          "path": "skills/venue-templates/SKILL.md",
+          "blob": "74e9d03ff7d3cc4029cbafadf9ab93a27cb66712"
+        },
+        {
+          "path": "skills/venue-templates/assets/grants/nih_specific_aims.tex",
+          "blob": "85aa52e942f56c7f9d2323b83b406c07eccc705d"
+        },
+        {
+          "path": "skills/venue-templates/assets/grants/nsf_proposal_template.tex",
+          "blob": "36ec749425d1933911c8edc6ff478ea33410065c"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-harv.bst",
+          "blob": "d45da999e6e7504bbaaffd3aca7093d75a59468a"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-num-names.bst",
+          "blob": "784aa052f757d9a3727149f085fab5c15d3df772"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-num.bst",
+          "blob": "e43a1d0f603791c770e5e78331873856fa8fbee0"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-template-harv.tex",
+          "blob": "a46ddc18eb0f43401651cfa1165358816e1b6268"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-template-num-names.tex",
+          "blob": "65a4733bfcadd27d28f4b37a174c166b13802992"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-template-num.tex",
+          "blob": "4e0356999d263c931823e6c9f79d7ee230d13514"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/nature_article.tex",
+          "blob": "dc878d7fb6f90858030b561cbce56884e4968ea9"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/neurips_article.tex",
+          "blob": "b69c47399f5181a51ab7a446945a83480e8e6734"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/plos_one.tex",
+          "blob": "588bdc52e7052ae686f5976aa42b97e6b2ed9225"
+        },
+        {
+          "path": "skills/venue-templates/assets/posters/beamerposter_academic.tex",
+          "blob": "ca9c962e56a3c8a9719a4385a73c286dfe08973e"
+        },
+        {
+          "path": "skills/venue-templates/references/cell_press_style.md",
+          "blob": "976a25634c3315bf546bb07dc8cba4b103bd4a9e"
+        },
+        {
+          "path": "skills/venue-templates/references/conferences_formatting.md",
+          "blob": "842a3005afb69ab7b360a0431010e07f3ccec53a"
+        },
+        {
+          "path": "skills/venue-templates/references/cs_conference_style.md",
+          "blob": "d61b9a9be0b3a55c2e7f050dee1efcc6a91faf15"
+        },
+        {
+          "path": "skills/venue-templates/references/current_sources.md",
+          "blob": "0b162e4e9fe176510820fa360d0c4622131c962e"
+        },
+        {
+          "path": "skills/venue-templates/references/grants_requirements.md",
+          "blob": "4125b82197a92e67e0d453e7d84a93642c2373fb"
+        },
+        {
+          "path": "skills/venue-templates/references/journals_formatting.md",
+          "blob": "5c39254a0e4b6086a9361f12bd0f2223a880168b"
+        },
+        {
+          "path": "skills/venue-templates/references/medical_journal_styles.md",
+          "blob": "48ce6fa0b0b2f311662e189507364f675a695e94"
+        },
+        {
+          "path": "skills/venue-templates/references/ml_conference_style.md",
+          "blob": "c156736fe340e2d5f20aa1852970cf2f545e3aae"
+        },
+        {
+          "path": "skills/venue-templates/references/nature_science_style.md",
+          "blob": "fa8e39ca6bf06be9f64c0997a4d74c800a28cd07"
+        },
+        {
+          "path": "skills/venue-templates/references/posters_guidelines.md",
+          "blob": "876156063e1077194d0773da5e4a19a34d13f729"
+        },
+        {
+          "path": "skills/venue-templates/references/reviewer_expectations.md",
+          "blob": "6e49c3aca8eb1efcec4620e440c2790d0fb7266f"
+        },
+        {
+          "path": "skills/venue-templates/references/venue_writing_styles.md",
+          "blob": "ce28254e094831651375b2eda23373f971787db3"
+        },
+        {
+          "path": "skills/venue-templates/scripts/customize_template.py",
+          "blob": "390eb631c7588f3923a1d28715834b73d21445f1"
+        },
+        {
+          "path": "skills/venue-templates/scripts/query_template.py",
+          "blob": "c1219d854d1d0f05d5ab8fb89fdbb41663f08bad"
+        },
+        {
+          "path": "skills/venue-templates/scripts/validate_format.py",
+          "blob": "c78749b3ab26444611a3bc7fe977b7a871981e78"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false
+    },
+    {
+      "id": "kdense-citation",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "verified_at": "2026-10-05",
+      "kind": "skill_protocol",
+      "entry": "skills/citation-management/SKILL.md",
+      "roles": [
+        "citation"
+      ],
+      "dependencies": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "inputs": [
+        "Current requested step and its actual materials"
+      ],
+      "outputs": [
+        "Source-guided professional output for this step"
+      ],
+      "host_adaptation": "Verify actual bibliographic records and proposition locators. Network queries bounded; optional Scholar library not required if authoritative API suffices.",
+      "required_files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+        },
+        {
+          "path": "skills/citation-management/SKILL.md",
+          "blob": "b63b589d4d423969a63e032e62c2b74969147c1c"
+        },
+        {
+          "path": "skills/citation-management/assets/bibtex_template.bib",
+          "blob": "4cc74a8ed142e441a53f9957f1feef39e59f4cf1"
+        },
+        {
+          "path": "skills/citation-management/assets/citation_checklist.md",
+          "blob": "d321768a3b4520f9981a6ac9ae90c1d8c570b00e"
+        },
+        {
+          "path": "skills/citation-management/references/api_contracts.md",
+          "blob": "99e5b1bcf3d181a22ebcf57f8b5387847dfab352"
+        },
+        {
+          "path": "skills/citation-management/references/best_practices.md",
+          "blob": "bc4ed3b0f1f3a6f751c4376b5caf0929ea53ca07"
+        },
+        {
+          "path": "skills/citation-management/references/bibtex_formatting.md",
+          "blob": "31d05a016583c59a9b55671c6e09d1698848fa79"
+        },
+        {
+          "path": "skills/citation-management/references/citation_validation.md",
+          "blob": "2474645bf7482c70483467507e77bcfe992c0a15"
+        },
+        {
+          "path": "skills/citation-management/references/core_workflow.md",
+          "blob": "0b8dab6057e63d3c84f5fda84c3d83450d8b1850"
+        },
+        {
+          "path": "skills/citation-management/references/example_workflows.md",
+          "blob": "8685e5bd11c05cdd6649d478429173c05c0823a2"
+        },
+        {
+          "path": "skills/citation-management/references/google_scholar_search.md",
+          "blob": "15149523b3570d0444e35e3d864731385ea5a398"
+        },
+        {
+          "path": "skills/citation-management/references/metadata_extraction.md",
+          "blob": "ae972e9511a9cc790cfb5aa495ea822806e51413"
+        },
+        {
+          "path": "skills/citation-management/references/pubmed_search.md",
+          "blob": "0927bbb262be116ba76e711af67acd3289791a10"
+        },
+        {
+          "path": "skills/citation-management/references/script_reference.md",
+          "blob": "ea8df755381fe63d90ddd5da6600c44d98d7ca0b"
+        },
+        {
+          "path": "skills/citation-management/references/search_strategies.md",
+          "blob": "5e1d501e01daace93a9896a48c206301019d8545"
+        },
+        {
+          "path": "skills/citation-management/scripts/_common.py",
+          "blob": "645d6beed8601c63a46f6148f1ad4f035a1cdf5f"
+        },
+        {
+          "path": "skills/citation-management/scripts/doi_to_bibtex.py",
+          "blob": "f6412724860834f68bcc600a342a4a8ab27b9e34"
+        },
+        {
+          "path": "skills/citation-management/scripts/extract_metadata.py",
+          "blob": "d3c3a7e0ab9ad358c9b6ef8aebf04486475a3bec"
+        },
+        {
+          "path": "skills/citation-management/scripts/format_bibtex.py",
+          "blob": "dd05a9f728e52cdcae035cff975454de1d23d5ff"
+        },
+        {
+          "path": "skills/citation-management/scripts/search_google_scholar.py",
+          "blob": "ddec828873708b3fac52cad160319848e76b461e"
+        },
+        {
+          "path": "skills/citation-management/scripts/search_openalex.py",
+          "blob": "e66a6bddeec8309da379f4e71da218ad364be721"
+        },
+        {
+          "path": "skills/citation-management/scripts/search_pubmed.py",
+          "blob": "9d9967a3650ff3ff426cbc259e8cf8eec8bb9c40"
+        },
+        {
+          "path": "skills/citation-management/scripts/validate_citations.py",
+          "blob": "0513c351ba734443a0fbd9ee57e97100592a2503"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false
+    },
+    {
+      "id": "kdense-database",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "verified_at": "2026-10-05",
+      "kind": "skill_protocol",
+      "entry": "skills/database-lookup/SKILL.md",
+      "roles": [
+        "data_discovery"
+      ],
+      "dependencies": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "inputs": [
+        "Current requested step and its actual materials"
+      ],
+      "outputs": [
+        "Source-guided professional output for this step"
+      ],
+      "host_adaptation": "Read the relevant retrieval contract/reference; apply actual authorization, bounded API retrieval, filters and provenance. Unsupported domains need a verified matching entry, not invented API results.",
+      "required_files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+        },
+        {
+          "path": "skills/database-lookup/SKILL.md",
+          "blob": "f5f3d4921ed5a0a205f07e643fbaf48fc39521f6"
+        },
+        {
+          "path": "skills/database-lookup/references/addgene.md",
+          "blob": "f6c2d809937fc9533db39231a3393c2cfe70876d"
+        },
+        {
+          "path": "skills/database-lookup/references/alphafold.md",
+          "blob": "5a5e0d50e083bd64b4e6319c049ccbeb6f1a4e75"
+        },
+        {
+          "path": "skills/database-lookup/references/alphavantage.md",
+          "blob": "2d9a76860c2bff3223126497f40534d7fa3b8bab"
+        },
+        {
+          "path": "skills/database-lookup/references/bea.md",
+          "blob": "4be56bd96821c897d114048f06fb1f27454d2470"
+        },
+        {
+          "path": "skills/database-lookup/references/bindingdb.md",
+          "blob": "c1646ffa4d6367d39ed89dfe07dcb386171f7444"
+        },
+        {
+          "path": "skills/database-lookup/references/biogrid.md",
+          "blob": "30996fb73b6ed541f4f1769745068f7f1bc012f5"
+        },
+        {
+          "path": "skills/database-lookup/references/bls.md",
+          "blob": "1d808787fea41f9988c2257118a13999f69f0a76"
+        },
+        {
+          "path": "skills/database-lookup/references/brenda.md",
+          "blob": "1b0d4e1606b1efbc574523b359df0e86e74282b4"
+        },
+        {
+          "path": "skills/database-lookup/references/cbioportal.md",
+          "blob": "2c8eb788d785233336859754e10c54953ea0ed9f"
+        },
+        {
+          "path": "skills/database-lookup/references/census.md",
+          "blob": "57531265b18eab5112856a51f315aa2737c2cd63"
+        },
+        {
+          "path": "skills/database-lookup/references/chebi.md",
+          "blob": "e4f5c76df3fbb39c775f8019b9809817e43aad1c"
+        },
+        {
+          "path": "skills/database-lookup/references/chembl.md",
+          "blob": "d19450f61805a7db039f0f80a20d184f41b01676"
+        },
+        {
+          "path": "skills/database-lookup/references/clinicaltrials.md",
+          "blob": "ace581ec4642fb1298e9da115d499a80a8a26e4a"
+        },
+        {
+          "path": "skills/database-lookup/references/clinpgx.md",
+          "blob": "9f5e51bc7533bebd4256b0748196df77f59f8876"
+        },
+        {
+          "path": "skills/database-lookup/references/clinvar.md",
+          "blob": "de81de5b8607d556e0963c49655a8760cf80490d"
+        },
+        {
+          "path": "skills/database-lookup/references/cod.md",
+          "blob": "a5659c02711f05565cbcc66ea9ba4c24ded7d0cc"
+        },
+        {
+          "path": "skills/database-lookup/references/cosmic.md",
+          "blob": "3b585db7932da9b381b6443cfa9d58642034f59c"
+        },
+        {
+          "path": "skills/database-lookup/references/dailymed.md",
+          "blob": "0af4798bc259b4ece1b90809ebd9bbd0224868bb"
+        },
+        {
+          "path": "skills/database-lookup/references/database_selection_guide.md",
+          "blob": "284b043f40a28eae6dfebde3695d4331214d8f0d"
+        },
+        {
+          "path": "skills/database-lookup/references/datacommons.md",
+          "blob": "964ecd4fc8960254e01d72844f553fb8aa6241f0"
+        },
+        {
+          "path": "skills/database-lookup/references/dbsnp.md",
+          "blob": "e39df04eec41db0114de8e16f96b6716973f2803"
+        },
+        {
+          "path": "skills/database-lookup/references/disgenet.md",
+          "blob": "eb43865e533b7081cdf93372b83c05c09ea3d52d"
+        },
+        {
+          "path": "skills/database-lookup/references/drugbank.md",
+          "blob": "341c58d2f9de9fe6366c81853907aef71de973af"
+        },
+        {
+          "path": "skills/database-lookup/references/ecb.md",
+          "blob": "0a1d032031a2c8ecb320078e3471d7c19b6a52a9"
+        },
+        {
+          "path": "skills/database-lookup/references/emdb.md",
+          "blob": "0ced4b2ba34f0f39cba47cb735b087592a6f5a83"
+        },
+        {
+          "path": "skills/database-lookup/references/ena.md",
+          "blob": "0d88669cf4c53c4e80bb6a3885ec99129b38e0bb"
+        },
+        {
+          "path": "skills/database-lookup/references/encode.md",
+          "blob": "1fb28aeae4c8f0096bfe4fbf819767ca062fe204"
+        },
+        {
+          "path": "skills/database-lookup/references/ensembl.md",
+          "blob": "a33de8a5a8a9fd2d62127cf1bfffec949d7c0037"
+        },
+        {
+          "path": "skills/database-lookup/references/epa.md",
+          "blob": "a19e0c272f8a5e143e3ba117a376b8d80cc02507"
+        },
+        {
+          "path": "skills/database-lookup/references/eurostat.md",
+          "blob": "bb2f46557eea06dc593fec1577c772e6e3e7f72c"
+        },
+        {
+          "path": "skills/database-lookup/references/fda.md",
+          "blob": "029f5445a052fef83f69e3789c87f195081bb2ae"
+        },
+        {
+          "path": "skills/database-lookup/references/federal-reserve.md",
+          "blob": "a21ce028c063b4d0c4bdfb760af9f534821c21b5"
+        },
+        {
+          "path": "skills/database-lookup/references/fred.md",
+          "blob": "fc85be036074d0fa7edd408ce9e1d61db650e8d0"
+        },
+        {
+          "path": "skills/database-lookup/references/gene-ontology.md",
+          "blob": "a7032b66f7f33a1f53feb85d6296a4b0475b6567"
+        },
+        {
+          "path": "skills/database-lookup/references/geo.md",
+          "blob": "89f565e6b3748883d18b4c08afeef3a432b1d9a9"
+        },
+        {
+          "path": "skills/database-lookup/references/gnomad.md",
+          "blob": "4a9f1aed95aacb6ba469547cfefefba528319dbd"
+        },
+        {
+          "path": "skills/database-lookup/references/gtex.md",
+          "blob": "01bd414b34c4c247fa40a4230d0f2f5b057adb09"
+        },
+        {
+          "path": "skills/database-lookup/references/gwas-catalog.md",
+          "blob": "a8caf4c66c442cd620251b8dac17fafd2c036148"
+        },
+        {
+          "path": "skills/database-lookup/references/hca.md",
+          "blob": "82f1982d6564c900b8efaae02afdeb0390b10fa1"
+        },
+        {
+          "path": "skills/database-lookup/references/hpo.md",
+          "blob": "cd499f8370ad9085af81080ed3fe5bc81aa77225"
+        },
+        {
+          "path": "skills/database-lookup/references/human-protein-atlas.md",
+          "blob": "beaba193f8fa70367f154bd51d20e30b86c45b49"
+        },
+        {
+          "path": "skills/database-lookup/references/interpro.md",
+          "blob": "b064536653cfd186f6124aed1ee52c65aa7eb130"
+        },
+        {
+          "path": "skills/database-lookup/references/jaspar.md",
+          "blob": "5b389dcc8f499bd1f2327260a5778bcf4a3bf76d"
+        },
+        {
+          "path": "skills/database-lookup/references/kegg.md",
+          "blob": "ef0e5ded8e9b7b0df9c81ae053dde07fe6d080a5"
+        },
+        {
+          "path": "skills/database-lookup/references/lincs-l1000.md",
+          "blob": "339706c6915a8e2aff9072783a909ac814e84abb"
+        },
+        {
+          "path": "skills/database-lookup/references/materials-project.md",
+          "blob": "17316a686e91fd2ac12dbc23e315d3910b055c6a"
+        },
+        {
+          "path": "skills/database-lookup/references/metabolomics-workbench.md",
+          "blob": "24dee36ea4077906caa42aecc7c9f4ed80b6f86d"
+        },
+        {
+          "path": "skills/database-lookup/references/monarch.md",
+          "blob": "07bcb22a4ac41aa39cc6d005305aff91d1720856"
+        },
+        {
+          "path": "skills/database-lookup/references/mousemine.md",
+          "blob": "a14453554a02d98bd952bbe1952b3c6921ea4c9a"
+        },
+        {
+          "path": "skills/database-lookup/references/myvariant.md",
+          "blob": "f4fee33b51583273cb9f76bed3574e1a8c46f6b7"
+        },
+        {
+          "path": "skills/database-lookup/references/nasa-exoplanet-archive.md",
+          "blob": "8db176ae495299f6e3c8b6c24a123704508852a4"
+        },
+        {
+          "path": "skills/database-lookup/references/nasa.md",
+          "blob": "159ecf020f180b99a3105c52f198ef4291523753"
+        },
+        {
+          "path": "skills/database-lookup/references/ncbi-gene.md",
+          "blob": "aa1a6a697ca3ee0bdf7120a762527b20ec255085"
+        },
+        {
+          "path": "skills/database-lookup/references/ncbi-protein.md",
+          "blob": "68fa3c8eb2537143d3ddc88685c2ce5b77d457aa"
+        },
+        {
+          "path": "skills/database-lookup/references/ncbi-taxonomy.md",
+          "blob": "20800adc0d85235421e345ffa1198b215eba9188"
+        },
+        {
+          "path": "skills/database-lookup/references/nist.md",
+          "blob": "5e31f267db9d23494180f928a2c181176868c5dd"
+        },
+        {
+          "path": "skills/database-lookup/references/noaa.md",
+          "blob": "9415cc94f854ece5400dfb5625676398f81dd768"
+        },
+        {
+          "path": "skills/database-lookup/references/omim.md",
+          "blob": "a6c09da70b8d4f696dc9c4a952044289ae666533"
+        },
+        {
+          "path": "skills/database-lookup/references/opentargets.md",
+          "blob": "a7d6b00c47966aa336b68abc3dccaad6eae3c332"
+        },
+        {
+          "path": "skills/database-lookup/references/openweathermap.md",
+          "blob": "f2c6381c07103f8e02505c795484c57b425974f1"
+        },
+        {
+          "path": "skills/database-lookup/references/pdb.md",
+          "blob": "1821a354c8ef2907c307912070db269f814f4bea"
+        },
+        {
+          "path": "skills/database-lookup/references/pride.md",
+          "blob": "37a6c683fc9714bd3f5a2345f5e0becf4be6c82f"
+        },
+        {
+          "path": "skills/database-lookup/references/pubchem.md",
+          "blob": "ec7f0ede09646c508e86dc71004a75d7e629bb8a"
+        },
+        {
+          "path": "skills/database-lookup/references/quickgo.md",
+          "blob": "195d1d14c09c0fdd38e88827c6e6ddb4bdc76244"
+        },
+        {
+          "path": "skills/database-lookup/references/reactome.md",
+          "blob": "3a7bddf8e9dca29eaeaaf75fbff713d4fcfac213"
+        },
+        {
+          "path": "skills/database-lookup/references/regulomedb.md",
+          "blob": "7016e7b52cb01743d1e5eff02af048aec504c21e"
+        },
+        {
+          "path": "skills/database-lookup/references/retrieval-contract.md",
+          "blob": "379da8ccfd16395840d0f04b4f823fa07202d04d"
+        },
+        {
+          "path": "skills/database-lookup/references/rummageo.md",
+          "blob": "c47e04d8349e3ea5afe719f269233aee4d3a2b3e"
+        },
+        {
+          "path": "skills/database-lookup/references/sdss.md",
+          "blob": "da886bf419c5c9129aee5b6f32977bd5dca16afb"
+        },
+        {
+          "path": "skills/database-lookup/references/sec-edgar.md",
+          "blob": "27b28ed3186e56dcaa9e3a025133bed4f69c7be7"
+        },
+        {
+          "path": "skills/database-lookup/references/simbad.md",
+          "blob": "7253442af5b761df8b32a41eba90ed6deac62658"
+        },
+        {
+          "path": "skills/database-lookup/references/sra.md",
+          "blob": "a0ad89036c29b138653fbdef74361ed2509f8625"
+        },
+        {
+          "path": "skills/database-lookup/references/string.md",
+          "blob": "e23e5c0fedda8e7b90a37b95b7aa89625a22ccd1"
+        },
+        {
+          "path": "skills/database-lookup/references/tcga-gdc.md",
+          "blob": "c30dbbb36ac2320ba48d541415f288d9a25a2883"
+        },
+        {
+          "path": "skills/database-lookup/references/treasury.md",
+          "blob": "5353fc12d76946399931196597b5c1b3c6f96ca6"
+        },
+        {
+          "path": "skills/database-lookup/references/ucsc-genome.md",
+          "blob": "eb339f2fbd760055f166675705a0359f8a4bedc9"
+        },
+        {
+          "path": "skills/database-lookup/references/uniprot.md",
+          "blob": "a76062ee17592d772c034b2aebe6e42a8aff6177"
+        },
+        {
+          "path": "skills/database-lookup/references/usgs.md",
+          "blob": "7cc598349b6ece429b2080c47843ffe9333b581c"
+        },
+        {
+          "path": "skills/database-lookup/references/uspto.md",
+          "blob": "dd9a56d1f100a738312448a31d08e75ccd937188"
+        },
+        {
+          "path": "skills/database-lookup/references/who.md",
+          "blob": "81da3b22fdba5db52aff917ab685b14de5714d54"
+        },
+        {
+          "path": "skills/database-lookup/references/worldbank.md",
+          "blob": "0aafb89def486e93d2e87b8d9d8bb0ed0abf45f4"
+        },
+        {
+          "path": "skills/database-lookup/references/zinc.md",
+          "blob": "e1a160caabc7600aa956dc3d5beb753fb8dec789"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false
+    },
+    {
+      "id": "scholar-intake",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "tree": "d7f61d97768bcaa4442e2481da680073da7528bc",
+      "verified_at": "2026-10-05",
+      "kind": "skill_protocol",
+      "entry": "skills/research-ideation/SKILL.md",
+      "roles": [
+        "intake",
+        "ideation",
+        "novelty"
+      ],
+      "dependencies": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "inputs": [
+        "Current requested step and its actual materials"
+      ],
+      "outputs": [
+        "Source-guided professional output for this step"
+      ],
+      "host_adaptation": "Use Research Question Card and evidence gate. Preserve fixed questions. Optional Zotero/other assistant integrations are replaced by current-host local records; no new host or source repository.",
+      "required_files": [
+        {
+          "path": "LICENSE",
+          "blob": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf"
+        },
+        {
+          "path": "skills/research-ideation/SKILL.md",
+          "blob": "c389b2d2717207b99646f880db033d103d8512c1"
+        },
+        {
+          "path": "skills/research-ideation/references/5w1h-framework.md",
+          "blob": "d584134a221ac857f4d0c9d4321e3d11c026c84a"
+        },
+        {
+          "path": "skills/research-ideation/references/gap-analysis-guide.md",
+          "blob": "794847c103d8a67f1e9edd5d70fe234d984b1d26"
+        },
+        {
+          "path": "skills/research-ideation/references/literature-search-strategies.md",
+          "blob": "368dc9cd9fb6d0029f2dae50f1100c57410ebb73"
+        },
+        {
+          "path": "skills/research-ideation/references/method-selection-guide.md",
+          "blob": "f62d6b5194a5d596b6c910200e074ca4cc8ba603"
+        },
+        {
+          "path": "skills/research-ideation/references/research-contract.md",
+          "blob": "c98020f23a922f797434a24945e85f655415497d"
+        },
+        {
+          "path": "skills/research-ideation/references/research-planning.md",
+          "blob": "7813863d286a7cc0b5fa31213f91a0e2d92e5694"
+        },
+        {
+          "path": "skills/research-ideation/references/research-question-formulation.md",
+          "blob": "b10a98e896f271053fd0eec5ab7c8cec129c136d"
+        },
+        {
+          "path": "skills/research-ideation/references/zotero-integration-guide.md",
+          "blob": "63002a49a113ae5ab3378a59b47603e7afca29e1"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false
+    },
+    {
+      "id": "scholar-response",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "tree": "d7f61d97768bcaa4442e2481da680073da7528bc",
+      "verified_at": "2026-10-05",
+      "kind": "skill_protocol",
+      "entry": "skills/review-response/SKILL.md",
+      "roles": [
+        "response"
+      ],
+      "dependencies": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "inputs": [
+        "Current requested step and its actual materials"
+      ],
+      "outputs": [
+        "Source-guided professional output for this step"
+      ],
+      "host_adaptation": "Classify actual comments, choose evidence-based strategies, make revisions and write precise responses. No claims of completed experiments without evidence.",
+      "required_files": [
+        {
+          "path": "LICENSE",
+          "blob": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf"
+        },
+        {
+          "path": "skills/review-response/SKILL.md",
+          "blob": "6d8c504c9a4f9ec12ddee29c0c5925d4537aba22"
+        },
+        {
+          "path": "skills/review-response/references/rebuttal-templates.md",
+          "blob": "8c32f459e3d597543a86d2b0b7054c0d113da9fe"
+        },
+        {
+          "path": "skills/review-response/references/response-strategies.md",
+          "blob": "fad11d6507fd941670804c489ee4f2872e9bf625"
+        },
+        {
+          "path": "skills/review-response/references/review-classification.md",
+          "blob": "690512410f969979bba1e0f7bc109fceb36f147d"
+        },
+        {
+          "path": "skills/review-response/references/successful-cases.md",
+          "blob": "08522cecb31831559a6699a2cf9a76d1c2669e15"
+        },
+        {
+          "path": "skills/review-response/references/tone-guidelines.md",
+          "blob": "00f4b0e86f2b2fd7522cb38a55bef28072632eb9"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false
+    },
+    {
+      "id": "kdense-statistics",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "verified_at": "2026-10-05",
+      "kind": "skill_protocol",
+      "entry": "skills/statistical-analysis/SKILL.md",
+      "roles": [
+        "analysis"
+      ],
+      "dependencies": [
+        "Python3.12+ and documented isolated scientific Python environment for native scripts; see entry for actual library versions",
+        "Current-host protocol selection/interpretation can use appropriate inspected local functions; no native-stack claim without actual execution"
+      ],
+      "inputs": [
+        "Question, actual data and independent-unit/design information"
+      ],
+      "outputs": [
+        "Source-guided analysis with appropriate assumptions and evidence limits"
+      ],
+      "host_adaptation": "Use only the requested statistical substep with actual independent units and an appropriate method. No mandatory all-library installation for descriptive-only work. Native examples require their documented environment. Formal/interpretive research requires a separately verified matching entry.",
+      "required_files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d"
+        },
+        {
+          "path": "skills/statistical-analysis/SKILL.md",
+          "blob": "4ea7453a12e63f0dbc31d7a47ed41fe3ff4c4c1a"
+        },
+        {
+          "path": "skills/statistical-analysis/references/assumptions_and_diagnostics.md",
+          "blob": "08fa85f9709297dcad84bfbb138b94df7692685c"
+        },
+        {
+          "path": "skills/statistical-analysis/references/bayesian_statistics.md",
+          "blob": "e78e65e190fd3a68034f0e1b1706383eb0888022"
+        },
+        {
+          "path": "skills/statistical-analysis/references/effect_sizes_and_power.md",
+          "blob": "44d0c74e9d9d416485b2d7a8f56010494d907bcc"
+        },
+        {
+          "path": "skills/statistical-analysis/references/reporting_standards.md",
+          "blob": "38e0ccd4b1d835504f70a1cea3a6526667fe890a"
+        },
+        {
+          "path": "skills/statistical-analysis/references/test_selection_guide.md",
+          "blob": "c518d9e57aee5f8713d153cdc6fe154a9293a9e7"
+        },
+        {
+          "path": "skills/statistical-analysis/scripts/assumption_checks.py",
+          "blob": "a55993050ec75027fc7e9b465b4c0b718548b198"
+        }
+      ],
+      "availability": "source_verified",
+      "native_runtime_verified": false
+    }
+  ],
+  "professional_routes": {
+    "research-intake": {
+      "primary": "scholar-intake",
+      "alternatives": [],
+      "work": "Research Question Card, evidence needs, support/falsification criteria and minimal next action",
+      "boundary": "Intake only; preserve latest user scope and existing fixed question."
+    },
+    "topic-novelty": {
+      "primary": "orchestra-ideation",
+      "alternatives": [
+        "scholar-intake"
+      ],
+      "work": "Apply suitable ideation lenses to the given problem; compare candidates and decisive tests",
+      "boundary": "Open topics use brainstorming; fixed questions use scholar-intake evidence/gap subflow, without restarting open ideation."
+    },
+    "literature-discovery": {
+      "primary": "researchstudio-search",
+      "alternatives": [],
+      "work": "Bounded retrieval, screen real records and synthesize source-supported findings",
+      "boundary": "No abstract or search snippet treated as full-text evidence."
+    },
+    "paper-deep-reading": {
+      "primary": "nature-reader",
+      "alternatives": [],
+      "work": "Read the relevant original material, extract grounded findings and record exact locators",
+      "boundary": "Partial material remains partial; no full-paper reading claim from an abstract."
+    },
+    "research-design": {
+      "primary": "sleep-experiment-plan",
+      "alternatives": [
+        "kdense-design",
+        "scholar-intake"
+      ],
+      "work": "Map claims to decisive checks, controls, dependencies, run order and stopping rules",
+      "boundary": "Study design invokes kdense-design when assignment/randomization is the actual task; no native cross-model audit claimed."
+    },
+    "data-discovery": {
+      "primary": "kdense-database",
+      "alternatives": [],
+      "work": "Define retrieval contract, select authoritative source, verify filters and record access/provenance",
+      "boundary": "Existing provided sources may be assessed without downloading; unknown rights remain unresolved."
+    },
+    "data-preparation": {
+      "primary": "kdense-eda",
+      "alternatives": [],
+      "work": "Profile actual format and units, diagnose missingness and apply justified transformations",
+      "boundary": "Only real data and actual performed transformations."
+    },
+    "analysis-execution": {
+      "primary": "kdense-statistics",
+      "alternatives": [
+        "scholar-analysis",
+        "kdense-eda"
+      ],
+      "work": "Apply appropriate analysis to real inputs, compare baselines and bound interpretation",
+      "boundary": "Statistical/descriptive tasks use KDense; ML analysis bundles use Scholar. Formal proof or interpretive tasks require a verified matching entry before proceeding."
+    },
+    "robustness-reproducibility": {
+      "primary": "kdense-critical",
+      "alternatives": [],
+      "work": "Appraise units, bias, assumptions and replication; perform the requested rerun/check and bind findings",
+      "boundary": "Appraisal alone cannot certify software rerun; retain executed commands/results when rerun requested."
+    },
+    "scientific-visualization": {
+      "primary": "scipilot-figure",
+      "alternatives": [],
+      "work": "Plan claim, choose chart, produce/edit and review numeric accuracy and final-size visual expression",
+      "boundary": "Reference examples may supplement this main professional workflow, not replace it."
+    },
+    "manuscript-writing": {
+      "primary": "kdense-writing",
+      "alternatives": [],
+      "work": "Evidence outline, draft within facts, reconcile methods/results and review affected content",
+      "boundary": "Partial writing stays within requested section; no forced full study or human approval claim."
+    },
+    "manuscript-review": {
+      "primary": "academic-reviewer",
+      "alternatives": [
+        "kdense-critical"
+      ],
+      "work": "Review actual manuscript/evidence and return grounded issues with revision priorities",
+      "boundary": "Current-host review is not independent cross-model peer review."
+    },
+    "citation-audit": {
+      "primary": "kdense-citation",
+      "alternatives": [],
+      "work": "Check actual identifiers/metadata, cited propositions and source locators; correct or flag gaps",
+      "boundary": "Metadata success alone is not proposition verification."
+    },
+    "journal-intelligence": {
+      "primary": "kdense-venue",
+      "alternatives": [],
+      "work": "Resolve exact target and article type, consult official guidance, assess scope/audience and document fit limits",
+      "boundary": "Ranking/matching must use actual journal scope sources; no invented acceptance likelihood."
+    },
+    "ethics-protocol": {
+      "primary": "kdense-writing",
+      "alternatives": [],
+      "work": "Apply confidentiality, authorship, permissions and actual ethics/declaration evidence; prepare unresolved items",
+      "boundary": "Authorship/declaration subflow; institutional approval or jurisdiction-specific advice needs actual authoritative sources; never fabricate approval."
+    },
+    "peer-review-response": {
+      "primary": "scholar-response",
+      "alternatives": [],
+      "work": "Classify all comments, choose strategies, revise evidence/prose and write evidence-based responses with locations",
+      "boundary": "Preserve confidential boundary; no invented completed changes or experiments."
+    },
+    "submission-packaging": {
+      "primary": "kdense-venue",
+      "alternatives": [
+        "kdense-writing"
+      ],
+      "work": "Check official current target rules, assemble actual manuscript/supplements and check package consistency",
+      "boundary": "Preparation only; external submission requires actual user authorization."
+    },
+    "publication-stewardship": {
+      "primary": "kdense-writing",
+      "alternatives": [],
+      "work": "Apply integrity/declaration and revision workflows to affected published claims, evidence and correction materials",
+      "boundary": "Prepare accountable correction/version records; no automatic contact, publishing or platform mutation."
+    },
+    "final-expression": {
+      "primary": "anti-defensive",
+      "alternatives": [],
+      "work": "Revise actual expression and argument while preserving evidence, then recheck facts and scope",
+      "boundary": "Cannot remove material uncertainty or strengthen unsupported claims."
+    },
+    "presentation": {
+      "primary": "open-design-deck",
+      "alternatives": [
+        "codex-ppt"
+      ],
+      "work": "Apply audience/storyboard and actual deck workflow with source-backed content and rendering review",
+      "boundary": "Image-page assembly is function-only, insufficient for the full presentation workflow."
+    },
+    "workbench": {
+      "primary": "paperspine-workbench",
+      "alternatives": [],
+      "work": "Apply requested local production/validation/recovery subflow to current claim-bound artifacts",
+      "boundary": "Do not claim app/backend launch or full workbench execution from a local checker."
+    }
+  },
+  "professional_source_policy": "required_before_every_professional_step_no_host_fallback"
 }

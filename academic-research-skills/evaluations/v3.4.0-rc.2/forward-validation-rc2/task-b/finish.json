@@ -1,0 +1,73 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "950624026c2141db84ff5928b49d3cf1",
+  "capability": "manuscript-writing",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/request.md",
+    "sha256": "d913ea86ba302a42cb7aae9c301ad3a1f55fd8f0038fa57510753c344be6b62c"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/materials.md",
+      "sha256": "9f7b9d152031819a9c438f593ecc881ad2468b060f149b9709dad4cce82923d7"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/deliverable.md",
+      "sha256": "4a0456e5bc3b0979a259ec4de3c6a172c30e0de601f1ac3b6aa7032831d33005"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/professional-work.md",
+      "sha256": "564e713f2f9652467344cc4b0230f8ca1fc500aaee0f792b14684e7d4919cae2"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/work-report.json",
+    "sha256": "e9c496038c7b70c25a526ac676ffc87a1eb6f3d76d8f6cdb3b2e674c09bc116a"
+  },
+  "use": {
+    "id": "kdense-writing",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/scientific-writing/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "writing",
+      "ethics",
+      "publication"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/materials.md",
+        "sha256": "9f7b9d152031819a9c438f593ecc881ad2468b060f149b9709dad4cce82923d7"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/deliverable.md",
+        "sha256": "4a0456e5bc3b0979a259ec4de3c6a172c30e0de601f1ac3b6aa7032831d33005"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/professional-work.md",
+        "sha256": "564e713f2f9652467344cc4b0230f8ca1fc500aaee0f792b14684e7d4919cae2"
+      }
+    ],
+    "steps": [
+      "将证明和普适性结论改为描述性报告，保留所有提供的数值与原限定。",
+      "保存来源和声明对应关系，不虚填人类核验者；交付是局部改写草稿而非已验证稿。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": true
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false
+}

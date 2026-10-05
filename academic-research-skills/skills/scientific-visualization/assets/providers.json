@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.4.0-rc.1",
+  "package_version": "3.4.0-rc.2",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -85,11 +85,12 @@
       ],
       "phase": 1,
       "mode": "adapted-protocol",
-      "default_candidate": false,
+      "default_candidate": true,
       "requires_host": [
         "local-files"
       ],
       "requires_facts": [],
+      "resolve_pinned_cache": true,
       "dependencies": [
         "matplotlib/numpy/pandas/seaborn; SciencePlots optional"
       ],
@@ -134,6 +135,7 @@
         "local-files"
       ],
       "requires_facts": [],
+      "resolve_pinned_cache": true,
       "dependencies": [
         "numpy/matplotlib for executable example"
       ],
@@ -141,6 +143,149 @@
       "tree": "16946d8960b3b82df1ead6e8e6b70b6e9eed578c"
     }
   ],
-  "discovery": "Pinned verified seeds; prepare explicitly, then execute in host. Other entries remain discoverable within approved repositories.",
+  "professional_routes": {
+    "research-intake": {
+      "primary": "scholar-intake",
+      "alternatives": [],
+      "work": "Research Question Card, evidence needs, support/falsification criteria and minimal next action",
+      "boundary": "Intake only; preserve latest user scope and existing fixed question."
+    },
+    "topic-novelty": {
+      "primary": "orchestra-ideation",
+      "alternatives": [
+        "scholar-intake"
+      ],
+      "work": "Apply suitable ideation lenses to the given problem; compare candidates and decisive tests",
+      "boundary": "Open topics use brainstorming; fixed questions use scholar-intake evidence/gap subflow, without restarting open ideation."
+    },
+    "literature-discovery": {
+      "primary": "researchstudio-search",
+      "alternatives": [],
+      "work": "Bounded retrieval, screen real records and synthesize source-supported findings",
+      "boundary": "No abstract or search snippet treated as full-text evidence."
+    },
+    "paper-deep-reading": {
+      "primary": "nature-reader",
+      "alternatives": [],
+      "work": "Read the relevant original material, extract grounded findings and record exact locators",
+      "boundary": "Partial material remains partial; no full-paper reading claim from an abstract."
+    },
+    "research-design": {
+      "primary": "sleep-experiment-plan",
+      "alternatives": [
+        "kdense-design",
+        "scholar-intake"
+      ],
+      "work": "Map claims to decisive checks, controls, dependencies, run order and stopping rules",
+      "boundary": "Study design invokes kdense-design when assignment/randomization is the actual task; no native cross-model audit claimed."
+    },
+    "data-discovery": {
+      "primary": "kdense-database",
+      "alternatives": [],
+      "work": "Define retrieval contract, select authoritative source, verify filters and record access/provenance",
+      "boundary": "Existing provided sources may be assessed without downloading; unknown rights remain unresolved."
+    },
+    "data-preparation": {
+      "primary": "kdense-eda",
+      "alternatives": [],
+      "work": "Profile actual format and units, diagnose missingness and apply justified transformations",
+      "boundary": "Only real data and actual performed transformations."
+    },
+    "analysis-execution": {
+      "primary": "kdense-statistics",
+      "alternatives": [
+        "scholar-analysis",
+        "kdense-eda"
+      ],
+      "work": "Apply appropriate analysis to real inputs, compare baselines and bound interpretation",
+      "boundary": "Statistical/descriptive tasks use KDense; ML analysis bundles use Scholar. Formal proof or interpretive tasks require a verified matching entry before proceeding."
+    },
+    "robustness-reproducibility": {
+      "primary": "kdense-critical",
+      "alternatives": [],
+      "work": "Appraise units, bias, assumptions and replication; perform the requested rerun/check and bind findings",
+      "boundary": "Appraisal alone cannot certify software rerun; retain executed commands/results when rerun requested."
+    },
+    "scientific-visualization": {
+      "primary": "scipilot-figure",
+      "alternatives": [],
+      "work": "Plan claim, choose chart, produce/edit and review numeric accuracy and final-size visual expression",
+      "boundary": "Reference examples may supplement this main professional workflow, not replace it."
+    },
+    "manuscript-writing": {
+      "primary": "kdense-writing",
+      "alternatives": [],
+      "work": "Evidence outline, draft within facts, reconcile methods/results and review affected content",
+      "boundary": "Partial writing stays within requested section; no forced full study or human approval claim."
+    },
+    "manuscript-review": {
+      "primary": "academic-reviewer",
+      "alternatives": [
+        "kdense-critical"
+      ],
+      "work": "Review actual manuscript/evidence and return grounded issues with revision priorities",
+      "boundary": "Current-host review is not independent cross-model peer review."
+    },
+    "citation-audit": {
+      "primary": "kdense-citation",
+      "alternatives": [],
+      "work": "Check actual identifiers/metadata, cited propositions and source locators; correct or flag gaps",
+      "boundary": "Metadata success alone is not proposition verification."
+    },
+    "journal-intelligence": {
+      "primary": "kdense-venue",
+      "alternatives": [],
+      "work": "Resolve exact target and article type, consult official guidance, assess scope/audience and document fit limits",
+      "boundary": "Ranking/matching must use actual journal scope sources; no invented acceptance likelihood."
+    },
+    "ethics-protocol": {
+      "primary": "kdense-writing",
+      "alternatives": [],
+      "work": "Apply confidentiality, authorship, permissions and actual ethics/declaration evidence; prepare unresolved items",
+      "boundary": "Authorship/declaration subflow; institutional approval or jurisdiction-specific advice needs actual authoritative sources; never fabricate approval."
+    },
+    "peer-review-response": {
+      "primary": "scholar-response",
+      "alternatives": [],
+      "work": "Classify all comments, choose strategies, revise evidence/prose and write evidence-based responses with locations",
+      "boundary": "Preserve confidential boundary; no invented completed changes or experiments."
+    },
+    "submission-packaging": {
+      "primary": "kdense-venue",
+      "alternatives": [
+        "kdense-writing"
+      ],
+      "work": "Check official current target rules, assemble actual manuscript/supplements and check package consistency",
+      "boundary": "Preparation only; external submission requires actual user authorization."
+    },
+    "publication-stewardship": {
+      "primary": "kdense-writing",
+      "alternatives": [],
+      "work": "Apply integrity/declaration and revision workflows to affected published claims, evidence and correction materials",
+      "boundary": "Prepare accountable correction/version records; no automatic contact, publishing or platform mutation."
+    },
+    "final-expression": {
+      "primary": "anti-defensive",
+      "alternatives": [],
+      "work": "Revise actual expression and argument while preserving evidence, then recheck facts and scope",
+      "boundary": "Cannot remove material uncertainty or strengthen unsupported claims."
+    },
+    "presentation": {
+      "primary": "open-design-deck",
+      "alternatives": [
+        "codex-ppt"
+      ],
+      "work": "Apply audience/storyboard and actual deck workflow with source-backed content and rendering review",
+      "boundary": "Image-page assembly is function-only, insufficient for the full presentation workflow."
+    },
+    "workbench": {
+      "primary": "paperspine-workbench",
+      "alternatives": [],
+      "work": "Apply requested local production/validation/recovery subflow to current claim-bound artifacts",
+      "boundary": "Do not claim app/backend launch or full workbench execution from a local checker."
+    }
+  },
+  "professional_source_policy": "required_before_every_professional_step_no_host_fallback",
+  "discovery": "Source-first professional steps are mandatory; missing matching source blocks the step. Preparation alone is not execution.",
   "capability": "scientific-visualization"
 }

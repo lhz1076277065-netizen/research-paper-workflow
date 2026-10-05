@@ -44,7 +44,7 @@ class Work(unittest.TestCase):
         task={'capability':'journal-intelligence','service':'matching','request':'Synthetic handoff, not actual journal advice',
               'operation':'review','requested_outputs':['figure','text'],'required_reviews':list(required)}
         if scopes is not None:task['required_review_outputs']=scopes
-        directory=self.root/'handoff';reg=b.load(ROOT/'docs/provider-catalog.json')
+        directory=self.root/'handoff';reg=b.load(ROOT/'tests/fixtures/legacy-provider-catalog.json')
         b.prepare_handoff(task,{},reg,directory)
         for file in ['figure.txt','text.txt']:(self.root/file).write_text('Synthetic artifact '+file)
         result={'capability':task['capability'],'task_sha256':b.sha(directory/'task.json'),'provider_id':'host_fallback',

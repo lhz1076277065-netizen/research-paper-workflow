@@ -95,6 +95,11 @@ class RecordTests(Temp):
         s['final_expression']={'provider_use':'expression','facts_rechecked':True,'review':review}
         return s
     def assess(self,s):return Q.assess(s,self.root,POL)
+    def test_legacy_source_flow_is_unknown_not_claimed_compliant(self):
+        result=self.assess(self.complete());self.assertEqual(result['professional_source_flow']['status'],'unknown')
+    def test_new_source_flow_record_cannot_omit_professional_execution(self):
+        state=self.complete();state['professional_steps']=[];result=self.assess(state)
+        self.assertEqual(result['professional_source_flow']['status'],'incomplete');self.assertEqual(result['status'],'research_in_progress')
     def test_pilot_not_main_completion(self):
         s=self.complete();s['scope_achievement']='pilot';r=self.assess(s)
         self.assertEqual(r['status'],'research_in_progress');self.assertTrue(any('Pilot' in x for x in r['next_actions']))

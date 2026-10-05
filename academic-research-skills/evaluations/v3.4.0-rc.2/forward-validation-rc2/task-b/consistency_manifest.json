@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "numeric_facts": [
+    {
+      "fact_id": "N001",
+      "concept": "未到场预约数",
+      "section": "results",
+      "value": 4,
+      "unit": "预约",
+      "numerator": 4,
+      "denominator": 20,
+      "sample_size": 20,
+      "analysis_set": "all",
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N002",
+      "concept": "未到场预约数",
+      "section": "results",
+      "value": 1,
+      "unit": "预约",
+      "numerator": 1,
+      "denominator": 10,
+      "sample_size": 10,
+      "analysis_set": "reminder",
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N003",
+      "concept": "未到场预约数",
+      "section": "results",
+      "value": 3,
+      "unit": "预约",
+      "numerator": 3,
+      "denominator": 10,
+      "sample_size": 10,
+      "analysis_set": "control",
+      "evidence_ids": [
+        "E001"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "analysis_intent": "descriptive",
+      "method_id": "M001",
+      "name": "仅转述用户提供的合成计数，不新增分析",
+      "outcome_ids": [
+        "O001"
+      ],
+      "protocol_status": "not_applicable"
+    }
+  ],
+  "results": [
+    {
+      "analysis_intent": "descriptive",
+      "evidence_ids": [
+        "E001"
+      ],
+      "method_id": "M001",
+      "outcome_id": "O001",
+      "reported_sections": [
+        "results"
+      ],
+      "result_id": "R001",
+      "sample_size": 20
+    }
+  ]
+}

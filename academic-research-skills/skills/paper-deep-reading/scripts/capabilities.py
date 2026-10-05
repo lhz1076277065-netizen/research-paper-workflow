@@ -27,11 +27,11 @@ def path_under(root, rel):
     if not dest.is_relative_to(Path(root).resolve()): raise CapabilityError('Source path escapes root')
     return dest
 def entry(index, uid):
-    matches=[x for x in index['capabilities'] if x['id']==uid]
+    matches=[x for x in index['capabilities']+index.get('additional_entries',[]) if x['id']==uid]
     if len(matches)!=1: raise CapabilityError('Unknown or duplicate capability: '+uid)
     return matches[0]
 def listing(index, role=None):
-    return {'schema_version':index['schema_version'], 'capabilities':[x for x in index['capabilities'] if role is None or role in x['roles']],
+    return {'schema_version':index['schema_version'], 'capabilities':[x for x in index['capabilities']+index.get('additional_entries',[]) if role is None or role in x['roles']],
         'execution_started':False, 'scientific_quality_certified':False}
 def prepare(capability, root, allow_network=False):
     # Separate subfolders prevent one repo's shared dependencies overwriting another.

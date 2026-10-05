@@ -1,8 +1,8 @@
-# 3.4.0-rc.1 本地安装与回退
+# 3.4.0-rc.2 本地安装与回退
 
 本版是本地候选版，未发布GitHub。适用于当前macOS ARM64与已有Codex系统skill-installer。安装器Python3.9+；工程CLI Python3.10+，部分上游入口要求3.11+。验证环境Python3.12.14。其他宿主原生安装未认证。
 
-解压academic-research-skills-v3.4.0-rc.1-one-click.zip，保留目录中install.py与日常版ZIP；运行“一键安装.command”，或在该目录执行：
+解压academic-research-skills-v3.4.0-rc.2-one-click.zip，保留目录中install.py与日常版ZIP；运行“一键安装.command”，或在该目录执行：
 
 ```bash
 python3 install.py

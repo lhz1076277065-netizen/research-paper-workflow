@@ -1,0 +1,22 @@
+{
+  "step_id": "950624026c2141db84ff5928b49d3cf1",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": true,
+  "actions": [
+    {
+      "source_file": "skills/scientific-writing/references/writing_principles.md",
+      "source_excerpt": "Match the strength of each verb to the design and evidence.",
+      "applied": "将证明和普适性结论改为描述性报告，保留所有提供的数值与原限定。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/deliverable.md",
+      "output_excerpt": "这些数据仅作描述，不能据此确认提醒的因果效果、统计显著性或对所有学校的适用性。"
+    },
+    {
+      "source_file": "skills/scientific-writing/references/evidence_workflow.md",
+      "source_excerpt": "A draft may remain\n  incomplete and uncertain.",
+      "applied": "保存来源和声明对应关系，不虚填人类核验者；交付是局部改写草稿而非已验证稿。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-rc2/task-b/professional-work.md",
+      "output_excerpt": "人工核验状态：未完成；没有登记人类核验者，未设 submission_ready。"
+    }
+  ]
+}

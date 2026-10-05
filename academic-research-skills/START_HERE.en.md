@@ -8,4 +8,6 @@ Select real implementations from [fourteen pinned sources](docs/capability-routi
 
 Guard expensive actions and run owned processes through phase_control. Resume latest instructions, current stage, key artifacts, failures and next action without resetting counters/budgets or repeating completed maintenance. Local state never substitutes for authorized host-goal management.
 
-This local 3.4.0-rc.1 candidate has not been published to GitHub. Software verification does not certify scholarly originality or paper completion. See [installation and rollback](INSTALLATION.zh-CN.md).
+This local 3.4.0-rc.2 candidate has not been published to GitHub. Software verification does not certify scholarly originality or paper completion. See [installation and rollback](INSTALLATION.zh-CN.md).
+
+Every professional step must invoke a verified matching entry from the fourteen repositories using [the mandatory source-first flow](docs/mandatory-professional-flow.md). Run begin, read and apply the guide, then finish/check before handoff. Missing matching source blocks that step; host_fallback is prohibited. Source preparation and unrelated function execution are not professional completion.

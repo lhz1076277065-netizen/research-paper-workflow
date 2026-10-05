@@ -19,7 +19,7 @@ import sys
 import time
 from datetime import datetime, timezone
 
-VERSION = '3.4.0-rc.1'
+VERSION = '3.4.0-rc.2'
 
 class ContractError(ValueError):
     pass
@@ -92,6 +92,8 @@ def inspect_provider(provider, config):
          'missing_paths':[], 'entry_version':'unknown','runtime_tested':False,
          'dependency_coverage':'declared_paths_only; host must read actual manifest'}
     spec=config.get('providers',{}).get(provider['id'],{})
+    if not spec and provider.get('resolve_pinned_cache'):
+        spec={'root':str(Path.home()/'.codex/academic-research-source-cache'/provider['id']/provider['commit'])}
     root,paths=provider_paths(provider,spec)
     if root is None:return out
     out.update(root=str(root),layout=spec.get('layout','repository'),resolved_paths={k:str(v) for k,v in paths.items()})
@@ -142,10 +144,13 @@ def check_task(task):
 def plan(task, config, registry):
     check_task(task)
     capability=task['capability'];facts=task.get('facts',{})
+    mandatory=registry.get('professional_source_policy')=='required_before_every_professional_step_no_host_fallback'
     available=set(config.get('host_capabilities',[]))
+    if mandatory:available.add('local-files')
     allowed=task.get('allowed_waves',task.get('allowed_phases',[1]));enabled=set(task.get('enabled_providers',[]))
     if not isinstance(allowed,list) or any(type(x) is not int or x not in {1,2,3} for x in allowed):raise ContractError('allowed_waves must contain 1, 2 or 3')
     preference=task.get('preferred_provider')
+    if not preference and mandatory:preference=registry.get('professional_routes',{}).get(capability,{}).get('primary')
     if preference:enabled.add(preference)
     disabled=set(task.get('disabled_providers',[]))
     service=task.get('service')
@@ -178,6 +183,7 @@ def plan(task, config, registry):
         inspections.append(row)
         if not reasons:eligible.append(p)
     selected=next((p for p in eligible if p['id']==preference),eligible[0] if eligible else None)
+    if mandatory and task.get('preferred_provider') and (not selected or selected['id']!=task['preferred_provider']):selected=None
     evidence_blocks=[]
     producing=task.get('operation','execute') in {'execute','produce'} and service not in {'figure-plan','figure-review','method-plan','review'}
     nonnumeric_evidence = ((service in {'derive','prove'} and facts.get('has_formal_statement') is True)
@@ -195,12 +201,13 @@ def plan(task, config, registry):
         notices.append('Do not mark full-text, figures, tables, supplement or code inspected from abstracts')
     if evidence_blocks:selected=None
     return {'schema_version':'provider-decision-1','capability':capability,'request':task['request'],
-        'status':'blocked_evidence' if evidence_blocks else 'prepared_not_executed' if selected else 'fallback_needed',
-        'selected_provider':selected['id'] if selected else None,'mode':selected.get('services',{}).get(service,{}).get('mode',selected['mode']) if selected else 'host_fallback',
+        'status':'blocked_evidence' if evidence_blocks else 'prepared_not_executed' if selected else 'blocked_source_step' if mandatory else 'fallback_needed',
+        'selected_provider':selected['id'] if selected else None,'mode':selected.get('services',{}).get(service,{}).get('mode',selected['mode']) if selected else 'blocked' if mandatory else 'host_fallback',
         'service':service,'operation':task.get('operation','execute'),'selection_basis':'task service and prerequisites; registry order is only a tie-breaker; no quality score',
         'script_adapter_available':bool(selected and selected.get('script')),'preferred_provider_unavailable':bool(preference and (not selected or selected['id']!=preference)),
         'considered':inspections,'evidence_blocks':evidence_blocks,'notices':notices,
-        'fallback':'Use another compatible existing tool/provider in this capability; retain unmet evidence/permission boundaries.' if not selected else None,
+        'fallback':None if mandatory or selected else 'Use another compatible existing tool/provider in this capability; retain unmet evidence/permission boundaries.',
+        'professional_source_required':mandatory,'host_fallback_allowed':not mandatory,
         'subagents_required_by_this_bridge':False,'executed':False,'scientific_validity_certified':False}
 
 def input_snapshot(task):
@@ -247,6 +254,11 @@ def prepare_handoff(task,config,registry,out):
     write(path/'input_snapshot.json',snapshot)
     lines=['# Execution handoff — prepared, NOT executed', '',f"Capability: {task['capability']}",
            '', '## Original request',task['request'],'','## Required outputs',json.dumps(task.get('requested_outputs',[]),ensure_ascii=False)]
+    if decision.get('professional_source_required'):
+        lines+=['','## Mandatory source-first execution',
+            'Run professional_flow.py begin with this task.json and actual inputs before professional work; read/apply the returned real guide.',
+            'Run finish/check on current outputs; return professional_started and professional_finished paths in the result.',
+            'No host_fallback. Missing matching source blocks this professional step. Source preparation is not completion.']
     if decision['selected_provider']:
         p=find_provider(registry,decision['selected_provider']);inspection=inspect_provider(p,config)
         lines+=['','## Provider',p['id'],'Read actual entry: '+inspection['entry'],
@@ -381,6 +393,19 @@ def accept_result(directory, result, artifact_root):
     task=load(directory/'task.json');decision=load(directory/'decision.json')
     errors=list(check_handoff(directory)['errors']);pending=[]
     if decision.get('status')=='blocked_evidence':errors.append('Prepared task has unresolved evidence blockers; create a revised task after resolution')
+    if decision.get('professional_source_required'):
+        if decision.get('status')=='blocked_source_step' or not decision.get('selected_provider'):
+            errors.append('Mandatory professional source is blocked; no host fallback')
+        try:
+            import professional_flow as F
+            started=load(result['professional_started']);finished=load(result['professional_finished'])
+            F.check(load(Path(__file__).resolve().parents[1]/'assets/capability-index.json'),started,finished)
+            if started['capability']!=task['capability'] or started['task']['sha256']!=sha(directory/'task.json'):
+                errors.append('Professional work is not bound to this handoff task')
+            if finished['use']['id']!=decision.get('selected_provider'):
+                errors.append('Professional source differs from selected handoff source')
+        except (ValueError,OSError,KeyError,TypeError) as e:
+            errors.append('Mandatory professional work not complete: '+str(e))
     if not isinstance(result,dict):raise ContractError('result must be an object')
     if result.get('task_sha256')!=sha(directory/'task.json'):errors.append('Result belongs to another task version')
     state=result.get('execution_status')
@@ -405,6 +430,10 @@ def accept_result(directory, result, artifact_root):
         actual=sha(path)
         if actual!=item.get('sha256'):errors.append('Returned artifact identity mismatch: '+rel)
         artifacts.append({'role':role,'path':rel,'sha256':actual})
+    if decision.get('professional_source_required') and 'finished' in locals():
+        approved={(r['path'],r['sha256']) for r in finished.get('outputs',[])}
+        if any((str(bounded(root,x['path'])),x['sha256']) not in approved for x in artifacts):
+            errors.append('Returned output was not produced by this professional step')
     expected=set(task.get('requested_outputs',[]))
     if not expected:errors.append('Handoff must name requested output roles before accepting a result')
     absent=expected-roles

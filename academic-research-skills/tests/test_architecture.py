@@ -293,7 +293,7 @@ def isolated(skill):
                     'outputs':[{'role':'report','path':'report.md','sha256':b.sha(out)}],'reviews':[]}
             b.write(root/'result.json',result)
             p=subprocess.run(cmd+['accept-result','--dir',str(root/'handoff'),'--result',str(root/'result.json'),'--root',str(root)],capture_output=True,text=True,timeout=10)
-            self.assertEqual(p.returncode,0,p.stdout+p.stderr);self.assertFalse(json.loads(p.stdout)['scientific_validity_certified'])
+            self.assertEqual(p.returncode,2,p.stdout+p.stderr);report=json.loads(p.stdout);self.assertFalse(report['passed']);self.assertTrue(any('Mandatory professional' in x for x in report['errors']));self.assertFalse(report['scientific_validity_certified'])
             self.assertFalse((root/'src').exists());self.assertFalse((root/'docs').exists())
     return test
 for skill in sorted((ROOT/'skills').iterdir()):

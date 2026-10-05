@@ -30,9 +30,9 @@ Skill维护在安装/版本核验交付后结束；局部写作、翻译、读�
 python3 scripts/phase_control.py --state project/phase.json init --scope full --objective '用户已授权问题'
 python3 scripts/phase_control.py --state project/phase.json meter --rollout /absolute/current-host-rollout.jsonl
 python3 scripts/phase_control.py --state project/phase.json guard --estimated-seconds 120 --estimated-tokens 5000
-python3 scripts/phase_control.py --state project/phase.json advance --stage design --evidence feasibility.md --root project --next-action '待确认一次后续预算'
+python3 scripts/phase_control.py --state project/phase.json advance --stage design --evidence feasibility.md --root project --next-action '待确认一次后续预算' --professional-started project/intake-start.json --professional-finished project/intake-finish.json
 python3 scripts/phase_control.py --state project/phase.json authorize --minutes 120 --authority '实际用户确认定位'
-python3 scripts/phase_control.py --state project/phase.json run --log project/run.log --claim '检验核心前提' --decision '失败则停止该路线' --estimated-seconds 30 -- python3 project/test.py
+python3 scripts/phase_control.py --state project/phase.json run --log project/run.log --claim '检验核心前提' --decision '失败则停止该路线' --estimated-seconds 30 --professional-started project/analysis-start.json -- python3 project/test.py
 python3 scripts/phase_control.py --state project/phase.json resume
 ```
 
@@ -43,3 +43,7 @@ meter读取当前宿主实际累计input/cached_input/output的阶段增量；�
 run只监控自己创建的进程组，时间截止、暂停或token触顶后终止自己的作业并记录实际退出。close不根据任意PID杀进程。外部终止runner可能留下子进程，恢复须检查真实句柄，不能盲目重启。外部进程、宿主goal由真实权限与授权管理，不改全局认证或伪称平台暂停。
 
 resume返回只读快照；禁止启动时退出2并包含guard原因，仍不自动改变宿主目标。恢复保留latest_instruction、completed_tasks、当前阶段/截止、关键产物、失败和下一动作；详细日志只定位相关片段。完成的维护task不能因旧聊天开头再次成为当前任务。
+
+## 专业步骤出口
+
+每个研究阶段CLI advance和完成型close必须提交该阶段所有专业步骤的 `--professional-started step-start.json --professional-finished step-finish.json` 对；工具逐项check并记录关联。没有专业实施记录、准备源码代替执行、旧阶段重复记录或不匹配角色会拒绝出口。暂停、路线关闭、触顶报告与维护完成不要求虚构专业完成记录。局部任务同样先执行[必调流程](mandatory-professional-flow.md)，不因任务小而绕过来源。

@@ -1,6 +1,6 @@
 {
   "schema_version": "research31-policy-1",
-  "version": "3.4.0-rc.1",
+  "version": "3.4.0-rc.2",
   "host_scope": "current_host",
   "external_skill_scope": "user_designated_repositories",
   "native_subagents": "optional_same_host",
@@ -32,7 +32,15 @@
         "analysis",
         "writing",
         "ideation",
-        "novelty"
+        "novelty",
+        "ethics",
+        "publication",
+        "robustness",
+        "review",
+        "journal",
+        "submission",
+        "citation",
+        "data_discovery"
       ]
     },
     {
@@ -47,7 +55,10 @@
         "ideation",
         "methods",
         "figure",
-        "writing"
+        "writing",
+        "intake",
+        "novelty",
+        "response"
       ]
     },
     {
@@ -145,5 +156,7 @@
       "research_work_done",
       "functions_run"
     ]
-  }
+  },
+  "professional_source_policy": "required_before_every_professional_step_no_host_fallback",
+  "professional_routes_asset": "capability-index.json"
 }

@@ -186,7 +186,32 @@ def resume(state):
     return {k:state.get(k) for k in ('scope','objective','latest_instruction','stage','status',
         'project_deadline','deadline','authorization','completed_tasks','artifacts','next_action',
         'exit_reason','repairs','unchanged_rounds','reassessment_required','owned_processes','host_goal_state',
-        'budget_kind','reserve_seconds','token_limit','token_reserve','meter')}
+        'budget_kind','reserve_seconds','token_limit','token_reserve','meter','professional_steps')}
+
+def professional_exit(state, starts, finishes):
+    """Check current step artifacts before the CLI records a research stage exit."""
+    if state['scope']=='maintenance':return []
+    if not starts or len(starts)!=len(finishes):raise PhaseError('Every professional step needs its begin/finish pair before this exit')
+    import capabilities as C
+    import professional_flow as F
+    index=load(C.index_path());checked=[]
+    previous={x['step_id'] for x in state.get('professional_steps',[])}
+    permitted={'feasibility':{'research-intake','topic-novelty','literature-discovery','paper-deep-reading'},
+        'design':{'research-design','ethics-protocol','data-discovery','paper-deep-reading'},
+        'research':{'analysis-execution','data-preparation','robustness-reproducibility','paper-deep-reading'},
+        'manuscript':{'manuscript-writing','scientific-visualization','manuscript-review','citation-audit','journal-intelligence','final-expression'},
+        'delivery':{'submission-packaging','publication-stewardship','presentation','final-expression','manuscript-review'}}
+    for start,finish in zip(starts,finishes):
+        begun=load(start);complete=load(finish);r=F.check(index,begun,complete)
+        context=begun.get('phase')
+        if not context or context.get('id')!=state['id'] or context.get('stage')!=state['stage'] or context.get('latest_instruction')!=state['latest_instruction']:
+            raise PhaseError('Professional step is not bound to this phase and latest instruction')
+        if r['step_id'] in previous:raise PhaseError('A prior stage receipt cannot complete a new stage')
+        previous.add(r['step_id'])
+        if state['scope']=='full' and r['capability'] not in permitted.get(state['stage'],set()):
+            raise PhaseError('Professional work does not serve this stage')
+        checked.append({**r,'stage':state['stage'],'started':str(Path(start).resolve()),'finished':str(Path(finish).resolve())})
+    return checked
 
 def run(state_path, command, log_path, claim, decision, estimate=0, rollout=None):
     if not command or not claim.strip() or not decision.strip(): raise PhaseError('Command requires its supported claim and decision consequence')
@@ -251,16 +276,25 @@ def main(argv=None):
     sub.add_parser('resume')
     a=sub.add_parser('meter');a.add_argument('--rollout',required=True)
     a=sub.add_parser('authorize');a.add_argument('--minutes',type=float,required=True);a.add_argument('--authority',required=True);a.add_argument('--token-limit',type=int)
-    a=sub.add_parser('advance');a.add_argument('--stage',choices=STAGES,required=True);a.add_argument('--minutes',type=float);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True)
+    a=sub.add_parser('advance');a.add_argument('--stage',choices=STAGES,required=True);a.add_argument('--minutes',type=float);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
     a=sub.add_parser('repair');a.add_argument('--blocker',required=True);a.add_argument('--approach',required=True)
     a=sub.add_parser('round');a.add_argument('--changed',action='store_true');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True)
     a=sub.add_parser('reassess');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True)
     a=sub.add_parser('instruction');a.add_argument('--text',required=True)
-    a=sub.add_parser('close');a.add_argument('--status',choices=['completed','route_closed','paused'],required=True);a.add_argument('--reason',required=True);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--task-id',required=True)
-    a=sub.add_parser('run');a.add_argument('--log',required=True);a.add_argument('--claim',required=True);a.add_argument('--decision',required=True);a.add_argument('--estimated-seconds',type=float,default=0);a.add_argument('--rollout');a.add_argument('command',nargs=argparse.REMAINDER)
+    a=sub.add_parser('close');a.add_argument('--status',choices=['completed','route_closed','paused'],required=True);a.add_argument('--reason',required=True);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--task-id',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
+    a=sub.add_parser('run');a.add_argument('--log',required=True);a.add_argument('--claim',required=True);a.add_argument('--decision',required=True);a.add_argument('--estimated-seconds',type=float,default=0);a.add_argument('--rollout');a.add_argument('--professional-started');a.add_argument('command',nargs=argparse.REMAINDER)
     args=ap.parse_args(argv)
     try:
         if args.op=='run':
+            state=load(args.state)
+            if state['scope']!='maintenance':
+                if not args.professional_started:raise PhaseError('Research command needs its source-first professional begin receipt')
+                import professional_flow as F
+                import capabilities as C
+                started=load(args.professional_started);F.validate_start(load(C.index_path()),started)
+                context=started.get('phase')
+                if not context or context['path']!=str(Path(args.state).resolve()) or context['id']!=state['id']:
+                    raise PhaseError('Professional begin belongs to another phase')
             cmd=args.command[1:] if args.command[:1]==['--'] else args.command
             result=run(args.state,cmd,args.log,args.claim,args.decision,args.estimated_seconds,args.rollout)
             print(json.dumps(result,ensure_ascii=False));return 0 if not result['stop_reasons'] and result['returncode']==0 else 2
@@ -274,7 +308,10 @@ def main(argv=None):
                 if args.op=='guard':result=enforce(state,estimated_seconds=args.estimated_seconds,estimated_tokens=args.estimated_tokens)
                 elif args.op=='meter':meter_rollout(state,args.rollout);enforce(state)
                 elif args.op=='authorize':authorize(state,args.minutes,args.authority,args.token_limit)
-                elif args.op=='advance':advance(state,args.stage,args.evidence,args.root,args.next_action,minutes=args.minutes)
+                elif args.op=='advance':
+                    steps=professional_exit(state,args.professional_started,args.professional_finished)
+                    advance(state,args.stage,args.evidence,args.root,args.next_action,minutes=args.minutes)
+                    state.setdefault('professional_steps',[]).extend(steps)
                 elif args.op=='repair':repair(state,args.blocker,args.approach)
                 elif args.op=='round':round_result(state,args.changed,args.evidence,args.root)
                 elif args.op=='instruction':state['latest_instruction']=args.text
@@ -283,6 +320,10 @@ def main(argv=None):
                     state['artifacts'].append(artifact(args.evidence,args.root));state['reassessment_required']=False;state['unchanged_rounds']=0;state['next_action']=args.next_action
                 elif args.op=='close':
                     if state['owned_processes'] and args.status=='completed':raise PhaseError('Cannot complete with owned work still running')
+                    if args.status=='completed' and state['scope']!='maintenance' and state['status']!='active':raise PhaseError('Stopped research cannot be marked newly completed')
+                    if args.status=='completed':
+                        steps=professional_exit(state,args.professional_started,args.professional_finished)
+                        state.setdefault('professional_steps',[]).extend(steps)
                     ref=artifact(args.evidence,args.root)
                     if args.status=='completed' and args.task_id not in state['completed_tasks']:state['completed_tasks'].append(args.task_id)
                     state.update(status=args.status,exit_reason=args.reason);state['artifacts'].append(ref)

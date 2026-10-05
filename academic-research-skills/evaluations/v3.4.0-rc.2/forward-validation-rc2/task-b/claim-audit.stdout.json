@@ -1,0 +1,61 @@
+{
+  "issues": [
+    {
+      "code": "CLAIM_NOT_VERIFIED",
+      "item_id": "C001",
+      "severity": "error"
+    },
+    {
+      "code": "CLAIM_NOT_VERIFIED",
+      "item_id": "C002",
+      "severity": "error"
+    },
+    {
+      "code": "CLAIM_NOT_VERIFIED",
+      "item_id": "C003",
+      "severity": "error"
+    },
+    {
+      "code": "UNVERIFIED_CITATION_MARKER",
+      "item_id": "E001",
+      "location": "line:3",
+      "severity": "error"
+    },
+    {
+      "code": "UNVERIFIED_CITATION_MARKER",
+      "item_id": "E001",
+      "location": "line:4",
+      "severity": "error"
+    },
+    {
+      "code": "UNVERIFIED_CITATION_MARKER",
+      "item_id": "E001",
+      "location": "line:5",
+      "severity": "error"
+    },
+    {
+      "code": "UNVERIFIED_CLAIM_EVIDENCE",
+      "item_id": "C001",
+      "severity": "error"
+    },
+    {
+      "code": "UNVERIFIED_CLAIM_EVIDENCE",
+      "item_id": "C002",
+      "severity": "error"
+    },
+    {
+      "code": "UNVERIFIED_CLAIM_EVIDENCE",
+      "item_id": "C003",
+      "severity": "error"
+    }
+  ],
+  "status": "fail",
+  "summary": {
+    "claims_registered": 3,
+    "claims_used": 3,
+    "errors": 9,
+    "sources_registered": 1,
+    "warnings": 0
+  },
+  "tool": "audit_claims"
+}

@@ -170,12 +170,12 @@ class Sources(unittest.TestCase):
         with self.assertRaises(u.UpstreamError):self.index()
 
 class LeanDefaults(unittest.TestCase):
-    def test_pinned_seed_catalog_does_not_execute_or_autoselect(self):
+    def test_pinned_primary_sources_autoselect_without_claiming_execution(self):
         catalog=json.loads((ROOT/'docs/provider-catalog.json').read_text())
         policy=json.loads((ROOT/'assets/research31-policy.json').read_text())
         self.assertEqual({p['repository'] for p in catalog['providers']},{p['repository'] for p in policy['sources']})
         for p in catalog['providers']:
-            self.assertFalse(p['default_candidate'])
+            self.assertEqual(p['default_candidate'],any(p['id']==r['primary'] for r in catalog['professional_routes'].values()))
             self.assertEqual(len(p['commit']),40)
             self.assertIn(p['entrypoint'],p['discovered_file_blob_sha'])
         for skill in (ROOT/'skills').iterdir():

@@ -1,6 +1,6 @@
 # 使用已核实的专业入口
 
-assets/capability-index.json保存14个来源的已核实commit/tree、入口、必需文件blob、能力类型、依赖、输入/输出及宿主适配。它是可用入口索引，不是所有子能力的穷尽目录。当前任务从对应角色选择一个主实现；需要其他子入口时用原upstream发现并另存版本，不全量扫描或下载。
+assets/capability-index.json保存14个来源及补充真实入口的已核实commit/tree、必需文件blob、能力类型、依赖、输入/输出及宿主适配。professional_routes为所有专业步骤指定默认入口。必须先执行 [必调流程](mandatory-professional-flow.md)，不允许按需跳过调用；需要其他子入口时先在同14库用upstream发现、核实并另存版本。
 
 ```bash
 python3 scripts/research31.py capabilities --role reading
@@ -18,6 +18,6 @@ prepare保留原仓库相对目录并逐文件核对Git blob；离线可复用�
 
 每次使用关联当前任务的inputs、outputs、steps与source identity。capabilities.py use可保存真实文件哈希和独立progress三项；这只核对身份与文件存在，不验证语义。将输出实际接到路线板、结果、图或稿件，不拿别的测试补角色。局部流程可无需上游附带函数；运行函数不代表完整角色已完成。
 
-sources/select/upstream/assess保持原接口。旧记录没有phase或能力信息时保持unknown，不要求重新执行已完成研究。查看索引里的known_requirements与adaptation；发现源码更新另建快照，不覆盖正在复现的版本。维护时逐库做集成验证；日常论文按需使用，不要求14库打卡。
+sources/select/upstream/assess保持原接口。旧记录没有phase或能力信息时保持unknown，不虚称满足新规则，也不重跑已结束研究。每个当前专业步骤必须调用匹配入口；不调用与本步无关的全部仓库。查看known_requirements与adaptation；发现源码更新另建快照，不覆盖正在复现的版本。
 
 源码缓存默认~/.codex/academic-research-source-cache，按id/commit复用，不进入全局skills目录；项目需隔离时显式--root。已缓存版本无需allow-network即可prepare，修改过的缓存拒绝覆盖。验收档案路径仅在源码包中可用，运行包不携带测试答案。

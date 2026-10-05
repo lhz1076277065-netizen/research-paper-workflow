@@ -1,0 +1,32 @@
+test_all_independent_specialists_have_real_routes_in_fourteen_repositories (test_professional_flow.Defaults.test_all_independent_specialists_have_real_routes_in_fourteen_repositories) ... ok
+test_default_topic_planner_selects_actual_orchestra_without_manual_enable (test_professional_flow.Defaults.test_default_topic_planner_selects_actual_orchestra_without_manual_enable) ... ok
+test_legacy_planner_missing_source_is_blocked (test_professional_flow.Defaults.test_legacy_planner_missing_source_is_blocked) ... ok
+test_action_not_in_current_output_is_rejected (test_professional_flow.Step.test_action_not_in_current_output_is_rejected) ... ok
+test_binary_artifact_binding (test_professional_flow.Step.test_binary_artifact_binding) ... ok
+test_bound_output_passes_and_remains_semantically_unverified (test_professional_flow.Step.test_bound_output_passes_and_remains_semantically_unverified) ... ok
+test_cli_research_process_needs_source_begin_before_launch (test_professional_flow.Step.test_cli_research_process_needs_source_begin_before_launch) ... ok
+test_default_begin_reads_real_source_before_work (test_professional_flow.Step.test_default_begin_reads_real_source_before_work) ... ok
+test_different_step_receipt_is_rejected (test_professional_flow.Step.test_different_step_receipt_is_rejected) ... ok
+test_fake_source_action_does_not_complete_work (test_professional_flow.Step.test_fake_source_action_does_not_complete_work) ... ok
+test_handoff_accepts_actual_source_guided_current_output (test_professional_flow.Step.test_handoff_accepts_actual_source_guided_current_output) ... ok
+test_handoff_rejects_a_substituted_generic_output (test_professional_flow.Step.test_handoff_rejects_a_substituted_generic_output) ... ok
+test_instruction_change_blocks_unfinished_step (test_professional_flow.Step.test_instruction_change_blocks_unfinished_step) ... ok
+test_missing_offline_source_blocks_without_fallback (test_professional_flow.Step.test_missing_offline_source_blocks_without_fallback) ... ok
+test_new_input_invalidates_completion (test_professional_flow.Step.test_new_input_invalidates_completion) ... ok
+test_output_edit_invalidates_completion (test_professional_flow.Step.test_output_edit_invalidates_completion) ... ok
+test_output_predating_invocation_is_rejected (test_professional_flow.Step.test_output_predating_invocation_is_rejected) ... ok
+test_partial_work_is_not_claimed_complete (test_professional_flow.Step.test_partial_work_is_not_claimed_complete) ... ok
+test_pause_prevents_new_completion_without_destroying_previous_records (test_professional_flow.Step.test_pause_prevents_new_completion_without_destroying_previous_records) ... ok
+test_phase_accepts_actual_bound_step_and_rejects_cross_phase_reuse (test_professional_flow.Step.test_phase_accepts_actual_bound_step_and_rejects_cross_phase_reuse) ... ok
+test_phase_cli_refuses_unsupported_exit (test_professional_flow.Step.test_phase_cli_refuses_unsupported_exit) ... ok
+test_preparation_only_cannot_pass (test_professional_flow.Step.test_preparation_only_cannot_pass) ... ok
+test_restored_begin_can_be_checked_without_restart (test_professional_flow.Step.test_restored_begin_can_be_checked_without_restart) ... ok
+test_source_drift_is_not_silently_repaired (test_professional_flow.Step.test_source_drift_is_not_silently_repaired) ... ok
+test_task_scope_change_invalidates_completion (test_professional_flow.Step.test_task_scope_change_invalidates_completion) ... ok
+test_unmatched_source_cannot_be_selected (test_professional_flow.Step.test_unmatched_source_cannot_be_selected) ... ok
+test_unrelated_function_does_not_complete_professional_work (test_professional_flow.Step.test_unrelated_function_does_not_complete_professional_work) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.186s
+
+OK

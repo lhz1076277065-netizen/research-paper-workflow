@@ -1,3 +1,7 @@
+# 3.4.0-rc.2 — mandatory professional sources, 2026-10-05
+
+Every professional step invokes a verified matching entry from the fourteen approved repositories before work. Automatic topic routing and pinned-cache resolution, task-bound begin/finish/check, blocked host fallback, source-bound research runners and phase exits. Twenty-three real entries and 403 source files; nineteen generated skills. See evaluations/v3.4.0-rc.2 for actual behavior, regression and known native limitations. Local reversible update only.
+
 # 3.4.0-rc.1 — local candidate, 2026-10-04
 
 Executable bounded phases and durable recovery; fourteen verified source entrypoints and task-linked adaptations; nineteen generated independent skills. Fixed feasibility/engineering priorities, finite repair and reassessment, actual token-delta accounting, owned process stop and terminal restart denial. Local packages and reversible installation only; no GitHub publication. See evaluations/v3.4.0-rc.1 and release/VALIDATION-v3.4.0-rc.1.zh-CN.md for actual evidence and limitations.

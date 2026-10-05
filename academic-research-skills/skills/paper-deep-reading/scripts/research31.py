@@ -189,6 +189,22 @@ def assess(state,root,config=None):
     def check_ref(ref,label):
         try:return artifact(ref,root)
         except (ResearchError,OSError) as exc:problems.append(label+': '+str(exc));return None
+    source_flow={'status':'unknown','accepted_steps':[],'semantic_work_verified_by_tool':False}
+    if 'professional_steps' in state:
+        import capabilities as C
+        import professional_flow as F
+        pairs=sequence(state,'professional_steps',dict)
+        source_flow['status']='checked' if pairs else 'incomplete'
+        if not pairs:missing('Invoke and complete the actual source-first professional steps')
+        for pair in pairs:
+            try:
+                started=(Path(root)/pair['started']).resolve();finished=(Path(root)/pair['finished']).resolve()
+                if not started.is_relative_to(Path(root).resolve()) or not finished.is_relative_to(Path(root).resolve()):
+                    raise ResearchError('Professional records must belong to this project')
+                checked=F.check(load(C.index_path()),load(started),load(finished))
+                source_flow['accepted_steps'].append(checked)
+            except (ValueError,OSError,KeyError,TypeError) as exc:
+                source_flow['status']='incomplete';missing('Professional source step not complete: '+str(exc))
     if state.get('host_scope','current_host')!='current_host':problems.append('Research host scope must remain current_host')
     for action in state.get('host_actions',[]):
         if not host_action(action)['permitted_by_project_scope']:problems.append('Unrequested assistant/host action: '+str(action))
@@ -302,6 +318,7 @@ def assess(state,root,config=None):
     return {'status':'record_error' if problems else 'research_in_progress' if next_steps else 'ready_for_content_review',
             'record_errors':problems,'next_actions':next_steps,'verified_documents':verified,
             'provider_progress':progress,'evidence_checks':evidence_checks,**queues,
+            'professional_source_flow':source_flow,
             'scientific_quality_certified':False,'top_journal_ready':None,
             'semantic_review_performed_by_this_tool':False,'host_scope':'current_host',
             'delivery_scope':'protocol' if protocol else requested,

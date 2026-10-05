@@ -7,7 +7,7 @@
 
 ## 本次专业操作的短交接
 
-使用已有provider记录或一段Markdown说明即可，不建立第二套注册表，也不要求局部任务填整项目JSON：
+执行[必调流程](mandatory-professional-flow.md)的begin/finish/check；以下短说明可直接写进本步work-report，不要求局部任务填整项目JSON：
 
 - 当前缺什么能力，为什么选择这个实现；
 - 实际仓库、commit、入口/必要资源，区分原生Skill、README工作流、普通脚本和参考书；

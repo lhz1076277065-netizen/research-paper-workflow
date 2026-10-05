@@ -1,0 +1,96 @@
+{
+  "schema_version": "professional-step-1",
+  "id": "7a02bd9f1e674449832af9b4fa1ca1b1",
+  "capability": "research-intake",
+  "status": "awaiting_professional_work",
+  "started_ns": 1791173706882957000,
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-rc2/request.md",
+    "sha256": "880339b1ce25e1c33048c2e22abede7fd152b960aff66c041a692757a8de90df"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-rc2/appointments.csv",
+      "sha256": "f27f8c7ae109fedbf2fd793da80f32693205f6aa464e3af6998f79cc272f18e7"
+    }
+  ],
+  "source": {
+    "status": "source_prepared",
+    "id": "scholar-intake",
+    "repository": "Galaxy-Dawn/claude-scholar",
+    "commit": "903787345d6aec134086afa2b97715a78fbde519",
+    "tree": "d7f61d97768bcaa4442e2481da680073da7528bc",
+    "entry": "/Users/luca/.codex/academic-research-source-cache/scholar-intake/903787345d6aec134086afa2b97715a78fbde519/skills/research-ideation/SKILL.md",
+    "root": "/Users/luca/.codex/academic-research-source-cache/scholar-intake/903787345d6aec134086afa2b97715a78fbde519",
+    "files": [
+      {
+        "path": "LICENSE",
+        "blob": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf",
+        "sha256": "5a1e92b9b489ec750c774555a7840af3978bc574e1395f6796695ffc67a62bef"
+      },
+      {
+        "path": "skills/research-ideation/SKILL.md",
+        "blob": "c389b2d2717207b99646f880db033d103d8512c1",
+        "sha256": "8fd82b93e2bfc83dda4fffe036a219848141b41cc2d90520f0eca93ccabc4437"
+      },
+      {
+        "path": "skills/research-ideation/references/5w1h-framework.md",
+        "blob": "d584134a221ac857f4d0c9d4321e3d11c026c84a",
+        "sha256": "1e859e14fe9de0708b3b09211f6d437c1a34914b1a4ad55e20af802835b8a397"
+      },
+      {
+        "path": "skills/research-ideation/references/gap-analysis-guide.md",
+        "blob": "794847c103d8a67f1e9edd5d70fe234d984b1d26",
+        "sha256": "9bbe8a050be6936d90ee17f21ba0f95bcda970a46e2ec99c2a1bda8bafe8f34b"
+      },
+      {
+        "path": "skills/research-ideation/references/literature-search-strategies.md",
+        "blob": "368dc9cd9fb6d0029f2dae50f1100c57410ebb73",
+        "sha256": "152da7be2cbd3a66580d6bc71ed3a483ce63ca07d91dca0aedca52fd06e32027"
+      },
+      {
+        "path": "skills/research-ideation/references/method-selection-guide.md",
+        "blob": "f62d6b5194a5d596b6c910200e074ca4cc8ba603",
+        "sha256": "3e5663926d2b853afe97228adc0553fe35079695b6608360e8e62d6b44c8aa94"
+      },
+      {
+        "path": "skills/research-ideation/references/research-contract.md",
+        "blob": "c98020f23a922f797434a24945e85f655415497d",
+        "sha256": "0496a670f64d4b9d7d3f0bc4f236a8b16274f7b3c0aff7477d4893cc8236acab"
+      },
+      {
+        "path": "skills/research-ideation/references/research-planning.md",
+        "blob": "7813863d286a7cc0b5fa31213f91a0e2d92e5694",
+        "sha256": "da47fcb2034b156a16a4be0615e168294ed723e610abd37c48e09598d1e55444"
+      },
+      {
+        "path": "skills/research-ideation/references/research-question-formulation.md",
+        "blob": "b10a98e896f271053fd0eec5ab7c8cec129c136d",
+        "sha256": "df9f0ad4cd61552a207430b2d2ee6147cc6311f7969ea138f1f05576d7b7556b"
+      },
+      {
+        "path": "skills/research-ideation/references/zotero-integration-guide.md",
+        "blob": "63002a49a113ae5ab3378a59b47603e7afca29e1",
+        "sha256": "84dd6c9047a4ca04141c074d61d16ccf9d955eb5ef89bd52e0843f2cb12932d5"
+      }
+    ],
+    "kind": "skill_protocol",
+    "dependency_installation_performed": false,
+    "research_work_done": false,
+    "host_adaptation": "Use Research Question Card and evidence gate. Preserve fixed questions. Optional Zotero/other assistant integrations are replaced by current-host local records; no new host or source repository.",
+    "known_requirements": [
+      "Current host protocol; see actual entry for optional function dependencies"
+    ]
+  },
+  "guide": "---\nname: research-ideation\ndescription: This skill should be used when the user asks to \"brainstorm research ideas\", \"use 5W1H framework\", \"identify research gaps\", \"conduct gap analysis\", \"start research project\", \"conduct literature review\", \"define research question\", \"select research method\", \"plan research\", or mentions research project initiation phase. Provides comprehensive guidance for research startup workflow from idea generation to planning.\nversion: 0.1.0\n---\n\n# Research Ideation\n\nSupports the complete workflow for the research project initiation phase, from vague idea to a traceable research contract: research question, hypothesis, evidence needs, falsification criteria, method selection, and next action.\n\n## Core Features\n\n### 1. Idea Brainstorming (5W1H Framework)\n\nSystematically brainstorm research ideas using the 5W1H framework:\n- **What**: What problem or phenomenon to study\n- **Why**: Why this problem is important\n- **Who**: Target audience and stakeholders\n- **When**: Time scope and context of the research\n- **Where**: Application scenarios and domains\n- **How**: Preliminary research methodology ideas\n\n**Integration with superpowers:brainstorming**: Can invoke the superpowers:brainstorming skill for interactive brainstorming to help rapidly generate and evaluate research ideas.\n\n### 2. Literature Review\n\nSystematically search, analyze, and synthesize related literature:\n- Build effective search keywords\n- Search via WebSearch across academic databases (arXiv, Google Scholar, etc.)\n- Screen and evaluate paper quality\n- Identify research trends and gaps\n- Generate structured literature reviews from evidence-labeled sources\n- **Zotero Integration**: Papers are automatically added to Zotero via DOI, organized into topic-based collections, and open-access PDFs are auto-attached for full-text reading\n\n### 3. Gap Analysis\n\nSystematically identify and evaluate research gaps:\n- **Literature gaps**: Identify topics or questions not yet sufficiently studied\n- **Methodological gaps**: Discover limitations and improvement opportunities in existing methods\n- **Application gaps**: Identify opportunities for theory-to-practice transfer\n- **Interdisciplinary gaps**: Discover research opportunities at the intersection of different fields\n- **Temporal gaps**: Identify new research needs arising from changes over time\n\n**Analysis Dimensions:**\n- Coverage of research topics\n- Comparison of strengths and weaknesses of existing methods\n- Completeness of experimental setups\n- Availability of datasets and benchmarks\n- Gap between theory and practice\n\n### 4. Research Question Definition\n\nFormulate specific research questions based on literature analysis:\n- Identify research gaps and opportunities\n- Apply SMART principles to formulate questions\n- Evaluate importance, novelty, and feasibility\n- Define research objectives and expected contributions\n- Write a `Research Question Card` that states the hypothesis, current evidence, missing evidence, support criteria, falsification criteria, and minimal next action\n- Apply the proposal readiness gate before turning a card into a polished proposal\n\n### 5. Method Selection\n\nSelect appropriate research methods:\n- Analyze strengths and weaknesses of existing methods\n- Evaluate method applicability\n- Identify required technologies and resources\n- Consider method feasibility\n\n### 6. Research Planning\n\nDevelop detailed research plans:\n- Plan research timeline\n- Define milestones and deliverables\n- Identify potential risks\n- Assess resource requirements\n\n## When to Use\n\n### Scenarios for This Skill\n\nUse the research-ideation skill in the following situations:\n\n1. **Starting a new research project** - Have research interests but no clear research question yet\n2. **Literature review** - Need to systematically understand a research field\n3. **Research question formulation** - Need to transform vague ideas into specific research questions\n4. **Method selection** - Need to choose appropriate research methods and technical approaches\n5. **Research planning** - Need to plan research timeline and resources\n\n### Typical Workflow\n\n```\nResearch interest → Idea brainstorming (5W1H) → Research Question Card → Evidence Records → Gap analysis → Proposal readiness gate → Select method or experiment → Decision\n```\n\n**Conditional Outputs:**\n- `research-question-card.md` - Always generate this for research startup or intake.\n- `literature-review.md` - Generate only when evidence-labeled sources are sufficient for synthesis.\n- `research-proposal.md` - Generate only when a selected Research Question Card passes the evidence gate.\n- `references.bib` - Generate only when reliable citation metadata exists.\n- Zotero collection with organized papers and PDFs - Create only when Zotero is configured, writable, and the user is not asking for dry-run/audit mode.\n\n## Integration with Other Systems\n\n### Complete Research Workflow\n\n```\nresearch-ideation (Research initiation)\n    ↓\nExperiment execution (completed by user)\n    ↓\nresults-analysis (Results analysis)\n    ↓\nml-paper-writing (Paper writing)\n```\n\n### Data Flow\n\n- **Research Question Card** → Guides literature scope, experiment design, and method selection\n- **Evidence Records** → Carry source type, claim strength, and allowed/forbidden wording into literature synthesis, project knowledge, and later claim audit\n- **Proposal Readiness Gate** → Prevents abstract-only or webpage-placeholder evidence from becoming a polished proposal\n- **Experimental results** → results-analysis for statistical analysis and claim candidates\n- **Analysis results** → results-report and ml-paper-writing with explicit evidence limits\n\n### Zotero Integration\n\nThrough the Zotero MCP server, the research-ideation workflow automates literature management:\n\n- **Paper Discovery**: WebSearch finds relevant papers across academic databases\n- **Auto-Import**: Extract DOI / arXiv ID / landing-page URLs from search results, then use `zotero_add_items_by_identifier` to prefer paper/preprint imports before any webpage fallback\n- **Collection Organization**: `zotero_create_collection` creates topic-based collections with standard sub-collections (Core Papers, Methods, Applications, Baselines, To-Read)\n- **PDF Attachment**: `zotero_add_items_by_identifier(..., attach_pdf=true)` runs a PDF cascade (landing-page PDF hints → direct PDF → Unpaywall), and `zotero_find_and_attach_pdfs` can be used as a follow-up sweep for remaining items\n- **Full-Text Reading**: `zotero_get_item_fulltext` reads indexed PDF content for analysis and note-taking\n- **Library Search**: `zotero_search_items` and `zotero_get_collection_items` browse existing papers to avoid duplicates\n\n### Key Configuration\n\n- **Literature search scope**: Papers from the last 3 years by default, configurable\n- **Output format**: Markdown format for easy editing and version control\n- **Citation management**: Generates references in BibTeX format\n- **Zotero collection naming**: `Research-{topic}-{YYYY}` format\n- **PDF auto-attach**: Enabled by default for open-access papers via Unpaywall\n\n## Additional Resources\n\n### Reference Files\n\nDetailed methodology guides, loaded on demand:\n\n- **`references/5w1h-framework.md`** - 5W1H Framework Guide\n  - What, Why, Who, When, Where, How — six dimensions\n  - Systematic approach to brainstorming research ideas\n  - Integration with superpowers:brainstorming\n  - Usage examples and best practices\n\n- **`references/literature-search-strategies.md`** - Literature Search Strategies\n  - Keyword construction techniques\n  - Academic database selection (arXiv, Google Scholar)\n  - Search tips and screening criteria\n  - Paper quality evaluation methods\n  - DOI extraction and Zotero auto-import workflow\n\n- **`references/zotero-integration-guide.md`** - Zotero MCP Integration Guide\n  - Available Zotero MCP tools (browse, add, cite)\n  - Collection organization strategy and naming conventions\n  - Automated workflow: WebSearch → DOI → Zotero import → PDF attach\n  - Full-text reading and structured note-taking\n  - Common issues and troubleshooting\n\n- **`references/gap-analysis-guide.md`** - Gap Analysis Guide\n  - 5 types of Gap Analysis (literature, methodological, application, interdisciplinary, temporal)\n  - 5 analysis dimensions\n  - Systematic approach to identifying research opportunities\n  - Usage examples and best practices\n\n- **`references/research-question-formulation.md`** - Research Question Formulation\n  - Applying SMART principles\n  - Question type classification (exploratory, confirmatory, applied)\n  - Evaluation criteria (importance, novelty, feasibility)\n  - Defining research objectives and contributions\n\n- **`references/research-contract.md`** - Research Contract\n  - Research Question Card template\n  - Evidence Record template\n  - Claim Candidate template\n  - Claim strength rules\n\n- **`references/method-selection-guide.md`** - Method Selection Guide\n  - Common research method classification\n  - Method applicability analysis\n  - Strengths and weaknesses comparison\n  - Resource requirement assessment\n\n- **`references/research-planning.md`** - Research Planning\n  - Timeline planning methods\n  - Milestone definition techniques\n  - Risk identification and mitigation\n  - Resource allocation strategies\n\n### Example Files\n\nComplete working examples:\n\n- **`examples/example-literature-review.md`** - Literature Review Example\n  - Demonstrates structured literature review format\n  - Includes research trend analysis and gap identification\n\n- **`examples/example-research-proposal.md`** - Research Proposal Example\n  - Demonstrates complete research proposal structure\n  - Includes complete examples of question, method, and plan\n",
+  "required_work": "Research Question Card, evidence needs, support/falsification criteria and minimal next action",
+  "boundary": "Intake only; preserve latest user scope and existing fixed question.",
+  "phase": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-rc2/phase.json",
+    "id": "586c53bcd5eb4f97bdff038b8101e7bc",
+    "stage": "feasibility",
+    "latest_instruction": "Authorized small synthetic skill behavior validation; no real research"
+  },
+  "professional_work_done": false,
+  "host_fallback_allowed": false
+}
