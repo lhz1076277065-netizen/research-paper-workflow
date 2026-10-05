@@ -1,0 +1,22 @@
+{
+  "step_id": "2595386dc9614e16b06a8c6c71c96ab3",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": true,
+  "actions": [
+    {
+      "source_file": "skills/statistical-analysis/SKILL.md",
+      "source_excerpt": "Specify the target effect, sampling unit, dependence, contrasts and multiplicity family before outcome-driven selection.",
+      "applied": "限定预约记录与二元未到场结果；汇总材料无法确定独立性，只执行用户要求的描述性步骤。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/analysis-note.md",
+      "output_excerpt": "分析单位：预约记录。仅收到分组汇总，未收到20条个体行；无法检查重复预约、缺失、分组机制、提醒内容或时间。"
+    },
+    {
+      "source_file": "skills/statistical-analysis/references/reporting_standards.md",
+      "source_excerpt": "All numerical prose examples here are illustrative formatting templates, not computed results from a common dataset.",
+      "applied": "使用用户汇总计数的实际Python输出，未复制模板中的检验结果。JSON明确推断未开展。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/descriptive-results.json",
+      "output_excerpt": "\"difference_pp_reminder_minus_control\": \"-20.0\""
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "969ba308127848aebb88eec54da785ea",
+  "scope": "focused",
+  "objective": "局部改写一个中文结果段落与三项投稿前检查",
+  "latest_instruction": "局部改写一个中文结果段落与三项投稿前检查",
+  "status": "completed",
+  "stage": "focused",
+  "started_at": "2026-10-05T07:37:42.602120+00:00",
+  "deadline": 1791186149.1543229,
+  "project_deadline": 1791186149.1543229,
+  "reserve_seconds": 28.65522029399872,
+  "budget_kind": "authorized_total",
+  "authorization": "inputs/request.md：用户最多6分钟总预算；从07:36:29 UTC起，剩余额度扣除入口阅读与冻结耗时",
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [
+    "focused-paragraph-and-three-checks"
+  ],
+  "artifacts": [
+    {
+      "path": "outputs/result-and-three-checks.zh.md",
+      "sha256": "e3c6d47c8fc3512eba774f3e1efbe4fbd890c5f7e47c56cfb397fffe600ff272"
+    }
+  ],
+  "history": [],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": null,
+  "owned_processes": [],
+  "professional_pending": [],
+  "stage_started_at": "2026-10-05T07:37:42.602120+00:00",
+  "host_goal_state": "not_modified",
+  "professional_steps": [
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "29ec39fc376e4f93b5b6fae291614518",
+      "capability": "manuscript-writing",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/outputs/requested-draft.zh.md",
+          "sha256": "80f1b666f94365e40ef7723735c372795d89489c330bf8705142e3070cb0ba76"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/source_manifest.json",
+          "sha256": "fcd9ba1c804cd039b19fcabbd1b1a90fcb9a5c2dcd1e87853a40d966f9d5ad2a"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/claims.csv",
+          "sha256": "25753d569369e24f8e2b38ecb522aea765c47391085bd2902489aaf3db588412"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/writing-note.md",
+          "sha256": "013500df10febac9b8a5ec8bab02914d2235ad15693f8ba8675bda114bb4d906"
+        }
+      ],
+      "semantic_work_verified_by_tool": false,
+      "stage": "focused",
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/writing-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/writing-finish.json"
+    },
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "d1cbde9a3d624ee69fa6f878fead59af",
+      "capability": "final-expression",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/outputs/result-and-three-checks.zh.md",
+          "sha256": "e3c6d47c8fc3512eba774f3e1efbe4fbd890c5f7e47c56cfb397fffe600ff272"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/expression-note.md",
+          "sha256": "c08bcc8dbed40865651de6c5a27f89ffc34e14c81326a68b4db27add8d8eb49c"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/final-claims.csv",
+          "sha256": "17989fdc4a3634fb47d02c70bdadd47a1b8f054c8f87b09927b20a4e8cab5b73"
+        }
+      ],
+      "semantic_work_verified_by_tool": false,
+      "stage": "focused",
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/expression-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/expression-finish.json"
+    }
+  ],
+  "exit_reason": "仅完成用户要求的一段局部结果改写与三条未来投稿检查，人工核验和正式投稿就绪未完成；无追加研究"
+}

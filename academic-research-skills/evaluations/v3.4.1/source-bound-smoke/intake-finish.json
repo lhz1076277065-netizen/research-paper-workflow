@@ -1,0 +1,66 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "0ec1cb4e5020492385c288554a7730c2",
+  "capability": "research-intake",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+    "sha256": "880339b1ce25e1c33048c2e22abede7fd152b960aff66c041a692757a8de90df"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
+      "sha256": "f27f8c7ae109fedbf2fd793da80f32693205f6aa464e3af6998f79cc272f18e7"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/question-card.md",
+      "sha256": "fbfb672006d19cf694e8dc6ccb08953b48637a5c531d166f6d4f4be77d00bbe7"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/intake-work.json",
+    "sha256": "5464a3e830f3c4efca9a23cb3afc5e31d49e0056f0d6826c34eb3179f75df51c"
+  },
+  "use": {
+    "id": "scholar-intake",
+    "repository": "Galaxy-Dawn/claude-scholar",
+    "entry": "skills/research-ideation/SKILL.md",
+    "commit": "903787345d6aec134086afa2b97715a78fbde519",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "intake",
+      "ideation",
+      "novelty"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
+        "sha256": "f27f8c7ae109fedbf2fd793da80f32693205f6aa464e3af6998f79cc272f18e7"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/question-card.md",
+        "sha256": "fbfb672006d19cf694e8dc6ccb08953b48637a5c531d166f6d4f4be77d00bbe7"
+      }
+    ],
+    "steps": [
+      "Produced the fixed-question card with explicit units, evidence, support/falsification criteria and a single local next action."
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Use Research Question Card and evidence gate. Preserve fixed questions. Optional Zotero/other assistant integrations are replaced by current-host local records; no new host or source repository."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

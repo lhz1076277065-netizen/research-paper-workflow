@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "evidence_id": "E001",
+      "title": "用户提供的合成预约汇总与任务边界",
+      "authors": [],
+      "year": null,
+      "source_type": "other",
+      "identifiers": {
+        "doi": "",
+        "isbn": "",
+        "pmcid": "",
+        "pmid": "",
+        "url": ""
+      },
+      "confidentiality": "public",
+      "locator": "inputs/provided-materials.json；inputs/request.md",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E002",
+      "title": "本次实际描述性核算",
+      "authors": [],
+      "year": null,
+      "source_type": "other",
+      "identifiers": {
+        "doi": "",
+        "isbn": "",
+        "pmcid": "",
+        "pmid": "",
+        "url": ""
+      },
+      "confidentiality": "public",
+      "locator": "evidence/descriptive-results.json；evidence/analysis-note.md；evidence/descriptive_analysis.py",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E003",
+      "title": "K-Dense本地专业来源与调用收据",
+      "authors": [],
+      "year": null,
+      "source_type": "other",
+      "identifiers": {
+        "doi": "",
+        "isbn": "",
+        "pmcid": "",
+        "pmid": "",
+        "url": ""
+      },
+      "confidentiality": "public",
+      "locator": "evidence/analysis-start.json；evidence/writing-start.json",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      }
+    }
+  ]
+}

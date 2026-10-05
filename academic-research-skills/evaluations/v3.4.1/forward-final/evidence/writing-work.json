@@ -1,0 +1,36 @@
+{
+  "step_id": "29ec39fc376e4f93b5b6fae291614518",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": false,
+  "actions": [
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Do not convert association into causation or non-significance into equivalence.",
+      "applied": "把原句中的未经检验显著性、因果、学生单位和普遍推广改为预约记录描述；按用户要求给三项检查。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/outputs/requested-draft.zh.md",
+      "output_excerpt": "这一差异仅作描述"
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Do not mark a source verified until an accountable human has opened it and confirmed",
+      "applied": "为本次唯一来源保留人工未核验状态。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/source_manifest.json",
+      "output_excerpt": "\"status\": \"unverified\""
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Store a hash of claim text in CSV rather than raw claim text.",
+      "applied": "按真实模板字段及枚举记录本段主张哈希，未建立全稿准入文件。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/claims.csv",
+      "output_excerpt": "unverified,not_estimated,descriptive"
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Keep conclusions within the observed design, population, and uncertainty.",
+      "applied": "提纲和人工语义核对限定在已有A/B汇总，不添加干预标签或数据。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/writing-note.md",
+      "output_excerpt": "明确A/B无提醒/对照含义，不擅自命名干预。"
+    }
+  ]
+}

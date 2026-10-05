@@ -1,0 +1,1 @@
+Synthetic software validation only. Describe no-show proportions in twenty generated appointment rows; no randomization record or inference requested. Do not assert causality/significance/generalization, search literature or train models. Close the five-stage professional flow with traceable artifacts.

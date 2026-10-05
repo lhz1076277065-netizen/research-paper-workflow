@@ -52,20 +52,22 @@ def artifact(path, root):
         raise PhaseError('Evidence missing, empty or outside project: '+str(path))
     return {'path':str(p.relative_to(root)), 'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
 
-def init(scope, objective, minutes=None, clock=None):
+def init(scope, objective, minutes=None, clock=None, authority=None):
     if scope not in {'full','focused','maintenance'} or not objective.strip(): raise PhaseError('Invalid scope/objective')
+    if authority is not None and (not isinstance(authority,str) or not authority.strip() or minutes is None):
+        raise PhaseError('A supplied total budget needs minutes and actual user authorization')
     t=now() if clock is None else clock
     duration=number(45 if minutes is None else minutes,'minutes')*60
     return {'schema_version':'research-phase-1', 'id':uuid.uuid4().hex,
         'scope':scope, 'objective':objective, 'latest_instruction':objective,
         'status':'active', 'stage':'feasibility' if scope=='full' else scope,
         'started_at':iso(t), 'deadline':t+duration, 'project_deadline':t+duration,
-        'reserve_seconds':min(300,duration*.1), 'budget_kind':'initial_feasibility' if scope=='full' else 'local_task',
-        'authorization':None, 'token_limit':None, 'token_reserve':0,
+        'reserve_seconds':min(300,duration*.1), 'budget_kind':'authorized_total' if authority else 'initial_feasibility' if scope=='full' else 'local_task',
+        'authorization':authority, 'token_limit':None, 'token_reserve':0,
         'meter':{'verified':False,'baseline':None,'latest':None,'source':None},
         'completed_tasks':[], 'artifacts':[], 'history':[], 'repairs':{},
         'unchanged_rounds':0, 'reassessment_required':False, 'next_action':None,
-        'owned_processes':[], 'host_goal_state':'not_modified'}
+        'owned_processes':[], 'professional_pending':[], 'stage_started_at':iso(t), 'host_goal_state':'not_modified'}
 
 def usage_delta(state):
     m=state['meter']
@@ -141,30 +143,37 @@ def authorize(state, minutes, authority, token_limit=None, clock=None):
     if token_limit is not None:
         number(token_limit,'token_limit')
         if not state['meter']['verified']: raise PhaseError('Cannot promise a token ceiling without an actual meter')
+        state['history'].append({'at':iso(t),'event':'feasibility_usage','usage':usage_delta(state),
+            'meter_baseline':dict(state['meter']['baseline'])})
         state['meter']['baseline']=dict(state['meter']['latest'])
     state.update(status='active',stage='design',project_deadline=t+duration,deadline=t+duration,
         reserve_seconds=min(300,duration*.1),budget_kind='authorized_research',authorization=authority,
-        token_limit=token_limit,token_reserve=min(2000,token_limit*.05) if token_limit else 0)
+        token_limit=token_limit,token_reserve=min(2000,token_limit*.05) if token_limit else 0,stage_started_at=iso(t))
     state['history'].append({'at':iso(t),'event':'authorized_budget','minutes':minutes,'token_limit':token_limit})
 
-def advance(state, stage, evidence, root, next_action, clock=None, minutes=None):
+def advance(state, stage, evidence, root, next_action, clock=None, minutes=None, skip_reason=None):
     if state['owned_processes']: raise PhaseError('Owned work must finish before transition')
     if not guard(state,clock=clock)['allowed']: raise PhaseError('Phase is not eligible to advance')
     ref=artifact(evidence,root)
     current=state['stage']
+    t=now() if clock is None else clock
+    if minutes is not None:number(minutes,'stage minutes')
+    if skip_reason is not None and not (current=='design' and stage=='manuscript' and skip_reason.strip()):
+        raise PhaseError('Only sufficient existing evidence can bypass new research from design to manuscript')
     if current=='feasibility':
         if stage!='design': raise PhaseError('Feasibility precedes design')
-        state['status']='awaiting_budget'
+        if state.get('budget_kind')=='authorized_total':state['stage']=stage
+        else:state['status']='awaiting_budget'
     else:
-        if current not in STAGES or stage not in STAGES or STAGES.index(stage)!=STAGES.index(current)+1:
+        evidence_sufficient=current=='design' and stage=='manuscript' and isinstance(skip_reason,str) and bool(skip_reason.strip())
+        if not evidence_sufficient and (current not in STAGES or stage not in STAGES or STAGES.index(stage)!=STAGES.index(current)+1):
             raise PhaseError('Use the next stage; focused tasks do not acquire full-research stages')
         state['stage']=stage
-        if minutes is not None:
-            duration=number(minutes,'stage minutes')*60
-            t=now() if clock is None else clock
-            state['deadline']=min(state['project_deadline'],t+duration)
+    if state['status']=='active':
+        state['deadline']=min(state['project_deadline'],t+number(minutes,'stage minutes')*60) if minutes is not None else state['project_deadline']
+        state['stage_started_at']=iso(t)
     state['artifacts'].append(ref);state['next_action']=next_action
-    state['history'].append({'at':iso(now()),'event':'stage_exit','stage':current,'evidence':ref})
+    state['history'].append({'at':iso(t),'event':'stage_exit','stage':current,'evidence':ref,'skip_reason':skip_reason})
     # Neither stage transitions nor retries reset project_deadline or token baseline.
 
 def repair(state, blocker, approach):
@@ -186,7 +195,31 @@ def resume(state):
     return {k:state.get(k) for k in ('scope','objective','latest_instruction','stage','status',
         'project_deadline','deadline','authorization','completed_tasks','artifacts','next_action',
         'exit_reason','repairs','unchanged_rounds','reassessment_required','owned_processes','host_goal_state',
-        'budget_kind','reserve_seconds','token_limit','token_reserve','meter','professional_steps')}
+        'budget_kind','reserve_seconds','token_limit','token_reserve','meter','professional_steps',
+        'professional_pending','stage_started_at')}
+
+def register_professional(state, begun, started):
+    context=begun.get('phase')
+    if not context or any(context.get(k)!=state.get(k) for k in ('id','stage','latest_instruction')):
+        raise PhaseError('Professional begin belongs to another phase or instruction')
+    if not guard(state)['allowed']:raise PhaseError('No professional start in a stopped phase')
+    if any(x['step_id']==begun['id'] for x in state.get('professional_pending',[])):
+        raise PhaseError('Professional step is already registered; resume it')
+    for x in state.get('professional_pending',[]):
+        if x['status']!='cancelled' and x['stage']==state['stage'] and x['latest_instruction']==state['latest_instruction'] and x['capability']==begun['capability'] and x.get('task')==begun['task'] and x.get('inputs')==begun['inputs']:
+            raise PhaseError('This professional task already has a current receipt; resume/check '+x['started'])
+    state.setdefault('professional_pending',[]).append({'step_id':begun['id'],'capability':begun['capability'],
+        'stage':state['stage'],'latest_instruction':state['latest_instruction'],'status':'started',
+        'started':str(Path(started).resolve()),'finished':None,'task':begun['task'],'inputs':begun['inputs']})
+
+def register_completion(state, begun, finished):
+    if state.get('professional_pending') is None:return # Legacy records remain unknown.
+    matches=[x for x in state['professional_pending'] if x['step_id']==begun['id']]
+    if len(matches)!=1 or matches[0]['status'] not in {'started','completed'}:
+        raise PhaseError('No registered current professional step')
+    if matches[0].get('finished') and matches[0]['finished']!=str(Path(finished).resolve()):
+        raise PhaseError('Professional completion already exists; check it')
+    matches[0].update(status='completed',finished=str(Path(finished).resolve()))
 
 def professional_exit(state, starts, finishes):
     """Check current step artifacts before the CLI records a research stage exit."""
@@ -196,11 +229,6 @@ def professional_exit(state, starts, finishes):
     import professional_flow as F
     index=load(C.index_path());checked=[]
     previous={x['step_id'] for x in state.get('professional_steps',[])}
-    permitted={'feasibility':{'research-intake','topic-novelty','literature-discovery','paper-deep-reading'},
-        'design':{'research-design','ethics-protocol','data-discovery','paper-deep-reading'},
-        'research':{'analysis-execution','data-preparation','robustness-reproducibility','paper-deep-reading'},
-        'manuscript':{'manuscript-writing','scientific-visualization','manuscript-review','citation-audit','journal-intelligence','final-expression'},
-        'delivery':{'submission-packaging','publication-stewardship','presentation','final-expression','manuscript-review'}}
     for start,finish in zip(starts,finishes):
         begun=load(start);complete=load(finish);r=F.check(index,begun,complete)
         context=begun.get('phase')
@@ -208,10 +236,22 @@ def professional_exit(state, starts, finishes):
             raise PhaseError('Professional step is not bound to this phase and latest instruction')
         if r['step_id'] in previous:raise PhaseError('A prior stage receipt cannot complete a new stage')
         previous.add(r['step_id'])
-        if state['scope']=='full' and r['capability'] not in permitted.get(state['stage'],set()):
-            raise PhaseError('Professional work does not serve this stage')
+        # Supporting work (e.g. exploratory figures in research, reading during
+        # writing) is source-gated by its actual capability, not a stage whitelist.
+        registered=next((x for x in state.get('professional_pending',[]) if x['step_id']==r['step_id']),None)
+        if registered and (registered['started']!=str(Path(start).resolve()) or registered.get('finished') not in {None,str(Path(finish).resolve())}):
+            raise PhaseError('Receipt paths differ from the registered professional step')
         checked.append({**r,'stage':state['stage'],'started':str(Path(start).resolve()),'finished':str(Path(finish).resolve())})
+    if 'professional_pending' in state:
+        pending={x['step_id'] for x in state['professional_pending'] if x['stage']==state['stage'] and x['status']!='cancelled'}
+        if {x['step_id'] for x in checked}!=pending:
+            raise PhaseError('Stage exit omits a registered professional step or includes an unregistered step')
     return checked
+
+def consume_professional(state, steps):
+    ids={x['step_id'] for x in steps}
+    state.setdefault('professional_steps',[]).extend(steps)
+    state['professional_pending']=[x for x in state.get('professional_pending',[]) if x['step_id'] not in ids]
 
 def run(state_path, command, log_path, claim, decision, estimate=0, rollout=None):
     if not command or not claim.strip() or not decision.strip(): raise PhaseError('Command requires its supported claim and decision consequence')
@@ -271,16 +311,18 @@ def run(state_path, command, log_path, claim, decision, estimate=0, rollout=None
 def main(argv=None):
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--state',required=True)
     sub=ap.add_subparsers(dest='op',required=True)
-    a=sub.add_parser('init');a.add_argument('--scope',choices=['full','focused','maintenance'],required=True);a.add_argument('--objective',required=True);a.add_argument('--minutes',type=float)
+    a=sub.add_parser('init');a.add_argument('--scope',choices=['full','focused','maintenance'],required=True);a.add_argument('--objective',required=True);a.add_argument('--minutes',type=float);a.add_argument('--authority');a.add_argument('--token-limit',type=int);a.add_argument('--rollout')
     a=sub.add_parser('guard');a.add_argument('--estimated-seconds',type=float,default=0);a.add_argument('--estimated-tokens',type=int,default=0)
     sub.add_parser('resume')
     a=sub.add_parser('meter');a.add_argument('--rollout',required=True)
     a=sub.add_parser('authorize');a.add_argument('--minutes',type=float,required=True);a.add_argument('--authority',required=True);a.add_argument('--token-limit',type=int)
-    a=sub.add_parser('advance');a.add_argument('--stage',choices=STAGES,required=True);a.add_argument('--minutes',type=float);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
+    a=sub.add_parser('advance');a.add_argument('--stage',choices=STAGES,required=True);a.add_argument('--minutes',type=float);a.add_argument('--skip-reason');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
     a=sub.add_parser('repair');a.add_argument('--blocker',required=True);a.add_argument('--approach',required=True)
     a=sub.add_parser('round');a.add_argument('--changed',action='store_true');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True)
     a=sub.add_parser('reassess');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True)
     a=sub.add_parser('instruction');a.add_argument('--text',required=True)
+    a=sub.add_parser('continue');a.add_argument('--authority',required=True)
+    a=sub.add_parser('cancel-step');a.add_argument('--started',required=True);a.add_argument('--reason',required=True);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True)
     a=sub.add_parser('close');a.add_argument('--status',choices=['completed','route_closed','paused'],required=True);a.add_argument('--reason',required=True);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--task-id',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
     a=sub.add_parser('run');a.add_argument('--log',required=True);a.add_argument('--claim',required=True);a.add_argument('--decision',required=True);a.add_argument('--estimated-seconds',type=float,default=0);a.add_argument('--rollout');a.add_argument('--professional-started');a.add_argument('command',nargs=argparse.REMAINDER)
     args=ap.parse_args(argv)
@@ -301,7 +343,12 @@ def main(argv=None):
         with locked(args.state):
             if args.op=='init':
                 if Path(args.state).exists(): raise PhaseError('State already exists; resume without resetting budgets')
-                state=init(args.scope,args.objective,args.minutes)
+                if args.authority is not None and not args.authority.strip():raise PhaseError('Empty authorization')
+                state=init(args.scope,args.objective,args.minutes,authority=args.authority)
+                if args.rollout:meter_rollout(state,args.rollout)
+                if args.token_limit is not None:
+                    if not args.authority or not state['meter']['verified']:raise PhaseError('An initial total token ceiling requires actual authorization and rollout meter')
+                    number(args.token_limit,'token_limit');state.update(token_limit=args.token_limit,token_reserve=min(2000,args.token_limit*.05))
             else:
                 state=load(args.state)
                 if state.get('schema_version')!='research-phase-1': raise PhaseError('Legacy phase unknown; retain it and establish an explicit phase')
@@ -310,20 +357,39 @@ def main(argv=None):
                 elif args.op=='authorize':authorize(state,args.minutes,args.authority,args.token_limit)
                 elif args.op=='advance':
                     steps=professional_exit(state,args.professional_started,args.professional_finished)
-                    advance(state,args.stage,args.evidence,args.root,args.next_action,minutes=args.minutes)
-                    state.setdefault('professional_steps',[]).extend(steps)
+                    advance(state,args.stage,args.evidence,args.root,args.next_action,minutes=args.minutes,skip_reason=args.skip_reason)
+                    consume_professional(state,steps)
                 elif args.op=='repair':repair(state,args.blocker,args.approach)
                 elif args.op=='round':round_result(state,args.changed,args.evidence,args.root)
                 elif args.op=='instruction':state['latest_instruction']=args.text
+                elif args.op=='continue':
+                    if state['status']!='paused' or not args.authority.strip():raise PhaseError('Only an explicitly resumed paused phase can continue')
+                    state['status']='active'
+                    if not guard(state)['allowed']:raise PhaseError('Original budget has expired; continuation cannot renew it')
+                    state['history'].append({'at':iso(now()),'event':'user_continued','authority':args.authority})
+                elif args.op=='cancel-step':
+                    begun=load(args.started);context=begun.get('phase',{})
+                    pending=[x for x in state.get('professional_pending',[]) if x['step_id']==begun.get('id')]
+                    if len(pending)!=1 or context.get('id')!=state['id'] or not args.reason.strip():raise PhaseError('Cancellation needs its own registered step and actual reason')
+                    if pending[0]['status']=='cancelled':raise PhaseError('Step is already cancelled')
+                    ref=artifact(args.evidence,args.root)
+                    pending[0].update(status='cancelled',reason=args.reason,evidence=ref)
+                    state['history'].append({'at':iso(now()),'event':'professional_cancelled',**pending[0]})
                 elif args.op=='reassess':
                     if state['status']!='active' or not state['reassessment_required']:raise PhaseError('No active reassessment pending')
                     state['artifacts'].append(artifact(args.evidence,args.root));state['reassessment_required']=False;state['unchanged_rounds']=0;state['next_action']=args.next_action
                 elif args.op=='close':
                     if state['owned_processes'] and args.status=='completed':raise PhaseError('Cannot complete with owned work still running')
                     if args.status=='completed' and state['scope']!='maintenance' and state['status']!='active':raise PhaseError('Stopped research cannot be marked newly completed')
+                    if args.status=='completed' and state['scope']!='maintenance':
+                        delta=usage_delta(state)
+                        if now()>=state['project_deadline'] or (state['token_limit'] is not None and delta is not None and delta['total_tokens']>=state['token_limit']):
+                            state.update(status='closed_limit',exit_reason=['Completion exceeded the actual total budget'])
+                            save(args.state,state)
+                            raise PhaseError('Total budget expired; deliver the saved scope and limit instead of a new completed state')
                     if args.status=='completed':
                         steps=professional_exit(state,args.professional_started,args.professional_finished)
-                        state.setdefault('professional_steps',[]).extend(steps)
+                        consume_professional(state,steps)
                     ref=artifact(args.evidence,args.root)
                     if args.status=='completed' and args.task_id not in state['completed_tasks']:state['completed_tasks'].append(args.task_id)
                     state.update(status=args.status,exit_reason=args.reason);state['artifacts'].append(ref)

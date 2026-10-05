@@ -1,0 +1,71 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "2595386dc9614e16b06a8c6c71c96ab3",
+  "capability": "analysis-execution",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/inputs/request.md",
+    "sha256": "60a3a305f60ca5c4d50f4d698e5d545b4a0858b05ac4d22707bc907a2226acf8"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/inputs/provided-materials.json",
+      "sha256": "61f321f30f4a508912dad91c03257cf70e9c0f12b503ea29f478ec67413286da"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/analysis-note.md",
+      "sha256": "ecfeeb316d3db2c90967b1e56281c031e8590d94d3feb3ffbaa987310cf20e63"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/descriptive-results.json",
+      "sha256": "ae9c0839554782e768c4f1e013b108e62e7202fe6061ae4ae3ebfda96b9020cb"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/analysis-work.json",
+    "sha256": "7ac7b607a6842528e6bf5194584961204c852054c6dcf1ebc7fae1b431b1b392"
+  },
+  "use": {
+    "id": "kdense-statistics",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/statistical-analysis/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "analysis"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/inputs/provided-materials.json",
+        "sha256": "61f321f30f4a508912dad91c03257cf70e9c0f12b503ea29f478ec67413286da"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/analysis-note.md",
+        "sha256": "ecfeeb316d3db2c90967b1e56281c031e8590d94d3feb3ffbaa987310cf20e63"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/descriptive-results.json",
+        "sha256": "ae9c0839554782e768c4f1e013b108e62e7202fe6061ae4ae3ebfda96b9020cb"
+      }
+    ],
+    "steps": [
+      "限定预约记录与二元未到场结果；汇总材料无法确定独立性，只执行用户要求的描述性步骤。",
+      "使用用户汇总计数的实际Python输出，未复制模板中的检验结果。JSON明确推断未开展。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": true
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Use only the requested statistical substep with actual independent units and an appropriate method. No mandatory all-library installation for descriptive-only work. Native examples require their documented environment. Formal/interpretive research requires a separately verified matching entry."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false
+}

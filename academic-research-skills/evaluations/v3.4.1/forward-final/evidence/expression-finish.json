@@ -1,0 +1,82 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "d1cbde9a3d624ee69fa6f878fead59af",
+  "capability": "final-expression",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/inputs/request.md",
+    "sha256": "7df2a72e629ca88fde30d4475a60e30111e2b18d020f9d8ce1b11227920f504f"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/outputs/requested-draft.zh.md",
+      "sha256": "80f1b666f94365e40ef7723735c372795d89489c330bf8705142e3070cb0ba76"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/outputs/result-and-three-checks.zh.md",
+      "sha256": "e3c6d47c8fc3512eba774f3e1efbe4fbd890c5f7e47c56cfb397fffe600ff272"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/expression-note.md",
+      "sha256": "c08bcc8dbed40865651de6c5a27f89ffc34e14c81326a68b4db27add8d8eb49c"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/final-claims.csv",
+      "sha256": "17989fdc4a3634fb47d02c70bdadd47a1b8f054c8f87b09927b20a4e8cab5b73"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/expression-work.json",
+    "sha256": "39bc47d49e9a90ef0cc3443c45c1395ab83f325d52ec8603da295ae6118b1cbd"
+  },
+  "use": {
+    "id": "anti-defensive",
+    "repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+    "entry": "skills/anti-defensive-writing/SKILL.md",
+    "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "final_expression"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/outputs/requested-draft.zh.md",
+        "sha256": "80f1b666f94365e40ef7723735c372795d89489c330bf8705142e3070cb0ba76"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/outputs/result-and-three-checks.zh.md",
+        "sha256": "e3c6d47c8fc3512eba774f3e1efbe4fbd890c5f7e47c56cfb397fffe600ff272"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/expression-note.md",
+        "sha256": "c08bcc8dbed40865651de6c5a27f89ffc34e14c81326a68b4db27add8d8eb49c"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/final-claims.csv",
+        "sha256": "17989fdc4a3634fb47d02c70bdadd47a1b8f054c8f87b09927b20a4e8cab5b73"
+      }
+    ],
+    "steps": [
+      "围绕现有计数写出描述性记忆点，不增加显著性、因果或推广论断。",
+      "保留无随机化/检验/识别的实质限制；将语言建议置于证据边界内。",
+      "重新核对措辞及计数后记录本段新哈希，人工核验仍待完成。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Keep evidence and scope; rhetorical advice cannot remove material uncertainty or overstate results."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

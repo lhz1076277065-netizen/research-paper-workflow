@@ -1,0 +1,35 @@
+test_all_direct_references_exist (test_skill_structure.SkillStructureTests.test_all_direct_references_exist) ... ok
+test_all_nine_upgrade_surfaces_exist (test_skill_structure.SkillStructureTests.test_all_nine_upgrade_surfaces_exist) ... ok
+test_nine_profiles_are_valid_json (test_skill_structure.SkillStructureTests.test_nine_profiles_are_valid_json) ... ok
+test_skill_frontmatter_and_size (test_skill_structure.SkillStructureTests.test_skill_frontmatter_and_size) ... ok
+test_cli_missing_manifest_returns_one (test_workflow.CommandTests.test_cli_missing_manifest_returns_one) ... ok
+test_initializer_creates_all_templates (test_workflow.CommandTests.test_initializer_creates_all_templates) ... ok
+test_bilingual_language_rules (test_workflow.ParserTests.test_bilingual_language_rules) ... ok
+test_docx_deep_audit_detects_revision_and_comment (test_workflow.ParserTests.test_docx_deep_audit_detects_revision_and_comment) ... ok
+test_docx_detects_hidden_text_broken_ref_and_private_path (test_workflow.ParserTests.test_docx_detects_hidden_text_broken_ref_and_private_path) ... ok
+test_docx_scans_headers_and_header_relationships (test_workflow.ParserTests.test_docx_scans_headers_and_header_relationships) ... ok
+test_doi_normalization_handles_whitespace_and_prefixes (test_workflow.ParserTests.test_doi_normalization_handles_whitespace_and_prefixes) ... ok
+test_openalex_adapter_uses_doi_filter_results (test_workflow.ParserTests.test_openalex_adapter_uses_doi_filter_results) ... ok
+test_reference_export_parsers (test_workflow.ParserTests.test_reference_export_parsers) ... ok
+test_all_profiles_load (test_workflow.ProjectValidationTests.test_all_profiles_load) ... ok
+test_artifact_outside_project_root_fails_closed (test_workflow.ProjectValidationTests.test_artifact_outside_project_root_fails_closed) ... ok
+test_chinese_nonacademic_language_fails (test_workflow.ProjectValidationTests.test_chinese_nonacademic_language_fails) ... ok
+test_complete_project_passes_every_gate (test_workflow.ProjectValidationTests.test_complete_project_passes_every_gate) ... ok
+test_documented_q1_q2_exception_is_warning_only (test_workflow.ProjectValidationTests.test_documented_q1_q2_exception_is_warning_only) ... ok
+test_each_profile_can_pass_with_complete_evidence (test_workflow.ProjectValidationTests.test_each_profile_can_pass_with_complete_evidence) ... ok
+test_effective_dpi_uses_intended_publication_width (test_workflow.ProjectValidationTests.test_effective_dpi_uses_intended_publication_width) ... ok
+test_low_dpi_raster_figure_fails (test_workflow.ProjectValidationTests.test_low_dpi_raster_figure_fails) ... ok
+test_malformed_csv_fails_closed_without_crashing (test_workflow.ProjectValidationTests.test_malformed_csv_fails_closed_without_crashing) ... ok
+test_missing_figure_source_fails (test_workflow.ProjectValidationTests.test_missing_figure_source_fails) ... ok
+test_nonfinite_result_fails (test_workflow.ProjectValidationTests.test_nonfinite_result_fails) ... ok
+test_q1_q2_ratio_below_target_fails (test_workflow.ProjectValidationTests.test_q1_q2_ratio_below_target_fails) ... ok
+test_result_mismatch_fails (test_workflow.ProjectValidationTests.test_result_mismatch_fails) ... ok
+test_result_value_and_sample_must_share_labeled_context (test_workflow.ProjectValidationTests.test_result_value_and_sample_must_share_labeled_context) ... ok
+test_sem_profile_requires_native_model (test_workflow.ProjectValidationTests.test_sem_profile_requires_native_model) ... ok
+test_source_result_mismatch_fails (test_workflow.ProjectValidationTests.test_source_result_mismatch_fails) ... ok
+test_stale_data_fails (test_workflow.ProjectValidationTests.test_stale_data_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 2.769s
+
+OK

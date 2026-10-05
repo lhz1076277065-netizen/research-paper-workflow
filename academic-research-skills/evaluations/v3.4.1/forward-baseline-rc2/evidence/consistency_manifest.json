@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "methods": [
+    {
+      "method_id": "M001",
+      "name": "分组计数与未到场比例核算",
+      "analysis_intent": "descriptive",
+      "outcome_ids": [
+        "O001"
+      ],
+      "protocol_status": "not_applicable"
+    }
+  ],
+  "numeric_facts": [
+    {
+      "fact_id": "N001",
+      "concept": "提醒组未到场比例",
+      "section": "摘要",
+      "analysis_set": "提醒组",
+      "value": 10.0,
+      "unit": "percent",
+      "numerator": 1,
+      "denominator": 10,
+      "sample_size": 10,
+      "evidence_ids": [
+        "E001",
+        "E002"
+      ]
+    },
+    {
+      "fact_id": "N002",
+      "concept": "对照组未到场比例",
+      "section": "摘要",
+      "analysis_set": "对照组",
+      "value": 30.0,
+      "unit": "percent",
+      "numerator": 3,
+      "denominator": 10,
+      "sample_size": 10,
+      "evidence_ids": [
+        "E001",
+        "E002"
+      ]
+    },
+    {
+      "fact_id": "N003",
+      "concept": "提醒组未到场比例",
+      "section": "结果",
+      "analysis_set": "提醒组",
+      "value": 10.0,
+      "unit": "percent",
+      "numerator": 1,
+      "denominator": 10,
+      "sample_size": 10,
+      "evidence_ids": [
+        "E001",
+        "E002"
+      ]
+    },
+    {
+      "fact_id": "N004",
+      "concept": "对照组未到场比例",
+      "section": "结果",
+      "analysis_set": "对照组",
+      "value": 30.0,
+      "unit": "percent",
+      "numerator": 3,
+      "denominator": 10,
+      "sample_size": 10,
+      "evidence_ids": [
+        "E001",
+        "E002"
+      ]
+    },
+    {
+      "fact_id": "N005",
+      "concept": "提醒组未到场比例",
+      "section": "结论",
+      "analysis_set": "提醒组",
+      "value": 10.0,
+      "unit": "percent",
+      "numerator": 1,
+      "denominator": 10,
+      "sample_size": 10,
+      "evidence_ids": [
+        "E001",
+        "E002"
+      ]
+    },
+    {
+      "fact_id": "N006",
+      "concept": "对照组未到场比例",
+      "section": "结论",
+      "analysis_set": "对照组",
+      "value": 30.0,
+      "unit": "percent",
+      "numerator": 3,
+      "denominator": 10,
+      "sample_size": 10,
+      "evidence_ids": [
+        "E001",
+        "E002"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "result_id": "R001",
+      "method_id": "M001",
+      "outcome_id": "O001",
+      "analysis_intent": "descriptive",
+      "sample_size": 20,
+      "evidence_ids": [
+        "E001",
+        "E002"
+      ],
+      "reported_sections": [
+        "摘要",
+        "结果",
+        "结论"
+      ]
+    }
+  ]
+}

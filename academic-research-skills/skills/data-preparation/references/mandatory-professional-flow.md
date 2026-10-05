@@ -6,12 +6,12 @@
 
 ## 必经操作
 
-1. 将当前请求和真实输入保存到任务目录；完整研究沿用阶段、预算和最新指令，begin须加 `--phase project/phase.json`，在预算检查后绑定当前阶段。执行 `professional_flow.py begin`，默认按能力路由选取已核实的源码缓存，无须用户另行点名仓库。工具输出真实入口全文、所需专业工作、边界与准备记录。必须阅读输出及本步需要的支持文件后再工作。
+1. 将当前请求和真实输入保存到任务目录；完整研究及显式预算任务先init对应full/focused阶段并沿用预算和最新指令，begin须加 `--phase project/phase.json`，在预算检查后绑定当前阶段。执行 `professional_flow.py begin`，默认按能力路由选取已核实的源码缓存，无须用户另行点名仓库。begin --compact只返回入口真实路径、所需工作与准备记录，避免长JSON截断；默认仍兼容输出入口全文。compact时必须打开guide_path，阅读本步适用模式及支持文件后再工作，不能把路径返回当作已读。
 2. 按上游流程完成**本次请求范围**的专业工作，保存结果；记录来源条款怎样改变本步决策及结果位置。局部写作不扩展成全研究；固定问题不重新发散选题；不为完成调用强行启动应用、模型或无限循环。
 3. 完成 work-report 后执行 `finish` 和 `check`，检查通过才移交产物或进入下一专业步骤。只有准备源码、读取指导、运行无关函数、历史测试或早于本步的产物不能完成本步。完整研究的阶段出口还要提交该阶段所有已调用步骤的开始/完成记录。
 
 ```bash
-python3 scripts/professional_flow.py begin --capability topic-novelty \
+python3 scripts/professional_flow.py begin --compact --capability topic-novelty \
   --task project/request.md --input project/materials.md --out project/topic-start.json
 # 阅读返回的真实 SKILL.md 及有关支持资源，实施专业工作，生成 candidates.md。
 python3 scripts/professional_flow.py finish --started project/topic-start.json \
@@ -41,8 +41,14 @@ work-report 是短操作记录，字段如下；actions覆盖实际返回的所�
 
 ## 自动路由与不可用时的处理
 
-`assets/capability-index.json` 的 professional_routes 覆盖所有专业子 skill，并含表达、演示与工作台子流程；默认选题为 Orchestra 的 brainstorming-research-ideas。已经固定的问题用同库清单内 Scholar 的 research-ideation 问题卡/证据门，不再次启动开放选题。指定另一匹配入口时用 --source；不能用不相关入口凑数。支持文件允许按本步需要读取，不要求全量载入。
+`assets/capability-index.json` 的 professional_routes 覆盖所有专业子 skill，并含表达、演示与工作台子流程；默认选题为 Orchestra 的 brainstorming-research-ideas。已经固定的问题用同库清单内 Scholar 的 research-ideation 问题卡/证据门，不再次启动开放选题。小型稿件清单/证据审查用--profile focused自动选K-Dense critical-thinking；绑定focused阶段会自动选择该入口，完整评审使用Academic入口。指定另一匹配入口时用 --source；不能用不相关入口凑数。支持文件允许按本步需要读取，不要求全量载入。
 
 缺缓存时可在已授权联网范围内加 --allow-network，仍逐文件核验固定 commit/blob。源不可用、能力不匹配或必要依赖失败时停止**受阻的专业步骤**并报告缺口；只允许调用这14库内另一已核实匹配入口，禁止 host_fallback 或自行推理冒充完成。确需新入口，先在同14库发现、读源码与依赖、固定版本、补充索引和实际路由，再开始该步骤。文献、数据库和普通科研软件不受 skill 仓库清单限制。
 
-同一任务同一阶段的已完成步骤与同版源码可复用；check须确认请求范围及输入/输出仍对应，不用旧阶段记录完成新阶段。新问题、新材料或新版本不得借旧记录绕过调用。恢复读取当前步骤记录、最新指令、产物与下一动作；失败不重置预算，不反复安装。旧记录信息不足保持unknown，不虚称符合新规则，也不重跑已结束研究。
+同一任务同一阶段的已完成步骤与同版源码可复用；check须确认请求范围及输入/输出仍对应，不用旧阶段记录完成新阶段。新问题、新材料或新版本不得借旧记录绕过调用。绑定phase的begin/finish会自动登记，resume返回当前步骤的开始/完成路径；出口拒绝遗漏登记步骤。恢复读取当前步骤记录、最新指令、产物与下一动作；失败不重置预算，不反复安装。旧记录信息不足保持unknown，不虚称符合新规则，也不重跑已结束研究。
+
+## 完成范围与交付预留
+
+finish/check的completed_for_handoff仅表示本次请求的专业产物可以移交，新增收据明确requested_step_only及submission_readiness=not_assessed。草稿、研究报告与正式投稿稿分别标记；上游具名人工核验未完成时保留待核验状态，不虚填verified，也不把格式检查通过或专业移交写成投稿就绪。局部文本只维护本次实质主张所需记录，直接使用上游模板/schema的字段与枚举；不为短改写创建全稿准入材料。
+
+显式预算任务必须登记phase，即使是局部请求；最后10%时间用于保存和交付，不再开始下一专业步骤。预估动作超出剩余时间时交付已完成范围和障碍，不反复尝试大型默认评审。下一步只使用上一专业步骤check通过的冻结输出；恢复同一未完成步骤不再次begin。

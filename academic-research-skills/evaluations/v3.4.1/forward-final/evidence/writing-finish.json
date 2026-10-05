@@ -1,0 +1,93 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "29ec39fc376e4f93b5b6fae291614518",
+  "capability": "manuscript-writing",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/inputs/request.md",
+    "sha256": "7df2a72e629ca88fde30d4475a60e30111e2b18d020f9d8ce1b11227920f504f"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/inputs/materials.json",
+      "sha256": "2aeb59d63e12656f8fbdd09bf3a71750b418e2c29b16b72f14116ad06386a83b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/outputs/requested-draft.zh.md",
+      "sha256": "80f1b666f94365e40ef7723735c372795d89489c330bf8705142e3070cb0ba76"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/source_manifest.json",
+      "sha256": "fcd9ba1c804cd039b19fcabbd1b1a90fcb9a5c2dcd1e87853a40d966f9d5ad2a"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/claims.csv",
+      "sha256": "25753d569369e24f8e2b38ecb522aea765c47391085bd2902489aaf3db588412"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/writing-note.md",
+      "sha256": "013500df10febac9b8a5ec8bab02914d2235ad15693f8ba8675bda114bb4d906"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/writing-work.json",
+    "sha256": "c2b1e8308e8cfe4b96bd60c2ec8a6637495e01e43188a1ecd7a39619cfbe0876"
+  },
+  "use": {
+    "id": "kdense-writing",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/scientific-writing/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "writing",
+      "ethics",
+      "publication"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/inputs/materials.json",
+        "sha256": "2aeb59d63e12656f8fbdd09bf3a71750b418e2c29b16b72f14116ad06386a83b"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/outputs/requested-draft.zh.md",
+        "sha256": "80f1b666f94365e40ef7723735c372795d89489c330bf8705142e3070cb0ba76"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/source_manifest.json",
+        "sha256": "fcd9ba1c804cd039b19fcabbd1b1a90fcb9a5c2dcd1e87853a40d966f9d5ad2a"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/claims.csv",
+        "sha256": "25753d569369e24f8e2b38ecb522aea765c47391085bd2902489aaf3db588412"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341-final/evidence/writing-note.md",
+        "sha256": "013500df10febac9b8a5ec8bab02914d2235ad15693f8ba8675bda114bb4d906"
+      }
+    ],
+    "steps": [
+      "把原句中的未经检验显著性、因果、学生单位和普遍推广改为预约记录描述；按用户要求给三项检查。",
+      "为本次唯一来源保留人工未核验状态。",
+      "按真实模板字段及枚举记录本段主张哈希，未建立全稿准入文件。",
+      "提纲和人工语义核对限定在已有A/B汇总，不添加干预标签或数据。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

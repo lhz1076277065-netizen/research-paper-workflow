@@ -21,3 +21,5 @@ prepare保留原仓库相对目录并逐文件核对Git blob；离线可复用�
 sources/select/upstream/assess保持原接口。旧记录没有phase或能力信息时保持unknown，不虚称满足新规则，也不重跑已结束研究。每个当前专业步骤必须调用匹配入口；不调用与本步无关的全部仓库。查看known_requirements与adaptation；发现源码更新另建快照，不覆盖正在复现的版本。
 
 源码缓存默认~/.codex/academic-research-source-cache，按id/commit复用，不进入全局skills目录；项目需隔离时显式--root。已缓存版本无需allow-network即可prepare，修改过的缓存拒绝覆盖。验收档案路径仅在源码包中可用，运行包不携带测试答案。
+
+局部清单和有限证据审查默认profile focused选择K-Dense critical-thinking；完整稿件评审使用Academic入口及其实际模板/角色资源，不把局部评审冒充完整面板。预算或阶段存在时begin自动采用该任务范围，亦可显式--profile。

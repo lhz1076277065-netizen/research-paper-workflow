@@ -1,0 +1,108 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "0576b575f31a44afb388358d90d79ab7",
+  "capability": "manuscript-writing",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/inputs/request.md",
+    "sha256": "60a3a305f60ca5c4d50f4d698e5d545b4a0858b05ac4d22707bc907a2226acf8"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/analysis-note.md",
+      "sha256": "ecfeeb316d3db2c90967b1e56281c031e8590d94d3feb3ffbaa987310cf20e63"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/descriptive-results.json",
+      "sha256": "ae9c0839554782e768c4f1e013b108e62e7202fe6061ae4ae3ebfda96b9020cb"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/outputs/short-report.zh.md",
+      "sha256": "9f87d32720d26b01a546ad8a9e7ebadd8d0ce43e96b37ecd6816b44bb8203fa2"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/evidence-outline.md",
+      "sha256": "a4bdf8b7076b613a2fb82a3dde38acc29533d15a25149ad39fc89eb233be6aff"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/source_manifest.json",
+      "sha256": "97eaa7c09cb9d5568c0a6a4d4b292bcd0ea27dd35406af256d363c8a52f16400"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/claims.csv",
+      "sha256": "52137332d3f89321d76feb14ff4c324a6d7655d8626f491630bc9ece603e5839"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/consistency_manifest.json",
+      "sha256": "ae7edf70bfc793819c93724c1803bb36bec95b4e294799c035c63b1ced6825d2"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/writing-work.json",
+    "sha256": "ccf948b02cb40cb06ebd458376238c3b722038e3edbe65258041ac4fb7d2dc42"
+  },
+  "use": {
+    "id": "kdense-writing",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/scientific-writing/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "writing",
+      "ethics",
+      "publication"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/analysis-note.md",
+        "sha256": "ecfeeb316d3db2c90967b1e56281c031e8590d94d3feb3ffbaa987310cf20e63"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/descriptive-results.json",
+        "sha256": "ae9c0839554782e768c4f1e013b108e62e7202fe6061ae4ae3ebfda96b9020cb"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/outputs/short-report.zh.md",
+        "sha256": "9f87d32720d26b01a546ad8a9e7ebadd8d0ce43e96b37ecd6816b44bb8203fa2"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/evidence-outline.md",
+        "sha256": "a4bdf8b7076b613a2fb82a3dde38acc29533d15a25149ad39fc89eb233be6aff"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/source_manifest.json",
+        "sha256": "97eaa7c09cb9d5568c0a6a4d4b292bcd0ea27dd35406af256d363c8a52f16400"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/claims.csv",
+        "sha256": "52137332d3f89321d76feb14ff4c324a6d7655d8626f491630bc9ece603e5839"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/consistency_manifest.json",
+        "sha256": "ae7edf70bfc793819c93724c1803bb36bec95b4e294799c035c63b1ced6825d2"
+      }
+    ],
+    "steps": [
+      "按实际执行的汇总核算写方法，未增加随机化与显著性结果。",
+      "形成与请求范围对应的证据提纲，待核验信息独立标明。",
+      "保留人工未核验状态，没有伪造审批。",
+      "把草稿逐行主张绑定到证据并生成SHA256。",
+      "本地一致性检查首次枚举值不符，按来源允许的not_applicable修复；复查通过。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": true
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false
+}

@@ -1,0 +1,22 @@
+{
+  "synthetic": true,
+  "unit": "预约记录",
+  "groups": [
+    {
+      "group": "提醒组",
+      "n": 10,
+      "no_show": 1
+    },
+    {
+      "group": "对照组",
+      "n": 10,
+      "no_show": 3
+    }
+  ],
+  "not_performed": [
+    "随机分组",
+    "显著性检验",
+    "因果识别"
+  ],
+  "individual_rows_provided": false
+}

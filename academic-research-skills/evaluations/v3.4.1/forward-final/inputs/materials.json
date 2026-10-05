@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "unit": "预约记录",
+  "groups": [
+    {
+      "group": "A",
+      "n": 12,
+      "no_show": 2
+    },
+    {
+      "group": "B",
+      "n": 12,
+      "no_show": 5
+    }
+  ],
+  "not_performed": [
+    "随机分组",
+    "显著性检验",
+    "因果识别"
+  ],
+  "original_sentence": "该方法显著降低了学生未到场率，值得所有学校推广",
+  "individual_rows_provided": false
+}

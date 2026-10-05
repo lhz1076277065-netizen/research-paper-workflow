@@ -91,7 +91,7 @@ class Step(unittest.TestCase):
         return state,path,s
     def test_phase_accepts_actual_bound_step_and_rejects_cross_phase_reuse(self):
         state,path,s=self.bound_phase();s,r,_,_=self.complete(s)
-        start=self.root/'started.json';start.write_text(json.dumps(s));finish=self.root/'finished.json';finish.write_text(json.dumps(r));index=self.root/'index.json';index.write_text(json.dumps(self.idx))
+        start=self.root/'started.json';start.write_text(json.dumps(s));P.register_professional(state,s,start);P.save(path,state);finish=self.root/'finished.json';finish.write_text(json.dumps(r));index=self.root/'index.json';index.write_text(json.dumps(self.idx))
         with patch.object(C,'index_path',return_value=index):steps=P.professional_exit(state,[start],[finish])
         self.assertEqual(steps[0]['step_id'],s['id']);state['professional_steps']=steps;P.advance(state,'design','input.md',self.root,'budget');P.authorize(state,10,'Fixture authorization');P.save(path,state)
         self.assertEqual(F.check(self.idx,s,r)['status'],'eligible_for_handoff')

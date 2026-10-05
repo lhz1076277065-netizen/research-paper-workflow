@@ -1,0 +1,2 @@
+范围：仅一段结果与三项未来投稿检查，不创建全稿或投稿包。E001支持给定计数、合成属性及三个未开展步骤。当前Agent已打开材料并逐字核对计数和单位；具名人工核验仍unverified。未增加百分比、效应估计、检验、文献主张或推广依据。明确A/B无提醒/对照含义，不擅自命名干预。检查项是待执行建议，不假称已经投稿审批。
+来源要求的全稿作者/指南/注册/披露准入不属于局部改写；未指定期刊，当前规则未查验。软件来源：KDense scientific-writing缓存commit 154988403bb5a18e9d3c0ce4e6d5e2e4b184a298。来源缓存所列参考为Kassis等(2026), Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents, arXiv:2609.00065；未联网核验，仅记录归属，不用作本主题实证证据。

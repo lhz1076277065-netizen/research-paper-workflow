@@ -1,0 +1,2 @@
+# Descriptive-only analysis
+Validated twenty unique generated appointment IDs, binary outcomes and complete group labels. Reminder: 1/10 = 10%; control: 3/10 = 30%. Four of twenty total. No independent-study sampling or randomization record is established. No inferential test or causal effect was requested or estimated. Exact fractions come from counts.json and count.py; no scientific winner claim.

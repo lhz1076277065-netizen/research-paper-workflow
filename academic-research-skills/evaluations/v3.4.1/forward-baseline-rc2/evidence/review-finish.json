@@ -1,0 +1,72 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "73ba34dc813f4893bb4737239e206f6b",
+  "capability": "manuscript-review",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/inputs/request.md",
+    "sha256": "60a3a305f60ca5c4d50f4d698e5d545b4a0858b05ac4d22707bc907a2226acf8"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/outputs/short-report.zh.md",
+      "sha256": "9f87d32720d26b01a546ad8a9e7ebadd8d0ce43e96b37ecd6816b44bb8203fa2"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/descriptive-results.json",
+      "sha256": "ae9c0839554782e768c4f1e013b108e62e7202fe6061ae4ae3ebfda96b9020cb"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/outputs/pre-submission-checklist.zh.md",
+      "sha256": "c25942e9a0fb4c6e8e07e03fbfe311a0f0c401cf618dc6a79defb0b7feb44490"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/review-work.json",
+    "sha256": "fd69587f48138fde08c1a0862060c707219ce40db5aabf8c38a32f7d58fd799e"
+  },
+  "use": {
+    "id": "kdense-critical",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/scientific-critical-thinking/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "robustness",
+      "review"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/outputs/short-report.zh.md",
+        "sha256": "9f87d32720d26b01a546ad8a9e7ebadd8d0ce43e96b37ecd6816b44bb8203fa2"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/evidence/descriptive-results.json",
+        "sha256": "ae9c0839554782e768c4f1e013b108e62e7202fe6061ae4ae3ebfda96b9020cb"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/forward-validation-v341/outputs/pre-submission-checklist.zh.md",
+        "sha256": "c25942e9a0fb4c6e8e07e03fbfe311a0f0c401cf618dc6a79defb0b7feb44490"
+      }
+    ],
+    "steps": [
+      "把用户明确未开展的随机化/检验/因果识别与未提供的记录细节、政策、作者声明分开判定。",
+      "逐项定位到报告主张和实际工具日志，给出最小处理；不要求新增实验。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Apply appraisal workflow to evidence and independent units; include actual reproducibility rerun via local protocol when requested. Do not claim clinical recommendations or cross-model review."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "c55f0dd387b0423280bfe6016bc74528",
+  "capability": "research-design",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/request.md",
+    "sha256": "880339b1ce25e1c33048c2e22abede7fd152b960aff66c041a692757a8de90df"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/question-card.md",
+      "sha256": "fbfb672006d19cf694e8dc6ccb08953b48637a5c531d166f6d4f4be77d00bbe7"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
+      "sha256": "f27f8c7ae109fedbf2fd793da80f32693205f6aa464e3af6998f79cc272f18e7"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/design.md",
+      "sha256": "c236f2fa49ea058e9f60b287323a0715aa7489f18bd678ad54c5d6d47048c5be"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/design-work.json",
+    "sha256": "b64aadf5d832c5b10bf0aa49ef1185594706d40fb0e4c4e9cc4a8a706d509bb9"
+  },
+  "use": {
+    "id": "sleep-experiment-plan",
+    "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+    "entry": "skills/experiment-plan/SKILL.md",
+    "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "experiment",
+      "methods"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/question-card.md",
+        "sha256": "fbfb672006d19cf694e8dc6ccb08953b48637a5c531d166f6d4f4be77d00bbe7"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/appointments.csv",
+        "sha256": "f27f8c7ae109fedbf2fd793da80f32693205f6aa464e3af6998f79cc272f18e7"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/source-bound-smoke-v341-final/design.md",
+        "sha256": "c236f2fa49ea058e9f60b287323a0715aa7489f18bd678ad54c5d6d47048c5be"
+      }
+    ],
+    "steps": [
+      "Applied the claim/evidence and anti-claim workflow to two essential checks; excluded unrelated experiment blocks."
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

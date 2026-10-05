@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "authors": [],
+      "confidentiality": "public",
+      "evidence_id": "E001",
+      "identifiers": {
+        "doi": "",
+        "isbn": "",
+        "pmcid": "",
+        "pmid": "",
+        "url": ""
+      },
+      "locator": "inputs/materials.json: groups、synthetic、not_performed；inputs/request.md",
+      "source_type": "other",
+      "title": "用户提供的合成预约汇总与未开展步骤",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "year": null
+    }
+  ]
+}
