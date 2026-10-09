@@ -1,0 +1,31 @@
+{
+  "scope": "single_proposal_objective_paragraph",
+  "paragraph_characters": 147,
+  "manual_semantic_review": [
+    {
+      "claim": "白天公开测试可靠",
+      "action": "保留作者提供的背景，来源unverified"
+    },
+    {
+      "claim": "夜间样本覆盖未知",
+      "action": "保留未知，不称高湿或夜间实测通过"
+    },
+    {
+      "claim": "拟比较校正模型与原模型",
+      "action": "仍为计划而非完成，未增加实验设计细节"
+    },
+    {
+      "claim": "亮度不足唯一原因",
+      "action": "保留原因与替代原因待验，不声称因果已证"
+    },
+    {
+      "claim": "提升20%/行业认知改变",
+      "action": "无结果依据，正文没有提升数值或行业突破结论"
+    }
+  ],
+  "human_verification": "pending",
+  "new_search": false,
+  "new_experiment": false,
+  "submission_readiness": "not_assessed",
+  "tool_semantics_certified": false
+}

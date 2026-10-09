@@ -1,11 +1,14 @@
 """Budget and interrupted workflow regressions using actual CLI outputs/files."""
 import copy
+from contextlib import redirect_stderr, redirect_stdout
+import io
 import json
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -112,6 +115,68 @@ class InterruptedFlow(unittest.TestCase):
   self.begin('one');self.finish('one');state=P.load(self.phase);state.update(deadline=0,project_deadline=0);P.save(self.phase,state)
   self.call('phase_control.py','--state',self.phase,'close','--status','completed','--reason','Fixture was saved late','--evidence','evidence.md','--root',self.root,'--task-id','fixture','--professional-started',self.root/'one-start.json','--professional-finished',self.root/'one-finish.json',code=2)
   state=P.load(self.phase);self.assertEqual(state['status'],'closed_limit');self.assertEqual(state['completed_tasks'],[])
+ def full_chain(self):
+  for current,following in zip(P.STAGES,P.STAGES[1:]):
+   self.assertEqual(P.load(self.phase)['stage'],current)
+   self.begin(current);self.finish(current);state=P.load(self.phase)
+   with patch.object(C,'index_path',return_value=self.index):
+    steps=P.professional_exit(state,[self.root/(current+'-start.json')],[self.root/(current+'-finish.json')])
+   P.advance(state,following,'evidence.md',self.root,'Continue the bounded fixture flow')
+   P.consume_professional(state,steps);P.save(self.phase,state)
+  return state
+ def close_delivery(self,code=0):
+  output=io.StringIO();error=io.StringIO()
+  with patch.object(C,'index_path',return_value=self.index),redirect_stdout(output),redirect_stderr(error):
+   result=P.main(['--state',str(self.phase),'close','--status','completed','--reason','Saved fixture delivery index','--evidence','evidence.md','--root',str(self.root),'--task-id','fixture'])
+  self.assertEqual(result,code,output.getvalue()+error.getvalue())
+  return P.load(self.phase)
+ def test_full_flow_closes_delivery_without_repeating_consumed_professional_work(self):
+  before=self.full_chain();files=set(self.root.glob('*-start.json'))
+  after=self.close_delivery()
+  self.assertEqual(after['status'],'completed');self.assertEqual(after['completed_tasks'],['fixture'])
+  self.assertEqual(after['professional_steps'],before['professional_steps']);self.assertEqual(len(files),4)
+  self.assertEqual(set(self.root.glob('*-start.json')),files);self.assertEqual(after['project_deadline'],before['project_deadline'])
+ def test_delivery_cannot_omit_started_or_completed_unconsumed_work(self):
+  self.full_chain();self.begin('delivery')
+  self.assertEqual(self.close_delivery(code=2)['status'],'active')
+  self.finish('delivery');self.assertEqual(self.close_delivery(code=2)['status'],'active')
+  with patch.object(C,'index_path',return_value=self.index):
+   with self.assertRaises(P.PhaseError):P.professional_exit(P.load(self.phase),[self.root/'delivery-start.json'],[])
+ def test_delivery_rechecks_prior_receipts_and_outputs(self):
+  self.full_chain()
+  for name in ['manuscript.md','manuscript-start.json','manuscript-finish.json','manuscript-work.json']:
+   path=self.root/name;original=path.read_bytes()
+   with self.subTest(name=name,change='edited'):
+    path.write_text('Unverified altered artifact');self.assertEqual(self.close_delivery(code=2)['status'],'active')
+   path.write_bytes(original)
+   with self.subTest(name=name,change='deleted'):
+    path.unlink();self.assertEqual(self.close_delivery(code=2)['status'],'active')
+   path.write_bytes(original)
+  self.assertEqual(self.close_delivery()['status'],'completed')
+ def test_empty_delivery_rejects_unknown_or_unrelated_prior_completion(self):
+  original=self.full_chain()
+  changes=[dict(professional_steps=[]),dict(history=[]),dict(latest_instruction='A different current instruction'),dict(id='another-phase'),dict(stage='manuscript'),dict(scope='focused'),dict(professional_pending=[dict(stage='manuscript',status='completed')])]
+  legacy=copy.deepcopy(original);legacy.pop('professional_pending')
+  for change in changes:
+   state=copy.deepcopy(original);state.update(change);P.save(self.phase,state)
+   with self.subTest(change=change):self.assertEqual(self.close_delivery(code=2)['status'],'active')
+  P.save(self.phase,legacy);self.assertEqual(self.close_delivery(code=2)['status'],'active')
+  corrupted=copy.deepcopy(original);corrupted['professional_steps'][-1]['outputs']=[]
+  P.save(self.phase,corrupted);self.assertEqual(self.close_delivery(code=2)['status'],'active')
+ def test_empty_exit_remains_blocked_outside_delivery(self):
+  with patch.object(C,'index_path',return_value=self.index):
+   with self.assertRaises(P.PhaseError):P.professional_exit(P.load(self.phase),[],[])
+ def test_delivery_cannot_rebind_consumed_receipt_to_a_new_instruction(self):
+  import professional_flow as F
+  state=self.full_chain();state['latest_instruction']='A newly authorized but different instruction';P.save(self.phase,state)
+  path=self.root/'manuscript-start.json';begun=P.load(path)
+  begun['phase']['latest_instruction']=state['latest_instruction'];P.save(path,begun)
+  self.assertEqual(F.check(C.load(self.index),begun,P.load(self.root/'manuscript-finish.json'))['status'],'eligible_for_handoff')
+  self.assertEqual(self.close_delivery(code=2)['status'],'active')
+ def test_delivery_keeps_consumed_records_without_receipt_identity_unknown(self):
+  state=self.full_chain();step=state['professional_steps'][-1]
+  step.pop('started_sha256',None);step.pop('finished_sha256',None);P.save(self.phase,state)
+  self.assertEqual(self.close_delivery(code=2)['status'],'active')
 
 
 class Routing(unittest.TestCase):

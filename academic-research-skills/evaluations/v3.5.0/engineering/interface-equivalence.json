@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "runtime_scripts_checked": [
+    "capabilities.py",
+    "environment.py",
+    "init_run.py",
+    "portable_skill.py",
+    "professional_flow.py",
+    "provider_runtime.py",
+    "provider_worker.py",
+    "register_artifact.py",
+    "research31.py",
+    "research_router.py",
+    "result_links.py",
+    "selftest.py",
+    "upstream.py",
+    "validate_run.py"
+  ],
+  "asset_structure_unchanged": [
+    "capability-index",
+    "environment-profiles",
+    "research-profiles",
+    "research31-policy"
+  ],
+  "schema_route_dependency_and_required_source_blobs_unchanged": true,
+  "only_runtime_code_change": "environment/provider_runtime release VERSION plus empty-delivery completion defect found by forward test",
+  "legacy_receipts_retested_by_regression": true,
+  "phase_control_change": "Empty full delivery requires revalidated consumed manuscript records, original begin/finish SHA256, no pending work and matching phase/instruction; CLI and professional receipt schemas preserved; old missing identities remain unknown."
+}

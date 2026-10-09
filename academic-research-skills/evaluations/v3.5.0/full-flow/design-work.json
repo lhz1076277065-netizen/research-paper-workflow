@@ -1,0 +1,15 @@
+{
+  "step_id": "54518f4e6b4046de87cc4e56d82f30dd",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": false,
+  "actions": [
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "Every experiment must defend a claim.",
+      "applied": "用主张驱动路线将竞争解释连接到分层与同权重判别，规定数据失败停止及不必要扩展。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/design.md",
+      "output_excerpt": "必须运行B3：使用相同easy权重w，R_m(w)=w*r_measy+(1-w)*r_mhard；"
+    }
+  ]
+}

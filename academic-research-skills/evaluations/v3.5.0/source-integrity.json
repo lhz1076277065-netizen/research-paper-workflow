@@ -1,0 +1,2495 @@
+{
+  "version": "3.5.0",
+  "repositories": 14,
+  "entrypoints": 23,
+  "entry_file_bindings": 413,
+  "distinct_source_files": 404,
+  "passed": true,
+  "network_used": false,
+  "professional_work_done": false,
+  "native_execution_tested": false,
+  "entries": [
+    {
+      "status": "source_prepared",
+      "id": "researchstudio-search",
+      "repository": "microsoft/ResearchStudio",
+      "commit": "063f10088af49909e1a4a7ea8d29efe19633f34e",
+      "tree": "2ffbb2cc23a25abc2f52a0ba692a4126b274ed8a",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/researchstudio-search/063f10088af49909e1a4a7ea8d29efe19633f34e/ResearchStudio-Idea/skills/paper_search/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/researchstudio-search/063f10088af49909e1a4a7ea8d29efe19633f34e",
+      "files": [
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/SKILL.md",
+          "blob": "e840090d3a87d08c7ea2a6772673fe4bf4bccb38",
+          "sha256": "9249f89d84d8d6ba86419898376841e19ed531885c91ff1b5290d7c92af07159"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/references/programmatic_api.md",
+          "blob": "d39db3475fea51fc1b052dee1a0155fa7fa4a613",
+          "sha256": "aa63ff10541e6256aa7a9226d7571140c5734351c8729d30851d617b0b31b832"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/_env.py",
+          "blob": "08a87526951218c353b7fc3c6c01eca525695e82",
+          "sha256": "d050425ca84a2bc32f9ceb05b035d708f68b7cc1c1ea1ac330b43051336632dc"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/_http_runtime.py",
+          "blob": "19af540319d3474ddacb2e195e7d8f354b13a0b9",
+          "sha256": "bfbbf76a8bb4c7bb0b0f1eb68d2c7a1c8b307449aa2a645435e7c67a96907604"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/postprocess.py",
+          "blob": "2399446376560d7654424677f0f85102e555da5f",
+          "sha256": "cc91b05c55f06832483a655a0cdcf0980da6b3c1102342c4020e379927b0f036"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers.py",
+          "blob": "1bb3d2ca452d743db2c266ba8de9fe03225e1270",
+          "sha256": "2d32c4f8f3e74a55ac2ffde17cee5a00649d62ed6eca0add4fdcd29f6e45de43"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_arxiv.py",
+          "blob": "4ebf1d1dbb6c3b3453402398fcc9a1cea5c41f81",
+          "sha256": "d7b8ace270f3893c4e5f1b6a844390f0902107aca517043ee59ae96d479eaf11"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_crossref.py",
+          "blob": "5cc1e62b32abc3da1bf95e3c03ffc8c7bad1a360",
+          "sha256": "f6bd334a7aa95ba3597b66b8a39a3c92210272877f8c5dc5ab554b180cab2768"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_dblp.py",
+          "blob": "c448ae235340806f9e8b4befbd1098eeddcd3fa9",
+          "sha256": "678789a0dd1afad500bb114dd4c54eae6d06612ec6a87e90e6798c79e2e58009"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_google_scholar.py",
+          "blob": "8e9ed45040b0c9b0a1ff748fcc761a87112c7a2d",
+          "sha256": "5bb4eb6a40494de770faf50cc2f1b300942e083628b709e57e96762b8e62b28c"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_open_alex.py",
+          "blob": "2429a01681626794546a33411ce01e20ae0b9425",
+          "sha256": "df12ed36f22eb67233840b154278b94578a3ea5781056c597794778915848eb3"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_openreview.py",
+          "blob": "3e3980cee501ad85be804c60f6ca441a67293c1a",
+          "sha256": "3ed426d514814a847554ea324c374c94c8a2856550ebf2ae3afcdf00cfc326b4"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/search_papers_by_semantic_scholar.py",
+          "blob": "53169f587b30322fa6032c36754c5e5222efe44d",
+          "sha256": "87c3c6ec0799b6a6a26da5fa3c07d09c3e275544580bf7e07175e170ef093d5b"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/selftest_postprocess.py",
+          "blob": "489582fd558e9404960f0195aa027c354c9a4aee",
+          "sha256": "b94ee238de608e42a3d3f53841170b04b3d59e0c01c77d881b092f6ec39c4a47"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/selftest_runtime.py",
+          "blob": "7f0c4828df5de4d1ecfcfdf8e2154f4b5e2effc0",
+          "sha256": "b3afda2daa0149d41a0fe81fd6b72cf78dbda0da64b6a1a74abdc1785e2cdd2f"
+        },
+        {
+          "path": "ResearchStudio-Idea/skills/paper_search/scripts/source_worker.py",
+          "blob": "d7b1554c9864f909d8029f66198070bf7b847ab0",
+          "sha256": "073588655b61f80bcce27d6e7ac4a61f057f2beca2ad7736c2f3555eeeff3493"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "e5e946a0371af9920be22ea4adb584000fface8c",
+          "sha256": "db60a6df93f1786929a223558ca0c202ef61095600785cf7503fbcd4bac1bd02"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Use current-host CLI and screen records; exclude model recall from verified sources; budget and network limits override default run-all searches. CLI --json in guidance is absent in this commit; call search_papers with inspected signature and serialize returned records, then screen actual records.",
+      "known_requirements": [
+        "Python >=3.10",
+        "requests",
+        "Network to selected metadata API; bounded timeout"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "nature-reader",
+      "repository": "Yuan1z0825/nature-skills",
+      "commit": "84880815fb37317b3766bff2c2abba395b8993c3",
+      "tree": "466490e175c148a6dce31e0e5961f63e2cde4e8f",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/nature-reader/84880815fb37317b3766bff2c2abba395b8993c3/skills/nature-reader/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/nature-reader/84880815fb37317b3766bff2c2abba395b8993c3",
+      "files": [
+        {
+          "path": "skills/nature-reader/README.md",
+          "blob": "98ba2ff831be7ef95a93f29c912972f3c9759ada",
+          "sha256": "2e0d2cb22a51c3ba6fe92d0da80dbf89d756c85448cadd9d3215b3e20f36750b"
+        },
+        {
+          "path": "skills/nature-reader/README_EN.md",
+          "blob": "0550454b0d6b2e3ce13e8685c564c701af6d7eea",
+          "sha256": "5f34fa9cfd7b3f45647b4451349a42ef4537b89a0fa9c37d487dbfec0dc10d9a"
+        },
+        {
+          "path": "skills/nature-reader/SKILL.md",
+          "blob": "cf8d3cbe6917d962fbb43de9218d4fad5c01e89f",
+          "sha256": "999a5c1b116558133d0389ce6c1bbc3dc9cf5242d1be2870358789769d97a84e"
+        },
+        {
+          "path": "skills/nature-reader/agents/openai.yaml",
+          "blob": "e9bb4c9796fb676cd4b34536b71543e79b11567e",
+          "sha256": "3f51bc49dea2775124ca3db18fa9d0128862b7e4b019003e07b0d55517ac7225"
+        },
+        {
+          "path": "skills/nature-reader/evals/evals.json",
+          "blob": "97e5673812935c712f7cada8b41d38d937c5fd5b",
+          "sha256": "7e706ffe4078454858287754816f9de5e2e45128eec79fb92bd41e03f32833cb"
+        },
+        {
+          "path": "skills/nature-reader/manifest.yaml",
+          "blob": "3ed6df0cec8f27bea44a64e0780df367c926175f",
+          "sha256": "f287b0f61dd096467ee4f670fc9c752b972b9b5d56a5c21397d816c200256051"
+        },
+        {
+          "path": "skills/nature-reader/references/article-anatomy.md",
+          "blob": "0c85335fec334fff4454ca73685412d2530dcb06",
+          "sha256": "f3899789c574577e37c27478673d98e21f8329f37f2e5162ac9e09a0d10a6f14"
+        },
+        {
+          "path": "skills/nature-reader/references/equation-handling.md",
+          "blob": "f257650999d8dff00a4cf60db29d923a537235a7",
+          "sha256": "57cdad3fdb5a1820636edd09b7e4aae3fc0ac8898709da8ed201299a958efa6a"
+        },
+        {
+          "path": "skills/nature-reader/references/figure-extraction.md",
+          "blob": "f256f06b2603b56237769293d5b984431df78b9f",
+          "sha256": "eba50785ea176c63ba16d2ddfe614c91525b984c5097ce42b6e49a1beef8ebdc"
+        },
+        {
+          "path": "skills/nature-reader/references/grounding-rules.md",
+          "blob": "44ddd8d3d1af95765ed1d50a10d9f6c26f4f89ed",
+          "sha256": "3e05b8f9c1a76042c993b55474ea1b19757d6aada5fb58722cbed2108119055f"
+        },
+        {
+          "path": "skills/nature-reader/references/output-spec.md",
+          "blob": "fbbce2855360dbc820c58960f83dc3c282e90f6e",
+          "sha256": "81d590eef5d65fc84aeff9be7e7034b5ff92588d2504fbc08d7543547133aaa0"
+        },
+        {
+          "path": "skills/nature-reader/scripts/validate_reader_math.py",
+          "blob": "4180ffcdd1f1d4815f27735202cacd60d73d6a47",
+          "sha256": "252c6d0998801d24a459e40e48a4125c4a07b8ee639bb28fab8e0f3c5a2b66f1"
+        },
+        {
+          "path": "skills/nature-reader/static/core/output-contract.md",
+          "blob": "e901feebe26af76e7c8a58c8e90a17e62b54ad46",
+          "sha256": "05d1ffda81d01c3241a7ff6ff3574243c3c967da942f3cd0f0fa12c32891be26"
+        },
+        {
+          "path": "skills/nature-reader/static/core/principles.md",
+          "blob": "1075068f23267e9f17e28ad306f40c5908169e59",
+          "sha256": "b4c0f9ee57b8d83ecee683e4b37637a331562b0b18cf77f249bf8c8975e1bd97"
+        },
+        {
+          "path": "skills/nature-reader/static/core/workflow.md",
+          "blob": "fba7467ae6aaacdad1c3efb50970653b17e94478",
+          "sha256": "8920654b3e23b6e8a6a729292ec92aab8340ef009421c6073656e4aaf21bb411"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/doi-arxiv.md",
+          "blob": "6dfb9a1a1f82e19cc01513c35453dc19c5cd80e8",
+          "sha256": "c8b8d006f04f34b703021d9b76b3e62d17212b839fbe37a11a8e34baf86854d9"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/html.md",
+          "blob": "4cd42fd9fed3bf5b632dcedc05951fe14657b74c",
+          "sha256": "136a004201a8ad77e7af5ac8233d8a90cd39f33d7349fe215b4a7946e26b995e"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/pasted-text.md",
+          "blob": "44a1180c5458c9570c0e9988a6acae4bbf18db48",
+          "sha256": "bee3ad0473e686b2bc76fe8c532dc967795019f067fefcd84cf7eed82475bb2f"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/pdf-text.md",
+          "blob": "7d48d48582690ab4854aa43c8b9b10bde0ee895b",
+          "sha256": "2f61a2253524683fbe899859c944dc86b20be7f1cf95712d1299a769265caef7"
+        },
+        {
+          "path": "skills/nature-reader/static/fragments/source/scanned-pdf.md",
+          "blob": "6ee0c228ef2420d42b84e93cbcffc87ec9ef72a2",
+          "sha256": "e0e7a8343c13952befcc674047dff3488eb2e9640c5740299e6b4a4d0a764d47"
+        },
+        {
+          "path": "skills/nature-shared/core/consistency-sweep.md",
+          "blob": "8b7e03263c808b914b57de7c701156f2de5ac8d5",
+          "sha256": "35a540c10a2c14415b7181588f612e16943cbc4e49f1428010d67c480051f0f9"
+        },
+        {
+          "path": "skills/nature-shared/core/discussion-argument-language.md",
+          "blob": "1f0bb0dfe6873d1a2d8d9f87bb9c4e0bf31939af",
+          "sha256": "a3b0ddcadc47efc029e923ae8133ba0bd99e6a6eb27fdbc791d0e1096d98c169"
+        },
+        {
+          "path": "skills/nature-shared/core/ethics.md",
+          "blob": "a6e6d063a8a41bc2294f02820265700272024c37",
+          "sha256": "065db5761d72c295eb1ed5c231deb0b0bcbb0f1065d530f994c044398bd75056"
+        },
+        {
+          "path": "skills/nature-shared/core/main-text-discipline.md",
+          "blob": "ec34c0648aedf42c7c18b5445ea4af6b5208aeb2",
+          "sha256": "d43190c4d617096c1088bb5452cec5b0ae13f5d4947c2b21c28315181f051b8e"
+        },
+        {
+          "path": "skills/nature-shared/core/nature-abstract.md",
+          "blob": "19dbbd69703c7c898734c295782875b90637d4a5",
+          "sha256": "92c0f1e78df5a9b4dc7ad276ed625e371d211124a47a9eed0a4de82c9c1526cb"
+        },
+        {
+          "path": "skills/nature-shared/core/nature-introduction.md",
+          "blob": "6d6ffe0c263f03a67a7dd66342241b8b714dd225",
+          "sha256": "813fb8acb9b5c76e9c8f1d8c1616fefa82a1ec949d4aba98935b0485fb4cd4f7"
+        },
+        {
+          "path": "skills/nature-shared/core/nature-results-discussion.md",
+          "blob": "11631fb861f557f9253ed07557f5aa2b2dcaccf9",
+          "sha256": "16f1ce1ed6d2aad7853eabf304cdbd661530931747bce4cf3f10b3dfb655adc1"
+        },
+        {
+          "path": "skills/nature-shared/core/paper-type-taxonomy.md",
+          "blob": "7f5c84f0a8e5f37e13604b473c0b8c6262ef8403",
+          "sha256": "84878907fd0416f628c8e3969e583569b9930f0129e6553167112435d93a3ad1"
+        },
+        {
+          "path": "skills/nature-shared/core/reader-workflow.md",
+          "blob": "d34e9374b7989c75bf86db0df04af8ab5bb90a02",
+          "sha256": "acf54e59da3cd29d9179748895c7b5ed0da2d948704e97bee83771698ecbe10d"
+        },
+        {
+          "path": "skills/nature-shared/core/research-compliance.md",
+          "blob": "ff555158b2109463f16c266c347d2ab459bbdd02",
+          "sha256": "0ac172d2af0c2089acd7280712a89b23a5f232d4e436e9ae78dd501ff30cd855"
+        },
+        {
+          "path": "skills/nature-shared/core/terminology-ledger.md",
+          "blob": "d59c6c838638949e035b8c6f76054a05b633e9e3",
+          "sha256": "c8ff387fc55439dbec9835d624fb1c1e544cca06ae8d007f8e4f726f68080784"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Use only format-selected core and grounding resources. Source-linked question does not require whole-paper translation.",
+      "known_requirements": [
+        "Current-host source extraction/translation; OCR only for scans"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "kdense-eda",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-eda/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/exploratory-data-analysis/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/kdense-eda/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "files": [
+        {
+          "path": "skills/exploratory-data-analysis/SKILL.md",
+          "blob": "c461f99dea057872298ce6f04e7c090a83d80d01",
+          "sha256": "955c4cefa49106dd03b55cbd62603bab2d2fb678e627dd452ba62040c7128484"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/assets/report_template.md",
+          "blob": "cf651d8d360f702230d03c124a2ff0f5b2e2e97c",
+          "sha256": "c6cd0644dbefeb64c77e84935509f52a92d45256daf2cd4be84012e99e4d7d44"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md",
+          "blob": "c82fb3679a4e7db3be07bf11c98666166e9b4605",
+          "sha256": "b3594673cbe22e29fd5bc2681c1b53d4f8b02b48ff17fc9ffaf5a09d1d885be3"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/chemistry_molecular_formats.md",
+          "blob": "40d5dff9437c596e79bf53d98ce5135e8d1bec49",
+          "sha256": "3ff937541ebf0396d4c2304016cebc42d405110300df7379f59c40953fc8ed41"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/general_scientific_formats.md",
+          "blob": "1fcfd35ac18b2caa932ca2009b987ae0b1261550",
+          "sha256": "42bcf3389bbd78e426dd41139208517f3f78bdc17e068a1eb3a984d2f2487320"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/microscopy_imaging_formats.md",
+          "blob": "4159a6bd6aaeddbc5147b9e71ade65359fce13b2",
+          "sha256": "c96bb7291ded320a106800c1132191683aa3028f2240c5fcf954079f1a26c382"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md",
+          "blob": "f04246379bca90d2a8bf0e27633da55dfd276596",
+          "sha256": "66d9493fe14c717f5e8e60500e8fa7bfe1f619084e23b643a767f0952a35efd7"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md",
+          "blob": "429ddc84592a6deee21c13b69d6ae16eefa972d3",
+          "sha256": "102a68c212ef5447815c889cf06668f3cb5bd8644f018354d6e98d1a15101a0f"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/__init__.py",
+          "blob": "7fb9dd8fa120dd2d00eb2be0c5a4c1c4349c908a",
+          "sha256": "87539288ce5d4caf24fc9fca14e5d70c41730c9d4285106ac4db0c4b5cefd60c"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/_capabilities.py",
+          "blob": "9aa1327f23a58324baabb777c98a01b577787fa1",
+          "sha256": "93fd42bcc6940db0a6cad364dab42a52f0867e782f7e93c9b27c4185249edc06"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/_common.py",
+          "blob": "d098fc4e0acf3a0f67c8a4f6596ba69e29388b1b",
+          "sha256": "f363af255cc78ea63864e0da9f679f57a9e71efd36b6813332f3d2c419b30d51"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/_structured.py",
+          "blob": "714ec59a5d187359c0a329c3d81b5b3196af9ee9",
+          "sha256": "8cb23c8552339acc926f4dc84e1ec032c79152515098e1fd97f2326b84b4ead9"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/_tabular.py",
+          "blob": "5311d1a9aef4995210442792e6a75221e8ad60f1",
+          "sha256": "5d1db825890dd035c30e51ac1c11aee56e1e1dca6ffd238ee87ae7d51d8df2f0"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/capability_manifest.py",
+          "blob": "a1ee36326ea6889b38428714283ce2f4952db461",
+          "sha256": "1e52e1db668ebce919751a75b53ad959c36749e4b1695f59d8ac2d6c8eda4abf"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/distribution_sensitivity.py",
+          "blob": "f8db91f4b7391152ae2b808387d67543bf52bb38",
+          "sha256": "ca6e9f3dd59cfb382b1ff0874e709933c136ec942085a0437d4000bbf7f1f3c8"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/eda_analyzer.py",
+          "blob": "40781abbc7879354c3430fc6f35ebad2331f195e",
+          "sha256": "6532b28ad3f28dd9f58acecb54361c8271d2755584a54ecb0be34da74d1e5d20"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/image_inspector.py",
+          "blob": "a051fd39b64f3d511e3b764eda78b9f72d776db4",
+          "sha256": "79c21b35d01376929ff0edf26a3bb25923b9e75458c586e0f5721cec356fe639"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py",
+          "blob": "af3f1e98588547674dbfc6bc56644fe749b747c8",
+          "sha256": "28458714e80ee31db636c0265ba21e1623ba27816d31e236fdc9b873a5b78ffc"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/report_scaffold.py",
+          "blob": "a816e5f422078b7fddbe6bd4c465422c9a5ea651",
+          "sha256": "4d745592384bfceb0ec7384eecfc5e8ba49ebfa4ec55be75a99ce7c7e102f60b"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/sequence_inspector.py",
+          "blob": "66e985e15ef369ba26cbdd65cc2a6ec4460d7a0c",
+          "sha256": "11ca2fa3a0d660192631b9b562f362b0fd120c9e54639bfb049c600c6920be28"
+        },
+        {
+          "path": "skills/exploratory-data-analysis/scripts/tabular_profile.py",
+          "blob": "874ef86b871eb72b8f95a87cfc4cad29f72be148",
+          "sha256": "78cd139292c18e31d17de882762948db7b51fdc3278546f994270a287d0149db"
+        },
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Core local CLI is native; unsupported scientific formats need separately checked tools, never claim universal format support.",
+      "known_requirements": [
+        "Python>=3.11 for core stdlib CLIs; optional format libraries installed only as needed"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "scipilot-figure",
+      "repository": "Haojae/scipilot-figure-skill",
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "tree": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "blob": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+          "sha256": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc"
+        },
+        {
+          "path": "references/chart_selection.md",
+          "blob": "547e3ed795beb8c52c40d56107dd368e729f31d8",
+          "sha256": "71fe5970b4a9aee66d6c02d1e0696b367f7dafd9c7e17502ee66c56f36870852"
+        },
+        {
+          "path": "references/data_profiling.md",
+          "blob": "afb50d0afc6b36e43f6537324af78ec22d2968d8",
+          "sha256": "ec2f87a5a09db0db00198b6b462b374c2640a57dfc41e2e884928c15145e27be"
+        },
+        {
+          "path": "references/journal_specs.md",
+          "blob": "b28162888c0bfc378b2292dc0356f5d7aaed674a",
+          "sha256": "a8e9654f55994d692d585e69fb3a68f5618ecf766d8ce0e95fdda6d12e786263"
+        },
+        {
+          "path": "references/plot_recipes.md",
+          "blob": "5d5edc17fa173f367e98839f27f6c3d2f5ad8cf2",
+          "sha256": "3d4f47a6e320d1c0635ee2fc329484952d4e528b1fe9b552e79828b88336c002"
+        },
+        {
+          "path": "references/publication_checklist.md",
+          "blob": "2dd61367123aec7974d133d36bc9b6c204a30f6e",
+          "sha256": "9e2c5f0725c57e71eee0ff66ebac61d2d89c8cec4bd9c958db0184eea4c8abf6"
+        },
+        {
+          "path": "references/visual_review.md",
+          "blob": "62a2d1b8ab54fdeacbfb972474d3c6c4b8f7527d",
+          "sha256": "c4ca4a28a315e7de46f67b5972b3765b979f01fe30616c0681dd2595bed554a1"
+        },
+        {
+          "path": "references/viz_pitfalls.md",
+          "blob": "68fc0245ef4faf4e1f336a4d5fd432252a53bfe5",
+          "sha256": "f103ae47611c6c7429629cb3161c5cdc8a0c9fba7f14d9f83159c96f848a9818"
+        },
+        {
+          "path": "requirements.txt",
+          "blob": "7f194bb3314bf45682386d5a6a65b677bc14ef55",
+          "sha256": "0cda86f15f4006c4be606cc2a991c1a250c4f8a49782ef634d440fb0f37acade"
+        },
+        {
+          "path": "scripts/check_figure.py",
+          "blob": "30d4bdeed5694e8690031235744d76093ee4176a",
+          "sha256": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06"
+        },
+        {
+          "path": "scripts/export_figure.py",
+          "blob": "a3a4df7580f8d4275d822424a11aaa9f6f36df11",
+          "sha256": "40ce3bcd31dfc4b33e38a1cb180c75dc730ee6fa046f04934c79f285c6f890c1"
+        },
+        {
+          "path": "scripts/layout_tools.py",
+          "blob": "4eb29f13cea9bbe2e507919bb0412b9e2647d1ae",
+          "sha256": "68e1d25774148fe78f5d87035d651f5e3707382502505cb11f62f9ec7ae88e49"
+        },
+        {
+          "path": "scripts/profile_data.py",
+          "blob": "7bf54ec4ceb438974f4238e4b4ed4a13cd09ba67",
+          "sha256": "d8a2a72c2607c390f2d3ed1508209d515ad4fbf833fa1602ab9da519b3596ec4"
+        },
+        {
+          "path": "scripts/setup_style.py",
+          "blob": "35c5d3a8fb99b3477c544dccf331bb4d81af7657",
+          "sha256": "d58ef81684577bb605a92733dd2ca48ade03b4f819b3d255fd62f319be7fea82"
+        },
+        {
+          "path": "scripts/visual_qa.py",
+          "blob": "02ec9fb6c9300986bdf4e5b257b96e00eb13e89c",
+          "sha256": "67675709e523c76e2748d50749de7bc6332f07df865379b26d024321fb40120f"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "897e469d1446e6cfc5a71858387e01fd1129197c",
+          "sha256": "9138113e804093683aea49033b274c7ab35babce90c3acb86eae115d44585671"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function.",
+      "known_requirements": [
+        "matplotlib/numpy/pandas/seaborn; SciencePlots optional"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "scholar-analysis",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "tree": "d7f61d97768bcaa4442e2481da680073da7528bc",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/scholar-analysis/903787345d6aec134086afa2b97715a78fbde519/skills/results-analysis/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/scholar-analysis/903787345d6aec134086afa2b97715a78fbde519",
+      "files": [
+        {
+          "path": "skills/results-analysis/SKILL.md",
+          "blob": "22e34019d8bef9bc8d1a0f86528f61c0288e3cb1",
+          "sha256": "2232f74d141fad4a3e23635be0109217713d34bf0cb7be8d120e6296f4b79782"
+        },
+        {
+          "path": "skills/results-analysis/USAGE.md",
+          "blob": "6890d42f299f7532ad598babce3c3619e571a35a",
+          "sha256": "d42167b0dc110d20f048037b9a60da2e7d5dfb142884e66040d6388857f84fed"
+        },
+        {
+          "path": "skills/results-analysis/references/analysis-depth.md",
+          "blob": "5713c629d64739245a3a013b274393ab8bfd7f57",
+          "sha256": "8c4c42f24701895084d96e41575ba95b6d7e2ef28f74aefe76606353a4ce47b3"
+        },
+        {
+          "path": "skills/results-analysis/references/common-pitfalls.md",
+          "blob": "559f29a65f9c606a70b721ff2b83b47080e961e2",
+          "sha256": "f16c6528d21fa75c4e5bcadba4e8b14d9d64343c581336e26849caf887d4d22b"
+        },
+        {
+          "path": "skills/results-analysis/references/figure-interpretation.md",
+          "blob": "75e25db265e94be44b979a6a3a47ab31cb5abe6d",
+          "sha256": "e45c750f06636f0ef9ba01a7b4ad53b122adffbde918a35dbbf31ae2c4e3a2d8"
+        },
+        {
+          "path": "skills/results-analysis/references/statistical-methods.md",
+          "blob": "db3e74fc295d3c1f171305437dcf919a76d2ab81",
+          "sha256": "8e9a556c65e1b5d6df562399640a69ee7d1df4da0bc525a590dd3f9abadb458b"
+        },
+        {
+          "path": "skills/results-analysis/references/statistical-reporting.md",
+          "blob": "9719b36a13da6ee09946cd40e99b825d34963ca0",
+          "sha256": "020d5d045067299b625df9c68e3486b917eaaf6b0277d250ec103c362eda6cf6"
+        },
+        {
+          "path": "skills/results-analysis/references/visualization-best-practices.md",
+          "blob": "1571cba9cd8487401cd56df77d6f4d8f29944e10",
+          "sha256": "28c2a9b9ab51abcd697b5db63fb78597b86b2f87cfa91902613fcb5d2c17b3fe"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf",
+          "sha256": "5a1e92b9b489ec750c774555a7840af3978bc574e1395f6796695ffc67a62bef"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim.",
+      "known_requirements": [
+        "Current-host statistics; actual repeat units required for inference"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "academic-reviewer",
+      "repository": "Imbad0202/academic-research-skills",
+      "commit": "6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+      "tree": "4763972aa93d8c7b742434f6dcfa3c36a890b9f3",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/academic-reviewer/6ab4b03bf70a118a1b3ee7f3263ed9f19031061b/academic-paper-reviewer/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/academic-reviewer/6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+      "files": [
+        {
+          "path": "academic-paper-reviewer/SKILL.md",
+          "blob": "319d39cd8ab0eef1d12dde02d293c780188895d7",
+          "sha256": "dd44856b3c87eac3335e47fbc1a9bba609f74a17d75485bc07b3678e8d875869"
+        },
+        {
+          "path": "academic-paper-reviewer/references/calibration_mode_protocol.md",
+          "blob": "5c020d42493c0623532745dbb1ada4187db3d71f",
+          "sha256": "f6ebedf09fd7810372f1150227065aad03f5bf30f49be47226b1be26fc771bfd"
+        },
+        {
+          "path": "academic-paper-reviewer/references/changelog.md",
+          "blob": "f228376bf5d8cdd34d277801b394ad8011e0d727",
+          "sha256": "aabe2ccbd96dc70280ea10f6eb7e5dce59cea48ee633dc736273e5dadf662d7c"
+        },
+        {
+          "path": "academic-paper-reviewer/references/editorial_decision_standards.md",
+          "blob": "85ad97ca94d8c9694de40906bcc04e367e2687c1",
+          "sha256": "88e186e8d743ee40a83842ab2f00f442cd23de417e7e3ba0a7b9b8b5dc91e76d"
+        },
+        {
+          "path": "academic-paper-reviewer/references/guided_mode_protocol.md",
+          "blob": "dc045b1ea3a88ff171431acde4288abd9aedea82",
+          "sha256": "0f5ca4d432a4e10ba5c404c0e3cffc823513c3d2de2bab50996ea200579f6297"
+        },
+        {
+          "path": "academic-paper-reviewer/references/integration_guide.md",
+          "blob": "a356c37346c117f8bf45c1a024925e667499e211",
+          "sha256": "5f0f4a9a386e603d8f7ed50a8ec67073153e2391bfb4b60bf25eacd9dca3ca01"
+        },
+        {
+          "path": "academic-paper-reviewer/references/quality_rubrics.md",
+          "blob": "13a628ffa3fa0f20fe8544c242c8adaebc3cf875",
+          "sha256": "7335aa653d3573a323d9de522b0bc98f3230b7c639b673fc812fa46d607e01e1"
+        },
+        {
+          "path": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+          "blob": "322ec5e666953c6faafdefc08b38aefe13008692",
+          "sha256": "e71c5e5fc477f19aef0c72a621cb313832b54abe42497642481dc681f6b1f036"
+        },
+        {
+          "path": "academic-paper-reviewer/references/review_criteria_framework.md",
+          "blob": "68677ca06aefe894de71a0240e82a2e19279c7ad",
+          "sha256": "6af77dc4a0b86c84dd3b1b7c9849294deb869899c9d82ff100816aca7c1eead9"
+        },
+        {
+          "path": "academic-paper-reviewer/references/review_panel_provenance_protocol.md",
+          "blob": "d4f86af33ffc5a56412428b5c94090bfc76e2988",
+          "sha256": "0e3e8c7e64dc4ac61a5a6a973698515a387eb71dd10e8131b9c2ea617859d439"
+        },
+        {
+          "path": "academic-paper-reviewer/references/review_quality_thinking.md",
+          "blob": "8b551a930b5ee8a2727c04f2c3c567a699d38923",
+          "sha256": "ee4fa6bf144a30810ebe0bbbffa71a79c739398afeb06ca97cb7f1090d3bdb90"
+        },
+        {
+          "path": "academic-paper-reviewer/references/reviewer_sprint_prompt_source.md",
+          "blob": "d876ce951b75af6f8c8dfca7c915ec20bdcf39bf",
+          "sha256": "fb11e4ebb5dd72b17018486409623f0e7bae21728830adf2c7ea1093ae2b0b8b"
+        },
+        {
+          "path": "academic-paper-reviewer/references/sprint_contract_protocol.md",
+          "blob": "5d7f3d5e895844804f3be58a0d55a3f176a54c23",
+          "sha256": "501c9c42a592e625df46a18027af9d8023b680ba9bdf87b2ae3f77bc84eb2810"
+        },
+        {
+          "path": "academic-paper-reviewer/references/statistical_reporting_standards.md",
+          "blob": "21ea230fb962e05dfb12f93c0cb8de441bed9e0d",
+          "sha256": "cfab6520a3d758a94dd165e74cdfee5dbe4e66fdb8f9590462ce94bd77eb93f0"
+        },
+        {
+          "path": "academic-paper-reviewer/references/top_journals_by_field.md",
+          "blob": "21e698b3e0ecc07857a820454b12a885f4158fd2",
+          "sha256": "9a163c97714ddcd4f3d7bcb2beb72ca454c880fe08c255afb43177f3db17ed57"
+        },
+        {
+          "path": "shared/references/authority_content_coverage_advisory_protocol.md",
+          "blob": "680918cc5fde28e5d7457e7c4d3c6017e926cbab",
+          "sha256": "d644b929eb173adfa7748a0341467080ac1c6a6ee595dc3e5fadfe7928a3569f"
+        },
+        {
+          "path": "shared/references/claim_standing_candidate_ledger_protocol.md",
+          "blob": "f68b0f0d38f858d5b7dbafd77da898d84821e154",
+          "sha256": "afe85e8cb8986f125b7807f5f2f8a4839e636750a417fa231a6f1b779167b276"
+        },
+        {
+          "path": "shared/references/claim_strength_ladder.md",
+          "blob": "07fc64de5669819e5f70dbd7311b0f3ed84aca12",
+          "sha256": "22f51a6fefb2525e685b6938cc446fa658bdfb6e43157b5d2e6d5051f2212dfe"
+        },
+        {
+          "path": "shared/references/cross_document_consistency_advisory_protocol.md",
+          "blob": "99e59bbb6ab655278d4bcc7b25281c7cedd05ea9",
+          "sha256": "dae21751708126647394ffa39f1294b48094e2f3678f4549014d4e7395306894"
+        },
+        {
+          "path": "shared/references/evidence_row_protocol.md",
+          "blob": "86f977845db5a4365dbfb789013dd848b1a6af16",
+          "sha256": "ea343e10550f7fe8fa93aa9a7a101cdafe3a60e4842eba12c92d6c8f04b77d24"
+        },
+        {
+          "path": "shared/references/firm_rules.md",
+          "blob": "c177fb73e90657808fe6b970499faadbaeb5a9c2",
+          "sha256": "b2da465f5098101ae866074cf6fed5902611263cc69ba3f007ff447cafda7411"
+        },
+        {
+          "path": "shared/references/human_subjects_authority_protocol.md",
+          "blob": "62839259c79f04217b3c340096ec207a954353dd",
+          "sha256": "5f6e6929d30a0ae757b7468b74a2c82ff1d7997f5c0b706136b9015d03ebb3a1"
+        },
+        {
+          "path": "shared/references/intent_clarification_protocol.md",
+          "blob": "32fb0fd1646ee4450aff24b657bc79d2e3b61410",
+          "sha256": "d3d8fe83f944d1e1886d0ccceaffe695f6e6748be9cdfe0a76fb538e52270d3f"
+        },
+        {
+          "path": "shared/references/irb_terminology_glossary.md",
+          "blob": "33b642b01f59d044e149204fc4a0e2dba1a87046",
+          "sha256": "9ce43e279dbccf38776f9fa875377bde5d406dcc937368a5b7bc09a256ce3b40"
+        },
+        {
+          "path": "shared/references/per_source_method_weaknesses.md",
+          "blob": "bfb5eb47c0059615a9f0f52579a2401d289e8fe7",
+          "sha256": "048eb312fdffb218b22fd7bd667e7169d6237a27ea9fe1e6b94fdf4e58efaef7"
+        },
+        {
+          "path": "shared/references/protected_hedging_phrases.md",
+          "blob": "02a3ae512ff5f52f942c87a3da4b6f97e582cbfb",
+          "sha256": "39e483f2d90ab56559ee0c0c55bf7f083a9dd65008af0c4ddf20712734b0986e"
+        },
+        {
+          "path": "shared/references/psychometric_terminology_glossary.md",
+          "blob": "1f60bae64f4e47cc8775584d474c9ec253bc8c6b",
+          "sha256": "da5f152a4c351f73f97a8389d76bcd5a1296a49394141b9af4fa3821662a5fc3"
+        },
+        {
+          "path": "shared/references/review_criteria_consumer_protocol.md",
+          "blob": "2dc89f92f94dbd31aae5290a4d5ad4749f6fcc37",
+          "sha256": "575cc8c4d286c07fbd56f035c1dad3a65ff34a5b581bedca602dd286df54e1c7"
+        },
+        {
+          "path": "shared/references/review_form_note.md",
+          "blob": "fd17fd4c2e4399421f22745c9a7b542d6cae32d6",
+          "sha256": "03ee2893d18f3d6826a8be93302643e4e8501bef73cc00b47590c752b7115a86"
+        },
+        {
+          "path": "shared/references/review_pathway_rule_trace_protocol.md",
+          "blob": "ff03207e30e8d60b0fd0751233cc49a4901f4478",
+          "sha256": "7ca31c60cfb0b858727eb7b6e0cd7730ded4faa142cc9ad30434470066972058"
+        },
+        {
+          "path": "shared/references/routing_core.md",
+          "blob": "572ac5a3c2015e22eccdd2ed2e2a87afa583a8c7",
+          "sha256": "680f30be9386fe423fd05bd2b8198de54318bbe533f356b714f47949c7c7b729"
+        },
+        {
+          "path": "shared/references/submission_packet_manifest_protocol.md",
+          "blob": "86d3681541ac5eb17d7491c11a8907e5e5b794c3",
+          "sha256": "18192c0350c711c16442252a9996d68a1750ba341824a2fe65f464f15fb0b6dc"
+        },
+        {
+          "path": "shared/references/word_count_conventions.md",
+          "blob": "ddb97620e326ced9f2b1352be8993c2c0c80988b",
+          "sha256": "c226c7961febf5e2179d0885d2c6f32a67a661efe288d602d8debd083a3cc8c8"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "dedfb8b7880e51fe623fa5ea7e27c118eed4e2b9",
+          "sha256": "b3848009d12a173f549ef98d9ee486e64459e8eb5d9f895bff53782b4aa86d7c"
+        },
+        {
+          "path": "academic-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+          "blob": "64563498df681ab0af62ec8cdb7c467186c87e76",
+          "sha256": "b42eb5559bf91c8767f85e532dfa240e5e30feb92ae3fc0be96f20058acfcf6a"
+        },
+        {
+          "path": "academic-paper-reviewer/agents/domain_reviewer_agent.md",
+          "blob": "f028959ce36d84dbc1f7b8221d66fe49ef551695",
+          "sha256": "eb6660aafadc851e3fc4545111b5113d467c9eb263ef069394db62c944ece1e5"
+        },
+        {
+          "path": "academic-paper-reviewer/agents/editorial_synthesizer_agent.md",
+          "blob": "c9b7fa2969d277014fd54f3d5bc0023920a78f8e",
+          "sha256": "3809d989ed5ff6c19da141d6717031f4392d7052038abf879a5226ab385f3394"
+        },
+        {
+          "path": "academic-paper-reviewer/agents/eic_agent.md",
+          "blob": "05654e7df30a7bc0043888e43aeffb79b266b11c",
+          "sha256": "c5ec3150c7e7cc4c89358853d13af0bde8f211e0a735bcd8c72330d1f931943d"
+        },
+        {
+          "path": "academic-paper-reviewer/agents/field_analyst_agent.md",
+          "blob": "23f2ee3ace0d5d190c49bf377d49d977bd77689c",
+          "sha256": "26dacdebdfdd70373cf93167c7b02cca41306fe21f9a25a5d615f7aea61dadee"
+        },
+        {
+          "path": "academic-paper-reviewer/agents/methodology_reviewer_agent.md",
+          "blob": "e25f50c2270d80f3481a53231634f4a7120f055f",
+          "sha256": "91e462ee104cc253a44d387570ea95a49a4efffcc2b4765617baf292431de6cb"
+        },
+        {
+          "path": "academic-paper-reviewer/agents/perspective_reviewer_agent.md",
+          "blob": "f4bc2a30ae2dc97203c555b1db94990190529f5d",
+          "sha256": "49bb946547593a918bd60faee88555d46a2a10b39f2857ef94163eef65920d81"
+        },
+        {
+          "path": "academic-paper-reviewer/templates/editorial_decision_template.md",
+          "blob": "1f58627893fcdf568b15f9e56ae8653307050e65",
+          "sha256": "4e2753211cd106efcf6534e6ae4dfe5f817d99fbec0139101bc0eb40d2e5da5c"
+        },
+        {
+          "path": "academic-paper-reviewer/templates/peer_review_report_template.md",
+          "blob": "69f83e5d2f491dcbd443753e5705596dde626be6",
+          "sha256": "5da1f9d24d6e321cec5f38c13fa03fe23b9363b1842cb0d8111c5e39a810c7d1"
+        },
+        {
+          "path": "academic-paper-reviewer/templates/revision_response_template.md",
+          "blob": "119b9dfba3542e31fd50b7099168e137327bab24",
+          "sha256": "ccac360301149a0805f24b23340193ca39b62907ce9d8279c07de5eae55885a4"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Quick assessment is role-separated current-host critique; not independent peer review. Full panel mode has additional requirements.",
+      "known_requirements": [
+        "Current-host reviewer; independent agents only if authorized/available"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "sleep-experiment-plan",
+      "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+      "tree": "368ff746e2f12976b8fa6e7b2448861f44e3efd9",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/sleep-experiment-plan/2132036060e03e8d0df69a4b21e5971819c0c2d6/skills/experiment-plan/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/sleep-experiment-plan/2132036060e03e8d0df69a4b21e5971819c0c2d6",
+      "files": [
+        {
+          "path": "skills/experiment-plan/SKILL.md",
+          "blob": "bc7021bcc7a1a081c02cd02bc14f0ccd774292e2",
+          "sha256": "c5b53692ff95b0b55e80702e33afc79d9fe8d4f55a69e2a39714013f97ac595e"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "8fe03d26d87a5e5d4934ee50039ff255eb67406a",
+          "sha256": "e30cf5dd5f49b4f9b656590e23d782b4756c924a9f0ff0162b3e7b5d87006bf5"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists.",
+      "known_requirements": [
+        "Current-host claim/evidence planning"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "autoresearch-protocol",
+      "repository": "karpathy/autoresearch",
+      "commit": "228791fb499afffb54b46200aca536f79142f117",
+      "tree": "04fa7a1a3ad211e97d894bb42df7698dae5d92ba",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/autoresearch-protocol/228791fb499afffb54b46200aca536f79142f117/program.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/autoresearch-protocol/228791fb499afffb54b46200aca536f79142f117",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "953ea55d5599c45c1be7dad93ec03e47dfa7df9d",
+          "sha256": "3958fd4195ac2f98ed35c4eaa4f3028a335165ee24945e96426c408d25793a41"
+        },
+        {
+          "path": "prepare.py",
+          "blob": "06bea9165abd3ae94ea82dd733997aec7928f40c",
+          "sha256": "4f2ba9cbb8ba8c4a3d35be405a913e2f3be3af9aea103ed52ef7b2a662058150"
+        },
+        {
+          "path": "program.md",
+          "blob": "dea9bcc0174f1502d0ba64000b94b81ba605855b",
+          "sha256": "86cf987a5c381e46eefe0d0a82765223fd766d8d7acdc2afacfbbce15ecacece"
+        },
+        {
+          "path": "pyproject.toml",
+          "blob": "94ae3298925ddae47821f703faf44d4e3b8381bb",
+          "sha256": "675c150a9e0769f0e39a43eb7d836934266fa348d6e2403521f1ff99f9b9f1af"
+        },
+        {
+          "path": "train.py",
+          "blob": "2e743974c7f06b54311643b314712303fbb26e65",
+          "sha256": "2954175f4ac42ad65164aef40910ef953789abcd05a5cc886ac9ba5a00814414"
+        }
+      ],
+      "kind": "code_tool",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Native training blocked on current Mac; can apply experiment bookkeeping to a local software fixture with adapted_in_host, never claim native training or val_bpb.",
+      "known_requirements": [
+        "Native training requires CUDA GPU/H100-class environment, uv and torch; not verified on this Mac"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "anti-defensive",
+      "repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "tree": "99d78a3e655ed010f6840b9929676494df54cca9",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/anti-defensive/102c8b21acf5eda3a0aef3d9779a65db646c8980/skills/anti-defensive-writing/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/anti-defensive/102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "files": [
+        {
+          "path": "skills/anti-defensive-writing/SKILL.md",
+          "blob": "59879391d4e7eda0d0017cff89f1ecf0b2566b8c",
+          "sha256": "6f072e66f6adf813bc1b4291754f2bc07ed4e65a398359844e97bfa215a1c28e"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "f2fddc5f2ad65725f5f95a3ca48c90c6d146ecd5",
+          "sha256": "fdf440e5214588d9edcdc1ec315cddbd8525fe509242c24989a8472d283325f4"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Keep evidence and scope; rhetorical advice cannot remove material uncertainty or overstate results.",
+      "known_requirements": [
+        "Current-host full-text editing and fact recheck"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "rougier-reference",
+      "repository": "rougier/scientific-visualization-book",
+      "commit": "62fa569f30333c817c13e4dc757877c1192fd15a",
+      "tree": "16946d8960b3b82df1ead6e8e6b70b6e9eed578c",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/rougier-reference/62fa569f30333c817c13e4dc757877c1192fd15a/code/ornaments/legend-alternatives.py",
+      "root": "/Users/luca/.codex/academic-research-source-cache/rougier-reference/62fa569f30333c817c13e4dc757877c1192fd15a",
+      "files": [
+        {
+          "path": "README.md",
+          "blob": "015656850f4881bba60f3a106656fc30fa1df0e2",
+          "sha256": "9561a33051c1b7997fabce766e4d04aaf947cfebd5d45d8b37811e885b4efce6"
+        },
+        {
+          "path": "code/ornaments/legend-alternatives.py",
+          "blob": "5b63b63ba04cd09d184029b3409188a685d7b0e0",
+          "sha256": "b84143a4751e8b2d98a4fd6d1c45f29f98623f79de221044926288d287035893"
+        },
+        {
+          "path": "LICENSE.txt",
+          "blob": "211a8b2f1c4180a1a96a2f282822e8fb189e8d0c",
+          "sha256": "f0b8e098275d9fa8b70665e944211e751aa5063ee9a9731c11e35ba0a6933440"
+        }
+      ],
+      "kind": "reference_code",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "BSD example/reference, not an Agent Skill; execute in isolated example directory and apply label design to actual figure.",
+      "known_requirements": [
+        "numpy/matplotlib for executable example"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "open-design-deck",
+      "repository": "nexu-io/open-design",
+      "commit": "53231d40b778d88eba23f35547bf99485d3ae9fc",
+      "tree": "841eb221ce85f2328d4cbee0887cd8b5329f77f0",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/open-design-deck/53231d40b778d88eba23f35547bf99485d3ae9fc/design-templates/html-ppt-tech-sharing/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/open-design-deck/53231d40b778d88eba23f35547bf99485d3ae9fc",
+      "files": [
+        {
+          "path": "design-templates/html-ppt-tech-sharing/SKILL.md",
+          "blob": "e1a3c2003333b04b55a6034b80a8ffbf1e240b6f",
+          "sha256": "15341f4df540a71cee63bf9efc3ea5cd4f0108f1cb99d743d233fa4346b0f557"
+        },
+        {
+          "path": "design-templates/html-ppt/LICENSE",
+          "blob": "6c44d346dc52cedc04c104a6ff10dd5ae021d5f8",
+          "sha256": "a5ed4059e25a3ec35e439abd2623753d1f42d4aa4989ffb5c6b7a97b61f6a949"
+        },
+        {
+          "path": "design-templates/html-ppt/SKILL.md",
+          "blob": "9a4ead71e39ccf2b6974412cb93b57c990793908",
+          "sha256": "b5795fce89e2291afc829691a6a842a1a0b79a4be93e642e1251da4eea4f1b35"
+        },
+        {
+          "path": "design-templates/html-ppt/assets/animations/animations.css",
+          "blob": "1d00263c73eaef83e4a86c998f4993a28e3865cc",
+          "sha256": "3bc36127d7e491b0a723fe5788682824c9b9e8849cf2a5ceb72dc3ebb951e3e8"
+        },
+        {
+          "path": "design-templates/html-ppt/assets/base.css",
+          "blob": "b8c1107330a2c8d7dadf3889db7e4d78478747bc",
+          "sha256": "04e7c427d1d9401ff080bf72c5c9c0161c1a4759b5efdb2a64bed4e09830e688"
+        },
+        {
+          "path": "design-templates/html-ppt/assets/fonts.css",
+          "blob": "64feb7222db4caab11b9f7944eff7510d99a60ab",
+          "sha256": "1e93c54e2a4c5f27a2404cc2c8f682d50f5d41a95ebecd11ed41f925e3a79572"
+        },
+        {
+          "path": "design-templates/html-ppt/assets/runtime.js",
+          "blob": "535907de7a0d6cab98eced30d1050ec9bece6446",
+          "sha256": "d7b066a96b99fcf5c9e15b593283a57a3d43ac2bcf795d172adc7f3ba0844f79"
+        },
+        {
+          "path": "design-templates/html-ppt/references/full-decks.md",
+          "blob": "c1e3dd67df6643bc915076aeca4bd03e187dab59",
+          "sha256": "c623b261744239ad4d057440beb130190afafee671f79af51cd66d4c9b75c700"
+        },
+        {
+          "path": "design-templates/html-ppt/templates/full-decks/tech-sharing/README.md",
+          "blob": "0ff49467d9b57da02985a57576ea3bbd95f595d7",
+          "sha256": "05f352191afb8421bff65aa4b0b7f2709e04375b036ce44c4ca02af7dabe3e67"
+        },
+        {
+          "path": "design-templates/html-ppt/templates/full-decks/tech-sharing/index.html",
+          "blob": "a64d1326bee10e807f941d85b4091b2906805a1f",
+          "sha256": "972e0750360efc61cfd1887cbce3ae33fdf4b06c521d7db7ebc88b9e77b9e25e"
+        },
+        {
+          "path": "design-templates/html-ppt/templates/full-decks/tech-sharing/style.css",
+          "blob": "10aaf6f3dd8cbd71e64df5253b7de89d48962586",
+          "sha256": "bbdcd19c201f82812828343e47304999dce301a6dafdd27056a99d82a99e37f7"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "eb79c35bd865477e525b18e56f35d56fbe0f7110",
+          "sha256": "9d95806a26532623360eb84bb17d298f394b55ef73fb4c0796d99b4319b2b0da"
+        }
+      ],
+      "kind": "workbench_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Use HTML template with real local runtime paths and source-backed content; do not claim full Open Design daemon was installed.",
+      "known_requirements": [
+        "Browser for HTML deck; full daemon/app installation not needed for template adapter"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "codex-ppt",
+      "repository": "ningzimu/codex-ppt-skill",
+      "commit": "6d76c0eded7f8a8b0c4e304697e6f2bda7c408b2",
+      "tree": "3252e62ce6ba77940eeba21082e51ec6ee514c5f",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/codex-ppt/6d76c0eded7f8a8b0c4e304697e6f2bda7c408b2/skills/codex-ppt/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/codex-ppt/6d76c0eded7f8a8b0c4e304697e6f2bda7c408b2",
+      "files": [
+        {
+          "path": "skills/codex-ppt/SKILL.md",
+          "blob": "1cbcd9a82532e4214d591f217a12e5525d3d7b92",
+          "sha256": "dce8b7ef2c3610fba7bf74115904f460ae1f64b54b50c0f4504f66fd65e5d2bb"
+        },
+        {
+          "path": "skills/codex-ppt/docs/backend-selection.md",
+          "blob": "955bf463dbbd681814444d8600c6f3e764cf3967",
+          "sha256": "4c288d9eb5d609b195f32c82a2564b4c74a9c278ec8917538cb784c921021364"
+        },
+        {
+          "path": "skills/codex-ppt/docs/cli-api-fallback.md",
+          "blob": "3c68cbac31cf869b89ae8e4b2fb05465ff823cc6",
+          "sha256": "04792fb9ff20095cfec873fffb8e44515e5f09ba25af6b5987b268f0f43ae679"
+        },
+        {
+          "path": "skills/codex-ppt/docs/image-model-configuration.md",
+          "blob": "4db90da059f31b579b4f9af213345bc6007cda2c",
+          "sha256": "846228d7d7a314a248f6ad9b6ab161c761954317fbc297c39191925bcd19f4d0"
+        },
+        {
+          "path": "skills/codex-ppt/docs/outline-style-and-sample.md",
+          "blob": "fda7518843d59d10bb8d69bd8b691ed101ca2457",
+          "sha256": "d6f0a477f1027d0c075abcdd5a1df781a499a1d59d9be6d63ddcfc21ad26596c"
+        },
+        {
+          "path": "skills/codex-ppt/docs/project-assembly-and-reporting.md",
+          "blob": "83d8213af233e2d4aa9a5f59807cafaff4bca9db",
+          "sha256": "46821aa1a02b10d1d4dfba4c80f81cea793b76c48ed828ff3c369d0756206f33"
+        },
+        {
+          "path": "skills/codex-ppt/docs/slide-generation-and-subagents.md",
+          "blob": "684b7c7c1c1e577174a687e9fda38c47d5d5af44",
+          "sha256": "0119ea8a08d12595667557612834c1459dddc376e632a4411b44d3a31a907eed"
+        },
+        {
+          "path": "skills/codex-ppt/docs/style-library.md",
+          "blob": "cca07d25189017ae028292f5543ac5c69d47db1f",
+          "sha256": "0f12f9d7e45a38d57771e1b48a5cdaff93a655774cdd7c2e708deef872a780fc"
+        },
+        {
+          "path": "skills/codex-ppt/docs/user-supplied-assets.md",
+          "blob": "6ce0f1ab8e259b7abe71f4afa5fa7f11a0cbc40d",
+          "sha256": "e60ffab53f5c52035a42040f8dda6a002bdd9d49ce5098c4c5835e08231c4069"
+        },
+        {
+          "path": "skills/codex-ppt/docs/workflow-gates-and-progress.md",
+          "blob": "83d9530a807ea5875502c7d9f1544633baf4cc27",
+          "sha256": "dd0fe2bc30851dd1c8830127227c20b1aeaace3e6417a3be003e86dc49e236e6"
+        },
+        {
+          "path": "skills/codex-ppt/prompts/slide-worker.md",
+          "blob": "5da582801df27e449402b836c811473a5aab8e38",
+          "sha256": "b606b666ca9aacbaa73008677ebf4546c8bb6c0d1de96fc40a9fc23f82211a23"
+        },
+        {
+          "path": "skills/codex-ppt/requirements.txt",
+          "blob": "e55acc710a7d99fc13498a8e8b6a0f46b7d9d54f",
+          "sha256": "84767f3a6b1e814348b059e0a016ef719fc2ea2d8a16ae17b61408c0f25cf60d"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/assemble_ppt.py",
+          "blob": "a56a7822cc4ba4e1094bb1c52527900bc485ca0a",
+          "sha256": "c4ac18e2aa28d92ecc50299e6267e127c226e041c601bd3c7224ec7278061fe5"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/codex_ppt_runtime.py",
+          "blob": "4cae03e354145f08d82ded5bf1f7b129d5f743c4",
+          "sha256": "b3dd856822b9674dbc7821ce5e676b9bc6fe3431be91b3d514f3bdbccf2e09ef"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_gen.py",
+          "blob": "4b7403ba1cad93ee67f8d51f327587c1992c59bf",
+          "sha256": "d71c0879f29e6846fb574449aff1a6a781c2fc596b988e2e35b7f81291023789"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/__init__.py",
+          "blob": "9c678c0c93d63bf5cb0296102ccc5abfbad1ca0f",
+          "sha256": "f4a8db421052b42be962037d7a3df74bec598a67be4bcae6ac3aaefff64a5c3e"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/atlascloud.py",
+          "blob": "4a14ed5018cfa5218ec54a3770298d26d10e3708",
+          "sha256": "bcdc6c35afd7c483f01125cb5788ef852c16cd9525eddebb6b206673193fa450"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/base.py",
+          "blob": "1438bb6896e42bd0aa932008e93bca00263db153",
+          "sha256": "027468265d72c0bf4e4372bdbfbe8cf12759f929e873fa10c16c13577a468296"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/factory.py",
+          "blob": "bcf59bbc1ac7df056504d4a7a9296632bfb4631e",
+          "sha256": "d7d72145ea38da394e315b2a2c0990bf7fdf24cd10dd5bb54d1999d9849714d2"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/image_providers/openai_compatible.py",
+          "blob": "2184a79074af94d9217bba9064ec175b51160812",
+          "sha256": "2b258767f9521a07c4c0f694cf6b5d2593366da775ce6d6f80a27fcfacbc32d8"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/prepare_slide_prompts.py",
+          "blob": "1cf3e681db419528ecc727b6f0a5ef917a5ded9a",
+          "sha256": "92cc338a85afa463b1faa09035ab5b73b993813ea54ff95c9e47b4788e45ef81"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/record_slide_blocker.py",
+          "blob": "c5098f752976eb57553d49e9bdff5a95bb6f3677",
+          "sha256": "92be04beb2a690ec6c19dea48a9674d2daea3ceabe2de9e64b181361d0dbde9c"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/record_slide_dispatch.py",
+          "blob": "4dd529e8f63450b00ca48e9e843afa4c72236bd2",
+          "sha256": "f5ce8806a0aecf24ea3b7c657c8d20507d83b6fd21a81da86d8f6f9da623ed54"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/record_slide_result.py",
+          "blob": "e0d8d622f3199cacc41d9fcc6b1fe4878c742166",
+          "sha256": "ae14297acf87991ef0cb4af41bd0a591665f288d25ff5d6f0b9b264e5a59bac1"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/remove_chroma_key.py",
+          "blob": "5311f287b080c2f565bd9f931748b4a2a11d4d6c",
+          "sha256": "b4ebb3ac26dc3aeea277f90cc7abf5e4380229014890f00b0b9c2f51edd42bd2"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/slide_job_status.py",
+          "blob": "09ee4104178e18c9e9d6f190539c4cbbf882cd81",
+          "sha256": "15c90c28b5733275990b162e36c32dd7940465ec7c6522f49aaa8a42c5dbd293"
+        },
+        {
+          "path": "skills/codex-ppt/scripts/slide_run_state.py",
+          "blob": "dc1f5d21573f34bf922aa99a63f165f8eed30924",
+          "sha256": "b7534c3aec858a5ec4210e5af80693c899dbbe670083093ec1c055d471ba5e42"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "f769fc5582d3f8ee0f9eb4da5fbf95ac85834c17",
+          "sha256": "68e435621ab299c7cbe3ad8f088e877f9bca76508c621f27a697606df8ff2154"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Native image generation/sample gates retained; local integration may test existing-image assembly only and must label it function_only, not full-deck generation or editable-text PPT.",
+      "known_requirements": [
+        "Generated slide images; python-pptx/Pillow for assembly; generation backend and sample authorization for full native deck"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "paperspine-workbench",
+      "repository": "WUBING2023/PaperSpine",
+      "commit": "f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3",
+      "tree": "756d00c6851247eeab632b3420de5d76ca31e81e",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/paperspine-workbench/f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3/dist/codex/skills/paper-spine/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/paperspine-workbench/f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3",
+      "files": [
+        {
+          "path": "dist/codex/skills/paper-spine/SKILL.md",
+          "blob": "3c46bf599ce7aef5e6d85806b57b713e9aeae679",
+          "sha256": "61d8bd7fc8724f46140e436cf071c29bc05db1676a2013e3baf8cbe27b530288"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/references/paper-spine-production-protocol.md",
+          "blob": "68be84d9e7de78cdd1162c016d6242d864a925dc",
+          "sha256": "8991d3739736c12e440ac9f729c3eff55096463da01cbd590c18a3b01c873f25"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/references/phase-contracts.md",
+          "blob": "b1bda67f81e1e38faf841488e2d3a1841ea98e44",
+          "sha256": "3721929182f9229b4cd09d267d9602956499a25e2febbd4fc19136ce603f74e6"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/references/results-validation.md",
+          "blob": "02b24c97905392a7da13a9a1345fffa86c30ef26",
+          "sha256": "5c6f1339a46f4f1aa3e07d0ccb3c2c6d3ebfc71f62e01f3bec6c06f1977be710"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/references/resume.md",
+          "blob": "51db0edb6c2a9f4fda6b2392e738dbc29fac9fb0",
+          "sha256": "99c4fca4eff89b056326559523ca00c264c278442ec8bcbe33e8139be2808673"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/scripts/_paper_spine_utils.py",
+          "blob": "2eecf1ab87b81b6fb09177e48c1f6b91a4cbc057",
+          "sha256": "0833b58634fc324b28c7f4dfda02cfaf7bcae03e4c66379bb1424bf1e12259ec"
+        },
+        {
+          "path": "dist/codex/skills/paper-spine/scripts/results_validation_check.py",
+          "blob": "23da399824666316c7439ea3996e4dad9ba9fe95",
+          "sha256": "f977562f3edfc990a6a9bd95cb11c7278cf4bb194668a2b139db7d70ffe23195"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "175cd14038081d3c5f085041415b1331a38e9980",
+          "sha256": "e89308aa6fe435bd6c8967ed865c613732888329176cc4c6fb020825812bec2d"
+        }
+      ],
+      "kind": "workbench_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run.",
+      "known_requirements": [
+        "Python local checker; full workbench launch has separate app/runtime dependencies"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "orchestra-ideation",
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "tree": "eb544e88f08d76170d17050b10c18a317afd0314",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/orchestra-ideation/773a52944ba4747a18bd4ae9ade53fff041adcbc/21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/orchestra-ideation/773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "files": [
+        {
+          "path": "21-research-ideation/brainstorming-research-ideas/SKILL.md",
+          "blob": "f5427a507c009fe0a91e51e213b340987334adb4",
+          "sha256": "8422a1a6dc0a88d05f02b9fbe0f8c2ae06a77024856d18125efa13d19d855d46"
+        },
+        {
+          "path": "LICENSE",
+          "blob": "943d5753a5f02f9ef352ff8a1706f167004d6e6d",
+          "sha256": "80b5899a9ab121a2d4aae63724f0c11defba7f23da487086932bb9abfb0f2a00"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Use selected relevant ideation lenses; explicit fixed questions do not require repeated brainstorming or new research scope.",
+      "known_requirements": [
+        "Current-host ideation, no extra model runtime"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "kdense-writing",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-writing/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/scientific-writing/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/kdense-writing/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+        },
+        {
+          "path": "skills/scientific-writing/SKILL.md",
+          "blob": "446993fcd4716ae54ab74bc2a91e3bc5af5235c7",
+          "sha256": "511a2096bebecd8cf0f8212b9d262d37154ae1ba566eb385d93ac968682edbd1"
+        },
+        {
+          "path": "skills/scientific-writing/assets/REPORT_FORMATTING_GUIDE.md",
+          "blob": "c8e67f3539929acd5c95e9926e9b730090322ef9",
+          "sha256": "2bb69499426ed6727c1701bae752c2e902151cbf69963f8bcf25b9e54cc20724"
+        },
+        {
+          "path": "skills/scientific-writing/assets/authorship_template.json",
+          "blob": "5dd0cd83269684612a82af798bc99f922b140c98",
+          "sha256": "04a590ac47ed61dcc7cd88a26d51243cf178fe6ada99d4000ca225e1b5f6f20a"
+        },
+        {
+          "path": "skills/scientific-writing/assets/claim_evidence_template.csv",
+          "blob": "1745c057b4487456d07c3f20d00181050d972c39",
+          "sha256": "cfb7a9f44cd1e5ef47ccdb3e32ac0a25b72d30e51343faace9bf07c00e3a0659"
+        },
+        {
+          "path": "skills/scientific-writing/assets/consistency_manifest_template.json",
+          "blob": "97d8c9a8c1815269c14f01ef9d3426bc6e1c8209",
+          "sha256": "2ea6f468ab6fab45c4db3616fbaddcc2ae706b3a26d6745b4cf74ddb53266872"
+        },
+        {
+          "path": "skills/scientific-writing/assets/manuscript_manifest_template.json",
+          "blob": "7e68378e36fa8120eca16bfac3d69f1d8007c1d7",
+          "sha256": "914052ff25b44072a07dce2ae8171524b717894ad7d2103054356115b9dd6c22"
+        },
+        {
+          "path": "skills/scientific-writing/assets/manuscript_scaffold.md",
+          "blob": "96cdd508ad5caed48bd97a504d3be98287b2250f",
+          "sha256": "55305ba311ff4e2459a31a99b3f1b9da44d79499332399a9216b5f92cb412ab2"
+        },
+        {
+          "path": "skills/scientific-writing/assets/reporting_coverage_template.json",
+          "blob": "7ef65f95f4e09d45d76b6a068c5eff74ca3a98f6",
+          "sha256": "886ca599622c1dfaedde7649ec47e973b4fbe6081cac6a6afaf24ace899d46a9"
+        },
+        {
+          "path": "skills/scientific-writing/assets/reporting_guidelines.json",
+          "blob": "97daa2730c606a9b8060db7f952560d7ee12bfa3",
+          "sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd"
+        },
+        {
+          "path": "skills/scientific-writing/assets/source_manifest_template.json",
+          "blob": "666c084b4dc530e1260442e24790e35b7e1c14ec",
+          "sha256": "fc6f65a8571b717691ac717f325825a608190f271e8b79650b711cc95f5b0a36"
+        },
+        {
+          "path": "skills/scientific-writing/references/authorship_ai_confidentiality.md",
+          "blob": "dcddcb4ecde28f93a1a5c23b9fac182d0716bc54",
+          "sha256": "0200e3ad8eafaedec26bce2b9895cda81c6c9325790507509134373a0ca41fe2"
+        },
+        {
+          "path": "skills/scientific-writing/references/citation_styles.md",
+          "blob": "7f82a625fa96c5abef58659a64c65070b4807c67",
+          "sha256": "338c08d8fba6fbf7437aad4dd99db5bccf3f597fa6650c562fae0c7ca422e572"
+        },
+        {
+          "path": "skills/scientific-writing/references/cli_reference.md",
+          "blob": "05c1d113720af67cad6458e8bddadcdbcc49ebdd",
+          "sha256": "05b15a587277e37dbc6161532dce58c8ccf647e22f21861ebcbac22954453e75"
+        },
+        {
+          "path": "skills/scientific-writing/references/evidence_workflow.md",
+          "blob": "6a54eb95d87be854d38046851c87f2a08a487390",
+          "sha256": "346c867d71e8cf1db6e3684a64714925a3966fcaeb1db853d7ddb07c6a6f607b"
+        },
+        {
+          "path": "skills/scientific-writing/references/figures_tables.md",
+          "blob": "7022338d438e439aa475b4ecacf6ba7314b26aed",
+          "sha256": "212d10f3e7a01325d2518c4aab54a4fc04a67e4aa94e959cead199c425a0f4d6"
+        },
+        {
+          "path": "skills/scientific-writing/references/imrad_structure.md",
+          "blob": "c53506c127ee6f5feb9f6a262398dc85243e73bb",
+          "sha256": "8a1201f8e58a045736a5bc65a47f239c894be6946716e969c0b77aa90a7e8e39"
+        },
+        {
+          "path": "skills/scientific-writing/references/journal_policies.md",
+          "blob": "6750fd916fcddc53077a1de5fbf50ca9015835b2",
+          "sha256": "aefbd73c5a8a23be076b210a910f026ece748a73b4593cb99e885879bd61d2c2"
+        },
+        {
+          "path": "skills/scientific-writing/references/professional_report_formatting.md",
+          "blob": "6238874aa69129b4f206d5b552325463a9b33653",
+          "sha256": "c269fd256bda6a9389bfd5ffefa8eff8876b96d92f8391e8a01fa80910bb35d3"
+        },
+        {
+          "path": "skills/scientific-writing/references/reporting_guidelines.md",
+          "blob": "fe55f07c153bd1e939f612247fc53ff836d34e35",
+          "sha256": "4a74d4613742bb26fe3d74596998b9e75ea8a2694a012222b6d9636e121a1f0d"
+        },
+        {
+          "path": "skills/scientific-writing/references/research_integrity_open_science.md",
+          "blob": "63eb73027c03d25170649a2d10a67c1eef365585",
+          "sha256": "f8f91010537acf4b78616d7410d23b85030f94d66e9d36db03d6e632ffb56100"
+        },
+        {
+          "path": "skills/scientific-writing/references/source_ledger.md",
+          "blob": "f5cf28854c089fb9c7fd2afe30cd29312ee426ea",
+          "sha256": "1692a3bea432dfde6eb1e7ca7054d0dd8652b1bef6b97322ea3c30f0ff68d5b3"
+        },
+        {
+          "path": "skills/scientific-writing/references/writing_principles.md",
+          "blob": "5fcd5012957fe6670e1e31e103c51d8cfbefa048",
+          "sha256": "58d4b32f63446c0b082f163314fdcf0d41a50568ad392d34ba992e24fadae764"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/_common.py",
+          "blob": "fd4a863823f76529f26531142d26a87bfca47ffa",
+          "sha256": "8cc192d82d219d1ec9720f8a8ab0c440fb35f2562fdeaeb7432a38d18e5e7b42"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/audit_claims.py",
+          "blob": "299f73fe51111471b697f0c7ce1f251e611d5945",
+          "sha256": "6074f51663e6863cf28168824a3f440b5acce9734c3c3f72590ba89c88a23c06"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/check_consistency.py",
+          "blob": "415be5ce6dae79965f00a3c7cada62a9f012e547",
+          "sha256": "5bd1f0dcbcccdac31e422b5a7b220d1ab1272a7eed906a62c0a5f2518e495d87"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/check_references.py",
+          "blob": "dbc3830643883f785ddc41a9b7a18bef1f4a7c5a",
+          "sha256": "a262d6e935e69ec1c1f25a36b8a12b6905b3f3dee0a11d94557d3f69857c5f07"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/lint_manuscript.py",
+          "blob": "81472e6e476a31c582a193761a03fb66e9d0fdfe",
+          "sha256": "08ff45315c4dadd1c91104e3639b6bec7a6086c000830dc9d0b2b965895b3398"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/scaffold_manuscript.py",
+          "blob": "f60dd74b9b4f2c65faf1f4703e193cb7e8f1fe80",
+          "sha256": "69e9a82c7d0608646872c0f4ad08b538f0c67175b48601d9d52ea527334ce4ae"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/select_reporting_guidelines.py",
+          "blob": "7d23b877cef342ba21074fcfaec7dd47c00a7607",
+          "sha256": "d130036ab1df6486cb54431a168207af03a52c626459ba7471041b0ee5aab567"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/validate_authorship.py",
+          "blob": "5b62a08b2433a54544b3a578a12735cc6cc91885",
+          "sha256": "31572a61ff61fe58f0b3f4c5b0e0e44bd9de5b865772f563dd5413876c186788"
+        },
+        {
+          "path": "skills/scientific-writing/scripts/validate_manifest.py",
+          "blob": "8ad84a317a904b6f7b137691ca7d1cb27d1bb30f",
+          "sha256": "6f87919db5aa5fb5ba929b6566c892a0d6881a9e46d8a9646186c6cac01e13d2"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload.",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "kdense-design",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-design/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/experimental-design/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/kdense-design/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+        },
+        {
+          "path": "skills/experimental-design/SKILL.md",
+          "blob": "ee14f9ed795c791ac80e3ea946858d97d09c3e50",
+          "sha256": "db2de0f3d29b7729776a91e923c9c83801298f5ad8e88fe44570045fbefcc248"
+        },
+        {
+          "path": "skills/experimental-design/references/design_types.md",
+          "blob": "f4ff1908a6c0d967375abb5447e5c8e62ec7d628",
+          "sha256": "1f36f14160bc9895773a2922402869202866410c9130f2b32c5a54e5f5a6e71b"
+        },
+        {
+          "path": "skills/experimental-design/references/factorial_and_doe.md",
+          "blob": "9e7558fcbfa301e1507b9779cc57e33749e2252b",
+          "sha256": "a59fa2279c439c096a66955b4923ad68c00d6046570665e6f6d36e807fa1de63"
+        },
+        {
+          "path": "skills/experimental-design/references/randomization_and_blocking.md",
+          "blob": "1b0dd39fee22c4fd0347cd30e6163d8c9d1fa731",
+          "sha256": "fabcfae913397fb8c3018b959b67ddf8fe47322b40cbf4155d898fa11738e9ae"
+        },
+        {
+          "path": "skills/experimental-design/references/sequential_and_adaptive.md",
+          "blob": "ee93386737a996b34519932b62fd07a89b01682a",
+          "sha256": "83085e2cde0942de23670d3aabb30768fb576a6aa99c2e4ac6f7790b00977051"
+        },
+        {
+          "path": "skills/experimental-design/scripts/doe_designs.py",
+          "blob": "4b8033c43cc5c885d7102a896f21dd0ae5ed808e",
+          "sha256": "916996b5e6a5dbb9a408aa1e755a95800af70231e46d12c8c5efddb9e3e30683"
+        },
+        {
+          "path": "skills/experimental-design/scripts/randomization.py",
+          "blob": "b4ef4355289ef556fcde40a703eb383597564b78",
+          "sha256": "c7c2eab469618a4b27548058b924ec3f4aafaf635d3797af920b9058e700bce4"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Apply question, units, allocation, confounding and design logic before data collection. DOE matrix functions need their actual Python/pydoe dependencies; no native run claimed without execution.",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "kdense-critical",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-critical/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/scientific-critical-thinking/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/kdense-critical/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/SKILL.md",
+          "blob": "2a2fc151b5b13e4e11ece7410f21a14d5b25e30d",
+          "sha256": "563af70571b7dcd6a96bf2e303bedfdcba623b4e9f082d58f04aacbc961fdae4"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/common_biases.md",
+          "blob": "0acba93293aaf6df629cc00212c9e86a184efdb0",
+          "sha256": "641e8e8e6dfadac1643ea8691b7d3e4e58cf013f134cd42c71301878096a5a39"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/core_capabilities.md",
+          "blob": "ca7fec36594abd20921d2aa2ae15e9363d3d58b1",
+          "sha256": "0f337b96aa2d7453433a17824368fbd0638b9469d4f90a5fd23f4167c9dee180"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/evidence_hierarchy.md",
+          "blob": "e4b4946886cee0b1e35b24309e162e0f9ca6f14b",
+          "sha256": "534fbe991ecfb2d162f755004dc528118ce74a78862917c2911595a522d76e6c"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/experimental_design.md",
+          "blob": "4be76ae49eb6339e6a72c8d3ee69338c4ea3e347",
+          "sha256": "eca7e42025393984c07676f3d4bc354d217e5604dc2209c76215d31953a7c74c"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/logical_fallacies.md",
+          "blob": "336a0407f4397f8ad9b218fc4156ef3473d19f70",
+          "sha256": "becfc5bfac7b831dca67cc442cd0fcb42d8eea527a6fc2921c1b704e592ff593"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/review_sources.md",
+          "blob": "0241f4aa470f86473cd8be196edeff07a274b261",
+          "sha256": "71e75106f36f3e69b28959ad1fec503ccdb21b7f5361ab230173e4812accbf62"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/scientific_method.md",
+          "blob": "4dee3644c01de3bec9250d19efa58a0a13cbee59",
+          "sha256": "5aa925b97c7a916f819dafc8b42a9c24e4bd3eb2836594e724f1e7f9ae75ea0f"
+        },
+        {
+          "path": "skills/scientific-critical-thinking/references/statistical_pitfalls.md",
+          "blob": "1e78cb2d3c6873e7d8289009cc7c9fb772def542",
+          "sha256": "0c43204a0a81110cfeb7c982fa4caa89f274bdcebf096e09e5adfccf31241cb9"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Apply appraisal workflow to evidence and independent units; include actual reproducibility rerun via local protocol when requested. Do not claim clinical recommendations or cross-model review.",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "kdense-venue",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-venue/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/venue-templates/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/kdense-venue/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+        },
+        {
+          "path": "skills/venue-templates/SKILL.md",
+          "blob": "74e9d03ff7d3cc4029cbafadf9ab93a27cb66712",
+          "sha256": "8607993327f451cc6b9d7ca7502c0e7d5f5060954fec12e2ea779d96841e78b5"
+        },
+        {
+          "path": "skills/venue-templates/assets/grants/nih_specific_aims.tex",
+          "blob": "85aa52e942f56c7f9d2323b83b406c07eccc705d",
+          "sha256": "e6d95aabd8ba9dd709bfeb45b811b7930b6c3678779fc84c86754e356075dd7f"
+        },
+        {
+          "path": "skills/venue-templates/assets/grants/nsf_proposal_template.tex",
+          "blob": "36ec749425d1933911c8edc6ff478ea33410065c",
+          "sha256": "5f24239bc977c04a2e2ebe7d4441809430d4576b423b4745ce53f3a09aa97410"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-harv.bst",
+          "blob": "d45da999e6e7504bbaaffd3aca7093d75a59468a",
+          "sha256": "d85a928515628a9526d1d02f076f723a4da25387286a4f656d8943600880a436"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-num-names.bst",
+          "blob": "784aa052f757d9a3727149f085fab5c15d3df772",
+          "sha256": "c6c0d83707463ac6ebed7f43a754e38b7a38b17a8e58897e8057f8af0dc35024"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-num.bst",
+          "blob": "e43a1d0f603791c770e5e78331873856fa8fbee0",
+          "sha256": "f04dfa2f78d0198ab8e4055b609dc0b91bdb730743cbbd549d84270f20d11394"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-template-harv.tex",
+          "blob": "a46ddc18eb0f43401651cfa1165358816e1b6268",
+          "sha256": "b154487ec96ed096d8c114c074849c42fe91ba111315ccfea6ed2ce9a6143671"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-template-num-names.tex",
+          "blob": "65a4733bfcadd27d28f4b37a174c166b13802992",
+          "sha256": "06f9a44d39f057b9d4a7285d77176319b79a02fe1aeb08570c39ccae60a1b120"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/elsarticle-template-num.tex",
+          "blob": "4e0356999d263c931823e6c9f79d7ee230d13514",
+          "sha256": "3b02f9b8c80972bda933f281de3c96bb5147969fcebeb23fd8468ff28e33e15d"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/nature_article.tex",
+          "blob": "dc878d7fb6f90858030b561cbce56884e4968ea9",
+          "sha256": "57b6f7fc332c1ff596df1440ee8c9f36f9bb24b5257ce39187af9c1f2ed8d0e6"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/neurips_article.tex",
+          "blob": "b69c47399f5181a51ab7a446945a83480e8e6734",
+          "sha256": "10f5bbc3259ef3a9e56563941ef26253314bccde77adac8f690603e77eca7ea8"
+        },
+        {
+          "path": "skills/venue-templates/assets/journals/plos_one.tex",
+          "blob": "588bdc52e7052ae686f5976aa42b97e6b2ed9225",
+          "sha256": "6dbecd4786ae01155e7bb163d416719efaea733a17943a36bb392ce277f11a5e"
+        },
+        {
+          "path": "skills/venue-templates/assets/posters/beamerposter_academic.tex",
+          "blob": "ca9c962e56a3c8a9719a4385a73c286dfe08973e",
+          "sha256": "721558f66dd60e6d0711a361b4b5fc3ae141eda989d6b744d008951b8cb15194"
+        },
+        {
+          "path": "skills/venue-templates/references/cell_press_style.md",
+          "blob": "976a25634c3315bf546bb07dc8cba4b103bd4a9e",
+          "sha256": "f8f30f312b2c098d9c5fc0b0cc2ab93e44c5d1f511c314171c193bd42ce2905e"
+        },
+        {
+          "path": "skills/venue-templates/references/conferences_formatting.md",
+          "blob": "842a3005afb69ab7b360a0431010e07f3ccec53a",
+          "sha256": "3babe847025e4d4eb4f469119739031ea9709ad48936150177eb941130d08ae7"
+        },
+        {
+          "path": "skills/venue-templates/references/cs_conference_style.md",
+          "blob": "d61b9a9be0b3a55c2e7f050dee1efcc6a91faf15",
+          "sha256": "5cca948eef8aef571f6c5eb2b3a25b338c60fbac297eec5907e5d6e32d448c96"
+        },
+        {
+          "path": "skills/venue-templates/references/current_sources.md",
+          "blob": "0b162e4e9fe176510820fa360d0c4622131c962e",
+          "sha256": "648984f031181a1e5cf431677f2095af5771f6757eb050de00b8c417053922b0"
+        },
+        {
+          "path": "skills/venue-templates/references/grants_requirements.md",
+          "blob": "4125b82197a92e67e0d453e7d84a93642c2373fb",
+          "sha256": "d08680fdcdd0c122a25b9bdf97169f081f9cdf8a8049fadd69f9c06fce9805c8"
+        },
+        {
+          "path": "skills/venue-templates/references/journals_formatting.md",
+          "blob": "5c39254a0e4b6086a9361f12bd0f2223a880168b",
+          "sha256": "aa456055e03b90a01d58846939d039221dcd05b134da3a8b48dc5293e22effaf"
+        },
+        {
+          "path": "skills/venue-templates/references/medical_journal_styles.md",
+          "blob": "48ce6fa0b0b2f311662e189507364f675a695e94",
+          "sha256": "e27800194f8d4ca3428533c9ad20d8934b43eda2214137d6fde8b0b494047a88"
+        },
+        {
+          "path": "skills/venue-templates/references/ml_conference_style.md",
+          "blob": "c156736fe340e2d5f20aa1852970cf2f545e3aae",
+          "sha256": "b8cc82fe8d78e8b96eeabeab99b2e0f964705db1a33337fe645b7ece68c99aef"
+        },
+        {
+          "path": "skills/venue-templates/references/nature_science_style.md",
+          "blob": "fa8e39ca6bf06be9f64c0997a4d74c800a28cd07",
+          "sha256": "439c2ee29f44de59c4a1d5fa4fb721e2458a5c51392db61d04f765f96b3b9d1a"
+        },
+        {
+          "path": "skills/venue-templates/references/posters_guidelines.md",
+          "blob": "876156063e1077194d0773da5e4a19a34d13f729",
+          "sha256": "d0f34c6f27917c09368d3cacafdb0f61c189e3d97c0a89393992cd3a26986c11"
+        },
+        {
+          "path": "skills/venue-templates/references/reviewer_expectations.md",
+          "blob": "6e49c3aca8eb1efcec4620e440c2790d0fb7266f",
+          "sha256": "67537d2d6e8e9efe112677405fcee119a5d4e84cdbc291002e6dd4b9cb20e6ed"
+        },
+        {
+          "path": "skills/venue-templates/references/venue_writing_styles.md",
+          "blob": "ce28254e094831651375b2eda23373f971787db3",
+          "sha256": "40da3f71c383d2fcbf1755a5101ef33c0af8a5e03fe39ec58c07daa327bd1faf"
+        },
+        {
+          "path": "skills/venue-templates/scripts/customize_template.py",
+          "blob": "390eb631c7588f3923a1d28715834b73d21445f1",
+          "sha256": "4ccb452b44583d48845216da4688c11f436342d81f54ea59bf2c72b8f5e689cb"
+        },
+        {
+          "path": "skills/venue-templates/scripts/query_template.py",
+          "blob": "c1219d854d1d0f05d5ab8fb89fdbb41663f08bad",
+          "sha256": "80b6de787685b723d28831fa0271ee56866f2f0e31cb33bab0c1fb484dae7c7a"
+        },
+        {
+          "path": "skills/venue-templates/scripts/validate_format.py",
+          "blob": "c78749b3ab26444611a3bc7fe977b7a871981e78",
+          "sha256": "8909d963c7308f380eee9277ee4652570e736d837505730e77e046dc94e95c91"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Read current official venue sources before exact rules. Audience/style fit guidance does not establish acceptance probability or journal ranking.",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "kdense-citation",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-citation/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/citation-management/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/kdense-citation/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+        },
+        {
+          "path": "skills/citation-management/SKILL.md",
+          "blob": "b63b589d4d423969a63e032e62c2b74969147c1c",
+          "sha256": "dc79fe1e8438dcf598040615d5323360c6a7ed0b868fc3ffc82512c871a1e3ff"
+        },
+        {
+          "path": "skills/citation-management/assets/bibtex_template.bib",
+          "blob": "4cc74a8ed142e441a53f9957f1feef39e59f4cf1",
+          "sha256": "08e21647fa68cad1aa1658264798c7d24775ba89bfbd2723ea6bfe4b562e2be1"
+        },
+        {
+          "path": "skills/citation-management/assets/citation_checklist.md",
+          "blob": "d321768a3b4520f9981a6ac9ae90c1d8c570b00e",
+          "sha256": "ce7317f2983f8b7fd02949aad726ebd6188319c7e57c929fffe689d5ae18ce36"
+        },
+        {
+          "path": "skills/citation-management/references/api_contracts.md",
+          "blob": "99e5b1bcf3d181a22ebcf57f8b5387847dfab352",
+          "sha256": "3e82a14f77133a215831d2627b65c93199589782f6907fc42af3c75f2ab3c5a8"
+        },
+        {
+          "path": "skills/citation-management/references/best_practices.md",
+          "blob": "bc4ed3b0f1f3a6f751c4376b5caf0929ea53ca07",
+          "sha256": "df90d19c8f639590a6a430a889160b478dce61f4a5c0a5a36df5ab1be749b6b1"
+        },
+        {
+          "path": "skills/citation-management/references/bibtex_formatting.md",
+          "blob": "31d05a016583c59a9b55671c6e09d1698848fa79",
+          "sha256": "6337a8d2b87de96bf0f72c076feb0fc5d61ed9c342d9c8f19b3633efbfec6fed"
+        },
+        {
+          "path": "skills/citation-management/references/citation_validation.md",
+          "blob": "2474645bf7482c70483467507e77bcfe992c0a15",
+          "sha256": "f235f82e02db282f0abdd23fd8d2973d870d427d355979e869f736259ba95774"
+        },
+        {
+          "path": "skills/citation-management/references/core_workflow.md",
+          "blob": "0b8dab6057e63d3c84f5fda84c3d83450d8b1850",
+          "sha256": "19e8b52c43f5822163c79904236016616dc4515d21a01d29073d968c9251af8d"
+        },
+        {
+          "path": "skills/citation-management/references/example_workflows.md",
+          "blob": "8685e5bd11c05cdd6649d478429173c05c0823a2",
+          "sha256": "01c0a15e08e8115e10a07623f63565d119812fd2bb68c669eac413db2f9cd482"
+        },
+        {
+          "path": "skills/citation-management/references/google_scholar_search.md",
+          "blob": "15149523b3570d0444e35e3d864731385ea5a398",
+          "sha256": "5b705ec8d6276ef83b819b737ed10bd991815ccb413de27e046b7bfdf4da8399"
+        },
+        {
+          "path": "skills/citation-management/references/metadata_extraction.md",
+          "blob": "ae972e9511a9cc790cfb5aa495ea822806e51413",
+          "sha256": "68c27886aff0d4efbf3a6f7e0a318dedd706d4cfd0f55dd859466de36ed78d46"
+        },
+        {
+          "path": "skills/citation-management/references/pubmed_search.md",
+          "blob": "0927bbb262be116ba76e711af67acd3289791a10",
+          "sha256": "fab82cda700a0dfc6dccc9465c9cc60b9df68cb58d0bec9abe7b2d8748a49cd1"
+        },
+        {
+          "path": "skills/citation-management/references/script_reference.md",
+          "blob": "ea8df755381fe63d90ddd5da6600c44d98d7ca0b",
+          "sha256": "bd23683cb3a7edb932fc5a13bb9215969a834a778a8765eea82553bf1b8b3417"
+        },
+        {
+          "path": "skills/citation-management/references/search_strategies.md",
+          "blob": "5e1d501e01daace93a9896a48c206301019d8545",
+          "sha256": "776c0dd1cbaf0432004ae80273640ff324b570401c569413c674829436385c85"
+        },
+        {
+          "path": "skills/citation-management/scripts/_common.py",
+          "blob": "645d6beed8601c63a46f6148f1ad4f035a1cdf5f",
+          "sha256": "87540160163671b972c2fccb4d0a42db3cca2603c664d26d5da3ca5dbc7dfdd2"
+        },
+        {
+          "path": "skills/citation-management/scripts/doi_to_bibtex.py",
+          "blob": "f6412724860834f68bcc600a342a4a8ab27b9e34",
+          "sha256": "1b7d1ab2e8bf9bcf5a7d49bf45496e0f8b7d8e0d0cda8efd8fce4e527082dc4b"
+        },
+        {
+          "path": "skills/citation-management/scripts/extract_metadata.py",
+          "blob": "d3c3a7e0ab9ad358c9b6ef8aebf04486475a3bec",
+          "sha256": "bebc7835b5e659cdeee0087980e881635894330bac5eda4ce01f490fd41df781"
+        },
+        {
+          "path": "skills/citation-management/scripts/format_bibtex.py",
+          "blob": "dd05a9f728e52cdcae035cff975454de1d23d5ff",
+          "sha256": "cc74fdc4d5819df8db3999e59f96469cebfb353ecf406a49a5a0fc60896707cb"
+        },
+        {
+          "path": "skills/citation-management/scripts/search_google_scholar.py",
+          "blob": "ddec828873708b3fac52cad160319848e76b461e",
+          "sha256": "05cfd67aea6475029d017f1b4ff68e7ba727e1fa9b52f1e614c80287940b4985"
+        },
+        {
+          "path": "skills/citation-management/scripts/search_openalex.py",
+          "blob": "e66a6bddeec8309da379f4e71da218ad364be721",
+          "sha256": "538b2f086625fd1e9a2cb2fe8bd46ee852d888f17d2d1e889b8f50592594f693"
+        },
+        {
+          "path": "skills/citation-management/scripts/search_pubmed.py",
+          "blob": "9d9967a3650ff3ff426cbc259e8cf8eec8bb9c40",
+          "sha256": "4543b74bf773747bae47a2bbb18acf2a4a050071119d88d1711db6049d157116"
+        },
+        {
+          "path": "skills/citation-management/scripts/validate_citations.py",
+          "blob": "0513c351ba734443a0fbd9ee57e97100592a2503",
+          "sha256": "a08e8e0774287e9aca2bd87c3a66cd3dfc751018eafb6cdee37987e3f416d2b5"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Verify actual bibliographic records and proposition locators. Network queries bounded; optional Scholar library not required if authoritative API suffices.",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "kdense-database",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-database/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/database-lookup/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/kdense-database/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+        },
+        {
+          "path": "skills/database-lookup/SKILL.md",
+          "blob": "f5f3d4921ed5a0a205f07e643fbaf48fc39521f6",
+          "sha256": "ead247f623212ca1560486d863a2d0a8c0555d8d20b975d55053eeb4ed043d37"
+        },
+        {
+          "path": "skills/database-lookup/references/addgene.md",
+          "blob": "f6c2d809937fc9533db39231a3393c2cfe70876d",
+          "sha256": "f00236e01cc49c837104a0becab4c9583bf826c0d352c1f026363448954a4c25"
+        },
+        {
+          "path": "skills/database-lookup/references/alphafold.md",
+          "blob": "5a5e0d50e083bd64b4e6319c049ccbeb6f1a4e75",
+          "sha256": "887217bb9a0174a64b0d2b84475fa961e9d9c2c48dfac1e0bc7b6c0bb958b5bc"
+        },
+        {
+          "path": "skills/database-lookup/references/alphavantage.md",
+          "blob": "2d9a76860c2bff3223126497f40534d7fa3b8bab",
+          "sha256": "d7f38702848cff7239fa1c00271dc4fff445f4eda88774ad65724468d1497f97"
+        },
+        {
+          "path": "skills/database-lookup/references/bea.md",
+          "blob": "4be56bd96821c897d114048f06fb1f27454d2470",
+          "sha256": "2ceb06d34c26bb679de7d8645b754e1da0e9461de2a595006971877a9b06b757"
+        },
+        {
+          "path": "skills/database-lookup/references/bindingdb.md",
+          "blob": "c1646ffa4d6367d39ed89dfe07dcb386171f7444",
+          "sha256": "390dabcc89dd9750bedca0b9d8d2edefc984157202b83a5e8b39138d3e26873f"
+        },
+        {
+          "path": "skills/database-lookup/references/biogrid.md",
+          "blob": "30996fb73b6ed541f4f1769745068f7f1bc012f5",
+          "sha256": "887c72e6858db7ab113c37dcd93378ba422e7e6a195f27c466f50e45c611bf0d"
+        },
+        {
+          "path": "skills/database-lookup/references/bls.md",
+          "blob": "1d808787fea41f9988c2257118a13999f69f0a76",
+          "sha256": "711e31c51e600970a31815fd3b224d61501bb12705496c498de3379868612620"
+        },
+        {
+          "path": "skills/database-lookup/references/brenda.md",
+          "blob": "1b0d4e1606b1efbc574523b359df0e86e74282b4",
+          "sha256": "4cb904eadbe76a2a392b5826e4eec46d9e59c4c61acddf0322059d94ca07af0c"
+        },
+        {
+          "path": "skills/database-lookup/references/cbioportal.md",
+          "blob": "2c8eb788d785233336859754e10c54953ea0ed9f",
+          "sha256": "d57ec6a08a5538e38bb1b73bc1eea855b14b87bf0babdf62730a312298f6c85b"
+        },
+        {
+          "path": "skills/database-lookup/references/census.md",
+          "blob": "57531265b18eab5112856a51f315aa2737c2cd63",
+          "sha256": "ceaeae4a0c35cf87ba20de4b7405b867bb105dc7f6f82ab80685d0b1af437ff1"
+        },
+        {
+          "path": "skills/database-lookup/references/chebi.md",
+          "blob": "e4f5c76df3fbb39c775f8019b9809817e43aad1c",
+          "sha256": "657014c7416c6418c911fd710c10c02221edf17fba08f22e54dd9619ab614a43"
+        },
+        {
+          "path": "skills/database-lookup/references/chembl.md",
+          "blob": "d19450f61805a7db039f0f80a20d184f41b01676",
+          "sha256": "8b48ee10535d4df944c0a1c5bede8efe8c6a96ee39744191e7d4827ab8fcd25c"
+        },
+        {
+          "path": "skills/database-lookup/references/clinicaltrials.md",
+          "blob": "ace581ec4642fb1298e9da115d499a80a8a26e4a",
+          "sha256": "aaa72ade4740edee237cb10371fc07e0b662145f45b03f95410f16a9e93c02e9"
+        },
+        {
+          "path": "skills/database-lookup/references/clinpgx.md",
+          "blob": "9f5e51bc7533bebd4256b0748196df77f59f8876",
+          "sha256": "563c95c97fbad8f5cbc4b9ff1783e32439a916beb0d579cb73215accdb8ef0a3"
+        },
+        {
+          "path": "skills/database-lookup/references/clinvar.md",
+          "blob": "de81de5b8607d556e0963c49655a8760cf80490d",
+          "sha256": "5c051b539f8df9f292cdb63f627e19d754388e627c0d891d4b0293be30d30a3c"
+        },
+        {
+          "path": "skills/database-lookup/references/cod.md",
+          "blob": "a5659c02711f05565cbcc66ea9ba4c24ded7d0cc",
+          "sha256": "45569fbad65309ddff67bba27f2b7f231bc6e10d715e6ccd60ae8263fb509ed1"
+        },
+        {
+          "path": "skills/database-lookup/references/cosmic.md",
+          "blob": "3b585db7932da9b381b6443cfa9d58642034f59c",
+          "sha256": "06639396334327201880e26a52647c41675411c56bd6a89c22bd2bdd527a6100"
+        },
+        {
+          "path": "skills/database-lookup/references/dailymed.md",
+          "blob": "0af4798bc259b4ece1b90809ebd9bbd0224868bb",
+          "sha256": "2a4ed938cc7b2611e272a655699a0a98105b926eeb00cb68d41c9aafd306088e"
+        },
+        {
+          "path": "skills/database-lookup/references/database_selection_guide.md",
+          "blob": "284b043f40a28eae6dfebde3695d4331214d8f0d",
+          "sha256": "02fb77429b15d8e599f05ab5ee7de4988b8d04d815285112f2dc182e86e18d6b"
+        },
+        {
+          "path": "skills/database-lookup/references/datacommons.md",
+          "blob": "964ecd4fc8960254e01d72844f553fb8aa6241f0",
+          "sha256": "4e080cd83e5a9fedbf8c0b1c2be71c2d4cd0cbc333810834a8c24d574138e258"
+        },
+        {
+          "path": "skills/database-lookup/references/dbsnp.md",
+          "blob": "e39df04eec41db0114de8e16f96b6716973f2803",
+          "sha256": "bdee23c89aca51a6a0e33593da3059ffca314f29e399891713cf57583d86da8d"
+        },
+        {
+          "path": "skills/database-lookup/references/disgenet.md",
+          "blob": "eb43865e533b7081cdf93372b83c05c09ea3d52d",
+          "sha256": "0c3fda50de43234d4e213cc7c572c6edbb58b47fc5abe2458fe1a4eca7ddad4f"
+        },
+        {
+          "path": "skills/database-lookup/references/drugbank.md",
+          "blob": "341c58d2f9de9fe6366c81853907aef71de973af",
+          "sha256": "5f874bda7098c244e65b69a08894f25ced01c548ae116a49f6388ff7d465b841"
+        },
+        {
+          "path": "skills/database-lookup/references/ecb.md",
+          "blob": "0a1d032031a2c8ecb320078e3471d7c19b6a52a9",
+          "sha256": "8452e47f271c9f0b6ec7f346af2c72ab296dfaa1e13a83310e1170e3f48bd372"
+        },
+        {
+          "path": "skills/database-lookup/references/emdb.md",
+          "blob": "0ced4b2ba34f0f39cba47cb735b087592a6f5a83",
+          "sha256": "3d07236a2b91bed128afbab61cfb60e397e79ec17fb659359ea86029e61cb185"
+        },
+        {
+          "path": "skills/database-lookup/references/ena.md",
+          "blob": "0d88669cf4c53c4e80bb6a3885ec99129b38e0bb",
+          "sha256": "7ab747fbcf9be9e4f22caf88c7a6912d3e676382baf80c3bb5d699e572d18729"
+        },
+        {
+          "path": "skills/database-lookup/references/encode.md",
+          "blob": "1fb28aeae4c8f0096bfe4fbf819767ca062fe204",
+          "sha256": "e11c15b74cb30f3b6222ed7bb398967027ebcaa3ca5e789e3a4022cfdc658735"
+        },
+        {
+          "path": "skills/database-lookup/references/ensembl.md",
+          "blob": "a33de8a5a8a9fd2d62127cf1bfffec949d7c0037",
+          "sha256": "80d118b56d9e250f69570e651d60961ddddc8ada3a117bad94c38b66d8a9a935"
+        },
+        {
+          "path": "skills/database-lookup/references/epa.md",
+          "blob": "a19e0c272f8a5e143e3ba117a376b8d80cc02507",
+          "sha256": "d5bbac5283f1caae1d6ab7013787f8abeabf85c354e1a2caf58d286e7bb882fa"
+        },
+        {
+          "path": "skills/database-lookup/references/eurostat.md",
+          "blob": "bb2f46557eea06dc593fec1577c772e6e3e7f72c",
+          "sha256": "46b125c99fb756ce62655e6a6d5d5562d0694b329844c7089ce6612daf8c9dfb"
+        },
+        {
+          "path": "skills/database-lookup/references/fda.md",
+          "blob": "029f5445a052fef83f69e3789c87f195081bb2ae",
+          "sha256": "b42a94499aadea58802a6116731244d84941ba9ffca698eac31bead5ceb38331"
+        },
+        {
+          "path": "skills/database-lookup/references/federal-reserve.md",
+          "blob": "a21ce028c063b4d0c4bdfb760af9f534821c21b5",
+          "sha256": "a8b47c7925eba9cc268106a1a8bb54f2fdf849ffbda6fa2dd00f0f561473d11e"
+        },
+        {
+          "path": "skills/database-lookup/references/fred.md",
+          "blob": "fc85be036074d0fa7edd408ce9e1d61db650e8d0",
+          "sha256": "cabb0f8c96da6dd5cc53c11861ea179477800896260c9753f490079962542f96"
+        },
+        {
+          "path": "skills/database-lookup/references/gene-ontology.md",
+          "blob": "a7032b66f7f33a1f53feb85d6296a4b0475b6567",
+          "sha256": "59cdfdf414893ee82d1a51f390fe96ca3713da780e96dd2c6a3cdb354afe63a8"
+        },
+        {
+          "path": "skills/database-lookup/references/geo.md",
+          "blob": "89f565e6b3748883d18b4c08afeef3a432b1d9a9",
+          "sha256": "43fcec5baddb616903e2811bbc49fe5c5f24fda6e491498e98d775c6671015b1"
+        },
+        {
+          "path": "skills/database-lookup/references/gnomad.md",
+          "blob": "4a9f1aed95aacb6ba469547cfefefba528319dbd",
+          "sha256": "bf319407d088b321295211aaff377db8f21d60dae0f75bd9311f2e2e65e3ed20"
+        },
+        {
+          "path": "skills/database-lookup/references/gtex.md",
+          "blob": "01bd414b34c4c247fa40a4230d0f2f5b057adb09",
+          "sha256": "ff4b57debc74a39f2e879e81a43d18193714bb75dc855d1dd9a5bb12dd09593b"
+        },
+        {
+          "path": "skills/database-lookup/references/gwas-catalog.md",
+          "blob": "a8caf4c66c442cd620251b8dac17fafd2c036148",
+          "sha256": "93d34d7047bfbcde62de6458814d83608a7dc99a4e0599fc32322f923cebc333"
+        },
+        {
+          "path": "skills/database-lookup/references/hca.md",
+          "blob": "82f1982d6564c900b8efaae02afdeb0390b10fa1",
+          "sha256": "4a8afd752e835065feab3b21989f27dde56172af7fa0b79acdac7eb7536750e1"
+        },
+        {
+          "path": "skills/database-lookup/references/hpo.md",
+          "blob": "cd499f8370ad9085af81080ed3fe5bc81aa77225",
+          "sha256": "74f281daf81f4e544b62a0a9177242816ede3de45b8b6c58ba509a2cd8642a75"
+        },
+        {
+          "path": "skills/database-lookup/references/human-protein-atlas.md",
+          "blob": "beaba193f8fa70367f154bd51d20e30b86c45b49",
+          "sha256": "e93b1038d79249e58aa22ea60e1c954edd32db8b8ace7aa76a14a9b88a9a11f3"
+        },
+        {
+          "path": "skills/database-lookup/references/interpro.md",
+          "blob": "b064536653cfd186f6124aed1ee52c65aa7eb130",
+          "sha256": "18304f87ac9c9f11d399040be52290bc2287c583bff43348bf875a50cd6ba0f4"
+        },
+        {
+          "path": "skills/database-lookup/references/jaspar.md",
+          "blob": "5b389dcc8f499bd1f2327260a5778bcf4a3bf76d",
+          "sha256": "53d0f4111fb7ca547062bbde4fe2f4ebc418e0088da0e401733287018a4cd837"
+        },
+        {
+          "path": "skills/database-lookup/references/kegg.md",
+          "blob": "ef0e5ded8e9b7b0df9c81ae053dde07fe6d080a5",
+          "sha256": "10af18380cd77b3651854519a60f2a28e4dec53172e8db658b7681d4cbabd99f"
+        },
+        {
+          "path": "skills/database-lookup/references/lincs-l1000.md",
+          "blob": "339706c6915a8e2aff9072783a909ac814e84abb",
+          "sha256": "ddbc6b02bd394782b824c9f084b9079bf79168dc99bd1085163778c5e91de8cb"
+        },
+        {
+          "path": "skills/database-lookup/references/materials-project.md",
+          "blob": "17316a686e91fd2ac12dbc23e315d3910b055c6a",
+          "sha256": "0c54129b9294a9464623faa362b91bf32a73bfcdbe5b514802f3e0acd12c2d12"
+        },
+        {
+          "path": "skills/database-lookup/references/metabolomics-workbench.md",
+          "blob": "24dee36ea4077906caa42aecc7c9f4ed80b6f86d",
+          "sha256": "c5d33c855da6f96c23a923703bfea13818650ce6c7755ee7e4ed6eac788c943e"
+        },
+        {
+          "path": "skills/database-lookup/references/monarch.md",
+          "blob": "07bcb22a4ac41aa39cc6d005305aff91d1720856",
+          "sha256": "dedd349124dba2f685ab9e041e624e61ea93e3672181c2a7c7c9b3e986e75660"
+        },
+        {
+          "path": "skills/database-lookup/references/mousemine.md",
+          "blob": "a14453554a02d98bd952bbe1952b3c6921ea4c9a",
+          "sha256": "4d63c40019bc259ab6eb72cbf5ab23c14b6cb9a992ee3a18c6a7f07554ef6e21"
+        },
+        {
+          "path": "skills/database-lookup/references/myvariant.md",
+          "blob": "f4fee33b51583273cb9f76bed3574e1a8c46f6b7",
+          "sha256": "4bcb1c829fdb89ad5af864135c84aa40667cbeb8271d80999c1518c223600cb0"
+        },
+        {
+          "path": "skills/database-lookup/references/nasa-exoplanet-archive.md",
+          "blob": "8db176ae495299f6e3c8b6c24a123704508852a4",
+          "sha256": "9be3b02563289e9cf4351d5f4f185d022fe6e5de76450a8e1b477545c5721ffe"
+        },
+        {
+          "path": "skills/database-lookup/references/nasa.md",
+          "blob": "159ecf020f180b99a3105c52f198ef4291523753",
+          "sha256": "bd7719904299fd8bd93a87804e1eb281388b57e7d64c984d3f7728c7c2c7c2a2"
+        },
+        {
+          "path": "skills/database-lookup/references/ncbi-gene.md",
+          "blob": "aa1a6a697ca3ee0bdf7120a762527b20ec255085",
+          "sha256": "c1d32a4eddb24e20129467adafc177366327c9e48ee5a67b78515b07c36370c1"
+        },
+        {
+          "path": "skills/database-lookup/references/ncbi-protein.md",
+          "blob": "68fa3c8eb2537143d3ddc88685c2ce5b77d457aa",
+          "sha256": "7b5489a99bddb357567a6287cb7630413db9e298378397e4d16f3ae0bdb8733a"
+        },
+        {
+          "path": "skills/database-lookup/references/ncbi-taxonomy.md",
+          "blob": "20800adc0d85235421e345ffa1198b215eba9188",
+          "sha256": "f9508cebfb72825c9752fe96ef72e52d057a7ea46dd64fe8fb3aab435f85f266"
+        },
+        {
+          "path": "skills/database-lookup/references/nist.md",
+          "blob": "5e31f267db9d23494180f928a2c181176868c5dd",
+          "sha256": "8587c7dbb384718b4bc0e769b2279e355ad6acc0273bb2dedf7619feb9e67738"
+        },
+        {
+          "path": "skills/database-lookup/references/noaa.md",
+          "blob": "9415cc94f854ece5400dfb5625676398f81dd768",
+          "sha256": "54c296b7bacd0b3b0321a8889428534e6b56c9ceac126914c09016d8f09b2dcc"
+        },
+        {
+          "path": "skills/database-lookup/references/omim.md",
+          "blob": "a6c09da70b8d4f696dc9c4a952044289ae666533",
+          "sha256": "ea5d3063474fec788ed4fa6d0f2e1d972d843ae34ee6538456386a57c36e161a"
+        },
+        {
+          "path": "skills/database-lookup/references/opentargets.md",
+          "blob": "a7d6b00c47966aa336b68abc3dccaad6eae3c332",
+          "sha256": "e72ab37f5cd87a748c91bc9ccecde2627329523c85f6d024a9093611b3eafc52"
+        },
+        {
+          "path": "skills/database-lookup/references/openweathermap.md",
+          "blob": "f2c6381c07103f8e02505c795484c57b425974f1",
+          "sha256": "89caa890cd45dcc1b500cdc6bd927a2aac846c4bb6af3109bca51e5a0191a531"
+        },
+        {
+          "path": "skills/database-lookup/references/pdb.md",
+          "blob": "1821a354c8ef2907c307912070db269f814f4bea",
+          "sha256": "38eaeeff4ca768c9545450233ac3942b5cf389b9347f9541cdd0267036cd30fc"
+        },
+        {
+          "path": "skills/database-lookup/references/pride.md",
+          "blob": "37a6c683fc9714bd3f5a2345f5e0becf4be6c82f",
+          "sha256": "cff5062cd99d22d928732383c6142408be83c95d2d166e9d265866352b94ce4d"
+        },
+        {
+          "path": "skills/database-lookup/references/pubchem.md",
+          "blob": "ec7f0ede09646c508e86dc71004a75d7e629bb8a",
+          "sha256": "93225212346b327623446874090cb458c954f5820cba66a4163e5e8eb6d75524"
+        },
+        {
+          "path": "skills/database-lookup/references/quickgo.md",
+          "blob": "195d1d14c09c0fdd38e88827c6e6ddb4bdc76244",
+          "sha256": "b567b7e4b17f5d91c6b09476fcbd06d2c772538805c45655f00309bae84d4de6"
+        },
+        {
+          "path": "skills/database-lookup/references/reactome.md",
+          "blob": "3a7bddf8e9dca29eaeaaf75fbff713d4fcfac213",
+          "sha256": "c91bc6c1464005d405c5d5320d9e7527ac7c9fcd0ef8497a9e8e988e24c70424"
+        },
+        {
+          "path": "skills/database-lookup/references/regulomedb.md",
+          "blob": "7016e7b52cb01743d1e5eff02af048aec504c21e",
+          "sha256": "933970cc4586ec2d6d342ccda90c7378d085129b94f8654605b6bca43a9c5883"
+        },
+        {
+          "path": "skills/database-lookup/references/retrieval-contract.md",
+          "blob": "379da8ccfd16395840d0f04b4f823fa07202d04d",
+          "sha256": "a268604e226309c291aa7c981a99219edde25346d69645ad9d8acc3cbabbaaf2"
+        },
+        {
+          "path": "skills/database-lookup/references/rummageo.md",
+          "blob": "c47e04d8349e3ea5afe719f269233aee4d3a2b3e",
+          "sha256": "1dce8be4c7ac7b3f79e59988da7cef6358176a2619bd09d56ad00ffd89ddb443"
+        },
+        {
+          "path": "skills/database-lookup/references/sdss.md",
+          "blob": "da886bf419c5c9129aee5b6f32977bd5dca16afb",
+          "sha256": "b6c1dc13446aaad2ebd5cd6a894a69b979da4a93b047d8a48bd507a33ee2a75f"
+        },
+        {
+          "path": "skills/database-lookup/references/sec-edgar.md",
+          "blob": "27b28ed3186e56dcaa9e3a025133bed4f69c7be7",
+          "sha256": "282e045e9675e309a6c720045fd10475da3b9759459d876b3a8ba10beab457e6"
+        },
+        {
+          "path": "skills/database-lookup/references/simbad.md",
+          "blob": "7253442af5b761df8b32a41eba90ed6deac62658",
+          "sha256": "d14a765a17f1de3299cdb68e5ed64a38b5790fe7529cde19b1534f78fd34ed25"
+        },
+        {
+          "path": "skills/database-lookup/references/sra.md",
+          "blob": "a0ad89036c29b138653fbdef74361ed2509f8625",
+          "sha256": "f70d0b4ce1d0a2b2ce01fdbd358929ffbc99eb77256d18ae3d215d190a5fc452"
+        },
+        {
+          "path": "skills/database-lookup/references/string.md",
+          "blob": "e23e5c0fedda8e7b90a37b95b7aa89625a22ccd1",
+          "sha256": "8d39fe9d9fb46bf7ce6830703603f07777ea21770e83f883bc98cba5ab20f699"
+        },
+        {
+          "path": "skills/database-lookup/references/tcga-gdc.md",
+          "blob": "c30dbbb36ac2320ba48d541415f288d9a25a2883",
+          "sha256": "91f8be4bf809b9f3ac87641980fd33b6ec5f76ddf17b32e9c2f5c5b9f090d70b"
+        },
+        {
+          "path": "skills/database-lookup/references/treasury.md",
+          "blob": "5353fc12d76946399931196597b5c1b3c6f96ca6",
+          "sha256": "a1b4c3a4d18d1f5a55135585384c4e51705722a7b04c1e1ba151b954f01dd7f6"
+        },
+        {
+          "path": "skills/database-lookup/references/ucsc-genome.md",
+          "blob": "eb339f2fbd760055f166675705a0359f8a4bedc9",
+          "sha256": "8be92a6a4978a12e56c412b94195f44128837ae66528779859dd994aa57f4781"
+        },
+        {
+          "path": "skills/database-lookup/references/uniprot.md",
+          "blob": "a76062ee17592d772c034b2aebe6e42a8aff6177",
+          "sha256": "8e625f9f6e3becd9dde739d8937b306feafd29482af2c359b579915ea560f2de"
+        },
+        {
+          "path": "skills/database-lookup/references/usgs.md",
+          "blob": "7cc598349b6ece429b2080c47843ffe9333b581c",
+          "sha256": "343bb71e510f43b54a444f486b97f1e47e957aed4f35b81fa588c3e3247bbd30"
+        },
+        {
+          "path": "skills/database-lookup/references/uspto.md",
+          "blob": "dd9a56d1f100a738312448a31d08e75ccd937188",
+          "sha256": "858002e1a231ae0eae30c48b7dec00d97b80fe7e08c9305dfbec0805434c19b0"
+        },
+        {
+          "path": "skills/database-lookup/references/who.md",
+          "blob": "81da3b22fdba5db52aff917ab685b14de5714d54",
+          "sha256": "9260f58512a9de4f3647207c759451931ffbd4e15415afa39b0bfdedbdb12d4b"
+        },
+        {
+          "path": "skills/database-lookup/references/worldbank.md",
+          "blob": "0aafb89def486e93d2e87b8d9d8bb0ed0abf45f4",
+          "sha256": "673144b300cdbef6fc0a6bb995df3182f13230dd5dd83264db593c13b3e4f0c4"
+        },
+        {
+          "path": "skills/database-lookup/references/zinc.md",
+          "blob": "e1a160caabc7600aa956dc3d5beb753fb8dec789",
+          "sha256": "7aa76cb2cd7f2cdae05c73faf95be0445f86c404259e4efabb352ed179e97274"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Read the relevant retrieval contract/reference; apply actual authorization, bounded API retrieval, filters and provenance. Unsupported domains need a verified matching entry, not invented API results.",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "scholar-intake",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "tree": "d7f61d97768bcaa4442e2481da680073da7528bc",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/scholar-intake/903787345d6aec134086afa2b97715a78fbde519/skills/research-ideation/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/scholar-intake/903787345d6aec134086afa2b97715a78fbde519",
+      "files": [
+        {
+          "path": "LICENSE",
+          "blob": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf",
+          "sha256": "5a1e92b9b489ec750c774555a7840af3978bc574e1395f6796695ffc67a62bef"
+        },
+        {
+          "path": "skills/research-ideation/SKILL.md",
+          "blob": "c389b2d2717207b99646f880db033d103d8512c1",
+          "sha256": "8fd82b93e2bfc83dda4fffe036a219848141b41cc2d90520f0eca93ccabc4437"
+        },
+        {
+          "path": "skills/research-ideation/references/5w1h-framework.md",
+          "blob": "d584134a221ac857f4d0c9d4321e3d11c026c84a",
+          "sha256": "1e859e14fe9de0708b3b09211f6d437c1a34914b1a4ad55e20af802835b8a397"
+        },
+        {
+          "path": "skills/research-ideation/references/gap-analysis-guide.md",
+          "blob": "794847c103d8a67f1e9edd5d70fe234d984b1d26",
+          "sha256": "9bbe8a050be6936d90ee17f21ba0f95bcda970a46e2ec99c2a1bda8bafe8f34b"
+        },
+        {
+          "path": "skills/research-ideation/references/literature-search-strategies.md",
+          "blob": "368dc9cd9fb6d0029f2dae50f1100c57410ebb73",
+          "sha256": "152da7be2cbd3a66580d6bc71ed3a483ce63ca07d91dca0aedca52fd06e32027"
+        },
+        {
+          "path": "skills/research-ideation/references/method-selection-guide.md",
+          "blob": "f62d6b5194a5d596b6c910200e074ca4cc8ba603",
+          "sha256": "3e5663926d2b853afe97228adc0553fe35079695b6608360e8e62d6b44c8aa94"
+        },
+        {
+          "path": "skills/research-ideation/references/research-contract.md",
+          "blob": "c98020f23a922f797434a24945e85f655415497d",
+          "sha256": "0496a670f64d4b9d7d3f0bc4f236a8b16274f7b3c0aff7477d4893cc8236acab"
+        },
+        {
+          "path": "skills/research-ideation/references/research-planning.md",
+          "blob": "7813863d286a7cc0b5fa31213f91a0e2d92e5694",
+          "sha256": "da47fcb2034b156a16a4be0615e168294ed723e610abd37c48e09598d1e55444"
+        },
+        {
+          "path": "skills/research-ideation/references/research-question-formulation.md",
+          "blob": "b10a98e896f271053fd0eec5ab7c8cec129c136d",
+          "sha256": "df9f0ad4cd61552a207430b2d2ee6147cc6311f7969ea138f1f05576d7b7556b"
+        },
+        {
+          "path": "skills/research-ideation/references/zotero-integration-guide.md",
+          "blob": "63002a49a113ae5ab3378a59b47603e7afca29e1",
+          "sha256": "84dd6c9047a4ca04141c074d61d16ccf9d955eb5ef89bd52e0843f2cb12932d5"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Use Research Question Card and evidence gate. Preserve fixed questions. Optional Zotero/other assistant integrations are replaced by current-host local records; no new host or source repository.",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "scholar-response",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "tree": "d7f61d97768bcaa4442e2481da680073da7528bc",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/scholar-response/903787345d6aec134086afa2b97715a78fbde519/skills/review-response/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/scholar-response/903787345d6aec134086afa2b97715a78fbde519",
+      "files": [
+        {
+          "path": "LICENSE",
+          "blob": "c19f3b4a3de7c50a83629bbf88f1efa3fcaf4bbf",
+          "sha256": "5a1e92b9b489ec750c774555a7840af3978bc574e1395f6796695ffc67a62bef"
+        },
+        {
+          "path": "skills/review-response/SKILL.md",
+          "blob": "6d8c504c9a4f9ec12ddee29c0c5925d4537aba22",
+          "sha256": "f98a40dc5df70419d257406398ccce8b2f8aeab22ebd6919b1d9d6bbbdb04fd5"
+        },
+        {
+          "path": "skills/review-response/references/rebuttal-templates.md",
+          "blob": "8c32f459e3d597543a86d2b0b7054c0d113da9fe",
+          "sha256": "59613bf7f68ee8b20fd449d37be78ae6b890ed0b242de07365d5d2b88e620b25"
+        },
+        {
+          "path": "skills/review-response/references/response-strategies.md",
+          "blob": "fad11d6507fd941670804c489ee4f2872e9bf625",
+          "sha256": "dcaca661326ff45c3bec6cb8179c8e517b8e6f799243006f1184732ef68425b1"
+        },
+        {
+          "path": "skills/review-response/references/review-classification.md",
+          "blob": "690512410f969979bba1e0f7bc109fceb36f147d",
+          "sha256": "c758d99ab604065f338318fe6974a568eb02d7466ee00c6ce504cfd65feb20bb"
+        },
+        {
+          "path": "skills/review-response/references/successful-cases.md",
+          "blob": "08522cecb31831559a6699a2cf9a76d1c2669e15",
+          "sha256": "1e8b8fa7488701f46b85731fa9d8f43a490bfc9e11fa908199ad83ae574db91d"
+        },
+        {
+          "path": "skills/review-response/references/tone-guidelines.md",
+          "blob": "00f4b0e86f2b2fd7522cb38a55bef28072632eb9",
+          "sha256": "1d87833e2b494884e34aff89d5e0ae100684e3d6820dc28ad381de13d774d8fe"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Classify actual comments, choose evidence-based strategies, make revisions and write precise responses. No claims of completed experiments without evidence.",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ]
+    },
+    {
+      "status": "source_prepared",
+      "id": "kdense-statistics",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/statistical-analysis/SKILL.md",
+      "root": "/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+        },
+        {
+          "path": "skills/statistical-analysis/SKILL.md",
+          "blob": "4ea7453a12e63f0dbc31d7a47ed41fe3ff4c4c1a",
+          "sha256": "e112848726b3713267cac65e4e2c15491a0a26ee1ed628db01195f7e43f97997"
+        },
+        {
+          "path": "skills/statistical-analysis/references/assumptions_and_diagnostics.md",
+          "blob": "08fa85f9709297dcad84bfbb138b94df7692685c",
+          "sha256": "6e1ebc110c092845b93e5c6d28f38c8a990780105ba1865f0bd47c007620b073"
+        },
+        {
+          "path": "skills/statistical-analysis/references/bayesian_statistics.md",
+          "blob": "e78e65e190fd3a68034f0e1b1706383eb0888022",
+          "sha256": "34d62e1b20dd82a11497be40e07c93e4fdb555d56e4944e200f881c1b7629cbf"
+        },
+        {
+          "path": "skills/statistical-analysis/references/effect_sizes_and_power.md",
+          "blob": "44d0c74e9d9d416485b2d7a8f56010494d907bcc",
+          "sha256": "5e1321c9058b2931a1bd2a753c7a8f4295f58274412d62e99a34eabd478e42b2"
+        },
+        {
+          "path": "skills/statistical-analysis/references/reporting_standards.md",
+          "blob": "38e0ccd4b1d835504f70a1cea3a6526667fe890a",
+          "sha256": "0a30a1bec63231c94c9c285977acaa4218c50a34c8385857d18f62c61ac817b7"
+        },
+        {
+          "path": "skills/statistical-analysis/references/test_selection_guide.md",
+          "blob": "c518d9e57aee5f8713d153cdc6fe154a9293a9e7",
+          "sha256": "e72e00b6ebe9450e5e84849503db223c4908a8d9a68c3b87cf0ab8ec3254fe83"
+        },
+        {
+          "path": "skills/statistical-analysis/scripts/assumption_checks.py",
+          "blob": "a55993050ec75027fc7e9b465b4c0b718548b198",
+          "sha256": "3e37a4e04407b5f040f103962ed0e73935d114d3892ee45b5a06a1da42c10341"
+        }
+      ],
+      "kind": "skill_protocol",
+      "dependency_installation_performed": false,
+      "research_work_done": false,
+      "host_adaptation": "Use only the requested statistical substep with actual independent units and an appropriate method. No mandatory all-library installation for descriptive-only work. Native examples require their documented environment. Formal/interpretive research requires a separately verified matching entry.",
+      "known_requirements": [
+        "Python3.12+ and documented isolated scientific Python environment for native scripts; see entry for actual library versions",
+        "Current-host protocol selection/interpretation can use appropriate inspected local functions; no native-stack claim without actual execution"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": "professional-step-1",
+  "id": "2f469c67b01d4b39b229fdb1bf0ec3f5",
+  "capability": "manuscript-review",
+  "status": "awaiting_professional_work",
+  "started_ns": 1791556924295248000,
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/request.md",
+    "sha256": "00e092dd5ae1f6bb78d2be1a6ac4142ef867aa884ba5f33462b371095711da39"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/report.md",
+      "sha256": "216fea3ac34fe766d23b125ed4c4cd7f97252a856900d114303237682c34a11a"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/analysis.md",
+      "sha256": "45c20cfb3d13a1e3201ffc7894d4bc56ee78b77a63408178f3a93a21fa1d1859"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/raw.csv",
+      "sha256": "7e7f1c02bf90891b19925a148ec94ef236e4f39b95f24e8e581d38814d69dcd7"
+    }
+  ],
+  "source": {
+    "status": "source_prepared",
+    "id": "kdense-critical",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+    "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-critical/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/scientific-critical-thinking/SKILL.md",
+    "root": "/Users/luca/.codex/academic-research-source-cache/kdense-critical/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "files": [
+      {
+        "path": "LICENSE.md",
+        "blob": "eb246475fd5a66b9bb56176f3a718984632dd98d",
+        "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+      },
+      {
+        "path": "skills/scientific-critical-thinking/SKILL.md",
+        "blob": "2a2fc151b5b13e4e11ece7410f21a14d5b25e30d",
+        "sha256": "563af70571b7dcd6a96bf2e303bedfdcba623b4e9f082d58f04aacbc961fdae4"
+      },
+      {
+        "path": "skills/scientific-critical-thinking/references/common_biases.md",
+        "blob": "0acba93293aaf6df629cc00212c9e86a184efdb0",
+        "sha256": "641e8e8e6dfadac1643ea8691b7d3e4e58cf013f134cd42c71301878096a5a39"
+      },
+      {
+        "path": "skills/scientific-critical-thinking/references/core_capabilities.md",
+        "blob": "ca7fec36594abd20921d2aa2ae15e9363d3d58b1",
+        "sha256": "0f337b96aa2d7453433a17824368fbd0638b9469d4f90a5fd23f4167c9dee180"
+      },
+      {
+        "path": "skills/scientific-critical-thinking/references/evidence_hierarchy.md",
+        "blob": "e4b4946886cee0b1e35b24309e162e0f9ca6f14b",
+        "sha256": "534fbe991ecfb2d162f755004dc528118ce74a78862917c2911595a522d76e6c"
+      },
+      {
+        "path": "skills/scientific-critical-thinking/references/experimental_design.md",
+        "blob": "4be76ae49eb6339e6a72c8d3ee69338c4ea3e347",
+        "sha256": "eca7e42025393984c07676f3d4bc354d217e5604dc2209c76215d31953a7c74c"
+      },
+      {
+        "path": "skills/scientific-critical-thinking/references/logical_fallacies.md",
+        "blob": "336a0407f4397f8ad9b218fc4156ef3473d19f70",
+        "sha256": "becfc5bfac7b831dca67cc442cd0fcb42d8eea527a6fc2921c1b704e592ff593"
+      },
+      {
+        "path": "skills/scientific-critical-thinking/references/review_sources.md",
+        "blob": "0241f4aa470f86473cd8be196edeff07a274b261",
+        "sha256": "71e75106f36f3e69b28959ad1fec503ccdb21b7f5361ab230173e4812accbf62"
+      },
+      {
+        "path": "skills/scientific-critical-thinking/references/scientific_method.md",
+        "blob": "4dee3644c01de3bec9250d19efa58a0a13cbee59",
+        "sha256": "5aa925b97c7a916f819dafc8b42a9c24e4bd3eb2836594e724f1e7f9ae75ea0f"
+      },
+      {
+        "path": "skills/scientific-critical-thinking/references/statistical_pitfalls.md",
+        "blob": "1e78cb2d3c6873e7d8289009cc7c9fb772def542",
+        "sha256": "0c43204a0a81110cfeb7c982fa4caa89f274bdcebf096e09e5adfccf31241cb9"
+      }
+    ],
+    "kind": "skill_protocol",
+    "dependency_installation_performed": false,
+    "research_work_done": false,
+    "host_adaptation": "Apply appraisal workflow to evidence and independent units; include actual reproducibility rerun via local protocol when requested. Do not claim clinical recommendations or cross-model review.",
+    "known_requirements": [
+      "Current host protocol; see actual entry for optional function dependencies"
+    ]
+  },
+  "guide": "---\nname: scientific-critical-thinking\ndescription: Evaluates scientific claims and evidence quality. Applies to experimental design validity, biases and confounders, statistical interpretation, evidence grading frameworks (GRADE, Cochrane Risk of Bias), and teaching critical analysis. Supports evidence appraisal and identifying flaws; formal peer review writing belongs to peer-review.\nallowed-tools: Read Write Edit\nlicense: MIT license\ncompatibility: Analytical guidance needs no network. Optional figures via the scientific-schematics skill require OPENROUTER_API_KEY and outbound API access to OpenRouter.\nmetadata:\n  version: \"1.5\"\n  last-reviewed: \"2026-10-01\"\n  skill-author: K-Dense Inc.\n---\n\n# Scientific Critical Thinking\n\n## Overview\n\nCritical thinking is a systematic process for evaluating scientific rigor. Assess methodology, experimental design, statistical validity, biases, confounding, and evidence quality using GRADE and Cochrane ROB frameworks. Apply this skill for critical analysis of scientific claims.\n\n## When to Use This Skill\n\nThis skill should be used when:\n- Evaluating research methodology and experimental design\n- Assessing statistical validity and evidence quality\n- Identifying biases and confounding in studies\n- Reviewing scientific claims and conclusions\n- Conducting systematic reviews or meta-analyses\n- Applying GRADE or Cochrane risk of bias assessments\n- Providing critical analysis of research papers\n\n## Appraisal Workflow\n\n1. **Fix the question and unit.** Record population, intervention/exposure, comparator,\n   outcome, time point, effect measure, and target setting. Distinguish descriptive,\n   predictive, and causal claims. Identify the independent experimental/sampling unit.\n2. **Extract evidence before judging.** Locate the numerical result, uncertainty,\n   denominators, protocol/registration, analysis plan, and relevant supplementary material.\n   Keep missing reporting separate from evidence that a procedure was not performed.\n3. **Assess design and analysis.** Check selection, confounding, measurement, attrition,\n   multiplicity, dependence, and model assumptions. Good fit or optimizer convergence does\n   not establish a uniquely identified parameter or a causal effect.\n4. **Choose the right appraisal framework.** Reporting completeness, risk of bias, and\n   certainty of a body of evidence answer different questions. Record the exact tool\n   version and the result being assessed; do not turn checklist counts into a quality score.\n5. **Synthesize with scope intact.** Examine independent replication, overlapping samples,\n   missing evidence, and applicability. Apply GRADE per outcome/comparison when appropriate,\n   with explicit domain reasons, rather than grading a whole paper by its design label.\n6. **Write a traceable critique.** For each concern give the source location, observation,\n   consequence for the claim, uncertainty, and a feasible remedy. Separate supported\n   conclusions from assumptions and from clinical/policy recommendations.\n\nCurrent framework versions, primary sources, and verification limits are in\n[references/review_sources.md](references/review_sources.md). The examples in the references\nare teaching examples, not empirical findings or validated patient-specific advice.\n\n## Visual Aids (Optional)\n\nOnly add figures when the **user explicitly requests** a diagram (for example, a GRADE flowchart, bias decision tree, or evidence-quality framework).\n\n**When figures help:**\n- Critical thinking framework diagrams\n- Bias identification decision trees\n- Evidence quality assessment flowcharts\n- GRADE or risk-of-bias evaluation frameworks\n\n**How to create figures:**\n- **Preferred:** Use the **scientific-schematics** skill for AI-generated diagrams from a natural-language description\n- **Alternative:** Build figures in your usual tools (draw.io, PowerPoint, matplotlib, etc.)\n\nRun from the repository root, with `OPENROUTER_API_KEY` set:\n\n```bash\npython skills/scientific-schematics/scripts/generate_schematic.py \"Illustrative GRADE appraisal: define outcome and comparison, assess certainty domains with reasons; keep recommendation decisions separate\" -o figures/grade_flowchart.png --doc-type report\n```\n\nThis optional command's CLI was checked with `--help`; paid generation was not exercised\nfor this example. Follow that skill's current dependencies and review every generated label.\n\n**Disclosure:** AI schematic generation sends your prompt to [OpenRouter](https://openrouter.ai/) (a third-party API). Do not include unpublished sensitive details unless that transmission is appropriate for your project.\n\n---\n\n## Core Capabilities\n\nSeven capability areas, each with the questions to ask and what the answers imply, are in\n[references/core_capabilities.md](references/core_capabilities.md):\n\n1. **Methodology critique** — design, controls, confounding, and whether the method can\n   answer the question asked.\n2. **Bias detection** — selection, measurement, publication, and cognitive biases.\n3. **Statistical analysis evaluation** — power, multiplicity, p-value misuse, effect sizes.\n4. **Evidence quality assessment** — study hierarchy, replication, and strength of inference.\n5. **Logical fallacy identification** — the fallacies that recur in scientific argument.\n6. **Research design guidance** — how to strengthen a design before data collection.\n7. **Claim evaluation** — separating what was shown from what is being asserted.\n\nPer-topic detail is in [references/scientific_method.md](references/scientific_method.md),\n[references/common_biases.md](references/common_biases.md),\n[references/statistical_pitfalls.md](references/statistical_pitfalls.md),\n[references/evidence_hierarchy.md](references/evidence_hierarchy.md),\n[references/logical_fallacies.md](references/logical_fallacies.md), and\n[references/experimental_design.md](references/experimental_design.md).\n\n## Application Guidelines\n\n### General Approach\n\n1. **Be Constructive**\n   - Identify strengths as well as weaknesses\n   - Suggest improvements rather than just criticizing\n   - Distinguish between fatal flaws and minor limitations\n   - Recognize that all research has limitations\n\n2. **Be Specific**\n   - Point to specific instances (e.g., \"Table 2 shows...\" or \"In the Methods section...\")\n   - Quote problematic statements\n   - Provide concrete examples of issues\n   - Reference specific principles or standards violated\n\n3. **Be Proportionate**\n   - Match criticism severity to issue importance\n   - Distinguish between major threats to validity and minor concerns\n   - Consider whether issues affect primary conclusions\n   - Acknowledge uncertainty in your own assessments\n\n4. **Apply Consistent Standards**\n   - Use same criteria across all studies\n   - Don't apply stricter standards to findings you dislike\n   - Acknowledge your own potential biases\n   - Base judgments on methodology, not results\n\n5. **Consider Context**\n   - Acknowledge practical and ethical constraints\n   - Consider field-specific norms for effect sizes and methods\n   - Recognize exploratory vs. confirmatory contexts\n   - Account for resource limitations in evaluating studies\n\n### Apply risk-of-bias tools to the right unit\n\nFor RoB 2, identify the specific result: outcome, time point, intervention comparison, numerical estimate, and effect of assignment versus adherence. Use the variant for individually randomized, cluster, or crossover trials; record signalling answers and justifications rather than assigning one blanket score to the whole paper. Different outcomes in the same trial can have different bias judgments. See the [Cochrane RoB 2 guidance](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-08).\n\nFor non-randomized intervention effects, state whether using ROBINS-I 2016 or the\nROBINS-I V2 November 2025 **draft** for follow-up/cohort studies. Do not mix their domains\nor algorithms. Diagnostic accuracy appraisal now uses QUADAS-3 (current tool v1.2), at\nthe accuracy-estimate level. See the tool-specific sources before a formal assessment.\n\n### When Providing Critique\n\n**Structure feedback as:**\n\n1. **Summary:** Brief overview of what was evaluated\n2. **Strengths:** What was done well (important for credibility and learning)\n3. **Concerns:** Issues organized by severity\n   - Critical issues (threaten validity of main conclusions)\n   - Important issues (affect interpretation but not fatally)\n   - Minor issues (worth noting but don't change conclusions)\n4. **Specific Recommendations:** Actionable suggestions for improvement\n5. **Overall Assessment:** Balanced conclusion about evidence quality and what can be concluded\n\n**Use precise terminology:**\n- Name specific biases, fallacies, and methodological issues\n- Reference established standards and guidelines\n- Cite principles from scientific methodology\n- Use technical terms accurately\n\n### When Uncertain\n\n- **Acknowledge uncertainty:** \"This could be X or Y; additional information needed is Z\"\n- **Ask clarifying questions:** \"Was [methodological detail] done? This affects interpretation.\"\n- **Provide conditional assessments:** \"If X was done, then Y follows; if not, then Z is concern\"\n- **Note what additional information would resolve uncertainty**\n\n## Reference Materials\n\nThis skill includes comprehensive reference materials that provide detailed frameworks for critical evaluation:\n\n- **`references/scientific_method.md`** - Core principles of scientific methodology, the scientific process, critical evaluation criteria, red flags in scientific claims, causal inference standards, peer review, and open science principles\n\n- **`references/common_biases.md`** - Comprehensive taxonomy of cognitive, experimental, methodological, statistical, and analysis biases with detection and mitigation strategies\n\n- **`references/statistical_pitfalls.md`** - Common statistical errors and misinterpretations including p-value misunderstandings, multiple comparisons problems, sample size issues, effect size mistakes, correlation/causation confusion, regression pitfalls, and meta-analysis issues\n\n- **`references/evidence_hierarchy.md`** - Traditional evidence hierarchy, GRADE system, study quality assessment criteria, domain-specific considerations, evidence synthesis principles, and practical decision frameworks\n\n- **`references/logical_fallacies.md`** - Logical fallacies common in scientific discourse organized by type (causation, generalization, authority, relevance, structure, statistical) with examples and detection strategies\n\n- **`references/experimental_design.md`** - Comprehensive experimental design checklist covering research questions, hypotheses, study design selection, variables, sampling, blinding, randomization, control groups, procedures, measurement, bias minimization, data management, statistical planning, ethical considerations, validity threats, and reporting standards\n\n**When to consult references:**\n- Load references into context when detailed frameworks are needed\n- Search references for specific topics with your available text-search tool.\n- References provide depth; SKILL.md provides procedural guidance\n- Consult references for comprehensive lists, detailed criteria, and specific examples\n\n## Remember\n\n**Scientific critical thinking is about:**\n- Systematic evaluation using established principles\n- Constructive critique that improves science\n- Proportional confidence to evidence strength\n- Transparency about uncertainty and limitations\n- Consistent application of standards\n- Recognition that all research has limitations\n- Balance between skepticism and openness to evidence\n\n**Always distinguish between:**\n- Data (what was observed) and interpretation (what it means)\n- Correlation and causation\n- Statistical significance and practical importance\n- Exploratory and confirmatory findings\n- What is known and what is uncertain\n- Evidence against a claim and evidence for the null\n\n**Goals of critical thinking:**\n1. Identify strengths and weaknesses accurately\n2. Determine what conclusions are supported\n3. Recognize limitations and uncertainties\n4. Suggest improvements for future work\n5. Advance scientific understanding\n\n## Citing Scientific Agent Skills\n\nThis skill is part of Scientific Agent Skills by K-Dense. If it materially contributed to a\nmanuscript, report, presentation, or code release, add the paper to the references or\nsoftware section and tell the user you did so:\n\n> Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026). Scientific Agent\n> Skills: A Library of Procedural Knowledge for Research Agents. arXiv:2609.00065.\n> https://doi.org/10.48550/arXiv.2609.00065\n\nAlways cite the current version. The DOI and https://arxiv.org/abs/2609.00065 resolve to the\nlatest arXiv version, so never append a version suffix such as `v1`. When network access is\navailable, fetch https://arxiv.org/abs/2609.00065 (or\nhttp://export.arxiv.org/api/query?id_list=2609.00065) before writing the reference and take\nthe author list, year, and version from that record. If the record lists a journal reference\nor publisher DOI, cite the published version instead.\n",
+  "required_work": "Review actual manuscript/evidence and return grounded issues with revision priorities",
+  "boundary": "Current-host review is not independent cross-model peer review.",
+  "phase": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/phase.json",
+    "id": "10fab2ec604f43d185977a3492594ab0",
+    "stage": "manuscript",
+    "latest_instruction": "Synthetic fixed question: aggregate vs every condition"
+  },
+  "profile": "focused",
+  "handoff_scope": "requested_step_only",
+  "professional_work_done": false,
+  "host_fallback_allowed": false
+}

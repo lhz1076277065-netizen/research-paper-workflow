@@ -1,0 +1,1 @@
+交付：report.md为短报告，analysis.py+raw.csv+results.json为可复算包；feasibility.md、design.md、analysis.md为路线版本，review.md为实际复核。全部必要完成步骤带begin/finish/check回执；可选figure步骤因缺matplotlib已取消，有真实障碍和取消收据。无外网、真实实验、模型训练、依赖安装、外部聊天消息或发布。人类验证和新颖性保持未知，不宣称投稿就绪。

@@ -1,0 +1,34 @@
+{
+  "synthetic_input": true,
+  "scope": "single_intro_objective_paragraph",
+  "paragraph_characters_including_punctuation": 138,
+  "manual_semantic_review": [
+    {
+      "input": "正常湿度可靠，高湿未验证",
+      "final": "正常湿度可靠与高湿适用性未明确均保留",
+      "status": "preserved_unverified_background"
+    },
+    {
+      "input": "拟比较两种传感器，尚无结果",
+      "final": "拟比较/检验能否，没有声称效果成立",
+      "status": "preserved_planned_status"
+    },
+    {
+      "input": "无失效机制证据",
+      "final": "水汽相关失效机制待验证，没有称已证因果",
+      "status": "preserved_unknown"
+    },
+    {
+      "input": "作者想长期难题已解决和必发Nature",
+      "final": "未形成已解决/录用保证；期刊准备未评估",
+      "status": "unsupported_requests_not_promoted"
+    }
+  ],
+  "new_search": false,
+  "new_experiment": false,
+  "human_evidence_verification": "pending",
+  "submission_readiness": "not_assessed",
+  "tool_semantic_certification": false,
+  "original_draft_hash": "aca5e41742362fa33a09664dca9886259ea36ac879c78af0453ff6be3ee49509",
+  "final_hash": "759d6a17a1d8f5a6aa2b1a85f0b747af670a7624c796714b6b5cd08f7205249d"
+}

@@ -1,0 +1,1 @@
+In this synthetic example, four of twenty appointments were no-shows: one of ten in the reminder group and three of ten in the control group. These are descriptive counts; the supplied record does not establish random assignment, statistical significance, a causal benefit or applicability to real schools. This is a local test draft, not an approved scientific manuscript.

@@ -1,0 +1,27 @@
+# Data profile: /Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/raw.csv
+
+**Shape:** 4 rows × 4 cols
+
+## Columns
+
+| Column | Type | n | missing | summary |
+|---|---|---|---|---|
+| `method` | text | 4 | 0 |  |
+| `condition` | text | 4 | 0 |  |
+| `success` | ordinal | 4 | 0 | 4 levels: 90(1), 1(1), 19(1), 20(1); min_group_n=1 |
+| `n` | ordinal | 4 | 0 | 2 levels: 100(2), 20(2); min_group_n=2 |
+
+## Group structure
+- Grouped by: `method`, `condition`
+- Number of groups: 4
+- Group size: min=1, median=1, max=1
+- **WARN**: at least one group has n<3 — statistics unreliable; must show all raw points.
+
+## Warnings
+- 列 'success' 至少有一个类别 n<10 — 小样本必须展示原始数据点，不要只画均值柱状图。
+- 列 'n' 至少有一个类别 n<10 — 小样本必须展示原始数据点，不要只画均值柱状图。
+
+## Chart suggestions (preliminary)
+- 数据特征不足以给出特定建议；查 chart_selection.md 的决策框架。
+
+> 这是基于数据形态的**初步建议**。最终图型选择必须结合**论证目标**（你想说什么）—— 详见 `references/chart_selection.md`。

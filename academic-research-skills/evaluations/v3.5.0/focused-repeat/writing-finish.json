@@ -1,0 +1,67 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "20c8429484af452bbf0736142cf73d5d",
+  "capability": "manuscript-writing",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-repeat/request.md",
+    "sha256": "06653822ba91e561c026e0416fc5c156226fbdcce5be1791b8f79ff7806781fb"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-repeat/input.md",
+      "sha256": "89f19f18b88f7afc94c6e3c93e59c379b35fd86a54a50111e596f4fe462ea4a1"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-repeat/draft.md",
+      "sha256": "1df1f1520e088a8ff5832918089217fdec1e78e07379204175fdae0dc5863e0c"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-repeat/writing-work.json",
+    "sha256": "1549fd3c272a4ae38cfe1d06fa5b100097c6207dd9a8cea41cc6d0af864f709b"
+  },
+  "use": {
+    "id": "kdense-writing",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/scientific-writing/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "writing",
+      "ethics",
+      "publication"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-repeat/input.md",
+        "sha256": "89f19f18b88f7afc94c6e3c93e59c379b35fd86a54a50111e596f4fe462ea4a1"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-repeat/draft.md",
+        "sha256": "1df1f1520e088a8ff5832918089217fdec1e78e07379204175fdae0dc5863e0c"
+      }
+    ],
+    "steps": [
+      "先建立局部证据提纲和unverified来源/主张，原材料没有结果，20%及唯一机制放入unresolved，不加入稿件。仅处理方案目标。",
+      "原模型白天成功范围与夜间未知分开，比较仍写拟开展而非已完成，保留效果与机制未知。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

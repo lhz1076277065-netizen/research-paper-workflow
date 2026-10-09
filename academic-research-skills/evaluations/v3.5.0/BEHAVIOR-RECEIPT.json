@@ -1,0 +1,40 @@
+{
+  "version": "3.5.0",
+  "local_update_only": true,
+  "original_thread_read_or_mutated_this_turn": false,
+  "original_research_topic_continued": false,
+  "independent_behavior": [
+    {
+      "case": "focused-edit",
+      "professional_work_passed": true,
+      "strict_four_minute_delivery_passed": false,
+      "elapsed_seconds_first_complete_record": 241,
+      "notes": "Professional artifacts and phase close done at 182s; overall record saved about 1s late."
+    },
+    {
+      "case": "focused-repeat",
+      "professional_work_passed": true,
+      "strict_four_minute_delivery_passed": true,
+      "all_files_and_close_seconds": 166
+    },
+    {
+      "case": "full-flow",
+      "scientific_argument_behavior_passed": true,
+      "professional_source_steps_completed": 6,
+      "completed_close_passed": false,
+      "phase_elapsed_seconds": 402.9,
+      "strict_eight_minute_end_to_end_passed": "unknown",
+      "reason": "Original read start not captured; empty delivery completion failed; plotting cancelled after missing matplotlib."
+    }
+  ],
+  "scientific_validity_certified": false,
+  "token_budget_certified": false,
+  "empty_delivery_final": {
+    "completed": true,
+    "elapsed_seconds": 0.9963569641113281,
+    "professional_steps": 5,
+    "original_receipt_hashes_bound": true,
+    "terminal_restart_denied": true,
+    "independent_scientific_story_evaluation": false
+  }
+}

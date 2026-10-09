@@ -1,0 +1,7 @@
+# 空交付出口的独立代码复核
+
+首次复核发现P2：旧begin的phase.latest_instruction可被编辑成新指令，F.check返回与已消费记录均未绑定旧阶段上下文，因此原新出口可能错误通过。开发Agent用合法JSON仅改指令及缺失原始身份两项测试实际复现错误completed；原问题不是无效JSON解析测试可以覆盖的。
+
+修复在消费时保存begin/finish原始字节SHA256，解析与摘要使用同份字节；空delivery先核原始身份，缺失旧身份保持未知拒绝，再F.check、当前phase/指令和整条记录。两项针对回归修复前失败、修复后通过，三个相关模块共80项通过；主回归最终693项通过。
+
+独立第二次只读复核确认原P2已处理，没有发现补丁引入的实质回归；其它professional_steps读取者兼容新增字段。空出口仍限full+delivery、已完成manuscript、无未消费登记，close原预算、ownership及terminal规则保持。未修改或复活原失败验收记录，也未执行原科研课题。

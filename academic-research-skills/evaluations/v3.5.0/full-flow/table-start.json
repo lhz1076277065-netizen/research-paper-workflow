@@ -1,0 +1,132 @@
+{
+  "schema_version": "professional-step-1",
+  "id": "6262988a41254ecc96a4466f393cf65a",
+  "capability": "scientific-visualization",
+  "status": "awaiting_professional_work",
+  "started_ns": 1791556801313094000,
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/request.md",
+    "sha256": "00e092dd5ae1f6bb78d2be1a6ac4142ef867aa884ba5f33462b371095711da39"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/analysis.md",
+      "sha256": "45c20cfb3d13a1e3201ffc7894d4bc56ee78b77a63408178f3a93a21fa1d1859"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/raw.csv",
+      "sha256": "7e7f1c02bf90891b19925a148ec94ef236e4f39b95f24e8e581d38814d69dcd7"
+    }
+  ],
+  "source": {
+    "status": "source_prepared",
+    "id": "scipilot-figure",
+    "repository": "Haojae/scipilot-figure-skill",
+    "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "tree": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64",
+    "entry": "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42/SKILL.md",
+    "root": "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "files": [
+      {
+        "path": "SKILL.md",
+        "blob": "212a6088c115b8903885b80f2b54a2c9b52fef7f",
+        "sha256": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc"
+      },
+      {
+        "path": "references/chart_selection.md",
+        "blob": "547e3ed795beb8c52c40d56107dd368e729f31d8",
+        "sha256": "71fe5970b4a9aee66d6c02d1e0696b367f7dafd9c7e17502ee66c56f36870852"
+      },
+      {
+        "path": "references/data_profiling.md",
+        "blob": "afb50d0afc6b36e43f6537324af78ec22d2968d8",
+        "sha256": "ec2f87a5a09db0db00198b6b462b374c2640a57dfc41e2e884928c15145e27be"
+      },
+      {
+        "path": "references/journal_specs.md",
+        "blob": "b28162888c0bfc378b2292dc0356f5d7aaed674a",
+        "sha256": "a8e9654f55994d692d585e69fb3a68f5618ecf766d8ce0e95fdda6d12e786263"
+      },
+      {
+        "path": "references/plot_recipes.md",
+        "blob": "5d5edc17fa173f367e98839f27f6c3d2f5ad8cf2",
+        "sha256": "3d4f47a6e320d1c0635ee2fc329484952d4e528b1fe9b552e79828b88336c002"
+      },
+      {
+        "path": "references/publication_checklist.md",
+        "blob": "2dd61367123aec7974d133d36bc9b6c204a30f6e",
+        "sha256": "9e2c5f0725c57e71eee0ff66ebac61d2d89c8cec4bd9c958db0184eea4c8abf6"
+      },
+      {
+        "path": "references/visual_review.md",
+        "blob": "62a2d1b8ab54fdeacbfb972474d3c6c4b8f7527d",
+        "sha256": "c4ca4a28a315e7de46f67b5972b3765b979f01fe30616c0681dd2595bed554a1"
+      },
+      {
+        "path": "references/viz_pitfalls.md",
+        "blob": "68fc0245ef4faf4e1f336a4d5fd432252a53bfe5",
+        "sha256": "f103ae47611c6c7429629cb3161c5cdc8a0c9fba7f14d9f83159c96f848a9818"
+      },
+      {
+        "path": "requirements.txt",
+        "blob": "7f194bb3314bf45682386d5a6a65b677bc14ef55",
+        "sha256": "0cda86f15f4006c4be606cc2a991c1a250c4f8a49782ef634d440fb0f37acade"
+      },
+      {
+        "path": "scripts/check_figure.py",
+        "blob": "30d4bdeed5694e8690031235744d76093ee4176a",
+        "sha256": "861191858ff47c5af5247f08d0759b14956a2a7e7d8eafcc6b414d37b9d70f06"
+      },
+      {
+        "path": "scripts/export_figure.py",
+        "blob": "a3a4df7580f8d4275d822424a11aaa9f6f36df11",
+        "sha256": "40ce3bcd31dfc4b33e38a1cb180c75dc730ee6fa046f04934c79f285c6f890c1"
+      },
+      {
+        "path": "scripts/layout_tools.py",
+        "blob": "4eb29f13cea9bbe2e507919bb0412b9e2647d1ae",
+        "sha256": "68e1d25774148fe78f5d87035d651f5e3707382502505cb11f62f9ec7ae88e49"
+      },
+      {
+        "path": "scripts/profile_data.py",
+        "blob": "7bf54ec4ceb438974f4238e4b4ed4a13cd09ba67",
+        "sha256": "d8a2a72c2607c390f2d3ed1508209d515ad4fbf833fa1602ab9da519b3596ec4"
+      },
+      {
+        "path": "scripts/setup_style.py",
+        "blob": "35c5d3a8fb99b3477c544dccf331bb4d81af7657",
+        "sha256": "d58ef81684577bb605a92733dd2ca48ade03b4f819b3d255fd62f319be7fea82"
+      },
+      {
+        "path": "scripts/visual_qa.py",
+        "blob": "02ec9fb6c9300986bdf4e5b257b96e00eb13e89c",
+        "sha256": "67675709e523c76e2748d50749de7bc6332f07df865379b26d024321fb40120f"
+      },
+      {
+        "path": "LICENSE",
+        "blob": "897e469d1446e6cfc5a71858387e01fd1129197c",
+        "sha256": "9138113e804093683aea49033b274c7ab35babce90c3acb86eae115d44585671"
+      }
+    ],
+    "kind": "skill_protocol",
+    "dependency_installation_performed": false,
+    "research_work_done": false,
+    "host_adaptation": "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function.",
+    "known_requirements": [
+      "matplotlib/numpy/pandas/seaborn; SciencePlots optional"
+    ]
+  },
+  "guide": "---\nname: scipilot-figure-skill\ndescription: >-\n SciPilot Skills 家族成员，负责科研数据可视化——但定位不是\"画图工具\"，\n 而是\"可视化顾问\"。先做数据剖析（列类型/样本量/分布/异常值/分组结构/相关性），\n 再结合用户的论证目标推荐图型，主动拦截科研画图的经典错误（小样本画均值柱掩盖\n 分布、双 Y 轴、饼图、Y 轴不当截断、rainbow 色图、把分类点连成折线等），最后\n 产出 Nature / Science / IEEE / Elsevier / PNAS / 中文核心期刊级别的成图。\n 覆盖纯数据图：折线、柱状、散点、箱线 / 小提琴、热力图、误差棒、分布图（直方\n 图 / KDE）、相关性矩阵 / 散点矩阵、多面板组合。技术栈 matplotlib + seaborn +\n SciencePlots（静态）+ plotly（交互）。中英文双语，中文模式自动配置 Noto Sans\n CJK / Source Han Sans / SimHei 并修复负号方框，支持中文期刊\"宋体正文 +\n Times New Roman 数字\"混排。默认色盲安全配色 + 冗余编码 + 灰度预览。出图后做\n \"视觉自检闭环\"：渲染 PNG 预览→程序自检缺字/文字裁切/刻度重叠→AI 读图复核遮盖\n 与子图对齐→回改重渲，直到通过。\n 当用户的任务涉及以下任何情况时主动触发：论文配图、科研画图、数据可视化、\n 不知道用什么图、怎么展示数据、用什么图好、期刊投稿图、figure、出版级图表、\n matplotlib、seaborn、plotly、误差棒、显著性标注、色盲安全配色、矢量图导出、\n 中文论文图表、多面板。**即使用户只是给一批数据问\"这个怎么画\"或\"用什么图\n 好\"，也应使用本技能——本技能首要能力是\"判断该用什么图\"，其次才是绘制。**\n 不做示意图、流程图、架构图。\n---\n\n# scipilot-figure-skill — 科研数据可视化顾问\n\n> SciPilot Skills 家族成员 | 从数据剖析到出版级成图\n\n## 概述\n\n科研工作者最大的画图痛点往往不是\"不会用 matplotlib\"，而是\"手上一堆数据，不知道该用什么图把结论讲清楚\"。本技能的**首要能力是【思考与判断】**，其次才是【绘制】。\n\n具体地——**永远先思考再画**：\n1. 先理解数据再选图——拿到数据先做 EDA，用事实驱动图型选择\n2. 先想清楚\"这张图要论证什么\"——同样数据，不同论点 = 不同图\n3. 主动拦截科研画图的经典错误，而不是顺从\n4. 维度太多就建议拆图，不硬塞\n\n**只覆盖纯数据图**：折线、柱状、散点、箱线/小提琴、热力图、误差棒、分布图、相关性矩阵、多面板组合。**不做**示意图、流程图、架构图。\n\n## 何时使用\n\n- 用户给了一个 CSV / Excel / DataFrame 说\"帮我画一下\"或\"用什么图好\"\n- 用户在写论文要插数据图\n- 用户已有草图但说\"达不到投稿要求\"\n- 用户提到 Nature / Science / IEEE 等具体期刊\n- 用户问\"中文论文 matplotlib 出方框怎么办\"\n- 用户提到误差棒、显著性、色盲、矢量导出、多面板\n\n## 核心工作流（8 步）\n\n**这是本技能与普通画图工具的根本区别——不能上来就画**。每一步缺位前一步的成果都不该执行。\n\n### 第 0 步：理解任务\n\n开画前**先搞清楚两件事**：\n\n1. **这张图要论证什么观点 / 回答什么问题？** 同样数据，论点不同图就不同（详见 `references/chart_selection.md` 的\"同一批数据、不同论点 → 不同图\"小节）\n2. **数据在哪里？长什么样？** 文件路径 / 字段含义 / 多少行 / 是否已经清洗\n\n**如果用户没说清论证目标**，主动问一句：\"你这张图主要想说服读者相信什么？\" 或从论文上下文推断并明确告诉用户你的假设。**不要默认\"用户知道自己要什么\"**。\n\n### 第 1 步：剖析数据\n\n调用 `scripts/profile_data.py`：\n\n```bash\npython scripts/profile_data.py data.csv --group group --group condition\n```\n\n输出包含：每列类型、样本量、缺失率、连续列的描述统计 + 偏度 + 异常值、分组样本量分布、相关性矩阵、初步图型建议。\n\n不会读这份报告？查 `references/data_profiling.md`。\n\n**重点核对**：\n- 列类型识别对不对？（数字 ID 被认成 ordinal 是常见误判）\n- 每组 n 是多少？小样本警告？\n- 是否高度偏态？是否需要对数轴？\n\n### 第 2 步：选图\n\n**这是顾问职责的核心**。基于第 0、1 步的事实，查 `references/chart_selection.md` 的决策框架决定图型。要点：\n\n- **给出推荐 + 简短理由 + 1-2 个备选**（不要只丢一个选择给用户）\n- 如果数据维度过多（如分组组合 > 12）→ **明确建议拆图**，而不是硬塞\n- 如果用户指定的图型**不适合数据**（如 n=5 要画均值柱）→ **善意指出问题并说明更好的选择**，让用户决定。详见下方\"主动拦截\"小节\n- 如果数据特征意味着特殊处理（双峰分布、严重异常值、跨量级）→ 在选图建议里明确提及\n\n### 第 3 步：查期刊规范\n\n确定目标期刊后查 `references/journal_specs.md` 拿到：单/双栏宽（mm 与 inch）、字号、推荐字体、DPI、矢量格式偏好。\n\n不知道目标期刊就问一句。\"毕业论文 / 中文核心 / 英文 SCI / NeurIPS\" 都对应不同规范。\n\n### 第 4 步：配环境\n\n```python\nfrom setup_style import setup_style\nsetup_style(journal='nature', lang='en')             # 英文 Nature\nsetup_style(journal='general', lang='zh', serif_for_zh=True)   # 中文宋体混排\n```\n\n`SciencePlots` 装了自动用，没装回退到内置预设——不会因为缺它崩溃。\n\n### 第 5 步：绘制\n\n按 `references/plot_recipes.md` 对应章节的配方画。每节都有可直接复制的 Python 代码 + 常见坑。\n\n画图时强制做到：\n- `figsize=(目标宽, 目标高)` 单位英寸——直接定最终尺寸\n- 用 `seaborn.color_palette('colorblind')` 或 Okabe-Ito + 冗余编码（不同线型/marker）\n- 误差棒 / 阴影要在图注交代是 SD / SEM / 95% CI + n\n\n### 第 6 步：自检闭环（机器 + AI 读图）\n\n**三层都要过，缺一层都可能带病投稿**：\n\n1. **语义层**：`references/viz_pitfalls.md` 18 条科研画图禁忌——图型/配色/误差是否踩坑\n2. **形式层**：`references/publication_checklist.md` 形式合规（尺寸、DPI、字号、误差交代）\n3. **视觉层（v2.1 新增）**：出图后**渲染 PNG → 程序自检 → AI 读图复核 → 回改**的闭环：\n   - `visual_qa.render_preview(fig, 'figs/_preview.png')` 渲一张预览\n   - `visual_qa.audit_layout(fig)` 程序抓**缺字乱码 / 文字裁切 / 刻度重叠**（确定性问题）\n   - **用 `Read` 工具读这张 PNG**，对照 `references/visual_review.md` 的 8 项清单核对\n     **图例压数据 / 子图标签对齐 / 配色灰度可分**（程序难判的感知问题）\n   - 发现问题 → 按 `visual_review.md` 回改表改 → 重渲 → 再读，直到通过\n\n任何一层不通过就回去改图。**矢量图的导出放在闭环通过之后**，把问题挡在投稿之前。\n\n### 第 7 步：导出\n\n```python\nfrom export_figure import export_figure\nexport_figure(\n    fig, basename='figs/fig1',\n    formats=['pdf', 'svg', 'png'],\n    size_inches=(3.5, 2.625),\n    dpi=300,\n    grayscale_preview=True,    # 自动出灰度版供色盲检查\n)\n```\n\n最后跑一遍 `scripts/check_figure.py --strict` 机器审计。\n\n## 选图速查（详细决策在 chart_selection.md）\n\n| 数据形态 | 推荐首选 | **不该用** |\n|---|---|---|\n| 1 个连续 看分布 | 直方图 + KDE / 箱线 | 饼图 |\n| 1 个分类 看占比 | 横向柱状（按值排序） | 饼图、3D 饼 |\n| 1 分类 + 1 连续，n<10/组 | **stripplot / dot plot**（直接列点） | 均值柱（**严禁**） |\n| 1 分类 + 1 连续，n≥10/组 | **箱线/小提琴 + stripplot 叠加** | 仅均值柱 |\n| 2 连续 看关系 | 散点 + 回归 + r 值 | 折线（除非 x 有序连续） |\n| 时间 / 剂量 vs 连续 | 折线 + 误差带 | 柱状 |\n| 多变量相关（>3 列）| 相关性热力图 / pairplot | 平行坐标 |\n| 矩阵数据 | 热力图（viridis/RdBu_r）| 3D 表面、rainbow 色图 |\n| 构成占比 | 堆叠柱 / treemap | **饼图** |\n\n完整决策树和\"同一数据不同论点 → 不同图\"对照表见 `chart_selection.md`。\n\n## 五条硬性原则\n\n### 原则 1：按最终尺寸出图，不二次缩放\n\n`figsize` 直接设论文里实际尺寸（Nature 单栏 3.5 in、双栏 7.2 in；IEEE 单栏 3.5 in、双栏 7.16 in）。导出后**绝不在 Word / LaTeX 里再缩放**。\n\n**为什么**：matplotlib 字号是绝对单位（pt），Word 里缩 50% 9pt 就变 4.5pt——投稿前自检直接打回。\n\n### 原则 2：矢量优先\n\n折线 / 柱状 / 散点 / 热力（数据网格除外）/ 误差棒 → PDF / SVG / EPS。显微图、照片才用 TIFF / PNG（300-600 DPI）。**绝对不用 JPEG**。\n\n**为什么**：矢量任意缩放不糊，文字仍可选；JPEG 数据图边缘有压缩 artifact，期刊 PDF 检查器直接打回。\n\n### 原则 3：配色对色盲友好\n\n默认 `seaborn.color_palette('colorblind')` 或 Okabe-Ito。**同一张图不同类别加冗余编码**（线型 / marker）。出图前 `export_figure(..., grayscale_preview=True)` 看灰度版能否区分。\n\n**为什么**：约 8% 男性、0.5% 女性色觉异常。审稿人里有这群人，全靠红绿区分的图对他们传达力归零。\n\n### 原则 4：字号在最终尺寸下可读\n\n正文标签和刻度数字 7-9 pt，最小字 **≥ 6 pt**。\n\n**为什么**：审稿编辑会按 mm 打印查字号；<6 pt 不可读直接退回。\n\n### 原则 5：误差必有交代\n\n只要有误差棒 / 阴影区间 / 箱线——**图注必须写清**：\n- 误差类型（SD / SEM / 95% CI / IQR）\n- 样本量 n\n- 显著性检验方法 + 校正（如 Bonferroni）\n- 显著性符号定义（`* p<0.05` 等）\n\n**为什么**：SD 和 SEM 差一个 √n。混淆 = 结论反转 = 退稿。\n\n## 主动拦截（顾问职责）\n\n发现用户的需求会触发以下错误时，**先说明再给替代方案，不要默默照做**。完整 15 条详见 `references/viz_pitfalls.md`。\n\n| 错误 | 后果 | 替代方案 |\n|---|---|---|\n| n<10/组 还想画均值柱 | 掩盖分布、掩盖 n、审稿人怀疑 | 箱线 + stripplot；或直接 stripplot |\n| 双 Y 轴显示无关变量 | 视觉上的相关 / 分歧是作图者捏造的 | 拆成上下子图共享 x；或标准化共轴 |\n| 用饼图展示占比 | 人眼判角度差长度 3 倍 | 横向柱状（按值排序） |\n| 3D 柱 / 3D 饼 | 视角扭曲所有数值 | 2D 柱、热力图 |\n| 比例图 Y 轴不从 0 起 | 误导小差异看起来很大 | 从 0 起或用 log；或加明显断裂标记 |\n| 颜色映射连续值无 colorbar | 读者不知道深浅对应数值 | 必加 colorbar + 标 label/单位 |\n| x 是分类却用折线连均值 | 暗示不存在的连续关系 | 散点 / 点图 / 柱状 |\n| 一图塞 5 个论点 | 没论点 | 拆图，一张图一个核心结论 |\n| rainbow / jet 色图 | 感知不均匀、造假峰 | viridis / magma / RdBu_r |\n\n**拦截话术示例**：\n\n> 你要的\"3 组各 5 个样本的均值柱状图\"会触发 P1（均值柱掩盖分布）：n=5 太小，柱状会让审稿人怀疑你藏了什么。我建议改成**箱线 + stripplot 叠加每个点**，5 个点直接可见、分布形态一目了然。要按原方案画吗？\n\n尊重用户最终决定，但**留下明确的劝阻记录**。\n\n## 中文支持\n\n中文 matplotlib 出方框的根本原因：默认字体（DejaVu Sans 等）不含 CJK 字符表。`setup_style(lang='zh')` 自动做两件事：\n\n1. 按优先级查中文字体：`Noto Sans CJK SC` > `Source Han Sans SC` > `SimHei` > `Microsoft YaHei`\n2. 修负号方框：`plt.rcParams['axes.unicode_minus'] = False`\n\n找不到任何 CJK 字体会抛清晰的安装提示（不会让你画完发现是方框）。\n\n**中文期刊的\"宋体 + 数字 Times New Roman\"混排**：传 `serif_for_zh=True`，优先选 Noto Serif CJK / Source Han Serif / SimSun。\n\n详见 `references/journal_specs.md` 末尾的字体安装小节。\n\n## 脚本说明\n\n| 脚本 | 干啥 | 主入口 |\n|---|---|---|\n| `profile_data.py` | EDA：列类型 / 样本量 / 分布 / 异常 / 相关 / 初步图型建议 | `profile_data(source, group_cols)` |\n| `setup_style.py` | 期刊预设 + CJK 字体配置 + SciencePlots 包装 | `setup_style(journal, lang, use_sciplots, serif_for_zh)` |\n| `export_figure.py` | 多格式 + 按最终尺寸 + 灰度预览 | `export_figure(fig, basename, formats, dpi, size_inches, grayscale_preview)` |\n| `check_figure.py` | 文件合规自检（格式 / DPI / 字体嵌入） | `check_figure(path, min_dpi, target_inches)` |\n| `layout_tools.py` | 子图标签对齐 + constrained/tight 兜底理版 | `add_panel_labels(fig, style)` / `finalize_figure(fig)` |\n| `visual_qa.py` | 渲染 PNG 预览 + 程序自检（缺字 / 裁切 / 刻度重叠） | `render_preview(fig, out)` / `audit_layout(fig)` |\n\n## 参考文档\n\n`references/` 下七份文档——**按需 view，不要一次全读**：\n\n| 文档 | 何时读 |\n|---|---|\n| `chart_selection.md` | **每次选图必读**——决策框架、不同论点→不同图 |\n| `data_profiling.md` | 读不懂 `profile_data.py` 输出 |\n| `viz_pitfalls.md` | 自检前必读——18 条避坑清单（含 P16-18 排版/渲染坑） |\n| `journal_specs.md` | 不确定目标期刊的栏宽/字号/DPI/字体 |\n| `plot_recipes.md` | 9 类图各自的完整配方 + 适用场景 |\n| `publication_checklist.md` | 投稿前最后过形式合规清单 |\n| `visual_review.md` | 出图后视觉自检——AI 读图 8 项清单 + 回改循环协议 |\n\n每份开头都有目录——先查目录定位，再 view 对应小节。\n\n## 常见任务示例\n\n### 任务 A：用户只丢一个 CSV 说\"帮我把这个画成论文图\"\n\n**思考-绘制工作流的范例**：\n\n1. **第 0 步**：问用户\"你这份数据主要想说服读者相信什么？\"——是组间差异？时间趋势？变量关系？\n2. **第 1 步**：跑 `python scripts/profile_data.py data.csv` 得到剖析报告\n3. **第 2 步**：读报告里\"列类型 + 样本量 + 分组结构\"，结合用户的论证目标查 `chart_selection.md` 决策。**主动给出推荐 + 理由 + 1-2 备选**\n4. **拿到用户确认后**进入第 3-7 步：查期刊规范、配环境、画、自检、导出\n\n不要跳过任何一步。\n\n### 任务 B：用户说\"我想用柱状图展示三组各 5 个样本的均值\"\n\n**主动拦截的范例**：\n\n```\n你要的\"三组各 5 个样本均值柱状图\"会触发科研画图的经典 P1 错误\n（参见 viz_pitfalls.md）——n=5 太小，柱状图的高度 + 一根误差棒无法\n告诉读者数据真实分布。审稿人看到很可能要求\"show individual data points\"。\n\n我建议改成 **箱线图 + stripplot 叠加每个点**：5 个点直接可见，\n不掩盖任何信息，反而更可信。代码也只多一行。\n\n要按原方案画，还是改成箱线+stripplot？\n```\n\n如果用户坚持要柱状，那也照做——但**至少**强制叠加 stripplot 显示每个点。\n\n### 任务 C：多面板组合图\n\n用户：\"给我画一个 Figure 1：4 个 panel，分别是 PCA、loss 曲线、混淆矩阵、生存曲线。\"\n\n流程：\n1. 确认目标期刊（决定整张图 7.2 in 还是 7.16 in；Nature `a/b/c` vs IEEE `(a)(b)(c)`）\n2. 各 panel 独立画，**保证字号、配色、坐标尺度统一**（同一变量在 4 个 panel 里同色）\n3. 用 `plt.subplots(2, 2, figsize=(7.2, 5.4))` 组合（`setup_style` 已默认开 constrained_layout）\n4. `layout_tools.finalize_figure(fig)` 理顺版面，再 `add_panel_labels(fig, style='nature')` 打 a/b/c/d——**统一 figure 坐标自动横竖对齐**，不要手摆 `ax.text`（易错位，见 viz_pitfalls P18；IEEE 用 `style='ieee'` → (a)(b)(c)）\n5. **视觉自检闭环**：`render_preview` 渲 PNG → `audit_layout` 程序自检 → `Read` 读图核对子图对齐/遮盖 → 回改 → 通过后再导出 + 灰度检查\n\n详细配方见 `plot_recipes.md` 第 9 节。\n\n### 任务 D：带显著性标注的统计图\n\n用户：\"3 组数据，箱线图加显著性标注。\"\n\n流程：\n1. profile 确认 n（n<10 → 必须叠 stripplot）\n2. 跑统计检验（**用户必须告知**用了什么检验，是否多重比较校正）\n3. 画箱线 + stripplot\n4. 用 `matplotlib.lines.Line2D` 或 `statannotations` 在组之间画显著性桥\n5. **图注必须写**：误差类型 / n / 检验方法 / 校正 / 符号含义\n\n配方见 `plot_recipes.md` 第 4 节。\n\n## 依赖\n\n```\nmatplotlib>=3.7\nseaborn>=0.13\nplotly>=5.18\npandas>=2.0\nnumpy>=1.24\nscipy>=1.10            # profile_data 的偏度计算用到\nPillow>=10.0           # check_figure / grayscale preview\nSciencePlots>=2.1      # 可选；装了样式更接近期刊\npypdf>=4.0             # 可选；check_figure 字体嵌入检查\nkaleido>=0.2.1         # 可选；plotly 导出 PDF/PNG\n```\n\n可选依赖缺失时本技能仍能跑——会优雅降级并提示。\n",
+  "required_work": "Plan claim, choose chart, produce/edit and review numeric accuracy and final-size visual expression",
+  "boundary": "Reference examples may supplement this main professional workflow, not replace it.",
+  "phase": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/phase.json",
+    "id": "10fab2ec604f43d185977a3492594ab0",
+    "stage": "research",
+    "latest_instruction": "Synthetic fixed question: aggregate vs every condition"
+  },
+  "profile": "full",
+  "handoff_scope": "requested_step_only",
+  "professional_work_done": false,
+  "host_fallback_allowed": false
+}

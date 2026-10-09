@@ -1,6 +1,6 @@
 # 可选研究记录检查器与必调流程的边界
 
-v3.4.1每个当前专业步骤必须先执行[必调流程](mandatory-professional-flow.md)，调用14库内匹配的固定入口，实施工作并通过finish/check。本文的可选旧记录检查只核对声明及文件；旧记录可被解析不代表它满足当前调用规则。
+v3.5.0每个当前专业步骤必须先执行[必调流程](mandatory-professional-flow.md)，调用14库内匹配的固定入口，实施工作并通过finish/check。本文的可选旧记录检查只核对声明及文件；旧记录可被解析不代表它满足当前调用规则。
 
 `research31.py`是标准库工具，不运行模型、不判断论文是否达到顶刊，也不是操作系统沙箱。日常用一份Markdown路线板即可；准备最终交接、需要发现遗漏时可把现有记录映射到示例JSON，再检查实际文件与专业步骤覆盖。
 
@@ -22,7 +22,7 @@ python3 scripts/research31.py assess --state research-route.json --root /path/to
 
 最终表达同样必须调用匹配的真实来源入口；当前默认路由是 `anti-defensive`，读取并实施后保留原稿、终稿及受影响事实的复核。指定另一入口必须来自同14库、已核实且匹配该能力，不能仅记录当前Agent操作来替代调用。
 
-为兼容历史，旧检查器仍能解析 `final_expression.operation` 的 `actor_scope: current_host`、输入输出及步骤字段，也保留 `final_expression_repository` 的旧优先来源字段。这是历史数据兼容，不是v3.4.1的执行许可；缺少真实专业调用的旧记录保持未核验，不补造仓库、commit或完成标记。两类历史记录均保留 `facts_rechecked` 和 `review.subjects` 的稿件版本关联要求。
+为兼容历史，旧检查器仍能解析 `final_expression.operation` 的 `actor_scope: current_host`、输入输出及步骤字段，也保留 `final_expression_repository` 的旧优先来源字段。这是历史数据兼容，不是v3.5.0的执行许可；缺少真实专业调用的旧记录保持未核验，不补造仓库、commit或完成标记。两类历史记录均保留 `facts_rechecked` 和 `review.subjects` 的稿件版本关联要求。
 
 用户明确指定某来源时用 `final_expression.required_repository` 保存实际要求；来源缺失时报告受阻步骤，不改为通用推理完成。检查器不会验证用户授权真实性；即使记录与文件齐全，专业语义和科学质量仍需实际复核。
 

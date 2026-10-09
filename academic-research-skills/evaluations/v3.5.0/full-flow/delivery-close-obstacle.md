@@ -1,0 +1,1 @@
+完整五阶段的专业工作已移交至delivery。delivery阶段尚未登记新专业步骤，实际close --status completed拒绝并返回“Every professional step needs its begin/finish pair before this exit”。此前manuscript出口已消费writing/expression/review全部完成收据。不能把旧阶段记录冒充当前delivery新步骤，不能为打卡重做无信息专业工作。保留close.stderr.txt与execution.jsonl；本轮交付报告和可复算包，完整完成型关闭收据缺失。

@@ -1,0 +1,54 @@
+{
+  "schema_version": "professional-step-1",
+  "id": "54518f4e6b4046de87cc4e56d82f30dd",
+  "capability": "research-design",
+  "status": "awaiting_professional_work",
+  "started_ns": 1791556703117332000,
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/request.md",
+    "sha256": "00e092dd5ae1f6bb78d2be1a6ac4142ef867aa884ba5f33462b371095711da39"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/raw.csv",
+      "sha256": "7e7f1c02bf90891b19925a148ec94ef236e4f39b95f24e8e581d38814d69dcd7"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/feasibility.md",
+      "sha256": "0804172b0ba8eb7dd966b6899d38a218269f36aa1bb4f8d12f658ee264669b0d"
+    }
+  ],
+  "source": {
+    "status": "source_prepared",
+    "id": "sleep-experiment-plan",
+    "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+    "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+    "tree": "368ff746e2f12976b8fa6e7b2448861f44e3efd9",
+    "entry": "/Users/luca/.codex/academic-research-source-cache/sleep-experiment-plan/2132036060e03e8d0df69a4b21e5971819c0c2d6/skills/experiment-plan/SKILL.md",
+    "root": "/Users/luca/.codex/academic-research-source-cache/sleep-experiment-plan/2132036060e03e8d0df69a4b21e5971819c0c2d6",
+    "kind": "skill_protocol",
+    "dependency_installation_performed": false,
+    "research_work_done": false,
+    "host_adaptation": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists.",
+    "known_requirements": [
+      "Current-host claim/evidence planning"
+    ]
+  },
+  "required_work": "Map claims to decisive checks, controls, dependencies, run order and stopping rules",
+  "boundary": "Study design invokes kdense-design when assignment/randomization is the actual task; no native cross-model audit claimed.",
+  "phase": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/phase.json",
+    "id": "10fab2ec604f43d185977a3492594ab0",
+    "stage": "design",
+    "latest_instruction": "Synthetic fixed question: aggregate vs every condition"
+  },
+  "profile": "full",
+  "handoff_scope": "requested_step_only",
+  "professional_work_done": false,
+  "host_fallback_allowed": false,
+  "support_file_count": 2,
+  "full_receipt": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/design-start.json",
+  "guide_path": "/Users/luca/.codex/academic-research-source-cache/sleep-experiment-plan/2132036060e03e8d0df69a4b21e5971819c0c2d6/skills/experiment-plan/SKILL.md",
+  "guide_read_required": true,
+  "next_action": "Read the actual entry and needed mode/support resources, then perform the professional work. This receipt is preparation only."
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "professional-step-1",
+  "id": "2f469c67b01d4b39b229fdb1bf0ec3f5",
+  "capability": "manuscript-review",
+  "status": "awaiting_professional_work",
+  "started_ns": 1791556924295248000,
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/request.md",
+    "sha256": "00e092dd5ae1f6bb78d2be1a6ac4142ef867aa884ba5f33462b371095711da39"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/report.md",
+      "sha256": "216fea3ac34fe766d23b125ed4c4cd7f97252a856900d114303237682c34a11a"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/analysis.md",
+      "sha256": "45c20cfb3d13a1e3201ffc7894d4bc56ee78b77a63408178f3a93a21fa1d1859"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/raw.csv",
+      "sha256": "7e7f1c02bf90891b19925a148ec94ef236e4f39b95f24e8e581d38814d69dcd7"
+    }
+  ],
+  "source": {
+    "status": "source_prepared",
+    "id": "kdense-critical",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+    "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-critical/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/scientific-critical-thinking/SKILL.md",
+    "root": "/Users/luca/.codex/academic-research-source-cache/kdense-critical/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "kind": "skill_protocol",
+    "dependency_installation_performed": false,
+    "research_work_done": false,
+    "host_adaptation": "Apply appraisal workflow to evidence and independent units; include actual reproducibility rerun via local protocol when requested. Do not claim clinical recommendations or cross-model review.",
+    "known_requirements": [
+      "Current host protocol; see actual entry for optional function dependencies"
+    ]
+  },
+  "required_work": "Review actual manuscript/evidence and return grounded issues with revision priorities",
+  "boundary": "Current-host review is not independent cross-model peer review.",
+  "phase": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/phase.json",
+    "id": "10fab2ec604f43d185977a3492594ab0",
+    "stage": "manuscript",
+    "latest_instruction": "Synthetic fixed question: aggregate vs every condition"
+  },
+  "profile": "focused",
+  "handoff_scope": "requested_step_only",
+  "professional_work_done": false,
+  "host_fallback_allowed": false,
+  "support_file_count": 10,
+  "full_receipt": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/review-start.json",
+  "guide_path": "/Users/luca/.codex/academic-research-source-cache/kdense-critical/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/scientific-critical-thinking/SKILL.md",
+  "guide_read_required": true,
+  "next_action": "Read the actual entry and needed mode/support resources, then perform the professional work. This receipt is preparation only."
+}

@@ -1,0 +1,1 @@
+The synthetic reminder group had one no-show in ten appointments, compared with three in ten for the control group; the total was four in twenty. The record supports these descriptive counts. It does not establish random assignment, statistical significance, causality or applicability to real schools. The text remains a local validation draft.

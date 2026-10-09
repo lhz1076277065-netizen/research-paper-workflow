@@ -224,13 +224,36 @@ def register_completion(state, begun, finished):
 def professional_exit(state, starts, finishes):
     """Check current step artifacts before the CLI records a research stage exit."""
     if state['scope']=='maintenance':return []
-    if not starts or len(starts)!=len(finishes):raise PhaseError('Every professional step needs its begin/finish pair before this exit')
+    if len(starts)!=len(finishes):raise PhaseError('Every professional step needs its begin/finish pair before this exit')
     import capabilities as C
     import professional_flow as F
     index=load(C.index_path());checked=[]
+    if not starts:
+        if state['scope']!='full' or state['stage']!='delivery' or 'professional_pending' not in state or any(x['status']!='cancelled' for x in state['professional_pending']):
+            raise PhaseError('Every professional step needs its begin/finish pair before this exit')
+        prior=[x for x in state.get('professional_steps',[]) if x.get('stage')=='manuscript']
+        last_exit=next((x for x in reversed(state['history']) if x.get('event')=='stage_exit'),{})
+        if not prior or last_exit.get('stage')!='manuscript':
+            raise PhaseError('Delivery needs a verified completed manuscript stage')
+        # Delivery may only collect existing artifacts; it must not repeat their professional work.
+        for step in prior:
+            start=Path(step['started']).resolve();finish=Path(step['finished']).resolve()
+            begun_bytes=start.read_bytes();complete_bytes=finish.read_bytes()
+            identity={'started_sha256':hashlib.sha256(begun_bytes).hexdigest(),'finished_sha256':hashlib.sha256(complete_bytes).hexdigest()}
+            if any(step.get(k)!=v for k,v in identity.items()):
+                raise PhaseError('Completed manuscript receipt identity is missing or changed')
+            begun=json.loads(begun_bytes);context=begun.get('phase',{})
+            if context.get('id')!=state['id'] or context.get('stage')!='manuscript' or context.get('latest_instruction')!=state['latest_instruction']:
+                raise PhaseError('Completed manuscript belongs to another phase or instruction')
+            result=F.check(index,begun,json.loads(complete_bytes))
+            if step!={**result,'stage':'manuscript','started':str(start),'finished':str(finish),**identity}:
+                raise PhaseError('Completed manuscript record changed')
+        return []
     previous={x['step_id'] for x in state.get('professional_steps',[])}
     for start,finish in zip(starts,finishes):
-        begun=load(start);complete=load(finish);r=F.check(index,begun,complete)
+        start=Path(start).resolve();finish=Path(finish).resolve()
+        begun_bytes=start.read_bytes();complete_bytes=finish.read_bytes()
+        begun=json.loads(begun_bytes);complete=json.loads(complete_bytes);r=F.check(index,begun,complete)
         context=begun.get('phase')
         if not context or context.get('id')!=state['id'] or context.get('stage')!=state['stage'] or context.get('latest_instruction')!=state['latest_instruction']:
             raise PhaseError('Professional step is not bound to this phase and latest instruction')
@@ -241,7 +264,8 @@ def professional_exit(state, starts, finishes):
         registered=next((x for x in state.get('professional_pending',[]) if x['step_id']==r['step_id']),None)
         if registered and (registered['started']!=str(Path(start).resolve()) or registered.get('finished') not in {None,str(Path(finish).resolve())}):
             raise PhaseError('Receipt paths differ from the registered professional step')
-        checked.append({**r,'stage':state['stage'],'started':str(Path(start).resolve()),'finished':str(Path(finish).resolve())})
+        checked.append({**r,'stage':state['stage'],'started':str(start),'finished':str(finish),
+            'started_sha256':hashlib.sha256(begun_bytes).hexdigest(),'finished_sha256':hashlib.sha256(complete_bytes).hexdigest()})
     if 'professional_pending' in state:
         pending={x['step_id'] for x in state['professional_pending'] if x['stage']==state['stage'] and x['status']!='cancelled'}
         if {x['step_id'] for x in checked}!=pending:

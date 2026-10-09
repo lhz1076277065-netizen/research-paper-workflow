@@ -1,0 +1,65 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "167af13b29974504be10738b66e2f341",
+  "capability": "final-expression",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/request.md",
+    "sha256": "18f7e31ddccc5918fd2895dc0ba93c9ee4d6e3623c249499daeccb01bee2d742"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/draft.md",
+      "sha256": "aca5e41742362fa33a09664dca9886259ea36ac879c78af0453ff6be3ee49509"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/final.md",
+      "sha256": "759d6a17a1d8f5a6aa2b1a85f0b747af670a7624c796714b6b5cd08f7205249d"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/expression-work.json",
+    "sha256": "fedff917ea2305fadca194f71206ae85a789e678d9917f67fe14ca5ff1ab1a40"
+  },
+  "use": {
+    "id": "anti-defensive",
+    "repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+    "entry": "skills/anti-defensive-writing/SKILL.md",
+    "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "final_expression"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/draft.md",
+        "sha256": "aca5e41742362fa33a09664dca9886259ea36ac879c78af0453ff6be3ee49509"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/final.md",
+        "sha256": "759d6a17a1d8f5a6aa2b1a85f0b747af670a7624c796714b6b5cd08f7205249d"
+      }
+    ],
+    "steps": [
+      "按证据保持适配整理问题—缺口—比较目标—预期意义，缩短重复防守句；保留保护层效果与机制待验状态，不增加新结果、长期难题或录用保证。",
+      "将段落保持在研究问题、现有适用范围、拟比较目的和预期价值上，未扩展实验或写成过程日志。对上游宣传已证明价值、删不利结果等建议不作事实强化，采用begin boundary指定的证据保持适配。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Keep evidence and scope; rhetorical advice cannot remove material uncertainty or overstate results."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

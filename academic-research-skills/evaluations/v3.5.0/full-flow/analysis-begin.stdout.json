@@ -1,0 +1,55 @@
+{
+  "schema_version": "professional-step-1",
+  "id": "5463cc16812641b1af77bdafe80c6314",
+  "capability": "analysis-execution",
+  "status": "awaiting_professional_work",
+  "started_ns": 1791556735058155000,
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/request.md",
+    "sha256": "00e092dd5ae1f6bb78d2be1a6ac4142ef867aa884ba5f33462b371095711da39"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/raw.csv",
+      "sha256": "7e7f1c02bf90891b19925a148ec94ef236e4f39b95f24e8e581d38814d69dcd7"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/design.md",
+      "sha256": "7a6d5be1f5e61aef04bed37efc851721639d8d257b5f3542df55c1527a85bc6e"
+    }
+  ],
+  "source": {
+    "status": "source_prepared",
+    "id": "kdense-statistics",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "tree": "35fd988ef776bf95706d8eb82195f2db99ee71d0",
+    "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/statistical-analysis/SKILL.md",
+    "root": "/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "kind": "skill_protocol",
+    "dependency_installation_performed": false,
+    "research_work_done": false,
+    "host_adaptation": "Use only the requested statistical substep with actual independent units and an appropriate method. No mandatory all-library installation for descriptive-only work. Native examples require their documented environment. Formal/interpretive research requires a separately verified matching entry.",
+    "known_requirements": [
+      "Python3.12+ and documented isolated scientific Python environment for native scripts; see entry for actual library versions",
+      "Current-host protocol selection/interpretation can use appropriate inspected local functions; no native-stack claim without actual execution"
+    ]
+  },
+  "required_work": "Apply appropriate analysis to real inputs, compare baselines and bound interpretation",
+  "boundary": "Statistical/descriptive tasks use KDense; ML analysis bundles use Scholar. Formal proof or interpretive tasks require a verified matching entry before proceeding.",
+  "phase": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/phase.json",
+    "id": "10fab2ec604f43d185977a3492594ab0",
+    "stage": "research",
+    "latest_instruction": "Synthetic fixed question: aggregate vs every condition"
+  },
+  "profile": "full",
+  "handoff_scope": "requested_step_only",
+  "professional_work_done": false,
+  "host_fallback_allowed": false,
+  "support_file_count": 8,
+  "full_receipt": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/analysis-start.json",
+  "guide_path": "/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/statistical-analysis/SKILL.md",
+  "guide_read_required": true,
+  "next_action": "Read the actual entry and needed mode/support resources, then perform the professional work. This receipt is preparation only."
+}

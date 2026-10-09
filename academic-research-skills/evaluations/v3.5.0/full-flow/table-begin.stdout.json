@@ -1,0 +1,54 @@
+{
+  "schema_version": "professional-step-1",
+  "id": "6262988a41254ecc96a4466f393cf65a",
+  "capability": "scientific-visualization",
+  "status": "awaiting_professional_work",
+  "started_ns": 1791556801313094000,
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/request.md",
+    "sha256": "00e092dd5ae1f6bb78d2be1a6ac4142ef867aa884ba5f33462b371095711da39"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/analysis.md",
+      "sha256": "45c20cfb3d13a1e3201ffc7894d4bc56ee78b77a63408178f3a93a21fa1d1859"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/raw.csv",
+      "sha256": "7e7f1c02bf90891b19925a148ec94ef236e4f39b95f24e8e581d38814d69dcd7"
+    }
+  ],
+  "source": {
+    "status": "source_prepared",
+    "id": "scipilot-figure",
+    "repository": "Haojae/scipilot-figure-skill",
+    "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "tree": "525ddacb9bb2ded6c165f8829af5111c5e9ffc64",
+    "entry": "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42/SKILL.md",
+    "root": "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "kind": "skill_protocol",
+    "dependency_installation_performed": false,
+    "research_work_done": false,
+    "host_adaptation": "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function.",
+    "known_requirements": [
+      "matplotlib/numpy/pandas/seaborn; SciencePlots optional"
+    ]
+  },
+  "required_work": "Plan claim, choose chart, produce/edit and review numeric accuracy and final-size visual expression",
+  "boundary": "Reference examples may supplement this main professional workflow, not replace it.",
+  "phase": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/phase.json",
+    "id": "10fab2ec604f43d185977a3492594ab0",
+    "stage": "research",
+    "latest_instruction": "Synthetic fixed question: aggregate vs every condition"
+  },
+  "profile": "full",
+  "handoff_scope": "requested_step_only",
+  "professional_work_done": false,
+  "host_fallback_allowed": false,
+  "support_file_count": 16,
+  "full_receipt": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/full-flow/table-start.json",
+  "guide_path": "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42/SKILL.md",
+  "guide_read_required": true,
+  "next_action": "Read the actual entry and needed mode/support resources, then perform the professional work. This receipt is preparation only."
+}

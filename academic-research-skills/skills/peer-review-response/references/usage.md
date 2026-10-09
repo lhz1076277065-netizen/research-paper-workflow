@@ -1,4 +1,4 @@
-> 本文说明可选的旧结构检查接口。v3.4.1每个专业步骤仍须执行[必调流程](mandatory-professional-flow.md)；显式预算或长任务还须登记[阶段控制](phase-control.md)。结构检查不能替代专业来源调用。
+> 本文说明可选的旧结构检查接口。v3.5.0每个专业步骤仍须执行[必调流程](mandatory-professional-flow.md)；显式预算或长任务还须登记[阶段控制](phase-control.md)。结构检查不能替代专业来源调用。
 
 # 独立使用与可选脚本
 

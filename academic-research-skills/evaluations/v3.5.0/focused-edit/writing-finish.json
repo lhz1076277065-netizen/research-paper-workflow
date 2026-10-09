@@ -1,0 +1,67 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "4330c83115cb46328b37b0c157bab050",
+  "capability": "manuscript-writing",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/request.md",
+    "sha256": "18f7e31ddccc5918fd2895dc0ba93c9ee4d6e3623c249499daeccb01bee2d742"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/input.md",
+      "sha256": "f4e71592e74fda49a1a4d1bc0379d6f50686199fb02c9a53b57ac69723b33163"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/draft.md",
+      "sha256": "aca5e41742362fa33a09664dca9886259ea36ac879c78af0453ff6be3ee49509"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/writing-work.json",
+    "sha256": "e53bde15885b9cd94ecb0d37ebf2197268de75c342596c0688ab69e462e822e6"
+  },
+  "use": {
+    "id": "kdense-writing",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/scientific-writing/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "writing",
+      "ethics",
+      "publication"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/input.md",
+        "sha256": "f4e71592e74fda49a1a4d1bc0379d6f50686199fb02c9a53b57ac69723b33163"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/validation-v3.5.0/focused-edit/draft.md",
+        "sha256": "aca5e41742362fa33a09664dca9886259ea36ac879c78af0453ff6be3ee49509"
+      }
+    ],
+    "steps": [
+      "先从真实input建立局部证据提纲与unverified来源/主张记录；不填比较结果与机制结论，未核项另存unresolved。仅生成请求的一段引言。",
+      "将作者希望证实的效果改为拟比较、评价可能性，保留暂无结果；四段主线只涵盖局部相关环节。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

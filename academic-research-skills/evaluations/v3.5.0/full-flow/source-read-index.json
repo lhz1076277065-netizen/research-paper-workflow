@@ -1,0 +1,66 @@
+[
+  {
+    "receipt": "analysis-start.json",
+    "source_id": "kdense-statistics",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "read_guide_sha256": "e112848726b3713267cac65e4e2c15491a0a26ee1ed628db01195f7e43f97997",
+    "copy": "read-sources/analysis-start-guide.md"
+  },
+  {
+    "receipt": "design-start.json",
+    "source_id": "sleep-experiment-plan",
+    "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+    "read_guide_sha256": "c5b53692ff95b0b55e80702e33afc79d9fe8d4f55a69e2a39714013f97ac595e",
+    "copy": "read-sources/design-start-guide.md"
+  },
+  {
+    "receipt": "expression-start.json",
+    "source_id": "anti-defensive",
+    "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+    "read_guide_sha256": "6f072e66f6adf813bc1b4291754f2bc07ed4e65a398359844e97bfa215a1c28e",
+    "copy": "read-sources/expression-start-guide.md"
+  },
+  {
+    "receipt": "intake-start.json",
+    "source_id": "scholar-intake",
+    "commit": "903787345d6aec134086afa2b97715a78fbde519",
+    "read_guide_sha256": "8fd82b93e2bfc83dda4fffe036a219848141b41cc2d90520f0eca93ccabc4437",
+    "copy": "read-sources/intake-start-guide.md"
+  },
+  {
+    "receipt": "review-start.json",
+    "source_id": "kdense-critical",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "read_guide_sha256": "563af70571b7dcd6a96bf2e303bedfdcba623b4e9f082d58f04aacbc961fdae4",
+    "copy": "read-sources/review-start-guide.md"
+  },
+  {
+    "receipt": "table-start.json",
+    "source_id": "scipilot-figure",
+    "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "read_guide_sha256": "79e7438109306d40638728ba8adaadf7312d486215189b320e157ab2e382adcc",
+    "copy": "read-sources/table-start-guide.md"
+  },
+  {
+    "receipt": "writing-start.json",
+    "source_id": "kdense-writing",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "read_guide_sha256": "511a2096bebecd8cf0f8212b9d262d37154ae1ba566eb385d93ac968682edbd1",
+    "copy": "read-sources/writing-start-guide.md"
+  },
+  {
+    "shared_reference": "phase-control.md",
+    "sha256": "7a85fdca4646467be6d0e5f8e019635297e90fca86f81f80a79ae9cb2660a928",
+    "copy": "read-sources/phase-control.md"
+  },
+  {
+    "shared_reference": "mandatory-professional-flow.md",
+    "sha256": "17c8329ed1c31f10291e5d70174eec9122f903dc7af4de9316176f4fb2886681",
+    "copy": "read-sources/mandatory-professional-flow.md"
+  },
+  {
+    "shared_reference": "research-quality.md",
+    "sha256": "0d7508fcbb73c52469d04a20bbddb35837ed75980d1ef7470591778a2802af92",
+    "copy": "read-sources/research-quality.md"
+  }
+]
