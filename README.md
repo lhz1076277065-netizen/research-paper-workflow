@@ -4,7 +4,7 @@
 
 [中文指南](academic-research-skills/README.zh-CN.md) · [English](academic-research-skills/README.md) · [开始使用](academic-research-skills/START_HERE.md) · [四段论证](academic-research-skills/docs/research-quality.md#四段科学论证主线) · [版本与来源](academic-research-skills/docs/RELEASE-v3.5.0.zh-CN.md)
 
-本轮提供v3.5.0本机构建的运行包、维护源码包、一键安装包及SHA256；安装默认替换~/.agents/skills下19项并备份旧版，下一轮加载新提示。[安装与回退](academic-research-skills/INSTALLATION.zh-CN.md)。线上已发布的[v3.4.1](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.4.1)及其文件保留；本轮未发布新GitHub版本。
+[v3.5.0正式版](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.5.0)提供同一提交的运行包、维护源码包、一键安装包及SHA256；安装默认替换~/.agents/skills下19项并备份旧版，下一轮加载新提示。[下载一键安装包](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.0/academic-research-skills-v3.5.0-one-click.zip) · [安装与回退](academic-research-skills/INSTALLATION.zh-CN.md)。历史[v3.4.1](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.4.1)标签与文件保留。
 
 完整研究把当前路线板作为后续专业调用输入；每项必要实验说明支持哪一主张、何种结果会改变路线。证据足够及时成稿；局部改写不扩展研究。技术质量、重要性、证据和清晰论证共同决定贡献，四段框架不保证顶刊录用。
 

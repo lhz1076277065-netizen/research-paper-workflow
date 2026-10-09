@@ -1,14 +1,17 @@
-# v3.5.0 本机构建与来源导航
+# v3.5.0 正式发行与来源导航
 
-本轮更新维护源码、生成19个独立能力，并交付同一提交的安装包及可回退本机升级。线上已发布的[v3.4.1](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.4.1)保持不变；本轮未发布GitHub新版本。
+[v3.5.0正式发行页](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.5.0)交付19个独立能力及同一提交的运行包、源码包和一键安装包，支持可回退安装。10月9日本地验收保留原范围，10月10日发布另附新收据与CI结果。历史[v3.4.1](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.4.1)标签和文件保持不变。
 
 | 交付文件 | 用途 |
 |---|---|
-| academic-research-skills-v3.5.0-one-click.zip | 固定运行ZIP、安装器、检查与备份恢复 |
-| academic-research-skills-v3.5.0.zip | 19个独立能力及日常使用资源 |
-| academic-research-skills-v3.5.0-source.zip | 维护源、测试、当前行为验收和历史档案 |
-| academic-research-skills-v3.5.0-SHA256SUMS.txt | 三个ZIP身份核验 |
-| DELIVERY-RECEIPT.json | 本轮源码提交、验收范围及真实安装结果 |
+| [academic-research-skills-v3.5.0-one-click.zip](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.0/academic-research-skills-v3.5.0-one-click.zip) | 固定运行ZIP、安装器、检查与备份恢复 |
+| [academic-research-skills-v3.5.0.zip](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.0/academic-research-skills-v3.5.0.zip) | 19个独立能力及日常使用资源 |
+| [academic-research-skills-v3.5.0-source.zip](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.0/academic-research-skills-v3.5.0-source.zip) | 维护源、测试、当前行为验收和历史档案 |
+| [academic-research-skills-v3.5.0-SHA256SUMS.txt](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.0/academic-research-skills-v3.5.0-SHA256SUMS.txt) | 三个ZIP身份核验 |
+| [DELIVERY-RECEIPT.json](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.0/DELIVERY-RECEIPT.json) | 发布源码提交、包身份、CI与当前安装核验范围 |
+| [INSTALLER-SELFCHECK.json](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.0/INSTALLER-SELFCHECK.json) | 重建安装包的9项隔离安装、回退和保护检查 |
+| [VALIDATION.zh-CN.md](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.0/VALIDATION.zh-CN.md) | 本地历史与本次发布验收的实际覆盖、失败及限制 |
+| [SHA256SUMS.txt](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.0/SHA256SUMS.txt) | 发布包与上述报告的文件摘要 |
 
 [开始](../START_HERE.md) · [安装与回退](../INSTALLATION.zh-CN.md) · [主线及官方依据](research-quality.md#四段科学论证主线) · [必调流程](mandatory-professional-flow.md) · [预算与恢复](phase-control.md)。
 

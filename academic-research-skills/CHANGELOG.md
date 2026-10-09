@@ -1,12 +1,12 @@
 # Changelog
 
-## 3.5.0 — scientific argument framework, 2026-10-09
+## 3.5.0 — stable scientific argument framework, 2026-10-10
 
 Integrate an evidence-revisable four-part argument across the orchestrator and all eighteen specialists: an evidenced gap, prior limitations or competing explanations, contribution with discriminating tests, and new knowledge with boundaries. Keep the existing route board as current professional input and phase evidence; connect necessary experiments to decision consequences and figures to supported claims. Revise the story after contrary results rather than selecting evidence to fit it.
 
 Fix the empty-delivery completion failure found by forward testing: revalidate consumed manuscript receipts and current identities before closing without another professional step; reject pending work, changed artifacts and unknown history. Count preparation and final delivery within the original time budget.
 
-Preserve mandatory matching calls to the fourteen repositories, all 23 pinned entries, bounded phases, recovery and legacy interfaces. Focused edits and protocols remain scoped; hypotheses and future value are not reported as results. Official guidance is cited with its actual scope, without a universal top-journal formula or publication promise. Local packages and reversible upgrade; no new GitHub publication in this turn. Current evidence is in evaluations/v3.5.0.
+Preserve mandatory matching calls to the fourteen repositories, all 23 pinned entries, bounded phases, recovery and legacy interfaces. Focused edits and protocols remain scoped; hypotheses and future value are not reported as results. Official guidance is cited with its actual scope, without a universal top-journal formula or publication promise. Publish runtime, source and one-click packages with matching commit identities, SHA256 and reversible installation. Local implementation and behavioral evidence from October 9 remains in evaluations/v3.5.0; the release adds a separate publication receipt and fresh GitHub CI results. See docs/RELEASE-v3.5.0.zh-CN.md.
 
 ## 3.4.1 — stable, 2026-10-05
 
