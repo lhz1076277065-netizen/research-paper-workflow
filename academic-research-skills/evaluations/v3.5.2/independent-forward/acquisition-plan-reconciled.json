@@ -1,0 +1,12 @@
+{
+  "needs": [
+    {
+      "purpose": "比较指定开发/验证分组下线性预测与常数预测",
+      "subset": "observations.csv id1–24，id,x,y；整包仅取此成员",
+      "access": "本地服务/session免费鉴权；/bundle只提供2307byte ZIP，额外other-region.bin不解压"
+    }
+  ],
+  "expected_download_bytes": 0,
+  "expected_peak_project_bytes": 400000,
+  "reconciliation": "完成后只登记既有响应；未来下载0bytes，原初始计划保留，不重置累计计数。"
+}

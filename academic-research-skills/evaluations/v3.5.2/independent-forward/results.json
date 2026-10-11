@@ -1,0 +1,88 @@
+{
+  "data_kind": "synthetic software fixture",
+  "source_sha256": "ec1d8c1c39b37a8a0a4741b2bf8105091bd192c570b79a8b0db869b6a4038f5f",
+  "development_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "validation_ids": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "model": {
+    "intercept": 3.0,
+    "slope": 2.0,
+    "constant": 22.0,
+    "decimal_reproduction_matches": true
+  },
+  "metrics": {
+    "development": {
+      "linear": {
+        "n": 18,
+        "MAE": 0.0,
+        "MSE": 0.0,
+        "RMSE": 0.0,
+        "maximum_absolute_error": 0.0
+      },
+      "constant": {
+        "n": 18,
+        "MAE": 9.0,
+        "MSE": 107.66666666666667,
+        "RMSE": 10.376254944182254,
+        "maximum_absolute_error": 17.0
+      }
+    },
+    "validation": {
+      "linear": {
+        "n": 6,
+        "MAE": 0.0,
+        "MSE": 0.0,
+        "RMSE": 0.0,
+        "maximum_absolute_error": 0.0
+      },
+      "constant": {
+        "n": 6,
+        "MAE": 24.0,
+        "MSE": 587.6666666666666,
+        "RMSE": 24.241837114102278,
+        "maximum_absolute_error": 29.0
+      }
+    }
+  },
+  "diagnostics": {
+    "missing": 0,
+    "duplicate_ids": 0,
+    "development_x_range": [
+      1.0,
+      18.0
+    ],
+    "validation_x_range": [
+      19.0,
+      24.0
+    ],
+    "linearity": "exact deterministic line in this fixture",
+    "residual_variance": "zero for linear; stochastic normality/variance tests not meaningful",
+    "independence": "not established as scientific sampling; ordered synthetic rows",
+    "inference": "no population CI, p value or scientific superiority claim"
+  }
+}

@@ -1,16 +1,18 @@
 ---
 name: manuscript-review
-description: "当需要科学内容审查、论证诊断或稿件一致性检查时使用；指出影响结论的缺口和可执行修订，不自动重建研究。"
+description: "审查稿件科学贡献、证据和论证，指出必要修订。"
 metadata:
-  version: "3.5.1"
+  version: "3.5.2"
 ---
 
 # 科学贡献、证据与表达审查
 
-先执行 [必调流程](references/mandatory-professional-flow.md)：调用 professional_flow.py begin，小型清单用--profile focused调用K-Dense，完整评审用Academic入口；阅读入口及必要资源，按其专业流程处理当前输入。finish/check通过才移交。严禁绕过来源代替专业执行；缺入口/依赖按[阶段控制](references/phase-control.md)自主修复或换库内匹配入口；禁host_fallback。下载或无关函数不算专业完成。
-
 按[四段科学论证主线](references/research-quality.md)审查缺口真实性、最强近邻评价、判别证据和新增认识/范围；定位断链，区分表达缺陷与科学缺口。贡献不足回传具体研究动作并撤回受影响就绪判断；证据足够即成稿，改表达后核事实，局部审查只处理指定范围。
 
-默认computational-autonomous；executor为当前Agent，research_model为科研对象/算法；自主选择方法，改造或新写代码，保存实际证据。详见[原参考](references/protocol.md)。
+先[必调流程](references/mandatory-professional-flow.md)：begin选14库匹配入口，读本步资源并实施，finish/check才移交；禁止绕过来源或host_fallback。缺入口自主修复/换库内匹配实现。
 
-交付成果、实际证据、来源版本与完成范围。显式预算/长任务用[阶段控制](references/phase-control.md)记录预算与步骤；复用同版核验任务。局部无预算的阶段脚本是可选工具，不作为日常前置；专业调用必执行。
+默认computational-autonomous；executor当前Agent，research_model研究算法/对象。自主选择证据与成本适配的方法，改造或新写代码，保存实际证据。
+
+获取前[容量与访问](references/data-acquisition.md)：累计下载和项目占用各最多200 GB，只取所需；常规登录/免费条款/token沿用用户授权自主处理。
+
+只读本步必要资源，[协议](references/protocol.md)按需。长任务/显式预算用[阶段控制](references/phase-control.md)续接原预算；局部无预算的阶段脚本是可选工具，不作为日常前置。

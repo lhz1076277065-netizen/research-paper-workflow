@@ -184,7 +184,7 @@ def main(argv=None):
     sub=p.add_subparsers(dest='op',required=True)
     a=sub.add_parser('begin');a.add_argument('--capability',required=True);a.add_argument('--task',required=True)
     a.add_argument('--input',action='append',required=True);a.add_argument('--source');a.add_argument('--allow-network',action='store_true')
-    a.add_argument('--cache',default=str(Path.home()/'.codex/academic-research-source-cache'));a.add_argument('--phase');a.add_argument('--profile',choices=['focused','full']);a.add_argument('--compact',action='store_true');a.add_argument('--out',required=True)
+    a.add_argument('--cache',default=str(Path.home()/'.codex/academic-research-source-cache'));a.add_argument('--phase');a.add_argument('--profile',choices=['focused','full']);a.add_argument('--compact',action='store_true');a.add_argument('--full',action='store_true',help='Include the guide in stdout; complete receipts are always saved');a.add_argument('--out',required=True)
     a=sub.add_parser('finish');a.add_argument('--started',required=True);a.add_argument('--output',action='append',required=True)
     a.add_argument('--work-report',required=True);a.add_argument('--mode',choices=['adapted_in_host','native_in_host'],default='adapted_in_host');a.add_argument('--out',required=True)
     a=sub.add_parser('check');a.add_argument('--started',required=True);a.add_argument('--finished',required=True)
@@ -202,7 +202,7 @@ def main(argv=None):
         if a.op=='begin':
             shown={**r,'source':{k:v for k,v in r['source'].items() if k!='files'},
                 'support_file_count':len(r['source']['files']),'full_receipt':str(Path(a.out).resolve())}
-            if a.compact:
+            if a.compact or not a.full:
                 shown.pop('guide')
                 shown.update(guide_path=r['source']['entry'],guide_read_required=True,
                     next_action='Read the actual entry and needed mode/support resources, then perform the professional work. This receipt is preparation only.')

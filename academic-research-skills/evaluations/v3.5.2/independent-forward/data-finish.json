@@ -1,0 +1,73 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "d8eba84ce9904f3a8777f77f169e9562",
+  "capability": "data-discovery",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/request.md",
+    "sha256": "d8e422c70ac3197f5e33e5c4ae3d59366282665152f45e737997b1044c63329e"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/service-metadata.txt",
+      "sha256": "72271930dd7953e799010ad1953d048dcde39b9fd8c8bdc8f816c58737d75fe0"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/data-report.md",
+      "sha256": "f4db63dcf2932bf62b0f3ac414ea0861e1c8af047a52fe12d82e4cdc4f542fec"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/derived/observations.csv",
+      "sha256": "ec1d8c1c39b37a8a0a4741b2bf8105091bd192c570b79a8b0db869b6a4038f5f"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/data-work.json",
+    "sha256": "cc425250562bc301ef8006621d989d6c57f3c0df8302b22a8a8f28ad9bbd0288"
+  },
+  "use": {
+    "id": "kdense-database",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/database-lookup/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "data_discovery"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/service-metadata.txt",
+        "sha256": "72271930dd7953e799010ad1953d048dcde39b9fd8c8bdc8f816c58737d75fe0"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/data-report.md",
+        "sha256": "f4db63dcf2932bf62b0f3ac414ea0861e1c8af047a52fe12d82e4cdc4f542fec"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/derived/observations.csv",
+        "sha256": "ec1d8c1c39b37a8a0a4741b2bf8105091bd192c570b79a8b0db869b6a4038f5f"
+      }
+    ],
+    "steps": [
+      "先查元数据、明确唯一ID和必要变量；按授权自主登录，规划整包和所需成员共存空间；受管下载仅2307bytes且只解压目标成员，核验24条唯一ID。",
+      "先查元数据、明确唯一ID和必要变量；按授权自主登录，规划整包和所需成员共存空间；受管下载仅2307bytes且只解压目标成员，核验24条唯一ID。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Read the relevant retrieval contract/reference; apply actual authorization, bounded API retrieval, filters and provenance. Unsupported domains need a verified matching entry, not invented API results."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

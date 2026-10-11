@@ -1,7 +1,7 @@
 {
-  "version": "3.5.1",
-  "generated_at": "2026-10-11T20:41:48.631320+00:00",
-  "tests_run": 705,
+  "version": "3.5.2",
+  "generated_at": "2026-10-11T21:13:16.393796+00:00",
+  "tests_run": 743,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
@@ -15,9 +15,10 @@
     "test_pdf_extract": 2,
     "test_phase_control": 37,
     "test_portability": 50,
-    "test_professional_flow": 27,
+    "test_professional_flow": 29,
     "test_quality31": 72,
     "test_release": 57,
+    "test_research_storage": 36,
     "test_research_tools": 18,
     "test_result_links": 59,
     "test_stage_recovery": 28,
@@ -1344,6 +1345,14 @@
       "status": "passed"
     },
     {
+      "id": "test_professional_flow.Step.test_cli_default_omits_guide_but_saved_receipt_preserves_it",
+      "status": "passed"
+    },
+    {
+      "id": "test_professional_flow.Step.test_cli_full_retains_legacy_guide_output",
+      "status": "passed"
+    },
+    {
       "id": "test_professional_flow.Step.test_cli_research_process_needs_source_begin_before_launch",
       "status": "passed"
     },
@@ -1941,6 +1950,150 @@
     },
     {
       "id": "test_release.WorkgraphAutonomy.test_ready_writer_conflict_with_running_writer",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_actual_download_identity_and_only_planned_need",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_archive_expansion_is_bounded_before_writing",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_archive_traversal_and_symlink_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_bulk_archive_extracts_only_needed_member",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_check_accounts_for_derived_and_model_files",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_compact_resume_keeps_complete_state_and_latest_actions",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_concurrent_operation_cannot_start",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_cross_origin_redirect_does_not_leak_bearer",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_cumulative_limit_rejects_new_contact_even_after_cleanup",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_default_decimal_200gb_and_disk_reserve",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_duplicate_archive_members_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_estimated_transfer_must_be_replanned_before_larger_acquisition",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_existing_inputs_count_in_peak",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_external_receipt_counts_once_and_retains_already_incurred_excess",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_external_symlinks_cannot_hide_storage",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_files_named_like_metadata_do_not_hide_capacity",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_free_space_checked_before_plan_and_download",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_header_bound_rejects_without_payload_written",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_linked_phase_guard_refuses_storage_growth_without_closing_goal",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_login_and_denial_are_recoverable_without_false_data",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_missing_secret_uses_no_network",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_need_without_subset_or_purpose_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_no_length_stream_cannot_exceed_bound",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_no_overwrite_or_path_escape",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_no_plan_refuses_before_contact",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_nonintegral_limits_and_negative_estimates",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_paused_phase_prevents_contact",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_peak_and_future_transfer_estimates_must_fit",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_phase_cannot_switch_to_a_new_data_quota",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_project_copy_cannot_reset_a_quota_identity",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_replan_preserves_original_ceiling",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_retry_and_deletion_never_reset_transfer",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_tar_regular_subset_no_links",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_truncation_counts_received_bytes_and_preserves_partial",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_unknown_historical_transfers_are_not_zero",
+      "status": "passed"
+    },
+    {
+      "id": "test_research_storage.Storage.test_upper_limit_cannot_be_raised",
       "status": "passed"
     },
     {

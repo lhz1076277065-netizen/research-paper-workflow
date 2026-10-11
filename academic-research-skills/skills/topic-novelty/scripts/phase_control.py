@@ -79,10 +79,20 @@ def usage_delta(state):
     values['noncached_input_plus_output']=values['total_tokens']-values['cached_input_tokens']
     return values
 
-def guard(state, estimated_seconds=0, estimated_tokens=0, clock=None):
+def guard(state, estimated_seconds=0, estimated_tokens=0, clock=None, storage=False, estimated_bytes=0, transfer_bytes=0):
     t=now() if clock is None else clock
     number(estimated_seconds,'estimated_seconds',True); number(estimated_tokens,'estimated_tokens',True)
     reasons=[]; delta=usage_delta(state)
+    capacity=None
+    if storage and not state.get('storage') and (estimated_bytes or transfer_bytes):reasons.append('storage_plan_required')
+    if storage and state.get('storage'):
+        import research_storage as S
+        try:
+            identity=S.read(state['storage']['root'])
+            if identity['id']!=state['storage']['id']:raise S.StorageError('Storage receipt changed')
+            capacity=S.check(state['storage']['root'],identity,extra=estimated_bytes,transfer=transfer_bytes)
+            reasons.extend(capacity['reasons'])
+        except (ValueError,OSError,KeyError):reasons.append('storage_plan_needs_recovery')
     if state['status']!='active': reasons.append('phase_'+state['status'])
     if state.get('reassessment_required'): reasons.append('reassessment_required')
     total_cutoff=state['project_deadline']-state['reserve_seconds']
@@ -96,7 +106,7 @@ def guard(state, estimated_seconds=0, estimated_tokens=0, clock=None):
     return {'allowed':not reasons, 'reasons':reasons, 'status':state['status'],
         'stage':state['stage'], 'seconds_to_work_cutoff':max(0,cutoff-t),
         'usage':delta,'token_meter_verified':state['meter']['verified'],
-        'host_goal_state':'not_modified', 'scientific_completion_verified':False}
+        'host_goal_state':'not_modified', 'scientific_completion_verified':False, **({'storage':capacity} if storage else {})}
 
 def enforce(state, **kwargs):
     result=guard(state,**kwargs)
@@ -238,12 +248,19 @@ def round_result(state, changed, evidence, root):
     state['reassessment_required']=state['unchanged_rounds']>=2
     state['artifacts'].append(ref)
 
-def resume(state):
-    return {k:state.get(k) for k in ('scope','objective','latest_instruction','stage','status',
+def resume(state, compact=False):
+    result={k:state.get(k) for k in ('scope','objective','latest_instruction','stage','status',
         'project_deadline','deadline','authorization','completed_tasks','artifacts','next_action',
         'exit_reason','repairs','unchanged_rounds','reassessment_required','owned_processes','host_goal_state',
         'budget_kind','reserve_seconds','token_limit','token_reserve','meter','professional_steps',
-        'professional_pending','stage_started_at')}
+        'professional_pending','stage_started_at','storage')}
+    if compact:
+        for key in ('artifacts','completed_tasks','professional_steps'):
+            rows=result.get(key) or [];result[key+'_count']=len(rows);result[key]=rows[-3:]
+        result['professional_pending']=[{k:x.get(k) for k in ('step_id','capability','stage','status','started','finished')} for x in result.get('professional_pending') or [] if x['status']!='cancelled']
+        result['repairs']={k:{'attempt_count':len(v),'latest':v[-2:]} for k,v in (result.get('repairs') or {}).items()}
+        result['details']='Read the phase state only for relevant older artifacts, failures or receipts; this snapshot never replaces the complete record.'
+    return result
 
 def register_professional(state, begun, started):
     context=begun.get('phase')
@@ -331,14 +348,14 @@ def run(state_path, command, log_path, claim, decision, estimate=0, rollout=None
         state=load(state_path)
         if rollout: meter_rollout(state,rollout)
         if state['owned_processes']: raise PhaseError('Another phase-owned runner exists; inspect it, do not restart')
-        result=enforce(state,estimated_seconds=estimate);save(state_path,state)
+        result=enforce(state,estimated_seconds=estimate,storage=True);save(state_path,state)
         if not result['allowed']: raise PhaseError('Work blocked: '+','.join(result['reasons']))
         log=Path(log_path);log.parent.mkdir(parents=True,exist_ok=True)
         with log.open('ab') as output:
             child=subprocess.Popen(command,stdout=output,stderr=subprocess.STDOUT,start_new_session=True)
         state['owned_processes']=[{'pid':child.pid,'runner_token':token,'command':command,'log':str(log)}]
         save(state_path,state)
-    stopped=None
+    stopped=None;last_storage_check=0
     previous_handler=signal.getsignal(signal.SIGTERM)
     def interrupted(signum, frame):
         raise KeyboardInterrupt('runner terminated')
@@ -348,7 +365,9 @@ def run(state_path, command, log_path, claim, decision, estimate=0, rollout=None
             with locked(state_path):
                 state=load(state_path)
                 if rollout: meter_rollout(state,rollout)
-                g=enforce(state);save(state_path,state)
+                inspect_storage=time.monotonic()-last_storage_check>=2
+                g=enforce(state,storage=inspect_storage);save(state_path,state)
+                if inspect_storage:last_storage_check=time.monotonic()
             if not g['allowed']:
                 stopped=g['reasons'];break
             time.sleep(.2)
@@ -383,8 +402,9 @@ def main(argv=None):
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--state',required=True)
     sub=ap.add_subparsers(dest='op',required=True)
     a=sub.add_parser('init');a.add_argument('--scope',choices=['full','focused','maintenance'],required=True);a.add_argument('--objective',required=True);a.add_argument('--minutes',type=float);a.add_argument('--authority');a.add_argument('--token-limit',type=int);a.add_argument('--rollout')
-    a=sub.add_parser('guard');a.add_argument('--estimated-seconds',type=float,default=0);a.add_argument('--estimated-tokens',type=int,default=0)
-    sub.add_parser('resume')
+    a=sub.add_parser('guard');a.add_argument('--estimated-seconds',type=float,default=0);a.add_argument('--estimated-tokens',type=int,default=0);a.add_argument('--estimated-bytes',type=int,default=0);a.add_argument('--transfer-bytes',type=int,default=0)
+    a=sub.add_parser('resume');a.add_argument('--full',action='store_true',help='Return all historical artifacts and professional receipts')
+    a=sub.add_parser('storage');a.add_argument('--root',required=True)
     a=sub.add_parser('meter');a.add_argument('--rollout',required=True)
     a=sub.add_parser('authorize');a.add_argument('--minutes',type=float,required=True);a.add_argument('--authority',required=True);a.add_argument('--token-limit',type=int)
     a=sub.add_parser('advance');a.add_argument('--stage',choices=STAGES,required=True);a.add_argument('--minutes',type=float);a.add_argument('--skip-reason');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
@@ -423,7 +443,12 @@ def main(argv=None):
             else:
                 state=load(args.state)
                 if state.get('schema_version')!='research-phase-1': raise PhaseError('Legacy phase unknown; retain it and establish an explicit phase')
-                if args.op=='guard':result=enforce(state,estimated_seconds=args.estimated_seconds,estimated_tokens=args.estimated_tokens)
+                if args.op=='guard':result=enforce(state,estimated_seconds=args.estimated_seconds,estimated_tokens=args.estimated_tokens,storage=True,estimated_bytes=args.estimated_bytes,transfer_bytes=args.transfer_bytes)
+                elif args.op=='storage':
+                    import research_storage as S
+                    root=str(Path(args.root).resolve());receipt=S.read(root)
+                    if state.get('storage') and state['storage']!={'root':root,'id':receipt['id']}:raise PhaseError('A new phase cannot replace the original project quota')
+                    state['storage']={'root':root,'id':receipt['id']}
                 elif args.op=='meter':meter_rollout(state,args.rollout);enforce(state)
                 elif args.op=='authorize':authorize(state,args.minutes,args.authority,args.token_limit)
                 elif args.op=='advance':
@@ -463,7 +488,7 @@ def main(argv=None):
                     ref=artifact(args.evidence,args.root)
                     if args.status=='completed' and args.task_id not in state['completed_tasks']:state['completed_tasks'].append(args.task_id)
                     state.update(status=args.status,exit_reason=args.reason);state['artifacts'].append(ref)
-            if args.op=='resume':result={**resume(state),'guard':guard(state)}
+            if args.op=='resume':result={**resume(state,compact=not args.full),'state_path':str(Path(args.state).resolve()),'guard':guard(state,storage=True)}
             elif args.op!='guard':result={'status':state['status'],'stage':state['stage'],'usage':usage_delta(state),'host_goal_state':'not_modified'}
             if args.op!='resume':save(args.state,state)
         print(json.dumps(result,ensure_ascii=False,indent=2));return 2 if result.get('allowed') is False or (args.op=='resume' and result['guard']['allowed'] is False) else 0

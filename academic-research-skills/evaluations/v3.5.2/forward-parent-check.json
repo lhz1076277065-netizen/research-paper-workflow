@@ -1,0 +1,62 @@
+{
+  "rows": 24,
+  "training": 18,
+  "validation": 6,
+  "linear_intercept": "3",
+  "linear_slope": "2",
+  "constant": "22",
+  "validation_constant_mae": "24",
+  "validation_constant_rmse": 24.241837114102278,
+  "professional_checks": [
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "d8eba84ce9904f3a8777f77f169e9562",
+      "capability": "data-discovery",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/data-report.md",
+          "sha256": "f4db63dcf2932bf62b0f3ac414ea0861e1c8af047a52fe12d82e4cdc4f542fec"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/derived/observations.csv",
+          "sha256": "ec1d8c1c39b37a8a0a4741b2bf8105091bd192c570b79a8b0db869b6a4038f5f"
+        }
+      ],
+      "semantic_work_verified_by_tool": false
+    },
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "daf209c49ee842aea9b065492f5af4f1",
+      "capability": "analysis-execution",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/analysis-report.md",
+          "sha256": "0532726a2c3d0bcc6a48aa2715ca8765e303335859f30a2697c6f900ba9023f2"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/analyze.py",
+          "sha256": "c8901d5ecf27188c85cd935b73059396ff2ddb6e50e78b2fb69b91309c367efc"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/results.json",
+          "sha256": "77d317e806eac017a88ad84686f3c039f9c5ebc788060417af46745e35d3c2d4"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/predictions.csv",
+          "sha256": "5424568e245af3a691f0c7fe9531095677f9289d888bb61d5fc115a0e69f630e"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/diagnostic.svg",
+          "sha256": "0fbec1076a44ff4281994dec06f1bc1772d2755b173b80f175933f3908b67187"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work/diagnostic.png",
+          "sha256": "2ef7c7a57421ab5455916a32cb7b896d6b1a5a38884c89c058fba7c38a4ecad9"
+        }
+      ],
+      "semantic_work_verified_by_tool": false
+    }
+  ],
+  "scope": "Parent recomputed synthetic CSV and revalidated both frozen professional receipts. No actual paper or real login portal tested.",
+  "pinned_entry_blobs_reverified": true
+}

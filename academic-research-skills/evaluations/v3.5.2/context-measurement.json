@@ -1,0 +1,23 @@
+{
+  "before": {
+    "entry_bytes": 29423,
+    "shared_reference_bytes": 127900,
+    "default_full_research_read_bytes": 37691
+  },
+  "after": {
+    "entry_bytes": 26160,
+    "shared_reference_bytes": 120012,
+    "default_full_research_read_bytes": 23218
+  },
+  "reductions_percent": {
+    "entry_bytes": 11.09,
+    "shared_reference_bytes": 6.17,
+    "default_full_research_read_bytes": 38.4
+  },
+  "begin_stdout_bytes": {
+    "legacy_full": 21552,
+    "new_default": 2321
+  },
+  "begin_stdout_reduction_percent": 89.23,
+  "scope": "Measured UTF-8 bytes for current default guidance and actual offline source routing. Not host token usage; upstream required modes still must be read."
+}

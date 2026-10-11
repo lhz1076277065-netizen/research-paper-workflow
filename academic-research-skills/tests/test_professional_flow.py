@@ -36,6 +36,17 @@ class Step(unittest.TestCase):
         return start,F.finish(self.idx,start,[out],report,'adapted_in_host'),out,report
     def test_default_begin_reads_real_source_before_work(self):
         r=self.begin();self.assertEqual(r['source']['id'],'fixture');self.assertEqual(r['guide'],self.guide.decode());self.assertFalse(r['professional_work_done'])
+    def test_cli_default_omits_guide_but_saved_receipt_preserves_it(self):
+        index=self.root/'index.json';index.write_text(json.dumps(self.idx));out=self.root/'start.json'
+        result=subprocess.run([sys.executable,str(ROOT/'scripts/professional_flow.py'),'--index',str(index),'begin','--capability','topic-novelty','--task',str(self.task),'--input',str(self.input),'--cache',str(self.cache),'--out',str(out)],capture_output=True,text=True)
+        self.assertEqual(result.returncode,0,result.stderr);shown=json.loads(result.stdout)
+        self.assertNotIn('guide',shown);self.assertTrue(shown['guide_read_required'])
+        self.assertEqual(Path(shown['guide_path']).read_bytes(),self.guide)
+        saved=json.loads(out.read_text());self.assertEqual(saved['guide'],self.guide.decode());F.validate_start(self.idx,saved)
+    def test_cli_full_retains_legacy_guide_output(self):
+        index=self.root/'index.json';index.write_text(json.dumps(self.idx));out=self.root/'start.json'
+        result=subprocess.run([sys.executable,str(ROOT/'scripts/professional_flow.py'),'--index',str(index),'begin','--capability','topic-novelty','--task',str(self.task),'--input',str(self.input),'--cache',str(self.cache),'--full','--out',str(out)],capture_output=True,text=True)
+        self.assertEqual(result.returncode,0,result.stderr);self.assertEqual(json.loads(result.stdout)['guide'],self.guide.decode())
     def test_unmatched_source_cannot_be_selected(self):
         with self.assertRaises(F.FlowError):F.begin(self.idx,'topic-novelty',self.task,[self.input],self.cache,'unrelated')
     def test_missing_offline_source_blocks_without_fallback(self):

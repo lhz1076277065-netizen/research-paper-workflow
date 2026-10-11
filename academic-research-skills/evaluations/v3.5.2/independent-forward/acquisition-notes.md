@@ -1,0 +1,1 @@
+只需 observations.csv 的 id,x,y 与24条记录，id1–18用于估计，19–24预先固定最终验证。元数据只支持整包下载2307bytes；选取 observations.csv（202bytes），无关 other-region.bin 展开2000000bytes超过验收配额，不读取/不解压。包含指导收据、代码和导出预估峰值400000bytes，配额512000bytes；保留磁盘10GB。元数据探测已发生，字节数 681 单列。免费本地条款已有真实授权，自主鉴权。

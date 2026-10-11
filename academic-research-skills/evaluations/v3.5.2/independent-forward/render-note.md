@@ -1,0 +1,1 @@
+环境缺少cairosvg，未下载安装；用已有Pillow按predictions.csv绘制等价PNG供人工视觉诊断。SVG源和PNG均保留。

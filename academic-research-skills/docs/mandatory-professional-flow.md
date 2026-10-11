@@ -1,25 +1,21 @@
 # 每个专业步骤必须先调用指定来源
 
-本规则适用于总控与所有独立专业 skill，优先于旧参考中“候选”“按需调用”“独立继续”或 host_fallback 的说法。维护、安装与预算记录不属于科研专业步骤，不启动科研。选题、检索、精读、设计、数据、分析、图稿、审查、投稿准备和局部写作都适用；不得先凭通用推理完成成果再补记调用。
+适用于总控与19专业能力，包括局部写作、选题、数据、实验、图稿和审查。维护/安装不启动研究。本规则优先于旧参考的候选、host_fallback或自行继续说法。
 
-每一步必须从用户指定的14个仓库中调用匹配的真实入口，读取入口及本步需要的资源，实施其专业流程，再将产物用于下一步或交付。Agent在该流程内分析判断；禁止绕开它另写通用答案。参考书、代码或工作台须如实记录其类型；参考或导出函数不能代替完整专业流程。
+每步从指定14库调用匹配真实入口，阅读当前适用模式/必要资源，实施其流程后才能输出成果；不得先自行完成再补调用。参考资源、代码工具、Skill和工作台如实区分；准备、读指导和无关函数不等于专业执行。Agent在专业流程内判断，不要求每篇调用全部仓库。
 
 ## 必经操作
 
-1. 将当前请求和真实输入保存到任务目录；完整研究及显式预算任务先init对应full/focused阶段并沿用预算和最新指令，begin须加 `--phase project/phase.json`，在预算检查后绑定当前阶段。执行 `professional_flow.py begin`，默认按能力路由选取已核实的源码缓存，无须用户另行点名仓库。begin --compact只返回入口真实路径、所需工作与准备记录，避免长JSON截断；默认仍兼容输出入口全文。compact时必须打开guide_path，阅读本步适用模式及支持文件后再工作，不能把路径返回当作已读。
-2. 按上游流程完成**本次请求范围**的专业工作，保存结果；记录来源条款怎样改变本步决策及结果位置。局部写作不扩展成全研究；固定问题不重新发散选题；不为完成调用强行启动应用、模型或无限循环。完整研究按[四段科学论证主线](research-quality.md#四段科学论证主线)将现有路线板纳入begin的真实输入，产物回填本步涉及的缺口、局限、判别证据或认知边界；work-report的applied和output_excerpt定位这项实际变化或有据保留。首步建立主线，未知保持待检验。局部任务只记录相关主张，不为调用创建全研究材料。软件验证文件关联，不能自动认证四段内容成立。
-3. 完成 work-report 后执行 `finish` 和 `check`，检查通过才移交产物或进入下一专业步骤。只有准备源码、读取指导、运行无关函数、历史测试或早于本步的产物不能完成本步。完整研究的阶段出口还要提交该阶段所有已调用步骤的开始/完成记录。
+1. 保存当前请求与真实输入；完整/显式预算任务先登记phase并沿用最新指令/原预算。begin --phase绑定当前阶段；默认自动选已核验入口，stdout精简，完整收据仍存盘，--full可显示全文。必须打开guide_path读取本步相关段和支持文件，不能把返回路径当已读，不能为瘦身跳过专业流程。无需读取全部源码、能力索引或19个Skill。
+2. 按上游流程完成本次范围，把具体条款、实施和输出位置关联。完整研究把现有[四段路线板](research-quality.md#四段科学论证主线)作为输入并回填本步支持/反证/边界；局部任务只记录有关主张。科研资料获取另遵守[容量与访问](data-acquisition.md)。
+3. 写短work-report，finish/check通过才移交下一专业步骤或交付；完整研究出口核对当前全部专业收据。失败先[自主解阻](phase-control.md#自主解阻与继续研究)，不把状态填齐当完成。
 
 ```bash
-python3 scripts/professional_flow.py begin --compact --capability topic-novelty \
-  --task project/request.md --input project/materials.md --out project/topic-start.json
-# 阅读返回的真实 SKILL.md 及有关支持资源，实施专业工作，生成 candidates.md。
-python3 scripts/professional_flow.py finish --started project/topic-start.json \
-  --output project/candidates.md --work-report project/topic-work.json --out project/topic-finish.json
-python3 scripts/professional_flow.py check --started project/topic-start.json --finished project/topic-finish.json
+python3 scripts/professional_flow.py begin --capability topic-novelty --task project/request.md --input project/materials.md --out project/start.json
+# 实际阅读guide_path及相关资源并实施，生成本步输出。
+python3 scripts/professional_flow.py finish --started project/start.json --output project/result.md --work-report project/work.json --out project/finish.json
+python3 scripts/professional_flow.py check --started project/start.json --finished project/finish.json
 ```
-
-work-report 是短操作记录，字段如下；actions覆盖实际返回的所有产物。source_excerpt引用已准备文件中的原文，output_excerpt引用本步文本结果，applied说明具体应用与结果；它们不是打卡口号。非文本产物用 output_sha256 和 observation 记录实际检查结果，保留图稿的数值与视觉复核。
 
 ```json
 {
@@ -29,26 +25,24 @@ work-report 是短操作记录，字段如下；actions覆盖实际返回的所�
   "functions_run": false,
   "actions": [{
     "source_file": "真实入口或所读支持文件的仓库相对路径",
-    "source_excerpt": "对应专业条款原文",
-    "applied": "本次怎样实际实施该条款，产生什么判断",
-    "output": "project/candidates.md的实际路径",
-    "output_excerpt": "当前结果中的对应原文"
+    "source_excerpt": "对应条款原文",
+    "applied": "实际实施及如何改变判断",
+    "output": "本步真实输出路径",
+    "output_excerpt": "结果中的对应原文"
   }]
 }
 ```
 
-工具核对来源、先后次序、任务/输入/输出版本和关联，不自动证明专业语义正确。当前Agent仍须核对本步所需流程是否实质完成，不得填写虚假动作或把部分执行写成完成。材料不足可形成该流程支持的条件判断或明确障碍，不能虚报科研结果。
+actions覆盖所有输出；二进制产物用output_sha256、observation记实际观察。工具检查来源、先后、文件版本及关联，不能自动认证语义/原创性。省略必要工作、虚填动作、引用早于本步的成果不能通过实质验收。
 
 ## 自动路由与不可用时的处理
 
-`assets/capability-index.json` 的 professional_routes 覆盖所有专业子 skill，并含表达、演示与工作台子流程；默认选题为 Orchestra 的 brainstorming-research-ideas。已经固定的问题用同库清单内 Scholar 的 research-ideation 问题卡/证据门，不再次启动开放选题。小型稿件清单/证据审查用--profile focused自动选K-Dense critical-thinking；绑定focused阶段会自动选择该入口，完整评审使用Academic入口。指定另一匹配入口时用 --source；不能用不相关入口凑数。支持文件允许按本步需要读取，不要求全量载入。
+professional_routes默认选题Orchestra brainstorming-research-ideas；已固定问题用Scholar research-ideation问题卡。focused小审查选K-Dense critical-thinking，完整评审选Academic。--source可选其他匹配入口，不能凑不相关调用。--compact保留兼容，默认已经精简；原API/完整存盘guide保持。
 
-缺缓存时可在已授权联网范围内加 --allow-network，仍逐文件核验固定 commit/blob。源不可用、能力不匹配或依赖失败时，先按[自主解阻](phase-control.md#自主解阻与继续研究)诊断并修复缓存/环境、使用已有运行时或调用同14库另一已核实匹配入口；保存真实错误并验证替代路径，不能仅报障等待人类。切换实现前有据取消失效步骤；新入口仍须begin、阅读实施、finish/check，禁止host_fallback或自行推理冒充专业完成。确需新入口，先在同14库发现、读源码与依赖、固定版本、补充项目索引和实际路由，再开始该步骤；保护已有固定缓存，不覆写为未核验源码。用户明确限定的来源不能静默替换。文献、数据库、普通科研软件及上游流程内的原创代码不受skill仓库清单限制。
+缺缓存时在已授权网络内--allow-network逐文件核commit/blob；环境/依赖失效先修复、用已有运行时或同14库匹配替代，实际验证后继续。切换前有据cancel-step；新入口仍begin/read/apply/finish/check。新入口须同14库发现、读源/依赖、固定版本并补项目索引/真实路由，不覆写核验缓存，不host_fallback。明确限定的来源不可静默替换；普通科研软件、论文、数据和上游内原创代码不限于Skill仓库。
 
-同一任务同一阶段的已完成步骤与同版源码可复用；check须确认请求范围及输入/输出仍对应，不用旧阶段记录完成新阶段。新问题、新材料或新版本不得借旧记录绕过调用。绑定phase的begin/finish会自动登记，resume返回当前步骤的开始/完成路径；出口拒绝遗漏登记步骤。恢复读取当前步骤记录、最新指令、产物与下一动作；失败不重置预算，不反复安装。旧记录信息不足保持unknown，不虚称符合新规则，也不重跑已结束研究。
+同阶段同版输入/输出的已完成步骤check后可复用；同一未完步骤resume，不重复begin。新问题/材料/版本或新阶段不能借旧收据过门。phase绑定自动登记开始/完成；出口拒绝遗漏；旧记录未知不追溯虚造。预算触顶保存交付预留，不启动下一步；单阶段计划不足先重排或选有效小检验。
 
 ## 完成范围与交付预留
 
-finish/check的completed_for_handoff仅表示本次请求的专业产物可以移交，新增收据明确requested_step_only及submission_readiness=not_assessed。草稿、研究报告与正式投稿稿分别标记；上游具名人工核验未完成时保留待核验状态，不虚填verified，也不把格式检查通过或专业移交写成投稿就绪。该待核验状态不阻断Agent可自主开展的补证、复算、审查与全文写作；记录实际机器/Agent核验，不冒充具名人类。真实伦理许可、作者确认或实际提交授权另行遵守。局部文本只维护本次实质主张所需记录，直接使用上游模板/schema的字段与枚举；不为短改写创建全稿准入材料。
-
-显式预算任务必须登记phase，即使是局部请求；总预算的交付预留用于保存和交付，不再开始下一专业步骤。预估动作超出当前阶段计划时先重排时间或选择仍有判别力的小检验；超出真实总预算及预留才交付实际范围。下一步只使用上一专业步骤check通过的冻结输出；恢复同一未完成步骤不再次begin。
+completed_for_handoff只说明requested_step_only，submission_readiness=not_assessed。图稿检查、导出和文件数不表示论文可投稿；草稿/研究报告/正式稿分别标记。上游具名人工核验未做保留unverified，同时继续Agent可做的补证/复算/审查/全文写作，不能冒充人类verified或用此默认阻断研究。作者、伦理和实际投稿授权遵循真实要求。局部写作直接用上游schema字段/枚举维护有关主张，不增加全稿审批材料。

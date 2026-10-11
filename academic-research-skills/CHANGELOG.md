@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.5.2 — local bounded acquisition and context maintenance, 2026-10-12
+
+Plan project capacity before acquiring data; enforce persistent cumulative transfer and local footprint ceilings through bounded download/extraction, preserve counters across retries, and integrate phase storage checks. Handle ordinary authorized access autonomously. Shorten default guidance and CLI output while retaining complete receipts, evidence requirements and mandatory professional sources. This update is local, not GitHub-published.
+
 ## 3.5.1 — local autonomous recovery maintenance, 2026-10-12
 
 Recover engineering blockers through the existing reassess interface, with preserved attempt history and budget baselines. Separate adjustable stage plans from hard total limits; permit evidence-backed return from writing to research. Synchronize the orchestrator and eighteen specialists: diagnose, compare alternatives, validate the best feasible path and continue within the original goal. A failed pilot, missing complete input or reviewer recommendation for a partial report no longer implies full-target closure. Preserve mandatory calls to the fourteen repositories and genuine scientific, permission and resource constraints. GitHub v3.5.0 remains unchanged; v3.5.1 is a local maintenance update. See docs/RELEASE-v3.5.1.zh-CN.md.

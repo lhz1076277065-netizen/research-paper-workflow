@@ -1,0 +1,51 @@
+{
+  "schema": "research-storage-1",
+  "id": "5f4b7d1b26fa4366a988927868e08daa",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v352-forward-test/work",
+  "limit_bytes": 512000,
+  "reserve_bytes": 10000000000,
+  "downloaded_bytes": 3047,
+  "operations": [
+    {
+      "kind": "download",
+      "source": "http://127.0.0.1:51068/bundle",
+      "need": 0,
+      "output": "raw/bundle.zip",
+      "bytes": 2307,
+      "status": "completed",
+      "sha256": "8d78431fe1de2321a4d6672fb33c9cdb6ec6366c958351117a16247dfbb30532"
+    },
+    {
+      "kind": "extract",
+      "archive": "raw/bundle.zip",
+      "output": "derived",
+      "members": [
+        "observations.csv"
+      ],
+      "bytes": 202,
+      "status": "completed"
+    },
+    {
+      "kind": "external_reported_transfer",
+      "bytes": 740,
+      "need": 0,
+      "evidence": "access-log.json",
+      "evidence_sha256": "bac9bde32cd10d0f522094be7a68ff7fe768aa5d4ac99882596f507cf0ae16b4",
+      "actual_bytes_independently_verified": false
+    }
+  ],
+  "plan": {
+    "needs": [
+      {
+        "purpose": "比较指定开发/验证分组下线性预测与常数预测",
+        "subset": "observations.csv id1–24，id,x,y；整包仅取此成员",
+        "access": "本地服务/session免费鉴权；/bundle只提供2307byte ZIP，额外other-region.bin不解压"
+      }
+    ],
+    "expected_download_bytes": 0,
+    "expected_peak_project_bytes": 400000,
+    "reconciliation": "完成后只登记既有响应；未来下载0bytes，原初始计划保留，不重置累计计数。"
+  },
+  "planned_at": 1791753052.958722,
+  "plan_transfer_baseline": 3047
+}
