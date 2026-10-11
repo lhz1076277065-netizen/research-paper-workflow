@@ -1,8 +1,8 @@
 # Changelog
 
-## 3.5.2 — local bounded acquisition and context maintenance, 2026-10-12
+## 3.5.2 — stable autonomous recovery, bounded acquisition and compact context, 2026-10-12
 
-Plan project capacity before acquiring data; enforce persistent cumulative transfer and local footprint ceilings through bounded download/extraction, preserve counters across retries, and integrate phase storage checks. Handle ordinary authorized access autonomously. Shorten default guidance and CLI output while retaining complete receipts, evidence requirements and mandatory professional sources. This update is local, not GitHub-published.
+Plan project capacity before acquiring data; enforce persistent cumulative transfer and local footprint ceilings through bounded download/extraction, preserve counters across retries, and integrate phase storage checks. Handle ordinary authorized access autonomously. Shorten default guidance and CLI output while retaining complete receipts, evidence requirements and mandatory professional sources. Published as the v3.5.2 stable release, including the previously local v3.5.1 recovery changes. Runtime, source and one-click assets identify the same source commit.
 
 ## 3.5.1 — local autonomous recovery maintenance, 2026-10-12
 
