@@ -1,0 +1,39 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "a5e67cbbc8924d8b98c9e4692eb3495c",
+  "scope": "focused",
+  "objective": "这是软件行为测试材料，不是真实科研数据。请依上传CSV比较方法A与B的绝对误差，并分别拟合误差随scale的线性关系，给出可复算结果、比较图和中文短论文稿。沿用现有阶段状态、真实预算及研究目标，自动解决执行障碍，按当前Skill处理专业步骤；无需人类干预。不要联网获取新课题资料，不改其他项目。本次测试总预算10分钟（含准备、修复、调用及交付），无需追加预算。",
+  "latest_instruction": "这是软件行为测试材料，不是真实科研数据。请依上传CSV比较方法A与B的绝对误差，并分别拟合误差随scale的线性关系，给出可复算结果、比较图和中文短论文稿。沿用现有阶段状态、真实预算及研究目标，自动解决执行障碍，按当前Skill处理专业步骤；无需人类干预。不要联网获取新课题资料，不改其他项目。本次测试总预算10分钟（含准备、修复、调用及交付），无需追加预算。",
+  "status": "active",
+  "stage": "focused",
+  "started_at": "2026-10-11T20:33:27.081482+00:00",
+  "deadline": 1791751407.081482,
+  "project_deadline": 1791751407.081482,
+  "reserve_seconds": 60.0,
+  "budget_kind": "authorized_total",
+  "authorization": "这是软件行为测试材料，不是真实科研数据。请依上传CSV比较方法A与B的绝对误差，并分别拟合误差随scale的线性关系，给出可复算结果、比较图和中文短论文稿。沿用现有阶段状态、真实预算及研究目标，自动解决执行障碍，按当前Skill处理专业步骤；无需人类干预。不要联网获取新课题资料，不改其他项目。本次测试总预算10分钟（含准备、修复、调用及交付），无需追加预算。",
+  "token_limit": null,
+  "token_reserve": 0,
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [],
+  "artifacts": [],
+  "history": [],
+  "repairs": {
+    "retired_stats_helper unavailable": [
+      "Run uploaded script in original Python environment",
+      "Run uploaded script in bundled Python environment"
+    ]
+  },
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": null,
+  "owned_processes": [],
+  "professional_pending": [],
+  "stage_started_at": "2026-10-11T20:33:27.081482+00:00",
+  "host_goal_state": "not_modified"
+}

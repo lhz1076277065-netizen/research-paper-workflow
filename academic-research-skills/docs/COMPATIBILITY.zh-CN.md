@@ -1,3 +1,9 @@
+# v3.5.1 当前验证范围
+
+本地维护版沿用research-phase-1、14库固定入口及旧接口，新增现有reassess的可选参数。当前实测及限制见源码evaluations/v3.5.1/VALIDATION.zh-CN.md，维护导航见[这里](RELEASE-v3.5.1.zh-CN.md)。以下数字全部保留为v3.5.0及v3.4.1历史证据，不能代替本次验证。
+
+## 历史验证范围
+
 # v3.5.0 支持与验证范围
 
 本版新增四段科学论证的阶段与能力指引，运行接口与来源固定身份保持兼容。v3.5.0在macOS ARM64/Python3.12.14通过693项主回归、30项兼容检查、19项入口核验、生成一致性和便携自检；Python3.9.6完成9项隔离安装与回退检查。本机19项共1252份文件已核验。独立局部改写复测166秒交付；完整合成行为首测的收束失败与严格总计时未知仍保留，不追溯改为通过。正式发布的Linux双版本/PDF CI、重建安装包检查与文件身份另见[发行页附件](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.5.0)中的VALIDATION.zh-CN.md和DELIVERY-RECEIPT.json。

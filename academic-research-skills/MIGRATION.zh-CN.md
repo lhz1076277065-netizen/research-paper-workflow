@@ -1,3 +1,11 @@
+# v3.5.1 自主解阻迁移
+
+从v3.5.0替换19个完整能力目录并核验metadata.version为3.5.1；保留已核验14库源码缓存。旧research-phase-1记录无需转换。active阶段遇障用reassess记录真实诊断、替代比较与下一验证；--blocker复评原障碍后允许新的不同尝试，--minutes只重排阶段计划，--stage只回到同一或更早研究阶段。总截止、token基点、原目标和失败记录不重置。
+
+旧route_closed不会自动启动；实际用户明确续做时用reassess --authority记录原指令并选择当前验证。paused仍须真实恢复，completed与closed_limit不可被复评覆盖。不要把新Skill安装当作研究续做授权，也不补造旧专业收据。当前v3.5.1仅本地交付，未修改GitHub已发布v3.5.0。见[阶段控制](docs/phase-control.md)及[维护导航](docs/RELEASE-v3.5.1.zh-CN.md)。
+
+## v3.5.0及更早迁移记录
+
 # v3.5.0 论证主线迁移
 
 从v3.4.1升级时替换19个完整目录，备份旧版并核验metadata.version为3.5.0。共享维护源、独立能力与根目录兼容副本同步；14库、23固定入口、来源收据、阶段与旧记录接口不变，无需清空已核验源码缓存。

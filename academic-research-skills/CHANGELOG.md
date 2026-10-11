@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.5.1 — local autonomous recovery maintenance, 2026-10-12
+
+Recover engineering blockers through the existing reassess interface, with preserved attempt history and budget baselines. Separate adjustable stage plans from hard total limits; permit evidence-backed return from writing to research. Synchronize the orchestrator and eighteen specialists: diagnose, compare alternatives, validate the best feasible path and continue within the original goal. A failed pilot, missing complete input or reviewer recommendation for a partial report no longer implies full-target closure. Preserve mandatory calls to the fourteen repositories and genuine scientific, permission and resource constraints. GitHub v3.5.0 remains unchanged; v3.5.1 is a local maintenance update. See docs/RELEASE-v3.5.1.zh-CN.md.
+
 ## 3.5.0 — stable scientific argument framework, 2026-10-10
 
 Integrate an evidence-revisable four-part argument across the orchestrator and all eighteen specialists: an evidenced gap, prior limitations or competing explanations, contribution with discriminating tests, and new knowledge with boundaries. Keep the existing route board as current professional input and phase evidence; connect necessary experiments to decision consequences and figures to supported claims. Revise the story after contrary results rather than selecting evidence to fit it.

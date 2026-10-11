@@ -1,0 +1,153 @@
+{
+  "version": "3.5.1",
+  "four_professional_checks": [
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "595f14c98a7241e599fc55449fee2e38",
+      "capability": "analysis-execution",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/analysis.py",
+          "sha256": "0e5f76daa4702d2e9356eed527c5e99ad2fa41802f1410fbdf8e20ef440d3d30"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/analysis-plan.md",
+          "sha256": "d7177037f773bbb4869d39f9e76a63ce5211ed5e6973bc8de2c3e567da8bf6d5"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/results.json",
+          "sha256": "4c6f978154d57f48075665e38ca3ab3ed97f0c177b32183b54a52093bb1a22ce"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/errors-and-fits.csv",
+          "sha256": "3cd6b7538309077d1052a16abb7bc256436f850f6915f6815f1eaaa7c9560594"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/analysis-environment.json",
+          "sha256": "7173a534166a92ad02c011be1afcb8f32a0e72e068c4755b0d1b950478fce2f0"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/analysis-report.md",
+          "sha256": "613ae5322437824956a935ebf649bec4400312d97754c6b9dc10dbfff96dae98"
+        }
+      ],
+      "semantic_work_verified_by_tool": false
+    },
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "fa7308bb10fc481ab01c7d79c2f2d2f8",
+      "capability": "scientific-visualization",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-plan.md",
+          "sha256": "875b19ca711df719f413ecc34a7eb1a6a57f6cf7828b23d9ce830b725d1a3ae6"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/draw_comparison.py",
+          "sha256": "884696f0fd2a73e2d5c7c4bdb40a4f7cf03df1c16074a91bb7daa04cec21b9c1"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/comparison.svg",
+          "sha256": "24b8b8e24e06d369aa8b62bffe8ebfeeb7a4ada049df555ae3d700d1eb82d382"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/comparison.png",
+          "sha256": "48754f9c2febaea1c6c136c283eba8ad1e75e584c6b6aa180f0f5f70b80188f7"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/comparison-grayscale.png",
+          "sha256": "d2394d8c8083945d6e8fe0354324f8f8d3983c1a581cf247651e08fc07495ec5"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-machine-qa.json",
+          "sha256": "1d3096f92ddadda1f41456a6e5f6f70bb5ca8d9481b687ad9855d7ec01863386"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-review.md",
+          "sha256": "06ebd59126e4f234da500a7ecea560399e3d0d8052b59c1426ef7f7a4c9e36e0"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-caption.md",
+          "sha256": "704d35ffd92603f08f7c2e90367a3a43f66a3b7eaafae49240264b5c9e4de247"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-data-profile.log",
+          "sha256": "93037c43f536ea0d3e11da3bcb4fa1da1e863bdd1a3a19513bcba8f328d2cd73"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-native-file-check.log",
+          "sha256": "a26e32f9df67573e2ac7b78e8261fa1c270578098150494c1faf98fc257ef856"
+        }
+      ],
+      "semantic_work_verified_by_tool": false
+    },
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "f5d59dc4e83f4f2b9d48a31650f87dda",
+      "capability": "manuscript-writing",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/evidence-outline.md",
+          "sha256": "d97593bfd63fdb10c28f9fd68bac6343fd2bf6ab78da682f541e7f3c42cc7974"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/manuscript.md",
+          "sha256": "9e41d7fce43ee530e4b857f5d653b3ba205bc7375fe1084212b1ff499989b2b5"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/source_manifest.json",
+          "sha256": "fff21adc754314512d993dd14a06122f460795f6ac9fc4af143e1df664c5a3d0"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/claims.csv",
+          "sha256": "37de214f8e64eab69b7dd244dec2198acc1b3922be37e5e24371326fdef03f7d"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/consistency_manifest.json",
+          "sha256": "1d026f73280e184808aa5cc79f9639429b79bbb36337f22604440305ac3dd287"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/writing-review.md",
+          "sha256": "3279ea81e9165fd226fca4ce98144574b446b6bce6a33e259c25aebd4b72c547"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/writing-consistency-check.log",
+          "sha256": "56b9460333954a0b7b9de884ac7fc5573ac8d2cc0240be97f146139355ac64cb"
+        }
+      ],
+      "semantic_work_verified_by_tool": false
+    },
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "5032525d05ba4cc6befa167d42db84fc",
+      "capability": "robustness-reproducibility",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/verify_results.py",
+          "sha256": "091990c0dfd0fa113993d0a917dd401e5cd4a20933c0bb9caeb50c7eecc97adb"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/verification.json",
+          "sha256": "5ef658e89193498c83101f85b857d97af0dffa1eb47519be0f9b0d79054677ee"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/verification-run.log",
+          "sha256": "e77a9dc55ea8ea922c185e7e0bfd09671b02dd0b88b453cca35862b33cb1f2c4"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/critical-review.md",
+          "sha256": "cbed355b33e94a7723e5ac32bfe04b6ac05d6ef1d0841afe31ef78a65fdc712d"
+        }
+      ],
+      "semantic_work_verified_by_tool": false
+    }
+  ],
+  "original_state_preserved": true,
+  "completed_at_seconds": 589.7087604999542,
+  "last_saved_artifact_seconds": 589.7087604999542,
+  "original_budget_seconds": 600,
+  "scientific_truth_certified": false,
+  "full_original_paper_lifecycle_tested": false,
+  "token_budget_verified": false,
+  "final_message_end_to_end_timing_verified": false
+}

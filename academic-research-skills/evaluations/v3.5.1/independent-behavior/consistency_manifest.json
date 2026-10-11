@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "numeric_facts": [
+    {
+      "fact_id": "N001",
+      "concept": "MAE_A",
+      "section": "摘要",
+      "value": 0.925,
+      "unit": "CSV units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 24,
+      "analysis_set": "all 24 software test records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N002",
+      "concept": "MAE_B",
+      "section": "摘要",
+      "value": 0.45,
+      "unit": "CSV units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 24,
+      "analysis_set": "all 24 software test records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N003",
+      "concept": "MAE_relative_reduction",
+      "section": "摘要",
+      "value": 0.5135135135135135,
+      "unit": "proportion",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 24,
+      "analysis_set": "all 24 software test records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N004",
+      "concept": "n",
+      "section": "摘要",
+      "value": 24,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 24,
+      "analysis_set": "all 24 software test records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N005",
+      "concept": "MAE_A",
+      "section": "结果",
+      "value": 0.925,
+      "unit": "CSV units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 24,
+      "analysis_set": "all 24 software test records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N006",
+      "concept": "MAE_B",
+      "section": "结果",
+      "value": 0.45,
+      "unit": "CSV units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 24,
+      "analysis_set": "all 24 software test records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N007",
+      "concept": "MAE_relative_reduction",
+      "section": "结果",
+      "value": 0.5135135135135135,
+      "unit": "proportion",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 24,
+      "analysis_set": "all 24 software test records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N008",
+      "concept": "n",
+      "section": "结果",
+      "value": 24,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 24,
+      "analysis_set": "all 24 software test records",
+      "evidence_ids": [
+        "E003"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "analysis_intent": "descriptive",
+      "method_id": "M001",
+      "name": "Paired absolute errors and arithmetic MAE",
+      "outcome_ids": [
+        "O001"
+      ],
+      "protocol_status": "prespecified"
+    },
+    {
+      "analysis_intent": "descriptive",
+      "method_id": "M002",
+      "name": "OLS with intercept, Decimal exact and independent numpy check",
+      "outcome_ids": [
+        "O002",
+        "O003"
+      ],
+      "protocol_status": "prespecified"
+    }
+  ],
+  "results": [
+    {
+      "analysis_intent": "descriptive",
+      "evidence_ids": [
+        "E003"
+      ],
+      "method_id": "M001",
+      "outcome_id": "O001",
+      "reported_sections": [
+        "摘要",
+        "方法",
+        "结果"
+      ],
+      "result_id": "R001",
+      "sample_size": 24
+    },
+    {
+      "analysis_intent": "descriptive",
+      "evidence_ids": [
+        "E003"
+      ],
+      "method_id": "M002",
+      "outcome_id": "O002",
+      "reported_sections": [
+        "摘要",
+        "方法",
+        "结果"
+      ],
+      "result_id": "R002",
+      "sample_size": 24
+    },
+    {
+      "analysis_intent": "descriptive",
+      "evidence_ids": [
+        "E003"
+      ],
+      "method_id": "M002",
+      "outcome_id": "O003",
+      "reported_sections": [
+        "摘要",
+        "方法",
+        "结果"
+      ],
+      "result_id": "R003",
+      "sample_size": 24
+    }
+  ]
+}

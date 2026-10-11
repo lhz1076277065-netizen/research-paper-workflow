@@ -1,0 +1,12 @@
+[
+  {
+    "environment": "/usr/bin/python3",
+    "returncode": 1,
+    "log": "original-environment.log"
+  },
+  {
+    "environment": "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "returncode": 1,
+    "log": "bundled-environment.log"
+  }
+]

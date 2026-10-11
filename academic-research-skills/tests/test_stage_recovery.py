@@ -136,6 +136,36 @@ class InterruptedFlow(unittest.TestCase):
   self.assertEqual(after['status'],'completed');self.assertEqual(after['completed_tasks'],['fixture'])
   self.assertEqual(after['professional_steps'],before['professional_steps']);self.assertEqual(len(files),4)
   self.assertEqual(set(self.root.glob('*-start.json')),files);self.assertEqual(after['project_deadline'],before['project_deadline'])
+ def test_manuscript_gap_returns_to_research_with_new_source_bound_work(self):
+  before=self.full_chain()
+  self.call('phase_control.py','--state',self.phase,'reassess','--stage','research','--minutes','2','--evidence','evidence.md','--root',self.root,'--next-action','Test the missing discriminating fixture condition')
+  state=P.load(self.phase)
+  self.assertEqual(state['stage'],'research');self.assertEqual(state['project_deadline'],before['project_deadline'])
+  self.assertEqual(state['professional_steps'],before['professional_steps'])
+  with patch.object(C,'index_path',return_value=self.index):
+   with self.assertRaises(P.PhaseError):P.professional_exit(state,[self.root/'manuscript-start.json'],[self.root/'manuscript-finish.json'])
+  self.begin('revision');self.finish('revision');state=P.load(self.phase)
+  with patch.object(C,'index_path',return_value=self.index):steps=P.professional_exit(state,[self.root/'revision-start.json'],[self.root/'revision-finish.json'])
+  P.advance(state,'manuscript','evidence.md',self.root,'Write only the now supported fixture claim');P.consume_professional(state,steps)
+  self.assertEqual(state['stage'],'manuscript');self.assertEqual(len(state['professional_steps']),5)
+  self.assertEqual(state['professional_pending'],[])
+  self.assertEqual(state['professional_steps'][-1]['step_id'],C.load(self.root/'revision-start.json')['id'])
+ def test_return_to_research_verifies_and_consumes_finished_current_steps(self):
+  self.full_chain();state=P.load(self.phase);state['stage']='manuscript';P.save(self.phase,state)
+  self.begin('gap');self.finish('gap');state=P.load(self.phase);before=copy.deepcopy(state)
+  with patch.object(C,'index_path',return_value=self.index):
+   P.reassess(state,'evidence.md',self.root,'Resolve the detected claim gap',stage='research')
+  self.assertEqual(state['stage'],'research');self.assertEqual(state['professional_pending'],[])
+  self.assertEqual(len(state['professional_steps']),len(before['professional_steps'])+1)
+  self.assertEqual(state['history'][-1]['professional_steps'],[C.load(self.root/'gap-start.json')['id']])
+  self.assertEqual(state['project_deadline'],before['project_deadline'])
+ def test_return_to_research_cannot_consume_changed_finished_work(self):
+  self.full_chain();state=P.load(self.phase);state['stage']='manuscript';P.save(self.phase,state)
+  self.begin('gap');self.finish('gap');state=P.load(self.phase);before=copy.deepcopy(state)
+  (self.root/'gap.md').write_text('Changed unverified output')
+  with patch.object(C,'index_path',return_value=self.index),self.assertRaises(ValueError):
+   P.reassess(state,'evidence.md',self.root,'Resolve the gap',stage='research')
+  self.assertEqual(state,before)
  def test_delivery_cannot_omit_started_or_completed_unconsumed_work(self):
   self.full_chain();self.begin('delivery')
   self.assertEqual(self.close_delivery(code=2)['status'],'active')

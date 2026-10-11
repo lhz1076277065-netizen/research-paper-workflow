@@ -1,0 +1,116 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "5032525d05ba4cc6befa167d42db84fc",
+  "capability": "robustness-reproducibility",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/request.md",
+    "sha256": "783e9c23d649fd2cac8dee90c963f9a4789bcf12e4451db50bd9a427ac77eb65"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/measurements.csv",
+      "sha256": "f61ebb2c1cf2795a97b251030363495b0e942a7507c5109c8cba0d2c0174f8e7"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/results.json",
+      "sha256": "4c6f978154d57f48075665e38ca3ab3ed97f0c177b32183b54a52093bb1a22ce"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/manuscript.md",
+      "sha256": "9e41d7fce43ee530e4b857f5d653b3ba205bc7375fe1084212b1ff499989b2b5"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/analysis.py",
+      "sha256": "0e5f76daa4702d2e9356eed527c5e99ad2fa41802f1410fbdf8e20ef440d3d30"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/verify_results.py",
+      "sha256": "091990c0dfd0fa113993d0a917dd401e5cd4a20933c0bb9caeb50c7eecc97adb"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/verification.json",
+      "sha256": "5ef658e89193498c83101f85b857d97af0dffa1eb47519be0f9b0d79054677ee"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/verification-run.log",
+      "sha256": "e77a9dc55ea8ea922c185e7e0bfd09671b02dd0b88b453cca35862b33cb1f2c4"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/critical-review.md",
+      "sha256": "cbed355b33e94a7723e5ac32bfe04b6ac05d6ef1d0841afe31ef78a65fdc712d"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/review-work.json",
+    "sha256": "cfa7c998a4327e0f9656f1f875329a8f9c4de87f8890f6015065b9816774acb2"
+  },
+  "use": {
+    "id": "kdense-critical",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/scientific-critical-thinking/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "robustness",
+      "review"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/measurements.csv",
+        "sha256": "f61ebb2c1cf2795a97b251030363495b0e942a7507c5109c8cba0d2c0174f8e7"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/results.json",
+        "sha256": "4c6f978154d57f48075665e38ca3ab3ed97f0c177b32183b54a52093bb1a22ce"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/manuscript.md",
+        "sha256": "9e41d7fce43ee530e4b857f5d653b3ba205bc7375fe1084212b1ff499989b2b5"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/analysis.py",
+        "sha256": "0e5f76daa4702d2e9356eed527c5e99ad2fa41802f1410fbdf8e20ef440d3d30"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/verify_results.py",
+        "sha256": "091990c0dfd0fa113993d0a917dd401e5cd4a20933c0bb9caeb50c7eecc97adb"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/verification.json",
+        "sha256": "5ef658e89193498c83101f85b857d97af0dffa1eb47519be0f9b0d79054677ee"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/verification-run.log",
+        "sha256": "e77a9dc55ea8ea922c185e7e0bfd09671b02dd0b88b453cca35862b33cb1f2c4"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/critical-review.md",
+        "sha256": "cbed355b33e94a7723e5ac32bfe04b6ac05d6ef1d0841afe31ef78a65fdc712d"
+      }
+    ],
+    "steps": [
+      "围绕同一材料配对单位、零残差结构与外推限制做反方审查，并实际执行独立有理数计算核验；明确区分计算复现和新数据实证重复。",
+      "围绕同一材料配对单位、零残差结构与外推限制做反方审查，并实际执行独立有理数计算核验；明确区分计算复现和新数据实证重复。",
+      "围绕同一材料配对单位、零残差结构与外推限制做反方审查，并实际执行独立有理数计算核验；明确区分计算复现和新数据实证重复。",
+      "围绕同一材料配对单位、零残差结构与外推限制做反方审查，并实际执行独立有理数计算核验；明确区分计算复现和新数据实证重复。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Apply appraisal workflow to evidence and independent units; include actual reproducibility rerun via local protocol when requested. Do not claim clinical recommendations or cross-model review."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

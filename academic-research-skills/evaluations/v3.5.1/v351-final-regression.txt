@@ -1,0 +1,33 @@
+{
+  "version": "3.5.1",
+  "generated_at": "2026-10-11T20:41:48.631320+00:00",
+  "tests_run": 705,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "groups": {
+    "test_architecture": 86,
+    "test_computational_routes": 10,
+    "test_integration": 78,
+    "test_lean": 57,
+    "test_package_identity": 3,
+    "test_pdf_extract": 2,
+    "test_phase_control": 37,
+    "test_portability": 50,
+    "test_professional_flow": 27,
+    "test_quality31": 72,
+    "test_release": 57,
+    "test_research_tools": 18,
+    "test_result_links": 59,
+    "test_stage_recovery": 28,
+    "test_suite": 121
+  },
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "python": "3.12.14",
+  "scope": "Local software regression. HTTP/source responses are synthetic fixtures unless separately reported.",
+  "native_agent_behavior_evaluated": false,
+  "real_paper_lifecycle_tested": false,
+  "macos_native_tested": true
+}

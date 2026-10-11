@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.2in" height="4in" viewBox="0 0 1080 600">
+<rect width="1080" height="600" fill="white"/>
+<text x="90" y="49.0" font-family="Arial,Helvetica,sans-serif" font-size="29" fill="#222222">Absolute-error comparison on 24 software test cases</text>
+<text x="90" y="85.5" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#222222">MAE: A = 0.925   |   B = 0.450   |   B reduction = 51.35%</text>
+<text x="90" y="153.5" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#222222">a   Absolute error (CSV units)</text>
+<line x1="90" y1="480.0" x2="515" y2="480.0" stroke="#e6e6e6" stroke-width="1"/>
+<text x="52.0" y="485.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">0.0</text>
+<line x1="90" y1="407.5" x2="515" y2="407.5" stroke="#e6e6e6" stroke-width="1"/>
+<text x="52.0" y="412.5" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">0.4</text>
+<line x1="90" y1="335.0" x2="515" y2="335.0" stroke="#e6e6e6" stroke-width="1"/>
+<text x="52.0" y="340.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">0.8</text>
+<line x1="90" y1="262.5" x2="515" y2="262.5" stroke="#e6e6e6" stroke-width="1"/>
+<text x="52.0" y="267.5" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">1.2</text>
+<line x1="90" y1="190.0" x2="515" y2="190.0" stroke="#e6e6e6" stroke-width="1"/>
+<text x="52.0" y="195.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">1.6</text>
+<line x1="90.0" y1="480" x2="90.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="85.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">0</text>
+<line x1="175.0" y1="480" x2="175.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="170.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">5</text>
+<line x1="260.0" y1="480" x2="260.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="250.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">10</text>
+<line x1="345.0" y1="480" x2="345.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="335.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">15</text>
+<line x1="430.0" y1="480" x2="430.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="420.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">20</text>
+<line x1="515.0" y1="480" x2="515.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="505.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">25</text>
+<line x1="90" y1="190" x2="90" y2="480" stroke="#333333" stroke-width="1.3"/>
+<line x1="90" y1="480" x2="515" y2="480" stroke="#333333" stroke-width="1.3"/>
+<text x="220.0" y="552.0" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#222222">Scale (CSV units)</text>
+<text x="655" y="153.5" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#222222">b   Paired gap: A - B</text>
+<line x1="655" y1="480.0" x2="995" y2="480.0" stroke="#e6e6e6" stroke-width="1"/>
+<text x="607.0" y="485.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">0.00</text>
+<line x1="655" y1="407.5" x2="995" y2="407.5" stroke="#e6e6e6" stroke-width="1"/>
+<text x="607.0" y="412.5" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">0.25</text>
+<line x1="655" y1="335.0" x2="995" y2="335.0" stroke="#e6e6e6" stroke-width="1"/>
+<text x="607.0" y="340.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">0.50</text>
+<line x1="655" y1="262.5" x2="995" y2="262.5" stroke="#e6e6e6" stroke-width="1"/>
+<text x="607.0" y="267.5" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">0.75</text>
+<line x1="655" y1="190.0" x2="995" y2="190.0" stroke="#e6e6e6" stroke-width="1"/>
+<text x="607.0" y="195.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">1.00</text>
+<line x1="655.0" y1="480" x2="655.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="650.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">0</text>
+<line x1="723.0" y1="480" x2="723.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="718.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">5</text>
+<line x1="791.0" y1="480" x2="791.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="781.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">10</text>
+<line x1="859.0" y1="480" x2="859.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="849.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">15</text>
+<line x1="927.0" y1="480" x2="927.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="917.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">20</text>
+<line x1="995.0" y1="480" x2="995.0" y2="485" stroke="#555555" stroke-width="1.3"/>
+<text x="985.0" y="508.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">25</text>
+<line x1="655" y1="190" x2="655" y2="480" stroke="#333333" stroke-width="1.3"/>
+<line x1="655" y1="480" x2="995" y2="480" stroke="#333333" stroke-width="1.3"/>
+<text x="742.5" y="552.0" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#222222">Scale (CSV units)</text>
+<line x1="107.0" y1="416.5625" x2="498.0" y2="208.12499999999994" stroke="#D55E00" stroke-width="2.2"/>
+<circle cx="107.0" cy="416.5625" r="4.3" fill="#D55E00"/>
+<circle cx="124.0" cy="407.5" r="4.3" fill="#D55E00"/>
+<circle cx="141.0" cy="398.4375" r="4.3" fill="#D55E00"/>
+<circle cx="158.0" cy="389.375" r="4.3" fill="#D55E00"/>
+<circle cx="175.0" cy="380.3125" r="4.3" fill="#D55E00"/>
+<circle cx="192.0" cy="371.25" r="4.3" fill="#D55E00"/>
+<circle cx="209.0" cy="362.1875" r="4.3" fill="#D55E00"/>
+<circle cx="226.0" cy="353.125" r="4.3" fill="#D55E00"/>
+<circle cx="243.0" cy="344.0625" r="4.3" fill="#D55E00"/>
+<circle cx="260.0" cy="335.0" r="4.3" fill="#D55E00"/>
+<circle cx="277.0" cy="325.9375" r="4.3" fill="#D55E00"/>
+<circle cx="294.0" cy="316.875" r="4.3" fill="#D55E00"/>
+<circle cx="311.0" cy="307.8125" r="4.3" fill="#D55E00"/>
+<circle cx="328.0" cy="298.75" r="4.3" fill="#D55E00"/>
+<circle cx="345.0" cy="289.6875" r="4.3" fill="#D55E00"/>
+<circle cx="362.0" cy="280.625" r="4.3" fill="#D55E00"/>
+<circle cx="379.0" cy="271.5625" r="4.3" fill="#D55E00"/>
+<circle cx="396.0" cy="262.5" r="4.3" fill="#D55E00"/>
+<circle cx="413.0" cy="253.4375" r="4.3" fill="#D55E00"/>
+<circle cx="430.0" cy="244.375" r="4.3" fill="#D55E00"/>
+<circle cx="447.0" cy="235.3125" r="4.3" fill="#D55E00"/>
+<circle cx="464.0" cy="226.25000000000003" r="4.3" fill="#D55E00"/>
+<circle cx="481.0" cy="217.18750000000006" r="4.3" fill="#D55E00"/>
+<circle cx="498.0" cy="208.125" r="4.3" fill="#D55E00"/>
+<line x1="107.0" y1="440.125" x2="498.0" y2="356.75" stroke="#0072B2" stroke-width="2.2" stroke-dasharray="8 5"/>
+<polygon points="107.0,435.125 102.0,444.125 112.0,444.125" fill="#0072B2"/>
+<polygon points="124.0,431.5 119.0,440.5 129.0,440.5" fill="#0072B2"/>
+<polygon points="141.0,427.875 136.0,436.875 146.0,436.875" fill="#0072B2"/>
+<polygon points="158.0,424.25 153.0,433.25 163.0,433.25" fill="#0072B2"/>
+<polygon points="175.0,420.625 170.0,429.625 180.0,429.625" fill="#0072B2"/>
+<polygon points="192.0,417.0 187.0,426.0 197.0,426.0" fill="#0072B2"/>
+<polygon points="209.0,413.375 204.0,422.375 214.0,422.375" fill="#0072B2"/>
+<polygon points="226.0,409.75 221.0,418.75 231.0,418.75" fill="#0072B2"/>
+<polygon points="243.0,406.125 238.0,415.125 248.0,415.125" fill="#0072B2"/>
+<polygon points="260.0,402.5 255.0,411.5 265.0,411.5" fill="#0072B2"/>
+<polygon points="277.0,398.875 272.0,407.875 282.0,407.875" fill="#0072B2"/>
+<polygon points="294.0,395.25 289.0,404.25 299.0,404.25" fill="#0072B2"/>
+<polygon points="311.0,391.625 306.0,400.625 316.0,400.625" fill="#0072B2"/>
+<polygon points="328.0,388.0 323.0,397.0 333.0,397.0" fill="#0072B2"/>
+<polygon points="345.0,384.375 340.0,393.375 350.0,393.375" fill="#0072B2"/>
+<polygon points="362.0,380.75 357.0,389.75 367.0,389.75" fill="#0072B2"/>
+<polygon points="379.0,377.125 374.0,386.125 384.0,386.125" fill="#0072B2"/>
+<polygon points="396.0,373.5 391.0,382.5 401.0,382.5" fill="#0072B2"/>
+<polygon points="413.0,369.875 408.0,378.875 418.0,378.875" fill="#0072B2"/>
+<polygon points="430.0,366.25 425.0,375.25 435.0,375.25" fill="#0072B2"/>
+<polygon points="447.0,362.625 442.0,371.625 452.0,371.625" fill="#0072B2"/>
+<polygon points="464.0,359.0 459.0,368.0 469.0,368.0" fill="#0072B2"/>
+<polygon points="481.0,355.375 476.0,364.375 486.0,364.375" fill="#0072B2"/>
+<polygon points="498.0,351.75 493.0,360.75 503.0,360.75" fill="#0072B2"/>
+<line x1="102" y1="107" x2="132" y2="107" stroke="#D55E00" stroke-width="2.2"/>
+<circle cx="117" cy="107" r="4.3" fill="#D55E00"/>
+<text x="140" y="111.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">A: 0.30 + 0.05 x scale</text>
+<line x1="397" y1="107" x2="427" y2="107" stroke="#0072B2" stroke-width="2.2" stroke-dasharray="8 5"/>
+<polygon points="412,102 407,111 417,111" fill="#0072B2"/>
+<text x="435" y="111.0" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">B: 0.20 + 0.02 x scale</text>
+<line x1="655.0" y1="480.0" x2="995.0" y2="480.0" stroke="#555555" stroke-width="1.5" stroke-dasharray="8 5"/>
+<circle cx="668.6" cy="442.3" r="4.3" fill="#222222"/>
+<circle cx="682.2" cy="433.6" r="4.3" fill="#222222"/>
+<circle cx="695.8" cy="424.9" r="4.3" fill="#222222"/>
+<circle cx="709.4" cy="416.2" r="4.3" fill="#222222"/>
+<circle cx="723.0" cy="407.5" r="4.3" fill="#222222"/>
+<circle cx="736.6" cy="398.8" r="4.3" fill="#222222"/>
+<circle cx="750.2" cy="390.1" r="4.3" fill="#222222"/>
+<circle cx="763.8" cy="381.4" r="4.3" fill="#222222"/>
+<circle cx="777.4" cy="372.7" r="4.3" fill="#222222"/>
+<circle cx="791.0" cy="364.0" r="4.3" fill="#222222"/>
+<circle cx="804.6" cy="355.3" r="4.3" fill="#222222"/>
+<circle cx="818.2" cy="346.6" r="4.3" fill="#222222"/>
+<circle cx="831.8" cy="337.9" r="4.3" fill="#222222"/>
+<circle cx="845.4" cy="329.2" r="4.3" fill="#222222"/>
+<circle cx="859.0" cy="320.5" r="4.3" fill="#222222"/>
+<circle cx="872.6" cy="311.8" r="4.3" fill="#222222"/>
+<circle cx="886.2" cy="303.1" r="4.3" fill="#222222"/>
+<circle cx="899.8" cy="294.4" r="4.3" fill="#222222"/>
+<circle cx="913.4" cy="285.7" r="4.3" fill="#222222"/>
+<circle cx="927.0" cy="277.0" r="4.3" fill="#222222"/>
+<circle cx="940.5999999999999" cy="268.3" r="4.3" fill="#222222"/>
+<circle cx="954.2" cy="259.6" r="4.3" fill="#222222"/>
+<circle cx="967.8" cy="250.89999999999998" r="4.3" fill="#222222"/>
+<circle cx="981.4" cy="242.20000000000002" r="4.3" fill="#222222"/>
+<text x="655" y="180.0" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#222222">Positive values favor B; B lower in 24/24 cases</text>
+<text x="90" y="592.5" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#222222">Points: CSV records. Lines: OLS fits. No sampling intervals. Test material only.</text>
+</svg>

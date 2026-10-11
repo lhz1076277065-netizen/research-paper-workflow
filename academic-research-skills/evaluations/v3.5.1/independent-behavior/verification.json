@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "independent_method": "stdlib Fraction rational arithmetic, separately executed; no numpy/Decimal reuse",
+  "record_count": 24,
+  "checks": [
+    {
+      "method": "a",
+      "MAE": "37/40",
+      "intercept": "3/10",
+      "slope": "1/20",
+      "all_rows_exact": true
+    },
+    {
+      "method": "b",
+      "MAE": "9/20",
+      "intercept": "1/5",
+      "slope": "1/50",
+      "all_rows_exact": true
+    }
+  ],
+  "claim_hashes_checked": 11,
+  "original_budget_and_objective_preserved": true,
+  "original_failed_attempts_preserved": true,
+  "scope": "computation reproducibility within same supplied data; no independent empirical replication"
+}

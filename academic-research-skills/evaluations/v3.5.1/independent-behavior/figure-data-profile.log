@@ -1,0 +1,635 @@
+{
+  "source": "errors-and-fits.csv",
+  "n_rows": 24,
+  "n_cols": 12,
+  "columns": {
+    "case_id": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 12.5,
+      "median": 12.5,
+      "sd": 7.0710678118654755,
+      "min": 1.0,
+      "max": 24.0,
+      "skewness": 7.401486830834377e-17,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -10.5,
+      "outlier_hi": 35.5,
+      "needs_log_axis": "False"
+    },
+    "scale": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 12.5,
+      "median": 12.5,
+      "sd": 7.0710678118654755,
+      "min": 1.0,
+      "max": 24.0,
+      "skewness": 7.401486830834377e-17,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -10.5,
+      "outlier_hi": 35.5,
+      "needs_log_axis": "False"
+    },
+    "truth": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 12.5,
+      "median": 12.5,
+      "sd": 4.242640687119285,
+      "min": 5.6,
+      "max": 19.4,
+      "skewness": -7.401486830834377e-17,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -1.3000000000000025,
+      "outlier_hi": 26.3,
+      "needs_log_axis": "False"
+    },
+    "method_a": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 12.524999999999999,
+      "median": 12.399999999999999,
+      "sd": 4.426771323190987,
+      "min": 5.25,
+      "max": 20.9,
+      "skewness": 0.12116079458881031,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -1.1624999999999996,
+      "outlier_hi": 26.037499999999998,
+      "needs_log_axis": "False"
+    },
+    "method_b": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 12.363333333333335,
+      "median": 12.49,
+      "sd": 4.265329047571591,
+      "min": 5.38,
+      "max": 20.08,
+      "skewness": 0.03961995405452442,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -1.6700000000000017,
+      "outlier_hi": 26.53,
+      "needs_log_axis": "False"
+    },
+    "abs_error_a": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 0.9250000000000002,
+      "median": 0.925,
+      "sd": 0.3535533905932738,
+      "min": 0.35,
+      "max": 1.5,
+      "skewness": -1.2582527612418441e-15,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.22499999999999998,
+      "outlier_hi": 2.0749999999999997,
+      "needs_log_axis": "False"
+    },
+    "abs_error_b": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 0.45,
+      "median": 0.45,
+      "sd": 0.1414213562373095,
+      "min": 0.22,
+      "max": 0.68,
+      "skewness": 0.0,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.010000000000000064,
+      "outlier_hi": 0.9100000000000001,
+      "needs_log_axis": "False"
+    },
+    "difference_a_minus_b": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 0.47500000000000003,
+      "median": 0.475,
+      "sd": 0.21213203435596428,
+      "min": 0.13,
+      "max": 0.82,
+      "skewness": -5.181040781584064e-16,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.21499999999999997,
+      "outlier_hi": 1.165,
+      "needs_log_axis": "False"
+    },
+    "fitted_a": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 0.9250000000000002,
+      "median": 0.925,
+      "sd": 0.3535533905932738,
+      "min": 0.35,
+      "max": 1.5,
+      "skewness": -1.2582527612418441e-15,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.22499999999999998,
+      "outlier_hi": 2.0749999999999997,
+      "needs_log_axis": "False"
+    },
+    "fitted_b": {
+      "type": "continuous",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "mean": 0.45,
+      "median": 0.45,
+      "sd": 0.1414213562373095,
+      "min": 0.22,
+      "max": 0.68,
+      "skewness": 0.0,
+      "skew_label": "approximately symmetric",
+      "n_outliers_iqr": 0,
+      "outlier_lo": -0.010000000000000064,
+      "outlier_hi": 0.9100000000000001,
+      "needs_log_axis": "False"
+    },
+    "residual_a": {
+      "type": "boolean",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "n_unique": 1,
+      "categories": [
+        [
+          "0.0",
+          24
+        ]
+      ],
+      "min_group_n": 24,
+      "max_group_n": 24,
+      "small_groups_flag": false
+    },
+    "residual_b": {
+      "type": "boolean",
+      "n_total": 24,
+      "n_null": 0,
+      "missing_rate": 0.0,
+      "n": 24,
+      "n_unique": 1,
+      "categories": [
+        [
+          "0.0",
+          24
+        ]
+      ],
+      "min_group_n": 24,
+      "max_group_n": 24,
+      "small_groups_flag": false
+    }
+  },
+  "correlation": {
+    "columns": [
+      "case_id",
+      "scale",
+      "truth",
+      "method_a",
+      "method_b",
+      "abs_error_a",
+      "abs_error_b",
+      "difference_a_minus_b",
+      "fitted_a",
+      "fitted_b"
+    ],
+    "matrix": {
+      "case_id": {
+        "case_id": 1.0,
+        "scale": 1.0,
+        "truth": 1.0,
+        "method_a": 0.974,
+        "method_b": 0.994,
+        "abs_error_a": 1.0,
+        "abs_error_b": 1.0,
+        "difference_a_minus_b": 1.0,
+        "fitted_a": 1.0,
+        "fitted_b": 1.0
+      },
+      "scale": {
+        "case_id": 1.0,
+        "scale": 1.0,
+        "truth": 1.0,
+        "method_a": 0.974,
+        "method_b": 0.994,
+        "abs_error_a": 1.0,
+        "abs_error_b": 1.0,
+        "difference_a_minus_b": 1.0,
+        "fitted_a": 1.0,
+        "fitted_b": 1.0
+      },
+      "truth": {
+        "case_id": 1.0,
+        "scale": 1.0,
+        "truth": 1.0,
+        "method_a": 0.974,
+        "method_b": 0.994,
+        "abs_error_a": 1.0,
+        "abs_error_b": 1.0,
+        "difference_a_minus_b": 1.0,
+        "fitted_a": 1.0,
+        "fitted_b": 1.0
+      },
+      "method_a": {
+        "case_id": 0.974,
+        "scale": 0.974,
+        "truth": 0.974,
+        "method_a": 1.0,
+        "method_b": 0.97,
+        "abs_error_a": 0.974,
+        "abs_error_b": 0.974,
+        "difference_a_minus_b": 0.974,
+        "fitted_a": 0.974,
+        "fitted_b": 0.974
+      },
+      "method_b": {
+        "case_id": 0.994,
+        "scale": 0.994,
+        "truth": 0.994,
+        "method_a": 0.97,
+        "method_b": 1.0,
+        "abs_error_a": 0.994,
+        "abs_error_b": 0.994,
+        "difference_a_minus_b": 0.994,
+        "fitted_a": 0.994,
+        "fitted_b": 0.994
+      },
+      "abs_error_a": {
+        "case_id": 1.0,
+        "scale": 1.0,
+        "truth": 1.0,
+        "method_a": 0.974,
+        "method_b": 0.994,
+        "abs_error_a": 1.0,
+        "abs_error_b": 1.0,
+        "difference_a_minus_b": 1.0,
+        "fitted_a": 1.0,
+        "fitted_b": 1.0
+      },
+      "abs_error_b": {
+        "case_id": 1.0,
+        "scale": 1.0,
+        "truth": 1.0,
+        "method_a": 0.974,
+        "method_b": 0.994,
+        "abs_error_a": 1.0,
+        "abs_error_b": 1.0,
+        "difference_a_minus_b": 1.0,
+        "fitted_a": 1.0,
+        "fitted_b": 1.0
+      },
+      "difference_a_minus_b": {
+        "case_id": 1.0,
+        "scale": 1.0,
+        "truth": 1.0,
+        "method_a": 0.974,
+        "method_b": 0.994,
+        "abs_error_a": 1.0,
+        "abs_error_b": 1.0,
+        "difference_a_minus_b": 1.0,
+        "fitted_a": 1.0,
+        "fitted_b": 1.0
+      },
+      "fitted_a": {
+        "case_id": 1.0,
+        "scale": 1.0,
+        "truth": 1.0,
+        "method_a": 0.974,
+        "method_b": 0.994,
+        "abs_error_a": 1.0,
+        "abs_error_b": 1.0,
+        "difference_a_minus_b": 1.0,
+        "fitted_a": 1.0,
+        "fitted_b": 1.0
+      },
+      "fitted_b": {
+        "case_id": 1.0,
+        "scale": 1.0,
+        "truth": 1.0,
+        "method_a": 0.974,
+        "method_b": 0.994,
+        "abs_error_a": 1.0,
+        "abs_error_b": 1.0,
+        "difference_a_minus_b": 1.0,
+        "fitted_a": 1.0,
+        "fitted_b": 1.0
+      }
+    },
+    "pairs_sorted": [
+      {
+        "a": "case_id",
+        "b": "abs_error_a",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "case_id",
+        "b": "fitted_a",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "scale",
+        "b": "abs_error_a",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "scale",
+        "b": "fitted_a",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "abs_error_a",
+        "b": "abs_error_b",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "abs_error_a",
+        "b": "fitted_b",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "abs_error_b",
+        "b": "difference_a_minus_b",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "abs_error_b",
+        "b": "fitted_a",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "difference_a_minus_b",
+        "b": "fitted_b",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "fitted_a",
+        "b": "fitted_b",
+        "r": 1.0000000000000002,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "case_id",
+        "b": "scale",
+        "r": 1.0,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "case_id",
+        "b": "truth",
+        "r": 1.0,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "case_id",
+        "b": "difference_a_minus_b",
+        "r": 1.0,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "scale",
+        "b": "truth",
+        "r": 1.0,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "scale",
+        "b": "difference_a_minus_b",
+        "r": 1.0,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "truth",
+        "b": "abs_error_a",
+        "r": 1.0,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "truth",
+        "b": "fitted_a",
+        "r": 1.0,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "abs_error_a",
+        "b": "fitted_a",
+        "r": 1.0,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "abs_error_b",
+        "b": "fitted_b",
+        "r": 1.0,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "case_id",
+        "b": "abs_error_b",
+        "r": 0.9999999999999999,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "case_id",
+        "b": "fitted_b",
+        "r": 0.9999999999999999,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "scale",
+        "b": "abs_error_b",
+        "r": 0.9999999999999999,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "scale",
+        "b": "fitted_b",
+        "r": 0.9999999999999999,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "truth",
+        "b": "abs_error_b",
+        "r": 0.9999999999999999,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "truth",
+        "b": "fitted_b",
+        "r": 0.9999999999999999,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "abs_error_a",
+        "b": "difference_a_minus_b",
+        "r": 0.9999999999999999,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "difference_a_minus_b",
+        "b": "fitted_a",
+        "r": 0.9999999999999999,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "truth",
+        "b": "difference_a_minus_b",
+        "r": 0.9999999999999998,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_b",
+        "b": "abs_error_a",
+        "r": 0.9941617840411803,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_b",
+        "b": "fitted_a",
+        "r": 0.9941617840411803,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "case_id",
+        "b": "method_b",
+        "r": 0.9941617840411802,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "scale",
+        "b": "method_b",
+        "r": 0.9941617840411802,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "truth",
+        "b": "method_b",
+        "r": 0.99416178404118,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_b",
+        "b": "abs_error_b",
+        "r": 0.99416178404118,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_b",
+        "b": "fitted_b",
+        "r": 0.99416178404118,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_b",
+        "b": "difference_a_minus_b",
+        "r": 0.9941617840411799,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "case_id",
+        "b": "method_a",
+        "r": 0.9738230300730507,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "scale",
+        "b": "method_a",
+        "r": 0.9738230300730507,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_a",
+        "b": "abs_error_b",
+        "r": 0.9738230300730505,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_a",
+        "b": "fitted_b",
+        "r": 0.9738230300730505,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "truth",
+        "b": "method_a",
+        "r": 0.9738230300730504,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_a",
+        "b": "abs_error_a",
+        "r": 0.9738230300730504,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_a",
+        "b": "fitted_a",
+        "r": 0.9738230300730504,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_a",
+        "b": "difference_a_minus_b",
+        "r": 0.9738230300730503,
+        "magnitude": "very strong"
+      },
+      {
+        "a": "method_a",
+        "b": "method_b",
+        "r": 0.9695779056976525,
+        "magnitude": "very strong"
+      }
+    ]
+  },
+  "group_summary": null,
+  "warnings": [],
+  "suggestions": [
+    "分类 vs 连续，样本量充足 → 箱线图 / 小提琴图，或带误差棒的柱状图（误差棒说明 SD/SEM/CI）",
+    "≥3 个连续变量 → 相关性热力图（['case_id', 'scale', 'truth', 'method_a', 'method_b']）或 pairplot 散点矩阵"
+  ]
+}

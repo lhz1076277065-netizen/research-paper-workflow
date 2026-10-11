@@ -85,8 +85,10 @@ def guard(state, estimated_seconds=0, estimated_tokens=0, clock=None):
     reasons=[]; delta=usage_delta(state)
     if state['status']!='active': reasons.append('phase_'+state['status'])
     if state.get('reassessment_required'): reasons.append('reassessment_required')
-    cutoff=min(state['deadline'],state['project_deadline']-state['reserve_seconds'])
-    if t+estimated_seconds >= cutoff: reasons.append('time_limit_or_delivery_reserve')
+    total_cutoff=state['project_deadline']-state['reserve_seconds']
+    cutoff=min(state['deadline'],total_cutoff)
+    if t+estimated_seconds >= total_cutoff: reasons.append('time_limit_or_delivery_reserve')
+    elif t+estimated_seconds >= state['deadline']: reasons.append('stage_reassessment_required')
     if state['token_limit'] is not None:
         if delta is None: reasons.append('token_meter_unavailable')
         elif delta['total_tokens']+estimated_tokens+state['token_reserve'] >= state['token_limit']:
@@ -103,6 +105,8 @@ def enforce(state, **kwargs):
     if state['status']=='active' and any(x.startswith(('time_limit','token_limit')) for x in current['reasons']):
         state['status']='closed_limit'; state['exit_reason']=current['reasons']
         state['history'].append({'at':iso(now()),'event':'closed_limit','reasons':current['reasons']})
+    elif state['status']=='active' and 'stage_reassessment_required' in current['reasons']:
+        state['reassessment_required']=True
     return result
 
 def set_meter(state, sample, source):
@@ -181,8 +185,51 @@ def repair(state, blocker, approach):
     if not blocker.strip() or not approach.strip(): raise PhaseError('Specify blocker and materially different repair')
     attempts=state['repairs'].setdefault(blocker,[])
     if approach in attempts: raise PhaseError('Duplicate repair does not justify another attempt')
-    if len(attempts)>=2: raise PhaseError('Repair limit reached: reassess or close this route')
+    reviewed=next((x.get('repair_count',0) for x in reversed(state['history'])
+        if x.get('event')=='reassessment' and x.get('blocker')==blocker),0)
+    if len(attempts)-reviewed>=2: raise PhaseError('Two repairs tried: diagnose alternatives and record reassess --blocker before another distinct attempt')
     attempts.append(approach)
+
+def reassess(state, evidence, root, next_action, blocker=None, minutes=None, stage=None, authority=None, clock=None):
+    """Review a recoverable obstacle without renewing the user's total budget.
+
+    Evidence must explain the diagnosis, alternatives and chosen next test. This
+    tool validates the receipt and bounds; it cannot judge its scientific merits.
+    """
+    if state['status'] not in {'active','route_closed'}:
+        raise PhaseError('Reassessment cannot override completion, a total limit, a user pause or an unapproved budget')
+    if state['status']=='route_closed' and (not isinstance(authority,str) or not authority.strip()):
+        raise PhaseError('A closed route needs actual user continuation; the authority field does not grant it')
+    if authority is not None and (not isinstance(authority,str) or not authority.strip()):
+        raise PhaseError('Record actual continuation, not an empty authority')
+    if state['owned_processes']:raise PhaseError('Finish or checkpoint owned work before reassessment')
+    if not isinstance(next_action,str) or not next_action.strip():raise PhaseError('Specify the actual next validation action')
+    if blocker is not None and blocker not in state['repairs']:raise PhaseError('Reassess the recorded blocker; do not rename it to reset attempts')
+    current=state['stage'];steps=[]
+    if stage is not None:
+        if state['scope']!='full' or current not in STAGES or stage not in STAGES or STAGES.index(stage)>STAGES.index(current):
+            raise PhaseError('Reassessment may return to an earlier full-research stage; it cannot skip forward or expand a focused task')
+        if stage!=current:
+            pending=[x for x in state.get('professional_pending',[]) if x['status']!='cancelled']
+            if any(x['status']!='completed' or x.get('stage')!=current or not x.get('finished') for x in pending):
+                raise PhaseError('Finish or explicitly cancel current professional steps before changing stage')
+            if pending:steps=professional_exit(state,[x['started'] for x in pending],[x['finished'] for x in pending])
+    ref=artifact(evidence,root);t=now() if clock is None else clock
+    candidate=dict(state);candidate.update(status='active',reassessment_required=False,unchanged_rounds=0,next_action=next_action)
+    if minutes is not None:candidate['deadline']=min(state['project_deadline'],t+number(minutes,'stage minutes')*60)
+    if stage is not None:candidate.update(stage=stage,stage_started_at=iso(t))
+    if not guard(candidate,clock=t)['allowed']:
+        raise PhaseError('Original budget does not permit this action; reallocate a stage within it or report the actual total limit')
+    event={'at':iso(t),'event':'reassessment','evidence':ref,'next_action':next_action,
+        'previous_status':state['status'],'previous_exit_reason':state.get('exit_reason'),
+        'previous_stage':current,'stage':candidate['stage'],'previous_deadline':state['deadline'],
+        'deadline':candidate['deadline'],'authority':authority,
+        'professional_steps':[x['step_id'] for x in steps]}
+    if blocker is not None:event.update(blocker=blocker,repair_count=len(state['repairs'][blocker]))
+    candidate.pop('exit_reason',None)
+    state.clear();state.update(candidate)
+    if steps:consume_professional(state,steps)
+    state['artifacts'].append(ref);state['history'].append(event)
 
 def round_result(state, changed, evidence, root):
     if not guard(state)['allowed']: raise PhaseError('No new research round in a stopped phase')
@@ -343,7 +390,7 @@ def main(argv=None):
     a=sub.add_parser('advance');a.add_argument('--stage',choices=STAGES,required=True);a.add_argument('--minutes',type=float);a.add_argument('--skip-reason');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
     a=sub.add_parser('repair');a.add_argument('--blocker',required=True);a.add_argument('--approach',required=True)
     a=sub.add_parser('round');a.add_argument('--changed',action='store_true');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True)
-    a=sub.add_parser('reassess');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True)
+    a=sub.add_parser('reassess');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--blocker');a.add_argument('--minutes',type=float);a.add_argument('--stage',choices=STAGES);a.add_argument('--authority')
     a=sub.add_parser('instruction');a.add_argument('--text',required=True)
     a=sub.add_parser('continue');a.add_argument('--authority',required=True)
     a=sub.add_parser('cancel-step');a.add_argument('--started',required=True);a.add_argument('--reason',required=True);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True)
@@ -400,8 +447,7 @@ def main(argv=None):
                     pending[0].update(status='cancelled',reason=args.reason,evidence=ref)
                     state['history'].append({'at':iso(now()),'event':'professional_cancelled',**pending[0]})
                 elif args.op=='reassess':
-                    if state['status']!='active' or not state['reassessment_required']:raise PhaseError('No active reassessment pending')
-                    state['artifacts'].append(artifact(args.evidence,args.root));state['reassessment_required']=False;state['unchanged_rounds']=0;state['next_action']=args.next_action
+                    reassess(state,args.evidence,args.root,args.next_action,blocker=args.blocker,minutes=args.minutes,stage=args.stage,authority=args.authority)
                 elif args.op=='close':
                     if state['owned_processes'] and args.status=='completed':raise PhaseError('Cannot complete with owned work still running')
                     if args.status=='completed' and state['scope']!='maintenance' and state['status']!='active':raise PhaseError('Stopped research cannot be marked newly completed')

@@ -1,0 +1,161 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "fa7308bb10fc481ab01c7d79c2f2d2f8",
+  "capability": "scientific-visualization",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/request.md",
+    "sha256": "783e9c23d649fd2cac8dee90c963f9a4789bcf12e4451db50bd9a427ac77eb65"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/results.json",
+      "sha256": "4c6f978154d57f48075665e38ca3ab3ed97f0c177b32183b54a52093bb1a22ce"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/errors-and-fits.csv",
+      "sha256": "3cd6b7538309077d1052a16abb7bc256436f850f6915f6815f1eaaa7c9560594"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/analysis-report.md",
+      "sha256": "613ae5322437824956a935ebf649bec4400312d97754c6b9dc10dbfff96dae98"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-plan.md",
+      "sha256": "875b19ca711df719f413ecc34a7eb1a6a57f6cf7828b23d9ce830b725d1a3ae6"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/draw_comparison.py",
+      "sha256": "884696f0fd2a73e2d5c7c4bdb40a4f7cf03df1c16074a91bb7daa04cec21b9c1"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/comparison.svg",
+      "sha256": "24b8b8e24e06d369aa8b62bffe8ebfeeb7a4ada049df555ae3d700d1eb82d382"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/comparison.png",
+      "sha256": "48754f9c2febaea1c6c136c283eba8ad1e75e584c6b6aa180f0f5f70b80188f7"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/comparison-grayscale.png",
+      "sha256": "d2394d8c8083945d6e8fe0354324f8f8d3983c1a581cf247651e08fc07495ec5"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-machine-qa.json",
+      "sha256": "1d3096f92ddadda1f41456a6e5f6f70bb5ca8d9481b687ad9855d7ec01863386"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-review.md",
+      "sha256": "06ebd59126e4f234da500a7ecea560399e3d0d8052b59c1426ef7f7a4c9e36e0"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-caption.md",
+      "sha256": "704d35ffd92603f08f7c2e90367a3a43f66a3b7eaafae49240264b5c9e4de247"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-data-profile.log",
+      "sha256": "93037c43f536ea0d3e11da3bcb4fa1da1e863bdd1a3a19513bcba8f328d2cd73"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-native-file-check.log",
+      "sha256": "a26e32f9df67573e2ac7b78e8261fa1c270578098150494c1faf98fc257ef856"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-work.json",
+    "sha256": "72b1da1b5b6dfee249d7a40b74e0cee895bae21af69005fc19fdd68beba7250c"
+  },
+  "use": {
+    "id": "scipilot-figure",
+    "repository": "Haojae/scipilot-figure-skill",
+    "entry": "SKILL.md",
+    "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "figure"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/results.json",
+        "sha256": "4c6f978154d57f48075665e38ca3ab3ed97f0c177b32183b54a52093bb1a22ce"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/errors-and-fits.csv",
+        "sha256": "3cd6b7538309077d1052a16abb7bc256436f850f6915f6815f1eaaa7c9560594"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/analysis-report.md",
+        "sha256": "613ae5322437824956a935ebf649bec4400312d97754c6b9dc10dbfff96dae98"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-plan.md",
+        "sha256": "875b19ca711df719f413ecc34a7eb1a6a57f6cf7828b23d9ce830b725d1a3ae6"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/draw_comparison.py",
+        "sha256": "884696f0fd2a73e2d5c7c4bdb40a4f7cf03df1c16074a91bb7daa04cec21b9c1"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/comparison.svg",
+        "sha256": "24b8b8e24e06d369aa8b62bffe8ebfeeb7a4ada049df555ae3d700d1eb82d382"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/comparison.png",
+        "sha256": "48754f9c2febaea1c6c136c283eba8ad1e75e584c6b6aa180f0f5f70b80188f7"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/comparison-grayscale.png",
+        "sha256": "d2394d8c8083945d6e8fe0354324f8f8d3983c1a581cf247651e08fc07495ec5"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-machine-qa.json",
+        "sha256": "1d3096f92ddadda1f41456a6e5f6f70bb5ca8d9481b687ad9855d7ec01863386"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-review.md",
+        "sha256": "06ebd59126e4f234da500a7ecea560399e3d0d8052b59c1426ef7f7a4c9e36e0"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-caption.md",
+        "sha256": "704d35ffd92603f08f7c2e90367a3a43f66a3b7eaafae49240264b5c9e4de247"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-data-profile.log",
+        "sha256": "93037c43f536ea0d3e11da3bcb4fa1da1e863bdd1a3a19513bcba8f328d2cd73"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/v351-forward-test/figure-native-file-check.log",
+        "sha256": "a26e32f9df67573e2ac7b78e8261fa1c270578098150494c1faf98fc257ef856"
+      }
+    ],
+    "steps": [
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。",
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。",
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。",
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。",
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。",
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。",
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。",
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。",
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。",
+      "实际运行上游数据剖析；按连续scale与配对单位选择原始点/拟合线及配对差面板，在宿主适配中绘制、检查数值和文本边界，打开彩色/灰度图，修正右轴刻度精度后重渲，并实际运行上游文件检查。"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": true
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

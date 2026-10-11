@@ -1,0 +1,90 @@
+{
+  "material_type": "software_behavior_test_not_real_research_data",
+  "data_quality": {
+    "rows": 24,
+    "missing": 0,
+    "duplicates_case_id": 0,
+    "excluded": 0,
+    "all_finite": true,
+    "units": "not provided"
+  },
+  "descriptives": {
+    "a": {
+      "n": 24,
+      "mean": "0.925",
+      "sample_sd": "0.35355339059327376220042218105242451964241796884424",
+      "median": "0.925",
+      "min": "0.35",
+      "max": "1.5"
+    },
+    "b": {
+      "n": 24,
+      "mean": "0.45",
+      "sample_sd": "0.14142135623730950488016887242096980785696718753769",
+      "median": "0.45",
+      "min": "0.22",
+      "max": "0.68"
+    }
+  },
+  "paired_comparison": {
+    "result_id": "comparison_mae",
+    "difference_A_minus_B": {
+      "n": 24,
+      "mean": "0.475",
+      "sample_sd": "0.21213203435596425732025330863145471178545078130654",
+      "median": "0.475",
+      "min": "0.13",
+      "max": "0.82"
+    },
+    "relative_MAE_reduction_B_vs_A": "0.51351351351351351351351351351351351351351351351351",
+    "B_lower_count": 24,
+    "ties": 0
+  },
+  "linear_models": {
+    "a": {
+      "result_id": "fit_a",
+      "intercept": "0.300",
+      "slope": "0.05",
+      "r_squared": "1",
+      "sse": "0.000000",
+      "rmse": "0.000",
+      "max_abs_residual": "0.000",
+      "scale_range": [
+        "1",
+        "24"
+      ]
+    },
+    "b": {
+      "result_id": "fit_b",
+      "intercept": "0.200",
+      "slope": "0.02",
+      "r_squared": "1.00",
+      "sse": "0.000000",
+      "rmse": "0.000",
+      "max_abs_residual": "0.000",
+      "scale_range": [
+        "1",
+        "24"
+      ]
+    }
+  },
+  "diagnostics": {
+    "exact_decimal_residuals_zero": true,
+    "inferential_tests": "not performed: deterministic test material, unspecified sampling/noise model, zero residual variance",
+    "uncertainty_intervals": "not estimated: no justified sampling model"
+  },
+  "independent_numerical_crosscheck": {
+    "a": {
+      "numpy_lstsq_intercept": 0.30000000000000054,
+      "numpy_lstsq_slope": 0.04999999999999996,
+      "max_coefficient_difference": 5.551115123125783e-16,
+      "design_rank": 2
+    },
+    "b": {
+      "numpy_lstsq_intercept": 0.20000000000000012,
+      "numpy_lstsq_slope": 0.019999999999999983,
+      "max_coefficient_difference": 1.1102230246251565e-16,
+      "design_rank": 2
+    }
+  }
+}

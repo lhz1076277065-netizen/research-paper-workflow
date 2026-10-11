@@ -1,5 +1,5 @@
 """Executable phase scenarios: files/processes/usage, not keyword compliance."""
-import importlib.util,json,subprocess,sys,tempfile,time,unittest
+import copy,importlib.util,json,subprocess,sys,tempfile,time,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def module(name):
@@ -35,6 +35,97 @@ class Phases(unittest.TestCase):
   with self.assertRaises(P.PhaseError):P.repair(s,'missing library','path A')
   P.repair(s,'missing library','path B')
   with self.assertRaises(P.PhaseError):P.repair(s,'missing library','reinstall whole machine')
+ def test_engineering_reassessment_unblocks_a_new_actual_repair(self):
+  s=P.init('full','Recover the requested calculation',10,authority='Actual ten-minute total')
+  P.set_meter(s,dict(input_tokens=100,cached_input_tokens=20,output_tokens=5),'host')
+  P.repair(s,'missing renderer','check original path');P.repair(s,'missing renderer','check declared environment')
+  with self.assertRaises(P.PhaseError):P.repair(s,'missing renderer','use an equivalent available implementation')
+  before=copy.deepcopy(s)
+  P.reassess(s,'evidence.md',self.root,'use an equivalent available implementation',blocker='missing renderer')
+  P.repair(s,'missing renderer','use an equivalent available implementation')
+  with self.assertRaises(P.PhaseError):P.repair(s,'missing renderer','check original path')
+  state=self.root/'state.json';P.save(state,s);result=self.root/'actual-result.txt'
+  r=P.run(state,[sys.executable,'-c',f'from pathlib import Path;Path({str(result)!r}).write_text(str(sum([1,2,4])))'],self.root/'repair.log','calculate supplied sum','verify the alternative produces the real output')
+  self.assertEqual(r['returncode'],0);self.assertEqual(result.read_text(),'7')
+  after=P.load(state)
+  for key in ['project_deadline','started_at','meter','authorization']:self.assertEqual(after[key],before[key])
+  self.assertEqual(after['repairs']['missing renderer'],before['repairs']['missing renderer']+['use an equivalent available implementation'])
+ def test_reassessment_does_not_reset_other_blockers(self):
+  s=P.init('full','goal')
+  for b in ['renderer','reader']:P.repair(s,b,'check path');P.repair(s,b,'check environment')
+  P.reassess(s,'evidence.md',self.root,'new renderer',blocker='renderer')
+  P.repair(s,'renderer','new renderer')
+  with self.assertRaises(P.PhaseError):P.repair(s,'reader','new reader')
+ def test_stage_allocation_exhaustion_is_recoverable_within_original_total(self):
+  s=P.init('full','goal',60,clock=0,authority='Actual total budget')
+  P.advance(s,'design','evidence.md',self.root,'minimal test',clock=0,minutes=1)
+  self.assertIn('stage_reassessment_required',P.enforce(s,clock=61)['reasons'])
+  self.assertEqual(s['status'],'active');self.assertTrue(s['reassessment_required'])
+  before=copy.deepcopy(s)
+  P.reassess(s,'evidence.md',self.root,'run the smaller decisive test',minutes=5,clock=61)
+  self.assertEqual(s['deadline'],361);self.assertEqual(s['project_deadline'],before['project_deadline'])
+  self.assertEqual(s['started_at'],before['started_at']);self.assertTrue(P.guard(s,clock=62)['allowed'])
+ def test_uninformative_rounds_trigger_autonomous_reassessment_not_termination(self):
+  s=P.init('full','goal');P.round_result(s,False,'evidence.md',self.root);P.round_result(s,False,'evidence.md',self.root)
+  before=copy.deepcopy(s)
+  P.reassess(s,'evidence.md',self.root,'test a discriminating alternative')
+  self.assertTrue(P.guard(s)['allowed']);self.assertEqual(s['project_deadline'],before['project_deadline'])
+  self.assertEqual(s['history'][-1]['event'],'reassessment');self.assertEqual(s['unchanged_rounds'],0)
+ def test_failed_route_can_reenter_research_only_with_actual_continuation(self):
+  s=P.init('full','fixed original goal',10,authority='Original actual total')
+  s.update(status='route_closed',stage='delivery',exit_reason='Original implementation unavailable')
+  before=copy.deepcopy(s)
+  with self.assertRaises(P.PhaseError):P.reassess(s,'evidence.md',self.root,'test the recovered implementation',stage='research')
+  self.assertEqual(s,before)
+  P.reassess(s,'evidence.md',self.root,'test the recovered implementation',stage='research',authority='Actual user: continue the original goal')
+  self.assertEqual(s['status'],'active');self.assertEqual(s['stage'],'research')
+  self.assertEqual(s['objective'],before['objective']);self.assertEqual(s['project_deadline'],before['project_deadline'])
+  self.assertEqual(s['history'][-1]['previous_exit_reason'],before['exit_reason'])
+ def test_reassessment_cannot_renew_limits_or_ignore_user_pause(self):
+  for status in ['completed','closed_limit','paused','awaiting_budget']:
+   s=P.init('full','goal');s['status']=status;before=copy.deepcopy(s)
+   with self.subTest(status=status),self.assertRaises(P.PhaseError):P.reassess(s,'evidence.md',self.root,'retry',authority='User continuation')
+   self.assertEqual(s,before)
+  s=P.init('full','goal',1,clock=0,authority='Actual total');s['status']='route_closed';before=copy.deepcopy(s)
+  with self.assertRaises(P.PhaseError):P.reassess(s,'evidence.md',self.root,'retry',minutes=100,clock=100,authority='Continue without extra budget')
+  self.assertEqual(s,before)
+ def test_reassessment_validates_evidence_action_and_stage_before_mutation(self):
+  s=P.init('full','goal');before=copy.deepcopy(s)
+  for kwargs in [{'blocker':'unknown'},{'stage':'research'},{'minutes':-1}]:
+   with self.subTest(kwargs=kwargs),self.assertRaises(P.PhaseError):P.reassess(s,'evidence.md',self.root,'next',**kwargs)
+   self.assertEqual(s,before)
+  for evidence,action in [('missing.md','next'),('evidence.md',' ')]:
+   with self.assertRaises(P.PhaseError):P.reassess(s,evidence,self.root,action)
+   self.assertEqual(s,before)
+  s['stage']='manuscript';s['professional_pending']=[{'status':'started'}];before=copy.deepcopy(s)
+  with self.assertRaises(P.PhaseError):P.reassess(s,'evidence.md',self.root,'new evidence',stage='research')
+  self.assertEqual(s,before)
+ def test_reassessment_preserves_token_exhaustion_and_owned_work(self):
+  s=P.init('full','goal');P.set_meter(s,dict(input_tokens=100,cached_input_tokens=10,output_tokens=2),'host')
+  s.update(token_limit=20,token_reserve=1)
+  P.set_meter(s,dict(input_tokens=120,cached_input_tokens=10,output_tokens=2),'host');before=copy.deepcopy(s)
+  with self.assertRaises(P.PhaseError):P.reassess(s,'evidence.md',self.root,'another test',minutes=10)
+  self.assertEqual(s,before)
+  s=P.init('full','goal');s['owned_processes']=[{'pid':123,'runner_token':'fixture'}];before=copy.deepcopy(s)
+  with self.assertRaises(P.PhaseError):P.reassess(s,'evidence.md',self.root,'another test')
+  self.assertEqual(s,before)
+ def test_cli_engineering_reassessment_runs_the_new_solution(self):
+  state=self.root/'state.json';P.save(state,P.init('maintenance','Recover a fixture calculation',10,authority='Actual fixture budget'))
+  command=[sys.executable,str(ROOT/'src/common/scripts/phase_control.py'),'--state',str(state)]
+  for approach in ['original environment','available alternate environment']:
+   result=subprocess.run(command+['repair','--blocker','unavailable dependency','--approach',approach],capture_output=True)
+   self.assertEqual(result.returncode,0,result.stderr)
+  result=subprocess.run(command+['repair','--blocker','unavailable dependency','--approach','equivalent implementation'],capture_output=True)
+  self.assertEqual(result.returncode,2)
+  result=subprocess.run(command+['reassess','--blocker','unavailable dependency','--minutes','2','--evidence','evidence.md','--root',str(self.root),'--next-action','run the equivalent calculation'],capture_output=True)
+  self.assertEqual(result.returncode,0,result.stderr)
+  result=subprocess.run(command+['repair','--blocker','unavailable dependency','--approach','equivalent implementation'],capture_output=True)
+  self.assertEqual(result.returncode,0,result.stderr)
+  output=self.root/'calculation.json'
+  result=subprocess.run(command+['run','--log',str(self.root/'run.log'),'--claim','compute the supplied values','--decision','check the recovered output','--',sys.executable,'-c',f'import json;open({str(output)!r},"w").write(json.dumps({{"sum":sum([2,3,5])}}))'],capture_output=True)
+  self.assertEqual(result.returncode,0,result.stderr);self.assertEqual(json.loads(output.read_text()),{'sum':10})
+  final=P.load(state);self.assertEqual(final['status'],'active');self.assertEqual(final['owned_processes'],[])
+  self.assertEqual(final['history'][-1]['event'],'command_finished')
  def test_two_nonchanging_rounds_require_reassessment(self):
   s=P.init('full','goal');P.round_result(s,False,'evidence.md',self.root);P.round_result(s,False,'evidence.md',self.root)
   self.assertFalse(P.guard(s)['allowed']);self.assertTrue(s['reassessment_required'])

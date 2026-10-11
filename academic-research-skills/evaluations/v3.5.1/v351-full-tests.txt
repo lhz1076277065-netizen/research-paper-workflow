@@ -1,0 +1,32 @@
+..................................................................................................................................................................................F.................................................................................................................................................................................F.........................................................................................................F...............................................................................................................................................................................................................................................
+======================================================================
+FAIL: test_entries_short_and_do_not_load_universe (test_lean.LeanDefaults.test_entries_short_and_do_not_load_universe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_lean.py", line 194, in test_entries_short_and_do_not_load_universe
+    t=f.read_text();self.assertLess(len(t),850);self.assertNotIn('github.com/',t);self.assertNotIn('assets/providers.json',t)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 855 not less than 850
+
+======================================================================
+FAIL: test_short_19_entries (test_quality31.ContentTests.test_short_19_entries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_quality31.py", line 263, in test_short_19_entries
+    for p in entries:self.assertLess(len(p.read_text()),800)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 855 not less than 800
+
+======================================================================
+FAIL: test_all_entries_stay_short (test_release.ScopeAndCoverage.test_all_entries_stay_short)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_release.py", line 172, in test_all_entries_stay_short
+    for f in (ROOT/'skills').glob('*/SKILL.md'):self.assertLess(len(f.read_text()),850)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 855 not less than 850
+
+----------------------------------------------------------------------
+Ran 702 tests in 33.269s
+
+FAILED (failures=3)
