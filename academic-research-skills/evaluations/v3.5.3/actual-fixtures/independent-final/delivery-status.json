@@ -1,0 +1,25 @@
+{
+  "completed_at": "2026-10-12T15:15:17.171525+00:00",
+  "status": "completed_teaching_delivery",
+  "manuscript": "manuscript.md",
+  "reviewed_sha256": "b09205bf6bf50c2a8ba1c1a70f8be82020ea3538edd0e7b66a2aac5aefb60711",
+  "manuscript_unchanged_after_review": true,
+  "inputs_unchanged": true,
+  "new_fits": 0,
+  "new_experiments": 0,
+  "source_calls": [
+    "kdense-writing",
+    "kdense-critical"
+  ],
+  "professional_source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+  "reused_prior_review": "academic-reviewer 6ab4b03bf70a118a1b3ee7f3263ed9f19031061b; original check eligible and inputs matched",
+  "completion_level": "same-host quick full review reused for unchanged science + completed focused incremental appraisal of final version",
+  "independent_peer_review": false,
+  "complete_expert_panel": false,
+  "original_scientific_research": false,
+  "submission_ready": false,
+  "human_verification": "unverified",
+  "user_hard_time_limit": null,
+  "user_hard_token_limit": null,
+  "professional_receipt_metadata_caveat": "writing functions_run flag initially false; actual native consistency CLI recorded in actions and execution-notes; original receipts retained"
+}

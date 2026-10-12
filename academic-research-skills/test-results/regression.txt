@@ -741,8 +741,37 @@ test_verified_source_requires_timestamp (test_suite.ValidatorNegativeTests.test_
 test_windows_absolute_path (test_suite.ValidatorNegativeTests.test_windows_absolute_path) ... ok
 test_wrong_contract (test_suite.ValidatorNegativeTests.test_wrong_contract) ... ok
 test_wrong_output_artifact (test_suite.ValidatorNegativeTests.test_wrong_output_artifact) ... ok
+test_181_completed_receipts_do_not_become_pending (test_work_units.WorkUnits.test_181_completed_receipts_do_not_become_pending) ... ok
+test_absent_process_is_not_success (test_work_units.WorkUnits.test_absent_process_is_not_success) ... ok
+test_actual_request_anchor_not_initialization (test_work_units.WorkUnits.test_actual_request_anchor_not_initialization) ... ok
+test_actual_result_updates_next_action (test_work_units.WorkUnits.test_actual_result_updates_next_action) ... ok
+test_adopt_preserves_budget_and_pause_unknowns (test_work_units.WorkUnits.test_adopt_preserves_budget_and_pause_unknowns) ... ok
+test_agent_reserve_reallocation_runs_real_remaining_work (test_work_units.WorkUnits.test_agent_reserve_reallocation_runs_real_remaining_work) ... ok
+test_budget_metric_matches_actual_authority_not_assumed_cache_cost (test_work_units.WorkUnits.test_budget_metric_matches_actual_authority_not_assumed_cache_cost) ... ok
+test_checkpoint_cannot_rewrite_claim (test_work_units.WorkUnits.test_checkpoint_cannot_rewrite_claim) ... ok
+test_default_plan_expiry_is_reassessment_not_terminal (test_work_units.WorkUnits.test_default_plan_expiry_is_reassessment_not_terminal) ... ok
+test_default_token_reserve_is_revisable_but_actual_ceiling_is_not (test_work_units.WorkUnits.test_default_token_reserve_is_revisable_but_actual_ceiling_is_not) ... ok
+test_duplicate_budget_message_requires_actual_timestamp_selection (test_work_units.WorkUnits.test_duplicate_budget_message_requires_actual_timestamp_selection) ... ok
+test_failed_route_does_not_stop_task (test_work_units.WorkUnits.test_failed_route_does_not_stop_task) ... ok
+test_future_anchor_rejected (test_work_units.WorkUnits.test_future_anchor_rejected) ... ok
+test_late_meter_initialization_backfills_actual_budget_usage (test_work_units.WorkUnits.test_late_meter_initialization_backfills_actual_budget_usage) ... ok
+test_long_chat_does_not_use_old_installation_request_for_new_budget (test_work_units.WorkUnits.test_long_chat_does_not_use_old_installation_request_for_new_budget) ... ok
+test_missing_initial_token_coverage_does_not_claim_strict_limit (test_work_units.WorkUnits.test_missing_initial_token_coverage_does_not_claim_strict_limit) ... ok
+test_plan_ceiling_autonomously_revised (test_work_units.WorkUnits.test_plan_ceiling_autonomously_revised) ... ok
+test_process_reconciliation_never_kills_live_pid (test_work_units.WorkUnits.test_process_reconciliation_never_kills_live_pid) ... ok
+test_real_user_limit_not_relabelled (test_work_units.WorkUnits.test_real_user_limit_not_relabelled) ... ok
+test_request_log_without_timezone_not_guessed (test_work_units.WorkUnits.test_request_log_without_timezone_not_guessed) ... ok
+test_reserve_reallocation_executes_child_without_renewing_budget (test_work_units.WorkUnits.test_reserve_reallocation_executes_child_without_renewing_budget) ... ok
+test_review_changed_receipt_rejected (test_work_units.WorkUnits.test_review_changed_receipt_rejected) ... ok
+test_review_content_change_invalidates_reuse (test_work_units.WorkUnits.test_review_content_change_invalidates_reuse) ... ok
+test_rollout_anchor_reads_user_not_folder (test_work_units.WorkUnits.test_rollout_anchor_reads_user_not_folder) ... ok
+test_route_closure_requires_tests_and_current_evidence (test_work_units.WorkUnits.test_route_closure_requires_tests_and_current_evidence) ... ok
+test_unbudgeted_feasibility_advances_without_approval (test_work_units.WorkUnits.test_unbudgeted_feasibility_advances_without_approval) ... ok
+test_unknown_anchor_is_not_claimed_verified (test_work_units.WorkUnits.test_unknown_anchor_is_not_claimed_verified) ... ok
+test_user_budget_cannot_be_extended (test_work_units.WorkUnits.test_user_budget_cannot_be_extended) ... ok
+test_user_or_unknown_reserve_is_not_silently_reallocated (test_work_units.WorkUnits.test_user_or_unknown_reserve_is_not_silently_reallocated) ... ok
 
 ----------------------------------------------------------------------
-Ran 743 tests in 33.102s
+Ran 772 tests in 36.710s
 
 OK

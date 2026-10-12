@@ -1,0 +1,1 @@
+真实动作：读取匹配critical-thinking入口及review_sources/core_capabilities相关段；识别描述性而非因果单元；读取全稿原审查与两份diff；执行实际只读分层计数、预测聚合与source_row核验；逐段字符串比较未变科学内容；校验旧receipt和提供材料身份；依据实际结果写incremental-review.md。没有外部服务、额外评审者、模型拟合或生成数据。

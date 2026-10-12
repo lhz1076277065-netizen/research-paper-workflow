@@ -1,0 +1,55 @@
+{
+  "scope": "small complete research writing demonstration on synthetic input",
+  "delivered_level": "reproducible_experiment_figures_editable_chinese_short_draft",
+  "original_scientific_discovery": false,
+  "primary_experiment": "completed",
+  "robustness_and_complete_rerun": "completed",
+  "scientific_evidence_unit_review": "completed_current_host",
+  "figure_numeric_and_visual_review": "completed_current_host",
+  "citations": "official_method_docs_and_software_identity_checked",
+  "chinese_short_draft": "completed",
+  "final_manuscript_professional_review": "not_completed: begin rejected at planned cutoff/delivery reserve; no start receipt or fabricated finish",
+  "human_verification": "unverified",
+  "independent_peer_review": "not_performed",
+  "submission_ready": false,
+  "checks": [
+    {
+      "step": "question",
+      "check": "eligible_for_handoff"
+    },
+    {
+      "step": "design",
+      "check": "eligible_for_handoff"
+    },
+    {
+      "step": "data",
+      "check": "eligible_for_handoff"
+    },
+    {
+      "step": "analysis",
+      "check": "eligible_for_handoff"
+    },
+    {
+      "step": "robust",
+      "check": "eligible_for_handoff"
+    },
+    {
+      "step": "figure",
+      "check": "eligible_for_handoff"
+    },
+    {
+      "step": "citations",
+      "check": "eligible_for_handoff"
+    },
+    {
+      "step": "writing",
+      "check": "eligible_for_handoff"
+    }
+  ],
+  "budget_started_at": "2026-10-12T14:17:07+00:00",
+  "original_total_deadline": "2026-10-12T14:37:07+00:00",
+  "snapshot_at": "2026-10-12T14:36:56.569651+00:00",
+  "token_usage": "unknown: no host rollout meter read",
+  "external_network_bytes": "not_independently_metered; bounded returned webpage snapshot kept",
+  "write_scope": "all newly created intended outputs within independent-project"
+}

@@ -1,0 +1,15 @@
+{
+  "step_id": "53cbea89d9fb4568ba817d345aff597e",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": false,
+  "actions": [
+    {
+      "source_file": "skills/research-ideation/SKILL.md",
+      "source_excerpt": "Write a `Research Question Card` that states the hypothesis, current evidence, missing evidence, support criteria, falsification criteria, and minimal next action",
+      "applied": "实施固定问题的Research Question Card和证据门；比较加性偏移、比例误差与批次扰动，保留合成演示边界。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/research-question-card.md",
+      "output_excerpt": "# 冻结划分下的校准复杂度：研究问题卡（教学演示）\nQuestion：在附件人为生成的测量数据及既有 train/test 划分下，加入斜率参数的线性预测校准，是否比一个训练集拟合的固定偏移带来有意义的额外测试精度？\nType：applied，非原创发现；数据提供者已声明合成、非实测、非医学。\nHypothesis：常量偏移足以消除主要误差；更复杂校准在独立读数上额外收益很小。\nWhy it matters：教学习惯需先比较合理简单基线，再判断复杂参数是否有必要；不声称该题是领域未解决缺口。\nCurrent evidence：ER-20261012-input-01（materials.md 与 measurements.csv）；120 行，train=80/test=40，batch 0–3；仅检查结构与分区计数，尚未计算测试性能。\nMissing evidence：训练外推/批次内测试收益、输入完整性、拟合复算与批次/端点敏感性；生成机制未知。\nWhat would support it：冻结测试结果呈主要改善来自偏移；线性额外改善小于预定教学阈值，并且训练交叉验证没有稳定复杂度收益。\nWhat would falsify it：线性在训练批次留出验证中稳定超过偏移，并在冻结测试上至少改善 RMSE 0.05（同测量单位），且不是单一批次/高杠杆读数驱动。\nMinimal next action：核验原划分不变，训练内按批次交叉验证并锁定选择规则，然后一次性报告三种方法的冻结测试表现。\nDecision：run experiment。\n\n## 竞争解释与成本\n1. 系统偏移：sensor-reference 近似常数；预测 reference=sensor+d，拟合一个参数。\n2. 比例误差：预测 reference=a+b·sensor，拟合两个参数；余差随参考量级变化应减弱。\n3. 批次扰动/读数噪声：斜率估计可偶然改善，移除批次或跨批验证后收益不稳定。\n4. 区间/划分差异：参考值区间不同可解释外推失败，不能将批次内留出称为新批次外部验证。\n候选：不校准、均值偏移、线性 OLS。稳健中位数偏移仅做预定敏感性；不用复杂多项式搜漂亮结果。\n\n## 四段路线板\n真实缺口：这份教学附件中复杂度收益尚未量化；不是文献空白。\n已有方案与局限：偏移纠正加性误差；线性允许比例误差但多参数容易拟合噪声；训练/测试可能共享批次。\n本文贡献与判别证据：提供冻结划分的可复算对比、批次单元验证和零结果保留。\n认知与边界：判断本附件是否值得增加参数；不能推断实测仪器、临床效用或原创科学贡献。\n\n## 初始可行性与真实成本\n2026-10-12T14:19Z 实际检查：fictional_calibration_engine 未找到；numpy/matplotlib/pandas 存在，scipy 不存在。以 NumPy 成熟 least-squares 原语实现；无需安装/登录。短计算预计 <10 秒，图稿 <60 秒，产物预计 <10 MB；有 20 分钟硬预算，从 14:17:07Z 起到14:37:07Z，读取与收束计入。\n旧 agent-plan.json 的 fit_count_estimate=2 与 review_round_estimate=1 为代理估计，不是用户限制；必要批次交叉验证与稳健性将按实测成本自主增加。\n"
+    }
+  ]
+}

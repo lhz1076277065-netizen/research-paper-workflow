@@ -4,7 +4,7 @@
 
 维护安装完成即结束；局部写作/单篇精读直达能力，不增加原创研究门槛。完整、长计算或显式预算任务用phase_control.py收据。既有假设保持假设，不扩大为历史重建；固定目标改变要有真实授权。
 
-缺省最多45分钟可行性，用户更短预算/上级剩余预算优先。记录问题、近邻、决定性证据、依赖、最小验证和成本（资料先做[200 GB规划](data-acquisition.md)），随后一次取得研究总预算与阶段安排。已给总预算就init --minutes --authority沿用原指令，不追加45分钟或重复确认。授权字段不创造授权；读取Skill和收束也计时。
+未给预算时，45分钟是首次可行性复评计划，代理据判断自主安排后续工作；不能把默认分钟当用户硬上限或等待批准。记录问题、近邻、决定性证据、依赖、最小验证和成本（资料先做[200 GB规划](data-acquisition.md)）。已给总预算用init --minutes --authority并以实际授权请求的--started-at（含时区）或--request-rollout为基点；多条用户消息时用--request-message精确选择实际授权原文，重复原文则从日志核实时间戳，不能默认取早先安装消息。代理自行定位真实记录，不因此要求人类接手。不从目录创建时间推断、减去任意分钟或在初始化时续24小时。无可靠起点明确未知并保留旧截止，不能承诺严格计时。读取Skill和收束也计入真实预算。
 
 | 阶段 | 出口证据 |
 |---|---|
@@ -14,7 +14,7 @@
 | manuscript | 证据驱动的图稿、引用和科学/事实/视觉复核 |
 | delivery | 编辑源、复算输出、真实完成层级、限制与下一动作；不自动投稿 |
 
-阶段截止是计划；advance --minutes分配，用完后reassess --minutes在原总预算内重排。用户硬性阶段上限不可重排。总时间/token/交付预留触顶才closed_limit，不重置基点。默认预留时间10%且至多5分钟，长研究可增大计划预留；容量累计也不按阶段重置。前阶段短截止不会默认带入后阶段。
+阶段截止和默认交付预留是代理计划；advance --minutes分配，用完后reassess --minutes在原总预算内重排。默认预留时间10%且至多5分钟，可依据已完成产物、必要复核和实际打包成本用reassess --reserve-seconds调整；代理token预留用--token-reserve。预留触发delivery_required而非关闭任务：选择收束或有据重排后继续必要工作，不等用户解锁。真实总时间/token耗尽才closed_limit，不重置基点；用户硬性阶段/预留上限不可调整，旧来源未知不猜。容量累计不按阶段重置。
 
 ## 执行与复评
 
@@ -41,11 +41,13 @@ python3 scripts/phase_control.py --state project/phase.json run --log project/ru
 python3 scripts/phase_control.py --state project/phase.json resume
 ```
 
-未给总预算的init省略minutes/authority；可行性完成后advance到design会awaiting_budget，再authorize --minutes --authority。已有总预算不重复authorize。实际meter来自同一宿主rollout，分别报input、cached_input、output增量；额度默认input+output，另报非缓存量。有token上限而计量失效先修计量；无可靠计量不宣称严格达标。重试、恢复、换阶段不重置；后续新预算须真实授权及新记录，不掩盖旧超限。首次采样不是零耗费证明；guard不能撤销已发生的超限。
+未给总预算的init省略minutes/authority，budget_authority=agent；默认可行性advance后继续design，计划过期用reassess --minutes自主重排，保留起点、累计使用和历史。仅用户明确要求先批准预算时用--require-budget，沿用旧awaiting_budget/authorize接口。实际用户总预算budget_authority=user，不能被reassess、换回合或恢复延长。旧记录的权限来源未知按原截止保守保持；迁移不虚造授权。实际meter来自同一宿主rollout，分别报input、cached_input、output增量；额度默认input+output，另报非缓存量。首次采样之前的用量保持未知，不当零；基点不因重试/恢复重置。
 
 ## 续接与专业步骤出口
 
-resume默认只给最新3项产物/已交步骤、当前待做收据、失败次数/最近方案、最新指令及下一动作；完整历史在state文件，必要时--full定位。begin默认只给真实入口路径，不把大篇指导塞进stdout；必须读当前适用模式和必要支持文件再专业执行，不加载19技能/14整库/全部日志。完成安装不会因旧聊天重现而重做。
+token预算口径必须匹配用户/宿主真实定义：init/authorize --token-metric可选input_plus_output或noncached_input_plus_output，旧记录默认前者。分别显示输入、缓存输入、输出，不把缓存量推断为同等费用；口径不明时保持未知，不自行缩减真实额度或宣布严格达标。真实预算不能通过换口径放宽。累计计量在初始化晚于请求时回填起点前最近实际计数；没有可回填计数标明覆盖缺口，先修计量而非报零。guard分别输出token_meter_verified（样本来源）与strict_token_budget_verified（实际预算起点及覆盖）；样本真实不代表整个预算已完整计量，未知旧记录不能据前者宣称严格达标。
+
+resume默认给最新3项产物/已交步骤、最多3个真正未完收据及总数、已完成未消费收据的单独计数、当前科学单元、候选路线和下一动作；完整历史在state文件，必要时精确定位。用[自主研究单元](autonomous-work.md)更新结果、复用不变材料的审查并区分自定配额。begin默认给真实入口路径；必须读当前适用模式和必要支持文件，不加载19技能/14整库/全部日志。完成安装不会因旧聊天重现而重做。
 
 每个阶段advance及完成型close提交该阶段所有--professional-started/--professional-finished对；逐项check且与登记集合相符，遗漏/旧阶段/变更文件拒绝。辅助图稿/精读按真实能力调用。delivery只整理已核验输出且没有待交步骤时可复用刚完成manuscript收据；核验真实身份/指令，不能用旧历史替代新专业修改。暂停/触顶/路线关闭不需伪造完成。
 

@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "methods": [
+    {
+      "method_id": "M001",
+      "name": "frozen train-only calibration comparison",
+      "analysis_intent": "descriptive",
+      "outcome_ids": [
+        "O001"
+      ],
+      "protocol_status": "prespecified"
+    }
+  ],
+  "numeric_facts": [
+    {
+      "fact_id": "N001",
+      "concept": "raw test RMSE",
+      "analysis_set": "all test readings",
+      "denominator": null,
+      "numerator": null,
+      "sample_size": 40,
+      "evidence_ids": [
+        "E002"
+      ],
+      "section": "摘要",
+      "unit": "attachment units",
+      "value": 1.5276
+    },
+    {
+      "fact_id": "N002",
+      "concept": "raw test RMSE",
+      "analysis_set": "all test readings",
+      "denominator": null,
+      "numerator": null,
+      "sample_size": 40,
+      "evidence_ids": [
+        "E002"
+      ],
+      "section": "表1",
+      "unit": "attachment units",
+      "value": 1.5276
+    },
+    {
+      "fact_id": "N003",
+      "concept": "raw test RMSE",
+      "analysis_set": "all test readings",
+      "denominator": null,
+      "numerator": null,
+      "sample_size": 40,
+      "evidence_ids": [
+        "E002"
+      ],
+      "section": "结果",
+      "unit": "attachment units",
+      "value": 1.5276
+    },
+    {
+      "fact_id": "N004",
+      "concept": "offset test RMSE",
+      "analysis_set": "all test readings",
+      "denominator": null,
+      "numerator": null,
+      "sample_size": 40,
+      "evidence_ids": [
+        "E002"
+      ],
+      "section": "摘要",
+      "unit": "attachment units",
+      "value": 0.3462
+    },
+    {
+      "fact_id": "N005",
+      "concept": "offset test RMSE",
+      "analysis_set": "all test readings",
+      "denominator": null,
+      "numerator": null,
+      "sample_size": 40,
+      "evidence_ids": [
+        "E002"
+      ],
+      "section": "表1",
+      "unit": "attachment units",
+      "value": 0.3462
+    },
+    {
+      "fact_id": "N006",
+      "concept": "offset test RMSE",
+      "analysis_set": "all test readings",
+      "denominator": null,
+      "numerator": null,
+      "sample_size": 40,
+      "evidence_ids": [
+        "E002"
+      ],
+      "section": "结果",
+      "unit": "attachment units",
+      "value": 0.3462
+    },
+    {
+      "fact_id": "N007",
+      "concept": "affine test RMSE",
+      "analysis_set": "all test readings",
+      "denominator": null,
+      "numerator": null,
+      "sample_size": 40,
+      "evidence_ids": [
+        "E002"
+      ],
+      "section": "摘要",
+      "unit": "attachment units",
+      "value": 0.3443
+    },
+    {
+      "fact_id": "N008",
+      "concept": "affine test RMSE",
+      "analysis_set": "all test readings",
+      "denominator": null,
+      "numerator": null,
+      "sample_size": 40,
+      "evidence_ids": [
+        "E002"
+      ],
+      "section": "表1",
+      "unit": "attachment units",
+      "value": 0.3443
+    },
+    {
+      "fact_id": "N009",
+      "concept": "affine test RMSE",
+      "analysis_set": "all test readings",
+      "denominator": null,
+      "numerator": null,
+      "sample_size": 40,
+      "evidence_ids": [
+        "E002"
+      ],
+      "section": "结果",
+      "unit": "attachment units",
+      "value": 0.3443
+    }
+  ],
+  "results": [
+    {
+      "result_id": "R001",
+      "method_id": "M001",
+      "outcome_id": "O001",
+      "analysis_intent": "descriptive",
+      "evidence_ids": [
+        "E002"
+      ],
+      "reported_sections": [
+        "摘要",
+        "表1",
+        "结果"
+      ],
+      "sample_size": 40
+    }
+  ]
+}

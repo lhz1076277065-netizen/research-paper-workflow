@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-12T14:21Z",
+  "backend_missing": true,
+  "selected_backend": "numpy.linalg.lstsq",
+  "toy_beta": [
+    3.0,
+    1.9999999999999993
+  ],
+  "toy_assertions": "passed",
+  "elapsed_seconds": 0.00013979100000000022,
+  "numpy_version": "2.0.2",
+  "decision": "有效替代通过最小已知解检验，继续正式冻结分析"
+}

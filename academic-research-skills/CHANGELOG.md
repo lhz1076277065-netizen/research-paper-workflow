@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.5.3 — autonomous work units and reliable recovery, 2026-10-12
+
+Agent-owned ceilings are revisable plans; unbudgeted feasibility is a review checkpoint. Actual user budget timestamps, content-bound review reuse, scientific checkpoints, alternative-route receipts and compact unfinished-step recovery preserve the fourteen-source gate. All nineteen skills are regenerated. See docs/RELEASE-v3.5.3.zh-CN.md for observed validation scope.
+
+
 ## 3.5.2 — stable autonomous recovery, bounded acquisition and compact context, 2026-10-12
 
 Plan project capacity before acquiring data; enforce persistent cumulative transfer and local footprint ceilings through bounded download/extraction, preserve counters across retries, and integrate phase storage checks. Handle ordinary authorized access autonomously. Shorten default guidance and CLI output while retaining complete receipts, evidence requirements and mandatory professional sources. Published as the v3.5.2 stable release, including the previously local v3.5.1 recovery changes. Runtime, source and one-click assets identify the same source commit.

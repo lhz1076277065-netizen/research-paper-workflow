@@ -1,7 +1,7 @@
 {
-  "version": "3.5.2",
-  "generated_at": "2026-10-11T21:13:16.393796+00:00",
-  "tests_run": 743,
+  "version": "3.5.3",
+  "generated_at": "2026-10-12T15:09:54.944891+00:00",
+  "tests_run": 772,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
@@ -22,7 +22,8 @@
     "test_research_tools": 18,
     "test_result_links": 59,
     "test_stage_recovery": 28,
-    "test_suite": 121
+    "test_suite": 121,
+    "test_work_units": 29
   },
   "platform": "Darwin",
   "architecture": "arm64",
@@ -2998,6 +2999,122 @@
     },
     {
       "id": "test_suite.ValidatorNegativeTests.test_wrong_output_artifact",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_181_completed_receipts_do_not_become_pending",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_absent_process_is_not_success",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_actual_request_anchor_not_initialization",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_actual_result_updates_next_action",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_adopt_preserves_budget_and_pause_unknowns",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_agent_reserve_reallocation_runs_real_remaining_work",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_budget_metric_matches_actual_authority_not_assumed_cache_cost",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_checkpoint_cannot_rewrite_claim",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_default_plan_expiry_is_reassessment_not_terminal",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_default_token_reserve_is_revisable_but_actual_ceiling_is_not",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_duplicate_budget_message_requires_actual_timestamp_selection",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_failed_route_does_not_stop_task",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_future_anchor_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_late_meter_initialization_backfills_actual_budget_usage",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_long_chat_does_not_use_old_installation_request_for_new_budget",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_missing_initial_token_coverage_does_not_claim_strict_limit",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_plan_ceiling_autonomously_revised",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_process_reconciliation_never_kills_live_pid",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_real_user_limit_not_relabelled",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_request_log_without_timezone_not_guessed",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_reserve_reallocation_executes_child_without_renewing_budget",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_review_changed_receipt_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_review_content_change_invalidates_reuse",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_rollout_anchor_reads_user_not_folder",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_route_closure_requires_tests_and_current_evidence",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_unbudgeted_feasibility_advances_without_approval",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_unknown_anchor_is_not_claimed_verified",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_user_budget_cannot_be_extended",
+      "status": "passed"
+    },
+    {
+      "id": "test_work_units.WorkUnits.test_user_or_unknown_reserve_is_not_silently_reallocated",
       "status": "passed"
     }
   ],

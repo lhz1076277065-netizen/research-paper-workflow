@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "evidence_id": "E001",
+      "title": "Synthetic input and corrected context",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "materials.md; data-context.json; analysis-amendment.md",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    },
+    {
+      "evidence_id": "E002",
+      "title": "Frozen calibration output",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "results/results.json; results/model-lock.json; results/cost.json",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    },
+    {
+      "evidence_id": "E003",
+      "title": "Executed sensitivity and reproducibility",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "robustness-results.json; analysis-amendment.md",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    },
+    {
+      "evidence_id": "E004",
+      "title": "Actual figure review",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "figure-visual-review.md",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    },
+    {
+      "evidence_id": "E005",
+      "title": "Official methods and software records",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "citations.md; web-reference-snapshot.json",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    }
+  ]
+}

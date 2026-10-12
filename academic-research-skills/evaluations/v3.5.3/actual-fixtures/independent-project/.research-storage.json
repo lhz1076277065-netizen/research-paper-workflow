@@ -1,0 +1,24 @@
+{
+  "schema": "research-storage-1",
+  "id": "6fb7efafa13a4946a5502fe92b5808c4",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project",
+  "limit_bytes": 200000000000,
+  "reserve_bytes": 10000000000,
+  "downloaded_bytes": 0,
+  "preplan_download_bytes": null,
+  "operations": [],
+  "plan": {
+    "needs": [
+      {
+        "purpose": "在现有合成附件上比较校准方法",
+        "subset": "120行既有CSV、当前必调来源缓存及必要官方方法参考",
+        "access": "本地附件、已核验只读源码缓存、按需网页短响应"
+      }
+    ],
+    "expected_download_bytes": 2000000,
+    "expected_peak_project_bytes": 10000000,
+    "note": "源缓存只读不复制整库；计算与导出只写本目录。外部网页响应如使用，记录文本快照字节并声明不是独立网络传输计量。"
+  },
+  "plan_transfer_baseline": 0,
+  "planned_at": 1791814861.3922749
+}

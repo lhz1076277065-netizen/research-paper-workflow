@@ -1,0 +1,182 @@
+{
+  "scope": "focused",
+  "objective": "既有教学校准稿最终增量复核与可编辑交付；没有用户硬时间/token上限",
+  "latest_instruction": "既有教学校准稿最终增量复核与可编辑交付；没有用户硬时间/token上限",
+  "stage": "focused",
+  "status": "completed",
+  "project_deadline": 1791820147.651496,
+  "deadline": 1791820147.651496,
+  "authorization": null,
+  "completed_tasks": [
+    "final-teaching-delivery"
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "618d88d6db1fd547d4d3df53f61ade735b4119d36f7d5d07d4531c6c323b097a"
+    }
+  ],
+  "next_action": null,
+  "exit_reason": "局部最终稿受影响内容真实增量复核、编辑源与科学边界交付已完成，稿件签收不再修改正文",
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "owned_processes": [],
+  "host_goal_state": "not_modified",
+  "budget_kind": "local_task",
+  "reserve_seconds": 270.0,
+  "token_limit": null,
+  "token_reserve": 0,
+  "token_metric": "input_plus_output",
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "professional_steps": [
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "02949372c9084b559d610be97213ec44",
+      "capability": "manuscript-writing",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/changed-claim-evidence.json",
+          "sha256": "7b84ee86de8d80bc468c81ef1ea7ae7bf06beefea151259f018fedf2a975d929"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/manuscript.md",
+          "sha256": "b09205bf6bf50c2a8ba1c1a70f8be82020ea3538edd0e7b66a2aac5aefb60711"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-reviewed.patch",
+          "sha256": "2de8da9b834800c0e96310ba15c2cb7a77875f9ce1e823f3e282c4f073f1b30b"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-revised.patch",
+          "sha256": "3ff12a2f4c0d3a115a7545705b4d045bdcf59f9bc6ddcef17cd3d83122b68746"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/revision-ledger.md",
+          "sha256": "60321bb067aad2731f709ee732efbf88c78a74c110cd4393c2953344952454b6"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/consistency_manifest.json",
+          "sha256": "32accf6a6923981bc0c05fe45fc84a61c3075061f42af3df768b34f793fc98bb"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-output.txt",
+          "sha256": "5de5de2b70efb54fabe99d41dd3fcc1bde1c61c89079904430422707ca1e7fb9"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-failed.txt",
+          "sha256": "65d36d4a2eec06b2bdf8fd4f39eb52a5170c4395dd4cab988431635c6c64bf35"
+        }
+      ],
+      "semantic_work_verified_by_tool": false,
+      "stage": "focused",
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-finish.json",
+      "started_sha256": "14ec093b72b4a4972cb3a90950a2a09f7f3d7fdb829ef3ae6a481dec8e182e10",
+      "finished_sha256": "9d074b03043720dc3b9642fb0c5a6ecab2075f05ae3dc211e649808254bc9b38"
+    },
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "9cf182bd57464fa28926a07ce8933378",
+      "capability": "manuscript-review",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/audit_affected_content.py",
+          "sha256": "f2e5c7b4c5db542c7d1a819adef44526aab46629c74796eb7c3003f240cfad9c"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/affected-content-audit.json",
+          "sha256": "464e6b960c2967ac45d5a313bcd9c24bf645e42b54436f4800ca214d9cf3ee12"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/prior-review-provenance.json",
+          "sha256": "3abc872f651c28845fc979ba6b9ce868320dd66921da102641c3febe18c15c5c"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review.md",
+          "sha256": "3b190b8e85995acf26ff0c00703ab1de4c32d6572a9d82beab852eddcf01829b"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/review-action-evidence.md",
+          "sha256": "6606a03abb4a5ef1b5af976dca687a00a250365066b9b06e21d92f748a72374c"
+        }
+      ],
+      "semantic_work_verified_by_tool": false,
+      "stage": "focused",
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review-finish.json",
+      "started_sha256": "945bd4931448643a8798a067ce9c587812e7d1ed95c1bfdf640fa22266647d9b",
+      "finished_sha256": "4df1345132752a0ec7a739780136f72d1ab0b00b3bdf5ddd479b677aa0e9d3a8"
+    }
+  ],
+  "professional_pending": [],
+  "stage_started_at": "2026-10-12T15:04:07.651496+00:00",
+  "storage": null,
+  "budget_anchor": {
+    "started_at": "2026-10-12T15:04:07.651496+00:00",
+    "basis": "controller_initialization_only",
+    "verified": false
+  },
+  "workflow_version": "3.5.3",
+  "current_unit": "final-calibration-manuscript",
+  "budget_authority": "agent",
+  "reserve_authority": "agent",
+  "token_reserve_authority": "agent",
+  "delivery_required": null,
+  "artifacts_count": 1,
+  "completed_tasks_count": 1,
+  "professional_steps_count": 2,
+  "professional_pending_count": 0,
+  "professional_completed_unconsumed_count": 0,
+  "professional_completed_unconsumed": [],
+  "current_work": {
+    "key": "final-calibration-manuscript",
+    "claim": "冻结教学选择偏移，新增分层样本数须由实际测试行支持",
+    "stage": "focused",
+    "instruction": "既有教学校准稿最终增量复核与可编辑交付；没有用户硬时间/token上限",
+    "outcome": "supported",
+    "evidence": [
+      {
+        "path": "incremental-review.md",
+        "sha256": "3b190b8e85995acf26ff0c00703ab1de4c32d6572a9d82beab852eddcf01829b"
+      }
+    ],
+    "next_action": "保持已审稿件不变，复制编辑图源与证据、生成完整性清单并完成本地交付",
+    "at": "2026-10-12T15:15:17.163004+00:00"
+  },
+  "ready_routes": [],
+  "route_counts": {
+    "ready": 0,
+    "testing": 0,
+    "failed": 0,
+    "useful": 0,
+    "external_dependency": 0
+  },
+  "resource_plans": {},
+  "process_observations": [],
+  "details": "Read the phase state only for relevant older artifacts, failures or receipts; this snapshot never replaces the complete record.",
+  "state_path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/phase.json",
+  "guard": {
+    "allowed": false,
+    "reasons": [
+      "phase_completed"
+    ],
+    "status": "completed",
+    "required_next_action": "deliver_or_follow_actual_user_resume; do_not_restart",
+    "stage": "focused",
+    "seconds_to_work_cutoff": 2030.385020017624,
+    "usage": null,
+    "token_metric": "input_plus_output",
+    "token_meter_verified": false,
+    "token_budget_coverage": "unknown",
+    "strict_token_budget_verified": false,
+    "host_goal_state": "not_modified",
+    "scientific_completion_verified": false,
+    "storage": null
+  }
+}

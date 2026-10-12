@@ -2,7 +2,7 @@
 name: citation-audit
 description: "核对稿件引用、原始来源、书目与主张支持关系。"
 metadata:
-  version: "3.5.2"
+  version: "3.5.3"
 ---
 
 # 引用真实性与论断支持核验
@@ -16,3 +16,5 @@ metadata:
 获取前[容量与访问](references/data-acquisition.md)：累计下载和项目占用各最多200 GB，只取所需；常规登录/免费条款/token沿用用户授权自主处理。
 
 只读本步必要资源，[协议](references/protocol.md)按需。长任务/显式预算用[阶段控制](references/phase-control.md)续接原预算；局部无预算的阶段脚本是可选工具，不作为日常前置。
+
+按[研究单元](references/autonomous-work.md)续接、复核和自主重排。

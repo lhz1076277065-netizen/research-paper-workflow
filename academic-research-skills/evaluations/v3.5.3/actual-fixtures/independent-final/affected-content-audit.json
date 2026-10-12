@@ -1,0 +1,116 @@
+{
+  "executed_at": "2026-10-12T15:10:17.885842+00:00",
+  "scope": "read-only counting/reaggregation and exact content comparison; no refits",
+  "cut_from_train_only": 14.1,
+  "train_n": 80,
+  "test_n": 40,
+  "actual_test_batches": [
+    "2",
+    "3"
+  ],
+  "source_rows_alignment": "all40checked",
+  "strata": {
+    "low": {
+      "definition": "reference <= train median 14.1",
+      "source_rows": [
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "metrics": {
+        "raw": {
+          "n": 14,
+          "rmse": 1.6112100380499081,
+          "mae": 1.5754503571428573,
+          "bias": 1.5754503571428573
+        },
+        "offset": {
+          "n": 14,
+          "rmse": 0.3427011238889563,
+          "mae": 0.29961978571428577,
+          "bias": -0.05907708035714216
+        },
+        "affine": {
+          "n": 14,
+          "rmse": 0.3450089166098596,
+          "mae": 0.3014533913259395,
+          "bias": -0.06557677062100842
+        }
+      }
+    },
+    "high": {
+      "definition": "reference > train median 14.1",
+      "source_rows": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ],
+      "metrics": {
+        "raw": {
+          "n": 26,
+          "rmse": 1.4805961750066319,
+          "mae": 1.4507713461538463,
+          "bias": 1.4507713461538463
+        },
+        "offset": {
+          "n": 26,
+          "rmse": 0.34812905039660563,
+          "mae": 0.28030320673076914,
+          "bias": -0.18375609134615464
+        },
+        "affine": {
+          "n": 26,
+          "rmse": 0.3438979524010026,
+          "mae": 0.2778126612899791,
+          "bias": -0.1750624388974421
+        }
+      }
+    }
+  },
+  "unchanged_scientific_segments": {
+    "abstract": true,
+    "introduction": true,
+    "methods": true,
+    "discussion": true,
+    "table": true,
+    "figure_caption": true,
+    "references": true,
+    "results_except_declared_changes": true
+  },
+  "final_manuscript_sha256": "b09205bf6bf50c2a8ba1c1a70f8be82020ea3538edd0e7b66a2aac5aefb60711",
+  "supplied_robustness_numbers_reproduced": true
+}

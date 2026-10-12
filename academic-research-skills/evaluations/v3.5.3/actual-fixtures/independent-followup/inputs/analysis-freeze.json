@@ -1,0 +1,13 @@
+{
+  "csv_sha256": "ce81328cb542158f6716bf82745dc9c68835258b952a7eb915a949edd888eb45",
+  "plan_sha256": "e885f76c43919386d3c5d0bd13cdcdb2fc280d0651030b9dd6d78ed5fd82d5f0",
+  "frozen_before_test_metrics": true,
+  "test_repartitioned": false,
+  "models": [
+    "raw",
+    "offset",
+    "affine"
+  ],
+  "threshold": 0.05,
+  "seed": 20261012
+}

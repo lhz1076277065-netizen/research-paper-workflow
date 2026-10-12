@@ -1,0 +1,312 @@
+{
+  "version": "3.5.3",
+  "source_repositories": 14,
+  "entrypoints": 23,
+  "file_bindings": 413,
+  "source_preparation_not_professional_execution": true,
+  "historical_integration": "evaluations/v3.4.0-rc.1/integration",
+  "entries": [
+    {
+      "id": "researchstudio-search",
+      "repository": "microsoft/ResearchStudio",
+      "commit": "063f10088af49909e1a4a7ea8d29efe19633f34e",
+      "kind": "skill_protocol",
+      "files_verified": 17,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/researchstudio-search/063f10088af49909e1a4a7ea8d29efe19633f34e/ResearchStudio-Idea/skills/paper_search/SKILL.md",
+      "known_requirements": [
+        "Python >=3.10",
+        "requests",
+        "Network to selected metadata API; bounded timeout"
+      ],
+      "host_adaptation": "Use current-host CLI and screen records; exclude model recall from verified sources; budget and network limits override default run-all searches. CLI --json in guidance is absent in this commit; call search_papers with inspected signature and serialize returned records, then screen actual records.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "nature-reader",
+      "repository": "Yuan1z0825/nature-skills",
+      "commit": "84880815fb37317b3766bff2c2abba395b8993c3",
+      "kind": "skill_protocol",
+      "files_verified": 32,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/nature-reader/84880815fb37317b3766bff2c2abba395b8993c3/skills/nature-reader/SKILL.md",
+      "known_requirements": [
+        "Current-host source extraction/translation; OCR only for scans"
+      ],
+      "host_adaptation": "Use only format-selected core and grounding resources. Source-linked question does not require whole-paper translation.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "kdense-eda",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "kind": "skill_protocol",
+      "files_verified": 22,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-eda/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/exploratory-data-analysis/SKILL.md",
+      "known_requirements": [
+        "Python>=3.11 for core stdlib CLIs; optional format libraries installed only as needed"
+      ],
+      "host_adaptation": "Core local CLI is native; unsupported scientific formats need separately checked tools, never claim universal format support.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "scipilot-figure",
+      "repository": "Haojae/scipilot-figure-skill",
+      "commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "kind": "skill_protocol",
+      "files_verified": 16,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42/SKILL.md",
+      "known_requirements": [
+        "matplotlib/numpy/pandas/seaborn; SciencePlots optional"
+      ],
+      "host_adaptation": "Preserve profile, chart choice, numerical and visual review; use current-host rendering; do not stop at export function.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "scholar-analysis",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "kind": "skill_protocol",
+      "files_verified": 9,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/scholar-analysis/903787345d6aec134086afa2b97715a78fbde519/skills/results-analysis/SKILL.md",
+      "known_requirements": [
+        "Current-host statistics; actual repeat units required for inference"
+      ],
+      "host_adaptation": "Read-only audit on incomplete evidence; software fixtures do not justify a scientific winner claim.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "academic-reviewer",
+      "repository": "Imbad0202/academic-research-skills",
+      "commit": "6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+      "kind": "skill_protocol",
+      "files_verified": 44,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/academic-reviewer/6ab4b03bf70a118a1b3ee7f3263ed9f19031061b/academic-paper-reviewer/SKILL.md",
+      "known_requirements": [
+        "Current-host reviewer; independent agents only if authorized/available"
+      ],
+      "host_adaptation": "Quick assessment is role-separated current-host critique; not independent peer review. Full panel mode has additional requirements.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "sleep-experiment-plan",
+      "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+      "kind": "skill_protocol",
+      "files_verified": 2,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/sleep-experiment-plan/2132036060e03e8d0df69a4b21e5971819c0c2d6/skills/experiment-plan/SKILL.md",
+      "known_requirements": [
+        "Current-host claim/evidence planning"
+      ],
+      "host_adaptation": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "autoresearch-protocol",
+      "repository": "karpathy/autoresearch",
+      "commit": "228791fb499afffb54b46200aca536f79142f117",
+      "kind": "code_tool",
+      "files_verified": 5,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/autoresearch-protocol/228791fb499afffb54b46200aca536f79142f117/program.md",
+      "known_requirements": [
+        "Native training requires CUDA GPU/H100-class environment, uv and torch; not verified on this Mac"
+      ],
+      "host_adaptation": "Native training blocked on current Mac; can apply experiment bookkeeping to a local software fixture with adapted_in_host, never claim native training or val_bpb.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "anti-defensive",
+      "repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "kind": "skill_protocol",
+      "files_verified": 2,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/anti-defensive/102c8b21acf5eda3a0aef3d9779a65db646c8980/skills/anti-defensive-writing/SKILL.md",
+      "known_requirements": [
+        "Current-host full-text editing and fact recheck"
+      ],
+      "host_adaptation": "Keep evidence and scope; rhetorical advice cannot remove material uncertainty or overstate results.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "rougier-reference",
+      "repository": "rougier/scientific-visualization-book",
+      "commit": "62fa569f30333c817c13e4dc757877c1192fd15a",
+      "kind": "reference_code",
+      "files_verified": 3,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/rougier-reference/62fa569f30333c817c13e4dc757877c1192fd15a/code/ornaments/legend-alternatives.py",
+      "known_requirements": [
+        "numpy/matplotlib for executable example"
+      ],
+      "host_adaptation": "BSD example/reference, not an Agent Skill; execute in isolated example directory and apply label design to actual figure.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "open-design-deck",
+      "repository": "nexu-io/open-design",
+      "commit": "53231d40b778d88eba23f35547bf99485d3ae9fc",
+      "kind": "workbench_protocol",
+      "files_verified": 12,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/open-design-deck/53231d40b778d88eba23f35547bf99485d3ae9fc/design-templates/html-ppt-tech-sharing/SKILL.md",
+      "known_requirements": [
+        "Browser for HTML deck; full daemon/app installation not needed for template adapter"
+      ],
+      "host_adaptation": "Use HTML template with real local runtime paths and source-backed content; do not claim full Open Design daemon was installed.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "codex-ppt",
+      "repository": "ningzimu/codex-ppt-skill",
+      "commit": "6d76c0eded7f8a8b0c4e304697e6f2bda7c408b2",
+      "kind": "skill_protocol",
+      "files_verified": 28,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/codex-ppt/6d76c0eded7f8a8b0c4e304697e6f2bda7c408b2/skills/codex-ppt/SKILL.md",
+      "known_requirements": [
+        "Generated slide images; python-pptx/Pillow for assembly; generation backend and sample authorization for full native deck"
+      ],
+      "host_adaptation": "Native image generation/sample gates retained; local integration may test existing-image assembly only and must label it function_only, not full-deck generation or editable-text PPT.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "paperspine-workbench",
+      "repository": "WUBING2023/PaperSpine",
+      "commit": "f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3",
+      "kind": "workbench_protocol",
+      "files_verified": 8,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/paperspine-workbench/f7e3dabaf499b2aef1eabdd1cd5d64f173d7dcc3/dist/codex/skills/paper-spine/SKILL.md",
+      "known_requirements": [
+        "Python local checker; full workbench launch has separate app/runtime dependencies"
+      ],
+      "host_adaptation": "Use pinned local validation/protocol subflow; disable update-on-every-invocation for this integration. No UI/app/backend task claimed without actual launcher run.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "orchestra-ideation",
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "kind": "skill_protocol",
+      "files_verified": 2,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/orchestra-ideation/773a52944ba4747a18bd4ae9ade53fff041adcbc/21-research-ideation/brainstorming-research-ideas/SKILL.md",
+      "known_requirements": [
+        "Current-host ideation, no extra model runtime"
+      ],
+      "host_adaptation": "Use selected relevant ideation lenses; explicit fixed questions do not require repeated brainstorming or new research scope.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "kdense-writing",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "kind": "skill_protocol",
+      "files_verified": 32,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-writing/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/scientific-writing/SKILL.md",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "host_adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "kdense-design",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "kind": "skill_protocol",
+      "files_verified": 8,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-design/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/experimental-design/SKILL.md",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "host_adaptation": "Apply question, units, allocation, confounding and design logic before data collection. DOE matrix functions need their actual Python/pydoe dependencies; no native run claimed without execution.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "kdense-critical",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "kind": "skill_protocol",
+      "files_verified": 10,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-critical/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/scientific-critical-thinking/SKILL.md",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "host_adaptation": "Apply appraisal workflow to evidence and independent units; include actual reproducibility rerun via local protocol when requested. Do not claim clinical recommendations or cross-model review.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "kdense-venue",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "kind": "skill_protocol",
+      "files_verified": 29,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-venue/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/venue-templates/SKILL.md",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "host_adaptation": "Read current official venue sources before exact rules. Audience/style fit guidance does not establish acceptance probability or journal ranking.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "kdense-citation",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "kind": "skill_protocol",
+      "files_verified": 23,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-citation/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/citation-management/SKILL.md",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "host_adaptation": "Verify actual bibliographic records and proposition locators. Network queries bounded; optional Scholar library not required if authoritative API suffices.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "kdense-database",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "kind": "skill_protocol",
+      "files_verified": 84,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-database/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/database-lookup/SKILL.md",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "host_adaptation": "Read the relevant retrieval contract/reference; apply actual authorization, bounded API retrieval, filters and provenance. Unsupported domains need a verified matching entry, not invented API results.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "scholar-intake",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "kind": "skill_protocol",
+      "files_verified": 10,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/scholar-intake/903787345d6aec134086afa2b97715a78fbde519/skills/research-ideation/SKILL.md",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "host_adaptation": "Use Research Question Card and evidence gate. Preserve fixed questions. Optional Zotero/other assistant integrations are replaced by current-host local records; no new host or source repository.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "scholar-response",
+      "repository": "Galaxy-Dawn/claude-scholar",
+      "commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "kind": "skill_protocol",
+      "files_verified": 7,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/scholar-response/903787345d6aec134086afa2b97715a78fbde519/skills/review-response/SKILL.md",
+      "known_requirements": [
+        "Current host protocol; see actual entry for optional function dependencies"
+      ],
+      "host_adaptation": "Classify actual comments, choose evidence-based strategies, make revisions and write precise responses. No claims of completed experiments without evidence.",
+      "professional_work_redone": false
+    },
+    {
+      "id": "kdense-statistics",
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "kind": "skill_protocol",
+      "files_verified": 8,
+      "entry": "/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/statistical-analysis/SKILL.md",
+      "known_requirements": [
+        "Python3.12+ and documented isolated scientific Python environment for native scripts; see entry for actual library versions",
+        "Current-host protocol selection/interpretation can use appropriate inspected local functions; no native-stack claim without actual execution"
+      ],
+      "host_adaptation": "Use only the requested statistical substep with actual independent units and an appropriate method. No mandatory all-library installation for descriptive-only work. Native examples require their documented environment. Formal/interpretive research requires a separately verified matching entry.",
+      "professional_work_redone": false
+    }
+  ]
+}

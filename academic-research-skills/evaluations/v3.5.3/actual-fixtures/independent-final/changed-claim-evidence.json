@@ -1,0 +1,35 @@
+{
+  "scope": "only affected content; prior full-manuscript review retained for unchanged science",
+  "claims": [
+    {
+      "claim_id": "C-D01",
+      "type": "material-boundary",
+      "new_text": "> 教学演示稿；数据为人为合成读数，不代表真实仪器验证或原创科学发现。",
+      "evidence": "inputs/inputs/materials.md and unchanged abstract/methods",
+      "status": "agent_checked; human_unverified"
+    },
+    {
+      "claim_id": "C-D02",
+      "type": "numeric-descriptive",
+      "new_text": "低参考区间(n=14)；高区间(n=26)",
+      "evidence": "inputs/evidence/robustness-results.json: strata[0/1].raw.n; inputs/inputs/results/test-predictions.csv",
+      "status": "provided numerical record matched; independent row counting pending incremental review"
+    },
+    {
+      "claim_id": "C-D03",
+      "type": "editorial",
+      "new_text": "删除旧代理拟合次数预算说明；保留实测计算成本",
+      "evidence": "inputs/manuscript.md; no scientific claim changed",
+      "status": "checked"
+    },
+    {
+      "claim_id": "C-D04",
+      "type": "disclosure",
+      "new_text": "本演示由Codex辅助完成代码执行、结果整理、绘图与文字写作。稿件沿用已有冻结实验及复算材料，本次未重新拟合；没有开展真实仪器验证。资金、利益冲突及真实作者身份未提供。代码、输入、冻结配置与已有复算记录随本地材料交付。K-Dense流程的使用在软件致谢中披露，相关预印本仅用于软件说明，未全文阅读。",
+      "evidence": "inputs/inputs/calibration.py, inputs/numeric-review.json, provided prior manuscript; no fresh experiment",
+      "status": "agent_checked; actual human author/approval unverified"
+    }
+  ],
+  "submission_ready": false,
+  "human_verification": "unverified"
+}

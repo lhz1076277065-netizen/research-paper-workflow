@@ -1,0 +1,24 @@
+{
+  "schema": "research-storage-1",
+  "id": "de891c6d507a4f82991afbb37a3c30dc",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup",
+  "limit_bytes": 200000000000,
+  "reserve_bytes": 10000000000,
+  "downloaded_bytes": 0,
+  "preplan_download_bytes": null,
+  "operations": [],
+  "plan": {
+    "needs": [
+      {
+        "purpose": "接续已有证据进行写作与复核",
+        "subset": "inputs及首测已完成的小型敏感性/引用/视觉证据",
+        "access": "已授权本地只读"
+      }
+    ],
+    "expected_download_bytes": 0,
+    "expected_peak_project_bytes": 10000000,
+    "note": "无数据/模型下载，未复制来源整库；只读缓存与原项目。"
+  },
+  "plan_transfer_baseline": 0,
+  "planned_at": 1791816245.57455
+}

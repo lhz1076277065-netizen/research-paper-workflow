@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "evidence_id": "E001",
+      "title": "合成附件及批次纠正",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "inputs/materials.md; inputs/measurements.csv; evidence/analysis-amendment.md",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    },
+    {
+      "evidence_id": "E002",
+      "title": "冻结校准输出",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "inputs/results/results.json; inputs/results/model-lock.json; inputs/results/test-predictions.csv; inputs/results/cost.json",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    },
+    {
+      "evidence_id": "E003",
+      "title": "已执行稳健性/复算",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "evidence/robustness-results.json",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    },
+    {
+      "evidence_id": "E004",
+      "title": "同hash编辑图和视觉记录",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "assets/figure1.png; evidence/figure-visual-review.md",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    },
+    {
+      "evidence_id": "E005",
+      "title": "已重核方法和软件引用",
+      "authors": [],
+      "year": 2026,
+      "source_type": "other",
+      "locator": "citation-audit.md; references.bib",
+      "identifiers": {},
+      "confidentiality": "public",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      },
+      "agent_checked": true,
+      "human_verification": "not performed"
+    }
+  ]
+}

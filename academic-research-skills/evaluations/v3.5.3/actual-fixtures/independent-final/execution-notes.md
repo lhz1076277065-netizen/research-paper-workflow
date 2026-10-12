@@ -1,0 +1,15 @@
+# 实际动作与恢复说明
+
+当前是局部最终稿任务，没有用户硬时间或token上限。phase以focused和无minutes/authority初始化，budget_authority=agent，默认45分钟只作代理复评计划；未复制前两次截止或closed_limit，不自行制造用户上限。前两次真实失败和原始输入从未改动。
+
+本次专业步骤1：K-Dense scientific-writing固定提交154988403bb5a18e9d3c0ce4e6d5e2e4b184a298，读取实际revision/evidence/writing原则，分类差异、登记对应主张、清理正文管理文字，保持科学内容，并实际调用Python3.11运行其原生check_consistency。专业步骤2：同提交scientific-critical-thinking focused入口，读取Appraisal Workflow及适用支持文档，真正计数/聚合受影响分层，核对原数据行、科学diff和既有审查身份，形成增量评价。两次begin→读源→实施→finish/check均有真实收据；审查是适配的本地证据评价，不是外部或独立同行评审。
+
+恢复记录：work_units review-record以本次review begin全部输入绑定真实增量finish；review-status已核查同版身份。checkpoint保留固定科学主张，结论由working更新为supported，没有换问题。
+
+实际错误与处理：首次checkpoint使用未支持outcome枚举被拒，按真实枚举使用默认working；原生一致性检查首次注册重复数字ID、非法证据ID且缺numerator/denominator，工具正确报fail，保留writing-consistency-failed.txt和原动作日志后按真实schema补齐唯一ID及E001、空分子分母，检查实际通过；一次尝试在已import模块的同进程内更新helper签名导致TypeError，未执行工具或改科学稿；已保留原收据，不覆盖不可变专业收据；最终checkpoint改写claim被拒，用原固定claim仅更新outcome，不制造新科学单元。探索help中professional_flow没有resume子命令，改用phase resume和已有check机制。实际CLI与stdout/stderr保存于actions.jsonl；先前工具调用的主机回执也是动作证据。
+
+收据元信息限制：writing-work.json的functions_run最初由helper记为false，不能据此断言没执行原生CLI。actions.jsonl、writing-consistency-output.txt及本记录证明check_consistency实际调用；保留该原始收据及initial副本，不追溯重写。专业使用模式为adapted_in_host，编写/增量判断确由当前Agent完成。critical-thinking自身没有计算引擎，其functions_run=false准确；audit_affected_content.py是本项目只读核查代码。
+
+引用和图源均原样复用，来源同版身份见prior-review-provenance.json。已保留K-Dense软件流程预印本致谢，本任务没有新增或更改文献事实。具名人类来源核验、真实作者及最终批准仍未完成，未宣称投稿就绪。
+
+完成后phase resume返回completed快照和非零退出值，helper按通用错误约定抛出异常；实际phase保持completed，专业步骤没有失败或重启。原stdout恢复快照已保存；最终两个专业收据再次只读check均通过。

@@ -1,0 +1,297 @@
+{
+  "schema_version": "research-phase-1",
+  "id": "10b1412b47224bafa2d5684de1b59e89",
+  "scope": "focused",
+  "objective": "既有教学校准稿最终增量复核与可编辑交付；没有用户硬时间/token上限",
+  "latest_instruction": "既有教学校准稿最终增量复核与可编辑交付；没有用户硬时间/token上限",
+  "status": "completed",
+  "stage": "focused",
+  "started_at": "2026-10-12T15:04:07.651496+00:00",
+  "deadline": 1791820147.651496,
+  "project_deadline": 1791820147.651496,
+  "workflow_version": "3.5.3",
+  "budget_anchor": {
+    "started_at": "2026-10-12T15:04:07.651496+00:00",
+    "basis": "controller_initialization_only",
+    "verified": false
+  },
+  "reserve_seconds": 270.0,
+  "reserve_authority": "agent",
+  "budget_kind": "local_task",
+  "authorization": null,
+  "token_limit": null,
+  "token_reserve": 0,
+  "token_metric": "input_plus_output",
+  "token_reserve_authority": "agent",
+  "budget_authority": "agent",
+  "meter": {
+    "verified": false,
+    "baseline": null,
+    "latest": null,
+    "source": null
+  },
+  "completed_tasks": [
+    "final-teaching-delivery"
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "618d88d6db1fd547d4d3df53f61ade735b4119d36f7d5d07d4531c6c323b097a"
+    }
+  ],
+  "history": [
+    {
+      "event": "work_checkpoint",
+      "key": "final-calibration-manuscript",
+      "claim": "冻结教学选择偏移，新增分层样本数须由实际测试行支持",
+      "stage": "focused",
+      "instruction": "既有教学校准稿最终增量复核与可编辑交付；没有用户硬时间/token上限",
+      "outcome": "working",
+      "evidence": [
+        {
+          "path": "unit-plan.md",
+          "sha256": "d7797dc1ddd6e916bc05f57696ae5b1db5b85eddafeafd5a8a3fc11553b00587"
+        }
+      ],
+      "next_action": "完成局部稿件整理后执行对应范围的14库增量复核",
+      "at": "2026-10-12T15:04:19.176157+00:00"
+    },
+    {
+      "event": "review_recorded",
+      "unit": "final-calibration-manuscript",
+      "fingerprint": "12ac33f747f48ccac72f6bc3762e622635bdce488f5ff0b9726a1b68808d1449"
+    },
+    {
+      "event": "work_checkpoint",
+      "key": "final-calibration-manuscript",
+      "claim": "冻结教学选择偏移，新增分层样本数须由实际测试行支持",
+      "stage": "focused",
+      "instruction": "既有教学校准稿最终增量复核与可编辑交付；没有用户硬时间/token上限",
+      "outcome": "supported",
+      "evidence": [
+        {
+          "path": "incremental-review.md",
+          "sha256": "3b190b8e85995acf26ff0c00703ab1de4c32d6572a9d82beab852eddcf01829b"
+        }
+      ],
+      "next_action": "保持已审稿件不变，复制编辑图源与证据、生成完整性清单并完成本地交付",
+      "at": "2026-10-12T15:15:17.163004+00:00"
+    }
+  ],
+  "repairs": {},
+  "unchanged_rounds": 0,
+  "reassessment_required": false,
+  "next_action": null,
+  "owned_processes": [],
+  "professional_pending": [],
+  "stage_started_at": "2026-10-12T15:04:07.651496+00:00",
+  "host_goal_state": "not_modified",
+  "work_units": {
+    "final-calibration-manuscript": {
+      "key": "final-calibration-manuscript",
+      "claim": "冻结教学选择偏移，新增分层样本数须由实际测试行支持",
+      "stage": "focused",
+      "instruction": "既有教学校准稿最终增量复核与可编辑交付；没有用户硬时间/token上限",
+      "outcome": "supported",
+      "evidence": [
+        {
+          "path": "incremental-review.md",
+          "sha256": "3b190b8e85995acf26ff0c00703ab1de4c32d6572a9d82beab852eddcf01829b"
+        }
+      ],
+      "next_action": "保持已审稿件不变，复制编辑图源与证据、生成完整性清单并完成本地交付",
+      "at": "2026-10-12T15:15:17.163004+00:00"
+    }
+  },
+  "current_unit": "final-calibration-manuscript",
+  "reviews": {
+    "final-calibration-manuscript": {
+      "unit": "final-calibration-manuscript",
+      "fingerprint": "12ac33f747f48ccac72f6bc3762e622635bdce488f5ff0b9726a1b68808d1449",
+      "evidence": [
+        {
+          "path": "changed-claim-evidence.json",
+          "sha256": "7b84ee86de8d80bc468c81ef1ea7ae7bf06beefea151259f018fedf2a975d929"
+        },
+        {
+          "path": "diff-from-reviewed.patch",
+          "sha256": "2de8da9b834800c0e96310ba15c2cb7a77875f9ce1e823f3e282c4f073f1b30b"
+        },
+        {
+          "path": "diff-from-revised.patch",
+          "sha256": "3ff12a2f4c0d3a115a7545705b4d045bdcf59f9bc6ddcef17cd3d83122b68746"
+        },
+        {
+          "path": "inputs/assets/figure1-grayscale.png",
+          "sha256": "3249bea6a6bba35ff19dbe5cd0b5d04cc24308c616225850cf900b4dd38fa375"
+        },
+        {
+          "path": "inputs/assets/figure1.png",
+          "sha256": "75836825311af19897233f3aec4a3f39a95f34342826ab5bc967711713ec8a17"
+        },
+        {
+          "path": "inputs/evidence/robustness-results.json",
+          "sha256": "bc80c3144d49e984df75c04f02a96e23bb74cc5ef6ae7f4c04329ec3dd3d1dac"
+        },
+        {
+          "path": "inputs/inputs/analysis-freeze.json",
+          "sha256": "39489c7272e6d5f11f5e56a5661ec8b87fff45e7599ceac34ddcbc3f367a6642"
+        },
+        {
+          "path": "inputs/inputs/calibration.py",
+          "sha256": "5bc68cdf2365332b6d9b9b1c3ff072e5ee319d5b2d3a020ffbdb6464ced06766"
+        },
+        {
+          "path": "inputs/inputs/measurements.csv",
+          "sha256": "ce81328cb542158f6716bf82745dc9c68835258b952a7eb915a949edd888eb45"
+        },
+        {
+          "path": "inputs/inputs/results/test-predictions.csv",
+          "sha256": "f7511877300e9f83a7e5301e3e13fc72affaea481d3cebeb89fb56e21b8f841f"
+        },
+        {
+          "path": "inputs/manuscript-before-review.md",
+          "sha256": "c90db246e176707c8552d6cc164b0f737d39507aa764cf2e5bccae9689a9c144"
+        },
+        {
+          "path": "inputs/manuscript.md",
+          "sha256": "239256399107f5d61e8426673f20be220b0bbbc232cc81c7653607a023cbd968"
+        },
+        {
+          "path": "inputs/numeric-review.json",
+          "sha256": "6a55c3d0dce3f3f1868a5d846b011c85acd6648c3b2f56ffad77cf060b83c926"
+        },
+        {
+          "path": "inputs/quick-review.md",
+          "sha256": "757c4fa303742af7d27a82e79e398659ed78aecef8cfc96d7fca0f5a3a0f44b7"
+        },
+        {
+          "path": "inputs/references.bib",
+          "sha256": "29af101fd8ce1e8b45b9f23468d3b088df8104d6aecb2295c19071aedc3eebdd"
+        },
+        {
+          "path": "manuscript.md",
+          "sha256": "b09205bf6bf50c2a8ba1c1a70f8be82020ea3538edd0e7b66a2aac5aefb60711"
+        },
+        {
+          "path": "revision-ledger.md",
+          "sha256": "60321bb067aad2731f709ee732efbf88c78a74c110cd4393c2953344952454b6"
+        }
+      ],
+      "instruction": "既有教学校准稿最终增量复核与可编辑交付；没有用户硬时间/token上限",
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review-finish.json",
+      "receipt": {
+        "status": "eligible_for_handoff",
+        "step_id": "9cf182bd57464fa28926a07ce8933378",
+        "capability": "manuscript-review",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/audit_affected_content.py",
+            "sha256": "f2e5c7b4c5db542c7d1a819adef44526aab46629c74796eb7c3003f240cfad9c"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/affected-content-audit.json",
+            "sha256": "464e6b960c2967ac45d5a313bcd9c24bf645e42b54436f4800ca214d9cf3ee12"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/prior-review-provenance.json",
+            "sha256": "3abc872f651c28845fc979ba6b9ce868320dd66921da102641c3febe18c15c5c"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review.md",
+            "sha256": "3b190b8e85995acf26ff0c00703ab1de4c32d6572a9d82beab852eddcf01829b"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/review-action-evidence.md",
+            "sha256": "6606a03abb4a5ef1b5af976dca687a00a250365066b9b06e21d92f748a72374c"
+          }
+        ],
+        "semantic_work_verified_by_tool": false,
+        "started_sha256": "945bd4931448643a8798a067ce9c587812e7d1ed95c1bfdf640fa22266647d9b",
+        "finished_sha256": "4df1345132752a0ec7a739780136f72d1ab0b00b3bdf5ddd479b677aa0e9d3a8"
+      }
+    }
+  },
+  "professional_steps": [
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "02949372c9084b559d610be97213ec44",
+      "capability": "manuscript-writing",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/changed-claim-evidence.json",
+          "sha256": "7b84ee86de8d80bc468c81ef1ea7ae7bf06beefea151259f018fedf2a975d929"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/manuscript.md",
+          "sha256": "b09205bf6bf50c2a8ba1c1a70f8be82020ea3538edd0e7b66a2aac5aefb60711"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-reviewed.patch",
+          "sha256": "2de8da9b834800c0e96310ba15c2cb7a77875f9ce1e823f3e282c4f073f1b30b"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-revised.patch",
+          "sha256": "3ff12a2f4c0d3a115a7545705b4d045bdcf59f9bc6ddcef17cd3d83122b68746"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/revision-ledger.md",
+          "sha256": "60321bb067aad2731f709ee732efbf88c78a74c110cd4393c2953344952454b6"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/consistency_manifest.json",
+          "sha256": "32accf6a6923981bc0c05fe45fc84a61c3075061f42af3df768b34f793fc98bb"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-output.txt",
+          "sha256": "5de5de2b70efb54fabe99d41dd3fcc1bde1c61c89079904430422707ca1e7fb9"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-failed.txt",
+          "sha256": "65d36d4a2eec06b2bdf8fd4f39eb52a5170c4395dd4cab988431635c6c64bf35"
+        }
+      ],
+      "semantic_work_verified_by_tool": false,
+      "stage": "focused",
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-finish.json",
+      "started_sha256": "14ec093b72b4a4972cb3a90950a2a09f7f3d7fdb829ef3ae6a481dec8e182e10",
+      "finished_sha256": "9d074b03043720dc3b9642fb0c5a6ecab2075f05ae3dc211e649808254bc9b38"
+    },
+    {
+      "status": "eligible_for_handoff",
+      "step_id": "9cf182bd57464fa28926a07ce8933378",
+      "capability": "manuscript-review",
+      "outputs": [
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/audit_affected_content.py",
+          "sha256": "f2e5c7b4c5db542c7d1a819adef44526aab46629c74796eb7c3003f240cfad9c"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/affected-content-audit.json",
+          "sha256": "464e6b960c2967ac45d5a313bcd9c24bf645e42b54436f4800ca214d9cf3ee12"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/prior-review-provenance.json",
+          "sha256": "3abc872f651c28845fc979ba6b9ce868320dd66921da102641c3febe18c15c5c"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review.md",
+          "sha256": "3b190b8e85995acf26ff0c00703ab1de4c32d6572a9d82beab852eddcf01829b"
+        },
+        {
+          "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/review-action-evidence.md",
+          "sha256": "6606a03abb4a5ef1b5af976dca687a00a250365066b9b06e21d92f748a72374c"
+        }
+      ],
+      "semantic_work_verified_by_tool": false,
+      "stage": "focused",
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review-finish.json",
+      "started_sha256": "945bd4931448643a8798a067ce9c587812e7d1ed95c1bfdf640fa22266647d9b",
+      "finished_sha256": "4df1345132752a0ec7a739780136f72d1ab0b00b3bdf5ddd479b677aa0e9d3a8"
+    }
+  ],
+  "exit_reason": "局部最终稿受影响内容真实增量复核、编辑源与科学边界交付已完成，稿件签收不再修改正文"
+}

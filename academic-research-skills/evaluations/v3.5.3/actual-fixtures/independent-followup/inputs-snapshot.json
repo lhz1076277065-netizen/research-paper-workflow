@@ -1,0 +1,90 @@
+{
+  "captured_at": "2026-10-12T14:42:40.005040+00:00",
+  "files": [
+    {
+      "path": "inputs/analysis-freeze.json",
+      "sha256": "39489c7272e6d5f11f5e56a5661ec8b87fff45e7599ceac34ddcbc3f367a6642",
+      "bytes": 339
+    },
+    {
+      "path": "inputs/analysis-plan.md",
+      "sha256": "e885f76c43919386d3c5d0bd13cdcdb2fc280d0651030b9dd6d78ed5fd82d5f0",
+      "bytes": 2993
+    },
+    {
+      "path": "inputs/calibration.py",
+      "sha256": "5bc68cdf2365332b6d9b9b1c3ff072e5ee319d5b2d3a020ffbdb6464ced06766",
+      "bytes": 4960
+    },
+    {
+      "path": "inputs/figures/figure1-grayscale.png",
+      "sha256": "3249bea6a6bba35ff19dbe5cd0b5d04cc24308c616225850cf900b4dd38fa375",
+      "bytes": 75206
+    },
+    {
+      "path": "inputs/figures/figure1.pdf",
+      "sha256": "ef5d7118f28756998505cf6845353cb94842d3f50c07aba971fce3f3628fa125",
+      "bytes": 17755
+    },
+    {
+      "path": "inputs/figures/figure1.png",
+      "sha256": "75836825311af19897233f3aec4a3f39a95f34342826ab5bc967711713ec8a17",
+      "bytes": 173261
+    },
+    {
+      "path": "inputs/figures/figure1.svg",
+      "sha256": "2c15f049018bca8807ca5975a08a45656eab7aca8021841cf0b00dd9e83bb24a",
+      "bytes": 51028
+    },
+    {
+      "path": "inputs/figures/preview.png",
+      "sha256": "37bbfa868686a91cc47c0b68e4b361a354e1c02f76410c13ba7afef483e63e35",
+      "bytes": 73357
+    },
+    {
+      "path": "inputs/manuscript-draft.md",
+      "sha256": "5f2fa03a9ec7501d2c8b96c0d9ce4cf01c1793ab6a05b86df72ce75d97418dc5",
+      "bytes": 6298
+    },
+    {
+      "path": "inputs/materials.md",
+      "sha256": "e4f58219a7624d2d2ca8b44b1fbe8a9c2ba3f9e9315f16c07b7d024df4065dcc",
+      "bytes": 360
+    },
+    {
+      "path": "inputs/measurements.csv",
+      "sha256": "ce81328cb542158f6716bf82745dc9c68835258b952a7eb915a949edd888eb45",
+      "bytes": 2808
+    },
+    {
+      "path": "inputs/results/cost.json",
+      "sha256": "0f8b4f759fbec64d26a5dc6a2e9f0a10d390f9e0daa69ec877cd82d233051d19",
+      "bytes": 231
+    },
+    {
+      "path": "inputs/results/cv-metrics.csv",
+      "sha256": "3cadd6f1b8cd6d2c881f74f724d3a0eeae11b79d3f30f526d1091fd95b47317e",
+      "bytes": 660
+    },
+    {
+      "path": "inputs/results/model-lock.json",
+      "sha256": "c8634ac920d979253e2db131076cde764580a9cdbbf0b73015bcec0598af79ea",
+      "bytes": 488
+    },
+    {
+      "path": "inputs/results/primary-metrics.csv",
+      "sha256": "b675812e57971a0345997f24ff66b6074b7085e8b456c16da8e24b8055cbcafa",
+      "bytes": 225
+    },
+    {
+      "path": "inputs/results/results.json",
+      "sha256": "d68189b2461d52a2c4575a05809772fba2cce8c695bdd5386b600930351ed1a6",
+      "bytes": 2442
+    },
+    {
+      "path": "inputs/results/test-predictions.csv",
+      "sha256": "f7511877300e9f83a7e5301e3e13fc72affaea481d3cebeb89fb56e21b8f841f",
+      "bytes": 2661
+    }
+  ]
+}

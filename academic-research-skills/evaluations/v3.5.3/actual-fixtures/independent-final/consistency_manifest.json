@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "methods": [],
+  "results": [],
+  "numeric_facts": [
+    {
+      "fact_id": "N001",
+      "concept": "test low reference stratum n",
+      "analysis_set": "frozen test reference split at train median 14.1",
+      "section": "final_results",
+      "value": 14,
+      "unit": "readings",
+      "sample_size": 40,
+      "numerator": null,
+      "denominator": null,
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N002",
+      "concept": "test low reference stratum n",
+      "analysis_set": "frozen test reference split at train median 14.1",
+      "section": "provided_robustness",
+      "value": 14,
+      "unit": "readings",
+      "sample_size": 40,
+      "numerator": null,
+      "denominator": null,
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N003",
+      "concept": "test high reference stratum n",
+      "analysis_set": "frozen test reference split at train median 14.1",
+      "section": "final_results",
+      "value": 26,
+      "unit": "readings",
+      "sample_size": 40,
+      "numerator": null,
+      "denominator": null,
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N004",
+      "concept": "test high reference stratum n",
+      "analysis_set": "frozen test reference split at train median 14.1",
+      "section": "provided_robustness",
+      "value": 26,
+      "unit": "readings",
+      "sample_size": 40,
+      "numerator": null,
+      "denominator": null,
+      "evidence_ids": [
+        "E001"
+      ]
+    }
+  ]
+}

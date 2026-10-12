@@ -43,6 +43,8 @@ professional_routes默认选题Orchestra brainstorming-research-ideas；已固�
 
 同阶段同版输入/输出的已完成步骤check后可复用；同一未完步骤resume，不重复begin。新问题/材料/版本或新阶段不能借旧收据过门。phase绑定自动登记开始/完成；出口拒绝遗漏；旧记录未知不追溯虚造。预算触顶保存交付预留，不启动下一步；单阶段计划不足先重排或选有效小检验。
 
+复核围绕[实际研究单元](autonomous-work.md)，合并同一主张的转换、拟合、制图、导出和文件检查；各能力的14库调用仍分别保留。已有审查须核对材料与回执身份才复用，修改后执行受影响的审查。不能将反复导出或整包核验当新增科学证据。
+
 ## 完成范围与交付预留
 
 completed_for_handoff只说明requested_step_only，submission_readiness=not_assessed。图稿检查、导出和文件数不表示论文可投稿；草稿/研究报告/正式稿分别标记。上游具名人工核验未做保留unverified，同时继续Agent可做的补证/复算/审查/全文写作，不能冒充人类verified或用此默认阻断研究。作者、伦理和实际投稿授权遵循真实要求。局部写作直接用上游schema字段/枚举维护有关主张，不增加全稿审批材料。

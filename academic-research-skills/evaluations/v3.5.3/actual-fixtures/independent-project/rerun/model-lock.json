@@ -1,0 +1,26 @@
+{
+  "selection_from": "train-only leave-one-batch-out",
+  "threshold": 0.05,
+  "cv_rmse": {
+    "raw": 1.6693048346682107,
+    "offset": 0.3587710298745565,
+    "affine": 0.3627767065237424
+  },
+  "cv_gain": -0.004005676649185885,
+  "selected": "offset",
+  "parameters": {
+    "raw": [
+      0.0,
+      1.0
+    ],
+    "offset": [
+      -1.6345274374999996,
+      1.0
+    ],
+    "affine": [
+      -1.6561422649476576,
+      1.001358609017934
+    ]
+  },
+  "test_used_in_selection": false
+}

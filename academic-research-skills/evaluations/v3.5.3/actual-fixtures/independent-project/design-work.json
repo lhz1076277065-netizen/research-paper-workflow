@@ -1,0 +1,29 @@
+{
+  "step_id": "67b5fc43c13a48d48689451b6a91cab0",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": false,
+  "actions": [
+    {
+      "source_file": "skills/research-ideation/SKILL.md",
+      "source_excerpt": "Select appropriate research methods:",
+      "applied": "依据目标选择冻结预测校准，定义batch独立单元、RMSE/MAE/bias、公平训练验证与一次测试；通过NumPy已知解最小验证，拒绝虚构后端依赖。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/analysis-plan.md",
+      "output_excerpt": "# 预先冻结的分析计划\n冻结时点：2026-10-12T14:21Z；在计算任何测试误差前。\n原始 CSV SHA256：ce81328cb542158f6716bf82745dc9c68835258b952a7eb915a949edd888eb45。\n已有分区：原文件 train/test 不重新随机划分、不交换行。全部模型变换与参数仅来自 train。reference 为理想参考目标，sensor 为预测输入，未知物理单位采用“同附件单位”。batch 是相关读数的分组；预测范围是既有4批次的新读数，而非未见批次外部泛化。\n\n## 模型、终点与决策\n- M0 raw：prediction=sensor，零个拟合参数。\n- M1 offset：prediction=sensor+mean(reference-sensor)，一个参数。\n- M2 affine：prediction=a+b·sensor，NumPy least squares，两个参数。\n主要终点：测试 RMSE，次要终点 MAE 与 bias（prediction-reference）。配对增益 Δ=RMSE(offset)-RMSE(affine)，正值偏向线性。\n教学阈值：0.05 原量纲，约定而非来自物理或临床效用；只有改善超过此阈值且稳定才值得在本演示增加参数。\n选择规则在训练内：leave-one-batch-out（4折）计算预测误差；若 affine 比 offset 的汇总 CV RMSE 至少改善0.05，锁定 affine，否则锁定 offset。不使用测试去修改该规则/阈值/模型。\n测试评价一次性运行，保留两个候选和不校准基线，选择失败不删除。\n\n## 决定性检验与稳健性\n1. 使用未校准基线确认主要问题是否为可修正偏移。\n2. 训练4折批次验证判断斜率是否稳定给出增益；校准参数在每折内重新拟合。\n3. 测试固定模型按batch报告，提供配对 Δ；批次bootstrap 10000次、seed=20261012，条件于已拟合参数的描述性95%区间；只有4批次，不用此区间声称等效或总体推断。\n4. 精确4批次符号置换配对MSE差（16种符号）仅作弱功效描述；不报告读数独立t检验。\n5. leave-one-test-batch-out仅重新汇总固定预测，展示Δ范围，不改变选择。\n6. 训练中位数偏移替代均值；测试低/高参考值（按train参考中位数划界）；训练删最大残差读数后重拟合，仅作预定影响点敏感性，不隐藏原结果。\n7. 独立闭式 centered-covariance OLS 对照 least-squares，已知偏移/斜率玩具样本与恒定预测边界检查；完整脚本复算、数值输出hash对照。\n\n## 成本与停止规则\n数据是现有小附件，无需任何模型权重。最小环境探测已确认NumPy可用，SciPy/虚构后端不可用。最小玩具验证通过后正式扩大；无收益仍完成图稿，不搜索新模型。\n原fit_count_estimate=2是代理计划，本计划需要4折×2+最终2以及中位数和影响点拟合，必要增加不请求用户解锁。预计CPU <10秒、RAM <200 MB、项目<10 MB；先保存实测成本，超原阶段计划在原14:37:07Z总截止内重排。\n图表/导出统一一次科研单元复核；源能力各自begin/read/apply/finish/check。预留最终2分钟收束。\n"
+    },
+    {
+      "source_file": "skills/research-ideation/SKILL.md",
+      "source_excerpt": "Select appropriate research methods:",
+      "applied": "依据目标选择冻结预测校准，定义batch独立单元、RMSE/MAE/bias、公平训练验证与一次测试；通过NumPy已知解最小验证，拒绝虚构后端依赖。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/backend-pilot.json",
+      "output_excerpt": "{\n  \"utc\": \"2026-10-12T14:21Z\",\n  \"backend_missing\": true,\n  \"selected_backend\": \"numpy.linalg.lstsq\",\n  \"toy_beta\": [\n    3.0,\n    1.9999999999999993\n  ],\n  \"toy_assertions\": \"passed\",\n  \"elapsed_seconds\": 0.00013979100000000022,\n  \"numpy_version\": \"2.0.2\",\n  \"decision\": \"有效替代通过最小已知解检验，继续正式冻结分析\"\n}\n"
+    },
+    {
+      "source_file": "skills/research-ideation/SKILL.md",
+      "source_excerpt": "Select appropriate research methods:",
+      "applied": "依据目标选择冻结预测校准，定义batch独立单元、RMSE/MAE/bias、公平训练验证与一次测试；通过NumPy已知解最小验证，拒绝虚构后端依赖。",
+      "output": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/analysis-freeze.json",
+      "output_excerpt": "{\n  \"csv_sha256\": \"ce81328cb542158f6716bf82745dc9c68835258b952a7eb915a949edd888eb45\",\n  \"plan_sha256\": \"e885f76c43919386d3c5d0bd13cdcdb2fc280d0651030b9dd6d78ed5fd82d5f0\",\n  \"frozen_before_test_metrics\": true,\n  \"test_repartitioned\": false,\n  \"models\": [\n    \"raw\",\n    \"offset\",\n    \"affine\"\n  ],\n  \"threshold\": 0.05,\n  \"seed\": 20261012\n}\n"
+    }
+  ]
+}

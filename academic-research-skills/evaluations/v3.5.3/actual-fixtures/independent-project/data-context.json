@@ -1,0 +1,30 @@
+{
+  "rows": 120,
+  "full_scan": true,
+  "missing_cells": 0,
+  "nonfinite_numeric": 0,
+  "duplicate_whole_rows": 0,
+  "duplicate_batch_reference_split": 0,
+  "counts_by_batch_split": {
+    "('0', 'train')": 30,
+    "('1', 'train')": 30,
+    "('2', 'train')": 20,
+    "('2', 'test')": 10,
+    "('3', 'test')": 30
+  },
+  "batches_in_both_splits": [
+    "2"
+  ],
+  "reference_ranges": {
+    "train": [
+      5.0,
+      25.3
+    ],
+    "test": [
+      5.0,
+      25.3
+    ]
+  },
+  "no_rows_removed": true,
+  "csv_sha256": "ce81328cb542158f6716bf82745dc9c68835258b952a7eb915a949edd888eb45"
+}

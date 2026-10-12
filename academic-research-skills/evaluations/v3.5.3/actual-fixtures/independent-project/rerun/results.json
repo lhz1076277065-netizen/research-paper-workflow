@@ -1,0 +1,93 @@
+{
+  "evidence_id": "ER-20261012-frozen-calibration-01",
+  "data_sha256": "ce81328cb542158f6716bf82745dc9c68835258b952a7eb915a949edd888eb45",
+  "selection": "offset",
+  "cv_rmse": {
+    "raw": 1.6693048346682107,
+    "offset": 0.3587710298745565,
+    "affine": 0.3627767065237424
+  },
+  "cv_gain": -0.004005676649185885,
+  "parameters": {
+    "raw": [
+      0.0,
+      1.0
+    ],
+    "offset": [
+      -1.6345274374999996,
+      1.0
+    ],
+    "affine": [
+      -1.6561422649476576,
+      1.001358609017934
+    ]
+  },
+  "test_metrics": {
+    "raw": {
+      "n": 40,
+      "rmse": 1.5275819117442606,
+      "mae": 1.4944089999999999,
+      "bias": 1.4944089999999999
+    },
+    "offset": {
+      "n": 40,
+      "rmse": 0.3462389555418214,
+      "mae": 0.287064009375,
+      "bias": -0.14011843750000028
+    },
+    "affine": {
+      "n": 40,
+      "rmse": 0.34428719765880006,
+      "mae": 0.2860869168025652,
+      "bias": -0.13674245500069032
+    }
+  },
+  "test_delta_rmse": 0.0019517578830213211,
+  "train_descriptives": {
+    "reference": {
+      "mean": 14.275,
+      "sd": 5.859267245844641,
+      "median": 14.1,
+      "iqr": 9.275000000000002,
+      "n": 80
+    },
+    "sensor": {
+      "mean": 15.9095274375,
+      "sd": 5.841399044661171,
+      "median": 15.4729745,
+      "iqr": 9.189420249999998,
+      "n": 80
+    },
+    "raw_error": {
+      "mean": 1.6345274374999996,
+      "sd": 0.3411057033636143,
+      "median": 1.6405084999999993,
+      "iqr": 0.48241624999999977,
+      "n": 80
+    }
+  },
+  "residual_diagnostics": {
+    "raw": {
+      "train_residual_mean": 1.6345274374999996,
+      "train_residual_sd": 0.3411057033636143,
+      "train_residual_reference_correlation": -0.08141152829542307,
+      "max_train_abs_residual": 2.299799
+    },
+    "offset": {
+      "train_residual_mean": -1.1102230246251565e-16,
+      "train_residual_sd": 0.34110570336361434,
+      "train_residual_reference_correlation": -0.08141152829542517,
+      "max_train_abs_residual": 0.877328437500001
+    },
+    "affine": {
+      "train_residual_mean": -1.0436096431476472e-15,
+      "train_residual_sd": 0.34101336917363434,
+      "train_residual_reference_correlation": -0.05820068531871022,
+      "max_train_abs_residual": 0.8740030088422479
+    }
+  },
+  "fitted_model_count": 8,
+  "unit": "unspecified common attachment measurement unit",
+  "scope": "synthetic held-out readings in four existing batches",
+  "test_used_for_selection": false
+}

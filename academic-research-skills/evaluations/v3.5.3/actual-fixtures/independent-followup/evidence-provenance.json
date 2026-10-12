@@ -1,0 +1,35 @@
+{
+  "reason": "inputs短稿引用了未随inputs复制的已完成稳健性与纠正材料；只读上一项目已实际产物，复制必要证据到本项目，未新增实验。",
+  "copies": [
+    {
+      "original": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/robustness-results.json",
+      "copy": "evidence/robustness-results.json",
+      "sha256": "bc80c3144d49e984df75c04f02a96e23bb74cc5ef6ae7f4c04329ec3dd3d1dac"
+    },
+    {
+      "original": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/analysis-amendment.md",
+      "copy": "evidence/analysis-amendment.md",
+      "sha256": "4857b69b01fa9d46390d3ba6a874dd6c37f3137effdf419ab20edc89026e6227"
+    },
+    {
+      "original": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/citations.md",
+      "copy": "evidence/citations.md",
+      "sha256": "33d394229e2ada7bf9a1c24eeda7e63e0c9d9c913e96f240f6a1952ee83aab15"
+    },
+    {
+      "original": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/web-reference-snapshot.json",
+      "copy": "evidence/web-reference-snapshot.json",
+      "sha256": "4ae3c5150ca6e9707a22493356fada5ec64ade2c6f334259e041f4a1d0b88747"
+    },
+    {
+      "original": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/figure-visual-review.md",
+      "copy": "evidence/figure-visual-review.md",
+      "sha256": "3aba7fe255e2f03e766db849f3e4406e0f0e437b32be04836e5103e172f2139d"
+    },
+    {
+      "original": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-project/robustness-review.md",
+      "copy": "evidence/robustness-review.md",
+      "sha256": "78e736e4db4d6f8eb179cb48d52522a81f55f75c7428e1baad31d0be4f92f87c"
+    }
+  ]
+}

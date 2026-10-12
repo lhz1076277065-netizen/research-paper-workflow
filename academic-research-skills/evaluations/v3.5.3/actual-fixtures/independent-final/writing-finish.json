@@ -1,0 +1,169 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "02949372c9084b559d610be97213ec44",
+  "capability": "manuscript-writing",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/request.md",
+    "sha256": "ae5b69fe8985277b98c044ff9b3f9fd8f1535493e7072dc0e33a3f8496a4d810"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/manuscript.md",
+      "sha256": "239256399107f5d61e8426673f20be220b0bbbc232cc81c7653607a023cbd968"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/manuscript-before-review.md",
+      "sha256": "c90db246e176707c8552d6cc164b0f737d39507aa764cf2e5bccae9689a9c144"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/quick-review.md",
+      "sha256": "757c4fa303742af7d27a82e79e398659ed78aecef8cfc96d7fca0f5a3a0f44b7"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/revision-validation.md",
+      "sha256": "12dc507013fdf0db4424b0d8723ddb37db1ed62a624aee485b32ad99c4fb9fe7"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/references.bib",
+      "sha256": "29af101fd8ce1e8b45b9f23468d3b088df8104d6aecb2295c19071aedc3eebdd"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/unit-plan.md",
+      "sha256": "d7797dc1ddd6e916bc05f57696ae5b1db5b85eddafeafd5a8a3fc11553b00587"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/changed-claim-evidence.json",
+      "sha256": "7b84ee86de8d80bc468c81ef1ea7ae7bf06beefea151259f018fedf2a975d929"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/manuscript.md",
+      "sha256": "b09205bf6bf50c2a8ba1c1a70f8be82020ea3538edd0e7b66a2aac5aefb60711"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-reviewed.patch",
+      "sha256": "2de8da9b834800c0e96310ba15c2cb7a77875f9ce1e823f3e282c4f073f1b30b"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-revised.patch",
+      "sha256": "3ff12a2f4c0d3a115a7545705b4d045bdcf59f9bc6ddcef17cd3d83122b68746"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/revision-ledger.md",
+      "sha256": "60321bb067aad2731f709ee732efbf88c78a74c110cd4393c2953344952454b6"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/consistency_manifest.json",
+      "sha256": "32accf6a6923981bc0c05fe45fc84a61c3075061f42af3df768b34f793fc98bb"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-output.txt",
+      "sha256": "5de5de2b70efb54fabe99d41dd3fcc1bde1c61c89079904430422707ca1e7fb9"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-failed.txt",
+      "sha256": "65d36d4a2eec06b2bdf8fd4f39eb52a5170c4395dd4cab988431635c6c64bf35"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-work.json",
+    "sha256": "73d5b2a3b6ab05fb26be74ffba92ad2309cbcc1d5858d83a9da0d7f5747f94c4"
+  },
+  "use": {
+    "id": "kdense-writing",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/scientific-writing/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "writing",
+      "ethics",
+      "publication"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/manuscript.md",
+        "sha256": "239256399107f5d61e8426673f20be220b0bbbc232cc81c7653607a023cbd968"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/manuscript-before-review.md",
+        "sha256": "c90db246e176707c8552d6cc164b0f737d39507aa764cf2e5bccae9689a9c144"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/quick-review.md",
+        "sha256": "757c4fa303742af7d27a82e79e398659ed78aecef8cfc96d7fca0f5a3a0f44b7"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/revision-validation.md",
+        "sha256": "12dc507013fdf0db4424b0d8723ddb37db1ed62a624aee485b32ad99c4fb9fe7"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/inputs/references.bib",
+        "sha256": "29af101fd8ce1e8b45b9f23468d3b088df8104d6aecb2295c19071aedc3eebdd"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/unit-plan.md",
+        "sha256": "d7797dc1ddd6e916bc05f57696ae5b1db5b85eddafeafd5a8a3fc11553b00587"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/changed-claim-evidence.json",
+        "sha256": "7b84ee86de8d80bc468c81ef1ea7ae7bf06beefea151259f018fedf2a975d929"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/manuscript.md",
+        "sha256": "b09205bf6bf50c2a8ba1c1a70f8be82020ea3538edd0e7b66a2aac5aefb60711"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-reviewed.patch",
+        "sha256": "2de8da9b834800c0e96310ba15c2cb7a77875f9ce1e823f3e282c4f073f1b30b"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-revised.patch",
+        "sha256": "3ff12a2f4c0d3a115a7545705b4d045bdcf59f9bc6ddcef17cd3d83122b68746"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/revision-ledger.md",
+        "sha256": "60321bb067aad2731f709ee732efbf88c78a74c110cd4393c2953344952454b6"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/consistency_manifest.json",
+        "sha256": "32accf6a6923981bc0c05fe45fc84a61c3075061f42af3df768b34f793fc98bb"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-output.txt",
+        "sha256": "5de5de2b70efb54fabe99d41dd3fcc1bde1c61c89079904430422707ca1e7fb9"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-failed.txt",
+        "sha256": "65d36d4a2eec06b2bdf8fd4f39eb52a5170c4395dd4cab988431635c6c64bf35"
+      }
+    ],
+    "steps": [
+      "按真实diff执行局部稿件整理，先登记受影响材料/数值/披露主张；移出审查与预算状态，保持科学含义、结论、冻结条件及引用；对两个新样本数与已有记录执行原生一致性核查",
+      "按真实diff执行局部稿件整理，先登记受影响材料/数值/披露主张；移出审查与预算状态，保持科学含义、结论、冻结条件及引用；对两个新样本数与已有记录执行原生一致性核查",
+      "按真实diff执行局部稿件整理，先登记受影响材料/数值/披露主张；移出审查与预算状态，保持科学含义、结论、冻结条件及引用；对两个新样本数与已有记录执行原生一致性核查",
+      "按真实diff执行局部稿件整理，先登记受影响材料/数值/披露主张；移出审查与预算状态，保持科学含义、结论、冻结条件及引用；对两个新样本数与已有记录执行原生一致性核查",
+      "按真实diff执行局部稿件整理，先登记受影响材料/数值/披露主张；移出审查与预算状态，保持科学含义、结论、冻结条件及引用；对两个新样本数与已有记录执行原生一致性核查",
+      "按真实diff执行局部稿件整理，先登记受影响材料/数值/披露主张；移出审查与预算状态，保持科学含义、结论、冻结条件及引用；对两个新样本数与已有记录执行原生一致性核查",
+      "按真实diff执行局部稿件整理，先登记受影响材料/数值/披露主张；移出审查与预算状态，保持科学含义、结论、冻结条件及引用；对两个新样本数与已有记录执行原生一致性核查",
+      "按真实diff执行局部稿件整理，先登记受影响材料/数值/披露主张；移出审查与预算状态，保持科学含义、结论、冻结条件及引用；对两个新样本数与已有记录执行原生一致性核查"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

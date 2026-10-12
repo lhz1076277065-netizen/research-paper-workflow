@@ -1,0 +1,40 @@
+{
+  "status": "eligible_for_handoff",
+  "step_id": "02949372c9084b559d610be97213ec44",
+  "capability": "manuscript-writing",
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/changed-claim-evidence.json",
+      "sha256": "7b84ee86de8d80bc468c81ef1ea7ae7bf06beefea151259f018fedf2a975d929"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/manuscript.md",
+      "sha256": "b09205bf6bf50c2a8ba1c1a70f8be82020ea3538edd0e7b66a2aac5aefb60711"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-reviewed.patch",
+      "sha256": "2de8da9b834800c0e96310ba15c2cb7a77875f9ce1e823f3e282c4f073f1b30b"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/diff-from-revised.patch",
+      "sha256": "3ff12a2f4c0d3a115a7545705b4d045bdcf59f9bc6ddcef17cd3d83122b68746"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/revision-ledger.md",
+      "sha256": "60321bb067aad2731f709ee732efbf88c78a74c110cd4393c2953344952454b6"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/consistency_manifest.json",
+      "sha256": "32accf6a6923981bc0c05fe45fc84a61c3075061f42af3df768b34f793fc98bb"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-output.txt",
+      "sha256": "5de5de2b70efb54fabe99d41dd3fcc1bde1c61c89079904430422707ca1e7fb9"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/writing-consistency-failed.txt",
+      "sha256": "65d36d4a2eec06b2bdf8fd4f39eb52a5170c4395dd4cab988431635c6c64bf35"
+    }
+  ],
+  "semantic_work_verified_by_tool": false
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "a372e9c1fc1a44858781ccf5a1e2d0b9",
+  "capability": "manuscript-writing",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/request.md",
+    "sha256": "8c26c262309d88ada85ffef74d59322fb17b496473f84602875509c18eb6c2fb"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/manuscript-before-review.md",
+      "sha256": "c90db246e176707c8552d6cc164b0f737d39507aa764cf2e5bccae9689a9c144"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/quick-review.md",
+      "sha256": "757c4fa303742af7d27a82e79e398659ed78aecef8cfc96d7fca0f5a3a0f44b7"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/numeric-review.json",
+      "sha256": "6a55c3d0dce3f3f1868a5d846b011c85acd6648c3b2f56ffad77cf060b83c926"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/manuscript.md",
+      "sha256": "239256399107f5d61e8426673f20be220b0bbbc232cc81c7653607a023cbd968"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/revision-validation.md",
+      "sha256": "12dc507013fdf0db4424b0d8723ddb37db1ed62a624aee485b32ad99c4fb9fe7"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/revision-work.json",
+    "sha256": "60775c1c541cc2da428bfda4cd69e26dc3ad3a575b3224592b256eaae320350a"
+  },
+  "use": {
+    "id": "kdense-writing",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/scientific-writing/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "writing",
+      "ethics",
+      "publication"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/manuscript-before-review.md",
+        "sha256": "c90db246e176707c8552d6cc164b0f737d39507aa764cf2e5bccae9689a9c144"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/quick-review.md",
+        "sha256": "757c4fa303742af7d27a82e79e398659ed78aecef8cfc96d7fca0f5a3a0f44b7"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/numeric-review.json",
+        "sha256": "6a55c3d0dce3f3f1868a5d846b011c85acd6648c3b2f56ffad77cf060b83c926"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/manuscript.md",
+        "sha256": "239256399107f5d61e8426673f20be220b0bbbc232cc81c7653607a023cbd968"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/revision-validation.md",
+        "sha256": "12dc507013fdf0db4424b0d8723ddb37db1ed62a624aee485b32ad99c4fb9fe7"
+      }
+    ],
+    "steps": [
+      "按全稿复核完成状态修订，仅补充现成分层样本数并逐段验证未改科学主张",
+      "按全稿复核完成状态修订，仅补充现成分层样本数并逐段验证未改科学主张"
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Evidence outline, scientific fidelity, declaration and revision subflows. Current host verifies evidence; human approvals remain pending where needed. No automatic submission or external upload."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

@@ -1,0 +1,127 @@
+{
+  "measurement": "UTF-8 bytes/characters, not actual host token usage",
+  "entries": [
+    {
+      "skill": "analysis-execution",
+      "old_utf8_bytes": 1351,
+      "new_utf8_bytes": 1434,
+      "new_characters": 742
+    },
+    {
+      "skill": "citation-audit",
+      "old_utf8_bytes": 1353,
+      "new_utf8_bytes": 1436,
+      "new_characters": 740
+    },
+    {
+      "skill": "data-discovery",
+      "old_utf8_bytes": 1378,
+      "new_utf8_bytes": 1461,
+      "new_characters": 749
+    },
+    {
+      "skill": "data-preparation",
+      "old_utf8_bytes": 1338,
+      "new_utf8_bytes": 1421,
+      "new_characters": 737
+    },
+    {
+      "skill": "ethics-protocol",
+      "old_utf8_bytes": 1360,
+      "new_utf8_bytes": 1443,
+      "new_characters": 743
+    },
+    {
+      "skill": "journal-intelligence",
+      "old_utf8_bytes": 1365,
+      "new_utf8_bytes": 1448,
+      "new_characters": 748
+    },
+    {
+      "skill": "literature-discovery",
+      "old_utf8_bytes": 1347,
+      "new_utf8_bytes": 1430,
+      "new_characters": 742
+    },
+    {
+      "skill": "manuscript-review",
+      "old_utf8_bytes": 1357,
+      "new_utf8_bytes": 1440,
+      "new_characters": 744
+    },
+    {
+      "skill": "manuscript-writing",
+      "old_utf8_bytes": 1460,
+      "new_utf8_bytes": 1543,
+      "new_characters": 793
+    },
+    {
+      "skill": "paper-deep-reading",
+      "old_utf8_bytes": 1374,
+      "new_utf8_bytes": 1457,
+      "new_characters": 751
+    },
+    {
+      "skill": "peer-review-response",
+      "old_utf8_bytes": 1359,
+      "new_utf8_bytes": 1442,
+      "new_characters": 746
+    },
+    {
+      "skill": "publication-stewardship",
+      "old_utf8_bytes": 1335,
+      "new_utf8_bytes": 1418,
+      "new_characters": 740
+    },
+    {
+      "skill": "research-design",
+      "old_utf8_bytes": 1363,
+      "new_utf8_bytes": 1446,
+      "new_characters": 744
+    },
+    {
+      "skill": "research-intake",
+      "old_utf8_bytes": 1383,
+      "new_utf8_bytes": 1466,
+      "new_characters": 752
+    },
+    {
+      "skill": "research-paper-workflow",
+      "old_utf8_bytes": 1557,
+      "new_utf8_bytes": 1476,
+      "new_characters": 760
+    },
+    {
+      "skill": "robustness-reproducibility",
+      "old_utf8_bytes": 1362,
+      "new_utf8_bytes": 1445,
+      "new_characters": 751
+    },
+    {
+      "skill": "scientific-visualization",
+      "old_utf8_bytes": 1361,
+      "new_utf8_bytes": 1444,
+      "new_characters": 754
+    },
+    {
+      "skill": "submission-packaging",
+      "old_utf8_bytes": 1386,
+      "new_utf8_bytes": 1469,
+      "new_characters": 755
+    },
+    {
+      "skill": "topic-novelty",
+      "old_utf8_bytes": 1371,
+      "new_utf8_bytes": 1454,
+      "new_characters": 746
+    }
+  ],
+  "max_characters": 793,
+  "synthetic_181_completed_receipts": {
+    "full_api_bytes": 72842,
+    "compact_cli_bytes": 2124,
+    "reduction_percent": 97.08,
+    "completed_receipts_are_pending": false
+  },
+  "new_rules_progressive_disclosure": "references/autonomous-work.md"
+}

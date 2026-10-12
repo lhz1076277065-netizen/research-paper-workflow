@@ -1,0 +1,310 @@
+{
+  "version": "3.5.3",
+  "scope": "Three actual independent synthetic fixtures; failures retained, final local writing/delivery passes",
+  "projects": [
+    {
+      "project": "independent-project",
+      "stage": "manuscript",
+      "status": "closed_limit",
+      "budget_authority": "user",
+      "completed_professional_steps": [
+        {
+          "step": "analysis",
+          "capability": "analysis-execution",
+          "entrypoint": "kdense-statistics",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "calibration.py",
+            "results.json",
+            "model-lock.json",
+            "primary-metrics.csv",
+            "cv-metrics.csv",
+            "test-predictions.csv",
+            "cost.json",
+            "analysis-run.log"
+          ]
+        },
+        {
+          "step": "citations",
+          "capability": "citation-audit",
+          "entrypoint": "kdense-citation",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "citations.md",
+            "web-reference-snapshot.json"
+          ]
+        },
+        {
+          "step": "data",
+          "capability": "data-preparation",
+          "entrypoint": "kdense-eda",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "data.manifest.json",
+            "data.audit.json",
+            "data.eda.json",
+            "environment-diagnosis.md",
+            "data-context.json",
+            "data-dictionary.md"
+          ]
+        },
+        {
+          "step": "design",
+          "capability": "research-design",
+          "entrypoint": "scholar-intake",
+          "source_commit": "903787345d6aec134086afa2b97715a78fbde519",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "analysis-plan.md",
+            "backend-pilot.json",
+            "analysis-freeze.json"
+          ]
+        },
+        {
+          "step": "figure",
+          "capability": "scientific-visualization",
+          "entrypoint": "scipilot-figure",
+          "source_commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "figure-plan.md",
+            "figure-profile.md",
+            "make_figures.py",
+            "figure-layout.json",
+            "figure-visual-review.md",
+            "preview.png",
+            "figure1.png",
+            "figure1.pdf",
+            "figure1.svg",
+            "figure1-grayscale.png"
+          ]
+        },
+        {
+          "step": "question",
+          "capability": "topic-novelty",
+          "entrypoint": "scholar-intake",
+          "source_commit": "903787345d6aec134086afa2b97715a78fbde519",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "research-question-card.md"
+          ]
+        },
+        {
+          "step": "robust",
+          "capability": "robustness-reproducibility",
+          "entrypoint": "kdense-critical",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "analysis-amendment.md",
+            "robustness.py",
+            "robustness-results.json",
+            "robustness-review.md",
+            "rerun.log",
+            "robust-run.log",
+            "results.json",
+            "model-lock.json",
+            "primary-metrics.csv",
+            "cv-metrics.csv",
+            "test-predictions.csv",
+            "cost.json"
+          ]
+        },
+        {
+          "step": "writing",
+          "capability": "manuscript-writing",
+          "entrypoint": "kdense-writing",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "evidence-outline.md",
+            "manuscript-draft.md",
+            "source_manifest.json",
+            "claims.csv"
+          ]
+        }
+      ],
+      "completed_count": 8,
+      "inputs_unchanged": null
+    },
+    {
+      "project": "independent-followup",
+      "stage": "manuscript",
+      "status": "closed_limit",
+      "budget_authority": "user",
+      "completed_professional_steps": [
+        {
+          "step": "citations",
+          "capability": "citation-audit",
+          "entrypoint": "kdense-citation",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "citation-audit.md",
+            "citation-metadata.json",
+            "references-raw.bib",
+            "references.bib"
+          ]
+        },
+        {
+          "step": "design",
+          "capability": "research-design",
+          "entrypoint": "scholar-intake",
+          "source_commit": "903787345d6aec134086afa2b97715a78fbde519",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "design-confirmation.md"
+          ]
+        },
+        {
+          "step": "intake",
+          "capability": "research-intake",
+          "entrypoint": "scholar-intake",
+          "source_commit": "903787345d6aec134086afa2b97715a78fbde519",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "research-question-card.md",
+            "intake-report.md"
+          ]
+        },
+        {
+          "step": "review",
+          "capability": "manuscript-review",
+          "entrypoint": "academic-reviewer",
+          "source_commit": "6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "numeric-review.json",
+            "quick-review.md"
+          ]
+        },
+        {
+          "step": "revision",
+          "capability": "manuscript-writing",
+          "entrypoint": "kdense-writing",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "manuscript.md",
+            "revision-validation.md"
+          ]
+        },
+        {
+          "step": "writing",
+          "capability": "manuscript-writing",
+          "entrypoint": "kdense-writing",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "manuscript-before-review.md",
+            "manuscript-annotated.md",
+            "source_manifest.json",
+            "claims.csv",
+            "consistency_manifest.json",
+            "evidence-outline.md",
+            "figure-reuse.json"
+          ]
+        }
+      ],
+      "completed_count": 6,
+      "inputs_unchanged": true
+    },
+    {
+      "project": "independent-final",
+      "stage": "focused",
+      "status": "completed",
+      "budget_authority": "agent",
+      "completed_professional_steps": [
+        {
+          "step": "incremental-review",
+          "capability": "manuscript-review",
+          "entrypoint": "kdense-critical",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "audit_affected_content.py",
+            "affected-content-audit.json",
+            "prior-review-provenance.json",
+            "incremental-review.md",
+            "review-action-evidence.md"
+          ]
+        },
+        {
+          "step": "writing",
+          "capability": "manuscript-writing",
+          "entrypoint": "kdense-writing",
+          "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+          "check_passed": true,
+          "semantic_work_verified_by_tool": false,
+          "outputs": [
+            "changed-claim-evidence.json",
+            "manuscript.md",
+            "diff-from-reviewed.patch",
+            "diff-from-revised.patch",
+            "revision-ledger.md",
+            "consistency_manifest.json",
+            "writing-consistency-output.txt",
+            "writing-consistency-failed.txt"
+          ]
+        }
+      ],
+      "completed_count": 2,
+      "inputs_unchanged": true
+    }
+  ],
+  "parent_independent_reaggregation": {
+    "raw": {
+      "n": 40,
+      "rmse": 1.5275819117442606,
+      "mae": 1.4944089999999999,
+      "bias": 1.4944089999999999
+    },
+    "offset": {
+      "n": 40,
+      "rmse": 0.3462389555418214,
+      "mae": 0.287064009375,
+      "bias": -0.14011843750000028
+    },
+    "affine": {
+      "n": 40,
+      "rmse": 0.34428719765880006,
+      "mae": 0.2860869168025652,
+      "bias": -0.13674245500069032
+    }
+  },
+  "batch_and_range_counts": {
+    "training_cutpoint": 14.1,
+    "test_rows": 40,
+    "test_batches": 2,
+    "low_range": 14,
+    "high_range": 26
+  },
+  "real_review_receipt_reuse": {
+    "unchanged_reuses": true,
+    "admin_outside_unit_reuses": true,
+    "changed_instruction_invalidates": true,
+    "new_evidence_invalidates": true,
+    "unreviewed_extra_record_rejected": true,
+    "original_phase_and_receipts_not_modified": true
+  },
+  "source_preparation_is_not_professional_completion": true,
+  "certifies_long_term_research_or_originality": false
+}

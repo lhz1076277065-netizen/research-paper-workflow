@@ -1,4 +1,8 @@
-# v3.5.1 当前验证范围
+# v3.5.3 当前验证范围
+
+当前沿用research-phase-1和14库固定入口，新增work_units.py、真实请求预算基点、增量复核及紧凑恢复。实际软件与独立行为验收见源码evaluations/v3.5.3/VALIDATION.zh-CN.md，当前说明见[发行导航](RELEASE-v3.5.3.zh-CN.md)。阶段状态不等于宿主goal状态；来源文件核验不等于专业工作。以下保留历史证据，不代替本次验收。
+
+## v3.5.1 历史维护验证
 
 本地维护版沿用research-phase-1、14库固定入口及旧接口，新增现有reassess的可选参数。当前实测及限制见源码evaluations/v3.5.1/VALIDATION.zh-CN.md，维护导航见[这里](RELEASE-v3.5.1.zh-CN.md)。以下数字全部保留为v3.5.0及v3.4.1历史证据，不能代替本次验证。
 

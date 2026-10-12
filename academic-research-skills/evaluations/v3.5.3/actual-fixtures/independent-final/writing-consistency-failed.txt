@@ -1,0 +1,111 @@
+{
+  "issues": [
+    {
+      "code": "DUPLICATE_FACT_ID",
+      "item_id": "N001",
+      "severity": "error"
+    },
+    {
+      "code": "DUPLICATE_FACT_ID",
+      "item_id": "N002",
+      "severity": "error"
+    },
+    {
+      "code": "FACT_WITHOUT_EVIDENCE",
+      "item_id": "N001",
+      "severity": "error"
+    },
+    {
+      "code": "FACT_WITHOUT_EVIDENCE",
+      "item_id": "N001",
+      "severity": "error"
+    },
+    {
+      "code": "FACT_WITHOUT_EVIDENCE",
+      "item_id": "N002",
+      "severity": "error"
+    },
+    {
+      "code": "FACT_WITHOUT_EVIDENCE",
+      "item_id": "N002",
+      "severity": "error"
+    },
+    {
+      "code": "INVALID_FACT_EVIDENCE_ID",
+      "location": "numeric_facts[0].evidence_ids",
+      "severity": "error"
+    },
+    {
+      "code": "INVALID_FACT_EVIDENCE_ID",
+      "location": "numeric_facts[1].evidence_ids",
+      "severity": "error"
+    },
+    {
+      "code": "INVALID_FACT_EVIDENCE_ID",
+      "location": "numeric_facts[2].evidence_ids",
+      "severity": "error"
+    },
+    {
+      "code": "INVALID_FACT_EVIDENCE_ID",
+      "location": "numeric_facts[3].evidence_ids",
+      "severity": "error"
+    },
+    {
+      "code": "MISSING_SCHEMA_FIELD",
+      "item_id": "denominator",
+      "location": "numeric_facts[0]",
+      "severity": "error"
+    },
+    {
+      "code": "MISSING_SCHEMA_FIELD",
+      "item_id": "numerator",
+      "location": "numeric_facts[0]",
+      "severity": "error"
+    },
+    {
+      "code": "MISSING_SCHEMA_FIELD",
+      "item_id": "denominator",
+      "location": "numeric_facts[1]",
+      "severity": "error"
+    },
+    {
+      "code": "MISSING_SCHEMA_FIELD",
+      "item_id": "numerator",
+      "location": "numeric_facts[1]",
+      "severity": "error"
+    },
+    {
+      "code": "MISSING_SCHEMA_FIELD",
+      "item_id": "denominator",
+      "location": "numeric_facts[2]",
+      "severity": "error"
+    },
+    {
+      "code": "MISSING_SCHEMA_FIELD",
+      "item_id": "numerator",
+      "location": "numeric_facts[2]",
+      "severity": "error"
+    },
+    {
+      "code": "MISSING_SCHEMA_FIELD",
+      "item_id": "denominator",
+      "location": "numeric_facts[3]",
+      "severity": "error"
+    },
+    {
+      "code": "MISSING_SCHEMA_FIELD",
+      "item_id": "numerator",
+      "location": "numeric_facts[3]",
+      "severity": "error"
+    }
+  ],
+  "status": "fail",
+  "summary": {
+    "errors": 18,
+    "methods": 0,
+    "numeric_facts": 4,
+    "results": 0,
+    "warnings": 0
+  },
+  "tool": "check_consistency"
+}

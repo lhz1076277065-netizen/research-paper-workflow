@@ -1,0 +1,28 @@
+{
+  "status": "eligible_for_handoff",
+  "step_id": "9cf182bd57464fa28926a07ce8933378",
+  "capability": "manuscript-review",
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/audit_affected_content.py",
+      "sha256": "f2e5c7b4c5db542c7d1a819adef44526aab46629c74796eb7c3003f240cfad9c"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/affected-content-audit.json",
+      "sha256": "464e6b960c2967ac45d5a313bcd9c24bf645e42b54436f4800ca214d9cf3ee12"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/prior-review-provenance.json",
+      "sha256": "3abc872f651c28845fc979ba6b9ce868320dd66921da102641c3febe18c15c5c"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/incremental-review.md",
+      "sha256": "3b190b8e85995acf26ff0c00703ab1de4c32d6572a9d82beab852eddcf01829b"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-final/review-action-evidence.md",
+      "sha256": "6606a03abb4a5ef1b5af976dca687a00a250365066b9b06e21d92f748a72374c"
+    }
+  ],
+  "semantic_work_verified_by_tool": false
+}

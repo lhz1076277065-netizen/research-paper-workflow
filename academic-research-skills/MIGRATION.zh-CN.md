@@ -1,4 +1,10 @@
-# v3.5.2 正式版迁移
+# v3.5.3 正式版迁移
+
+替换19项后新会话读取新版；安装不会追溯替换旧会话的已加载规则。需要在用户已授权续接的其他项目采用新版时，work_units.py adopt记录实际指令和版本，保留原截止、状态、收据与未知计量；最新科学指令用phase instruction登记，再checkpoint明确当前下一动作。不要把adopt当恢复暂停或重启已完成任务。
+
+新的CLI默认无预算为代理计划，45分钟到点自主复评，不再默认等批准。用户明确要求先批预算时用init --require-budget。原函数init默认保留旧等待预算语义，调用方可以显式autonomous_plan=True；旧research-phase-1未知预算仍按原截止保留，不静默扩大。自定配额用plan origin=agent重排；真实用户/provider限制不可改写。
+
+compact恢复区分未完收据与已完成未消费计数，--full与原resume函数默认完整输出兼容。review缓存要求真实审查输入和专业收据身份；不修改既有收据或追溯填专业执行。详见[研究单元](docs/autonomous-work.md)。本轮两个诊断研究会话不采用上述迁移操作，保持不动。
 
 现有阶段收据兼容；旧下载计量保持未知，首次新的资料获取前补project根目录容量计划并绑定phase。后续阶段和重试沿用同一收据。professional begin与phase resume现在默认精简stdout，需要详细输出加--full；原函数API和完整保存内容保留。正常访问流程自主处理，仍保留真实暂停/总预算和科学证据约束。
 
@@ -6,7 +12,7 @@
 
 从v3.5.0替换19个完整能力目录并核验metadata.version为3.5.1；保留已核验14库源码缓存。旧research-phase-1记录无需转换。active阶段遇障用reassess记录真实诊断、替代比较与下一验证；--blocker复评原障碍后允许新的不同尝试，--minutes只重排阶段计划，--stage只回到同一或更早研究阶段。总截止、token基点、原目标和失败记录不重置。
 
-旧route_closed不会自动启动；实际用户明确续做时用reassess --authority记录原指令并选择当前验证。paused仍须真实恢复，completed与closed_limit不可被复评覆盖。不要把新Skill安装当作研究续做授权，也不补造旧专业收据。v3.5.1当时仅本地交付，其改动现纳入v3.5.2正式版。见[阶段控制](docs/phase-control.md)及[维护导航](docs/RELEASE-v3.5.1.zh-CN.md)。
+旧route_closed不会自动启动；实际用户明确续做时用reassess --authority记录原指令并选择当前验证。paused仍须真实恢复，completed与closed_limit不可被复评覆盖。不要把新Skill安装当作研究续做授权，也不补造旧专业收据。v3.5.1当时仅本地交付，其改动现纳入v3.5.3正式版。见[阶段控制](docs/phase-control.md)及[维护导航](docs/RELEASE-v3.5.1.zh-CN.md)。
 
 ## v3.5.0及更早迁移记录
 

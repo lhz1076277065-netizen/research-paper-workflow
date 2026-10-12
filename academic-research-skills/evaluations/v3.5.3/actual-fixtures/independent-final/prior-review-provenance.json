@@ -1,0 +1,42 @@
+{
+  "prior_step_id": "f115b99b9701465e9b98fe55c76dd22f",
+  "prior_capability": "manuscript-review",
+  "prior_source": {
+    "id": "academic-reviewer",
+    "repository": "Imbad0202/academic-research-skills",
+    "commit": "6ab4b03bf70a118a1b3ee7f3263ed9f19031061b"
+  },
+  "receipt_paths": [
+    "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/review-start.json",
+    "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.3-20261012/independent-followup/review-finish.json"
+  ],
+  "receipt_hashes": {
+    "started": "786420034074cb7875422e705d9f664f31f3860996299aebb3d9f499a101d760",
+    "finished": "aa66a16265002e1950b060bb7db3bbaaacecee6829492625235be16970ae535d"
+  },
+  "current_check_command": "professional_flow.py check on the original start/finish: eligible_for_handoff; actions.jsonl",
+  "provided_inputs_identity": {
+    "manuscript-before-review.md": {
+      "provided": "c90db246e176707c8552d6cc164b0f737d39507aa764cf2e5bccae9689a9c144",
+      "original": "c90db246e176707c8552d6cc164b0f737d39507aa764cf2e5bccae9689a9c144"
+    },
+    "quick-review.md": {
+      "provided": "757c4fa303742af7d27a82e79e398659ed78aecef8cfc96d7fca0f5a3a0f44b7",
+      "original": "757c4fa303742af7d27a82e79e398659ed78aecef8cfc96d7fca0f5a3a0f44b7"
+    },
+    "numeric-review.json": {
+      "provided": "6a55c3d0dce3f3f1868a5d846b011c85acd6648c3b2f56ffad77cf060b83c926",
+      "original": "6a55c3d0dce3f3f1868a5d846b011c85acd6648c3b2f56ffad77cf060b83c926"
+    },
+    "assets/figure1.png": {
+      "provided": "75836825311af19897233f3aec4a3f39a95f34342826ab5bc967711713ec8a17",
+      "original": "75836825311af19897233f3aec4a3f39a95f34342826ab5bc967711713ec8a17"
+    },
+    "assets/figure1-grayscale.png": {
+      "provided": "3249bea6a6bba35ff19dbe5cd0b5d04cc24308c616225850cf900b4dd38fa375",
+      "original": "3249bea6a6bba35ff19dbe5cd0b5d04cc24308c616225850cf900b4dd38fa375"
+    }
+  },
+  "reused_scope": "unchanged abstract, introduction, methods, table, figure/caption, references, conclusions and scientific limitations",
+  "not_reused_scope": "n=14/26 additions and manuscript administrative/disclosure edits; assessed by this task focused review"
+}
