@@ -1,0 +1,9 @@
+# Figure argument and design
+
+Actual SciPilot profile_data.py analyzed all 300 main metric rows and confirmed 10 dataset/arm groups, each with 30 partitions and no small group for the intended outcome. Generic suggestions involving seed or confusion-cell counts are not scientifically appropriate axes; those fields encode design/counts, not new independent variables. Use balanced accuracy and matched scaled-minus-raw differences, with dependent splits explicitly labeled.
+
+Figure 1: Two aligned Wine/Iris panels; show all 30 split scores per fixed method as a strip plot and mark the descriptive mean. Common 0–100% horizontal scale, no truncated accuracy axis. This directly exposes partition variation and the contrasting scaling pattern. A box-and-dot plot is an acceptable alternative but adds little for these discrete repeated-partition values; a mean-only bar plot would hide them and is rejected.
+
+Figure 2: Display each matched scaling difference for both test fractions in four dataset/family rows, with visible zero line. Color and marker distinguish 20% and 30% test; no p-values or independent-sample confidence bounds. This connects robustness to the main comparison without hiding negative results.
+
+Generic teaching report format: final figure width 6 inches, Arial text at least 7.5 pt, SVG/PDF vectors and 300 dpi PNG previews, colorblind-friendly blue/orange plus circles/squares and direct row labels. Current-host reportlab/Pillow rendering is used instead of absent matplotlib; do not claim native style/render functions ran. Native profiling and final file checker will run. Programmatically audit text bounds, plot range and exact CSV positions, then read color and grayscale PNGs before final vector export. No journal compliance or human peer review certificate is implied.

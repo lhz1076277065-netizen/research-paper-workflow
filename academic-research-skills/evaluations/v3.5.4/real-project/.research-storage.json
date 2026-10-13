@@ -1,0 +1,69 @@
+{
+  "schema": "research-storage-1",
+  "id": "ce209a0987044cbea88aeecc2a25207b",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project",
+  "limit_bytes": 200000000000,
+  "reserve_bytes": 10000000000,
+  "downloaded_bytes": 9776,
+  "preplan_download_bytes": null,
+  "operations": [
+    {
+      "kind": "download",
+      "source": "https://archive.ics.uci.edu/static/public/109/wine.zip",
+      "need": 0,
+      "output": "raw/wine.zip",
+      "bytes": 6038,
+      "status": "completed",
+      "sha256": "2bae62c4481220623579d4c4fb36b55652b6b75e06e49fa1981b8198362dfdab"
+    },
+    {
+      "kind": "download",
+      "source": "https://archive.ics.uci.edu/static/public/53/iris.zip",
+      "need": 1,
+      "output": "raw/iris.zip",
+      "bytes": 3738,
+      "status": "completed",
+      "sha256": "d11fe30213d36434a0879aab7cb00ce3c812eb7ba2495874438abff7b7b762e9"
+    },
+    {
+      "kind": "extract",
+      "archive": "raw/wine.zip",
+      "output": "raw/wine",
+      "members": [
+        "wine.data",
+        "wine.names"
+      ],
+      "bytes": 13818,
+      "status": "completed"
+    },
+    {
+      "kind": "extract",
+      "archive": "raw/iris.zip",
+      "output": "raw/iris",
+      "members": [
+        "iris.data",
+        "iris.names"
+      ],
+      "bytes": 7549,
+      "status": "completed"
+    }
+  ],
+  "plan": {
+    "needs": [
+      {
+        "purpose": "B1/B2 Wine classification and authoritative original dictionary",
+        "subset": "UCI Wine id109 complete wine.data and wine.names only; small official archive retained as transfer evidence",
+        "access": "anonymous official UCI static archive"
+      },
+      {
+        "purpose": "B1/B2 Iris classification and authoritative original dictionary",
+        "subset": "UCI Iris id53 complete iris.data and iris.names only; no additional bezdekIris variant extraction",
+        "access": "anonymous official UCI static archive"
+      }
+    ],
+    "expected_download_bytes": 2000000,
+    "expected_peak_project_bytes": 50000000
+  },
+  "plan_transfer_baseline": 0,
+  "planned_at": 1791904595.662265
+}

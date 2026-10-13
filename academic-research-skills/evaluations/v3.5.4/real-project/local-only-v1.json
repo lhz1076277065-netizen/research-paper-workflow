@@ -1,0 +1,18 @@
+{
+  "ready": false,
+  "required_datasets": 2,
+  "local_files_checked": [],
+  "issues": [
+    {
+      "dataset": "wine",
+      "error": "Authoritative source selection not completed"
+    },
+    {
+      "dataset": "iris",
+      "error": "Authoritative source selection not completed"
+    }
+  ],
+  "level": "local",
+  "next_action": "Autonomously repair acquisition, coverage or decoding within the unchanged goal and quota; do not start formal experiments",
+  "scientific_authority_or_completeness_certified_by_tool": false
+}

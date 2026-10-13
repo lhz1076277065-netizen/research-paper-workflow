@@ -1,0 +1,46 @@
+{
+  "references": [
+    {
+      "reference": "1",
+      "evidence_id": "E001",
+      "bibliographic_source": "https://archive.ics.uci.edu/dataset/109/winedataset",
+      "proposition_locator": "Additional Variable Information; Dataset Files; citation/license; original wine.names sections 4\u20139",
+      "checked_proposition": "Original dataset size/schema/classes and scaling suggestion, not method superiority",
+      "agent_checked": true,
+      "human_verified": false
+    },
+    {
+      "reference": "2",
+      "evidence_id": "E002",
+      "bibliographic_source": "https://archive.ics.uci.edu/dataset/53/iris",
+      "proposition_locator": "Dataset Information; Variables Table; citation/license; original iris.names sections 4\u20139",
+      "checked_proposition": "150 records/4 cm features/3 balanced classes and historical original-version discrepancy",
+      "agent_checked": true,
+      "human_verified": false
+    },
+    {
+      "reference": "3",
+      "evidence_id": "E007",
+      "bibliographic_source": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "proposition_locator": "12.2 Data leakage; 12.2.1 How to avoid data leakage",
+      "checked_proposition": "Split before preprocessing; learned transform fitted on training only, applied consistently to train/test",
+      "agent_checked": true,
+      "human_verified": false
+    },
+    {
+      "reference": "4",
+      "evidence_id": "E008",
+      "bibliographic_source": "https://arxiv.org/abs/2609.00065",
+      "proposition_locator": "Title, five-author list, submission/version history and DOI fields",
+      "checked_proposition": "Software/procedural resource attribution only, no performance assertion based on abstract",
+      "agent_checked": true,
+      "human_verified": false
+    }
+  ],
+  "in_text_reference_mapping": "all four used and all defined",
+  "manuscript_numbers_verified_by": "robustness-verification.json and consistency-manifest.json",
+  "source_type_syntax_repair": "website corrected to documented webpage enum before writing handoff",
+  "native_validate_citations": "unavailable because requests is absent; no native success claimed",
+  "unavailable_metadata": "Journal volume/pages are not applicable to the two data records, live documentation and cited arXiv record; documentation year not inferred from access date",
+  "no_bibliographic_fabrication": true
+}

@@ -1,0 +1,9 @@
+# Document visual verification
+
+The delivered Word file was rendered by the bundled LibreOffice through the packaged document renderer. The only wrapper adaptation confines temporary files and the isolated LibreOffice profile to this project; it does not change layout or scientific content. The PDF is the actual Word rendering, not an independently composed lookalike.
+
+All five pages in delivery/rendered were opened and inspected at their rendered resolution. Page 1 contains the title, abstract, introduction and methods; page 2 completes methods and holds the intact result table; page 3 holds Figure 1, its complete caption and sensitivity results; page 4 holds Figure 2, its caption, discussion and declarations; page 5 completes declarations and contains all references. Text, table cells, negative signs, formulas, labels and captions are legible, with no clipping, overlap, missing glyphs or broken rows. Figures remain with their captions. White space below the figure blocks is intentional to preserve the next figure as a whole.
+
+The first render exposed an inherited decorative title border and unnecessary caption/table font coloring. The task-owned builder removed the border and used black text. All five final pages were then rendered and inspected again. This second pass was required by an actual layout change, not a duplicate scientific review. No scientific source, result, plot data or prose changed during layout repair.
+
+document-export-check.json records exact text parity between Word body text and the rendered PDF after whitespace normalization, the five-page count and final file hashes. Images and PDF page content were checked visually as well as structurally. The original scientific figure previews had already been checked in both color and grayscale under the SciPilot step.

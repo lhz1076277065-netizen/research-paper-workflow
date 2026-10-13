@@ -1,0 +1,118 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "e0329448f3334c9caa30724401fe1c7c",
+  "capability": "data-discovery",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/request.md",
+    "sha256": "3fc1e4cf182ecabd9edb2cedeb2a426e57e7c4d1092ccb8f201240f9395625a8"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/refine-logs/EXPERIMENT_PLAN_20261013_232300.md",
+      "sha256": "697d78b97b18060d28a9956f9879721e6d18f47ceac5704da4c9ff6c6ae3810e"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/retrieval-contract.md",
+      "sha256": "678331f582bd446093e17c4aa9e7e900a2891d55b9580094a85b295ee95dad07"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/download-reconciliation.json",
+      "sha256": "41f2a04e3a5c044dd22888f272f2ad23075d5817d0dd18c24910904cc7f59b7a"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/sources/wine-metadata-v2.json",
+      "sha256": "63bf62376b8988f9e031ea04244e82d23f36dbc7add93332266d76e7ac9c183f"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/sources/iris-metadata-v2.json",
+      "sha256": "1208630f04033e82ee8056a0f2bd1d1432697ba2062094a5638b00c88ea2bc12"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/sources/selection-v2.md",
+      "sha256": "72080514a14e9d5573dcd11f90db10a2ba635317d15db3a84f366b33ca9454f2"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/discovery-v2-work.json",
+    "sha256": "f3da07102230a983e1537e0d14684a3f1bfd459c70174aaee8c2ad9d41ee0f47"
+  },
+  "use": {
+    "id": "kdense-database",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/database-lookup/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "data_discovery"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/refine-logs/EXPERIMENT_PLAN_20261013_232300.md",
+        "sha256": "697d78b97b18060d28a9956f9879721e6d18f47ceac5704da4c9ff6c6ae3810e"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/retrieval-contract.md",
+        "sha256": "678331f582bd446093e17c4aa9e7e900a2891d55b9580094a85b295ee95dad07"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/download-reconciliation.json",
+        "sha256": "41f2a04e3a5c044dd22888f272f2ad23075d5817d0dd18c24910904cc7f59b7a"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/sources/wine-metadata-v2.json",
+        "sha256": "63bf62376b8988f9e031ea04244e82d23f36dbc7add93332266d76e7ac9c183f"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/sources/iris-metadata-v2.json",
+        "sha256": "1208630f04033e82ee8056a0f2bd1d1432697ba2062094a5638b00c88ea2bc12"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/sources/selection-v2.md",
+        "sha256": "72080514a14e9d5573dcd11f90db10a2ba635317d15db3a84f366b33ca9454f2"
+      }
+    ],
+    "steps": [
+      "Re-applied the actual retrieval contract to the revised design/manifest, checked all original raw hashes and 178/150 row counts and archive CRC, selected complete unchanged official local data over redundant network transfer; recorded exact version, DOI, rights and unchanged scope.",
+      "Re-applied the actual retrieval contract to the revised design/manifest, checked all original raw hashes and 178/150 row counts and archive CRC, selected complete unchanged official local data over redundant network transfer; recorded exact version, DOI, rights and unchanged scope.",
+      "Re-applied the actual retrieval contract to the revised design/manifest, checked all original raw hashes and 178/150 row counts and archive CRC, selected complete unchanged official local data over redundant network transfer; recorded exact version, DOI, rights and unchanged scope."
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Read the relevant retrieval contract/reference; apply actual authorization, bounded API retrieval, filters and provenance. Unsupported domains need a verified matching entry, not invented API results."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}
+{
+  "status": "eligible_for_handoff",
+  "step_id": "e0329448f3334c9caa30724401fe1c7c",
+  "capability": "data-discovery",
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/sources/wine-metadata-v2.json",
+      "sha256": "63bf62376b8988f9e031ea04244e82d23f36dbc7add93332266d76e7ac9c183f"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/sources/iris-metadata-v2.json",
+      "sha256": "1208630f04033e82ee8056a0f2bd1d1432697ba2062094a5638b00c88ea2bc12"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/sources/selection-v2.md",
+      "sha256": "72080514a14e9d5573dcd11f90db10a2ba635317d15db3a84f366b33ca9454f2"
+    }
+  ],
+  "semantic_work_verified_by_tool": false
+}

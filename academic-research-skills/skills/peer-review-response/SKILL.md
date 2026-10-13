@@ -2,7 +2,7 @@
 name: peer-review-response
 description: "处理真实审稿意见，完成对应修订与逐项回复。"
 metadata:
-  version: "3.5.3"
+  version: "3.5.4"
 ---
 
 # 审稿意见驱动的修订与回应

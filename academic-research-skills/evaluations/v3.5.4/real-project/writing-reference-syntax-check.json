@@ -1,0 +1,56 @@
+{
+  "issues": [
+    {
+      "code": "NO_IDENTIFIER_TO_CHECK",
+      "item_id": "E003",
+      "severity": "warning"
+    },
+    {
+      "code": "NO_IDENTIFIER_TO_CHECK",
+      "item_id": "E004",
+      "severity": "warning"
+    },
+    {
+      "code": "NO_IDENTIFIER_TO_CHECK",
+      "item_id": "E005",
+      "severity": "warning"
+    },
+    {
+      "code": "NO_IDENTIFIER_TO_CHECK",
+      "item_id": "E006",
+      "severity": "warning"
+    },
+    {
+      "code": "NO_SOURCE_IDENTIFIER",
+      "item_id": "E003",
+      "location": "sources[4]",
+      "severity": "warning"
+    },
+    {
+      "code": "NO_SOURCE_IDENTIFIER",
+      "item_id": "E004",
+      "location": "sources[5]",
+      "severity": "warning"
+    },
+    {
+      "code": "NO_SOURCE_IDENTIFIER",
+      "item_id": "E005",
+      "location": "sources[6]",
+      "severity": "warning"
+    },
+    {
+      "code": "NO_SOURCE_IDENTIFIER",
+      "item_id": "E006",
+      "location": "sources[7]",
+      "severity": "warning"
+    }
+  ],
+  "status": "pass",
+  "summary": {
+    "errors": 0,
+    "network_used": false,
+    "sources_checked": 8,
+    "warnings": 8
+  },
+  "tool": "check_references"
+}

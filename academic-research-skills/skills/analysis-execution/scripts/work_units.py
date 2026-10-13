@@ -12,7 +12,7 @@ from pathlib import Path
 import sys
 import phase_control as P
 
-VERSION = '3.5.3'
+VERSION = '3.5.4'
 
 def refs(paths, root):
     if not paths: raise P.PhaseError('Supply actual nonempty evidence files')

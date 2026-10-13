@@ -1,0 +1,22 @@
+{
+  "dataset": "iris",
+  "publisher": "UCI Machine Learning Repository",
+  "dataset_id": 53,
+  "landing_page": "https://archive.ics.uci.edu/dataset/53/iris",
+  "download_url": "https://archive.ics.uci.edu/static/public/53/iris.zip",
+  "access_date": "2026-10-13",
+  "license": "CC BY 4.0",
+  "citation": "Fisher, R. (1936). Iris [Dataset].",
+  "doi": "10.24432/C56C76",
+  "version": "Original iris.data, official static archive retrieved 2026-10-13",
+  "expected_rows": 150,
+  "retrieved_rows": 150,
+  "removed_rows": 0,
+  "feature_columns": 4,
+  "raw_sha256": "6f608b71a7317216319b4d27b4d9bc84e6abd734eda7872b71a458569e2656c0",
+  "raw_bytes": 4551,
+  "archive_bytes": 3738,
+  "archive_crc": "all members verified",
+  "dictionary_path": "raw/iris/iris.names",
+  "historical_correction_policy": "Preserve original iris.data; dictionary identifies differences at samples 35 and 38. No silent corrections."
+}

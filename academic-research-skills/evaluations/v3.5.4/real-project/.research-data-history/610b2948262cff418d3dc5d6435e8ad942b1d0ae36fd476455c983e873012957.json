@@ -1,0 +1,113 @@
+{
+  "schema": "local-research-data-1",
+  "id": "061214ff243c4e1494bb2d96c695ce55",
+  "phase_id": "3fd27c280cca44de94d92cf0d8f2f23e",
+  "instruction": "Complete the authorized UCI Wine and Iris local teaching reanalysis described in request.md, with professional gates and local-data readiness.",
+  "research_plan": {
+    "path": "research-plan-v1.md",
+    "sha256": "6e5a167b1707bba58eb905e87b65894ab012672e2d9e4b78dc8267069548ba4e"
+  },
+  "specification": {
+    "path": "dataset-spec-v1.json",
+    "sha256": "d163069c658d6c88fd8c518655257b79aae46314f500d79562e354c108eb6375"
+  },
+  "datasets": [
+    {
+      "id": "wine",
+      "purpose": "Both main and sensitivity matched classification comparisons on complete 178-row UCI Wine release; 13 features plus label",
+      "files": [
+        {
+          "path": "raw/wine/wine.data",
+          "format": "csv",
+          "header": false,
+          "columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "required_columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "numeric_columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "expected_rows": 178,
+          "allow_missing": false
+        }
+      ]
+    },
+    {
+      "id": "iris",
+      "purpose": "Both main and sensitivity matched classification comparisons on complete 150-row UCI iris.data version; 4 measurements in cm plus label; preserve reported historical discrepancies",
+      "files": [
+        {
+          "path": "raw/iris/iris.data",
+          "format": "csv",
+          "header": false,
+          "columns": [
+            "sepal_length",
+            "sepal_width",
+            "petal_length",
+            "petal_width",
+            "class"
+          ],
+          "required_columns": [
+            "sepal_length",
+            "sepal_width",
+            "petal_length",
+            "petal_width",
+            "class"
+          ],
+          "numeric_columns": [
+            "sepal_length",
+            "sepal_width",
+            "petal_length",
+            "petal_width"
+          ],
+          "expected_rows": 150,
+          "allow_missing": false
+        }
+      ]
+    }
+  ],
+  "sources": {},
+  "inspections": {},
+  "history": []
+}

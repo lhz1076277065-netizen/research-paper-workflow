@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.5.4 — complete local-data research flow, 2026-10-13
+
+Bind actual research plans to all required local datasets, official-source selection and streamed integrity/reader checks before local experiments. Sequence robustness, real-result plots, writing/review and final expression. Preserve fourteen-source invocation, autonomous recovery, real budgets and cumulative 200 GB limits. Add missing pinned design support references found by independent real-data evaluation. Regenerate all nineteen standalone skills; preserve focused and historical scopes. See the release report for observed validation and limitations.
+
 ## 3.5.3 — autonomous work units and reliable recovery, 2026-10-12
 
 Agent-owned ceilings are revisable plans; unbudgeted feasibility is a review checkpoint. Actual user budget timestamps, content-bound review reuse, scientific checkpoints, alternative-route receipts and compact unfinished-step recovery preserve the fourteen-source gate. All nineteen skills are regenerated. See docs/RELEASE-v3.5.3.zh-CN.md for observed validation scope.

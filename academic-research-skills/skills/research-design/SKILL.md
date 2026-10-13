@@ -2,7 +2,7 @@
 name: research-design
 description: "选择适配方法，规划竞争预测和判别验证；不填未来结果。"
 metadata:
-  version: "3.5.3"
+  version: "3.5.4"
 ---
 
 # 问题导向的研究设计

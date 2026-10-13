@@ -2,7 +2,7 @@
 name: manuscript-review
 description: "审查稿件科学贡献、证据和论证，指出必要修订。"
 metadata:
-  version: "3.5.3"
+  version: "3.5.4"
 ---
 
 # 科学贡献、证据与表达审查

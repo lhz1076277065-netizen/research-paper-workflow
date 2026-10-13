@@ -1,0 +1,71 @@
+{
+  "step_id": "34893aa8abe34059878c2c3f81e234a1",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": true,
+  "actions": [
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Draft without adding facts",
+      "applied": "Built a recorded-evidence outline, drafted complete bounded methods/results/discussion and declarations with exact full-arm table and inspected figures, bound claim lines to source/experiment records, ran native numerical consistency/reference syntax checks, and preserved unverified human source approval/submission status.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/evidence-outline.md",
+      "output_excerpt": "# Evidence-first manuscript outline\n\nDocument: completed teaching reanalysis report, not an original-method paper and not submission-ready. Audience: readers learning transparent local model compariso"
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Draft without adding facts",
+      "applied": "Built a recorded-evidence outline, drafted complete bounded methods/results/discussion and declarations with exact full-arm table and inspected figures, bound claim lines to source/experiment records, ran native numerical consistency/reference syntax checks, and preserved unverified human source approval/submission status.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/write_report.py",
+      "output_excerpt": "import pathlib,json,csv,hashlib,re\nR=pathlib.Path(__file__).resolve().parent\nmain=json.loads((R/'results'/'summary.json').read_text());sen=json.loads((R/'sensitivity'/'summary.json').read_text())\nrows"
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Draft without adding facts",
+      "applied": "Built a recorded-evidence outline, drafted complete bounded methods/results/discussion and declarations with exact full-arm table and inspected figures, bound claim lines to source/experiment records, ran native numerical consistency/reference syntax checks, and preserved unverified human source approval/submission status.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/manuscript-draft.md",
+      "output_excerpt": "# Training-only standardization and fixed distance classifiers: a reproducible Wine and Iris teaching reanalysis\n\nCompleted empirical teaching report \u00b7 13 October 2026 \u00b7 Agent-assisted, human source v"
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Draft without adding facts",
+      "applied": "Built a recorded-evidence outline, drafted complete bounded methods/results/discussion and declarations with exact full-arm table and inspected figures, bound claim lines to source/experiment records, ran native numerical consistency/reference syntax checks, and preserved unverified human source approval/submission status.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/manuscript-annotated.md",
+      "output_excerpt": "# Training-only standardization and fixed distance classifiers: a reproducible Wine and Iris teaching reanalysis\n\nCompleted empirical teaching report \u00b7 13 October 2026 \u00b7 Agent-assisted, human source v"
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Draft without adding facts",
+      "applied": "Built a recorded-evidence outline, drafted complete bounded methods/results/discussion and declarations with exact full-arm table and inspected figures, bound claim lines to source/experiment records, ran native numerical consistency/reference syntax checks, and preserved unverified human source approval/submission status.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/claims-draft.csv",
+      "output_excerpt": "claim_id,claim_type,claim_sha256,evidence_ids,verification_status,analysis_intent\nC001,composite report statement,8ce8a85386718a584d11db1afc1eb35f484bab32392fa8884c7a0224617928a2,\"E001,E002,E003,E004,"
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Draft without adding facts",
+      "applied": "Built a recorded-evidence outline, drafted complete bounded methods/results/discussion and declarations with exact full-arm table and inspected figures, bound claim lines to source/experiment records, ran native numerical consistency/reference syntax checks, and preserved unverified human source approval/submission status.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/source-manifest.json",
+      "output_excerpt": "{\n  \"schema_version\": \"1.0\",\n  \"sources\": [\n    {\n      \"evidence_id\": \"E001\",\n      \"title\": \"Wine\",\n      \"authors\": [\n        \"S. Aeberhard\",\n        \"M. Forina\"\n      ],\n      \"year\": 1992,\n      "
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Draft without adding facts",
+      "applied": "Built a recorded-evidence outline, drafted complete bounded methods/results/discussion and declarations with exact full-arm table and inspected figures, bound claim lines to source/experiment records, ran native numerical consistency/reference syntax checks, and preserved unverified human source approval/submission status.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/consistency-manifest.json",
+      "output_excerpt": "{\n  \"schema_version\": \"1.0\",\n  \"numeric_facts\": [\n    {\n      \"fact_id\": \"N001\",\n      \"concept\": \"wine majority mean balanced accuracy\",\n      \"section\": \"Table 1\",\n      \"analysis_set\": \"30 prespeci"
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Draft without adding facts",
+      "applied": "Built a recorded-evidence outline, drafted complete bounded methods/results/discussion and declarations with exact full-arm table and inspected figures, bound claim lines to source/experiment records, ran native numerical consistency/reference syntax checks, and preserved unverified human source approval/submission status.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/writing-consistency-check.json",
+      "output_excerpt": "{\n  \"issues\": [],\n  \"status\": \"pass\",\n  \"summary\": {\n    \"errors\": 0,\n    \"methods\": 1,\n    \"numeric_facts\": 20,\n    \"results\": 1,\n    \"warnings\": 0\n  },\n  \"tool\": \"check_consistency\"\n}\n"
+    },
+    {
+      "source_file": "skills/scientific-writing/SKILL.md",
+      "source_excerpt": "Draft without adding facts",
+      "applied": "Built a recorded-evidence outline, drafted complete bounded methods/results/discussion and declarations with exact full-arm table and inspected figures, bound claim lines to source/experiment records, ran native numerical consistency/reference syntax checks, and preserved unverified human source approval/submission status.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/writing-reference-syntax-check.json",
+      "output_excerpt": "{\n  \"issues\": [\n    {\n      \"code\": \"NO_IDENTIFIER_TO_CHECK\",\n      \"item_id\": \"E003\",\n      \"severity\": \"warning\"\n    },\n    {\n      \"code\": \"NO_IDENTIFIER_TO_CHECK\",\n      \"item_id\": \"E004\",\n      \""
+    }
+  ]
+}

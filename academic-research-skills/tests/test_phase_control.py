@@ -2,6 +2,7 @@
 import copy,importlib.util,json,subprocess,sys,tempfile,time,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'src/common/scripts'))
 def module(name):
  spec=importlib.util.spec_from_file_location(name,ROOT/'src/common/scripts'/ (name+'.py'));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
 P=module('phase_control');C=module('capabilities')

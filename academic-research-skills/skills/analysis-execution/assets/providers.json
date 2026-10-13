@@ -1,6 +1,6 @@
 {
   "schema_version": "runtime-providers-1",
-  "package_version": "3.5.3",
+  "package_version": "3.5.4",
   "capabilities": [
     "analysis-execution",
     "citation-audit",
@@ -177,12 +177,18 @@
       "entrypoint": "skills/experiment-plan/SKILL.md",
       "required_paths": [
         "skills/experiment-plan/SKILL.md",
-        "LICENSE"
+        "LICENSE",
+        "skills/shared-references/output-language.md",
+        "skills/shared-references/output-manifest.md",
+        "skills/shared-references/output-versioning.md"
       ],
       "entry_git_blob_sha": "bc7021bcc7a1a081c02cd02bc14f0ccd774292e2",
       "discovered_file_blob_sha": {
         "skills/experiment-plan/SKILL.md": "bc7021bcc7a1a081c02cd02bc14f0ccd774292e2",
-        "LICENSE": "8fe03d26d87a5e5d4934ee50039ff255eb67406a"
+        "LICENSE": "8fe03d26d87a5e5d4934ee50039ff255eb67406a",
+        "skills/shared-references/output-language.md": "52f2a1759d7fe1ad87e88fe25eae76d07ef1f71a",
+        "skills/shared-references/output-manifest.md": "88b5b1fe6ad3eefba11d412a38dce1b7365549fa",
+        "skills/shared-references/output-versioning.md": "97671807f7b1f647906b231105366a0c35e5668f"
       },
       "kind": "skill_protocol",
       "roles": [

@@ -1,0 +1,55 @@
+{
+  "note": "Initial observed failures retained; final regression is separate. Includes package navigation, entry length/wording, source-loader fixture setup and duplicate fixture inputs; source-first data ordering was also found by real evaluation.",
+  "runs": [
+    {
+      "run": "v354-regression.log",
+      "observed_errors": [
+        "ERROR: test_phase_control (unittest.loader._FailedTest.test_phase_control)",
+        "FAIL: test_active_markdown_links_resolve_locally (test_lean.LeanDefaults.test_active_markdown_links_resolve_locally)",
+        "FAIL: test_entries_short_and_do_not_load_universe (test_lean.LeanDefaults.test_entries_short_and_do_not_load_universe)",
+        "FAIL: test_runtime_keeps_usage_links_without_development_reports (test_package_identity.PackageIdentity.test_runtime_keeps_usage_links_without_development_reports)",
+        "FAIL: test_short_19_entries (test_quality31.ContentTests.test_short_19_entries)",
+        "FAIL: test_all_entries_stay_short (test_release.ScopeAndCoverage.test_all_entries_stay_short)",
+        "FAIL: test_release_version_all_entries (test_release.ScopeAndCoverage.test_release_version_all_entries)",
+        "FAIL: test_portable_selftest_checks_real_registry_without_network (test_stage_recovery.Routing.test_portable_selftest_checks_real_registry_without_network)",
+        "Ran 736 tests in 38.598s",
+        "FAILED (failures=7, errors=1)"
+      ]
+    },
+    {
+      "run": "v354-local-tests.log",
+      "observed_errors": [
+        "ERROR: test_full_local_study_cannot_use_evidence_skip (test_local_data.LocalFlow.test_full_local_study_cannot_use_evidence_skip)",
+        "Ran 24 tests in 1.082s",
+        "FAILED (errors=1)"
+      ]
+    },
+    {
+      "run": "v354-regression2-summary.log",
+      "observed_errors": [
+        "FAIL: test_autonomy_explicit_without_data_fabrication (test_lean.LeanDefaults.test_autonomy_explicit_without_data_fabrication)",
+        "FAIL: test_original_code_allowed_without_host_switch (test_quality31.ContentTests.test_original_code_allowed_without_host_switch)",
+        "FAIL: test_short_19_entries (test_quality31.ContentTests.test_short_19_entries)",
+        "Ran 796 tests in 39.711s",
+        "FAILED (failures=3)"
+      ]
+    },
+    {
+      "run": "v354-regression3-summary.log",
+      "observed_errors": [
+        "FAIL: test_focused_entry_does_not_require_admin_ledger (test_lean.LeanDefaults.test_focused_entry_does_not_require_admin_ledger)",
+        "Ran 796 tests in 39.459s",
+        "FAILED (failures=1)"
+      ]
+    },
+    {
+      "run": "v354-regression4-summary.log",
+      "observed_errors": [
+        "ERROR: test_revision_preserves_quota_and_requires_current_preparation (test_local_data.LocalFlow.test_revision_preserves_quota_and_requires_current_preparation)",
+        "FAIL: test_short_19_entries (test_quality31.ContentTests.test_short_19_entries)",
+        "Ran 801 tests in 40.362s",
+        "FAILED (failures=1, errors=1)"
+      ]
+    }
+  ]
+}

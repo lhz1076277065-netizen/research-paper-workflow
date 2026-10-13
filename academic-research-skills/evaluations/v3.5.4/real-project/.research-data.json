@@ -1,0 +1,215 @@
+{
+  "schema": "local-research-data-1",
+  "id": "0fe889e81a8b41498c1d94e6efdd0252",
+  "phase_id": "3fd27c280cca44de94d92cf0d8f2f23e",
+  "instruction": "Complete the authorized UCI Wine and Iris local teaching reanalysis described in request.md, with professional gates and local-data readiness.",
+  "research_plan": {
+    "path": "refine-logs/EXPERIMENT_PLAN_20261013_232300.md",
+    "sha256": "697d78b97b18060d28a9956f9879721e6d18f47ceac5704da4c9ff6c6ae3810e"
+  },
+  "specification": {
+    "path": "dataset-spec-v2.json",
+    "sha256": "3a68e44b25955d7c47d359a86630795ba57c13b88cf81b282986e09760cc75dc"
+  },
+  "datasets": [
+    {
+      "id": "wine",
+      "purpose": "Both main and sensitivity matched classification comparisons on complete 178-row UCI Wine release; 13 features plus label",
+      "files": [
+        {
+          "path": "raw/wine/wine.data",
+          "format": "csv",
+          "header": false,
+          "columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "required_columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "numeric_columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "expected_rows": 178,
+          "allow_missing": false
+        }
+      ]
+    },
+    {
+      "id": "iris",
+      "purpose": "Both main and sensitivity matched classification comparisons on complete 150-row UCI iris.data version; 4 measurements in cm plus label; preserve reported historical discrepancies",
+      "files": [
+        {
+          "path": "raw/iris/iris.data",
+          "format": "csv",
+          "header": false,
+          "columns": [
+            "sepal_length",
+            "sepal_width",
+            "petal_length",
+            "petal_width",
+            "class"
+          ],
+          "required_columns": [
+            "sepal_length",
+            "sepal_width",
+            "petal_length",
+            "petal_width",
+            "class"
+          ],
+          "numeric_columns": [
+            "sepal_length",
+            "sepal_width",
+            "petal_length",
+            "petal_width"
+          ],
+          "expected_rows": 150,
+          "allow_missing": false
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "wine": {
+      "publisher": "UCI Machine Learning Repository",
+      "version": "Original static archive retrieved 2026-10-13, reverified same bytes",
+      "landing_url": "https://archive.ics.uci.edu/dataset/109/wine",
+      "evidence": [
+        {
+          "path": "sources/wine-metadata-v2.json",
+          "sha256": "63bf62376b8988f9e031ea04244e82d23f36dbc7add93332266d76e7ac9c183f"
+        },
+        {
+          "path": "sources/selection-v2.md",
+          "sha256": "72080514a14e9d5573dcd11f90db10a2ba635317d15db3a84f366b33ca9454f2"
+        }
+      ],
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/discovery-v2-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/discovery-v2-finish.json",
+      "started_sha256": "ab357d8715c1cb70ae51a77cea2014df780f72ede29e1854f619e9547ee40384",
+      "finished_sha256": "7ffd9e29221244c884eb328ed3e9cbfb5895d33bc23e8dbd9c07601e38b7145d"
+    },
+    "iris": {
+      "publisher": "UCI Machine Learning Repository",
+      "version": "Original static archive retrieved 2026-10-13, reverified same bytes",
+      "landing_url": "https://archive.ics.uci.edu/dataset/53/iris",
+      "evidence": [
+        {
+          "path": "sources/iris-metadata-v2.json",
+          "sha256": "1208630f04033e82ee8056a0f2bd1d1432697ba2062094a5638b00c88ea2bc12"
+        },
+        {
+          "path": "sources/selection-v2.md",
+          "sha256": "72080514a14e9d5573dcd11f90db10a2ba635317d15db3a84f366b33ca9454f2"
+        }
+      ],
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/discovery-v2-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/discovery-v2-finish.json",
+      "started_sha256": "ab357d8715c1cb70ae51a77cea2014df780f72ede29e1854f619e9547ee40384",
+      "finished_sha256": "7ffd9e29221244c884eb328ed3e9cbfb5895d33bc23e8dbd9c07601e38b7145d"
+    }
+  },
+  "inspections": {},
+  "history": [
+    {
+      "event": "requirements_revised",
+      "reason": "Design-source missing shared references repaired; all scientific requirements unchanged, actual data already acquired and reusable",
+      "previous_manifest": {
+        "path": ".research-data-history/610b2948262cff418d3dc5d6435e8ad942b1d0ae36fd476455c983e873012957.json",
+        "sha256": "610b2948262cff418d3dc5d6435e8ad942b1d0ae36fd476455c983e873012957"
+      }
+    }
+  ],
+  "planning_step_id": "e0329448f3334c9caa30724401fe1c7c",
+  "checks": {
+    "raw/wine/wine.data": {
+      "stat": [
+        317430167,
+        10782,
+        1791904640884949296
+      ],
+      "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659",
+      "inspection": {
+        "format": "csv",
+        "rows": 178,
+        "columns": [
+          "class",
+          "alcohol",
+          "malic_acid",
+          "ash",
+          "alcalinity_ash",
+          "magnesium",
+          "total_phenols",
+          "flavanoids",
+          "nonflavanoid_phenols",
+          "proanthocyanins",
+          "color_intensity",
+          "hue",
+          "od280_od315",
+          "proline"
+        ],
+        "parser_scope": "whole_file",
+        "scientific_coverage_certified": false
+      }
+    },
+    "raw/iris/iris.data": {
+      "stat": [
+        317430175,
+        4551,
+        1791904641028608880
+      ],
+      "sha256": "6f608b71a7317216319b4d27b4d9bc84e6abd734eda7872b71a458569e2656c0",
+      "inspection": {
+        "format": "csv",
+        "rows": 150,
+        "columns": [
+          "sepal_length",
+          "sepal_width",
+          "petal_length",
+          "petal_width",
+          "class"
+        ],
+        "parser_scope": "whole_file",
+        "scientific_coverage_certified": false
+      }
+    }
+  }
+}

@@ -93,7 +93,8 @@ def usage(capability, receipt, inputs, outputs, steps, mode, functions_run=False
         for name in paths:
             p=Path(name).resolve()
             if not p.is_file() or not p.stat().st_size:raise CapabilityError('Missing/empty task artifact: '+name)
-            out.append({'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+            import artifact_io as A
+            out.append({'path':str(p),'sha256':A.digest(p)})
         return out
     return {'id':capability['id'],'repository':capability['repository'],'entry':capability['entry'],
         'commit':capability['commit'],'actor_scope':'current_host','mode':mode,'roles':capability['roles'],

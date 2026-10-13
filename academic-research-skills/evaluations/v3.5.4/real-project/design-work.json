@@ -1,0 +1,22 @@
+{
+  "step_id": "6ffdc206eefb42d3bf50b96a9a861e83",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": false,
+  "actions": [
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "For every kept block, fully specify:",
+      "applied": "Specified claims, anti-claims, all data, five fixed arms, matched stratified splits, metrics, train-only preprocessing, reproduction/sensitivity, CPU/storage costs and actual failure remedies; no unsupported novelty or external reviewer claim.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/research-plan-v1.md",
+      "output_excerpt": "# Experiment Plan v1 \u2014 fixed training-only preprocessing\n\nDate: 2026-10-13. This plan was written before downloading or fitting the datasets. Scope: teaching replication on the complete UCI Wine and I"
+    },
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "For every kept block, fully specify:",
+      "applied": "Specified claims, anti-claims, all data, five fixed arms, matched stratified splits, metrics, train-only preprocessing, reproduction/sensitivity, CPU/storage costs and actual failure remedies; no unsupported novelty or external reviewer claim.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/experiment-tracker-v1.md",
+      "output_excerpt": "# Experiment Tracker \u2014 pre-execution\n\n| Run | Purpose | Data | Setting | Status |\n|---|---|---|---|---|\n| M0 | Whole-file acquisition, schema, class counts, duplicate and leakage setup | Wine and Iris"
+    }
+  ]
+}

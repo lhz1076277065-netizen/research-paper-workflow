@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "evidence_id": "E001",
+      "title": "Wine",
+      "authors": [
+        "S. Aeberhard",
+        "M. Forina"
+      ],
+      "year": 1992,
+      "identifiers": {
+        "url": "https://archive.ics.uci.edu/dataset/109/wine",
+        "doi": "10.24432/C5PC7J",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "source_type": "dataset",
+      "confidentiality": "public",
+      "locator": "sources/wine-metadata-v2.json; raw/wine/wine.names",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E002",
+      "title": "Iris",
+      "authors": [
+        "R. Fisher"
+      ],
+      "year": 1936,
+      "identifiers": {
+        "url": "https://archive.ics.uci.edu/dataset/53/iris",
+        "doi": "10.24432/C56C76",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "source_type": "dataset",
+      "confidentiality": "public",
+      "locator": "sources/iris-metadata-v2.json; raw/iris/iris.names",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E007",
+      "title": "Common pitfalls and recommended practices",
+      "authors": [
+        "scikit-learn developers"
+      ],
+      "year": null,
+      "identifiers": {
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "source_type": "webpage",
+      "confidentiality": "public",
+      "locator": "Section 12.2 Data leakage",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E008",
+      "title": "Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents",
+      "authors": [
+        "Timothy Kassis",
+        "Vinayak Agarwal",
+        "Yuhuan He",
+        "Darshil Patel",
+        "Aubrey M. Brueckner"
+      ],
+      "year": 2026,
+      "identifiers": {
+        "url": "https://arxiv.org/abs/2609.00065",
+        "doi": "10.48550/arXiv.2609.00065",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "source_type": "preprint",
+      "confidentiality": "public",
+      "locator": "Current bibliographic record, revised 2 September 2026",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E003",
+      "title": "Immutable research plan and performed local code",
+      "authors": [],
+      "year": 2026,
+      "identifiers": {
+        "url": "",
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "source_type": "other",
+      "confidentiality": "public",
+      "locator": "refine-logs/EXPERIMENT_PLAN_20261013_232300.md; experiment.py",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E004",
+      "title": "Main predictions and complete descriptive results",
+      "authors": [],
+      "year": 2026,
+      "identifiers": {
+        "url": "",
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "source_type": "other",
+      "confidentiality": "public",
+      "locator": "results/results.csv; results/predictions.csv; results/summary.json",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E005",
+      "title": "Sensitivity and independent computational reproduction",
+      "authors": [],
+      "year": 2026,
+      "identifiers": {
+        "url": "",
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "source_type": "other",
+      "confidentiality": "public",
+      "locator": "sensitivity/summary.json; robustness-verification.json",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E006",
+      "title": "Actual vector figures and source values",
+      "authors": [],
+      "year": 2026,
+      "identifiers": {
+        "url": "",
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "source_type": "other",
+      "confidentiality": "public",
+      "locator": "figures/plot-data.csv; figures/figure1.svg; figures/figure2.svg",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    }
+  ]
+}

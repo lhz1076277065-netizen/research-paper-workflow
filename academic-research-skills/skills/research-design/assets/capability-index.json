@@ -1,6 +1,6 @@
 {
   "schema_version": "capability-index-1",
-  "version": "3.5.3",
+  "version": "3.5.4",
   "note": "Pinned entry/subflow seeds, not all repository capabilities; runtime readiness and role completion require actual work. Source-only is not execution.",
   "capabilities": [
     {
@@ -789,6 +789,18 @@
         {
           "path": "LICENSE",
           "blob": "8fe03d26d87a5e5d4934ee50039ff255eb67406a"
+        },
+        {
+          "path": "skills/shared-references/output-language.md",
+          "blob": "52f2a1759d7fe1ad87e88fe25eae76d07ef1f71a"
+        },
+        {
+          "path": "skills/shared-references/output-manifest.md",
+          "blob": "88b5b1fe6ad3eefba11d412a38dce1b7365549fa"
+        },
+        {
+          "path": "skills/shared-references/output-versioning.md",
+          "blob": "97671807f7b1f647906b231105366a0c35e5668f"
         }
       ],
       "availability": "source_verified",
@@ -798,7 +810,8 @@
         "scope": "current-host adapted task subflow",
         "evidence": "evaluations/v3.4.0-rc.1/integration/sleep-experiment-plan-work.md",
         "repository_wide_certification": false
-      }
+      },
+      "support_files_verified_at": "2026-10-13"
     },
     {
       "id": "autoresearch-protocol",

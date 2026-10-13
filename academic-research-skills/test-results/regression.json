@@ -1,7 +1,7 @@
 {
-  "version": "3.5.3",
-  "generated_at": "2026-10-12T15:09:54.944891+00:00",
-  "tests_run": 772,
+  "version": "3.5.4",
+  "generated_at": "2026-10-13T15:35:31.411729+00:00",
+  "tests_run": 803,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
@@ -11,6 +11,7 @@
     "test_computational_routes": 10,
     "test_integration": 78,
     "test_lean": 57,
+    "test_local_data": 31,
     "test_package_identity": 3,
     "test_pdf_extract": 2,
     "test_phase_control": 37,
@@ -951,6 +952,130 @@
     },
     {
       "id": "test_lean.Sources.test_verified_read_cache_reuses_bytes_without_network",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_all_required_local_files_and_preparation_allow_real_process",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_capacity_failure_precedes_large_data_reading",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_capacity_repair_can_continue_without_resetting_transfer",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_complete_six_stage_flow_preserves_budget_and_closes",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_data_drift_requires_versioned_repair",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_discovery_can_create_and_complete_its_own_initial_manifest",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_external_format_needs_actual_source_gated_reader",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_figures_and_models_must_consume_real_predecessor_outputs",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_figures_require_actual_analysis_and_robustness",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_full_local_study_cannot_use_evidence_skip",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_full_parse_coverage_and_checksum",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_headerless_tables_are_read_completely",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_legacy_and_focused_do_not_inherit_full_pipeline",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_local_only_does_not_certify_parse",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_missing_second_required_dataset_prevents_preparation",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_missing_source_is_not_local_readiness",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_missing_variables_rejects_experiment_stage",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_old_figure_does_not_complete_new_experiment_results",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_plan_change_cannot_reuse_previous_receipts",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_plan_must_be_real_design_output",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_polishing_requires_written_and_reviewed_manuscript",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_refresh_detects_same_size_restored_timestamp_change",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_removed_data_blocks_process_even_after_analysis_begin",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_repeat_plan_preserves_id_and_capacity",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_revision_preserves_quota_and_requires_current_preparation",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_source_evidence_change_invalidates_readiness",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_stopped_state_cannot_plan_new_downloads",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_stream_digest_and_large_text_do_not_read_entire_file",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_unbound_revised_spec_does_not_reset_acquisition",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_writing_cannot_bypass_data_and_figures",
+      "status": "passed"
+    },
+    {
+      "id": "test_local_data.LocalFlow.test_wrong_storage_root_cannot_hide_project_usage",
       "status": "passed"
     },
     {

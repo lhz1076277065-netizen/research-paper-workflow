@@ -10,6 +10,7 @@
 |---|---|
 | feasibility | 问题主线、适用近邻、已最小验证的路径、依赖与成本 |
 | design | 假设、竞争预测、反驳条件与最小验证；前提失效则解阻 |
+| data（完整实证研究） | 执行版计划对应的全部必要本地数据、权威来源选择、完整性及可读性检查、准备收据 |
 | research | 核心判断所需正式证据、正负结果及最终范围 |
 | manuscript | 证据驱动的图稿、引用和科学/事实/视觉复核 |
 | delivery | 编辑源、复算输出、真实完成层级、限制与下一动作；不自动投稿 |
@@ -28,7 +29,7 @@
 
 单路线失败保持active并验证替代，不close整个目标。只有可行路径实际验证耗尽且无获授权高价值工作，或真实总预算/用户暂停/不可替代权限边界，才交付准确障碍。额外费用、伦理、固定目标改变按真实授权；只索取不可替代输入，同时继续独立工作。评审建议阶段报告不等于用户撤销完整目标。
 
-证据足够进入成稿；design→manuscript可用advance --skip-reason绑定已有证据，不空做研究阶段。缺核心证据不能借此跳过。写作发现必要缺口时完成/有据取消当前步骤，reassess --stage research或design回传；完成收据重新check并消费，未完成的先完成/取消，改变产物不能借旧记录过门。
+完整实证研究默认local-data，严格沿[本地数据全流程](local-data-workflow.md)进入六阶段，数据/实验/绘图/润色不可跳过。已有证据的局部写作使用focused；确属非数据研究用general，旧记录保留原语义。general的design→manuscript仍可用advance --skip-reason绑定充分已有证据，不能作为完整实证研究绕过缺数据的通道。写作发现必要缺口时完成/有据取消当前步骤，reassess --stage research或design回传；完成收据重新check并消费，未完成的先完成/取消，改变产物不能借旧记录过门。
 
 ## 命令与计量
 
@@ -36,6 +37,7 @@
 python3 scripts/phase_control.py --state project/phase.json init --scope full --objective '已授权问题' --minutes 120 --authority '实际总预算指令'
 python3 scripts/phase_control.py --state project/phase.json meter --rollout /absolute/host-rollout.jsonl
 python3 scripts/phase_control.py --state project/phase.json guard --estimated-seconds 120 --estimated-tokens 5000 --estimated-bytes 3000000
+python3 scripts/phase_control.py --state project/phase.json repair --blocker '原障碍' --approach '此次实际实施的修复方法'
 python3 scripts/phase_control.py --state project/phase.json reassess --blocker '原障碍' --evidence diagnosis.md --root project --next-action '已选方案的最小验证' --minutes 15
 python3 scripts/phase_control.py --state project/phase.json run --log project/run.log --claim '核心前提' --decision '如何更新路线' --estimated-seconds 30 --professional-started project/start.json -- python3 project/test.py
 python3 scripts/phase_control.py --state project/phase.json resume
@@ -44,6 +46,8 @@ python3 scripts/phase_control.py --state project/phase.json resume
 未给总预算的init省略minutes/authority，budget_authority=agent；默认可行性advance后继续design，计划过期用reassess --minutes自主重排，保留起点、累计使用和历史。仅用户明确要求先批准预算时用--require-budget，沿用旧awaiting_budget/authorize接口。实际用户总预算budget_authority=user，不能被reassess、换回合或恢复延长。旧记录的权限来源未知按原截止保守保持；迁移不虚造授权。实际meter来自同一宿主rollout，分别报input、cached_input、output增量；额度默认input+output，另报非缓存量。首次采样之前的用量保持未知，不当零；基点不因重试/恢复重置。
 
 ## 续接与专业步骤出口
+
+reassess --blocker引用已有repair记录；首次诊断尚无修复记录时可省略该可选参数，保存诊断与下一实际动作后继续。不要为了登记虚造修复，也不要把参数错误当作人类接手条件。
 
 token预算口径必须匹配用户/宿主真实定义：init/authorize --token-metric可选input_plus_output或noncached_input_plus_output，旧记录默认前者。分别显示输入、缓存输入、输出，不把缓存量推断为同等费用；口径不明时保持未知，不自行缩减真实额度或宣布严格达标。真实预算不能通过换口径放宽。累计计量在初始化晚于请求时回填起点前最近实际计数；没有可回填计数标明覆盖缺口，先修计量而非报零。guard分别输出token_meter_verified（样本来源）与strict_token_budget_verified（实际预算起点及覆盖）；样本真实不代表整个预算已完整计量，未知旧记录不能据前者宣称严格达标。
 

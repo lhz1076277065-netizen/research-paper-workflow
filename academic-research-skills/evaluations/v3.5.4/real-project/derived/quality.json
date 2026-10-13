@@ -1,0 +1,48 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "datasets": {
+    "wine": {
+      "rows": 178,
+      "features": 13,
+      "class_counts": {
+        "1": 59,
+        "2": 71,
+        "3": 48
+      },
+      "feature_duplicate_excess": 0,
+      "missing_cells": 0,
+      "nonfinite_features": 0,
+      "raw_changed": false,
+      "rows_removed": 0,
+      "row_order_preserved": true,
+      "target_column": 0,
+      "feature_units": "Dictionary names verified; not all constituent units supplied, so treated in source numeric units",
+      "independent_unit_count": "unknown: no source subject/site identifiers available"
+    },
+    "iris": {
+      "rows": 150,
+      "features": 4,
+      "class_counts": {
+        "Iris-setosa": 50,
+        "Iris-versicolor": 50,
+        "Iris-virginica": 50
+      },
+      "feature_duplicate_excess": 3,
+      "missing_cells": 0,
+      "nonfinite_features": 0,
+      "raw_changed": false,
+      "rows_removed": 0,
+      "row_order_preserved": true,
+      "target_column": 4,
+      "feature_units": "cm for all 4 columns",
+      "independent_unit_count": "unknown: no source subject/site identifiers available"
+    }
+  },
+  "split_count": 120,
+  "train_test_index_overlap": false,
+  "split_before_learned_preprocessing": true,
+  "all_raw_rows_preserved": true,
+  "max_duplicate_vector_overlap": 2,
+  "no_model_fitted": true
+}

@@ -2,7 +2,7 @@
 name: analysis-execution
 description: "实施科研分析、推导或计算，保存真实结果与失败。"
 metadata:
-  version: "3.5.3"
+  version: "3.5.4"
 ---
 
 # 计算研究与发现循环

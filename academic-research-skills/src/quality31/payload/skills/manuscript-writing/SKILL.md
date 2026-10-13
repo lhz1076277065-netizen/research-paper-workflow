@@ -2,7 +2,7 @@
 name: manuscript-writing
 description: "起草或整合证据驱动的论文；局部改写保持范围。"
 metadata:
-  version: "3.5.3"
+  version: "3.5.4"
 ---
 
 # 证据与贡献驱动的完整论文写作

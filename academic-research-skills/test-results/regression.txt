@@ -229,6 +229,37 @@ test_unknown_function_interface_not_invented (test_lean.Sources.test_unknown_fun
 test_unknown_semantic_quality_not_faked (test_lean.Sources.test_unknown_semantic_quality_not_faked) ... ok
 test_unsupported_binary_response (test_lean.Sources.test_unsupported_binary_response) ... ok
 test_verified_read_cache_reuses_bytes_without_network (test_lean.Sources.test_verified_read_cache_reuses_bytes_without_network) ... ok
+test_all_required_local_files_and_preparation_allow_real_process (test_local_data.LocalFlow.test_all_required_local_files_and_preparation_allow_real_process) ... ok
+test_capacity_failure_precedes_large_data_reading (test_local_data.LocalFlow.test_capacity_failure_precedes_large_data_reading) ... ok
+test_capacity_repair_can_continue_without_resetting_transfer (test_local_data.LocalFlow.test_capacity_repair_can_continue_without_resetting_transfer) ... ok
+test_complete_six_stage_flow_preserves_budget_and_closes (test_local_data.LocalFlow.test_complete_six_stage_flow_preserves_budget_and_closes) ... ok
+test_data_drift_requires_versioned_repair (test_local_data.LocalFlow.test_data_drift_requires_versioned_repair) ... ok
+test_discovery_can_create_and_complete_its_own_initial_manifest (test_local_data.LocalFlow.test_discovery_can_create_and_complete_its_own_initial_manifest) ... ok
+test_external_format_needs_actual_source_gated_reader (test_local_data.LocalFlow.test_external_format_needs_actual_source_gated_reader) ... ok
+test_figures_and_models_must_consume_real_predecessor_outputs (test_local_data.LocalFlow.test_figures_and_models_must_consume_real_predecessor_outputs) ... ok
+test_figures_require_actual_analysis_and_robustness (test_local_data.LocalFlow.test_figures_require_actual_analysis_and_robustness) ... ok
+test_full_local_study_cannot_use_evidence_skip (test_local_data.LocalFlow.test_full_local_study_cannot_use_evidence_skip) ... ok
+test_full_parse_coverage_and_checksum (test_local_data.LocalFlow.test_full_parse_coverage_and_checksum) ... ok
+test_headerless_tables_are_read_completely (test_local_data.LocalFlow.test_headerless_tables_are_read_completely) ... ok
+test_legacy_and_focused_do_not_inherit_full_pipeline (test_local_data.LocalFlow.test_legacy_and_focused_do_not_inherit_full_pipeline) ... ok
+test_local_only_does_not_certify_parse (test_local_data.LocalFlow.test_local_only_does_not_certify_parse) ... ok
+test_missing_second_required_dataset_prevents_preparation (test_local_data.LocalFlow.test_missing_second_required_dataset_prevents_preparation) ... ok
+test_missing_source_is_not_local_readiness (test_local_data.LocalFlow.test_missing_source_is_not_local_readiness) ... ok
+test_missing_variables_rejects_experiment_stage (test_local_data.LocalFlow.test_missing_variables_rejects_experiment_stage) ... ok
+test_old_figure_does_not_complete_new_experiment_results (test_local_data.LocalFlow.test_old_figure_does_not_complete_new_experiment_results) ... ok
+test_plan_change_cannot_reuse_previous_receipts (test_local_data.LocalFlow.test_plan_change_cannot_reuse_previous_receipts) ... ok
+test_plan_must_be_real_design_output (test_local_data.LocalFlow.test_plan_must_be_real_design_output) ... ok
+test_polishing_requires_written_and_reviewed_manuscript (test_local_data.LocalFlow.test_polishing_requires_written_and_reviewed_manuscript) ... ok
+test_refresh_detects_same_size_restored_timestamp_change (test_local_data.LocalFlow.test_refresh_detects_same_size_restored_timestamp_change) ... ok
+test_removed_data_blocks_process_even_after_analysis_begin (test_local_data.LocalFlow.test_removed_data_blocks_process_even_after_analysis_begin) ... ok
+test_repeat_plan_preserves_id_and_capacity (test_local_data.LocalFlow.test_repeat_plan_preserves_id_and_capacity) ... ok
+test_revision_preserves_quota_and_requires_current_preparation (test_local_data.LocalFlow.test_revision_preserves_quota_and_requires_current_preparation) ... ok
+test_source_evidence_change_invalidates_readiness (test_local_data.LocalFlow.test_source_evidence_change_invalidates_readiness) ... ok
+test_stopped_state_cannot_plan_new_downloads (test_local_data.LocalFlow.test_stopped_state_cannot_plan_new_downloads) ... ok
+test_stream_digest_and_large_text_do_not_read_entire_file (test_local_data.LocalFlow.test_stream_digest_and_large_text_do_not_read_entire_file) ... ok
+test_unbound_revised_spec_does_not_reset_acquisition (test_local_data.LocalFlow.test_unbound_revised_spec_does_not_reset_acquisition) ... ok
+test_writing_cannot_bypass_data_and_figures (test_local_data.LocalFlow.test_writing_cannot_bypass_data_and_figures) ... ok
+test_wrong_storage_root_cannot_hide_project_usage (test_local_data.LocalFlow.test_wrong_storage_root_cannot_hide_project_usage) ... ok
 test_commit_binding_excludes_ignored_files_and_rejects_changes (test_package_identity.PackageIdentity.test_commit_binding_excludes_ignored_files_and_rejects_changes) ... ok
 test_one_click_refuses_preexisting_output (test_package_identity.PackageIdentity.test_one_click_refuses_preexisting_output) ... ok
 test_runtime_keeps_usage_links_without_development_reports (test_package_identity.PackageIdentity.test_runtime_keeps_usage_links_without_development_reports) ... ok
@@ -772,6 +803,6 @@ test_user_budget_cannot_be_extended (test_work_units.WorkUnits.test_user_budget_
 test_user_or_unknown_reserve_is_not_silently_reallocated (test_work_units.WorkUnits.test_user_or_unknown_reserve_is_not_silently_reallocated) ... ok
 
 ----------------------------------------------------------------------
-Ran 772 tests in 36.710s
+Ran 803 tests in 39.683s
 
 OK

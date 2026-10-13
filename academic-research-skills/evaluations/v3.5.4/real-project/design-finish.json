@@ -1,0 +1,74 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "6ffdc206eefb42d3bf50b96a9a861e83",
+  "capability": "research-design",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/request.md",
+    "sha256": "3fc1e4cf182ecabd9edb2cedeb2a426e57e7c4d1092ccb8f201240f9395625a8"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/research-question-card.md",
+      "sha256": "71de21ec37b7870fb2da854fa312c512b66b5a64bd9a36929a5c6cf03b748861"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/research-plan-v1.md",
+      "sha256": "6e5a167b1707bba58eb905e87b65894ab012672e2d9e4b78dc8267069548ba4e"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/experiment-tracker-v1.md",
+      "sha256": "7f428e22db9ca1634ebe8e25033498f97db1e19956d39816905171066d189050"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/design-work.json",
+    "sha256": "b71479baf2d1b7086857192b4c5de17665b6a4402d6bd2d5a2b68117754494bc"
+  },
+  "use": {
+    "id": "sleep-experiment-plan",
+    "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+    "entry": "skills/experiment-plan/SKILL.md",
+    "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "experiment",
+      "methods"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/research-question-card.md",
+        "sha256": "71de21ec37b7870fb2da854fa312c512b66b5a64bd9a36929a5c6cf03b748861"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/research-plan-v1.md",
+        "sha256": "6e5a167b1707bba58eb905e87b65894ab012672e2d9e4b78dc8267069548ba4e"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.4-20261013/real-project/experiment-tracker-v1.md",
+        "sha256": "7f428e22db9ca1634ebe8e25033498f97db1e19956d39816905171066d189050"
+      }
+    ],
+    "steps": [
+      "Specified claims, anti-claims, all data, five fixed arms, matched stratified splits, metrics, train-only preprocessing, reproduction/sensitivity, CPU/storage costs and actual failure remedies; no unsupported novelty or external reviewer claim.",
+      "Specified claims, anti-claims, all data, five fixed arms, matched stratified splits, metrics, train-only preprocessing, reproduction/sensitivity, CPU/storage costs and actual failure remedies; no unsupported novelty or external reviewer claim."
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

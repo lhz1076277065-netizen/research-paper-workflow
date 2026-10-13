@@ -1,0 +1,17 @@
+{
+  "edits": 11,
+  "numeric_token_multiset_preserved": true,
+  "table_all_cells_preserved": true,
+  "citation_occurrences_and_reference_section_preserved": true,
+  "figure_links_preserved": true,
+  "negative_results_material_uncertainty_and_human_status_preserved": true,
+  "review_resolutions": {
+    "W1": "README.md supplied during review; commands describe original runs without claiming an extra rebuild",
+    "W2": "Timing now correctly includes table reading and summary work",
+    "W3": "Figure caption correctly names balanced accuracy",
+    "W4": "Results-led abstract and discussion; removed process narrative without changing the scientific design"
+  },
+  "raw_sha256": "4774f5d0a8b788563ef86d861be61a99cc4ed910fe5f163c3b6cb61b1f33a4d5",
+  "final_sha256": "9f1b5aa81a363da485ddfc7019d744c135630e700cede98565e768c012ddff38",
+  "semantic_check": "All changed passages read against reviewed draft: no new performance, novelty, causal or journal-readiness claims; source instructions to hide disadvantage were bounded by the mandatory evidence-preservation adapter."
+}

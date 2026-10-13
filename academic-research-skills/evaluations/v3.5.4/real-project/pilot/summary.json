@@ -1,0 +1,166 @@
+{
+  "descriptive_only": true,
+  "partitions_are_dependent": true,
+  "summary": [
+    {
+      "dataset": "wine",
+      "test_fraction": 0.2,
+      "arm": "majority",
+      "partitions": 1,
+      "balanced_accuracy_mean": 0.3333333333333333,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 0.3333333333333333,
+      "balanced_accuracy_max": 0.3333333333333333,
+      "accuracy_mean": 0.3888888888888889
+    },
+    {
+      "dataset": "wine",
+      "test_fraction": 0.2,
+      "arm": "centroid_raw",
+      "partitions": 1,
+      "balanced_accuracy_mean": 0.7301587301587302,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 0.7301587301587302,
+      "balanced_accuracy_max": 0.7301587301587302,
+      "accuracy_mean": 0.75
+    },
+    {
+      "dataset": "wine",
+      "test_fraction": 0.2,
+      "arm": "centroid_scaled",
+      "partitions": 1,
+      "balanced_accuracy_mean": 1.0,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 1.0,
+      "balanced_accuracy_max": 1.0,
+      "accuracy_mean": 1.0
+    },
+    {
+      "dataset": "wine",
+      "test_fraction": 0.2,
+      "arm": "knn5_raw",
+      "partitions": 1,
+      "balanced_accuracy_mean": 0.6531746031746032,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 0.6531746031746032,
+      "balanced_accuracy_max": 0.6531746031746032,
+      "accuracy_mean": 0.6666666666666666
+    },
+    {
+      "dataset": "wine",
+      "test_fraction": 0.2,
+      "arm": "knn5_scaled",
+      "partitions": 1,
+      "balanced_accuracy_mean": 1.0,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 1.0,
+      "balanced_accuracy_max": 1.0,
+      "accuracy_mean": 1.0
+    },
+    {
+      "dataset": "iris",
+      "test_fraction": 0.2,
+      "arm": "majority",
+      "partitions": 1,
+      "balanced_accuracy_mean": 0.3333333333333333,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 0.3333333333333333,
+      "balanced_accuracy_max": 0.3333333333333333,
+      "accuracy_mean": 0.3333333333333333
+    },
+    {
+      "dataset": "iris",
+      "test_fraction": 0.2,
+      "arm": "centroid_raw",
+      "partitions": 1,
+      "balanced_accuracy_mean": 0.9333333333333332,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 0.9333333333333332,
+      "balanced_accuracy_max": 0.9333333333333332,
+      "accuracy_mean": 0.9333333333333333
+    },
+    {
+      "dataset": "iris",
+      "test_fraction": 0.2,
+      "arm": "centroid_scaled",
+      "partitions": 1,
+      "balanced_accuracy_mean": 0.8333333333333334,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 0.8333333333333334,
+      "balanced_accuracy_max": 0.8333333333333334,
+      "accuracy_mean": 0.8333333333333334
+    },
+    {
+      "dataset": "iris",
+      "test_fraction": 0.2,
+      "arm": "knn5_raw",
+      "partitions": 1,
+      "balanced_accuracy_mean": 0.9333333333333332,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 0.9333333333333332,
+      "balanced_accuracy_max": 0.9333333333333332,
+      "accuracy_mean": 0.9333333333333333
+    },
+    {
+      "dataset": "iris",
+      "test_fraction": 0.2,
+      "arm": "knn5_scaled",
+      "partitions": 1,
+      "balanced_accuracy_mean": 0.9,
+      "balanced_accuracy_sd": null,
+      "balanced_accuracy_min": 0.9,
+      "balanced_accuracy_max": 0.9,
+      "accuracy_mean": 0.9
+    }
+  ],
+  "effects": [
+    {
+      "dataset": "wine",
+      "family": "centroid",
+      "test_fraction": 0.2,
+      "paired_difference_mean": 0.26984126984126977,
+      "paired_difference_sd": null,
+      "min": 0.26984126984126977,
+      "max": 0.26984126984126977,
+      "positive_splits": 1,
+      "zero_splits": 0,
+      "negative_splits": 0
+    },
+    {
+      "dataset": "wine",
+      "family": "knn5",
+      "test_fraction": 0.2,
+      "paired_difference_mean": 0.3468253968253968,
+      "paired_difference_sd": null,
+      "min": 0.3468253968253968,
+      "max": 0.3468253968253968,
+      "positive_splits": 1,
+      "zero_splits": 0,
+      "negative_splits": 0
+    },
+    {
+      "dataset": "iris",
+      "family": "centroid",
+      "test_fraction": 0.2,
+      "paired_difference_mean": -0.09999999999999987,
+      "paired_difference_sd": null,
+      "min": -0.09999999999999987,
+      "max": -0.09999999999999987,
+      "positive_splits": 0,
+      "zero_splits": 0,
+      "negative_splits": 1
+    },
+    {
+      "dataset": "iris",
+      "family": "knn5",
+      "test_fraction": 0.2,
+      "paired_difference_mean": -0.033333333333333215,
+      "paired_difference_sd": null,
+      "min": -0.033333333333333215,
+      "max": -0.033333333333333215,
+      "positive_splits": 0,
+      "zero_splits": 0,
+      "negative_splits": 1
+    }
+  ]
+}

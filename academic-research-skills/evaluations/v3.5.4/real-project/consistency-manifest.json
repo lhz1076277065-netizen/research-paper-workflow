@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0",
+  "numeric_facts": [
+    {
+      "fact_id": "N001",
+      "concept": "wine majority mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 33.33,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N002",
+      "concept": "wine majority mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 33.33,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N003",
+      "concept": "wine centroid_raw mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 71.23,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N004",
+      "concept": "wine centroid_raw mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 71.23,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N005",
+      "concept": "wine centroid_scaled mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 97.05,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N006",
+      "concept": "wine centroid_scaled mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 97.05,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N007",
+      "concept": "wine knn5_raw mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 69.75,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N008",
+      "concept": "wine knn5_raw mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 69.75,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N009",
+      "concept": "wine knn5_scaled mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 96.9,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N010",
+      "concept": "wine knn5_scaled mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 96.9,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N011",
+      "concept": "iris majority mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 33.33,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N012",
+      "concept": "iris majority mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 33.33,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N013",
+      "concept": "iris centroid_raw mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 91.56,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N014",
+      "concept": "iris centroid_raw mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 91.56,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N015",
+      "concept": "iris centroid_scaled mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 84.56,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N016",
+      "concept": "iris centroid_scaled mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 84.56,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N017",
+      "concept": "iris knn5_raw mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 96.56,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N018",
+      "concept": "iris knn5_raw mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 96.56,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N019",
+      "concept": "iris knn5_scaled mean balanced accuracy",
+      "section": "Table 1",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 95.44,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N020",
+      "concept": "iris knn5_scaled mean balanced accuracy",
+      "section": "Results source registry",
+      "analysis_set": "30 prespecified dependent main partitions",
+      "unit": "percent",
+      "value": 95.44,
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 30,
+      "evidence_ids": [
+        "E004"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "method_id": "M001",
+      "name": "Fixed train-only preprocessing and matched descriptive comparison",
+      "outcome_ids": [
+        "O001"
+      ],
+      "analysis_intent": "descriptive",
+      "protocol_status": "prespecified"
+    }
+  ],
+  "results": [
+    {
+      "result_id": "R001",
+      "method_id": "M001",
+      "outcome_id": "O001",
+      "analysis_intent": "descriptive",
+      "evidence_ids": [
+        "E004",
+        "E005"
+      ],
+      "reported_sections": [
+        "Abstract",
+        "Results",
+        "Discussion"
+      ],
+      "sample_size": 328
+    }
+  ]
+}

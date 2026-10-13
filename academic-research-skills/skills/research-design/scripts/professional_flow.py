@@ -16,13 +16,14 @@ import tempfile
 import time
 import uuid
 import capabilities as C
+import artifact_io as A
 
 class FlowError(ValueError): pass
 
 def ref(path):
     p=Path(path).resolve()
     if not p.is_file() or not p.stat().st_size: raise FlowError('Missing or empty artifact: '+str(path))
-    return {'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+    return {'path':str(p),'sha256':A.digest(p)}
 
 def verify(r):
     if ref(r['path'])!=r: raise FlowError('Artifact changed: '+r['path'])
@@ -62,7 +63,11 @@ def begin(index, capability, task, inputs, cache, selected=None, allow_network=F
         import phase_control as P
         state=P.load(phase)
         if state['scope']=='maintenance' or not P.guard(state)['allowed']:raise FlowError('Research source step is not permitted in this phase')
+        import local_data as D
+        D.gate(state,capability)
         context={'path':str(Path(phase).resolve()),'id':state['id'],'stage':state['stage'],'latest_instruction':state['latest_instruction']}
+        if state.get('workflow')=='local-data' and state.get('local_data'):
+            context['local_data_id']=state['local_data']['id']
         profile=profile or state['scope']
     uid=selected or route.get('profiles',{}).get(profile,route['primary'])
     if uid not in [route['primary']]+route.get('alternatives',[]):
@@ -72,8 +77,9 @@ def begin(index, capability, task, inputs, cache, selected=None, allow_network=F
         raise FlowError('Source outside the fourteen approved repositories')
     task_ref=ref(task); input_refs=[ref(p) for p in inputs]
     if not input_refs:raise FlowError('Actual task inputs are required')
+    if phase:D.input_lineage(state,capability,input_refs)
     if phase:
-        cutoff=min(state['deadline'],state['project_deadline']-state['reserve_seconds'])
+        cutoff=state['deadline'] if state.get('budget_authority')=='agent' else min(state['deadline'],state['project_deadline']-state['reserve_seconds'])
         def still_current():
             current=P.load(phase)
             return P.guard(current)['allowed'] and all(current.get(k)==context[k] for k in ('id','stage','latest_instruction'))
@@ -110,6 +116,9 @@ def validate_start(index, start, current_phase=True):
         keys=['id','stage','latest_instruction'] if current_phase else ['id']
         if any(state.get(k)!=context[k] for k in keys):
             raise FlowError('Phase or latest instruction changed; do not reuse an unrelated step')
+        if current_phase and context.get('local_data_id') and context['local_data_id']!=state.get('local_data',{}).get('id'):
+            import local_data as D
+            if not D.planned_by(state,start):raise FlowError('Required dataset version changed; preserve this receipt and execute the affected step against the revised inputs')
         if current_phase and state.get('status')!='active':raise FlowError('No new professional completion in a stopped phase')
         if current_phase and any(x['step_id']==start['id'] and x['status']=='cancelled' for x in state.get('professional_pending',[])):
             raise FlowError('Professional step was cancelled; preserve it without completing it')
@@ -134,9 +143,7 @@ def finish(index, start, outputs, report, mode, current_phase=True):
     actions=work.get('actions',[])
     if not isinstance(actions,list) or not actions: raise FlowError('No source-guided actions')
     output_map={}
-    for r in refs:
-        try:output_map[r['path']]=Path(r['path']).read_text(encoding='utf-8')
-        except UnicodeDecodeError:output_map[r['path']]=None
+    for r in refs:output_map[r['path']]=A.output_text(r['path'])
     texts={f['path']:C.path_under(start['source']['root'],f['path']).read_text(encoding='utf-8',errors='replace')
         for f in cap['required_files']}
     covered=set()

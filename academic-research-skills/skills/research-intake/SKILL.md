@@ -2,7 +2,7 @@
 name: research-intake
 description: "将研究请求与材料整理为主张、证据缺口和下一项可执行任务。"
 metadata:
-  version: "3.5.3"
+  version: "3.5.4"
 ---
 
 # 研究目标与科学价值定位

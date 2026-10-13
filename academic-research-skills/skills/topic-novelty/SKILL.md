@@ -2,7 +2,7 @@
 name: topic-novelty
 description: "开放选题或固定问题的贡献核查，比较近邻与决定性检验。"
 metadata:
-  version: "3.5.3"
+  version: "3.5.4"
 ---
 
 # 重要问题与贡献搜索

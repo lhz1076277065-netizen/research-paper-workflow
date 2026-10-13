@@ -33,7 +33,7 @@ python3 scripts/professional_flow.py check --started project/start.json --finish
 }
 ```
 
-actions覆盖所有输出；二进制产物用output_sha256、observation记实际观察。工具检查来源、先后、文件版本及关联，不能自动认证语义/原创性。省略必要工作、虚填动作、引用早于本步的成果不能通过实质验收。
+actions覆盖所有输出；二进制或超过8 MiB的文本产物用output_sha256、observation记实际观察，摘要分块计算。大文件是内存处理分支，不是研究停止条件。完整实证研究还按[本地数据全流程](local-data-workflow.md)检查实际前序产物。工具检查来源、先后、文件版本及关联，不能自动认证语义/原创性。省略必要工作、虚填动作、引用早于本步的成果不能通过实质验收。
 
 ## 自动路由与不可用时的处理
 

@@ -1,4 +1,6 @@
-# v3.5.3 正式版迁移
+# v3.5.4 正式版迁移
+
+新完整实证任务的CLI init --scope full默认workflow=local-data，沿可行性→设计→数据→研究→稿件→交付推进；必要数据齐备后才能本机实验，随后复算、绘图、写作审查与润色，见[完整流程](docs/local-data-workflow.md)。focused局部任务和既有无workflow字段的旧状态保持原范围；函数API默认general以兼容旧调用，采用新流程需显式workflow="local-data"。不要编辑旧状态字段来伪造齐备或重置预算。数据清单绑定真实设计/发现步骤，修订保留历史与容量累计；后续产物必须消费当前前序版本。
 
 替换19项后新会话读取新版；安装不会追溯替换旧会话的已加载规则。需要在用户已授权续接的其他项目采用新版时，work_units.py adopt记录实际指令和版本，保留原截止、状态、收据与未知计量；最新科学指令用phase instruction登记，再checkpoint明确当前下一动作。不要把adopt当恢复暂停或重启已完成任务。
 
@@ -12,7 +14,7 @@ compact恢复区分未完收据与已完成未消费计数，--full与原resume�
 
 从v3.5.0替换19个完整能力目录并核验metadata.version为3.5.1；保留已核验14库源码缓存。旧research-phase-1记录无需转换。active阶段遇障用reassess记录真实诊断、替代比较与下一验证；--blocker复评原障碍后允许新的不同尝试，--minutes只重排阶段计划，--stage只回到同一或更早研究阶段。总截止、token基点、原目标和失败记录不重置。
 
-旧route_closed不会自动启动；实际用户明确续做时用reassess --authority记录原指令并选择当前验证。paused仍须真实恢复，completed与closed_limit不可被复评覆盖。不要把新Skill安装当作研究续做授权，也不补造旧专业收据。v3.5.1当时仅本地交付，其改动现纳入v3.5.3正式版。见[阶段控制](docs/phase-control.md)及[维护导航](docs/RELEASE-v3.5.1.zh-CN.md)。
+旧route_closed不会自动启动；实际用户明确续做时用reassess --authority记录原指令并选择当前验证。paused仍须真实恢复，completed与closed_limit不可被复评覆盖。不要把新Skill安装当作研究续做授权，也不补造旧专业收据。v3.5.1当时仅本地交付，其改动现纳入v3.5.4正式版。见[阶段控制](docs/phase-control.md)及[维护导航](docs/RELEASE-v3.5.1.zh-CN.md)。
 
 ## v3.5.0及更早迁移记录
 

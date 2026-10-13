@@ -2,7 +2,7 @@
 name: submission-packaging
 description: "按目标期刊整理投稿文件与检查；提交遵循真实授权。"
 metadata:
-  version: "3.5.3"
+  version: "3.5.4"
 ---
 
 # 真实研究稿的投稿准备

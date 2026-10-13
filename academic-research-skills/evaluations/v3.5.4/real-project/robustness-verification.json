@@ -1,0 +1,30 @@
+{
+  "metrics_checked": 600,
+  "largest_metric_difference": 2.220446049250313e-16,
+  "replayed_files": [
+    {
+      "file": "results.csv",
+      "sha256": "b6641e0842b0402dad3ea2248f44e232d231790b85ea841e90fb05406b81d9ca",
+      "replay_identical": true
+    },
+    {
+      "file": "predictions.csv",
+      "sha256": "1f78a876c23a0bec8822cede6f7c80210cedc9509f633a1b337d78c0b0750e42",
+      "replay_identical": true
+    },
+    {
+      "file": "scaler-parameters.json",
+      "sha256": "471c3527f584c0d2fbca59bb7abbc37346d6ed68d08a0cd17ce66db246dc947c",
+      "replay_identical": true
+    },
+    {
+      "file": "summary.json",
+      "sha256": "cb0dbf4fd44d5cd47fc6b51eef78a4fc08262609edcdde0f4f22d215a7165c38",
+      "replay_identical": true
+    }
+  ],
+  "raw_derived_all_rows_exactly_equal": true,
+  "scaler_records_independently_verified_from_raw": 60,
+  "independent_population_replication": false,
+  "inference": "Repeated partitions share data; this verifies computational reproducibility and descriptive sensitivity only"
+}

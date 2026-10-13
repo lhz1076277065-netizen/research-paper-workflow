@@ -19,6 +19,7 @@ import subprocess
 import sys
 import time
 import uuid
+import artifact_io as A
 
 STAGES = ('feasibility', 'design', 'research', 'manuscript', 'delivery')
 TERMINAL = {'completed', 'closed_limit', 'route_closed', 'paused'}
@@ -50,7 +51,7 @@ def artifact(path, root):
     root=Path(root).resolve(); p=(root/path).resolve()
     if not p.is_relative_to(root) or not p.is_file() or not p.stat().st_size:
         raise PhaseError('Evidence missing, empty or outside project: '+str(path))
-    return {'path':str(p.relative_to(root)), 'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+    return {'path':str(p.relative_to(root)), 'sha256':A.digest(p)}
 
 def request_anchor(path, message=None):
     """Select the actual grant, never silently pick an old request in a long chat."""
@@ -67,8 +68,9 @@ def request_anchor(path, message=None):
         raise PhaseError('Budget request missing or ambiguous; select its exact --request-message or verified --started-at from the actual log')
     return requests[0]
 
-def init(scope, objective, minutes=None, clock=None, authority=None, started_at=None, anchor_basis=None, autonomous_plan=False):
+def init(scope, objective, minutes=None, clock=None, authority=None, started_at=None, anchor_basis=None, autonomous_plan=False,workflow='general'):
     if scope not in {'full','focused','maintenance'} or not objective.strip(): raise PhaseError('Invalid scope/objective')
+    if workflow not in {'general','local-data'} or (workflow=='local-data' and scope!='full'):raise PhaseError('Local-data workflow applies to complete data-based studies')
     if authority is not None and (not isinstance(authority,str) or not authority.strip() or minutes is None):
         raise PhaseError('A supplied total budget needs minutes and actual user authorization')
     t=now() if clock is None else clock
@@ -79,7 +81,7 @@ def init(scope, objective, minutes=None, clock=None, authority=None, started_at=
         'scope':scope, 'objective':objective, 'latest_instruction':objective,
         'status':'active', 'stage':'feasibility' if scope=='full' else scope,
         'started_at':iso(anchor), 'deadline':anchor+duration, 'project_deadline':anchor+duration,
-        'workflow_version':'3.5.3', 'budget_anchor':{'started_at':iso(anchor),
+        'workflow_version':'3.5.4','workflow':workflow, 'budget_anchor':{'started_at':iso(anchor),
             'basis':anchor_basis or 'controller_initialization_only','verified':started_at is not None},
         'reserve_seconds':min(300,duration*.1),'reserve_authority':'agent', 'budget_kind':'authorized_total' if authority else 'initial_feasibility' if scope=='full' else 'local_task',
         'authorization':authority, 'token_limit':None, 'token_reserve':0,'token_metric':'input_plus_output','token_reserve_authority':'agent',
@@ -232,17 +234,21 @@ def advance(state, stage, evidence, root, next_action, clock=None, minutes=None,
     if not guard(state,clock=clock)['allowed']: raise PhaseError('Phase is not eligible to advance')
     ref=artifact(evidence,root)
     current=state['stage']
+    import local_data as D
+    stages=D.STAGES if state.get('workflow')=='local-data' else STAGES
     t=now() if clock is None else clock
     if minutes is not None:number(minutes,'stage minutes')
     if skip_reason is not None and not (current=='design' and stage=='manuscript' and skip_reason.strip()):
         raise PhaseError('Only sufficient existing evidence can bypass new research from design to manuscript')
+    if skip_reason and state.get('workflow')=='local-data':raise PhaseError('Full local-data studies require the data and experiment stages; use focused scope for existing-evidence writing')
+    D.stage_exit(state,stage)
     if current=='feasibility':
         if stage!='design': raise PhaseError('Feasibility precedes design')
         if state.get('budget_kind')=='authorized_total' or state.get('budget_authority')=='agent':state['stage']=stage
         else:state['status']='awaiting_budget'
     else:
         evidence_sufficient=current=='design' and stage=='manuscript' and isinstance(skip_reason,str) and bool(skip_reason.strip())
-        if not evidence_sufficient and (current not in STAGES or stage not in STAGES or STAGES.index(stage)!=STAGES.index(current)+1):
+        if not evidence_sufficient and (current not in stages or stage not in stages or stages.index(stage)!=stages.index(current)+1):
             raise PhaseError('Use the next stage; focused tasks do not acquire full-research stages')
         state['stage']=stage
     if state['status']=='active':
@@ -278,8 +284,10 @@ def reassess(state, evidence, root, next_action, blocker=None, minutes=None, sta
     if not isinstance(next_action,str) or not next_action.strip():raise PhaseError('Specify the actual next validation action')
     if blocker is not None and blocker not in state['repairs']:raise PhaseError('Reassess the recorded blocker; do not rename it to reset attempts')
     current=state['stage'];steps=[]
+    import local_data as D
+    stages=D.STAGES if state.get('workflow')=='local-data' else STAGES
     if stage is not None:
-        if state['scope']!='full' or current not in STAGES or stage not in STAGES or STAGES.index(stage)>STAGES.index(current):
+        if state['scope']!='full' or current not in stages or stage not in stages or stages.index(stage)>stages.index(current):
             raise PhaseError('Reassessment may return to an earlier full-research stage; it cannot skip forward or expand a focused task')
         if stage!=current:
             pending=[x for x in state.get('professional_pending',[]) if x['status']!='cancelled']
@@ -329,7 +337,7 @@ def resume(state, compact=False):
         'project_deadline','deadline','authorization','completed_tasks','artifacts','next_action',
         'exit_reason','repairs','unchanged_rounds','reassessment_required','owned_processes','host_goal_state',
         'budget_kind','reserve_seconds','token_limit','token_reserve','token_metric','meter','professional_steps',
-        'professional_pending','stage_started_at','storage','budget_anchor','workflow_version','current_unit','budget_authority','reserve_authority','token_reserve_authority','delivery_required')}
+        'professional_pending','stage_started_at','storage','budget_anchor','workflow_version','workflow','local_data','current_unit','budget_authority','reserve_authority','token_reserve_authority','delivery_required')}
     if compact:
         for key in ('artifacts','completed_tasks','professional_steps'):
             rows=result.get(key) or [];result[key+'_count']=len(rows);result[key]=rows[-3:]
@@ -514,6 +522,7 @@ def main(argv=None):
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--state',required=True)
     sub=ap.add_subparsers(dest='op',required=True)
     a=sub.add_parser('init');a.add_argument('--scope',choices=['full','focused','maintenance'],required=True);a.add_argument('--objective',required=True);a.add_argument('--minutes',type=float);a.add_argument('--authority');a.add_argument('--token-limit',type=int);a.add_argument('--rollout');a.add_argument('--started-at',help='Verified ISO timestamp of the actual budget-granting request');a.add_argument('--request-rollout',help='Actual rollout containing the budget-granting user request');a.add_argument('--request-message',help='Exact actual budget-granting message when the rollout contains multiple user requests');a.add_argument('--require-budget',action='store_true',help='Use only when the user explicitly requires budget approval after feasibility')
+    a.add_argument('--workflow',choices=['local-data','general'],help='Full data studies default to local-data; general is for genuinely non-data research, never a bypass for missing datasets')
     a.add_argument('--token-metric',choices=['input_plus_output','noncached_input_plus_output'],default='input_plus_output',help='Must match the actual user/host budget basis')
     a=sub.add_parser('guard');a.add_argument('--estimated-seconds',type=float,default=0);a.add_argument('--estimated-tokens',type=int,default=0);a.add_argument('--estimated-bytes',type=int,default=0);a.add_argument('--transfer-bytes',type=int,default=0)
     a=sub.add_parser('resume');a.add_argument('--full',action='store_true',help='Return all historical artifacts and professional receipts')
@@ -522,10 +531,10 @@ def main(argv=None):
     a=sub.add_parser('meter');a.add_argument('--rollout',required=True)
     a=sub.add_parser('authorize');a.add_argument('--minutes',type=float,required=True);a.add_argument('--authority',required=True);a.add_argument('--token-limit',type=int)
     a.add_argument('--token-metric',choices=['input_plus_output','noncached_input_plus_output'])
-    a=sub.add_parser('advance');a.add_argument('--stage',choices=STAGES,required=True);a.add_argument('--minutes',type=float);a.add_argument('--skip-reason');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
+    a=sub.add_parser('advance');a.add_argument('--stage',choices=(*STAGES,'data'),required=True);a.add_argument('--minutes',type=float);a.add_argument('--skip-reason');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
     a=sub.add_parser('repair');a.add_argument('--blocker',required=True);a.add_argument('--approach',required=True)
     a=sub.add_parser('round');a.add_argument('--changed',action='store_true');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True)
-    a=sub.add_parser('reassess');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--blocker');a.add_argument('--minutes',type=float);a.add_argument('--stage',choices=STAGES);a.add_argument('--authority');a.add_argument('--reserve-seconds',type=float)
+    a=sub.add_parser('reassess');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--blocker');a.add_argument('--minutes',type=float);a.add_argument('--stage',choices=(*STAGES,'data'));a.add_argument('--authority');a.add_argument('--reserve-seconds',type=float)
     a.add_argument('--token-reserve',type=int)
     a=sub.add_parser('instruction');a.add_argument('--text',required=True)
     a=sub.add_parser('continue');a.add_argument('--authority',required=True)
@@ -544,6 +553,8 @@ def main(argv=None):
                 context=started.get('phase')
                 if not context or context['path']!=str(Path(args.state).resolve()) or context['id']!=state['id']:
                     raise PhaseError('Professional begin belongs to another phase')
+                import local_data as D
+                D.gate(state,started['capability'],refresh=started['capability']=='analysis-execution')
             cmd=args.command[1:] if args.command[:1]==['--'] else args.command
             result=run(args.state,cmd,args.log,args.claim,args.decision,args.estimated_seconds,args.rollout)
             print(json.dumps(result,ensure_ascii=False));return 0 if not result['stop_reasons'] and result['returncode']==0 else 2
@@ -556,7 +567,8 @@ def main(argv=None):
                 anchor=datetime.fromisoformat(args.started_at.replace('Z','+00:00')).timestamp() if args.started_at else request_anchor(args.request_rollout,args.request_message) if args.request_rollout else None
                 if args.started_at and datetime.fromisoformat(args.started_at.replace('Z','+00:00')).tzinfo is None:raise PhaseError('Budget timestamp needs an explicit timezone')
                 state=init(args.scope,args.objective,args.minutes,authority=args.authority,started_at=anchor,
-                    anchor_basis='user_request:'+str(Path(args.request_rollout).resolve()) if args.request_rollout else 'verified_user_request_timestamp' if args.started_at else None,autonomous_plan=not args.require_budget)
+                    anchor_basis='user_request:'+str(Path(args.request_rollout).resolve()) if args.request_rollout else 'verified_user_request_timestamp' if args.started_at else None,autonomous_plan=not args.require_budget,
+                    workflow=args.workflow or ('local-data' if args.scope=='full' else 'general'))
                 if args.rollout:meter_rollout(state,args.rollout)
                 if args.token_limit is not None:
                     if not args.authority or not state['meter']['verified']:raise PhaseError('An initial total token ceiling requires actual authorization and rollout meter')
@@ -601,7 +613,7 @@ def main(argv=None):
                 elif args.op=='reassess':
                     reassess(state,args.evidence,args.root,args.next_action,blocker=args.blocker,minutes=args.minutes,stage=args.stage,authority=args.authority,reserve_seconds=args.reserve_seconds,token_reserve=args.token_reserve)
                 elif args.op=='close':
-                    if args.status=='route_closed' and state.get('workflow_version')=='3.5.3' and state['scope']!='maintenance':
+                    if args.status=='route_closed' and state.get('workflow_version') in {'3.5.3','3.5.4'} and state['scope']!='maintenance':
                         import work_units as W
                         W.validate_route_exit(state)
                     if state['owned_processes'] and args.status=='completed':raise PhaseError('Cannot complete with owned work still running')
@@ -613,6 +625,8 @@ def main(argv=None):
                             save(args.state,state)
                             raise PhaseError('Total budget expired; deliver the saved scope and limit instead of a new completed state')
                     if args.status=='completed':
+                        import local_data as D
+                        D.stage_exit(state,'completed')
                         steps=professional_exit(state,args.professional_started,args.professional_finished)
                         consume_professional(state,steps)
                     ref=artifact(args.evidence,args.root)

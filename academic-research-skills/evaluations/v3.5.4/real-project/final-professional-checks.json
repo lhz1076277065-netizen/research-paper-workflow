@@ -1,0 +1,627 @@
+{
+  "checked_at": "2026-10-13T16:01:07.815899+00:00",
+  "current_receipts_checked": 11,
+  "all_passed": true,
+  "historical_not_counted": [
+    "design-start.json",
+    "design-finish.json",
+    "discovery-start.json",
+    "discovery-finish.json"
+  ],
+  "historical_reason": "Source-support index repair and current dataset binding superseded these v1 steps. Their old artifacts and failure evidence were preserved, not retroactively marked current.",
+  "checks": [
+    {
+      "capability": "research-intake",
+      "started": "intake-start.json",
+      "finished": "intake-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "intake-start.json",
+        "--finished",
+        "intake-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "5c453ba0b85e4c9b91975c8f32f3eacd",
+        "capability": "research-intake",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/research-question-card.md",
+            "sha256": "71de21ec37b7870fb2da854fa312c512b66b5a64bd9a36929a5c6cf03b748861"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "research-design",
+      "started": "design-v2-start.json",
+      "finished": "design-v2-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "design-v2-start.json",
+        "--finished",
+        "design-v2-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "e0182c3b1c5447f3924360133ef3ec96",
+        "capability": "research-design",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/refine-logs/EXPERIMENT_PLAN_20261013_232300.md",
+            "sha256": "697d78b97b18060d28a9956f9879721e6d18f47ceac5704da4c9ff6c6ae3810e"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/refine-logs/EXPERIMENT_TRACKER_20261013_232300.md",
+            "sha256": "3bc2b8e5a76debc715ae7685f7c4637d3b927cef5b132c1df07e22937c3ff020"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/refine-logs/MANIFEST_snapshot_20261013_232300.md",
+            "sha256": "ea75bd31dc5188193162ccc791820c1a239ee2b932b3bc5fe3043b901bd400a1"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "data-discovery",
+      "started": "discovery-v2-start.json",
+      "finished": "discovery-v2-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "discovery-v2-start.json",
+        "--finished",
+        "discovery-v2-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "e0329448f3334c9caa30724401fe1c7c",
+        "capability": "data-discovery",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/sources/wine-metadata-v2.json",
+            "sha256": "63bf62376b8988f9e031ea04244e82d23f36dbc7add93332266d76e7ac9c183f"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/sources/iris-metadata-v2.json",
+            "sha256": "1208630f04033e82ee8056a0f2bd1d1432697ba2062094a5638b00c88ea2bc12"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/sources/selection-v2.md",
+            "sha256": "72080514a14e9d5573dcd11f90db10a2ba635317d15db3a84f366b33ca9454f2"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "data-preparation",
+      "started": "prep-start.json",
+      "finished": "prep-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "prep-start.json",
+        "--finished",
+        "prep-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "4becfac34b8d4cb0875fa2e81dc31eab",
+        "capability": "data-preparation",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/prepare_data.py",
+            "sha256": "0841e64e08d9286d6059f2898bfaf96eb959b89682286edfbe8a15b03705a8c3"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/wine.csv",
+            "sha256": "53ddc9e3b6c382da3023ea669824cae92b89005fd1a9f27e323192c58ea8f2ee"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/iris.csv",
+            "sha256": "14c65b7cfd6a62432a56fb8b4255b462a96ddd6b159a5e4028fb6497b182411a"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/splits.json",
+            "sha256": "2f6a66685979f683273c1d38474cf5ef78e4e39e578e49469ed00da5b680abc9"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/quality.json",
+            "sha256": "62825dbd196493acf1cf353fa3df9ee35109137639eca02dfcdd507ffe2f737a"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/feature-summary.csv",
+            "sha256": "0dc5f47c406a53f5729c4f836be35ac95586d51456221f4522eec77c9e244d93"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/wine.manifest.json",
+            "sha256": "ab4bcf341aa782c2b5cea075c6165905b267adf2edb21e4c01a25fe44f1d7927"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/iris.manifest.json",
+            "sha256": "0b9c21aa95f50d237ba84f7a0046c8b2de249e52607e58a106a0534f583afd18"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/wine.profile.json",
+            "sha256": "3cdcc1a68b38c1079c1b50a28683daf09d512774ac21e998f6faeedd4d8e7889"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/iris.profile.json",
+            "sha256": "3770f197a2a78716b2ccac218911e7672d0b28c91f67045a5425896ce41024b5"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/derived/preparation-report.md",
+            "sha256": "ad240283c50f93dcc0ab56ceafa479fb2d59baf6d86a8cc7b2ed0b000e2ac137"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "analysis-execution",
+      "started": "analysis-start.json",
+      "finished": "analysis-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "analysis-start.json",
+        "--finished",
+        "analysis-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "b3053d64754842148a48cae74f0fe26e",
+        "capability": "analysis-execution",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/experiment.py",
+            "sha256": "ac4628d8087d65e070228cdf7eefafe651b754242b08f96f83bf691d40bbb02e"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/pilot/runtime.json",
+            "sha256": "559288ba013ac9fd4610a806b50d31bb7bebf14705e8745c10ea453397dbf764"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/pilot/results.csv",
+            "sha256": "970784ee41d98c3dd064e3109950089f15f0586cbaa9a795d1f4d98ea1959c12"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/pilot/predictions.csv",
+            "sha256": "63d2798da022726863aad0a3aa53f524e843b974415499dd8c35c37c224ca51c"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/pilot-run.log",
+            "sha256": "e126594a0be79302c3ed6adfd9ea4d80ee5f47276bc9c080a629762c34577cd6"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/results/results.csv",
+            "sha256": "b6641e0842b0402dad3ea2248f44e232d231790b85ea841e90fb05406b81d9ca"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/results/predictions.csv",
+            "sha256": "1f78a876c23a0bec8822cede6f7c80210cedc9509f633a1b337d78c0b0750e42"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/results/scaler-parameters.json",
+            "sha256": "471c3527f584c0d2fbca59bb7abbc37346d6ed68d08a0cd17ce66db246dc947c"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/results/summary.json",
+            "sha256": "cb0dbf4fd44d5cd47fc6b51eef78a4fc08262609edcdde0f4f22d215a7165c38"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/results/runtime.json",
+            "sha256": "91739ffd5d3dba815ef728726158ee877c40e367bd188bc85989070350e431a4"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/results/analysis-report.md",
+            "sha256": "67de5ef8ea40ce51bba7bee5addb2aa74d77766a1a3066cf767405215818783b"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/main-run.log",
+            "sha256": "663296de10ef7685ebdcb416258c43dc68c29d5739e9e6e4575e6eb753624f34"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "robustness-reproducibility",
+      "started": "robustness-start.json",
+      "finished": "robustness-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "robustness-start.json",
+        "--finished",
+        "robustness-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "3353ce623fb1407682fae85e9dbab96c",
+        "capability": "robustness-reproducibility",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/verify_results.py",
+            "sha256": "a2dbbd0908ab4ef3643f48d0cbf66597ecc9b9dc5218501cee0b3d91e9f37074"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/robustness-verification.json",
+            "sha256": "e1af72426559d634b18e00bc171d3ca67d2e971d93fd087f3ccc89968bb34b93"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/robustness-report.md",
+            "sha256": "ce17442f5ef915a5c67f0bd142906378f5718021acb12c4ffc12c9b31cec1d15"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/sensitivity/results.csv",
+            "sha256": "f6e09d0b814a0152cca8a3fc11ab1b824b435d663def65bbe43cbc60d8338fc7"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/sensitivity/predictions.csv",
+            "sha256": "e0b281c06336ba14b5607a5200c14bb81574b2b7dac7109db18c88e1a4e8d318"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/sensitivity/summary.json",
+            "sha256": "e511a83cff9f5ba18eb16e31442682ee1da8cb654632b08ca9014aa96222246c"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/sensitivity/runtime.json",
+            "sha256": "3253563766d002f9fa230e70122764a7c21d41578b3c830166b912f3e47b477e"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/replay/runtime.json",
+            "sha256": "477d605e10b5255f0f4f02f3493a0c86b96e5a4c351efae84673235cd3c1a988"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/sensitivity-run.log",
+            "sha256": "df9bebc1ba5f072869f5b73203f10e74277093e4eb9daff16788502527c4d077"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/replay-run.log",
+            "sha256": "356908d2e8739a234fa2cdb9850426a2a2044bb13b0c34cbc2386fe2757ba40a"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "scientific-visualization",
+      "started": "visualization-start.json",
+      "finished": "visualization-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "visualization-start.json",
+        "--finished",
+        "visualization-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "4be2522854df4192bc6f36171e267e97",
+        "capability": "scientific-visualization",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figure-plan.md",
+            "sha256": "714d7d125721a60b4ff8744a21ac162b2371f0580e8f3aabca3f63af33e95aac"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/visualization-profile.json",
+            "sha256": "99da932e4a27c09330608ce5d8ad4303dab699893b2e65b9b8000721fe519e97"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/plot_figures.py",
+            "sha256": "3740ecd78d852b9af19a6db6de6612f8ca3e2c12704830e2e463319914c25e93"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/plot-data.csv",
+            "sha256": "ba49011978c346799ce6b1ccd71fc0e8600d470fd65f22eac13a2579d4a49ad1"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/layout-audit.json",
+            "sha256": "77d408c435802ea6d9b368ba5719a3ab82e96dfae58ae52adff08ba2b61183c2"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure1.png",
+            "sha256": "861dceed60b05413be8a0275d6f5e9bfa4d5c4dbf7837e7ab9b442101ca8fea6"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure2.png",
+            "sha256": "2549c459951bc6b3ea32cc69153cc7ef75c04d4c985bb303d0d9fde942673b54"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure1-grayscale.png",
+            "sha256": "559998ff7c5f32e18332451a4deff1c80d9c32d3e7dd405bf98ef78cfceb27c4"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure2-grayscale.png",
+            "sha256": "92eaabc24fb7c010096a73ebda115e89f181d8708b90c9c9a24c1e19c72e413c"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure1.svg",
+            "sha256": "f5a55807b61068c873bd263e43cd7786304edd2f5dc58751a37d870a2377c221"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure2.svg",
+            "sha256": "a14304f4c8f2ffa7f0552f408e92fa55765be7e7802ba6d96c412e620ee7e628"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure1.pdf",
+            "sha256": "e18ada0fce45df80d3cbab2f2b270f146ba264f2d87ca8f152f50a458bf69b31"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure2.pdf",
+            "sha256": "4e98afe398a98d6d30b67a96f00b5cb789c6e5b66d4354209efca2630db17443"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure1-check.log",
+            "sha256": "33b342c65e89758f2565239464b1c6b0ae91f87b302f891860cc6b61de7f67aa"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/figure2-check.log",
+            "sha256": "768d42eed8cddd1685f71f0bb27d5de732ed186f7e16c62dc25bf72343476790"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/figures/visual-review.md",
+            "sha256": "8dac6d278aa30cb1707a51bfb4b14fe5992cdadc6241408022ff80f7423c7de5"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "manuscript-writing",
+      "started": "writing-start.json",
+      "finished": "writing-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "writing-start.json",
+        "--finished",
+        "writing-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "34893aa8abe34059878c2c3f81e234a1",
+        "capability": "manuscript-writing",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/evidence-outline.md",
+            "sha256": "71b38333530bc297563510881750e32b52ec267ec5b029456525de858908fc64"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/write_report.py",
+            "sha256": "7638c7450e831f276fef3c7c07b542616babe151dba3dca6e7211eb9b6921c0f"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/manuscript-draft.md",
+            "sha256": "4774f5d0a8b788563ef86d861be61a99cc4ed910fe5f163c3b6cb61b1f33a4d5"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/manuscript-annotated.md",
+            "sha256": "05d7c9c0dd28b14602e9ed1a336e8f1aa826d436180f852cc75d4d256bd8ef44"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/claims-draft.csv",
+            "sha256": "8df2ca124f3bf573bb847f4ff32bb1b9e40a772e2767b2fa5d016fb3cce562f0"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/source-manifest.json",
+            "sha256": "f93c5f12a73793d7c77394d2e176c48e5003b7f75fb3271e8796cd36ea914f60"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/consistency-manifest.json",
+            "sha256": "dbbec95c36bef665b80af26bc0754d53fa24db445fb510d0fe28f69e4612e531"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/writing-consistency-check.json",
+            "sha256": "f87ea59dbc72c7f753d10dfc374326ddee1409e34a33d29a5e27f25e614d4d25"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/writing-reference-syntax-check.json",
+            "sha256": "fbb467f77cb56846d191f7ca67a25a878ea650f34322cbcf5500d3f7f51a069d"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "citation-audit",
+      "started": "citation-start.json",
+      "finished": "citation-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "citation-start.json",
+        "--finished",
+        "citation-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "f3baf8637654482eb935cc599423f3f9",
+        "capability": "citation-audit",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/citation_audit.py",
+            "sha256": "a5893dcae573c6ea1e3b8d90223ff8c90473bf207cffe6aabefc9aadd85a2d18"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/citation-audit.json",
+            "sha256": "66a91495b8f84b1c139a4c28528e08033c9b0fbeb28b6ece73e41e7fc3ca4c96"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/citation-audit.md",
+            "sha256": "cd2ebe77a7b837dbbe894ae4a33782b100ec03b2df14267827e9846a4cda3b0b"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/references-extracted.bib",
+            "sha256": "0cba16fa1c60b4935b64fef50059f542965c04878001c968badd1dc7801a6103"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/references.bib",
+            "sha256": "dd84ce57e492095b1187af27a976c9a1ebd3b3a491281e8307ff11c045b3392f"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "manuscript-review",
+      "started": "review-start.json",
+      "finished": "review-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "review-start.json",
+        "--finished",
+        "review-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "f7b4045c119d42ef9f3a750dbbf4e0bc",
+        "capability": "manuscript-review",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/review_checks.py",
+            "sha256": "1e36003da72db63bce45b93b331c043910c22165d385fce0c5737f8e3cb44ae7"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/review-checks.json",
+            "sha256": "d4a06931f1aedc3b771333ecead53533862e2b6dda0d457a39c14c63ffe4c5be"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/manuscript-review.md",
+            "sha256": "90a0868920ddfa1cb1213a75f200261560a14a43b1108b30b57578c1168d794e"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/README.md",
+            "sha256": "4553ffef54687979c8c4614c7d40ee3afabeb65e47d9c2c7b9c21524ec26b64e"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    },
+    {
+      "capability": "final-expression",
+      "started": "polish-start.json",
+      "finished": "polish-finish.json",
+      "command": [
+        "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/iteration-v340-20261004/repository/academic-research-skills/scripts/professional_flow.py",
+        "check",
+        "--started",
+        "polish-start.json",
+        "--finished",
+        "polish-finish.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "eligible_for_handoff",
+        "step_id": "c37f1d6a35524288ab0003b9444666fe",
+        "capability": "final-expression",
+        "outputs": [
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/polish_report.py",
+            "sha256": "6d124597c5fde2eac32636f5ad7ca91a18a1f50b137219a4accd81063f60a918"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/manuscript-final.md",
+            "sha256": "9f1b5aa81a363da485ddfc7019d744c135630e700cede98565e768c012ddff38"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/polish-diff.patch",
+            "sha256": "d7117e81fff324d5d2ebd15336c880758d7df71c9e604dbe6d95aaba6116e679"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/polish-fact-check.json",
+            "sha256": "b77d76e0c90dc1cc464cc233c1fe02efa603c73f49be6b412f6014006ce1182f"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/export_documents.py",
+            "sha256": "cca789cfcdbaf547baf77781afac186377ea6e14b53f9909a717813224b74c69"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/document-render.py",
+            "sha256": "c9677c40884e2d38ed74c82389c035aa83394800ea068821c5da06aba0820674"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/document-structure-check.json",
+            "sha256": "db9ca7d1ff93d1fbefe433f22bb63f50d35d3ec2e8cedd62daf622439dd166db"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/document-export-check.json",
+            "sha256": "72541c5f9a16c169eba3408e31fb600aced185d750b0d1a9e2188a89d4940a64"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/document-visual-review.md",
+            "sha256": "c2200fa255bc9307e70d1f1c37eadcc508a8e8bc025569d588cc2940943e791f"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/delivery/Wine_Iris_teaching_reanalysis.docx",
+            "sha256": "6131f17530002c95e0a081ce570ed24ef41793445dfd837d043cf45be9c5ea33"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/delivery/Wine_Iris_teaching_reanalysis.pdf",
+            "sha256": "178fc22eabb2e8072334a872b285109c6d545cdd38481e62c825a72ee884266f"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/delivery/rendered/page-1.png",
+            "sha256": "df3302de92db7c724d5c067e67301b0c45c10105ad03fd86d6fa4596e59f6dae"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/delivery/rendered/page-2.png",
+            "sha256": "fd37d159dc0b329b64445da46f76786e6fbea3a35822914f9f6d1baaf5abac4f"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/delivery/rendered/page-3.png",
+            "sha256": "9eed37509a0056e6acf723232a62bb28e6b8de5bafa02dfc1bcaf613a8434b18"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/delivery/rendered/page-4.png",
+            "sha256": "e269cc2b54d7829c43c47cb0d335be3ce2ee8258fef2fe27e8c470554c3de632"
+          },
+          {
+            "path": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/delivery/rendered/page-5.png",
+            "sha256": "88b21b0d7be2a53a85cd942fe3fc30a003e9613d3454f8beb109c36ba4dc737e"
+          }
+        ],
+        "semantic_work_verified_by_tool": false
+      }
+    }
+  ]
+}

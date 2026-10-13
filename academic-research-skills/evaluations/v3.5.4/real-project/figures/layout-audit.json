@@ -1,0 +1,302 @@
+[
+  {
+    "name": "figure1",
+    "width_inches": 6,
+    "height_inches": 4.666666666666667,
+    "minimum_text_pt": 7.5,
+    "text_bounds_passed": true,
+    "texts": [
+      {
+        "text": "A  Fixed classifiers: scaling effects differ by dataset",
+        "left": 12,
+        "right": 238.2060546875,
+        "top": 7,
+        "bottom": 17
+      },
+      {
+        "text": "Dots = 30 dependent holdouts per arm; black ticks = descriptive means",
+        "left": 12,
+        "right": 247.960693359375,
+        "top": 24.5,
+        "bottom": 32
+      },
+      {
+        "text": "Wine: 178 rows",
+        "left": 12,
+        "right": 74.0244140625,
+        "top": 41,
+        "bottom": 50
+      },
+      {
+        "text": "0",
+        "left": 113.9144287109375,
+        "right": 118.0855712890625,
+        "top": 156.5,
+        "bottom": 164
+      },
+      {
+        "text": "20",
+        "left": 171.028857421875,
+        "right": 179.371142578125,
+        "top": 156.5,
+        "bottom": 164
+      },
+      {
+        "text": "40",
+        "left": 230.228857421875,
+        "right": 238.571142578125,
+        "top": 156.5,
+        "bottom": 164
+      },
+      {
+        "text": "60",
+        "left": 289.428857421875,
+        "right": 297.771142578125,
+        "top": 156.5,
+        "bottom": 164
+      },
+      {
+        "text": "80",
+        "left": 348.628857421875,
+        "right": 356.971142578125,
+        "top": 156.5,
+        "bottom": 164
+      },
+      {
+        "text": "100",
+        "left": 405.7432861328125,
+        "right": 418.2567138671875,
+        "top": 156.5,
+        "bottom": 164
+      },
+      {
+        "text": "Majority",
+        "left": 82.746337890625,
+        "right": 109.0,
+        "top": 60.0,
+        "bottom": 67.5
+      },
+      {
+        "text": "Centroid | raw",
+        "left": 62.450927734375,
+        "right": 109.0,
+        "top": 78.0,
+        "bottom": 85.5
+      },
+      {
+        "text": "Centroid | scaled",
+        "left": 52.856201171875,
+        "right": 109.0,
+        "top": 96.0,
+        "bottom": 103.5
+      },
+      {
+        "text": "5-NN | raw",
+        "left": 73.298095703125,
+        "right": 109.0,
+        "top": 114.0,
+        "bottom": 121.5
+      },
+      {
+        "text": "5-NN | scaled",
+        "left": 63.703369140625,
+        "right": 109.0,
+        "top": 132.0,
+        "bottom": 139.5
+      },
+      {
+        "text": "Iris: 150 rows",
+        "left": 12,
+        "right": 65.5166015625,
+        "top": 189,
+        "bottom": 198
+      },
+      {
+        "text": "0",
+        "left": 113.9144287109375,
+        "right": 118.0855712890625,
+        "top": 304.5,
+        "bottom": 312
+      },
+      {
+        "text": "20",
+        "left": 171.028857421875,
+        "right": 179.371142578125,
+        "top": 304.5,
+        "bottom": 312
+      },
+      {
+        "text": "40",
+        "left": 230.228857421875,
+        "right": 238.571142578125,
+        "top": 304.5,
+        "bottom": 312
+      },
+      {
+        "text": "60",
+        "left": 289.428857421875,
+        "right": 297.771142578125,
+        "top": 304.5,
+        "bottom": 312
+      },
+      {
+        "text": "80",
+        "left": 348.628857421875,
+        "right": 356.971142578125,
+        "top": 304.5,
+        "bottom": 312
+      },
+      {
+        "text": "100",
+        "left": 405.7432861328125,
+        "right": 418.2567138671875,
+        "top": 304.5,
+        "bottom": 312
+      },
+      {
+        "text": "Majority",
+        "left": 82.746337890625,
+        "right": 109.0,
+        "top": 208.0,
+        "bottom": 215.5
+      },
+      {
+        "text": "Centroid | raw",
+        "left": 62.450927734375,
+        "right": 109.0,
+        "top": 226.0,
+        "bottom": 233.5
+      },
+      {
+        "text": "Centroid | scaled",
+        "left": 52.856201171875,
+        "right": 109.0,
+        "top": 244.0,
+        "bottom": 251.5
+      },
+      {
+        "text": "5-NN | raw",
+        "left": 73.298095703125,
+        "right": 109.0,
+        "top": 262.0,
+        "bottom": 269.5
+      },
+      {
+        "text": "5-NN | scaled",
+        "left": 63.703369140625,
+        "right": 109.0,
+        "top": 280.0,
+        "bottom": 287.5
+      },
+      {
+        "text": "Balanced accuracy (%)",
+        "left": 221.87109375,
+        "right": 304.12890625,
+        "top": 325,
+        "bottom": 333
+      }
+    ],
+    "plotted_point_count": 300
+  },
+  {
+    "name": "figure2",
+    "width_inches": 6,
+    "height_inches": 3.3055555555555554,
+    "minimum_text_pt": 7.5,
+    "text_bounds_passed": true,
+    "texts": [
+      {
+        "text": "B  Paired scaling change is stable across test fractions",
+        "left": 12,
+        "right": 253.787109375,
+        "top": 7,
+        "bottom": 17
+      },
+      {
+        "text": "20% test",
+        "left": 28,
+        "right": 57.183349609375,
+        "top": 29.5,
+        "bottom": 37
+      },
+      {
+        "text": "30% test",
+        "left": 113,
+        "right": 142.183349609375,
+        "top": 29.5,
+        "bottom": 37
+      },
+      {
+        "text": "Each dot = one matched split",
+        "left": 210,
+        "right": 306.93603515625,
+        "top": 29.5,
+        "bottom": 37
+      },
+      {
+        "text": "-20",
+        "left": 131.72293526785714,
+        "right": 142.56277901785714,
+        "top": 199.5,
+        "bottom": 207
+      },
+      {
+        "text": "0",
+        "left": 219.62871442522322,
+        "right": 223.79985700334822,
+        "top": 199.5,
+        "bottom": 207
+      },
+      {
+        "text": "20",
+        "left": 302.11457170758933,
+        "right": 310.45685686383933,
+        "top": 199.5,
+        "bottom": 207
+      },
+      {
+        "text": "40",
+        "left": 386.6860002790179,
+        "right": 395.0282854352679,
+        "top": 199.5,
+        "bottom": 207
+      },
+      {
+        "text": "Wine | centroid",
+        "left": 59.11474609375,
+        "right": 109.0,
+        "top": 61.0,
+        "bottom": 68.5
+      },
+      {
+        "text": "Wine | 5-NN",
+        "left": 68.295654296875,
+        "right": 109.0,
+        "top": 95.0,
+        "bottom": 102.5
+      },
+      {
+        "text": "Iris | centroid",
+        "left": 66.20458984375,
+        "right": 109.0,
+        "top": 129.0,
+        "bottom": 136.5
+      },
+      {
+        "text": "Iris | 5-NN",
+        "left": 75.385498046875,
+        "right": 109.0,
+        "top": 163.0,
+        "bottom": 170.5
+      },
+      {
+        "text": "Scaled minus raw balanced accuracy (percentage points)",
+        "left": 167.7412109375,
+        "right": 358.2587890625,
+        "top": 217.5,
+        "bottom": 225
+      }
+    ],
+    "plotted_point_count": 242
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "step_id": "e0182c3b1c5447f3924360133ef3ec96",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": false,
+  "actions": [
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "Follow these shared protocols for all output files:",
+      "applied": "Read all three newly available pinned shared protocols, preserved original scientific design and v1 evidence, used stage-scoped timestamp/latest files, wrote >15-artifact manifest and kept authorized English; exact download status updated without inventing results or external audit.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/refine-logs/EXPERIMENT_PLAN_20261013_232300.md",
+      "output_excerpt": "# Experiment Plan v2 \u2014 fixed training-only preprocessing\n\nDate: 2026-10-13. The scientific design was locked in v1 before downloading or fitting. This v2 preserves that design after official acquisiti"
+    },
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "Follow these shared protocols for all output files:",
+      "applied": "Read all three newly available pinned shared protocols, preserved original scientific design and v1 evidence, used stage-scoped timestamp/latest files, wrote >15-artifact manifest and kept authorized English; exact download status updated without inventing results or external audit.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/refine-logs/EXPERIMENT_TRACKER_20261013_232300.md",
+      "output_excerpt": "# Experiment Tracker v2 \u2014 data acquired, no fitted models\n\n| Run | Purpose | Data | Setting | Status |\n|---|---|---|---|---|\n| M0 | Both official complete tables acquired; subsequent QA pending | Wine"
+    },
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "Follow these shared protocols for all output files:",
+      "applied": "Read all three newly available pinned shared protocols, preserved original scientific design and v1 evidence, used stage-scoped timestamp/latest files, wrote >15-artifact manifest and kept authorized English; exact download status updated without inventing results or external audit.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.4-20261013/real-project/refine-logs/MANIFEST_snapshot_20261013_232300.md",
+      "output_excerpt": "# Research Output Manifest\n\n| Timestamp | Skill | File | Stage | Description |\n|---|---|---|---|---|\n| 2026-10-13 | Current-host research workflow | acquisition-plan.json | implementation | Versioned "
+    }
+  ]
+}
