@@ -1,0 +1,158 @@
+{
+  "professional_steps": 13,
+  "capabilities": 11,
+  "source_repositories": [
+    "Adkid-Zephyr/anti-defensive-writing-Skill",
+    "Galaxy-Dawn/claude-scholar",
+    "Haojae/scipilot-figure-skill",
+    "Imbad0202/academic-research-skills",
+    "K-Dense-AI/scientific-agent-skills",
+    "wanshuiyin/Auto-claude-code-research-in-sleep"
+  ],
+  "function_execution_note": "true means actual relevant source functions ran, never preparation. Source executable counts/outputs and failures below; protocol-only steps are source-guided Agent work.",
+  "steps": [
+    {
+      "step": "intake",
+      "capability": "research-intake",
+      "source_repository": "Galaxy-Dawn/claude-scholar",
+      "source_commit": "903787345d6aec134086afa2b97715a78fbde519",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/scholar-intake/903787345d6aec134086afa2b97715a78fbde519/skills/research-ideation/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": false,
+      "purpose": "formal",
+      "receipt": "intake-finish.json"
+    },
+    {
+      "step": "design",
+      "capability": "research-design",
+      "source_repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "source_commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/sleep-experiment-plan/2132036060e03e8d0df69a4b21e5971819c0c2d6/skills/experiment-plan/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": false,
+      "purpose": "formal",
+      "receipt": "design-finish.json"
+    },
+    {
+      "step": "discovery",
+      "capability": "data-discovery",
+      "source_repository": "K-Dense-AI/scientific-agent-skills",
+      "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/kdense-database/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/database-lookup/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": false,
+      "purpose": "formal",
+      "receipt": "discovery-finish.json"
+    },
+    {
+      "step": "prep",
+      "capability": "data-preparation",
+      "source_repository": "K-Dense-AI/scientific-agent-skills",
+      "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/kdense-eda/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/exploratory-data-analysis/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": true,
+      "purpose": "formal",
+      "receipt": "prep-finish.json"
+    },
+    {
+      "step": "pilot",
+      "capability": "analysis-execution",
+      "source_repository": "K-Dense-AI/scientific-agent-skills",
+      "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/statistical-analysis/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": false,
+      "purpose": "diagnostic",
+      "receipt": "pilot-finish.json"
+    },
+    {
+      "step": "analysis",
+      "capability": "analysis-execution",
+      "source_repository": "K-Dense-AI/scientific-agent-skills",
+      "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/statistical-analysis/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": false,
+      "purpose": "formal",
+      "receipt": "analysis-finish.json"
+    },
+    {
+      "step": "robustness",
+      "capability": "robustness-reproducibility",
+      "source_repository": "K-Dense-AI/scientific-agent-skills",
+      "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/kdense-critical/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/scientific-critical-thinking/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": false,
+      "purpose": "formal",
+      "receipt": "robustness-finish.json"
+    },
+    {
+      "step": "figures",
+      "capability": "scientific-visualization",
+      "source_repository": "Haojae/scipilot-figure-skill",
+      "source_commit": "43098ddb9e6a6d142218540c114f9ed38922fc42",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": true,
+      "purpose": "formal",
+      "receipt": "figures-finish.json"
+    },
+    {
+      "step": "writing",
+      "capability": "manuscript-writing",
+      "source_repository": "K-Dense-AI/scientific-agent-skills",
+      "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/kdense-writing/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/scientific-writing/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": true,
+      "purpose": "formal",
+      "receipt": "writing-finish.json"
+    },
+    {
+      "step": "citations",
+      "capability": "citation-audit",
+      "source_repository": "K-Dense-AI/scientific-agent-skills",
+      "source_commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/kdense-citation/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/citation-management/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": true,
+      "purpose": "formal",
+      "receipt": "citations-finish.json"
+    },
+    {
+      "step": "review",
+      "capability": "manuscript-review",
+      "source_repository": "Imbad0202/academic-research-skills",
+      "source_commit": "6ab4b03bf70a118a1b3ee7f3263ed9f19031061b",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/academic-reviewer/6ab4b03bf70a118a1b3ee7f3263ed9f19031061b/academic-paper-reviewer/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": false,
+      "purpose": "formal",
+      "receipt": "review-finish.json"
+    },
+    {
+      "step": "expression",
+      "capability": "final-expression",
+      "source_repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "source_commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/anti-defensive/102c8b21acf5eda3a0aef3d9779a65db646c8980/skills/anti-defensive-writing/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": false,
+      "purpose": "formal",
+      "receipt": "expression-finish.json"
+    },
+    {
+      "step": "expression-amendment",
+      "capability": "final-expression",
+      "source_repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "source_commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+      "source_entry": "/Users/luca/.codex/academic-research-source-cache/anti-defensive/102c8b21acf5eda3a0aef3d9779a65db646c8980/skills/anti-defensive-writing/SKILL.md",
+      "mode": "adapted_in_host",
+      "source_functions_executed": false,
+      "purpose": "formal",
+      "receipt": "expression-amendment-finish.json"
+    }
+  ]
+}

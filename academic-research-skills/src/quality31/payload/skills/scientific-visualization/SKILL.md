@@ -2,7 +2,7 @@
 name: scientific-visualization
 description: "制作证据关联的科研图表，交付编辑源与视觉复核。"
 metadata:
-  version: "3.5.4"
+  version: "3.5.5"
 ---
 
 # 正式论文图表的专业生产

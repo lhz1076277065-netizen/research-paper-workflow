@@ -1,0 +1,138 @@
+{
+  "status": "frozen_after_requested_delivery",
+  "date": "2026-10-18",
+  "files": {
+    "acceptance-report.md": {
+      "sha256": "222c4ff31e6fd516b3ef525940071f2ac8314865f25f4a8b0fd6f4eb9cfc43ad",
+      "bytes": 5515
+    },
+    "delivery-integrity-check.json": {
+      "sha256": "cbe8c7ba9142175317da74d5c297017cf63bbbb82204a26951f6bc352100aebc",
+      "bytes": 538
+    },
+    "expression-changes.diff": {
+      "sha256": "753e59e747fcc4e2d14a1ee40e46d382a126794200bd510c661989f79225cf41",
+      "bytes": 7237
+    },
+    "expression-check.json": {
+      "sha256": "7be930f4e4f17930475f07479e508b4ea944879ef98447ab056d28b23634b6b9",
+      "bytes": 1773
+    },
+    "expression-fact-review.md": {
+      "sha256": "2654a326032ba9d22ea95ae097dd0666363ba66263c714d310536bb4ba37a365",
+      "bytes": 6790
+    },
+    "expression-finish.json": {
+      "sha256": "3112c664a606a16ae6614711ad0c2bb430b3bfdc7eb24a8335f1ae81140c60c6",
+      "bytes": 8281
+    },
+    "expression-finish.stdout.json": {
+      "sha256": "3112c664a606a16ae6614711ad0c2bb430b3bfdc7eb24a8335f1ae81140c60c6",
+      "bytes": 8281
+    },
+    "expression-numeric-preservation.json": {
+      "sha256": "e98d2da3920d21d78ceff7d06296f1f92a08a1bcf20c539e5487823b2880bc3b",
+      "bytes": 734
+    },
+    "expression-start.json": {
+      "sha256": "33aba36c5a9a05e83b98243a5cbe432ba562e24f7d6f543f9ea9b6251470685f",
+      "bytes": 8923
+    },
+    "expression-work.json": {
+      "sha256": "366cfd5d28ac645119f5ee920a4011395b75f1d311433231c175b87feafcbdd8",
+      "bytes": 3873
+    },
+    "final-claims.csv": {
+      "sha256": "212b872111dd56153951b24e073ad08b86a4200a1465fdd3b56365f99a1d5e66",
+      "bytes": 5656
+    },
+    "input-sha256.json": {
+      "sha256": "f5f8d2d9e53aabcaa760ab0240661b61e04e2af12503033dd35636ea2ef6796a",
+      "bytes": 1289
+    },
+    "manuscript-evidence-final.md": {
+      "sha256": "72884c9f6fe6609713fcbbc67fe96cbb431a99f4e82a688ece526ac85112a7c7",
+      "bytes": 9702
+    },
+    "manuscript-evidence-v1.md": {
+      "sha256": "afcd3fa814a213e99db132dc92405a9fb13b66c663a727e1f04c5bcfc2d0f850",
+      "bytes": 9765
+    },
+    "manuscript-revised-v1.md": {
+      "sha256": "50cfb18424b7cc1859c8571a9a4bbed62f831c021f64c0baac514a2bd4baeae9",
+      "bytes": 8890
+    },
+    "manuscript-revised.md": {
+      "sha256": "c229d91aaee418efb9879ffe0559d1d7b8ee7741f8945b0d7a0d3d6b193701ce",
+      "bytes": 8773
+    },
+    "original-to-revised.diff": {
+      "sha256": "069b922a7afed13884369599ede5e765d7eace01ff7afcd5310b091e90a0315a",
+      "bytes": 11364
+    },
+    "professional-check-summary.json": {
+      "sha256": "66d35b79316f30e2f2194fcea5d8275ac8423c845f3e0f3f81213e6204c0475a",
+      "bytes": 2186
+    },
+    "review-check.json": {
+      "sha256": "d356f5d18ccf6633f13fd0e38452b064eadb19daa5e1e34cb361b8695eecfb13",
+      "bytes": 405
+    },
+    "review-finish.json": {
+      "sha256": "f33e838947380fecba10346d40a596f56339aaed5985f7886680dcb5a96dcf2d",
+      "bytes": 4706
+    },
+    "review-report.md": {
+      "sha256": "a914a1e5125b26af453aea74f386960cb6da84dcd05569c0f0b5f34f87b4607f",
+      "bytes": 13181
+    },
+    "review-start.json": {
+      "sha256": "43d10016d650f2ab572f2a06f91e1225b824d607710dcf500eb0ac5079021e06",
+      "bytes": 18544
+    },
+    "review-work.json": {
+      "sha256": "ae3673456dc591228861654fe9bf3e68926b48e72b5d1c686a29d8a6b5da574a",
+      "bytes": 2570
+    },
+    "writing-check.json": {
+      "sha256": "92fef6bc32a5ec1a8c9ee112c8d446164e9991dcbffb5a974d91ed8a7da30baa",
+      "bytes": 2008
+    },
+    "writing-claims.csv": {
+      "sha256": "0fedd3104c15836eaa052d25e1b72588cc2fbc6a6533edf832afb0eb6563c19a",
+      "bytes": 5376
+    },
+    "writing-consistency-check.json": {
+      "sha256": "58e3848bd4d340abea057ddc61859610e3efc4a19d9e24220684567c4c1dbdda",
+      "bytes": 186
+    },
+    "writing-consistency.json": {
+      "sha256": "37abe912749cd6e52cae49ab54ddb400b7c5da01f2adf75c5d833590884717e5",
+      "bytes": 30610
+    },
+    "writing-evidence-outline.md": {
+      "sha256": "fb7d095bde19792a8167752a92665270cc22c0b3709f4e0bf453e3bbd2aca421",
+      "bytes": 3404
+    },
+    "writing-finish.json": {
+      "sha256": "1d37e97b0247e16eaf82944c7824c6ef6a54d2f216e8c5570658904544323954",
+      "bytes": 9013
+    },
+    "writing-reference-check.json": {
+      "sha256": "9277784d943c46da7d66cdee8eabc90565b0fd96245ae9289046ae2d925f2894",
+      "bytes": 1632
+    },
+    "writing-source-manifest.json": {
+      "sha256": "1268cf991552f0dc59c1f32171318079cd7d23cc796b88b06456aa6cda1ee4cc",
+      "bytes": 4941
+    },
+    "writing-start.json": {
+      "sha256": "cb5778cd17b549de312053cf2f7f5e19fc109c40968accd8ef0e2c5b2a8bedae",
+      "bytes": 25893
+    },
+    "writing-work.json": {
+      "sha256": "7bd9b9c49c20e55daf88888ca6fc4a21c7942c048c2ac4197d351be151ecb506",
+      "bytes": 4690
+    }
+  }
+}

@@ -1,0 +1,39 @@
+--- manuscript-revised-v1.md
++++ manuscript-revised.md
+@@ -1,16 +1,16 @@
+-# Alcohol and color intensity in the complete UCI Wine dataset: pooled and cultivar-conditioned associations
++# Positive alcohol–color-intensity associations before and after cultivar adjustment in the complete UCI Wine dataset
+ 
+ *Revised scientific draft.*
+ 
+ ## Abstract
+ 
+-We described the association between alcohol content and color intensity in all 178 records of the original UCI Wine dataset, overall and conditional on its three cultivar classes. Pearson and Spearman correlations and ordinary least-squares regressions summarized direction and magnitude. The pooled Pearson correlation was 0.546 and Spearman correlation was 0.635; the pooled slope was 1.560 recorded color-intensity units per recorded alcohol unit (nominal 95% HC3 normal-approximation interval, 1.246–1.875). Class-specific slopes were 1.094, 0.464 and 1.527. With class-specific intercepts, the common slope was 0.940 (0.492–1.389), and the class-adjusted partial correlation was 0.319. All single-record omissions retained positive pooled and adjusted slopes. Thus, positive direction was shared across classes, while class conditioning reduced the pooled magnitude. The differing class estimates and an interaction reference p-value of 0.106 do not establish equal slopes. These findings describe this historical dataset; intervals and reference tests are model-based sensitivity summaries and support neither population nor causal claims.
++Alcohol content and color intensity were positively associated overall and within all three cultivar classes in the original UCI Wine dataset. We quantified this pattern in all 178 records using Pearson and Spearman correlations and ordinary least-squares regressions, then assessed the association after cultivar-class adjustment. The pooled Pearson correlation was 0.546 and Spearman correlation was 0.635; the pooled slope was 1.560 recorded color-intensity units per recorded alcohol unit (nominal 95% HC3 normal-approximation interval, 1.246–1.875). Class-specific slopes were 1.094, 0.464 and 1.527. With class-specific intercepts, the common slope was 0.940 (0.492–1.389), and the class-adjusted partial correlation was 0.319. All single-record omissions retained positive pooled and adjusted slopes. Thus, positive direction was shared across classes, while class conditioning reduced the pooled magnitude. The differing class estimates and an interaction reference p-value of 0.106 do not establish equal slopes. These findings describe this historical dataset; intervals and reference tests are model-based sensitivity summaries and support neither population nor causal claims.
+ 
+ ## Introduction
+ 
+-The UCI Wine dataset contains chemical measurements from wines grown in one Italian region and derived from three cultivars [1]. Although the dataset has been used for classification, the present question concerns the relationship between two recorded measurements: alcohol content and color intensity. A pooled association combines variation within cultivar classes with differences among classes, so it need not describe the association within each class.
++The UCI Wine dataset contains chemical measurements from wines grown in one Italian region and derived from three cultivars [1]. We examined the relationship between its recorded alcohol content and color intensity. A pooled association combines variation within cultivar classes with differences among classes, so it need not describe the association within each class.
+ 
+-We estimated the direction and magnitude of the alcohol–color-intensity association in the complete original dataset, then examined its direction and magnitude within cultivar class and after class adjustment. The aim was a coherent description of these historical records, with no claim about wine quality, a causal alcohol effect or a wider wine population.
++We estimated the direction and magnitude of the alcohol–color-intensity association in the complete original dataset, then examined its direction and magnitude within cultivar class and after class adjustment. The target was the descriptive relationship in these historical records.
+ 
+ ## Methods
+ 
+@@ -43,11 +43,13 @@
+ 
+ ## Discussion
+ 
+-Alcohol content and color intensity were positively associated in this dataset, both overall and within each of its three cultivar classes. The association persisted after class adjustment, with a smaller common slope and partial correlation than their pooled counterparts. Cultivar conditioning therefore changes the magnitude of the descriptive relationship without reversing its direction. The pooled slope alone would give an incomplete account of the within-class association.
++Alcohol content and color intensity were positively associated in this dataset, both overall and within each of its three cultivar classes. The association persisted after class adjustment, with a smaller common slope and partial correlation than their pooled counterparts. Cultivar conditioning reveals a smaller within-class summary while preserving the positive direction. Reporting both pooled and class-conditioned estimates therefore gives a fuller description of the relationship.
+ 
+ Consistency of direction should be distinguished from equality of magnitude. The three fitted slopes differ numerically, and the adjusted common slope is a weighted summary rather than a demonstration of identical class responses. The interaction diagnostic supplies neither an equivalence test nor a population-level conclusion. Rank correlations and the omission analyses support the positive descriptive direction, while the wide quadratic interval does not establish linearity.
+ 
+-The original records lack a documented probability sampling frame, collection dates, batch structure, replication details and measurement units. HC3 addresses heterogeneous error variance under independent errors; it cannot remedy unknown clustering, measurement error or an inappropriate mean model. Accordingly, these coefficients summarize the recorded wines and do not identify a causal mechanism, establish practical wine-quality implications or justify extrapolation to other wines. Within that scope, the complete-data analyses answer the original question: the alcohol–color-intensity association is positive overall and conditional on cultivar class, with attenuation after class adjustment and unresolved equality of class-specific magnitudes.
++The original records lack a documented probability sampling frame, collection dates, batch structure, replication details and measurement units. HC3 addresses heterogeneous error variance under independent errors; it cannot remedy unknown clustering, measurement error or an inappropriate mean model. Accordingly, these coefficients summarize the recorded wines and do not identify a causal mechanism, establish practical wine-quality implications or justify extrapolation to other wines. 
++
++Within this historical dataset, alcohol and color intensity share a positive association overall and conditional on cultivar class. Its smaller magnitude after adjustment is the central distinction between the pooled and class-conditioned descriptions.
+ 
+ ## Reference
+ 

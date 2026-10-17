@@ -1,0 +1,36 @@
+{
+  "step_id": "079e28ecf1294658947047355572946e",
+  "scope": "requested_step",
+  "omitted_required_work": [],
+  "functions_run": false,
+  "actions": [
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "Every experiment must defend a claim.",
+      "applied": "Mapped each fixed question to estimates, contrasts, robustness, figures and decision gates; excluded unnecessary prediction, novelty and frontier blocks; froze versioned plan and tracker before acquisition.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/real-project/research-plan-20261018-v1.md",
+      "output_excerpt": "# Experiment Plan\nDate: 2026-10-18. Problem: Q1 and Q2 in contract-v1. Method thesis: compare pooled and cultivar-conditioned descriptive associations on the same complete official dataset.\n\n## Claim map and compact storyline\nC1/Q1/E1: quantify overa"
+    },
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "Every experiment must defend a claim.",
+      "applied": "Mapped each fixed question to estimates, contrasts, robustness, figures and decision gates; excluded unnecessary prediction, novelty and frontier blocks; froze versioned plan and tracker before acquisition.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/real-project/research-plan-v1.md",
+      "output_excerpt": "# Experiment Plan\nDate: 2026-10-18. Problem: Q1 and Q2 in contract-v1. Method thesis: compare pooled and cultivar-conditioned descriptive associations on the same complete official dataset.\n\n## Claim map and compact storyline\nC1/Q1/E1: quantify overa"
+    },
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "Every experiment must defend a claim.",
+      "applied": "Mapped each fixed question to estimates, contrasts, robustness, figures and decision gates; excluded unnecessary prediction, novelty and frontier blocks; froze versioned plan and tracker before acquisition.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/real-project/EXPERIMENT_TRACKER-v1.md",
+      "output_excerpt": "# Experiment Tracker\n|Run|Question|Purpose|Status|\n|---|---|---|---|\n|P0|Q1,Q2|Parsing/metric pilot|planned diagnostic|\n|E1|Q1|Pooled association|planned formal|\n|E2|Q2|Class/adjusted association|planned formal|\n|S1|Q1,Q2|Robustness and independent r"
+    },
+    {
+      "source_file": "skills/experiment-plan/SKILL.md",
+      "source_excerpt": "Every experiment must defend a claim.",
+      "applied": "Mapped each fixed question to estimates, contrasts, robustness, figures and decision gates; excluded unnecessary prediction, novelty and frontier blocks; froze versioned plan and tracker before acquisition.",
+      "output": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/real-project/MANIFEST.md",
+      "output_excerpt": "# Output manifest\nresearch-plan-20261018-v1.md is the timestamped design source; research-plan-v1.md is its exact fixed copy. EXPERIMENT_TRACKER-v1.md records planned runs. All evidence versions are preserved.\n"
+    }
+  ]
+}

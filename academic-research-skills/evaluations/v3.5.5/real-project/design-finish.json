@@ -1,0 +1,114 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "079e28ecf1294658947047355572946e",
+  "capability": "research-design",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/request.md",
+    "sha256": "986d405f1513083357f48267d6fbafa737c14c0e60d32f4b17f1271f2fa92225"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/research-question-card.md",
+      "sha256": "a5fffb76f0ad9f38f25765cb85022a3e5643b273f9928be43fa595f6cfa60738"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/contract-v1.json",
+      "sha256": "3f4fdecb24c40a989beae55c382219b1e92621bc70f190d53671fb8b8d90b1dc"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/route-board-v1.md",
+      "sha256": "26e3174658271cd22d0e1e0a618744dda58646f62a286ff7559a9897cb36cdb2"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/research-plan-20261018-v1.md",
+      "sha256": "583949035a7b1acbd0ca1083c27841004690256cc49908b1c21136b582fd6d32"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/research-plan-v1.md",
+      "sha256": "583949035a7b1acbd0ca1083c27841004690256cc49908b1c21136b582fd6d32"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/EXPERIMENT_TRACKER-v1.md",
+      "sha256": "d426a93d0187171b3722ee38b210c93df63756b82bb84817f7553cafa2209518"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/MANIFEST.md",
+      "sha256": "5ff00e74598ab1b8d78f32c4a62a2909eb13cda2cd776e28a46f70913e0a61dd"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/design-work.json",
+    "sha256": "aaf2547703b59025e1003d6b5107409dd7c125f65f06306bef106a0e03dfcafd"
+  },
+  "use": {
+    "id": "sleep-experiment-plan",
+    "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+    "entry": "skills/experiment-plan/SKILL.md",
+    "commit": "2132036060e03e8d0df69a4b21e5971819c0c2d6",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "experiment",
+      "methods"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/research-question-card.md",
+        "sha256": "a5fffb76f0ad9f38f25765cb85022a3e5643b273f9928be43fa595f6cfa60738"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/contract-v1.json",
+        "sha256": "3f4fdecb24c40a989beae55c382219b1e92621bc70f190d53671fb8b8d90b1dc"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/route-board-v1.md",
+        "sha256": "26e3174658271cd22d0e1e0a618744dda58646f62a286ff7559a9897cb36cdb2"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/research-plan-20261018-v1.md",
+        "sha256": "583949035a7b1acbd0ca1083c27841004690256cc49908b1c21136b582fd6d32"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/research-plan-v1.md",
+        "sha256": "583949035a7b1acbd0ca1083c27841004690256cc49908b1c21136b582fd6d32"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/EXPERIMENT_TRACKER-v1.md",
+        "sha256": "d426a93d0187171b3722ee38b210c93df63756b82bb84817f7553cafa2209518"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/MANIFEST.md",
+        "sha256": "5ff00e74598ab1b8d78f32c4a62a2909eb13cda2cd776e28a46f70913e0a61dd"
+      }
+    ],
+    "steps": [
+      "Mapped each fixed question to estimates, contrasts, robustness, figures and decision gates; excluded unnecessary prediction, novelty and frontier blocks; froze versioned plan and tracker before acquisition.",
+      "Mapped each fixed question to estimates, contrasts, robustness, figures and decision gates; excluded unnecessary prediction, novelty and frontier blocks; froze versioned plan and tracker before acquisition.",
+      "Mapped each fixed question to estimates, contrasts, robustness, figures and decision gates; excluded unnecessary prediction, novelty and frontier blocks; froze versioned plan and tracker before acquisition.",
+      "Mapped each fixed question to estimates, contrasts, robustness, figures and decision gates; excluded unnecessary prediction, novelty and frontier blocks; froze versioned plan and tracker before acquisition."
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Use bounded experiment-plan, not unattended loops or external reviewer backend. Cross-model experiment-audit remains separately unavailable until real reviewer exists."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "purpose": "formal",
+  "question_ids": [
+    "Q1",
+    "Q2"
+  ],
+  "work_kind": "primary",
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

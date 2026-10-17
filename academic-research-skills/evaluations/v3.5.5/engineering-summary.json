@@ -1,0 +1,18 @@
+{
+  "version": "3.5.5",
+  "python": "3.12.14",
+  "regression": {
+    "tests": 864,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "root_compatibility": {
+    "tests": 30,
+    "passed": true,
+    "files_equal_to_generated_orchestrator": true
+  },
+  "generated_files": 1324,
+  "independent_skills": 19,
+  "portable_smoke_passed": true
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "research-storage-1",
+  "id": "4231a757484144e89140853fccdecd93",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project",
+  "limit_bytes": 200000000000,
+  "reserve_bytes": 10000000000,
+  "downloaded_bytes": 21884,
+  "preplan_download_bytes": null,
+  "operations": [
+    {
+      "kind": "download",
+      "source": "https://archive.ics.uci.edu/static/public/109/wine.zip",
+      "need": 0,
+      "output": "raw/wine.zip",
+      "bytes": 6038,
+      "status": "completed",
+      "sha256": "2bae62c4481220623579d4c4fb36b55652b6b75e06e49fa1981b8198362dfdab"
+    },
+    {
+      "kind": "download",
+      "source": "https://archive.ics.uci.edu/dataset/109/wine",
+      "need": 0,
+      "output": "sources/uci-wine.html",
+      "bytes": 0,
+      "status": "interrupted",
+      "reason": "Login/terms page returned instead of data; resolve access or use an equivalent source",
+      "partial": null
+    },
+    {
+      "kind": "extract",
+      "archive": "raw/wine.zip",
+      "output": "raw/official",
+      "members": [
+        "wine.data",
+        "wine.names"
+      ],
+      "bytes": 13818,
+      "status": "completed"
+    },
+    {
+      "kind": "download",
+      "source": "https://api.datacite.org/dois/10.24432/C5PC7J",
+      "need": 0,
+      "output": "sources/wine-datacite.json",
+      "bytes": 5362,
+      "status": "completed",
+      "sha256": "c5afb9e435f3e4c3033e1b5ff3c91ff940fa6415e3b9cd1260c91c6f1e424fb9"
+    },
+    {
+      "kind": "download",
+      "source": "https://api.datacite.org/dois/10.48550/arXiv.2609.00065",
+      "need": 0,
+      "output": "sources/skills-datacite.json",
+      "bytes": 10484,
+      "status": "completed",
+      "sha256": "9bee5537d9308acf115bf0cd168cd60922c724dfdd36749f94f51d3ec41cf21a"
+    }
+  ],
+  "plan": {
+    "needs": [
+      {
+        "purpose": "Complete official dataset and dictionary/metadata for E1/E2",
+        "subset": "Wine dataset ID109, all 178 records and 13 predictors plus class; original official files",
+        "access": "Public UCI official archive and landing page; no credential"
+      }
+    ],
+    "expected_download_bytes": 5000000,
+    "expected_peak_project_bytes": 100000000
+  },
+  "plan_transfer_baseline": 0,
+  "planned_at": 1792262517.158123
+}

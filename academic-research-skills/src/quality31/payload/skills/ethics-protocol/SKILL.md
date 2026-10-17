@@ -2,7 +2,7 @@
 name: ethics-protocol
 description: "核研究伦理、许可和方案要求，保留实际批准状态。"
 metadata:
-  version: "3.5.4"
+  version: "3.5.5"
 ---
 
 # 研究权限与真实披露

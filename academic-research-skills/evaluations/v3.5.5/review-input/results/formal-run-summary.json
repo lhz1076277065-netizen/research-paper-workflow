@@ -1,0 +1,31 @@
+{
+  "formal_ols_fits": 6,
+  "primary_experiments": 2,
+  "model_matrix_orders": {
+    "pooled": [
+      "intercept",
+      "alcohol"
+    ],
+    "adjusted": [
+      "intercept",
+      "alcohol",
+      "class2",
+      "class3"
+    ],
+    "interaction": [
+      "intercept",
+      "alcohol",
+      "class2",
+      "class3",
+      "alcohol_class2",
+      "alcohol_class3"
+    ]
+  },
+  "software": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "method": "Explicit NumPy lstsq OLS, HC3 sandwich leverage adjustment, normal reference; pandas average-tied ranks; Fisher z correlation intervals; deterministic no random seeds used",
+  "source_helper_functions_run": false,
+  "input_sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+}

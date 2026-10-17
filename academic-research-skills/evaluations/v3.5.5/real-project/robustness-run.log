@@ -1,0 +1,63 @@
+{
+  "purpose": "formal robustness and independent recomputation of E1/E2",
+  "leave_one_out": {
+    "pooled": {
+      "min": 1.491586695926558,
+      "max": 1.6042666155226324,
+      "all_positive": true,
+      "most_changed_row_1based": 159,
+      "fits": 178
+    },
+    "adjusted": {
+      "min": 0.8180905624572249,
+      "max": 0.9982083198154682,
+      "all_positive": true,
+      "most_changed_row_1based": 159,
+      "fits": 178
+    }
+  },
+  "quadratic_within_class_centered": {
+    "coefficient": 0.01393725751489733,
+    "hc3_95": [
+      -0.6517412246914558,
+      0.6796157397212506
+    ],
+    "interpretation": "Sensitivity diagnostic, common curvature added to class-intercept/common-slope model; interval does not prove linearity."
+  },
+  "independent_raw_file_checks": {
+    "pooled_slope": 1.5602204843456788,
+    "adjusted_slope_fwl": 0.9404909498560485,
+    "adjusted_slope_qr": 0.9404909498560454,
+    "adjusted_hc3_se_independent": 0.22908118603638095,
+    "max_slope_abs_difference": 1.3322676295501878e-15,
+    "hc3_se_abs_difference": 3.3584246494910985e-14
+  },
+  "residual_influence": {
+    "pooled": {
+      "max_leverage": 0.03890731306180058,
+      "max_cooks_distance": 0.09893860078401319,
+      "max_abs_residual": 6.070520600888319,
+      "residual_sd": 1.9471833318032647,
+      "corr_abs_residual_fitted": 0.18779406925392886
+    },
+    "adjusted": {
+      "max_leverage": 0.06860809699789211,
+      "max_cooks_distance": 0.13965676671154223,
+      "max_abs_residual": 4.4880926315665945,
+      "residual_sd": 1.4369868449472272,
+      "corr_abs_residual_fitted": 0.48090521088830707
+    }
+  },
+  "fit_counts": {
+    "loo_ols": 356,
+    "quadratic_ols": 1,
+    "independent_qr_ols": 1,
+    "total_new_ols_solutions": 358
+  },
+  "limitations": [
+    "No documented probability sampling frame, collection times, batch or independence structure; no population/causal claims.",
+    "HC3 handles independent-error heteroscedastic variance, not clustering, measurement error or mean-model misspecification.",
+    "Class-specific slopes differ numerically; nonsignificant interaction diagnostic is not an equivalence test.",
+    "Shapiro/Breusch-Pagan source helpers were unavailable; visual/raw/rank/influence/curvature checks and explicit HC3 sensitivity were used; no helper assumption certification."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Alcohol and color intensity in the UCI Wine dataset: overall and cultivar-conditioned associations",
+  "objects": [
+    "178 historical Wine dataset records",
+    "alcohol content",
+    "color intensity",
+    "cultivar class"
+  ],
+  "relationship": "Descriptive association of alcohol content with color intensity overall, within cultivar, and conditional on cultivar.",
+  "scope": "Complete official UCI Wine historical dataset; sample-level descriptive associations only, without causal or population claims.",
+  "completion_criteria": [
+    "Answer Q1 and Q2 with complete official local data and real analyses",
+    "Report primary experiments, robustness, real-result figures and references in a coherent English paper",
+    "Deliver editable Word and actually rendered PDF with scientific review and expression meaning check"
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "What are the direction and magnitude of the overall alcohol\u2013color-intensity association?",
+      "required": true
+    },
+    {
+      "id": "Q2",
+      "text": "Is the association consistent within cultivar classes and after adjusting for class?",
+      "required": true
+    }
+  ],
+  "primary_experiments": [
+    {
+      "id": "E1",
+      "question_ids": [
+        "Q1"
+      ],
+      "purpose": "Estimate overall Pearson r, Spearman rho, and unadjusted OLS slope on all records."
+    },
+    {
+      "id": "E2",
+      "question_ids": [
+        "Q2"
+      ],
+      "purpose": "Estimate class-specific slopes/correlations and the class-adjusted common slope, and examine slope heterogeneity."
+    }
+  ]
+}

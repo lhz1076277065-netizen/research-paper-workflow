@@ -1,0 +1,3 @@
+# Original research request
+
+Study the association between alcohol content and color intensity in the complete original UCI Wine dataset. Estimate its direction and magnitude overall and assess whether the association is consistent within and after adjustment for cultivar class. The target is this historical dataset, with descriptive association rather than causal or population claims. Use the actually executed analyses and present their methods and results in a coherent short English scientific paper for a reader who has not seen the project. Do not replace this question with classification or a different chemical relationship. The attached original source tables, dictionaries, scripts and result files are available as research material.

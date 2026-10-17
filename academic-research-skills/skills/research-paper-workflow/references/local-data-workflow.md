@@ -6,14 +6,14 @@
 
 | 次序 | 实施与产物 | 对应阶段/必调能力 |
 |---|---|---|
-| 1 | 结合材料与近邻确定问题，完成执行版计划：假设、竞争解释、方法、基线、划分、指标、必要实验与成本 | feasibility；design / research-design |
+| 1 | 结合材料与近邻确定并绑定[稳定研究约定](research-alignment.md)，完成执行版计划：假设、竞争解释、方法、基线、划分、指标、必要实验与成本 | feasibility；design / research-design |
 | 2 | 每项实验映射变量、标签、样本、时空/分辨率、独立验证材料；列齐所需数据及文件，估计下载/解压/衍生/临时峰值 | data / data-discovery |
 | 3 | 联网查官方发布、采集方法、版本、覆盖、质量及许可，保存候选比较和选择依据 | data / data-discovery |
 | 4 | 全部所需内容完整落到本机；可用官方子集，整包不可拆时有界下载整包。复用已核验本地文件 | data / data-discovery |
-| 5 | 实际读取所有必要文件，核对完整性、变量/覆盖、缺失、单位、连接与泄漏，准备固定划分；小试跑验证代码/资源成本 | data / data-preparation；试跑在research / analysis-execution |
+| 5 | 实际读取所有必要文件，核对完整性、变量/覆盖、缺失、单位、连接与泄漏，准备固定划分；已核验部分数据可先做显式诊断试跑 | data / data-preparation；诊断 / analysis-execution |
 | 6 | 按执行版计划本机正式模型、基线、对照/必要消融和稳健性；保存代码、参数、真实结果/失败并复算关键结论 | research / analysis-execution、robustness-reproducibility |
 | 7 | 真实结果→科研图、图表数据、绘图代码与可编辑源；核数值、单位、图注、实际渲染 | research / scientific-visualization |
-| 8 | 计划、实际方法、结果与图→完整稿；合并贡献、科学、引用和一致性审查，实质缺口回传相应步骤 | manuscript / manuscript-writing、citation-audit、manuscript-review |
+| 8 | 研究约定、执行版计划、全部主要实验索引、真实结果与图→连贯全文；合并原问题回答、实验覆盖、科学、引用和语义审查，实质缺口回传 | manuscript / manuscript-writing、citation-audit、manuscript-review |
 | 9 | 必调final-expression（现有anti-defensive-writing），另存润色稿，核事实/数值/引用/结论边界差异，再交Word/PDF、图源及数据代码复现包 | manuscript / final-expression；delivery |
 
 专业调用均遵守[begin→读源→实施→finish/check](mandatory-professional-flow.md)，仍从指定14库选择匹配真实入口。各阶段不需要加载整库。方法草稿可早写，正式结果不预写；不规定实验必须胜出。数据不足、失败或复核缺口触发[自主解阻](phase-control.md#自主解阻与继续研究)，先修复或验证适配原问题的替代。自定配额可调整；200 GB累计下载/项目占用、实际用户预算和固定目标不自行变更。
@@ -54,10 +54,10 @@ metadata/selection及spec/plan为project相对路径，started/finished为实际
 
 ## 实验、恢复与变更
 
-begin的实际输入须包含上一步成果：模型接准备输出，复算接实验输出，图接实验/复算结果，写稿接结果和图，审查接稿件，润色接稿件与审查意见。重新实验后旧图/旧评审不能只凭完成状态继续移交；依据变化重做受影响部分。工具核对文件版本衔接，科学含义由专业工作核对。
+begin的实际输入须包含上一步成果：模型接准备输出，复算接实验输出，图接实验/复算结果，写稿接稳定研究约定、执行版计划、全部主要实验结果索引、真实结果和图，审查接稿件及上述科学依据，润色接稿件与已有审查意见。重新实验后旧图/旧评审不能只凭完成状态继续移交；依据变化重做受影响部分。工具核对文件版本衔接，科学含义由专业工作核对。
 
-data→research检查全部数据和准备收据；analysis-execution的run在启动进程前重核。模型小试跑属于research，全部必要数据齐备之前只做获取/解析/环境准备。实验后依次完成robustness、visualization，才能进入manuscript；writing→citation/review→final-expression，完成后才delivery。不能用下载、导出、收据数量代替实际专业工作。
+data→research检查全部数据和准备收据；analysis-execution的run在启动进程前重核。全部必要数据齐备前，允许以purpose=diagnostic对已经核验的部分数据进行解析、假设、代码和成本试跑；同样先读来源并实际实施，结果仅作诊断，不能抵扣正式数据准入、正式实验或论文核心证据。正式purpose=formal仍在research使用全部必要本地数据。实验后依次完成robustness、visualization，才能进入manuscript；writing→citation/review→final-expression，完成后才delivery。不能用下载、导出、收据数量代替实际专业工作。
 
-文件摘要分块计算，CSV/TSV/JSONL逐行核验。普通check可复用未变inode/大小/修改时间对应的已完整摘要与解析，结果明确标注此依据；--refresh重新全读，阶段出口和正式实验run强制使用。缓存统计不是防恶意篡改认证。恢复只看phase resume和当前清单，发现文件变化回到对应步骤，保持预算/容量历史，不重复所有前序研究。
+文件摘要分块计算，CSV/TSV/JSONL逐行核验。普通check可复用未变inode/大小/修改时间对应的已完整摘要与解析，结果明确标注此依据；--refresh重新全读，阶段出口和正式实验run强制使用。缓存统计不是防恶意篡改认证。恢复先看phase resume中的原问题及全部回答状态，再看当前清单，发现文件变化回到对应步骤，保持预算/容量历史，不重复所有前序研究。
 
 专业输入/输出用不可变版本文件。不要把会持续更新的phase.json、.research-data.json或容量收据作为专业成果；需要引用时保存一次只读快照。原始数据变更时另存版本，保存原因，必要时reassess回design并重做受影响的计划，回data后local_data plan --revision-reason；保留原始证据与容量累计。未变材料的专业复核可复用，变化只重做受影响步骤；润色后做差异事实核对，不无限全稿复核。

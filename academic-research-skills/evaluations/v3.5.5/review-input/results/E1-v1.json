@@ -1,0 +1,25 @@
+{
+  "experiment_id": "E1",
+  "question_ids": [
+    "Q1"
+  ],
+  "execution": "completed",
+  "n": 178,
+  "pearson_r": 0.5463641950837037,
+  "pearson_fisher95": [
+    0.4341702044473286,
+    0.6418672732045578
+  ],
+  "spearman_rho": 0.6354245253017291,
+  "slope": 1.5602204843456775,
+  "slope_hc3_95": [
+    1.2458518945500285,
+    1.8745890741413265
+  ],
+  "slope_classical_normal95": [
+    1.2068705156829695,
+    1.9135704530083855
+  ],
+  "r_squared": 0.29851383366946327,
+  "definition": "Color-intensity units per one recorded alcohol unit; HC3 normal-approximation intervals are descriptive model sensitivity, not population inference."
+}

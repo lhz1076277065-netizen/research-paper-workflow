@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "evidence_id": "E001",
+      "title": "Wine",
+      "authors": [
+        "S. Aeberhard",
+        "M. Forina"
+      ],
+      "year": 1992,
+      "source_type": "dataset",
+      "confidentiality": "public",
+      "identifiers": {
+        "doi": "10.24432/C5PC7J",
+        "url": "https://archive.ics.uci.edu/dataset/109/wine",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "locator": "Official landing metadata and original wine.names sections4\u20139; raw wine.data",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E002",
+      "title": "OLSResults.HC3_se",
+      "authors": [
+        "statsmodels developers"
+      ],
+      "year": null,
+      "source_type": "webpage",
+      "confidentiality": "public",
+      "identifiers": {
+        "doi": "",
+        "url": "https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.HC3_se.html",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "locator": "Notes formula",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E003",
+      "title": "Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents",
+      "authors": [
+        "Timothy Kassis",
+        "Vinayak Agarwal",
+        "Yuhuan He",
+        "Darshil Patel",
+        "Aubrey M. Brueckner"
+      ],
+      "year": 2026,
+      "source_type": "preprint",
+      "confidentiality": "public",
+      "identifiers": {
+        "doi": "10.48550/arXiv.2609.00065",
+        "url": "https://arxiv.org/abs/2609.00065",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": ""
+      },
+      "locator": "arXiv title/authors/date/DOI and version record",
+      "verification": {
+        "source_opened": true,
+        "status": "unverified",
+        "verified_by": "",
+        "verified_on": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/Users/luca/.codex/academic-research-source-cache/scipilot-figure/43098ddb9e6a6d142218540c114f9ed38922fc42/scripts/check_figure.py",
+    "figures/figure1-associations.pdf",
+    "figures/figure2-slopes.pdf",
+    "figures/figureS1-residuals.pdf",
+    "figures/figure1-preview.png",
+    "figures/figure2-preview.png",
+    "figures/figureS1-preview.png",
+    "--min-dpi",
+    "300",
+    "--width-in",
+    "6.5",
+    "--strict"
+  ],
+  "returncode": 0,
+  "stdout": "\n--- figures/figure1-associations.pdf ---\n  category: vector  ext: pdf  size: 49461 B\n  [PASS] \u65e0\u95ee\u9898\u3002\n\n--- figures/figure2-slopes.pdf ---\n  category: vector  ext: pdf  size: 34993 B\n  [PASS] \u65e0\u95ee\u9898\u3002\n\n--- figures/figureS1-residuals.pdf ---\n  category: vector  ext: pdf  size: 49969 B\n  [PASS] \u65e0\u95ee\u9898\u3002\n\n--- figures/figure1-preview.png ---\n  category: raster  ext: png  size: 144064 B\n  pixels: 1950x1050  dpi: (299.9994, 299.9994)\n  [PASS] \u65e0\u95ee\u9898\u3002\n\n--- figures/figure2-preview.png ---\n  category: raster  ext: png  size: 60266 B\n  pixels: 1950x750  dpi: (299.9994, 299.9994)\n  [PASS] \u65e0\u95ee\u9898\u3002\n\n--- figures/figureS1-preview.png ---\n  category: raster  ext: png  size: 104457 B\n  pixels: 1950x1050  dpi: (299.9994, 299.9994)\n  [PASS] \u65e0\u95ee\u9898\u3002\n\n",
+  "stderr": ""
+}

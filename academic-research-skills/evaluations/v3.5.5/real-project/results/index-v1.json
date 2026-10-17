@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "answer": "Overall positive Pearson r=0.546 and slope=1.560 color units per recorded alcohol unit in all 178 records.",
+      "work_units": [
+        "E1"
+      ]
+    },
+    {
+      "id": "Q2",
+      "answer": "All three class slopes positive (1.094,0.464,1.527); adjusted common slope0.940, partial r0.319. Direction agrees but magnitudes differ and equality is not established.",
+      "work_units": [
+        "E2"
+      ]
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E1",
+      "work_unit": "E1",
+      "results": [
+        "results/E1-v1.json"
+      ]
+    },
+    {
+      "id": "E2",
+      "work_unit": "E2",
+      "results": [
+        "results/E2-v1.json"
+      ]
+    }
+  ]
+}

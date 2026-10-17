@@ -1,0 +1,28 @@
+{
+  "version": "3.5.5",
+  "max_entry_characters": 799,
+  "entry_characters": {
+    "analysis-execution": 789,
+    "citation-audit": 740,
+    "data-discovery": 749,
+    "data-preparation": 737,
+    "ethics-protocol": 743,
+    "journal-intelligence": 748,
+    "literature-discovery": 742,
+    "manuscript-review": 791,
+    "manuscript-writing": 798,
+    "paper-deep-reading": 751,
+    "peer-review-response": 746,
+    "publication-stewardship": 740,
+    "research-design": 791,
+    "research-intake": 799,
+    "research-paper-workflow": 797,
+    "robustness-reproducibility": 751,
+    "scientific-visualization": 754,
+    "submission-packaging": 755,
+    "topic-novelty": 793
+  },
+  "entire_pool_preloading_required": false,
+  "recovery": "All original required questions, current answer states and key result locations; stat-based observations avoid rehashing full research inputs on resume. Exact hashes/source receipt checks remain at readiness/closure.",
+  "scope": "Progressive loading and file-size structure, not a model-intelligence measurement; exact host tokens unavailable."
+}

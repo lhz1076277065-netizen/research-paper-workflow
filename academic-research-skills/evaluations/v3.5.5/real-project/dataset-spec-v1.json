@@ -1,0 +1,64 @@
+{
+  "datasets": [
+    {
+      "id": "wine",
+      "purpose": "E1 overall and E2 class-conditioned association, plus robustness on complete UCI records",
+      "files": [
+        {
+          "path": "raw/wine.data",
+          "format": "csv",
+          "header": false,
+          "columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_of_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "required_columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_of_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "numeric_columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_of_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "expected_rows": 178
+        }
+      ]
+    }
+  ]
+}

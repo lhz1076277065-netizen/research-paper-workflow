@@ -1,0 +1,12 @@
+{
+  "docx": "wine-association-paper.docx",
+  "editable_text": true,
+  "editable_table": true,
+  "figure_count": 3,
+  "image_width_inches": 6.5,
+  "figure_raster_dpi": 300,
+  "vector_sources": "figures/*.svg and *.pdf",
+  "source": "manuscript-final.md",
+  "python_docx": "1.2.0",
+  "no_invented_author": true
+}

@@ -1,0 +1,182 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "63670ec0920d4149bc5834ef11630366",
+  "capability": "citation-audit",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/request.md",
+    "sha256": "986d405f1513083357f48267d6fbafa737c14c0e60d32f4b17f1271f2fa92225"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/manuscript-v1.md",
+      "sha256": "9531eb8f3ec2d85d58de46e543a7003d3df09f92e5db07d1cb730a3bf74af502"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/source_manifest.json",
+      "sha256": "0675ddf9173d6e5c0ac72a6c0f1fd8c4f94c5c32b92500234cb8027b12220965"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/official-metadata.md",
+      "sha256": "a941d20db3d869d8520351efeb11aa3844e631609f8b51d813558a3c0d458b65"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/results/E1-v1.json",
+      "sha256": "db09165d8e37f0e606e493977d33e04d538365a6fd9ed277effa01e8f4f2fb97"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/results/E2-v1.json",
+      "sha256": "881a7539e96cabfa66201d5e6da9885d1723baa1ad35825eda6255e5611d79c3"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/results/robustness-v1.json",
+      "sha256": "48b23471c10fb2c77d47b8b05d0b66aa095b68f9730dec24c30537929331a90d"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/manuscript-v2.md",
+      "sha256": "3d60b4c5fda384381343f60e1aa47a8145c2d4ac848712734861f1853f72bed0"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/references.bib",
+      "sha256": "7e7e856cdd7c860773c5eb079bf6accaa0900f1b259020a5f9d473ff97676641"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/references-raw.bib",
+      "sha256": "7e7e856cdd7c860773c5eb079bf6accaa0900f1b259020a5f9d473ff97676641"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/citation-metadata-v1.json",
+      "sha256": "ed51df01972dd1dea736241e0e21377ae48b28bd492aa9596f8b594082efe192"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/citation-format-execution.json",
+      "sha256": "dd7c5de37611967a3b1a093b50f1a9130560de0f51d5598a5e2054be23d66baa"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/citation-audit-v1.md",
+      "sha256": "8d5ee86f92e4457229bcdda9fa9e2ba0a9cc6520b7b80ab1c9f579b592a5bb39"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/audit_citations.py",
+      "sha256": "00642bfd651e00239607ebea3cace6692780d50ec8a7a4da0e90ad47291d1cb4"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/wine-datacite.json",
+      "sha256": "c5afb9e435f3e4c3033e1b5ff3c91ff940fa6415e3b9cd1260c91c6f1e424fb9"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/skills-datacite.json",
+      "sha256": "9bee5537d9308acf115bf0cd168cd60922c724dfdd36749f94f51d3ec41cf21a"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/citations-work.json",
+    "sha256": "009e13fc94ef880ea8f615f0767014e482b1bc8e7c6e0734f3e96153df38afb1"
+  },
+  "use": {
+    "id": "kdense-citation",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/citation-management/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "citation"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/manuscript-v1.md",
+        "sha256": "9531eb8f3ec2d85d58de46e543a7003d3df09f92e5db07d1cb730a3bf74af502"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/source_manifest.json",
+        "sha256": "0675ddf9173d6e5c0ac72a6c0f1fd8c4f94c5c32b92500234cb8027b12220965"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/official-metadata.md",
+        "sha256": "a941d20db3d869d8520351efeb11aa3844e631609f8b51d813558a3c0d458b65"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/results/E1-v1.json",
+        "sha256": "db09165d8e37f0e606e493977d33e04d538365a6fd9ed277effa01e8f4f2fb97"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/results/E2-v1.json",
+        "sha256": "881a7539e96cabfa66201d5e6da9885d1723baa1ad35825eda6255e5611d79c3"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/results/robustness-v1.json",
+        "sha256": "48b23471c10fb2c77d47b8b05d0b66aa095b68f9730dec24c30537929331a90d"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/manuscript-v2.md",
+        "sha256": "3d60b4c5fda384381343f60e1aa47a8145c2d4ac848712734861f1853f72bed0"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/references.bib",
+        "sha256": "7e7e856cdd7c860773c5eb079bf6accaa0900f1b259020a5f9d473ff97676641"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/references-raw.bib",
+        "sha256": "7e7e856cdd7c860773c5eb079bf6accaa0900f1b259020a5f9d473ff97676641"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/citation-metadata-v1.json",
+        "sha256": "ed51df01972dd1dea736241e0e21377ae48b28bd492aa9596f8b594082efe192"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/citation-format-execution.json",
+        "sha256": "dd7c5de37611967a3b1a093b50f1a9130560de0f51d5598a5e2054be23d66baa"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/citation-audit-v1.md",
+        "sha256": "8d5ee86f92e4457229bcdda9fa9e2ba0a9cc6520b7b80ab1c9f579b592a5bb39"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/audit_citations.py",
+        "sha256": "00642bfd651e00239607ebea3cace6692780d50ec8a7a4da0e90ad47291d1cb4"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/wine-datacite.json",
+        "sha256": "c5afb9e435f3e4c3033e1b5ff3c91ff940fa6415e3b9cd1260c91c6f1e424fb9"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/skills-datacite.json",
+        "sha256": "9bee5537d9308acf115bf0cd168cd60922c724dfdd36749f94f51d3ec41cf21a"
+      }
+    ],
+    "steps": [
+      "Used bounded DataCite primary metadata, verified UCI/arXiv/HC3 records and actual result-to-claim mapping, resolved malformed UCI combined creator against official citation, corrected exact title punctuation. Executed source BibTeX key/render/parse and formatter functions; requests-dependent validator unavailable and no pass claimed.",
+      "Used bounded DataCite primary metadata, verified UCI/arXiv/HC3 records and actual result-to-claim mapping, resolved malformed UCI combined creator against official citation, corrected exact title punctuation. Executed source BibTeX key/render/parse and formatter functions; requests-dependent validator unavailable and no pass claimed.",
+      "Used bounded DataCite primary metadata, verified UCI/arXiv/HC3 records and actual result-to-claim mapping, resolved malformed UCI combined creator against official citation, corrected exact title punctuation. Executed source BibTeX key/render/parse and formatter functions; requests-dependent validator unavailable and no pass claimed.",
+      "Used bounded DataCite primary metadata, verified UCI/arXiv/HC3 records and actual result-to-claim mapping, resolved malformed UCI combined creator against official citation, corrected exact title punctuation. Executed source BibTeX key/render/parse and formatter functions; requests-dependent validator unavailable and no pass claimed.",
+      "Used bounded DataCite primary metadata, verified UCI/arXiv/HC3 records and actual result-to-claim mapping, resolved malformed UCI combined creator against official citation, corrected exact title punctuation. Executed source BibTeX key/render/parse and formatter functions; requests-dependent validator unavailable and no pass claimed.",
+      "Used bounded DataCite primary metadata, verified UCI/arXiv/HC3 records and actual result-to-claim mapping, resolved malformed UCI combined creator against official citation, corrected exact title punctuation. Executed source BibTeX key/render/parse and formatter functions; requests-dependent validator unavailable and no pass claimed.",
+      "Used bounded DataCite primary metadata, verified UCI/arXiv/HC3 records and actual result-to-claim mapping, resolved malformed UCI combined creator against official citation, corrected exact title punctuation. Executed source BibTeX key/render/parse and formatter functions; requests-dependent validator unavailable and no pass claimed.",
+      "Used bounded DataCite primary metadata, verified UCI/arXiv/HC3 records and actual result-to-claim mapping, resolved malformed UCI combined creator against official citation, corrected exact title punctuation. Executed source BibTeX key/render/parse and formatter functions; requests-dependent validator unavailable and no pass claimed.",
+      "Used bounded DataCite primary metadata, verified UCI/arXiv/HC3 records and actual result-to-claim mapping, resolved malformed UCI combined creator against official citation, corrected exact title punctuation. Executed source BibTeX key/render/parse and formatter functions; requests-dependent validator unavailable and no pass claimed."
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": true
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Verify actual bibliographic records and proposition locators. Network queries bounded; optional Scholar library not required if authoritative API suffices."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "purpose": "formal",
+  "question_ids": [
+    "Q1",
+    "Q2"
+  ],
+  "work_kind": "primary",
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

@@ -2,7 +2,7 @@
 name: publication-stewardship
 description: "处理真实校样、发表版本、更正和归档。"
 metadata:
-  version: "3.5.4"
+  version: "3.5.5"
 ---
 
 # 校样、版本与发表后维护

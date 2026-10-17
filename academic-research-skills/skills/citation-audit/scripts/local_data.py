@@ -17,11 +17,14 @@ INPUT_GROUPS={
     'robustness-reproducibility':[['analysis-execution']],
     'scientific-visualization':[['analysis-execution','robustness-reproducibility']],
     'manuscript-writing':[['analysis-execution','robustness-reproducibility'],['scientific-visualization']],
-    'manuscript-review':[['manuscript-writing']],
-    'final-expression':[['manuscript-writing'],['manuscript-review']]}
+    'citation-audit':[['manuscript-writing']],
+    'manuscript-review':[['manuscript-writing','citation-audit']],
+    # A real review can revise the manuscript; its current output is the
+    # immediate predecessor, without decorative original-draft inputs.
+    'final-expression':[['manuscript-review']]}
 
-def input_lineage(state,capability,inputs):
-    if state.get('workflow')!='local-data':return
+def input_lineage(state,capability,inputs,purpose='formal'):
+    if state.get('workflow')!='local-data' or purpose=='diagnostic':return
     actual={(x['path'],x['sha256']) for x in inputs}
     rows=state.get('professional_steps',[])+state.get('professional_pending',[])
     for group in INPUT_GROUPS.get(capability,[]):
@@ -30,7 +33,14 @@ def input_lineage(state,capability,inputs):
             for row in reversed(rows):
                 if row.get('capability')!=cap or row.get('status') not in {'completed','eligible_for_handoff'} or not row.get('finished'):continue
                 begun=P.load(row['started']);ctx=begun.get('phase',{})
-                if ctx.get('id')!=state['id'] or ctx.get('latest_instruction')!=state['latest_instruction'] or ctx.get('local_data_id')!=state.get('local_data',{}).get('id'):continue
+                import professional_flow as F
+                if not F.presentation_current(state,begun):continue
+                if begun.get('purpose','formal')!='formal' or not P.context_matches(state,ctx,False) or ctx.get('local_data_id')!=state.get('local_data',{}).get('id'):continue
+                # Citation correction is a legitimate intermediate manuscript
+                # revision only while it still descends from current writing.
+                if cap=='citation-audit':
+                    try:input_lineage(state,cap,begun['inputs'])
+                    except DataError:continue
                 candidates.update((x['path'],x['sha256']) for x in P.load(row['finished'])['outputs']);break
         if not actual.intersection(candidates):raise DataError('Consume a current actual output from '+ '/'.join(group)+'; unrelated inputs or an earlier result version cannot complete this step')
 
@@ -53,9 +63,11 @@ def completed(state,capability,stage=None):
         x.get('status') in {'completed','eligible_for_handoff'} and (stage is None or x.get('stage')==stage)]
     for row in reversed(eligible):
         begun=P.load(row['started']);context=begun.get('phase',{})
+        if begun.get('purpose','formal')!='formal':continue
+        if not F.presentation_current(state,begun):continue
         if capability!='research-design' and state.get('local_data') and context.get('local_data_id')!=state['local_data']['id']:
             if capability!='data-discovery' or not planned_by(state,begun):continue
-        if context.get('id')==state['id'] and context.get('latest_instruction')==state['latest_instruction']:
+        if P.context_matches(state,context,False):
             F.check(P.load(C.index_path()),begun,P.load(row['finished']))
             input_lineage(state,capability,begun['inputs'])
             return row
@@ -66,7 +78,7 @@ def load(state):
     if not binding:raise DataError('Plan the complete necessary dataset list; local data is not yet ready')
     root=Path(binding['root']);d=P.load(root/NAME)
     if d['id']!=binding['id'] or d['phase_id']!=state['id']:raise DataError('Local dataset manifest belongs to another project')
-    if d['instruction']!=state['latest_instruction']:raise DataError('Instruction changed; reassess the required datasets without resetting capacity')
+    if d['instruction']!=P.instruction_key(state):raise DataError('Scientific commitment changed; reassess the required datasets without resetting capacity')
     for k in ('research_plan','specification'):
         if ref(root,d[k]['path'])!=d[k]:raise DataError(k+' changed; version the plan and revise the dataset requirements')
     return root,d
@@ -106,7 +118,7 @@ def plan(state,root,specification,research_plan,revision_reason=None):
     previous=None
     if (root/NAME).exists():
         previous=P.load(root/NAME)
-        if previous['research_plan']==rp and previous['specification']==spec and previous['phase_id']==state['id'] and previous['instruction']==state['latest_instruction']:
+        if previous['research_plan']==rp and previous['specification']==spec and previous['phase_id']==state['id'] and previous['instruction']==P.instruction_key(state):
             state['local_data']={'root':str(root),'id':previous['id'],'required_count':len(items)}
             return {'status':'unchanged','datasets':len(items)}
         if not revision_reason or not revision_reason.strip():raise DataError('Keep the original requirements; revisions need a reason and versioned plan/specification')
@@ -119,7 +131,7 @@ def plan(state,root,specification,research_plan,revision_reason=None):
         for row in reversed(state.get('professional_pending',[])):
             if row.get('capability')!='data-discovery' or row.get('status')!='started':continue
             begun=P.load(row['started']);context=begun.get('phase',{})
-            if any(context.get(k)!=state.get(k) for k in ('id','stage','latest_instruction')):continue
+            if not P.context_matches(state,context):continue
             if (str(root/rp['path']),rp['sha256']) not in {(x['path'],x['sha256']) for x in begun['inputs']}:continue
             if (root/spec['path']).stat().st_mtime_ns<begun['started_ns']:continue
             F.validate_start(P.load(C.index_path()),begun)
@@ -133,7 +145,7 @@ def plan(state,root,specification,research_plan,revision_reason=None):
         if not old.exists():P.save(old,previous)
         history=previous.get('history',[])+[{'event':'requirements_revised','reason':revision_reason,'previous_manifest':ref(root,str(old.relative_to(root)))}]
     d={'schema':'local-research-data-1','id':uuid.uuid4().hex,'phase_id':state['id'],
-        'instruction':state['latest_instruction'],'research_plan':rp,'specification':spec,'datasets':items,
+        'instruction':P.instruction_key(state),'latest_instruction_at_planning':state['latest_instruction'],'research_plan':rp,'specification':spec,'datasets':items,
         'sources':{},'inspections':{},'history':history,'planning_step_id':planning_step}
     P.save(root/NAME,d);state['local_data']={'root':str(root),'id':d['id'],'required_count':len(items)}
     state['history'].append({'event':'local_dataset_requirements','id':d['id'],'required_count':len(items),'revision_reason':revision_reason})
@@ -149,7 +161,7 @@ def source(state,dataset,metadata,selection,started,finished,publisher,version,u
     if not publisher.strip() or not version.strip() or urlsplit(url).scheme!='https' or not urlsplit(url).hostname or urlsplit(url).query or urlsplit(url).fragment or urlsplit(url).username:
         raise DataError('Record the actual publisher/version and a public HTTPS landing URL without credentials')
     begun=P.load(started);done=P.load(finished);context=begun.get('phase',{})
-    if begun.get('capability')!='data-discovery' or context.get('id')!=state['id'] or context.get('latest_instruction')!=state['latest_instruction'] or (context.get('local_data_id')!=d['id'] and not planned_by(state,begun)):
+    if begun.get('capability')!='data-discovery' or not P.context_matches(state,context,False) or (context.get('local_data_id')!=d['id'] and not planned_by(state,begun)):
         raise DataError('Use this study’s actual data-discovery professional receipt')
     F.check(P.load(C.index_path()),begun,done)
     rows=[ref(root,metadata),ref(root,selection)]
@@ -202,7 +214,7 @@ def external_inspection(state,started,finished):
     import professional_flow as F
     root,d=load(state);begun=P.load(started);done=P.load(finished)
     context=begun.get('phase',{})
-    if begun.get('capability')!='data-preparation' or context.get('id')!=state['id'] or context.get('latest_instruction')!=state['latest_instruction'] or context.get('local_data_id')!=d['id']:
+    if begun.get('capability')!='data-preparation' or not P.context_matches(state,context,False) or context.get('local_data_id')!=d['id']:
         raise DataError('Use the actual format reader’s data-preparation receipt')
     F.check(P.load(C.index_path()),begun,done)
     inputs={(x['path'],x['sha256']) for x in begun['inputs']}
@@ -226,7 +238,7 @@ def receipt_valid(row):
         raise DataError('Dataset professional receipt changed')
     F.check(P.load(C.index_path()),P.load(row['started']),P.load(row['finished']))
 
-def check(state,validated=True,refresh=False):
+def check(state,validated=True,refresh=False,only=None):
     root,d=load(state);issues=[];rows=[]
     import research_storage as S
     try:
@@ -238,13 +250,15 @@ def check(state,validated=True,refresh=False):
     if issues:return {'ready':False,'required_datasets':len(d['datasets']),'local_files_checked':[],'issues':issues,
         'next_action':'Repair the acquisition/capacity plan within the original quota before inspecting or experimenting'}
     for item in d['datasets']:
+        selected=[f for f in item['files'] if only is None or f['path'] in only]
+        if not selected:continue
         try:
             src=d['sources'].get(item['id'])
             if not src:raise DataError('Authoritative source selection not completed')
             receipt_valid(src)
             for e in src['evidence']:
                 if ref(root,e['path'])!=e:raise DataError('Source evidence changed')
-            for f in item['files']:
+            for f in selected:
                 p=path(root,f['path']);stat=p.stat();fingerprint=[stat.st_ino,stat.st_size,stat.st_mtime_ns]
                 old=d.setdefault('checks',{}).get(f['path'])
                 reused=bool(old and old['stat']==fingerprint and not refresh)
@@ -265,6 +279,7 @@ def check(state,validated=True,refresh=False):
         except (ValueError,OSError,KeyError,UnicodeError,csv.Error) as e:issues.append({'dataset':item['id'],'error':str(e)})
     P.save(root/NAME,d)
     return {'ready':not issues,'required_datasets':len(d['datasets']),'local_files_checked':rows,'issues':issues,
+        'purpose':'formal' if only is None else 'diagnostic','all_required_data_checked':only is None,
         'level':'validated' if validated else 'local','next_action':'continue' if not issues else 'Autonomously repair acquisition, coverage or decoding within the unchanged goal and quota; do not start formal experiments',
         'scientific_authority_or_completeness_certified_by_tool':False}
 
@@ -273,8 +288,36 @@ def require_ready(state,validated=True,refresh=False):
     if not result['ready']:raise DataError(json.dumps(result,ensure_ascii=False))
     return result
 
-def gate(state,capability,refresh=False):
+def diagnostic_ready(state,capability,inputs,refresh=False):
+    if capability not in {'data-preparation','analysis-execution','scientific-visualization'} or state['stage'] not in {'data','research'}:
+        raise DataError('Diagnostic work is limited to data/model/figure diagnosis in the data or research stage; it cannot replace a formal paper')
+    root,d=load(state)
+    actual={x['path'] for x in inputs or []}
+    selected={f['path'] for item in d['datasets'] for f in item['files'] if str(root/f['path']) in actual}
+    # A validated preparation output is a legitimate diagnostic input. Follow
+    # its actual source receipt instead of requiring decorative raw-file inputs.
+    if not selected:
+        import capabilities as C
+        import professional_flow as F
+        actual_refs={(x['path'],x['sha256']) for x in inputs or []}
+        for row in reversed(state.get('professional_steps',[])+state.get('professional_pending',[])):
+            if row.get('capability')!='data-preparation' or not row.get('finished') or row.get('status') not in {'completed','eligible_for_handoff'}:continue
+            begun=P.load(row['started']);done=P.load(row['finished']);context=begun.get('phase',{})
+            if not P.context_matches(state,context,False) or context.get('local_data_id')!=d['id']:continue
+            if not actual_refs.intersection((x['path'],x['sha256']) for x in done['outputs']):continue
+            F.check(P.load(C.index_path()),begun,done)
+            prepared_inputs={x['path'] for x in begun['inputs']}
+            selected.update(f['path'] for item in d['datasets'] for f in item['files'] if str(root/f['path']) in prepared_inputs)
+    if not selected:raise DataError('Include the actual ready planned local data files in diagnostic inputs; a URL or method note is not diagnostic data')
+    # Readers must be allowed to establish external-format readability rather
+    # than require their own yet-to-be-created inspection receipt before begin.
+    result=check(state,capability!='data-preparation',refresh,selected)
+    if not result['ready']:raise DataError(json.dumps(result,ensure_ascii=False))
+    return result
+
+def gate(state,capability,refresh=False,purpose='formal',inputs=None):
     if state.get('workflow')!='local-data':return
+    if purpose=='diagnostic':return diagnostic_ready(state,capability,inputs,refresh)
     stage=state['stage']
     stages={'research-design':{'design'},'data-discovery':{'data'},'data-preparation':{'data'},
         'analysis-execution':{'research'},'robustness-reproducibility':{'research'},'scientific-visualization':{'research'},

@@ -1,0 +1,49 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "conclusion": {
+        "path": "manuscript-delivery.md",
+        "section": "Discussion",
+        "quote": "For these 178 records, the overall association is positive: Pearson r was 0.546 and the slope was 1.560. The positive direction also held within every class and after class adjustment. Directional consistency therefore survives the class comparison, while the smaller adjusted slope and partial correlation show that the pooled magnitude is not an adequate description of the within-class relationship."
+      }
+    },
+    {
+      "id": "Q2",
+      "conclusion": {
+        "path": "manuscript-delivery.md",
+        "section": "Discussion",
+        "quote": "For these 178 records, the overall association is positive: Pearson r was 0.546 and the slope was 1.560. The positive direction also held within every class and after class adjustment. Directional consistency therefore survives the class comparison, while the smaller adjusted slope and partial correlation show that the pooled magnitude is not an adequate description of the within-class relationship."
+      }
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E1",
+      "methods": {
+        "path": "manuscript-delivery.md",
+        "section": "Methods",
+        "quote": "The first primary analysis estimated the overall Pearson correlation, Spearman correlation using average ranks for ties, and the ordinary least-squares slope from color intensity on alcohol with an intercept. We used every record and no training or testing split, because the target was a fixed-dataset descriptive relationship rather than predictive performance. Pearson intervals used the Fisher transformation and its normal approximation."
+      },
+      "results": {
+        "path": "manuscript-delivery.md",
+        "section": "Results",
+        "quote": "The first primary analysis found an overall Pearson r of 0.546 (Fisher 95% interval 0.434 to 0.642) and Spearman rho of 0.635. The pooled slope was 1.560 (HC3 95% interval 1.246 to 1.875); the linear model accounted for 0.299 of the observed color-intensity variance. Thus, larger recorded alcohol values accompanied larger recorded color values overall, with considerable residual variation."
+      }
+    },
+    {
+      "id": "E2",
+      "methods": {
+        "path": "manuscript-delivery.md",
+        "section": "Methods",
+        "quote": "The second primary analysis estimated Pearson and Spearman correlations and separate slopes within each class. We then fit a model with alcohol and categorical class indicators, allowing different intercepts and a common slope. Correlating class-demeaned alcohol and color gave the partial correlation. An alcohol-by-class interaction model supplied separate slopes; a two-degree-of-freedom HC3 Wald diagnostic summarized slope heterogeneity. The common slope is a weighted average of the class slopes using within-class alcohol variation, rather than an assertion that slopes are identical."
+      },
+      "results": {
+        "path": "manuscript-delivery.md",
+        "section": "Results",
+        "quote": "The second primary analysis found positive slopes and correlations in every class (Table 1). Class-specific slopes were 1.094, 0.464, and 1.527, whereas Pearson r values were 0.408, 0.270, and 0.350. The class-adjusted common slope was 0.940 (HC3 95% interval 0.492 to 1.389), about 40% smaller than the pooled slope, and the partial correlation was 0.319 (Figure 1b). The interaction diagnostic was chi-square 4.483 with 2 degrees of freedom (reference p = 0.106). The observed slope sizes differ; this diagnostic does not establish equal slopes (Figure 2)."
+      }
+    }
+  ],
+  "reviewed_coverage": "manuscript-coverage-v2.json"
+}

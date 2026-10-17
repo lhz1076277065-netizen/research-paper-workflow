@@ -1,0 +1,41 @@
+[
+  {
+    "capability": "manuscript-review",
+    "source_id": "kdense-critical",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "finish_status": "completed_for_handoff",
+    "check_status": "eligible_for_handoff",
+    "mode": "adapted_in_host",
+    "source_functions_run": false,
+    "semantic_certification": false,
+    "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/independent-review/review-start.json",
+    "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/independent-review/review-finish.json",
+    "check": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/independent-review/review-check.json"
+  },
+  {
+    "capability": "manuscript-writing",
+    "source_id": "kdense-writing",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "finish_status": "completed_for_handoff",
+    "check_status": "eligible_for_handoff",
+    "mode": "adapted_in_host",
+    "source_functions_run": true,
+    "semantic_certification": false,
+    "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/independent-review/writing-start.json",
+    "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/independent-review/writing-finish.json",
+    "check": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/independent-review/writing-check.json"
+  },
+  {
+    "capability": "final-expression",
+    "source_id": "anti-defensive",
+    "commit": "102c8b21acf5eda3a0aef3d9779a65db646c8980",
+    "finish_status": "completed_for_handoff",
+    "check_status": "eligible_for_handoff",
+    "mode": "adapted_in_host",
+    "source_functions_run": false,
+    "semantic_certification": false,
+    "started": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/independent-review/expression-start.json",
+    "finished": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/independent-review/expression-finish.json",
+    "check": "/Users/luca/Documents/ChatGPT/\u5b66\u672fskill/validation-v3.5.5-20261018/independent-review/expression-check.json"
+  }
+]

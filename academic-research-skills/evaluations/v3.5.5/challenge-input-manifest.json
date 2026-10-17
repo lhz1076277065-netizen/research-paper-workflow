@@ -1,0 +1,75 @@
+{
+  "kind": "Intentionally defective review fixture; not a research result or publication",
+  "source": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project",
+  "copied_scientific_files": [
+    "raw/wine.data",
+    "raw/wine.names",
+    "results/E1-v1.json",
+    "results/E2-v1.json",
+    "results/models-v1.json",
+    "results/robustness-v1.json",
+    "results/formal-run-summary.json",
+    "prepare_data.py",
+    "analysis_core.py",
+    "robustness_analysis.py",
+    "formal_analysis.py"
+  ],
+  "files": {
+    "prepare_data.py": {
+      "bytes": 2543,
+      "sha256": "47e8cc4f171ee313d71b9cdba3ae7f2542940f99ab26da33a840ae13b8c282b5"
+    },
+    "analysis_core.py": {
+      "bytes": 1549,
+      "sha256": "3606110df7df82ee50bed47cbee1ad3a47f4172ddc36273270f05c01c3aa2037"
+    },
+    "robustness_analysis.py": {
+      "bytes": 4944,
+      "sha256": "b99647917c70bf45ab13e1b6ac66095cdc174c87fb519cc8f54dcae444dead9e"
+    },
+    "formal_analysis.py": {
+      "bytes": 3208,
+      "sha256": "7cc1a124b98acb2edb8ee5f55f1763ad0dbd27e7f73fc9d353505ff628658a5c"
+    },
+    "manuscript.md": {
+      "bytes": 2463,
+      "sha256": "aeb385b14234ac445dd23c9441fe34eb3c28805e48feb6ecb8083f9380a52ecc"
+    },
+    "request.md": {
+      "bytes": 749,
+      "sha256": "12d663e29b109339716725ef889c4a32aec3f505dc6ab3087d7f97d17f176fa0"
+    },
+    "source-notes.md": {
+      "bytes": 678,
+      "sha256": "489f62964317b935b46427aa1d0f3d83f5b9f8633d62458d34ddab3cc43810d3"
+    },
+    "results/E1-v1.json": {
+      "bytes": 641,
+      "sha256": "db09165d8e37f0e606e493977d33e04d538365a6fd9ed277effa01e8f4f2fb97"
+    },
+    "results/models-v1.json": {
+      "bytes": 64648,
+      "sha256": "bc57385a1ad91d3464a6a364e58cf9f8dd2713c8ff6a0699e47973a5a6754ad8"
+    },
+    "results/E2-v1.json": {
+      "bytes": 2623,
+      "sha256": "881a7539e96cabfa66201d5e6da9885d1723baa1ad35825eda6255e5611d79c3"
+    },
+    "results/robustness-v1.json": {
+      "bytes": 2337,
+      "sha256": "48b23471c10fb2c77d47b8b05d0b66aa095b68f9730dec24c30537929331a90d"
+    },
+    "results/formal-run-summary.json": {
+      "bytes": 756,
+      "sha256": "4e9123371b6068ea3bf9991d94dce7c401842eb668c3808b3c5f019411ec080e"
+    },
+    "raw/wine.data": {
+      "bytes": 10782,
+      "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+    },
+    "raw/wine.names": {
+      "bytes": 3036,
+      "sha256": "f1b84f2ef845e0bdebf13e14fa7a213e56de4f1baa40c5974dbd1ee51c5ae710"
+    }
+  }
+}

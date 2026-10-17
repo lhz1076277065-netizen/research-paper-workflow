@@ -2,7 +2,7 @@
 name: robustness-reproducibility
 description: "复算研究结果，检验关键假设、稳健性与复现依赖。"
 metadata:
-  version: "3.5.4"
+  version: "3.5.5"
 ---
 
 # 关键结论的验证与复现

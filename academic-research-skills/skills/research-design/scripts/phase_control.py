@@ -35,6 +35,36 @@ def save(path, state):
     tmp.write_text(json.dumps(state, ensure_ascii=False, indent=2, allow_nan=False)+'\n')
     os.replace(tmp, p)
 
+def instruction_key(state):
+    """Scientific identity survives operational/presentation steering."""
+    binding=state.get('research_commitment')
+    return binding['id'] if binding else state['latest_instruction']
+
+def context_matches(state, context, stage=True):
+    if not context or context.get('id')!=state['id']:
+        return False
+    if stage and context.get('stage')!=state['stage']:
+        return False
+    if context.get('commitment_id'):
+        return context['commitment_id']==(state.get('research_commitment') or {}).get('id')
+    return context.get('latest_instruction')==state['latest_instruction']
+
+def update_instruction(state, text, kind='operational'):
+    if not isinstance(text,str) or not text.strip():
+        raise PhaseError('Latest user instruction cannot be empty')
+    if kind not in {'operational','presentation'}:
+        raise PhaseError('Scientific revisions use research_commitment bind with the actual user request; ordinary instructions cannot replace the fixed question')
+    if text==state['latest_instruction']:
+        return
+    state['history'].append({'event':'instruction_changed','previous':state['latest_instruction'],
+        'kind':kind,'at':iso(now()),'scientific_identity':instruction_key(state)})
+    state['latest_instruction']=text
+    if kind=='presentation':
+        state['presentation_version']=state.get('presentation_version',0)+1
+    if not state.get('research_commitment'):
+        # Preserve historical behavior without inventing a missing commitment.
+        state['next_action']=None;state['current_unit']=None
+
 @contextmanager
 def locked(path):
     p=Path(path); p.parent.mkdir(parents=True, exist_ok=True)
@@ -68,7 +98,7 @@ def request_anchor(path, message=None):
         raise PhaseError('Budget request missing or ambiguous; select its exact --request-message or verified --started-at from the actual log')
     return requests[0]
 
-def init(scope, objective, minutes=None, clock=None, authority=None, started_at=None, anchor_basis=None, autonomous_plan=False,workflow='general'):
+def init(scope, objective, minutes=None, clock=None, authority=None, started_at=None, anchor_basis=None, autonomous_plan=False,workflow='general',alignment=False):
     if scope not in {'full','focused','maintenance'} or not objective.strip(): raise PhaseError('Invalid scope/objective')
     if workflow not in {'general','local-data'} or (workflow=='local-data' and scope!='full'):raise PhaseError('Local-data workflow applies to complete data-based studies')
     if authority is not None and (not isinstance(authority,str) or not authority.strip() or minutes is None):
@@ -81,7 +111,7 @@ def init(scope, objective, minutes=None, clock=None, authority=None, started_at=
         'scope':scope, 'objective':objective, 'latest_instruction':objective,
         'status':'active', 'stage':'feasibility' if scope=='full' else scope,
         'started_at':iso(anchor), 'deadline':anchor+duration, 'project_deadline':anchor+duration,
-        'workflow_version':'3.5.4','workflow':workflow, 'budget_anchor':{'started_at':iso(anchor),
+        'workflow_version':'3.5.5','workflow':workflow,'alignment_required':bool(alignment and scope=='full'), 'budget_anchor':{'started_at':iso(anchor),
             'basis':anchor_basis or 'controller_initialization_only','verified':started_at is not None},
         'reserve_seconds':min(300,duration*.1),'reserve_authority':'agent', 'budget_kind':'authorized_total' if authority else 'initial_feasibility' if scope=='full' else 'local_task',
         'authorization':authority, 'token_limit':None, 'token_reserve':0,'token_metric':'input_plus_output','token_reserve_authority':'agent',
@@ -234,6 +264,13 @@ def advance(state, stage, evidence, root, next_action, clock=None, minutes=None,
     if not guard(state,clock=clock)['allowed']: raise PhaseError('Phase is not eligible to advance')
     ref=artifact(evidence,root)
     current=state['stage']
+    if current=='feasibility' and state.get('alignment_required'):
+        import research_commitment as R
+        if not R.check_context(state):
+            raise PhaseError('Bind the original question and required answers before leaving feasibility; select a topic first for open ideation')
+    if current=='manuscript' and stage=='delivery' and (state.get('alignment_required') or state.get('research_commitment')):
+        import research_commitment as R
+        R.closure(state)
     import local_data as D
     stages=D.STAGES if state.get('workflow')=='local-data' else STAGES
     t=now() if clock is None else clock
@@ -337,7 +374,9 @@ def resume(state, compact=False):
         'project_deadline','deadline','authorization','completed_tasks','artifacts','next_action',
         'exit_reason','repairs','unchanged_rounds','reassessment_required','owned_processes','host_goal_state',
         'budget_kind','reserve_seconds','token_limit','token_reserve','token_metric','meter','professional_steps',
-        'professional_pending','stage_started_at','storage','budget_anchor','workflow_version','workflow','local_data','current_unit','budget_authority','reserve_authority','token_reserve_authority','delivery_required')}
+        'professional_pending','stage_started_at','storage','budget_anchor','workflow_version','workflow','local_data','current_unit','budget_authority','reserve_authority','token_reserve_authority','delivery_required','alignment_required','presentation_version')}
+    import research_commitment as R
+    result['research_focus']=R.snapshot(state)
     if compact:
         for key in ('artifacts','completed_tasks','professional_steps'):
             rows=result.get(key) or [];result[key+'_count']=len(rows);result[key]=rows[-3:]
@@ -384,17 +423,18 @@ def reconcile_processes(state):
 
 def register_professional(state, begun, started):
     context=begun.get('phase')
-    if not context or any(context.get(k)!=state.get(k) for k in ('id','stage','latest_instruction')):
+    if not context_matches(state,context):
         raise PhaseError('Professional begin belongs to another phase or instruction')
     if not guard(state)['allowed']:raise PhaseError('No professional start in a stopped phase')
     if any(x['step_id']==begun['id'] for x in state.get('professional_pending',[])):
         raise PhaseError('Professional step is already registered; resume it')
     for x in state.get('professional_pending',[]):
-        if x['status']!='cancelled' and x['stage']==state['stage'] and x['latest_instruction']==state['latest_instruction'] and x['capability']==begun['capability'] and x.get('task')==begun['task'] and x.get('inputs')==begun['inputs']:
+        if x['status']!='cancelled' and x['stage']==state['stage'] and x.get('scientific_identity',x['latest_instruction'])==instruction_key(state) and x['capability']==begun['capability'] and x.get('purpose','formal')==begun.get('purpose','formal') and x.get('task')==begun['task'] and x.get('inputs')==begun['inputs']:
             raise PhaseError('This professional task already has a current receipt; resume/check '+x['started'])
     state.setdefault('professional_pending',[]).append({'step_id':begun['id'],'capability':begun['capability'],
         'stage':state['stage'],'latest_instruction':state['latest_instruction'],'status':'started',
-        'started':str(Path(started).resolve()),'finished':None,'task':begun['task'],'inputs':begun['inputs']})
+        'started':str(Path(started).resolve()),'finished':None,'task':begun['task'],'inputs':begun['inputs'],
+        'scientific_identity':instruction_key(state),'purpose':begun.get('purpose','formal')})
 
 def register_completion(state, begun, finished):
     if state.get('professional_pending') is None:return # Legacy records remain unknown.
@@ -427,8 +467,10 @@ def professional_exit(state, starts, finishes):
             if any(step.get(k)!=v for k,v in identity.items()):
                 raise PhaseError('Completed manuscript receipt identity is missing or changed')
             begun=json.loads(begun_bytes);context=begun.get('phase',{})
-            if context.get('id')!=state['id'] or context.get('stage')!='manuscript' or context.get('latest_instruction')!=state['latest_instruction']:
+            if not context_matches(state,context,False) or context.get('stage')!='manuscript':
                 raise PhaseError('Completed manuscript belongs to another phase or instruction')
+            if not F.presentation_current(state,begun):
+                raise PhaseError('Revise the manuscript affected by presentation steering; original data and experiments remain valid')
             result=F.check(index,begun,json.loads(complete_bytes))
             if step!={**result,'stage':'manuscript','started':str(start),'finished':str(finish),**identity}:
                 raise PhaseError('Completed manuscript record changed')
@@ -439,8 +481,10 @@ def professional_exit(state, starts, finishes):
         begun_bytes=start.read_bytes();complete_bytes=finish.read_bytes()
         begun=json.loads(begun_bytes);complete=json.loads(complete_bytes);r=F.check(index,begun,complete)
         context=begun.get('phase')
-        if not context or context.get('id')!=state['id'] or context.get('stage')!=state['stage'] or context.get('latest_instruction')!=state['latest_instruction']:
+        if not context_matches(state,context):
             raise PhaseError('Professional step is not bound to this phase and latest instruction')
+        if not F.presentation_current(state,begun):
+            raise PhaseError('A text step predates the current presentation request; revise only that affected step')
         if r['step_id'] in previous:raise PhaseError('A prior stage receipt cannot complete a new stage')
         previous.add(r['step_id'])
         # Supporting work (e.g. exploratory figures in research, reading during
@@ -536,7 +580,7 @@ def main(argv=None):
     a=sub.add_parser('round');a.add_argument('--changed',action='store_true');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True)
     a=sub.add_parser('reassess');a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--next-action',required=True);a.add_argument('--blocker');a.add_argument('--minutes',type=float);a.add_argument('--stage',choices=(*STAGES,'data'));a.add_argument('--authority');a.add_argument('--reserve-seconds',type=float)
     a.add_argument('--token-reserve',type=int)
-    a=sub.add_parser('instruction');a.add_argument('--text',required=True)
+    a=sub.add_parser('instruction');a.add_argument('--text',required=True);a.add_argument('--kind',choices=['operational','presentation'],default='operational',help='Ordinary steering preserves science; scientific revisions require the commitment command and actual user request')
     a=sub.add_parser('continue');a.add_argument('--authority',required=True)
     a=sub.add_parser('cancel-step');a.add_argument('--started',required=True);a.add_argument('--reason',required=True);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True)
     a=sub.add_parser('close');a.add_argument('--status',choices=['completed','route_closed','paused'],required=True);a.add_argument('--reason',required=True);a.add_argument('--evidence',required=True);a.add_argument('--root',required=True);a.add_argument('--task-id',required=True);a.add_argument('--professional-started',action='append',default=[]);a.add_argument('--professional-finished',action='append',default=[])
@@ -554,7 +598,7 @@ def main(argv=None):
                 if not context or context['path']!=str(Path(args.state).resolve()) or context['id']!=state['id']:
                     raise PhaseError('Professional begin belongs to another phase')
                 import local_data as D
-                D.gate(state,started['capability'],refresh=started['capability']=='analysis-execution')
+                D.gate(state,started['capability'],refresh=started['capability']=='analysis-execution',purpose=started.get('purpose','formal'),inputs=started['inputs'])
             cmd=args.command[1:] if args.command[:1]==['--'] else args.command
             result=run(args.state,cmd,args.log,args.claim,args.decision,args.estimated_seconds,args.rollout)
             print(json.dumps(result,ensure_ascii=False));return 0 if not result['stop_reasons'] and result['returncode']==0 else 2
@@ -568,7 +612,7 @@ def main(argv=None):
                 if args.started_at and datetime.fromisoformat(args.started_at.replace('Z','+00:00')).tzinfo is None:raise PhaseError('Budget timestamp needs an explicit timezone')
                 state=init(args.scope,args.objective,args.minutes,authority=args.authority,started_at=anchor,
                     anchor_basis='user_request:'+str(Path(args.request_rollout).resolve()) if args.request_rollout else 'verified_user_request_timestamp' if args.started_at else None,autonomous_plan=not args.require_budget,
-                    workflow=args.workflow or ('local-data' if args.scope=='full' else 'general'))
+                    workflow=args.workflow or ('local-data' if args.scope=='full' else 'general'),alignment=args.scope=='full')
                 if args.rollout:meter_rollout(state,args.rollout)
                 if args.token_limit is not None:
                     if not args.authority or not state['meter']['verified']:raise PhaseError('An initial total token ceiling requires actual authorization and rollout meter')
@@ -593,10 +637,7 @@ def main(argv=None):
                 elif args.op=='repair':repair(state,args.blocker,args.approach)
                 elif args.op=='round':round_result(state,args.changed,args.evidence,args.root)
                 elif args.op=='instruction':
-                    if not args.text.strip():raise PhaseError('Latest user instruction cannot be empty')
-                    if args.text!=state['latest_instruction']:
-                        state['history'].append({'event':'instruction_changed','previous':state['latest_instruction'],'at':iso(now())})
-                        state['latest_instruction']=args.text;state['next_action']=None;state['current_unit']=None
+                    update_instruction(state,args.text,args.kind)
                 elif args.op=='continue':
                     if state['status']!='paused' or not args.authority.strip():raise PhaseError('Only an explicitly resumed paused phase can continue')
                     state['status']='active'
@@ -613,7 +654,7 @@ def main(argv=None):
                 elif args.op=='reassess':
                     reassess(state,args.evidence,args.root,args.next_action,blocker=args.blocker,minutes=args.minutes,stage=args.stage,authority=args.authority,reserve_seconds=args.reserve_seconds,token_reserve=args.token_reserve)
                 elif args.op=='close':
-                    if args.status=='route_closed' and state.get('workflow_version') in {'3.5.3','3.5.4'} and state['scope']!='maintenance':
+                    if args.status=='route_closed' and state.get('workflow_version') in {'3.5.3','3.5.4','3.5.5'} and state['scope']!='maintenance':
                         import work_units as W
                         W.validate_route_exit(state)
                     if state['owned_processes'] and args.status=='completed':raise PhaseError('Cannot complete with owned work still running')
@@ -626,6 +667,9 @@ def main(argv=None):
                             raise PhaseError('Total budget expired; deliver the saved scope and limit instead of a new completed state')
                     if args.status=='completed':
                         import local_data as D
+                        if state['scope']=='full' and (state.get('alignment_required') or state.get('research_commitment')):
+                            import research_commitment as R
+                            R.closure(state)
                         D.stage_exit(state,'completed')
                         steps=professional_exit(state,args.professional_started,args.professional_finished)
                         consume_professional(state,steps)

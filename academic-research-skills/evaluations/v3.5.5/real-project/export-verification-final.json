@@ -1,0 +1,31 @@
+{
+  "docx_opened_and_ooxml_integrity": true,
+  "all_manuscript_prose_paragraphs_exact_in_docx": true,
+  "editable_table_rows": 6,
+  "embedded_figures": 3,
+  "pdf_real_renderer": "Canonical DOCX renderer using bundled LibreOffice and Poppler",
+  "pdf_pages": 5,
+  "pdf_key_scientific_numbers_and_sections_present": true,
+  "actual_visual_review": "All5final PNG pages opened and inspected after final content rebuild. No clipped/overlapping body text, broken table rows, missing glyphs or figure/interval clipping. Arial title black with inherited border removed; captions normal weight; all figures remain exact6.5inchwidth. Page breaks do not remove any paragraph.",
+  "visual_revision_history": "Figure1initialfootnoteoverlap fixed; inherited Wordtitleblueborder removed; before-editorial and failed duplicate-referencecheck retained. Finaldocx/PDF rerendered after allchanges.",
+  "scientific_changes": "No numericalresult/data/modelchanges. All actualv2->final textual changes assessed in expression-meaning-checks.json. Proceduralmetadata/thirdreference moved to README.",
+  "known_limits": [
+    "No accountablehuman authorapproval or externalpeerreview.",
+    "Source stat/profile/citationrequests helpers lacking optional dependencies were not claimed successful; explicitadaptations/sourcefunctions documented.",
+    "Five-page report includes3textpages,1mainfigurepage,1supplementfigurepage."
+  ],
+  "artifacts": {
+    "manuscript-final.md": {
+      "bytes": 11710,
+      "sha256": "ba4a7623781a854b213b7f8e1463fd8cbd44a078c4b43db8a4c9c5ee39c1a0af"
+    },
+    "wine-association-paper.docx": {
+      "bytes": 322230,
+      "sha256": "f62dce2bee6724edb72a601c0d5c147b640d3e969357d214ee398bbbbcc269fc"
+    },
+    "wine-association-paper.pdf": {
+      "bytes": 345148,
+      "sha256": "7149ad80e393a6fee2ba3fd73d5fde55fc61cb27eb8dd4e1d387096225265947"
+    }
+  }
+}

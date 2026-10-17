@@ -1,0 +1,29 @@
+{
+  "unresolved_required": [],
+  "meaning_checks": [
+    {
+      "before": "For these 178 records, the answer to the overall question is a positive, moderately sized descriptive association: Pearson r was 0.546 and the slope was 1.560.",
+      "after": "For these 178 records, the overall association is positive: Pearson r was 0.546 and the slope was 1.560.",
+      "assessment": "Removes a subjective magnitude label; retains the same fixed dataset, positive direction, r and slope. No stronger claim is introduced."
+    },
+    {
+      "before": "Rank and omission checks make a single outlier or a purely linear scaling explanation less compelling as the sole explanation of the positive direction, but they do not identify a mechanism.",
+      "after": "The positive direction was retained with rank correlations and after every single-record omission from the pooled and adjusted fits. These checks do not identify a mechanism.",
+      "assessment": "Replaces a vague explanation with exact checks already performed and reported. Does not claim every class-specific omission was fitted; explicitly says pooled and adjusted. Retains the no-mechanism boundary."
+    }
+  ],
+  "unchanged_checks": {
+    "objects": "alcohol, color intensity and numeric cultivar classes unchanged",
+    "scope": "complete original178historicalrecords, descriptive no causal/population unchanged",
+    "direction": "overall/class/adjusted positive retained",
+    "numbers": "all numerical tokens identical in sequence",
+    "methods": "all primary and robustness methods retained",
+    "null_vs_untested": "no untested relation changed into zero/absence; broad quadraticCI and interactionp retained",
+    "citations": "same three exactreferences and every citation retained",
+    "experiment_coverage": "E1/E2 exactMethods/Resultslocations unchanged; both conclusions still present",
+    "internal_process": "No Skill receipts or phase/budget narrative added"
+  },
+  "review_scope": "Only actual two optional expression edits from completed professional review; no new fullreview or external/humanverification",
+  "before_sha256": "3d60b4c5fda384381343f60e1aa47a8145c2d4ac848712734861f1853f72bed0",
+  "after_sha256": "00c48458aced14a8cd6838ec2570dd9d25edbbde1319b0866237c07966afff3d"
+}

@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "evidence_id": "E001",
+      "source_type": "other",
+      "title": "Governing original research request",
+      "authors": [],
+      "year": null,
+      "identifiers": {
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": "",
+        "url": ""
+      },
+      "locator": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/request.md",
+      "confidentiality": "restricted",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E002",
+      "source_type": "dataset",
+      "title": "Original Wine data dictionary",
+      "authors": [],
+      "year": null,
+      "identifiers": {
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": "",
+        "url": ""
+      },
+      "locator": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/raw/wine.names",
+      "confidentiality": "public",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E003",
+      "source_type": "other",
+      "title": "Executed pooled alcohol–color-intensity analysis E1",
+      "authors": [],
+      "year": null,
+      "identifiers": {
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": "",
+        "url": ""
+      },
+      "locator": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/results/E1-v1.json",
+      "confidentiality": "restricted",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E004",
+      "source_type": "other",
+      "title": "Executed cultivar-conditioned analysis E2",
+      "authors": [],
+      "year": null,
+      "identifiers": {
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": "",
+        "url": ""
+      },
+      "locator": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/results/E2-v1.json",
+      "confidentiality": "restricted",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E005",
+      "source_type": "software",
+      "title": "Local analysis implementation and recorded execution metadata",
+      "authors": [],
+      "year": null,
+      "identifiers": {
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": "",
+        "url": ""
+      },
+      "locator": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/prepare_data.py; /Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/analysis_core.py; /Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/formal_analysis.py; /Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/results/formal-run-summary.json; /Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/results/models-v1.json",
+      "confidentiality": "restricted",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E006",
+      "source_type": "other",
+      "title": "Executed robustness analyses and implementation",
+      "authors": [],
+      "year": null,
+      "identifiers": {
+        "doi": "",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": "",
+        "url": ""
+      },
+      "locator": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/results/robustness-v1.json; /Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/review-input/robustness_analysis.py",
+      "confidentiality": "restricted",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    },
+    {
+      "evidence_id": "E007",
+      "source_type": "dataset",
+      "title": "Wine",
+      "authors": [
+        "S. Aeberhard",
+        "M. Forina"
+      ],
+      "year": 1992,
+      "identifiers": {
+        "doi": "10.24432/C5PC7J",
+        "pmid": "",
+        "pmcid": "",
+        "isbn": "",
+        "url": "https://archive.ics.uci.edu/dataset/109/wine"
+      },
+      "locator": "Official UCI dataset metadata, variable list, citation and license; opened by current Agent 2026-10-18",
+      "confidentiality": "public",
+      "verification": {
+        "status": "unverified",
+        "source_opened": true,
+        "verified_by": "",
+        "verified_on": ""
+      }
+    }
+  ]
+}

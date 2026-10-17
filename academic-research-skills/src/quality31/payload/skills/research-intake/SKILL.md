@@ -2,7 +2,7 @@
 name: research-intake
 description: "将研究请求与材料整理为主张、证据缺口和下一项可执行任务。"
 metadata:
-  version: "3.5.4"
+  version: "3.5.5"
 ---
 
 # 研究目标与科学价值定位
@@ -17,4 +17,4 @@ metadata:
 
 只读本步必要资源，[协议](references/protocol.md)按需。长任务/显式预算用[阶段控制](references/phase-control.md)续接原预算；局部无预算的阶段脚本是可选工具，不作为日常前置。
 
-按[研究单元](references/autonomous-work.md)续接、复核和自主重排。
+按[研究约定](references/research-alignment.md)保留原问题与全部主要实验；[研究单元](references/autonomous-work.md)按需续接。

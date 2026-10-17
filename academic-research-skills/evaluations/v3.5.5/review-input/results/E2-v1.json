@@ -1,0 +1,103 @@
+{
+  "experiment_id": "E2",
+  "question_ids": [
+    "Q2"
+  ],
+  "execution": "completed",
+  "groups": {
+    "1": {
+      "n": 59,
+      "pearson_r": 0.4082913205112014,
+      "pearson_fisher95": [
+        0.16998167779373588,
+        0.601484663431411
+      ],
+      "spearman_rho": 0.4429145693516707,
+      "slope": 1.0942886292836191,
+      "slope_hc3_95": [
+        0.4233202931766037,
+        1.7652569653906345
+      ],
+      "alcohol_mean": 13.744745762711865,
+      "alcohol_sd": 0.46212535966129437,
+      "color_mean": 5.528305084745763,
+      "color_sd": 1.2385728056814824,
+      "alcohol_range": [
+        12.85,
+        14.83
+      ],
+      "color_range": [
+        3.52,
+        8.9
+      ]
+    },
+    "2": {
+      "n": 71,
+      "pearson_r": 0.26978913409721267,
+      "pearson_fisher95": [
+        0.038936150864520555,
+        0.4733019145543256
+      ],
+      "spearman_rho": 0.2569673610094533,
+      "slope": 0.4638521456668164,
+      "slope_hc3_95": [
+        0.0775619941812627,
+        0.85014229715237
+      ],
+      "alcohol_mean": 12.278732394366195,
+      "alcohol_sd": 0.5379642302964676,
+      "color_mean": 3.086619718309859,
+      "color_sd": 0.9249292539153958,
+      "alcohol_range": [
+        11.03,
+        13.86
+      ],
+      "color_range": [
+        1.28,
+        6.0
+      ]
+    },
+    "3": {
+      "n": 48,
+      "pearson_r": 0.35037770503807186,
+      "pearson_fisher95": [
+        0.07356692242785741,
+        0.5770631871672013
+      ],
+      "spearman_rho": 0.28375994147420386,
+      "slope": 1.5270454891755658,
+      "slope_hc3_95": [
+        0.29497088159354967,
+        2.7591200967575817
+      ],
+      "alcohol_mean": 13.153750000000002,
+      "alcohol_sd": 0.5302413139918747,
+      "color_mean": 7.396249979166666,
+      "color_sd": 2.3109421491810918,
+      "alcohol_range": [
+        12.2,
+        14.34
+      ],
+      "color_range": [
+        3.85,
+        13.0
+      ]
+    }
+  },
+  "adjusted_common_slope": 0.940490949856048,
+  "adjusted_slope_hc3_95": [
+    0.4915000756890874,
+    1.3894818240230085
+  ],
+  "adjusted_slope_classical_normal95": [
+    0.5245920888787078,
+    1.356389810833388
+  ],
+  "partial_r_class_demeaned": 0.3185025813427832,
+  "class_adjusted_r_squared": 0.6222994740606109,
+  "interaction_hc3_wald_chi2": 4.482577480439753,
+  "interaction_df": 2,
+  "interaction_reference_p": 0.1063213953908218,
+  "interaction_interpretation": "A model diagnostic for slope heterogeneity, not proof of identical effects or a population test.",
+  "common_slope_weighting": "Class-specific slopes averaged with within-class alcohol sums-of-squares weights."
+}

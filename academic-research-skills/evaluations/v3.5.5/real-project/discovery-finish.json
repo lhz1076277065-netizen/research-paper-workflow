@@ -1,0 +1,123 @@
+{
+  "schema_version": "professional-completion-1",
+  "status": "completed_for_handoff",
+  "step_id": "89d918a0cfdc4159a497d5f01c306fcb",
+  "capability": "data-discovery",
+  "task": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/request.md",
+    "sha256": "986d405f1513083357f48267d6fbafa737c14c0e60d32f4b17f1271f2fa92225"
+  },
+  "inputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/research-plan-v1.md",
+      "sha256": "583949035a7b1acbd0ca1083c27841004690256cc49908b1c21136b582fd6d32"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/contract-v1.json",
+      "sha256": "3f4fdecb24c40a989beae55c382219b1e92621bc70f190d53671fb8b8d90b1dc"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/dataset-spec-v1.json",
+      "sha256": "a1365fc6824bc6d5ebf9ffe8fc5989fd2e860e85ca0cc59e675c9698bf158ec4"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/retrieval-contract.md",
+      "sha256": "f1c0cd31ba988a8dbf9cb8c8591daeccf0349df0c33aefed8076f2e5a6a1e654"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/official-metadata.md",
+      "sha256": "a941d20db3d869d8520351efeb11aa3844e631609f8b51d813558a3c0d458b65"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/selection-v1.md",
+      "sha256": "4984adb33dae02795b2f7a35281dc70851ccfd04c3655f8939a69cb0c27e799c"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/raw/wine.data",
+      "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+    },
+    {
+      "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/raw/wine.names",
+      "sha256": "f1b84f2ef845e0bdebf13e14fa7a213e56de4f1baa40c5974dbd1ee51c5ae710"
+    }
+  ],
+  "work_report": {
+    "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/discovery-work.json",
+    "sha256": "3f260e4021d4fd61f466ea31a4aae1d2a446314e162f11cde9001d83eeddedfe"
+  },
+  "use": {
+    "id": "kdense-database",
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "entry": "skills/database-lookup/SKILL.md",
+    "commit": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+    "actor_scope": "current_host",
+    "mode": "adapted_in_host",
+    "roles": [
+      "data_discovery"
+    ],
+    "inputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/research-plan-v1.md",
+        "sha256": "583949035a7b1acbd0ca1083c27841004690256cc49908b1c21136b582fd6d32"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/contract-v1.json",
+        "sha256": "3f4fdecb24c40a989beae55c382219b1e92621bc70f190d53671fb8b8d90b1dc"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/dataset-spec-v1.json",
+        "sha256": "a1365fc6824bc6d5ebf9ffe8fc5989fd2e860e85ca0cc59e675c9698bf158ec4"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/retrieval-contract.md",
+        "sha256": "f1c0cd31ba988a8dbf9cb8c8591daeccf0349df0c33aefed8076f2e5a6a1e654"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/official-metadata.md",
+        "sha256": "a941d20db3d869d8520351efeb11aa3844e631609f8b51d813558a3c0d458b65"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/sources/selection-v1.md",
+        "sha256": "4984adb33dae02795b2f7a35281dc70851ccfd04c3655f8939a69cb0c27e799c"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/raw/wine.data",
+        "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659"
+      },
+      {
+        "path": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/raw/wine.names",
+        "sha256": "f1b84f2ef845e0bdebf13e14fa7a213e56de4f1baa40c5974dbd1ee51c5ae710"
+      }
+    ],
+    "steps": [
+      "Applied source selection, bounded official archive retrieval, explicit fields/no filters and source/dictionary provenance. Selected UCI ID109 over third-party copies, preserved real route failures, acquired all required files before preparation.",
+      "Applied source selection, bounded official archive retrieval, explicit fields/no filters and source/dictionary provenance. Selected UCI ID109 over third-party copies, preserved real route failures, acquired all required files before preparation.",
+      "Applied source selection, bounded official archive retrieval, explicit fields/no filters and source/dictionary provenance. Selected UCI ID109 over third-party copies, preserved real route failures, acquired all required files before preparation.",
+      "Applied source selection, bounded official archive retrieval, explicit fields/no filters and source/dictionary provenance. Selected UCI ID109 over third-party copies, preserved real route failures, acquired all required files before preparation.",
+      "Applied source selection, bounded official archive retrieval, explicit fields/no filters and source/dictionary provenance. Selected UCI ID109 over third-party copies, preserved real route failures, acquired all required files before preparation.",
+      "Applied source selection, bounded official archive retrieval, explicit fields/no filters and source/dictionary provenance. Selected UCI ID109 over third-party copies, preserved real route failures, acquired all required files before preparation."
+    ],
+    "progress": {
+      "guidance_read": true,
+      "research_work_done": true,
+      "functions_run": false
+    },
+    "status": "executed",
+    "semantic_execution_verified_by_tool": false,
+    "adaptation": "Read the relevant retrieval contract/reference; apply actual authorization, bounded API retrieval, filters and provenance. Unsupported domains need a verified matching entry, not invented API results."
+  },
+  "semantic_work_verified_by_tool": false,
+  "scientific_validity_certified": false,
+  "purpose": "formal",
+  "question_ids": [
+    "Q1",
+    "Q2"
+  ],
+  "work_kind": "primary",
+  "handoff_scope": "requested_step_only",
+  "submission_readiness": "not_assessed"
+}

@@ -2,7 +2,7 @@
 name: journal-intelligence
 description: "依据稿件范围和期刊现行要求匹配选刊与文章类型。"
 metadata:
-  version: "3.5.4"
+  version: "3.5.5"
 ---
 
 # 标杆学习与投稿期刊匹配

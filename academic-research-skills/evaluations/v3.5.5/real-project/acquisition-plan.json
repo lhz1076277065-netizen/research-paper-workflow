@@ -1,0 +1,11 @@
+{
+  "needs": [
+    {
+      "purpose": "Complete official dataset and dictionary/metadata for E1/E2",
+      "subset": "Wine dataset ID109, all 178 records and 13 predictors plus class; original official files",
+      "access": "Public UCI official archive and landing page; no credential"
+    }
+  ],
+  "expected_download_bytes": 5000000,
+  "expected_peak_project_bytes": 100000000
+}

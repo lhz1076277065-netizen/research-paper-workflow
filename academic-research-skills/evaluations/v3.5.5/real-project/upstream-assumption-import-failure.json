@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/Users/luca/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/statistical-analysis/scripts/assumption_checks.py"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/luca/.codex/academic-research-source-cache/kdense-statistics/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/statistical-analysis/scripts/assumption_checks.py\", line 10, in <module>\n    import matplotlib.pyplot as plt\nModuleNotFoundError: No module named 'matplotlib'\n",
+  "functions_executed": false,
+  "repair": "Use source protocol with explicit NumPy computations; no unavailable numerical/plot helper is claimed executed."
+}

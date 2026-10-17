@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "numeric_facts": [
+    {
+      "fact_id": "N001",
+      "concept": "pooled_r",
+      "section": "Abstract",
+      "value": 0.546,
+      "unit": "correlation",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all official178",
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N002",
+      "concept": "pooled_slope",
+      "section": "Abstract",
+      "value": 1.56,
+      "unit": "recorded color per alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all official178",
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N003",
+      "concept": "pooled_r",
+      "section": "Results",
+      "value": 0.546,
+      "unit": "correlation",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all official178",
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N004",
+      "concept": "pooled_slope",
+      "section": "Results",
+      "value": 1.56,
+      "unit": "recorded color per alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all official178",
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N005",
+      "concept": "pooled_r",
+      "section": "Discussion",
+      "value": 0.546,
+      "unit": "correlation",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all official178",
+      "evidence_ids": [
+        "E001"
+      ]
+    },
+    {
+      "fact_id": "N006",
+      "concept": "pooled_slope",
+      "section": "Discussion",
+      "value": 1.56,
+      "unit": "recorded color per alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all official178",
+      "evidence_ids": [
+        "E001"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "method_id": "M001",
+      "name": "Complete-data pooled correlation and OLS",
+      "analysis_intent": "descriptive",
+      "protocol_status": "prespecified",
+      "outcome_ids": [
+        "O001"
+      ]
+    },
+    {
+      "method_id": "M002",
+      "name": "Class-specific and class-adjusted OLS/correlation",
+      "analysis_intent": "descriptive",
+      "protocol_status": "prespecified",
+      "outcome_ids": [
+        "O002"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "result_id": "R001",
+      "method_id": "M001",
+      "outcome_id": "O001",
+      "analysis_intent": "descriptive",
+      "sample_size": 178,
+      "evidence_ids": [
+        "E001"
+      ],
+      "reported_sections": [
+        "Abstract",
+        "Results",
+        "Discussion"
+      ]
+    },
+    {
+      "result_id": "R002",
+      "method_id": "M002",
+      "outcome_id": "O002",
+      "analysis_intent": "descriptive",
+      "sample_size": 178,
+      "evidence_ids": [
+        "E001"
+      ],
+      "reported_sections": [
+        "Abstract",
+        "Results",
+        "Discussion"
+      ]
+    }
+  ]
+}

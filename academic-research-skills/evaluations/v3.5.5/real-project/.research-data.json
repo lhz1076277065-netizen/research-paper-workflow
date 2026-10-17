@@ -1,0 +1,133 @@
+{
+  "schema": "local-research-data-1",
+  "id": "2952b626f597429c8178f96687575e79",
+  "phase_id": "7a25883373c64fb49d5e6d130cd816f6",
+  "instruction": "7f14e0e436b24475adf718b0859382d6",
+  "latest_instruction_at_planning": "Complete descriptive UCI Wine alcohol–color study with overall and cultivar-conditioned answers, real figures and Word/PDF paper",
+  "research_plan": {
+    "path": "research-plan-v1.md",
+    "sha256": "583949035a7b1acbd0ca1083c27841004690256cc49908b1c21136b582fd6d32"
+  },
+  "specification": {
+    "path": "dataset-spec-v1.json",
+    "sha256": "a1365fc6824bc6d5ebf9ffe8fc5989fd2e860e85ca0cc59e675c9698bf158ec4"
+  },
+  "datasets": [
+    {
+      "id": "wine",
+      "purpose": "E1 overall and E2 class-conditioned association, plus robustness on complete UCI records",
+      "files": [
+        {
+          "path": "raw/wine.data",
+          "format": "csv",
+          "header": false,
+          "columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_of_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "required_columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_of_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "numeric_columns": [
+            "class",
+            "alcohol",
+            "malic_acid",
+            "ash",
+            "alcalinity_of_ash",
+            "magnesium",
+            "total_phenols",
+            "flavanoids",
+            "nonflavanoid_phenols",
+            "proanthocyanins",
+            "color_intensity",
+            "hue",
+            "od280_od315",
+            "proline"
+          ],
+          "expected_rows": 178
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "wine": {
+      "publisher": "UCI Machine Learning Repository",
+      "version": "Original wine.data and wine.names in official ID109 archive, accessed 2026-10-18",
+      "landing_url": "https://archive.ics.uci.edu/dataset/109/wine",
+      "evidence": [
+        {
+          "path": "sources/official-metadata.md",
+          "sha256": "a941d20db3d869d8520351efeb11aa3844e631609f8b51d813558a3c0d458b65"
+        },
+        {
+          "path": "sources/selection-v1.md",
+          "sha256": "4984adb33dae02795b2f7a35281dc70851ccfd04c3655f8939a69cb0c27e799c"
+        }
+      ],
+      "started": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/discovery-start.json",
+      "finished": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/discovery-finish.json",
+      "started_sha256": "b38a84987f0c38a7dc67e4b6157fb83637be4d5d5be5c5cf6ed3dfa928d85759",
+      "finished_sha256": "043976178c6e3a3e37562329fede6a1e99d1e9e393f97de17209c3e9b6fc0a53"
+    }
+  },
+  "inspections": {},
+  "history": [],
+  "planning_step_id": "89d918a0cfdc4159a497d5f01c306fcb",
+  "checks": {
+    "raw/wine.data": {
+      "stat": [
+        335771394,
+        10782,
+        1792262551231615994
+      ],
+      "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659",
+      "inspection": {
+        "format": "csv",
+        "rows": 178,
+        "columns": [
+          "class",
+          "alcohol",
+          "malic_acid",
+          "ash",
+          "alcalinity_of_ash",
+          "magnesium",
+          "total_phenols",
+          "flavanoids",
+          "nonflavanoid_phenols",
+          "proanthocyanins",
+          "color_intensity",
+          "hue",
+          "od280_od315",
+          "proline"
+        ],
+        "parser_scope": "whole_file",
+        "scientific_coverage_certified": false
+      }
+    }
+  }
+}

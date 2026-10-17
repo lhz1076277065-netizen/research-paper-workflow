@@ -1,8 +1,8 @@
 # 自主研究单元、解阻与增量复核
 
-按当前科学判断组织工作：一个单元写明主张、竞争解释、决定性检验、输入及可交付结果。下载、转换、拟合、图表、导出等内部动作服务这个单元，不各自启动一轮完整外部评审。不同专业能力仍各自走14库 begin→读源→实施→finish/check；合并复核不合并或跳过专业调用。用户明确要求的逐步外部复核，按约定的专业单元执行；不得静默取消或用本地check冒充外部审查。
+按[稳定研究约定](research-alignment.md)组织工作：一个单元关联原问题ID，写明主张、竞争解释、实际检验、输入及可交付结果；旁支明确标为exploration，不能替代原问题。下载、转换、拟合、图表、导出等内部动作服务这个单元，不各自启动一轮完整外部评审。不同专业能力仍各自走14库 begin→读源→实施→finish/check；合并复核不合并或跳过专业调用。用户明确要求的逐步外部复核，按约定的专业单元执行；不得静默取消或用本地check冒充外部审查。
 
-论文正文只含科学内容和真实材料/方法边界；“待复核/已复核”、Skill收据、预算、阶段状态放在独立README或交付记录。签收后不要为了标记签收再改已审正文，否则会人为制造新版本和无限复核。管理记录、导出清单和文件名更新不算新科学单元，也无需再次begin专业审查。
+论文正文交代全部主要实验的目的、关键方法、实际结果和真实材料/方法边界；必要科学复现信息与适用AI披露保留；“待复核/已复核”、Skill收据、预算、阶段状态放在独立README或交付记录。签收后不要为了标记签收再改已审正文，否则会人为制造新版本和无限复核。管理记录、导出清单和文件名更新不算新科学单元，也无需再次begin专业审查。
 
 正文有改动时先读已有全稿审查和实际diff，将修改映射到受影响的主张/数字/图注/引文；以适用14库入口执行一次该范围的增量审查，保留旧全稿审查覆盖的未变部分。不因“最终版”标签重复全部专家流程。增量报告写入独立文件，不再回写论文的审查状态；有新的科学问题才回传研究或修订。真实外部评审如被明确要求仍按该约定执行。
 
@@ -20,12 +20,12 @@
 
 ## 轻量记录与恢复
 
-`work_units.py`与phase共用锁和记录，不启动模型或改变宿主goal。只写当前单元必要证据，默认恢复读compact快照；需要旧收据时精确定位，不反复cat完整phase/日志。每次单元有结果都checkpoint并更新下一动作；最新用户指令变化后旧next_action失效。adopt记录新版操作规则和实际授权，保留旧预算、状态、收据及未知计量；不自动恢复暂停/已完成/真实预算触顶任务。
+`work_units.py`与phase共用锁和记录，不启动模型或改变宿主goal。只写当前单元必要证据，默认恢复读compact快照；需要旧收据时精确定位，不反复cat完整phase/日志。每次单元有结果都checkpoint，分别保存execution、answer、validity和实际结果，不能把运行成功或旧inconclusive当有效答案。恢复先给研究约定、全部必答问题回答状态、关键结果和下一必要动作。语言/格式/进度指令仅影响相关工作，未变科学证据继续复用；真正科学目标变更须保存真实用户指令，受影响next_action重新制定。adopt记录新版操作规则和实际授权，保留旧预算、状态、收据及未知计量；不自动恢复暂停/已完成/真实预算触顶任务。
 
 ```bash
 python3 scripts/work_units.py --state project/phase.json plan --key fits --limit 600 --used 448 --rationale '追加独立敏感性验证，实测成本仍在原预算内' --evidence decision.md --root project
 python3 scripts/work_units.py --state project/phase.json route --key alternative --claim '当前核心判断' --action '候选方案的决定性最小检验' --status ready --estimated-seconds 30 --evidence diagnosis.md --root project
-python3 scripts/work_units.py --state project/phase.json checkpoint --key contrast --claim '当前主张' --outcome refuted --next-action '写入可靠零结果并验证竞争解释' --evidence result.json --root project
+python3 scripts/work_units.py --state project/phase.json checkpoint --key contrast --claim '对应原问题的实际主张' --question-id Q1 --experiment-id E1 --execution completed --answer answered --validity valid --outcome refuted --next-action '将实际反向结果写入正文' --result result.json --evidence result.json --root project
 python3 scripts/work_units.py --state project/phase.json review-status --key contrast --evidence result.json --evidence draft.md --root project
 python3 scripts/work_units.py --state project/phase.json review-record --key contrast --evidence result.json --evidence draft.md --root project --started project/review-start.json --finished project/review-finish.json
 ```

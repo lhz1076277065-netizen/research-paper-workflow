@@ -1,0 +1,54 @@
+{
+  "unresolved_required": [],
+  "meaning_checks": [
+    {
+      "before": "For these 178 records, the answer to the overall question is a positive, moderately sized descriptive association: Pearson r was 0.546 and the slope was 1.560.",
+      "after": "For these 178 records, the overall association is positive: Pearson r was 0.546 and the slope was 1.560.",
+      "assessment": "Removes a subjective magnitude label; retains the same fixed dataset, positive direction, r and slope. No stronger claim is introduced."
+    },
+    {
+      "before": "Rank and omission checks make a single outlier or a purely linear scaling explanation less compelling as the sole explanation of the positive direction, but they do not identify a mechanism.",
+      "after": "The positive direction was retained with rank correlations and after every single-record omission from the pooled and adjusted fits. These checks do not identify a mechanism.",
+      "assessment": "Replaces a vague explanation with exact checks already performed and reported. Does not claim every class-specific omission was fitted; explicitly says pooled and adjusted. Retains the no-mechanism boundary."
+    },
+    {
+      "before": "transparent linear-algebra code was used instead of installing an additional statistical stack.",
+      "after": "OLS coefficients were computed with NumPy least squares, and HC3 covariance matrices were evaluated from the design matrices, residuals, and leverage values.",
+      "assessment": "Replaces installation context with the actual executed scientific calculation. Same six formal model fits and covariance formula; no statistical stack falsely claimed."
+    },
+    {
+      "before": "The adjusted row uses the partial Pearson correlation; a single adjusted Spearman statistic was not specified.",
+      "after": "The adjusted row uses the partial Pearson correlation; the dash indicates that this regression adjustment does not supply a Spearman coefficient.",
+      "assessment": "Changes a workflow-status phrase to the scientific meaning of the empty cell. No adjusted rank statistic is fabricated or substituted for the actual linear partial correlation."
+    },
+    {
+      "before": "| Class adjusted | 178 | 0.319 | Not specified | 0.940 | 0.492 to 1.389 |",
+      "after": "| Class adjusted | 178 | 0.319 | - | 0.940 | 0.492 to 1.389 |",
+      "assessment": "All five numeric entries retain their values. The dash refers to the accompanying caption; no result was removed because this cell contained no computed Spearman result."
+    },
+    {
+      "before": "A Codex AI agent performed the computations and assisted with drafting and source-guided checks; human authorship and external peer review are not asserted. Scientific Agent Skills provided procedural guidance [3]. No new samples were collected, and no ethics approval, funding, conflict declaration, or author approval is inferred.",
+      "after": "A Codex AI agent performed the computations and assisted with drafting. The accompanying code and full-precision outputs document the analyses. No new samples were collected.",
+      "assessment": "Retains truthful AI assistance, actual reproducibility materials and lack of new sample collection. Moves internal procedural attribution and unknown author/review/declaration states to the companion delivery record; does not claim any approval or external verification."
+    },
+    {
+      "before": "[3] Kassis T, Agarwal V, He Y, Patel D, Brueckner AM. Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents. 2026. arXiv:2609.00065. https://doi.org/10.48550/arXiv.2609.00065. Current record checked 18 October 2026.",
+      "after": "[2] statsmodels developers. OLSResults.HC3_se. Official statsmodels documentation. https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.HC3_se.html. Accessed 18 October 2026. Cited for the HC3 formula; statsmodels software was not used in the calculations.",
+      "assessment": "Moves the procedural-library reference to the companion attribution and bibliography. The two scientific/data references remain intact; no scientific support citation is deleted. This after quote is the actual final reference-list ending."
+    }
+  ],
+  "unchanged_checks": {
+    "objects": "alcohol, color intensity and numeric cultivar classes unchanged",
+    "scope": "complete original178historicalrecords, descriptive no causal/population unchanged",
+    "direction": "overall/class/adjusted positive retained",
+    "numbers": "all scientific result/method numeric tokens unchanged; removed procedural citation numbering/year/identifier moved to companion record",
+    "methods": "all primary and robustness methods retained",
+    "null_vs_untested": "no untested relation changed into zero/absence; broad quadraticCI and interactionp retained",
+    "citations": "two scientific/data references retained; procedural library citation moved to companion record with its existing bibliography entry",
+    "experiment_coverage": "E1/E2 exactMethods/Resultslocations unchanged; both conclusions still present",
+    "internal_process": "No Skill receipts or phase/budget narrative added"
+  },
+  "review_scope": "Two optional precision edits from completed professional review plus parent editorial notes on scientific methods and internal-process cleanup; no new scientific test or fullreview",
+  "before_sha256": "3d60b4c5fda384381343f60e1aa47a8145c2d4ac848712734861f1853f72bed0",
+  "after_sha256": "ba4a7623781a854b213b7f8e1463fd8cbd44a078c4b43db8a4c9c5ee39c1a0af"
+}

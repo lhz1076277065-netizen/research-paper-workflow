@@ -1,0 +1,57 @@
+{
+  "phase_status": "completed",
+  "stage": "delivery",
+  "completed_tasks": [
+    "uci-wine-alcohol-color"
+  ],
+  "professional_pending_count": 0,
+  "owned_processes": [],
+  "questions": {
+    "Q1": "answered",
+    "Q2": "answered"
+  },
+  "primary_experiments": {
+    "E1": "valid completed formal",
+    "E2": "valid completed formal"
+  },
+  "fits": {
+    "formal_primary": 6,
+    "formal_robustness_including_independentQR": 358,
+    "diagnostic_including_failedpilot": 2,
+    "actual_total_ols_solutions": 366
+  },
+  "command_counts": {
+    "logged_generated_cli_invocations": 74,
+    "logged_generated_cli_rc0": 64,
+    "logged_generated_cli_nonzero": 10,
+    "initial_successful_generated_cli_before_logger": 3,
+    "total_generated_nonhelp_cli_invocations_including_initial3": 77,
+    "boundary": "Does not count help/source reads, shell builders/renderers or individual source function calls. commands.jsonl preserves every logged invocation. Terminal resume returns2 because phasecompleted; not a failed research result."
+  },
+  "capacity_snapshot": {
+    "allowed": true,
+    "reasons": [],
+    "limit_bytes": 200000000000,
+    "downloaded_bytes": 21884,
+    "project_bytes": 11158227,
+    "free_bytes": 549019852800,
+    "reserve_bytes": 10000000000,
+    "transfer_remaining_bytes": 199999978116,
+    "preplan_download_bytes": null,
+    "accounting_scope": "managed and explicitly recorded transfers since the first plan; unknown history is not zero"
+  },
+  "token_meter": "unknown; exact host token meter unavailable and phaseusage null",
+  "actual_user_total_budget": "not supplied; stage durations agent plans",
+  "paper_word_count_including_references_and_captions": 1694,
+  "exports": {
+    "docx": "wine-association-paper.docx",
+    "pdf": "wine-association-paper.pdf",
+    "pages": 5,
+    "md": "manuscript-delivery.md",
+    "matching_render_source_sha256": "ba4a7623781a854b213b7f8e1463fd8cbd44a078c4b43db8a4c9c5ee39c1a0af"
+  },
+  "frozen_at_utc": "2026-10-17T18:59:49.835227+00:00",
+  "scientific_validity_certified_by_tool": false,
+  "human_externalreview_status": "unverified, unperformed",
+  "no_install_publish": "No Skill install, sourcecache edits, repo source edits, other researchproject/chat reads or publication by this agent."
+}

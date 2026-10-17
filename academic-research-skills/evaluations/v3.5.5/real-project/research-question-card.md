@@ -1,0 +1,12 @@
+# Research Question Card and feasibility
+What: the recorded association between alcohol and color intensity in 178 UCI Wine observations. Why: pooled and class-conditioned relationships may differ, so both are required for interpretation. Who: scientific readers without project background. When/where: the historical Italian wine dataset; acquisition date is a provenance date, not collection date. How: complete-data descriptive correlations and regression.
+
+Q1 asks overall direction/magnitude. Q2 asks consistency within cultivar classes and after class adjustment. No direction is prescribed. Working possibilities are positive, near-zero, or negative overall association, and concordant or discordant within-class associations. These are alternative descriptions, not causal hypotheses.
+
+Current evidence: the task identifies the official UCI Wine dataset; its documentation and records have not yet been retrieved in this project. Missing evidence: official dataset/dictionary/metadata, complete parsing, actual fits, robustness and resulting figures. Support/falsification: a pooled pattern will be qualified if within-class or adjusted estimates differ; confidence intervals are model-based descriptive sensitivity summaries rather than population inference. Invalid/incomplete data triggers repair, never a zero-result conclusion.
+
+Minimal next action: design complete official-source acquisition and analysis before fitting. Feasibility gate: fixed questions and modest public dataset support a small reproducible descriptive study; no novelty or broad literature gap is claimed. Official documentation will be the nearest factual source and regression documentation will establish method implementation. No proposal to infer causality is authorized.
+
+Resource plan: existing Python runtime, under 1 MB dataset, up to 5 MB official metadata/reference transfers, under 100 MB project peak for exports, figures and receipts. Initial 45-minute feasibility assessment is an agent plan, not a user hard budget; subsequent stages can be reassessed. Exact host token usage is unknown. Next stages: design (15 planned minutes), data (15), research (20), manuscript/export (25), delivery (5); these are adjustable plans.
+
+Readiness: proceed with explicit dataset documentation uncertainty and no human/external review representation. Optional Zotero/superpowers integrations are replaced by local evidence records under the documented host adaptation; no external messages are needed.

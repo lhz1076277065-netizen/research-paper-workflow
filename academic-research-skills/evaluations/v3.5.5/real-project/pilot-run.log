@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project/diagnostic_pilot.py", line 18, in <module>
+    (P/'pilot-results.json').write_text(json.dumps({'purpose':'diagnostic only, not formal results','n':len(d),'pooled_r':r,'slope_lstsq':float(b[1]),'slope_centered_formula':direct,'agreement_abs':abs(float(b[1])-direct),'fit_count':1,'source_helper_import_returncode':r.returncode,'next':'Run formal models under formal source receipt, then independent robustness; runtime alternative verified.'},indent=2))
+                                                                                                                                                                                                                                                                              ^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'returncode'

@@ -2,7 +2,7 @@
 name: analysis-execution
 description: "实施科研分析、推导或计算，保存真实结果与失败。"
 metadata:
-  version: "3.5.4"
+  version: "3.5.5"
 ---
 
 # 计算研究与发现循环
@@ -17,4 +17,4 @@ metadata:
 
 只读本步必要资源，[协议](references/protocol.md)按需。长任务/显式预算用[阶段控制](references/phase-control.md)续接原预算；局部无预算的阶段脚本是可选工具，不作为日常前置。
 
-按[研究单元](references/autonomous-work.md)续接、复核和自主重排。
+按[研究约定](references/research-alignment.md)保留原问题与全部主要实验；[研究单元](references/autonomous-work.md)按需续接。

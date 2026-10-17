@@ -1,0 +1,1258 @@
+{
+  "schema_version": "1.0",
+  "numeric_facts": [
+    {
+      "fact_id": "N001",
+      "concept": "Record count",
+      "section": "Abstract",
+      "value": 178,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E002",
+        "E003",
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N002",
+      "concept": "Record count",
+      "section": "Methods",
+      "value": 178,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E002",
+        "E003",
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N003",
+      "concept": "Record count",
+      "section": "Table 1",
+      "value": 178,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E002",
+        "E003",
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N004",
+      "concept": "Pooled Pearson r",
+      "section": "Abstract",
+      "value": 0.546,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N005",
+      "concept": "Pooled Pearson r",
+      "section": "Results",
+      "value": 0.546,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N006",
+      "concept": "Pooled Pearson r",
+      "section": "Table 1",
+      "value": 0.546,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N007",
+      "concept": "Pooled Spearman rho",
+      "section": "Abstract",
+      "value": 0.635,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N008",
+      "concept": "Pooled Spearman rho",
+      "section": "Results",
+      "value": 0.635,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N009",
+      "concept": "Pooled Spearman rho",
+      "section": "Table 1",
+      "value": 0.635,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N010",
+      "concept": "Pooled slope",
+      "section": "Abstract",
+      "value": 1.56,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N011",
+      "concept": "Pooled slope",
+      "section": "Results",
+      "value": 1.56,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N012",
+      "concept": "Pooled slope",
+      "section": "Table 1",
+      "value": 1.56,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N013",
+      "concept": "Pooled HC3 lower",
+      "section": "Abstract",
+      "value": 1.246,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N014",
+      "concept": "Pooled HC3 lower",
+      "section": "Results",
+      "value": 1.246,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N015",
+      "concept": "Pooled HC3 lower",
+      "section": "Table 1",
+      "value": 1.246,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N016",
+      "concept": "Pooled HC3 upper",
+      "section": "Abstract",
+      "value": 1.875,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N017",
+      "concept": "Pooled HC3 upper",
+      "section": "Results",
+      "value": 1.875,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N018",
+      "concept": "Pooled HC3 upper",
+      "section": "Table 1",
+      "value": 1.875,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N019",
+      "concept": "Adjusted common slope",
+      "section": "Abstract",
+      "value": 0.94,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N020",
+      "concept": "Adjusted common slope",
+      "section": "Results",
+      "value": 0.94,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N021",
+      "concept": "Adjusted HC3 lower",
+      "section": "Abstract",
+      "value": 0.492,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N022",
+      "concept": "Adjusted HC3 lower",
+      "section": "Results",
+      "value": 0.492,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N023",
+      "concept": "Adjusted HC3 upper",
+      "section": "Abstract",
+      "value": 1.389,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N024",
+      "concept": "Adjusted HC3 upper",
+      "section": "Results",
+      "value": 1.389,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N025",
+      "concept": "Class-adjusted partial correlation",
+      "section": "Abstract",
+      "value": 0.319,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N026",
+      "concept": "Class-adjusted partial correlation",
+      "section": "Results",
+      "value": 0.319,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N027",
+      "concept": "Interaction reference p",
+      "section": "Abstract",
+      "value": 0.106,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N028",
+      "concept": "Interaction reference p",
+      "section": "Results",
+      "value": 0.106,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N029",
+      "concept": "Class count",
+      "section": "Methods",
+      "value": 59,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N030",
+      "concept": "Class count",
+      "section": "Table 1",
+      "value": 59,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N031",
+      "concept": "Class Pearson r",
+      "section": "Table 1",
+      "value": 0.408,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N032",
+      "concept": "Class Spearman rho",
+      "section": "Table 1",
+      "value": 0.443,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N033",
+      "concept": "Class slope",
+      "section": "Abstract",
+      "value": 1.094,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N034",
+      "concept": "Class slope",
+      "section": "Table 1",
+      "value": 1.094,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N035",
+      "concept": "Class HC3 lower",
+      "section": "Table 1",
+      "value": 0.423,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N036",
+      "concept": "Class HC3 upper",
+      "section": "Table 1",
+      "value": 1.765,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N037",
+      "concept": "Class count",
+      "section": "Methods",
+      "value": 71,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N038",
+      "concept": "Class count",
+      "section": "Table 1",
+      "value": 71,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N039",
+      "concept": "Class Pearson r",
+      "section": "Table 1",
+      "value": 0.27,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N040",
+      "concept": "Class Spearman rho",
+      "section": "Table 1",
+      "value": 0.257,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N041",
+      "concept": "Class slope",
+      "section": "Abstract",
+      "value": 0.464,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N042",
+      "concept": "Class slope",
+      "section": "Table 1",
+      "value": 0.464,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N043",
+      "concept": "Class HC3 lower",
+      "section": "Table 1",
+      "value": 0.078,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N044",
+      "concept": "Class HC3 upper",
+      "section": "Table 1",
+      "value": 0.85,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N045",
+      "concept": "Class count",
+      "section": "Methods",
+      "value": 48,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N046",
+      "concept": "Class count",
+      "section": "Table 1",
+      "value": 48,
+      "unit": "records",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N047",
+      "concept": "Class Pearson r",
+      "section": "Table 1",
+      "value": 0.35,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N048",
+      "concept": "Class Spearman rho",
+      "section": "Table 1",
+      "value": 0.284,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N049",
+      "concept": "Class slope",
+      "section": "Abstract",
+      "value": 1.527,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N050",
+      "concept": "Class slope",
+      "section": "Table 1",
+      "value": 1.527,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N051",
+      "concept": "Class HC3 lower",
+      "section": "Table 1",
+      "value": 0.295,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N052",
+      "concept": "Class HC3 upper",
+      "section": "Table 1",
+      "value": 2.759,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N053",
+      "concept": "Pooled R squared",
+      "section": "Results",
+      "value": 0.299,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N054",
+      "concept": "Adjusted total-model R squared",
+      "section": "Results",
+      "value": 0.622,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N055",
+      "concept": "Interaction Wald chi squared",
+      "section": "Results",
+      "value": 4.483,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N056",
+      "concept": "Pooled omission minimum",
+      "section": "Results",
+      "value": 1.492,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N057",
+      "concept": "Pooled omission maximum",
+      "section": "Results",
+      "value": 1.604,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N058",
+      "concept": "Adjusted omission minimum",
+      "section": "Results",
+      "value": 0.818,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N059",
+      "concept": "Adjusted omission maximum",
+      "section": "Results",
+      "value": 0.998,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N060",
+      "concept": "Quadratic coefficient",
+      "section": "Results",
+      "value": 0.014,
+      "unit": "recorded color-intensity units per squared recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N061",
+      "concept": "Quadratic HC3 lower",
+      "section": "Results",
+      "value": -0.652,
+      "unit": "recorded color-intensity units per squared recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N062",
+      "concept": "Quadratic HC3 upper",
+      "section": "Results",
+      "value": 0.68,
+      "unit": "recorded color-intensity units per squared recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N063",
+      "concept": "Alcohol raw column",
+      "section": "Methods",
+      "value": 2,
+      "unit": "column index",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E002"
+      ]
+    },
+    {
+      "fact_id": "N064",
+      "concept": "Color-intensity raw column",
+      "section": "Methods",
+      "value": 11,
+      "unit": "column index",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E002"
+      ]
+    },
+    {
+      "fact_id": "N065",
+      "concept": "Pooled Fisher lower",
+      "section": "Results",
+      "value": 0.434,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N066",
+      "concept": "Pooled Fisher upper",
+      "section": "Results",
+      "value": 0.642,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N067",
+      "concept": "Pooled conventional interval lower",
+      "section": "Results",
+      "value": 1.207,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N068",
+      "concept": "Pooled conventional interval upper",
+      "section": "Results",
+      "value": 1.914,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E003"
+      ]
+    },
+    {
+      "fact_id": "N069",
+      "concept": "Adjusted conventional interval lower",
+      "section": "Results",
+      "value": 0.525,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N070",
+      "concept": "Adjusted conventional interval upper",
+      "section": "Results",
+      "value": 1.356,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N071",
+      "concept": "Pooled maximum Cook distance",
+      "section": "Results",
+      "value": 0.099,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N072",
+      "concept": "Adjusted maximum Cook distance",
+      "section": "Results",
+      "value": 0.14,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N073",
+      "concept": "Pooled absolute residual-fitted correlation",
+      "section": "Results",
+      "value": 0.188,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N074",
+      "concept": "Adjusted absolute residual-fitted correlation",
+      "section": "Results",
+      "value": 0.481,
+      "unit": "dimensionless",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N075",
+      "concept": "Raw-file maximum slope discrepancy",
+      "section": "Results",
+      "value": 1.33e-15,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N076",
+      "concept": "Adjusted HC3 standard error discrepancy",
+      "section": "Results",
+      "value": 3.36e-14,
+      "unit": "recorded color-intensity units per recorded alcohol unit",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 178,
+      "analysis_set": "all 178 records",
+      "evidence_ids": [
+        "E006"
+      ]
+    },
+    {
+      "fact_id": "N077",
+      "concept": "Alcohol mean",
+      "section": "Results",
+      "value": 13.745,
+      "unit": "recorded alcohol units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N078",
+      "concept": "Color-intensity mean",
+      "section": "Results",
+      "value": 5.528,
+      "unit": "recorded color-intensity units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 59,
+      "analysis_set": "class 1",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N079",
+      "concept": "Alcohol mean",
+      "section": "Results",
+      "value": 12.279,
+      "unit": "recorded alcohol units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N080",
+      "concept": "Color-intensity mean",
+      "section": "Results",
+      "value": 3.087,
+      "unit": "recorded color-intensity units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 71,
+      "analysis_set": "class 2",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N081",
+      "concept": "Alcohol mean",
+      "section": "Results",
+      "value": 13.154,
+      "unit": "recorded alcohol units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    },
+    {
+      "fact_id": "N082",
+      "concept": "Color-intensity mean",
+      "section": "Results",
+      "value": 7.396,
+      "unit": "recorded color-intensity units",
+      "numerator": null,
+      "denominator": null,
+      "sample_size": 48,
+      "analysis_set": "class 3",
+      "evidence_ids": [
+        "E004"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "method_id": "M001",
+      "name": "Pearson/Fisher-z and Spearman average-tied ranks",
+      "analysis_intent": "descriptive",
+      "protocol_status": "not_applicable",
+      "outcome_ids": [
+        "O001"
+      ]
+    },
+    {
+      "method_id": "M002",
+      "name": "Pooled and class-specific least squares; HC3/conventional normal intervals",
+      "analysis_intent": "descriptive",
+      "protocol_status": "not_applicable",
+      "outcome_ids": [
+        "O001"
+      ]
+    },
+    {
+      "method_id": "M003",
+      "name": "Class-indicator adjustment, class-demeaned correlation and interaction HC3 Wald diagnostic",
+      "analysis_intent": "descriptive",
+      "protocol_status": "not_applicable",
+      "outcome_ids": [
+        "O001"
+      ]
+    },
+    {
+      "method_id": "M004",
+      "name": "Single-record omissions, residual/influence appraisal, common class-centered quadratic and raw-file algebra/QR checks",
+      "analysis_intent": "descriptive",
+      "protocol_status": "not_applicable",
+      "outcome_ids": [
+        "O001"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "result_id": "R001",
+      "method_id": "M001",
+      "outcome_id": "O001",
+      "analysis_intent": "descriptive",
+      "sample_size": 178,
+      "evidence_ids": [
+        "E003",
+        "E004"
+      ],
+      "reported_sections": [
+        "Abstract",
+        "Results",
+        "Table 1"
+      ]
+    },
+    {
+      "result_id": "R002",
+      "method_id": "M002",
+      "outcome_id": "O001",
+      "analysis_intent": "descriptive",
+      "sample_size": 178,
+      "evidence_ids": [
+        "E003",
+        "E004"
+      ],
+      "reported_sections": [
+        "Abstract",
+        "Results",
+        "Table 1"
+      ]
+    },
+    {
+      "result_id": "R003",
+      "method_id": "M003",
+      "outcome_id": "O001",
+      "analysis_intent": "descriptive",
+      "sample_size": 178,
+      "evidence_ids": [
+        "E004"
+      ],
+      "reported_sections": [
+        "Abstract",
+        "Results"
+      ]
+    },
+    {
+      "result_id": "R004",
+      "method_id": "M004",
+      "outcome_id": "O001",
+      "analysis_intent": "descriptive",
+      "sample_size": 178,
+      "evidence_ids": [
+        "E006"
+      ],
+      "reported_sections": [
+        "Results"
+      ]
+    }
+  ]
+}

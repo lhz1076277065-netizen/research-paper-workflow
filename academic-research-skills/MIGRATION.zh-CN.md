@@ -1,4 +1,14 @@
-# v3.5.4 正式版迁移
+# v3.5.5 研究主线与成稿迁移
+
+新完整任务CLI init启用alignment_required；确定科学问题后，用research_commitment.py bind记录真实请求、固定对象/关系/范围、必答问题和完成标准，再进入设计。题目措辞和实现方案可自主调整；方法/实验计划用implementation-reason留版本，改变科学目标须真实的新用户指令。原记录不追溯填造，缺失研究约定或回答状态保持未知。
+
+work_units checkpoint将execution、answer、validity与outcome分开。未运行、失败、无法判断不是可靠零结果；只有实际正式检验与充分证据可以回答问题。全部主要实验的真实结果索引、正文方法/结果/结论定位和现有专业审稿的语义报告共同支持完整交付。审查和润色差异合并进既有专业步骤，不增加重复全稿审批。
+
+phase instruction默认operational，不因进度消息清空科学主线；presentation只影响相关稿件要求。明确的科学变更走研究约定版本，保留请求证据。research_commitment snapshot或phase resume恢复全部必要问题，而非只看最近工作。新函数API的alignment参数默认False以保留旧调用语义，CLI完整任务固定开启；旧状态只有实际获授权续做时才采用新规则，安装本身不重启研究。
+
+professional begin增加purpose=formal|diagnostic（默认formal）及问题ID。诊断仅使用已核验的必要本地数据，不要求其余数据已齐；其收据不能满足正式实验、写稿或最终完成。正式实验依然要求全部必要数据完整落地。预算、200 GB累计下载和项目占用均不重置。
+
+# v3.5.4 本地数据迁移（历史）
 
 新完整实证任务的CLI init --scope full默认workflow=local-data，沿可行性→设计→数据→研究→稿件→交付推进；必要数据齐备后才能本机实验，随后复算、绘图、写作审查与润色，见[完整流程](docs/local-data-workflow.md)。focused局部任务和既有无workflow字段的旧状态保持原范围；函数API默认general以兼容旧调用，采用新流程需显式workflow="local-data"。不要编辑旧状态字段来伪造齐备或重置预算。数据清单绑定真实设计/发现步骤，修订保留历史与容量累计；后续产物必须消费当前前序版本。
 

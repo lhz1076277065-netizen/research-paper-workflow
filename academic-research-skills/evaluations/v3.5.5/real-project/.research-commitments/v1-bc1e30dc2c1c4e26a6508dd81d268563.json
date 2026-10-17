@@ -1,0 +1,65 @@
+{
+  "schema_version": "research-commitment-1",
+  "id": "7f14e0e436b24475adf718b0859382d6",
+  "version": 1,
+  "phase_id": "7a25883373c64fb49d5e6d130cd816f6",
+  "root": "/Users/luca/Documents/ChatGPT/学术skill/validation-v3.5.5-20261018/real-project",
+  "specification": {
+    "path": "contract-v1.json",
+    "sha256": "3f4fdecb24c40a989beae55c382219b1e92621bc70f190d53671fb8b8d90b1dc"
+  },
+  "request": {
+    "path": "request.md",
+    "sha256": "986d405f1513083357f48267d6fbafa737c14c0e60d32f4b17f1271f2fa92225"
+  },
+  "brief": {
+    "path": "brief.md",
+    "sha256": "0d2f0f57408b6d7359cf255c99c23b3f11134ac2d15f6825b1426a7030d03436"
+  },
+  "request_quote": "Study the association between alcohol content and color intensity in the complete official UCI Wine dataset.",
+  "scientific_fingerprint": "5f912182a27d1c0a13680291aedf64d9f1029e0718bf549c104f54b62c11511e",
+  "title": "Alcohol and color intensity in the UCI Wine dataset: overall and cultivar-conditioned associations",
+  "objects": [
+    "178 historical Wine dataset records",
+    "alcohol content",
+    "color intensity",
+    "cultivar class"
+  ],
+  "relationship": "Descriptive association of alcohol content with color intensity overall, within cultivar, and conditional on cultivar.",
+  "scope": "Complete official UCI Wine historical dataset; sample-level descriptive associations only, without causal or population claims.",
+  "completion_criteria": [
+    "Answer Q1 and Q2 with complete official local data and real analyses",
+    "Report primary experiments, robustness, real-result figures and references in a coherent English paper",
+    "Deliver editable Word and actually rendered PDF with scientific review and expression meaning check"
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "What are the direction and magnitude of the overall alcohol–color-intensity association?",
+      "required": true
+    },
+    {
+      "id": "Q2",
+      "text": "Is the association consistent within cultivar classes and after adjusting for class?",
+      "required": true
+    }
+  ],
+  "primary_experiments": [
+    {
+      "id": "E1",
+      "question_ids": [
+        "Q1"
+      ],
+      "purpose": "Estimate overall Pearson r, Spearman rho, and unadjusted OLS slope on all records."
+    },
+    {
+      "id": "E2",
+      "question_ids": [
+        "Q2"
+      ],
+      "purpose": "Estimate class-specific slopes/correlations and the class-adjusted common slope, and examine slope heterogeneity."
+    }
+  ],
+  "implementation_version": 1,
+  "authority_verified_by_tool": false
+}

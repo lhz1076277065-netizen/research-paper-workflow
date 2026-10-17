@@ -1,5 +1,7 @@
 # Start with the current request
 
+Keep the [original scientific commitment](docs/research-alignment.md) stable through recovery and method changes. Connect every required question to an actual test, valid answer and manuscript location. Reliable null or reverse results can complete a paper; failed or unperformed tests cannot. Diagnostic pilots may use verified partial data, while formal experiments still require all necessary local data. The existing professional review checks argument flow and coverage of every main experiment; polishing checks actual semantic changes.
+
 Full empirical studies use the [local-data workflow](docs/local-data-workflow.md): complete plan, acquire every required dataset locally, validate and pilot, run local experiments and robustness, produce figures, write/review, polish and recheck facts. Required official subsets suffice; whole data pools are unnecessary. Mandatory source invocation and the persistent 200 GB limits remain.
 
 Finish maintenance after version/install verification. Route focused writing, reading and figure tasks directly to the matching specialist. Full research uses [the orchestrator](skills/research-paper-workflow/SKILL.md) and [bounded phases](docs/phase-control.md).
@@ -12,7 +14,7 @@ Without an explicit budget, review feasibility after 45 planned minutes and cont
 
 Guard expensive actions and run owned processes through phase_control. Begin/finish register current step paths for recovery; stage exits reject omitted work. Resume latest instructions, current stage, steps, artifacts and next action without resetting budgets or repeating completed maintenance. Local state never substitutes for authorized host-goal management.
 
-v3.5.4 is the current stable release, adding bounded acquisition and compact guidance alongside autonomous recovery and the scientific argument framework. Software verification does not certify scholarly originality or paper completion. See [installation and rollback](INSTALLATION.zh-CN.md).
+v3.5.5 is the current stable release, preserving original questions through recovery and connecting every main experiment to valid answers and coherent manuscript coverage. Software verification does not certify scholarly originality or paper completion. See [installation and rollback](INSTALLATION.zh-CN.md).
 
 Acquisition follows a persistent 200 GB project ceiling for cumulative transfer and local footprint. Plan the peak first, acquire necessary subsets (whole bundles only when unavoidable), handle ordinary authorized access autonomously, and read only current-stage guidance. See [acquisition](docs/data-acquisition.md).
 

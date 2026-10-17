@@ -1,0 +1,3 @@
+# Fixed scientific brief
+Study the association between alcohol content and color intensity in the complete official UCI Wine dataset. Estimate its direction/magnitude overall and assess consistency within and after adjusting for cultivar class. The scope is this historical dataset, descriptive association without causal/population claims.
+Questions Q1 and Q2 must both be answered. Complete case coverage means all 178 records and all 13 recorded predictors are acquired and checked; analysis focuses on alcohol, color intensity and cultivar code. No causal, population, novelty or journal-level claim.

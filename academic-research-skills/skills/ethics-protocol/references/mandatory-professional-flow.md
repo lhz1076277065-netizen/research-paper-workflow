@@ -7,8 +7,8 @@
 ## 必经操作
 
 1. 保存当前请求与真实输入；完整/显式预算任务先登记phase并沿用最新指令/原预算。begin --phase绑定当前阶段；默认自动选已核验入口，stdout精简，完整收据仍存盘，--full可显示全文。必须打开guide_path读取本步相关段和支持文件，不能把返回路径当已读，不能为瘦身跳过专业流程。无需读取全部源码、能力索引或19个Skill。
-2. 按上游流程完成本次范围，把具体条款、实施和输出位置关联。完整研究把现有[四段路线板](research-quality.md#四段科学论证主线)作为输入并回填本步支持/反证/边界；局部任务只记录有关主张。科研资料获取另遵守[容量与访问](data-acquisition.md)。
-3. 写短work-report，finish/check通过才移交下一专业步骤或交付；完整研究出口核对当前全部专业收据。失败先[自主解阻](phase-control.md#自主解阻与继续研究)，不把状态填齐当完成。
+2. 按上游流程完成本次范围，把具体条款、实施和输出位置关联。完整研究把[稳定研究约定与问题ID](research-alignment.md)和当前四段路线板作为输入并回填本步实际检验、支持/反证/边界；局部任务只记录有关主张。科研资料获取另遵守[容量与访问](data-acquisition.md)。
+3. begin默认purpose=formal；数据未齐的已核验部分试跑显式purpose=diagnostic，同样实际调用，不能替代正式结果或阶段出口。区分primary/exploration并关联原问题ID，写短work-report，finish/check通过才移交下一专业步骤或交付；完整研究出口核对当前全部专业收据。失败先[自主解阻](phase-control.md#自主解阻与继续研究)，不把状态填齐当完成。
 
 ```bash
 python3 scripts/professional_flow.py begin --capability topic-novelty --task project/request.md --input project/materials.md --out project/start.json

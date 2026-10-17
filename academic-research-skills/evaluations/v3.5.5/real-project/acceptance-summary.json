@@ -1,0 +1,74 @@
+{
+  "project": "Wine alcohol-color fixed descriptive study",
+  "questions_answered": [
+    "Q1",
+    "Q2"
+  ],
+  "primary_experiments_completed": [
+    "E1",
+    "E2"
+  ],
+  "formal_primary_ols_fits": 6,
+  "formal_robustness_ols_solutions": 358,
+  "formal_total_ols_solutions": 364,
+  "diagnostic_ols_solutions": 2,
+  "actual_total_ols_solutions_including_failed_pilot": 366,
+  "scientific_command_runs": {
+    "pilot_failed": 1,
+    "pilot_success": 1,
+    "formal_main": 1,
+    "formal_robustness": 1
+  },
+  "generated_cli_commands_logged_before_closure": 71,
+  "generated_cli_failures_logged_before_closure": 9,
+  "log_boundary": "commands.jsonl starts at intake finish; initial init/bind/intake-begin three successful generated CLI operations preceded logger, and --help/source-reading shell invocations are not counted here. Every logged command retains exact args/output/returncode.",
+  "professional_steps_completed": 13,
+  "professional_capabilities": 11,
+  "mandatory_pool_repositories_used": 6,
+  "source_function_execution": [
+    "EDA capability_manifest.py inspect and tabular_profile.py",
+    "SciPilot check_figure.py (strict PDFs and300DPI PNGs)",
+    "ScientificWriting check_consistency.py",
+    "Citation _common.citation_key/render_entry/parse_bibtex and format_bibtex.py"
+  ],
+  "source_work_adapted": "All13steps applied actual relevant read source protocol; only4steps have sourcefunctions_run=true. Statistical calculations, robustness, vectorplot creation, argument review and expression were source-guided host adaptations, never claimed as native functions/external/human peerreview.",
+  "results": {
+    "overall_r": 0.5463641950837037,
+    "overall_slope": 1.5602204843456775,
+    "class_slopes": [
+      1.0942886292836191,
+      0.4638521456668164,
+      1.5270454891755658
+    ],
+    "adjusted_slope": 0.940490949856048,
+    "partial_r": 0.3185025813427832
+  },
+  "final_readable_artifacts": [
+    "wine-association-paper.docx",
+    "wine-association-paper.pdf",
+    "manuscript-delivery.md"
+  ],
+  "real_export": "5 pages from actual LibreOffice/Poppler render; final all5PNGs read; editable text/table,3actualresultfigures; manuscript-delivery.md byteidentical to renderedmanuscript-final.md.",
+  "alignment": "Plan/resultindex/primarycheckpoint/coverage/scientificreview/finalexpression quote assessments bound by research_commitment delivery; tool checks not scientific certification.",
+  "real_failures_and_revisions": [
+    "ManagedHTMLguard rejected intentional landingmetadata request; official dictionarylocal plus browserprimarymetadata used.",
+    "Existingraw extractiondirectory refused; used new raw/official and exactcopies.",
+    "Derived-only diagnosticinput and citationrevisionlineage rejected in early build; genuine antecedent/raw retained, parent repaired generatedlineage.",
+    "Runtime optional scipy/statsmodels/matplotlib/requests absent; sourcehelper failures retained; no large installs.",
+    "Initialpilot variable shadowing fixed and rerun; failed fit included in actualcount.",
+    "Figure1initialbottomnoteoverlap removed and visuallyrerendered.",
+    "Wordinheritedblue titleborder removed and genuine rerender.",
+    "Editorialscript initially duplicated reference2 when movingprocedurecitation; scientificnumericassertion caught it, fixed beforefinaldelivery.",
+    "Meaningcoverage rejected uncovered boundaryperiod; actualadjacentreferencequote expanded in narrowamendment; no sciencechanges.",
+    "Attempt to replace completedprofessionalreceipt rejected; preserved oldstep and used actualnewamendment.",
+    "One check --root argument not supported; corrected using actualhelp."
+  ],
+  "limits": [
+    "Historicaldataset only; units,samplingframe,batch/replicatehierarchyandcollectiondatesunsupplied.",
+    "Classslopesdirectionconsistent but notequal; interactiondiagnostic is not equivalence.",
+    "Intervals model-based under unverified independent-error assumptions; no causal/populationcoverage.",
+    "No human authorapproval, externalpeerreview, publication or installation.",
+    "No exacthosttokenmeter; no user hard time/tokenlimit; selfstagebudgets are plans.",
+    "Storage preplan_download_bytes remainsnull bytool; no projectdata existedbeforefirstplan, cachewaspre-existingverifiedandnotduplicated. Web/toolresponse transport bytes are not independently metered bystorage; managed actualdata/refdownloads21884bytes."
+  ]
+}

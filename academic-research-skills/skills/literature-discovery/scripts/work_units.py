@@ -12,7 +12,7 @@ from pathlib import Path
 import sys
 import phase_control as P
 
-VERSION = '3.5.4'
+VERSION = '3.5.5'
 
 def refs(paths, root):
     if not paths: raise P.PhaseError('Supply actual nonempty evidence files')
@@ -21,17 +21,21 @@ def refs(paths, root):
 def identity(rows):
     return hashlib.sha256(json.dumps(rows,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 
-def checkpoint(state, key, claim, next_action, evidence, root, outcome='working'):
+def checkpoint(state, key, claim, next_action, evidence, root, outcome='working',question_ids=None,kind='primary',purpose='formal',execution='working',answer='unanswered',validity='unknown',results=None,experiment_id=None):
     if state['status']!='active': raise P.PhaseError('Checkpoint cannot resume a terminal phase')
     if not all(isinstance(v,str) and v.strip() for v in (key,claim,next_action)):
         raise P.PhaseError('A work unit needs its scientific claim and actual next action')
     if outcome not in {'working','supported','refuted','inconclusive'}:raise P.PhaseError('Unknown scientific outcome')
     rows=refs(evidence,root)
+    import research_commitment as R
+    alignment=R.validate_work(state,question_ids,kind,purpose,execution,answer,validity,results,root,experiment_id)
     units=state.setdefault('work_units',{})
     previous=units.get(key)
     if previous and previous['claim']!=claim:raise P.PhaseError('A changed claim needs a distinct unit, not a rewritten result')
-    unit={'key':key,'claim':claim,'stage':state['stage'],'instruction':state['latest_instruction'],
-        'outcome':outcome,'evidence':rows,'next_action':next_action,'at':P.iso(P.now())}
+    if previous and alignment and any(previous.get(k)!=alignment[k] for k in ('commitment_id','question_ids','experiment_id')):
+        raise P.PhaseError('Keep this work unit tied to its original question and experiment; a different scientific task needs a separate unit')
+    unit={'key':key,'claim':claim,'stage':state['stage'],'instruction':P.instruction_key(state),
+        'outcome':outcome,'evidence':rows,'next_action':next_action,'at':P.iso(P.now()),**alignment}
     units[key]=unit;state['current_unit']=key;state['next_action']=next_action
     state['history'].append({'event':'work_checkpoint',**unit})
     return unit
@@ -50,13 +54,18 @@ def plan(state, key, limit, used, origin, rationale, evidence, root):
     state['history'].append({'event':'resource_plan','previous':old,**row})
     return row
 
-def route(state, key, claim, action, evidence, root, status='ready', estimated_seconds=0):
+def route(state, key, claim, action, evidence, root, status='ready', estimated_seconds=0,question_ids=None,kind='primary'):
     if state['status']!='active':raise P.PhaseError('A route does not reopen a stopped task')
     if not all(x.strip() for x in (key,claim,action)):raise P.PhaseError('A route needs the claim and decisive test')
     if status not in {'ready','testing','failed','useful','external_dependency'}:raise P.PhaseError('Unknown route status')
     P.number(estimated_seconds,'estimated_seconds',True)
+    import research_commitment as R
+    alignment=R.validate_work(state,question_ids,kind,execution='not_run',root=root)
+    old=state.get('routes',{}).get(key)
+    if old and alignment and any(old.get(k)!=alignment[k] for k in ('commitment_id','question_ids')):
+        raise P.PhaseError('A route cannot silently replace the scientific question')
     row={'key':key,'claim':claim,'action':action,'status':status,'estimated_seconds':estimated_seconds,
-        'evidence':refs(evidence,root),'root':str(Path(root).resolve()),'at':P.iso(P.now())}
+        'evidence':refs(evidence,root),'root':str(Path(root).resolve()),'at':P.iso(P.now()),**alignment}
     state.setdefault('routes',{})[key]=row
     state['history'].append({'event':'route_update',**row})
     if status in {'ready','testing'}:state['next_action']=action
@@ -75,7 +84,7 @@ def validate_route_exit(state):
 def review_status(state, unit, paths, root):
     rows=refs(paths,root);fingerprint=identity(rows)
     record=state.get('reviews',{}).get(unit)
-    if record and record['fingerprint']==fingerprint and record['instruction']==state['latest_instruction']:
+    if record and record['fingerprint']==fingerprint and record['instruction']==P.instruction_key(state):
         # Recheck both source receipt and content; an edited receipt is not reusable.
         try:
             checked=check_review(record['started'],record['finished'],rows,root,state)
@@ -91,7 +100,7 @@ def check_review(start, finish, rows, root, state):
     if begun.get('capability') not in {'manuscript-review','robustness-reproducibility','citation-audit'}:
         raise P.PhaseError('A review needs the appropriate source-gated review capability')
     context=begun.get('phase') or {}
-    if context.get('id')!=state['id'] or context.get('latest_instruction')!=state['latest_instruction']:
+    if not P.context_matches(state,context,False):
         raise P.PhaseError('Review belongs to another task or instruction')
     inputs={(str(Path(x['path']).resolve()),x['sha256']) for x in begun['inputs']}
     if any((str((Path(root)/r['path']).resolve()),r['sha256']) not in inputs for r in rows):
@@ -103,7 +112,7 @@ def check_review(start, finish, rows, root, state):
 def review_record(state, unit, paths, root, started, finished):
     rows=refs(paths,root)
     receipt=check_review(started,finished,rows,root,state)
-    record={'unit':unit,'fingerprint':identity(rows),'evidence':rows,'instruction':state['latest_instruction'],
+    record={'unit':unit,'fingerprint':identity(rows),'evidence':rows,'instruction':P.instruction_key(state),
         'started':str(Path(started).resolve()),'finished':str(Path(finished).resolve()),'receipt':receipt}
     state.setdefault('reviews',{})[unit]=record
     state['history'].append({'event':'review_recorded','unit':unit,'fingerprint':record['fingerprint']})
@@ -113,6 +122,7 @@ def adopt(state, authority):
     if not authority.strip():raise P.PhaseError('Record the actual user instruction; this tool grants no permission')
     previous=state.get('workflow_version','unknown')
     state['workflow_version']=VERSION
+    if state['scope']=='full':state['alignment_required']=True
     state['autonomy_instruction']=authority
     state.setdefault('budget_anchor',{'basis':'legacy_unknown','started_at':state.get('started_at'),
         'verified':False})
@@ -131,12 +141,15 @@ def main(argv=None):
         if op=='checkpoint':
             p.add_argument('--claim',required=True);p.add_argument('--next-action',required=True)
             p.add_argument('--outcome',default='working')
+            p.add_argument('--question-id',action='append');p.add_argument('--experiment-id');p.add_argument('--kind',choices=['primary','supporting','exploration'],default='primary');p.add_argument('--purpose',choices=['formal','diagnostic'],default='formal')
+            p.add_argument('--execution',choices=['not_run','working','completed','failed'],default='working');p.add_argument('--answer',choices=['unanswered','answered','inconclusive'],default='unanswered');p.add_argument('--validity',choices=['unknown','valid','invalid'],default='unknown');p.add_argument('--result',action='append')
         elif op=='plan':
             p.add_argument('--limit',type=float,required=True);p.add_argument('--used',type=float,default=0)
             p.add_argument('--origin',choices=['agent','user','provider'],default='agent');p.add_argument('--rationale',required=True)
         elif op=='route':
             p.add_argument('--claim',required=True);p.add_argument('--action',required=True)
             p.add_argument('--status',default='ready');p.add_argument('--estimated-seconds',type=float,default=0)
+            p.add_argument('--question-id',action='append');p.add_argument('--kind',choices=['primary','supporting','exploration'],default='primary')
         elif op=='review-record':p.add_argument('--started',required=True);p.add_argument('--finished',required=True)
     a=ap.parse_args(argv)
     try:
@@ -144,9 +157,9 @@ def main(argv=None):
             s=P.load(a.state)
             if s.get('schema_version')!='research-phase-1':raise P.PhaseError('Unknown legacy schema; retain the original record')
             if a.op=='adopt':r=adopt(s,a.authority)
-            elif a.op=='checkpoint':r=checkpoint(s,a.key,a.claim,a.next_action,a.evidence,a.root,a.outcome)
+            elif a.op=='checkpoint':r=checkpoint(s,a.key,a.claim,a.next_action,a.evidence,a.root,a.outcome,a.question_id,a.kind,a.purpose,a.execution,a.answer,a.validity,a.result,a.experiment_id)
             elif a.op=='plan':r=plan(s,a.key,a.limit,a.used,a.origin,a.rationale,a.evidence,a.root)
-            elif a.op=='route':r=route(s,a.key,a.claim,a.action,a.evidence,a.root,a.status,a.estimated_seconds)
+            elif a.op=='route':r=route(s,a.key,a.claim,a.action,a.evidence,a.root,a.status,a.estimated_seconds,a.question_id,a.kind)
             elif a.op=='review-status':r=review_status(s,a.key,a.evidence,a.root)
             else:r=review_record(s,a.key,a.evidence,a.root,a.started,a.finished)
             if a.op!='review-status':P.save(a.state,s)

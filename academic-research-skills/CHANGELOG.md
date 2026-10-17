@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.5.5 — fixed research questions and coherent evidence-led manuscripts, 2026-10-18
+
+Bind immutable scientific commitments and stable question IDs while allowing autonomous method and presentation revisions. Separate successful execution, valid answers and inconclusive work; preserve all core questions in recovery and distinguish operational steering from scientific changes. Require actual primary-result coverage and source-guided semantic review of manuscript sections, with incremental polishing. Permit bounded partial-data diagnostic work without counting it as formal evidence. Remove publication-height and positive-result prerequisites; preserve fourteen-source invocation, autonomous repair and 200 GB accounting. See the release validation report for observed behavior and limitations.
+
 ## 3.5.4 — complete local-data research flow, 2026-10-13
 
 Bind actual research plans to all required local datasets, official-source selection and streamed integrity/reader checks before local experiments. Sequence robustness, real-result plots, writing/review and final expression. Preserve fourteen-source invocation, autonomous recovery, real budgets and cumulative 200 GB limits. Add missing pinned design support references found by independent real-data evaluation. Regenerate all nineteen standalone skills; preserve focused and historical scopes. See the release report for observed validation and limitations.

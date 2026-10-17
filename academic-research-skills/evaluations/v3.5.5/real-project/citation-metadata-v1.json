@@ -1,0 +1,30 @@
+[
+  {
+    "key": "wine",
+    "raw_source": "sources/wine-datacite.json",
+    "bibliographic_fields": {
+      "author": "Aeberhard, Stefan and Forina, M.",
+      "title": "Wine",
+      "year": "1992",
+      "doi": "10.24432/c5pc7j",
+      "url": "https://doi.org/10.24432/c5pc7j",
+      "howpublished": "UCI Machine Learning Repository"
+    },
+    "human_verification": "unverified",
+    "agent_checked_against": "official UCI landing/dictionary for Wine, arXiv author/date/DOI/version record for Skills"
+  },
+  {
+    "key": "skills",
+    "raw_source": "sources/skills-datacite.json",
+    "bibliographic_fields": {
+      "author": "Kassis, Timothy and Agarwal, Vinayak and He, Yuhuan and Patel, Darshil and Brueckner, Aubrey M.",
+      "title": "Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents",
+      "year": "2026",
+      "doi": "10.48550/arxiv.2609.00065",
+      "url": "https://doi.org/10.48550/arxiv.2609.00065",
+      "howpublished": "arXiv"
+    },
+    "human_verification": "unverified",
+    "agent_checked_against": "official UCI landing/dictionary for Wine, arXiv author/date/DOI/version record for Skills"
+  }
+]

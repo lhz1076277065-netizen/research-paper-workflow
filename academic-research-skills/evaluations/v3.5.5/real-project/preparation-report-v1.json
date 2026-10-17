@@ -1,0 +1,61 @@
+{
+  "rows": 178,
+  "columns": [
+    "class",
+    "alcohol",
+    "malic_acid",
+    "ash",
+    "alcalinity_of_ash",
+    "magnesium",
+    "total_phenols",
+    "flavanoids",
+    "nonflavanoid_phenols",
+    "proanthocyanins",
+    "color_intensity",
+    "hue",
+    "od280_od315",
+    "proline"
+  ],
+  "class_counts": {
+    "1": 59,
+    "2": 71,
+    "3": 48
+  },
+  "missing_cells": 0,
+  "nonfinite_cells": 0,
+  "duplicate_complete_rows": 0,
+  "all_raw_fields_parsed": true,
+  "exclusions": 0,
+  "imputation": false,
+  "train_test_split": "not applicable: descriptive complete fixed dataset",
+  "sampling_unit": "one wine record; replication/batch/independence not documented",
+  "units": "not supplied in official dictionary; use recorded units",
+  "class_names": "numeric codes only, no cultivar name mapping supplied",
+  "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659",
+  "software": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "summaries": {
+    "alcohol": {
+      "count": 178.0,
+      "mean": 13.00061797752809,
+      "std": 0.8118265380058575,
+      "min": 11.03,
+      "25%": 12.362499999999999,
+      "50%": 13.05,
+      "75%": 13.6775,
+      "max": 14.83
+    },
+    "color_intensity": {
+      "count": 178.0,
+      "mean": 5.058089882022472,
+      "std": 2.318285871822413,
+      "min": 1.28,
+      "25%": 3.2199999999999998,
+      "50%": 4.6899999999999995,
+      "75%": 6.2,
+      "max": 13.0
+    }
+  }
+}
