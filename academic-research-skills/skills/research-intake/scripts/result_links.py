@@ -213,6 +213,16 @@ def _precision(*values):
                - min(value.as_tuple().exponent for value in values) + 10)
 
 
+def _unique_json_object(pairs):
+    """Reject ambiguous evidence before the JSON decoder discards duplicate keys."""
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError('Duplicate JSON object key in frozen results: ' + repr(key))
+        result[key] = value
+    return result
+
+
 def _records(path):
     if path.suffix.lower() == '.csv':
         with path.open(encoding='utf-8-sig', newline='') as handle:
@@ -223,7 +233,8 @@ def _records(path):
             if any(None in row or any(v is None for v in row.values()) for row in data):
                 raise ValueError('CSV rows must match header width')
     elif path.suffix.lower() == '.json':
-        data = json.loads(path.read_text(encoding='utf-8-sig'), parse_float=Decimal)
+        data = json.loads(path.read_text(encoding='utf-8-sig'), parse_float=Decimal,
+                          object_pairs_hook=_unique_json_object)
         if isinstance(data, dict) and isinstance(data.get('results'), list):
             data = data['results']
     else:
