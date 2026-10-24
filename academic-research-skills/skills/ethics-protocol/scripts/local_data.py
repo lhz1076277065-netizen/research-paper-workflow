@@ -34,7 +34,8 @@ def input_lineage(state,capability,inputs,purpose='formal'):
                 if row.get('capability')!=cap or row.get('status') not in {'completed','eligible_for_handoff'} or not row.get('finished'):continue
                 begun=P.load(row['started']);ctx=begun.get('phase',{})
                 import professional_flow as F
-                if not F.presentation_current(state,begun):continue
+                try:F.require_current(state,begun)
+                except F.FlowError:continue
                 if begun.get('purpose','formal')!='formal' or not P.context_matches(state,ctx,False) or ctx.get('local_data_id')!=state.get('local_data',{}).get('id'):continue
                 # Citation correction is a legitimate intermediate manuscript
                 # revision only while it still descends from current writing.
@@ -64,7 +65,8 @@ def completed(state,capability,stage=None):
     for row in reversed(eligible):
         begun=P.load(row['started']);context=begun.get('phase',{})
         if begun.get('purpose','formal')!='formal':continue
-        if not F.presentation_current(state,begun):continue
+        try:F.require_current(state,begun)
+        except F.FlowError:continue
         if capability!='research-design' and state.get('local_data') and context.get('local_data_id')!=state['local_data']['id']:
             if capability!='data-discovery' or not planned_by(state,begun):continue
         if P.context_matches(state,context,False):
@@ -163,6 +165,7 @@ def source(state,dataset,metadata,selection,started,finished,publisher,version,u
     begun=P.load(started);done=P.load(finished);context=begun.get('phase',{})
     if begun.get('capability')!='data-discovery' or not P.context_matches(state,context,False) or (context.get('local_data_id')!=d['id'] and not planned_by(state,begun)):
         raise DataError('Use this study’s actual data-discovery professional receipt')
+    F.require_current(state,begun)
     F.check(P.load(C.index_path()),begun,done)
     rows=[ref(root,metadata),ref(root,selection)]
     outputs={(x['path'],x['sha256']) for x in done['outputs']}
@@ -216,6 +219,7 @@ def external_inspection(state,started,finished):
     context=begun.get('phase',{})
     if begun.get('capability')!='data-preparation' or not P.context_matches(state,context,False) or context.get('local_data_id')!=d['id']:
         raise DataError('Use the actual format reader’s data-preparation receipt')
+    F.require_current(state,begun)
     F.check(P.load(C.index_path()),begun,done)
     inputs={(x['path'],x['sha256']) for x in begun['inputs']}
     bound=[]
@@ -304,6 +308,8 @@ def diagnostic_ready(state,capability,inputs,refresh=False):
             if row.get('capability')!='data-preparation' or not row.get('finished') or row.get('status') not in {'completed','eligible_for_handoff'}:continue
             begun=P.load(row['started']);done=P.load(row['finished']);context=begun.get('phase',{})
             if not P.context_matches(state,context,False) or context.get('local_data_id')!=d['id']:continue
+            try:F.require_current(state,begun)
+            except F.FlowError:continue
             if not actual_refs.intersection((x['path'],x['sha256']) for x in done['outputs']):continue
             F.check(P.load(C.index_path()),begun,done)
             prepared_inputs={x['path'] for x in begun['inputs']}

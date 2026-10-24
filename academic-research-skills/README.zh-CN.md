@@ -1,4 +1,6 @@
-# Academic Research Skills · v3.5.5
+# Academic Research Skills · v3.5.6
+
+v3.5.6修复语言、科学目标和方法变更后的旧成果误用，支持按实验范围精确失效，并减少恢复时重复校验。
 
 按[稳定研究约定](docs/research-alignment.md)保留原始问题、目标范围和全部必答问题：方法与解释可改，固定科学目标不漂移。“问题→实际检验→有效答案→正文”逐项对应；可靠零结果和反向结果可成稿，未检验/失败不冒充答案。允许已核验部分数据先做显式诊断，正式实验仍需全部必要本地数据。现有专业审稿合并核对全文连贯性和全部主要实验，润色对照实际差异核含义。
 
@@ -12,7 +14,7 @@
 
 未给预算以45分钟为首次可行性复评计划，随后自主安排；已有预算从真实请求起点沿用。必要实验必须能改变核心判断，两次不同修复或两轮无信息增量触发Agent自主诊断、比较方案、最小验证并继续；阶段计划可在原总预算内重排。单路线失败不关闭完整目标；证据足够即可成稿，已验证路径耗尽或真实授权边界才交付障碍。恢复沿用最新指令、当前主线、关键证据及步骤，不重置预算或重复维护。局部写作只处理请求涉及的主张，不扩为新研究。
 
-当前正式版为[v3.5.5](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.5.5)，提供[一键安装包](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.5/academic-research-skills-v3.5.5-one-click.zip)和[SHA256](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.5/academic-research-skills-v3.5.5-SHA256SUMS.txt)，见[改动与验收范围](docs/RELEASE-v3.5.5.zh-CN.md)。历史[v3.5.0正式版与下载](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.5.0) · [版本与14来源导航](docs/RELEASE-v3.5.0.zh-CN.md) · [更新日志](CHANGELOG.md) · [迁移](MIGRATION.zh-CN.md) · [兼容性](docs/COMPATIBILITY.zh-CN.md)。运行包、源码包和一键包绑定同一发布提交，支持可回退安装；历史v3.4.1保留不变。验收档案随源码包提供，历史14来源集成保留在rc.1/rc.2。
+当前正式版为[v3.5.6](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.5.6)，提供[一键安装包](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.6/academic-research-skills-v3.5.6-one-click.zip)和[SHA256](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/download/v3.5.6/academic-research-skills-v3.5.6-SHA256SUMS.txt)，见[改动与验收范围](docs/RELEASE-v3.5.6.zh-CN.md)。历史[v3.5.0正式版与下载](https://github.com/lhz1076277065-netizen/research-paper-workflow/releases/tag/v3.5.0) · [版本与14来源导航](docs/RELEASE-v3.5.0.zh-CN.md) · [更新日志](CHANGELOG.md) · [迁移](MIGRATION.zh-CN.md) · [兼容性](docs/COMPATIBILITY.zh-CN.md)。运行包、源码包和一键包绑定同一发布提交，支持可回退安装；历史v3.4.1保留不变。验收档案随源码包提供，历史14来源集成保留在rc.1/rc.2。
 
 工具只核对文件、记录和经检查的动作；token严格预算需要可靠宿主计量。源码准备、专业实施与原生函数执行分别报告；工程与小型行为验证不认证原创性、长期研究质量或录用，不能冒称H100训练或完整工作台已通过。原测试会话与课题未被修改或续接。
 

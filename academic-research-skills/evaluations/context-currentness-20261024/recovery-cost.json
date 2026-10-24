@@ -1,0 +1,25 @@
+{
+  "before_artifact_hash_calls_without_work_units_or_routes": {
+    "1_experiment": 10,
+    "8_experiments": 45
+  },
+  "after_with_work_units_and_routes": [
+    {
+      "primary_experiments": 1,
+      "work_units": 1,
+      "routes": 1,
+      "artifact_hash_calls": 4,
+      "experiment_map_builds": 1,
+      "recovered_questions": 1
+    },
+    {
+      "primary_experiments": 8,
+      "work_units": 8,
+      "routes": 8,
+      "artifact_hash_calls": 4,
+      "experiment_map_builds": 1,
+      "recovered_questions": 8
+    }
+  ],
+  "cross_call_cache": false
+}

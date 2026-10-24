@@ -12,7 +12,7 @@ from pathlib import Path
 import sys
 import phase_control as P
 
-VERSION = '3.5.5'
+VERSION = '3.5.6'
 
 def refs(paths, root):
     if not paths: raise P.PhaseError('Supply actual nonempty evidence files')
@@ -72,7 +72,9 @@ def route(state, key, claim, action, evidence, root, status='ready', estimated_s
     return row
 
 def validate_route_exit(state):
-    rows=list(state.get('routes',{}).values())
+    import research_commitment as R
+    binding=R.check_context(state)
+    rows=[r for r in state.get('routes',{}).values() if R.work_current(binding,r)]
     if not rows:raise P.PhaseError('Record actual candidate tests before closing the whole route; a missing-file audit is insufficient')
     if any(x['status'] in {'ready','testing'} for x in rows):
         raise P.PhaseError('A candidate test remains actionable; continue it rather than close the task')
@@ -102,6 +104,7 @@ def check_review(start, finish, rows, root, state):
     context=begun.get('phase') or {}
     if not P.context_matches(state,context,False):
         raise P.PhaseError('Review belongs to another task or instruction')
+    F.require_current(state,begun)
     inputs={(str(Path(x['path']).resolve()),x['sha256']) for x in begun['inputs']}
     if any((str((Path(root)/r['path']).resolve()),r['sha256']) not in inputs for r in rows):
         raise P.PhaseError('Review must actually consume every file in this review unit')

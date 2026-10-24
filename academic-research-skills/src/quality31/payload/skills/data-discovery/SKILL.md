@@ -2,7 +2,7 @@
 name: data-discovery
 description: "定位并按需获取科研资料，核覆盖、访问和容量。"
 metadata:
-  version: "3.5.5"
+  version: "3.5.6"
 ---
 
 # 支持研究问题的数据与材料获取

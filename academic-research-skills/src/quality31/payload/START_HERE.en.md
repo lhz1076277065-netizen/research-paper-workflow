@@ -14,7 +14,7 @@ Without an explicit budget, review feasibility after 45 planned minutes and cont
 
 Guard expensive actions and run owned processes through phase_control. Begin/finish register current step paths for recovery; stage exits reject omitted work. Resume latest instructions, current stage, steps, artifacts and next action without resetting budgets or repeating completed maintenance. Local state never substitutes for authorized host-goal management.
 
-v3.5.5 is the current stable release, preserving original questions through recovery and connecting every main experiment to valid answers and coherent manuscript coverage. Software verification does not certify scholarly originality or paper completion. See [installation and rollback](INSTALLATION.zh-CN.md).
+v3.5.6 is the current stable release, preserving original questions through recovery and connecting every main experiment to valid answers and coherent manuscript coverage. Software verification does not certify scholarly originality or paper completion. See [installation and rollback](INSTALLATION.zh-CN.md).
 
 Acquisition follows a persistent 200 GB project ceiling for cumulative transfer and local footprint. Plan the peak first, acquire necessary subsets (whole bundles only when unavoidable), handle ordinary authorized access autonomously, and read only current-stage guidance. See [acquisition](docs/data-acquisition.md).
 

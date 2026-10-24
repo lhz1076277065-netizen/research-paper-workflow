@@ -2,7 +2,7 @@
 name: research-paper-workflow
 description: "自动科研总控：选题、实验与论文，必调来源、自主解阻和预算；维护不启动研究。"
 metadata:
-  version: "3.5.5"
+  version: "3.5.6"
 ---
 
 # 固定问题到真实论文
