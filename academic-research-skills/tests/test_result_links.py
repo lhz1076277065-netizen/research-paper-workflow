@@ -3,6 +3,7 @@
 Run: python3 -m unittest discover -s tests -p test_result_links.py
 """
 import copy
+from decimal import Decimal
 import hashlib
 import importlib.util
 import json
@@ -98,6 +99,68 @@ class Links(unittest.TestCase):
         result = self.result()
         self.assertTrue(result['passed'], result)
         self.assertEqual(len(result['coverage']['numeric']), 3)
+
+    def test_duplicate_json_keys_fail_closed_at_every_result_level(self):
+        record = json.dumps(self.record)
+        identified = json.dumps(dict(self.record, result_id='R1'))
+        cases = {
+            'result id': '{"R1": ' + json.dumps(dict(self.record, value=.999)) + ', "R1": ' + record + '}',
+            'numeric field': '{"R1": ' + record.replace('"value": 0.123456', '"value": 0.999, "value": 0.123456') + '}',
+            'nested semantics': '{"R1": ' + record[:-1] + ', "semantics": {"unit": "mg", "unit": "ratio"}}}',
+            'record identity': '[' + identified.replace('"result_id": "R1"', '"result_id": "discarded", "result_id": "R1"') + ']',
+            'results wrapper': '{"results": [], "results": [' + identified + ']}',
+            'identical duplicate': '{"R1": ' + record + ', "R1": ' + record + '}',
+        }
+        for label, content in cases.items():
+            with self.subTest(level=label):
+                (self.root / 'results.json').write_text(content)
+                self.payload['sources'] = [self.source()]
+                result = self.result()
+                self.assertFalse(result['passed'], result)
+                self.assertIn('Duplicate JSON object key', str(result['errors']))
+
+    def test_duplicate_json_keys_are_rejected_before_building_links(self):
+        record = json.dumps(self.record)
+        (self.root / 'results.json').write_text('{"R1": ' + record + ', "R1": ' + record + '}')
+        with self.assertRaisesRegex(ValueError, 'Duplicate JSON object key.*R1'):
+            audit.build_links(self.root, [self.source()], [{
+                'path': 'draft.md', 'result_id': 'R1', 'role': 'body', 'locator': {'line': 1}}])
+
+    def test_duplicate_json_keys_in_recomputation_are_rejected(self):
+        record = json.dumps(self.record)
+        (self.root / 'recomputed.json').write_text('{"R1": ' + record.replace(
+            '"value": 0.123456', '"value": 0.999, "value": 0.123456') + '}')
+        self.payload['sources'].append(dict(self.artifact('recomputed.json'), id='recomputed'))
+        self.payload['links'][0]['source_id'] = 'frozen'
+        self.payload['links'][0]['numeric'][0]['recomputed'] = {'source_id': 'recomputed'}
+        result = self.result()
+        self.assertFalse(result['passed'], result)
+        self.assertIn('Duplicate JSON object key', str(result['errors']))
+
+    def test_unique_json_keys_keep_decimal_precision_and_independent_records(self):
+        (self.root / 'results.json').write_text(
+            '{"results": [{"result_id": "R1", "value": 0.12345678901234567890123456789}, '
+            '{"result_id": "R2", "value": 0.2}]}')
+        records = audit._records(self.root / 'results.json')
+        self.assertEqual(set(records), {'R1', 'R2'})
+        self.assertIsInstance(records['R1']['value'], Decimal)
+        self.assertEqual(records['R1']['value'], Decimal('0.12345678901234567890123456789'))
+        self.assertEqual(records['R2']['value'], Decimal('0.2'))
+
+    def test_provider_cli_reports_duplicate_json_keys_without_traceback(self):
+        record = json.dumps(self.record)
+        (self.root / 'results.json').write_text('{"R1": ' + record + ', "R1": ' + record + '}')
+        self.payload['sources'] = [self.source()]
+        (self.root / 'payload.json').write_text(json.dumps(self.payload))
+        (self.root / 'registry.json').write_text('{"providers": []}')
+        result = subprocess.run([sys.executable, '-S', '-B', str(ROOT / 'src/common/scripts/provider_runtime.py'),
+            '--registry', str(self.root / 'registry.json'), 'audit', '--input', str(self.root / 'payload.json'),
+            '--root', str(self.root)], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2, result.stderr)
+        report = json.loads(result.stdout)
+        self.assertFalse(report['passed'])
+        self.assertIn('Duplicate JSON object key', str(report['errors']))
+        self.assertNotIn('Traceback', result.stderr)
 
     def test_interval_endpoints_cannot_hide_unchecked_estimate(self):
         self.edit('12.35%', '99.00%')
