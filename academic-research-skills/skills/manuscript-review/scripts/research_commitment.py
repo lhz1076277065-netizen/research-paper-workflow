@@ -16,10 +16,13 @@ import sys
 import uuid
 import artifact_io as A
 
-VERSION = '3.5.5'
+VERSION = '3.5.6'
 SCIENCE = ('objects','relationship','scope','completion_criteria','questions')
 ANSWER_STATES = {'unanswered','answered','inconclusive'}
 EXECUTION_STATES = {'not_run','working','completed','failed'}
+METHOD_CAPABILITIES = {'research-design','analysis-execution','robustness-reproducibility',
+    'scientific-visualization','manuscript-writing','citation-audit','manuscript-review',
+    'final-expression','submission-packaging'}
 
 class CommitmentError(ValueError): pass
 
@@ -29,14 +32,19 @@ def _text(value, name):
 
 def _load(path):return json.loads(Path(path).read_text(encoding='utf-8'))
 
-def _ref(root, path):
+def _ref(root, path, digests=None):
     root=Path(root).resolve();p=(root/path).resolve()
     if not p.is_relative_to(root) or not p.is_file() or not p.stat().st_size:
         raise CommitmentError('Missing, empty or outside-project research artifact: '+str(path))
-    return {'path':str(p.relative_to(root)),'sha256':A.digest(p)}
+    stat=p.stat();key=(str(p),stat.st_ino,stat.st_size,stat.st_mtime_ns)
+    if digests is None: digest=A.digest(p)
+    else:
+        if key not in digests:digests[key]=A.digest(p)
+        digest=digests[key]
+    return {'path':str(p.relative_to(root)),'sha256':digest}
 
-def _verify(root, row):
-    if _ref(root,row['path'])!=row:raise CommitmentError('Research artifact changed; preserve and version it: '+row['path'])
+def _verify(root, row, digests=None):
+    if _ref(root,row['path'],digests)!=row:raise CommitmentError('Research artifact changed; preserve and version it: '+row['path'])
 
 def _identity(value):
     return hashlib.sha256(json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()
@@ -147,25 +155,92 @@ def bind(state,root,specification,request,brief,request_quote,science_revision=F
     state.pop('research_results',None);state.pop('research_delivery',None)
     state.setdefault('history',[]).append({'event':'research_implementation_revised' if same_science else 'research_commitment_revised' if old else 'research_commitment_bound',
         'id':row['id'],'version':version,'request':request_ref,'request_quote':quote})
+    if old:
+        import phase_control as P
+        for step in state.get('professional_pending',[]):
+            if step['status']=='cancelled':continue
+            # Completed method receipts remain available for verification of an
+            # unchanged individual experiment. New science supersedes them all.
+            if same_science:
+                if step['status']!='started':continue
+                begun=_load(step['started'])
+                if step_current(binding,begun):continue
+            previous=dict(step)
+            step.update(status='cancelled',reason='Superseded by the revised research '+('implementation' if same_science else 'commitment'),evidence=binding['record'])
+            state['history'].append({'event':'professional_cancelled','at':P.iso(P.now()),'previous':previous,**step})
+        current=state.get('work_units',{}).get(state.get('current_unit'))
+        if not same_science or (current and not work_current(binding,current)):
+            state['current_unit']=None
+        if not same_science:state['latest_instruction']=quote
+        state['next_action']='Reassess the '+('affected experimental design' if same_science else 'new scientific commitment')+' and use phase reassess to update the design within the preserved budget'
     return binding
 
 def check_context(state):
     binding=state.get('research_commitment')
     if not binding:return None
-    root=Path(binding['root']);_verify(root,binding['record']);record=_load(root/binding['record']['path'])
+    digests={}
+    root=Path(binding['root']);_verify(root,binding['record'],digests);record=_load(root/binding['record']['path'])
     if record.get('phase_id')!=state['id'] or record.get('schema_version')!='research-commitment-1':
         raise CommitmentError('Research commitment belongs to another task')
     if any(binding.get(k)!=v for k,v in record.items() if k!='title'):
         raise CommitmentError('Research commitment identity changed; recover the immutable record')
-    for key in ('specification','request','brief','presentation'):_verify(root,binding[key])
+    for key in ('specification','request','brief','presentation'):_verify(root,binding[key],digests)
     _,science=_spec(_load(root/binding['presentation']['path']))
     if _science_identity(science)!=record['scientific_fingerprint'] or science['primary_experiments']!=record['primary_experiments']:
         raise CommitmentError('Presentation edit changed the fixed question or implementation; preserve and version the affected plan')
     return binding
 
-def context(state):
-    row=check_context(state)
+def _context(row):
     return {'commitment_id':row['id'],'commitment_version':row['version'],'experiment_fingerprints':_experiment_fingerprints(row)} if row else {}
+
+def context(state):return _context(check_context(state))
+
+def experiment_scope(row,question_ids,experiment_ids=None,whole_plan=False):
+    experiments={e['id']:e for e in row['primary_experiments']}
+    if experiment_ids is not None:
+        if not isinstance(experiment_ids,list) or not experiment_ids or any(not isinstance(x,str) for x in experiment_ids):
+            raise CommitmentError('Supply nonempty known experiment IDs')
+        ids=list(dict.fromkeys(experiment_ids))
+        if not set(ids)<=set(experiments) or any(not set(experiments[x]['question_ids'])<=set(question_ids) for x in ids):
+            raise CommitmentError('Experiment IDs must belong to the selected research questions')
+        if whole_plan and set(ids)!=set(experiments):raise CommitmentError('The full research plan or manuscript must retain all primary experiments')
+        return ids
+    return [e['id'] for e in experiments.values() if whole_plan or set(e['question_ids']).intersection(question_ids)]
+
+def work_current(binding,work,experiment_ids=None,fingerprints=None):
+    """Pure identity/scope comparison, also used by the lightweight recovery view."""
+    if not binding:return not work.get('commitment_id')
+    if work.get('commitment_id')!=binding['id'] or work.get('commitment_version',binding['version'])!=binding['version']:return False
+    current=_experiment_fingerprints(binding) if fingerprints is None else fingerprints
+    saved=work.get('experiment_fingerprints')
+    if work.get('experiment_id'):
+        saved={work['experiment_id']:work.get('experiment_fingerprint')}
+        scope=[work['experiment_id']]
+    elif work.get('whole_plan'):scope=list(set(current)|set(saved or {}))
+    elif 'experiment_ids' in work:scope=work['experiment_ids']
+    else:
+        # Old professional receipts have full maps but no explicit scope.
+        scope=experiment_scope(binding,work.get('question_ids',[q['id'] for q in binding['questions']]))
+        scope=list(set(scope)|(set(saved or {})-set(current)))
+        if not work.get('question_ids'):scope=list(set(current)|set(saved or {}))
+    if experiment_ids is not None:
+        if not set(experiment_ids)<=set(scope):return False
+        scope=experiment_ids
+    return isinstance(saved,dict) and all(eid in current and saved.get(eid)==current[eid] for eid in scope)
+
+def recovery_action(state,binding,fingerprints=None):
+    action=state.get('next_action');unit=state.get('work_units',{}).get(state.get('current_unit'))
+    stale=bool(unit and not work_current(binding,unit,fingerprints=fingerprints))
+    stale=stale or any(r.get('action')==action and not work_current(binding,r,fingerprints=fingerprints) for r in state.get('routes',{}).values())
+    return 'Reassess the current research commitment and affected design within the preserved budget' if stale else action
+
+def step_current(binding,start,experiment_ids=None,fingerprints=None):
+    ctx=start.get('phase') or {}
+    # Dataset/file versions keep their own existing lineage checks. A model
+    # change alone does not require redoing unchanged acquisition or decoding.
+    if experiment_ids is None and 'experiment_ids' not in ctx and start.get('capability') not in METHOD_CAPABILITIES:
+        experiment_ids=[]
+    return work_current(binding,ctx,experiment_ids,fingerprints)
 
 def match_context(state,other):
     row=check_context(state)
@@ -189,7 +264,8 @@ def validate_work(state,question_ids=None,kind='primary',purpose='formal',execut
             raise CommitmentError('Primary experiment identity or its fixed question links changed')
     if answer=='answered' and (execution!='completed' or validity!='valid' or purpose!='formal' or not refs or kind=='exploration'):
         raise CommitmentError('An answer needs a completed, valid formal test with actual results; diagnostics and failure cannot answer the study')
-    return {'commitment_id':row['id'],'question_ids':ids,'kind':kind,'purpose':purpose,
+    return {**_context(row),'experiment_ids':[experiment_id] if experiment_id else experiment_scope(row,ids),
+        'question_ids':ids,'kind':kind,'purpose':purpose,
         'execution_state':execution,'answer_state':answer,'validity':validity,
         'result_refs':refs,'experiment_id':experiment_id,
         'experiment_fingerprint':_experiment_fingerprints(row).get(experiment_id),
@@ -202,23 +278,32 @@ def _require_inputs(root,inputs,rows,what):
     if any((str((Path(root)/x['path']).resolve()),x['sha256']) not in actual for x in rows):
         raise CommitmentError(what+' must actually consume the fixed commitment, plan, result index and complete primary results')
 
-def validate_step(state,capability,inputs,question_ids=None,purpose='formal',kind='primary'):
+def validate_step(state,capability,inputs,question_ids=None,purpose='formal',kind='primary',experiment_ids=None):
     row=check_context(state)
-    if not row:return {'purpose':purpose} if purpose!='formal' else {}
+    if not row:
+        if experiment_ids is not None:raise CommitmentError('Bind the research commitment before selecting experiment IDs')
+        return {'purpose':purpose} if purpose!='formal' else {}
     if purpose not in {'formal','diagnostic'} or kind not in {'primary','supporting','exploration'}:raise CommitmentError('Unknown professional step purpose or work kind')
     ids=list(dict.fromkeys(question_ids if question_ids is not None else [q['id'] for q in row['questions']]))
     if (not ids and kind!='exploration') or not set(ids)<={q['id'] for q in row['questions']}:raise CommitmentError('Professional work must retain known research-question IDs or explicitly identify exploration')
     if capability=='manuscript-writing' and state.get('scope')=='full' and purpose=='formal':
         bound=_results(state)
         _require_inputs(row['root'],inputs,[row['record'],bound['research_plan'],bound['result_index']]+bound['result_refs'],'Full manuscript writing')
-    return {**context(state),'question_ids':ids,'purpose':purpose,'kind':kind}
+    whole=capability=='research-design' or (capability=='manuscript-writing' and state.get('scope')=='full' and purpose=='formal')
+    selected=experiment_scope(row,ids,experiment_ids,whole_plan=whole) if experiment_ids is not None or capability in METHOD_CAPABILITIES else []
+    return {**_context(row),'experiment_ids':selected,'whole_plan':whole,'question_ids':ids,'purpose':purpose,'kind':kind}
+
+def _experiment_units(state,row,fingerprints=None):
+    fingerprints=_experiment_fingerprints(row) if fingerprints is None else fingerprints;latest={}
+    for i,(key,unit) in enumerate(state.get('work_units',{}).items()):
+        eid=unit.get('experiment_id')
+        if unit.get('commitment_id')==row['id'] and eid in fingerprints and unit.get('experiment_fingerprint')==fingerprints[eid]:
+            candidate=(unit.get('at',''),i,key,unit)
+            if eid not in latest or candidate[:2]>latest[eid][:2]:latest[eid]=candidate
+    return {eid:item[2:] for eid,item in latest.items()}
 
 def _latest_experiment_unit(state,experiment):
-    row=check_context(state);fingerprint=_identity(experiment);candidates=[]
-    for i,(key,unit) in enumerate(state.get('work_units',{}).items()):
-        if unit.get('commitment_id')==row['id'] and unit.get('experiment_id')==experiment['id'] and unit.get('experiment_fingerprint')==fingerprint:
-            candidates.append((unit.get('at',''),i,key,unit))
-    return max(candidates,key=lambda x:(x[0],x[1]))[2:] if candidates else (None,None)
+    return _experiment_units(state,check_context(state)).get(experiment['id'],(None,None))
 
 def _source_files(state,capabilities,required,question_ids=None,experiment_id=None,experiment_fingerprint=None):
     """Verify actual outputs of registered formal source work, without judging it."""
@@ -234,6 +319,8 @@ def _source_files(state,capabilities,required,question_ids=None,experiment_id=No
         if experiment_id and ctx.get('experiment_fingerprints',{}).get(experiment_id)!=experiment_fingerprint:continue
         outputs=_inputs(done.get('outputs',[]))
         if not outputs.intersection(wanted):continue
+        try:F.require_current(state,begin,experiment_ids=[experiment_id] if experiment_id else None)
+        except ValueError:continue
         F.check(_load(C.index_path()),begin,done);actual.update(outputs)
         if wanted<=actual:return
     raise CommitmentError('Use the actual current formal source-gated '+ '/'.join(sorted(capabilities))+' outputs; standalone files or checkpoint assertions are insufficient')
@@ -353,6 +440,7 @@ def _professional(state,started,finished,capability):
     begin=_load(started);done=_load(finished);ctx=begin.get('phase') or {}
     if begin.get('capability')!=capability or begin.get('purpose',ctx.get('purpose','formal'))!='formal' or ctx.get('id')!=state['id'] or not match_context(state,ctx):
         raise CommitmentError('Use this study\'s actual formal source-gated '+capability+' receipt')
+    F.require_current(state,begin,experiment_ids=list(_experiment_fingerprints(check_context(state))))
     checked=F.check(_load(C.index_path()),begin,done)
     return begin,done,{'started':str(Path(started).resolve()),'finished':str(Path(finished).resolve()),
         'started_sha256':A.digest(started),'finished_sha256':A.digest(finished),'step_id':checked['step_id']}
@@ -463,7 +551,8 @@ def closure(state):
     return {'status':'covered_by_actual_work_and_review','commitment_id':row['id'],'required_questions':sum(q['required'] for q in row['questions']),
         'primary_experiments':len(row['primary_experiments']),'scientific_validity_certified':False,'semantic_truth_verified_by_tool':False}
 
-def snapshot(state):
+def recovery(state):
+    """One verified agreement and experiment map for the entire recovery view."""
     try:row=check_context(state)
     except (ValueError,OSError,KeyError,TypeError) as error:
         # Preserve the original questions during recovery even when their exact
@@ -477,15 +566,16 @@ def snapshot(state):
                 for q in stored.get('questions',[]) if isinstance(q,dict)],
             'record':stored.get('record'),'artifact_error':str(error),'identity_verified':False,
             'next_action':'Recover the exact missing or changed commitment artifacts while retaining these original questions; do not grant readiness from this unverified copy',
-            'scientific_validity_certified':False}
-    if not row:return {'status':'unknown','reason':'legacy_missing_commitment','questions':[]}
-    units=state.get('work_units',{})
+            'scientific_validity_certified':False},None,{}
+    if not row:return {'status':'unknown','reason':'legacy_missing_commitment','questions':[]},None,{}
+    fingerprints=_experiment_fingerprints(row)
+    units=_experiment_units(state,row,fingerprints)
     questions=[]
     for q in row['questions']:
         experiments=[e for e in row['primary_experiments'] if q['id'] in e['question_ids']]
         statuses=[];answered=[];latest=[]
         for experiment in experiments:
-            key,unit=_latest_experiment_unit(state,experiment)
+            key,unit=units.get(experiment['id'],(None,None))
             status={'id':experiment['id'],'execution_state':unit.get('execution_state','not_run') if unit else 'not_run',
                 'answer_state':unit.get('answer_state','unanswered') if unit else 'unanswered'}
             if unit:
@@ -507,7 +597,9 @@ def snapshot(state):
                 'Execute or repair the planned primary test for '+q['id'])})
     return {'status':'bound','id':row['id'],'version':row['version'],'title':row['title'],'objects':row['objects'],'relationship':row['relationship'],
         'scope':row['scope'],'completion_criteria':row['completion_criteria'],'questions':questions,
-        'record':row['record'],'next_action':state.get('next_action'),'scientific_validity_certified':False}
+        'record':row['record'],'next_action':recovery_action(state,row,fingerprints),'scientific_validity_certified':False},row,fingerprints
+
+def snapshot(state):return recovery(state)[0]
 
 def main(argv=None):
     import phase_control as P

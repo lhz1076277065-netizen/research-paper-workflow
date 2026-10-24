@@ -1,0 +1,27 @@
+{
+  "baseline_commit": "8d191f0",
+  "tests_run": 15,
+  "failures": 11,
+  "errors": 4,
+  "skipped": 0,
+  "failed_cases": [
+    "test_context_currentness.Currentness.test_cli_rejects_old_delivery_without_writing_state",
+    "test_context_currentness.Currentness.test_failed_old_routes_cannot_close_new_science",
+    "test_context_currentness.Currentness.test_legacy_step_uses_question_scope_conservatively",
+    "test_context_currentness.Currentness.test_method_change_blocks_stage_exit_with_old_step",
+    "test_context_currentness.Currentness.test_method_change_prevents_cli_process_launch",
+    "test_context_currentness.Currentness.test_method_change_rejects_finish_and_persist",
+    "test_context_currentness.Currentness.test_new_language_invalidates_cached_review",
+    "test_context_currentness.Currentness.test_new_language_invalidates_direct_closure_and_delivery",
+    "test_context_currentness.Currentness.test_read_only_recovery_filters_preexisting_stale_pointers",
+    "test_context_currentness.Currentness.test_science_revision_removes_old_work_from_recovery_and_preserves_limits",
+    "test_context_currentness.Currentness.test_snapshot_hashes_each_commitment_file_once_independent_of_experiment_count"
+  ],
+  "error_cases": [
+    "test_context_currentness.Currentness.test_cli_accepts_repeated_experiment_ids",
+    "test_context_currentness.Currentness.test_explicit_experiment_scope_preserves_unaffected_running_step",
+    "test_context_currentness.Currentness.test_unknown_or_unrelated_experiment_ids_are_rejected (ids=['unknown'])",
+    "test_context_currentness.Currentness.test_unknown_or_unrelated_experiment_ids_are_rejected (ids=[])"
+  ],
+  "scope": "Isolated receipt, CLI, recovery and file-validation regressions; no original research or installation changes."
+}

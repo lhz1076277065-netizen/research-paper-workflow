@@ -1,0 +1,29 @@
+{
+  "version": "3.5.6",
+  "generated_files": 1325,
+  "generated_drift": [],
+  "root_compatibility_copy_drift": [],
+  "skills_checked": 19,
+  "source": {
+    "repositories": 14,
+    "entries": 23,
+    "file_bindings": 416,
+    "unique_files": 407,
+    "all_verified": true,
+    "network_used": false,
+    "native_or_professional_execution": false
+  },
+  "regression": {
+    "version": "3.5.6",
+    "python": "3.12.14",
+    "tests_run": 887,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true
+  },
+  "compatibility": {
+    "tests_run": 30,
+    "passed": true
+  }
+}

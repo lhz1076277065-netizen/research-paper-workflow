@@ -49,6 +49,20 @@ def context_matches(state, context, stage=True):
         return context['commitment_id']==(state.get('research_commitment') or {}).get('id')
     return context.get('latest_instruction')==state['latest_instruction']
 
+def require_professional_current(state,begun,stage=False):
+    import professional_flow as F
+    try:F.require_current(state,begun,stage=stage)
+    except F.FlowError as error:raise PhaseError(str(error)) from error
+
+def professional_current(state,entry,binding,fingerprints=None):
+    """A view filter; unavailable receipts stay visible for repair, never certified."""
+    import professional_flow as F
+    import research_commitment as R
+    try:begun=load(entry['started'])
+    except (ValueError,OSError,KeyError,TypeError):return True
+    ctx=begun.get('phase') or {}
+    return context_matches(state,ctx,False) and F.presentation_current(state,begun) and R.step_current(binding,begun,fingerprints=fingerprints)
+
 def update_instruction(state, text, kind='operational'):
     if not isinstance(text,str) or not text.strip():
         raise PhaseError('Latest user instruction cannot be empty')
@@ -111,7 +125,7 @@ def init(scope, objective, minutes=None, clock=None, authority=None, started_at=
         'scope':scope, 'objective':objective, 'latest_instruction':objective,
         'status':'active', 'stage':'feasibility' if scope=='full' else scope,
         'started_at':iso(anchor), 'deadline':anchor+duration, 'project_deadline':anchor+duration,
-        'workflow_version':'3.5.5','workflow':workflow,'alignment_required':bool(alignment and scope=='full'), 'budget_anchor':{'started_at':iso(anchor),
+        'workflow_version':'3.5.6','workflow':workflow,'alignment_required':bool(alignment and scope=='full'), 'budget_anchor':{'started_at':iso(anchor),
             'basis':anchor_basis or 'controller_initialization_only','verified':started_at is not None},
         'reserve_seconds':min(300,duration*.1),'reserve_authority':'agent', 'budget_kind':'authorized_total' if authority else 'initial_feasibility' if scope=='full' else 'local_task',
         'authorization':authority, 'token_limit':None, 'token_reserve':0,'token_metric':'input_plus_output','token_reserve_authority':'agent',
@@ -327,7 +341,9 @@ def reassess(state, evidence, root, next_action, blocker=None, minutes=None, sta
         if state['scope']!='full' or current not in stages or stage not in stages or stages.index(stage)>stages.index(current):
             raise PhaseError('Reassessment may return to an earlier full-research stage; it cannot skip forward or expand a focused task')
         if stage!=current:
-            pending=[x for x in state.get('professional_pending',[]) if x['status']!='cancelled']
+            import research_commitment as R
+            binding=R.check_context(state)
+            pending=[x for x in state.get('professional_pending',[]) if x['status']!='cancelled' and professional_current(state,x,binding)]
             if any(x['status']!='completed' or x.get('stage')!=current or not x.get('finished') for x in pending):
                 raise PhaseError('Finish or explicitly cancel current professional steps before changing stage')
             if pending:steps=professional_exit(state,[x['started'] for x in pending],[x['finished'] for x in pending])
@@ -376,19 +392,23 @@ def resume(state, compact=False):
         'budget_kind','reserve_seconds','token_limit','token_reserve','token_metric','meter','professional_steps',
         'professional_pending','stage_started_at','storage','budget_anchor','workflow_version','workflow','local_data','current_unit','budget_authority','reserve_authority','token_reserve_authority','delivery_required','alignment_required','presentation_version')}
     import research_commitment as R
-    result['research_focus']=R.snapshot(state)
+    result['research_focus'],binding,fingerprints=R.recovery(state)
+    focus_valid=result['research_focus']['status']!='needs_recovery'
+    current=state.get('work_units',{}).get(state.get('current_unit'))
+    if current and (not focus_valid or not R.work_current(binding,current,fingerprints=fingerprints)):result['current_unit']=None
+    if 'next_action' in result['research_focus']:result['next_action']=result['research_focus']['next_action']
     if compact:
         for key in ('artifacts','completed_tasks','professional_steps'):
             rows=result.get(key) or [];result[key+'_count']=len(rows);result[key]=rows[-3:]
-        pending=result.get('professional_pending') or []
+        pending=[x for x in (result.get('professional_pending') or []) if professional_current(state,x,binding,fingerprints)] if focus_valid else []
         started=[x for x in pending if x['status']=='started']
         completed=[x for x in pending if x['status']=='completed']
         result['professional_pending_count']=len(started)
         result['professional_completed_unconsumed_count']=len(completed)
         result['professional_pending']=[{k:x.get(k) for k in ('step_id','capability','stage','status','started','finished')} for x in started[:3]]
         result['professional_completed_unconsumed']=[{k:x.get(k) for k in ('step_id','capability','stage','started','finished')} for x in completed[-3:]]
-        result['current_work']=state.get('work_units',{}).get(state.get('current_unit'))
-        routes=list(state.get('routes',{}).values())
+        result['current_work']=current if result['current_unit'] is not None else None
+        routes=[r for r in state.get('routes',{}).values() if R.work_current(binding,r,fingerprints=fingerprints)] if focus_valid else []
         result['ready_routes']=[x for x in routes if x['status'] in {'ready','testing'}][:3]
         result['route_counts']={k:sum(x['status']==k for x in routes) for k in ('ready','testing','failed','useful','external_dependency')}
         result['resource_plans']=state.get('resource_plans',{})
@@ -423,13 +443,18 @@ def reconcile_processes(state):
 
 def register_professional(state, begun, started):
     context=begun.get('phase')
-    if not context_matches(state,context):
-        raise PhaseError('Professional begin belongs to another phase or instruction')
+    require_professional_current(state,begun,stage=True)
     if not guard(state)['allowed']:raise PhaseError('No professional start in a stopped phase')
     if any(x['step_id']==begun['id'] for x in state.get('professional_pending',[])):
         raise PhaseError('Professional step is already registered; resume it')
     for x in state.get('professional_pending',[]):
         if x['status']!='cancelled' and x['stage']==state['stage'] and x.get('scientific_identity',x['latest_instruction'])==instruction_key(state) and x['capability']==begun['capability'] and x.get('purpose','formal')==begun.get('purpose','formal') and x.get('task')==begun['task'] and x.get('inputs')==begun['inputs']:
+            previous=load(x['started'])
+            try:require_professional_current(state,previous,stage=True)
+            except PhaseError:continue
+            prior=previous.get('phase') or {}
+            if prior.get('question_ids')!=context.get('question_ids'):continue
+            if 'experiment_ids' in prior and prior['experiment_ids']!=context.get('experiment_ids'):continue
             raise PhaseError('This professional task already has a current receipt; resume/check '+x['started'])
     state.setdefault('professional_pending',[]).append({'step_id':begun['id'],'capability':begun['capability'],
         'stage':state['stage'],'latest_instruction':state['latest_instruction'],'status':'started',
@@ -438,6 +463,7 @@ def register_professional(state, begun, started):
 
 def register_completion(state, begun, finished):
     if state.get('professional_pending') is None:return # Legacy records remain unknown.
+    require_professional_current(state,begun,stage=True)
     matches=[x for x in state['professional_pending'] if x['step_id']==begun['id']]
     if len(matches)!=1 or matches[0]['status'] not in {'started','completed'}:
         raise PhaseError('No registered current professional step')
@@ -451,14 +477,19 @@ def professional_exit(state, starts, finishes):
     if len(starts)!=len(finishes):raise PhaseError('Every professional step needs its begin/finish pair before this exit')
     import capabilities as C
     import professional_flow as F
+    import research_commitment as R
     index=load(C.index_path());checked=[]
+    binding=R.check_context(state)
+    current_pending=[x for x in state.get('professional_pending',[]) if x['status']!='cancelled' and professional_current(state,x,binding)]
     if not starts:
-        if state['scope']!='full' or state['stage']!='delivery' or 'professional_pending' not in state or any(x['status']!='cancelled' for x in state['professional_pending']):
+        if state['scope']!='full' or state['stage']!='delivery' or 'professional_pending' not in state or current_pending:
             raise PhaseError('Every professional step needs its begin/finish pair before this exit')
-        prior=[x for x in state.get('professional_steps',[]) if x.get('stage')=='manuscript']
+        prior=[x for x in state.get('professional_steps',[]) if x.get('stage')=='manuscript' and professional_current(state,x,binding)]
         last_exit=next((x for x in reversed(state['history']) if x.get('event')=='stage_exit'),{})
         if not prior or last_exit.get('stage')!='manuscript':
             raise PhaseError('Delivery needs a verified completed manuscript stage')
+        if binding and not any(x['capability'] in F.TEXT_CAPABILITIES for x in prior):
+            raise PhaseError('The manuscript steps are superseded; revise the affected text before delivery')
         # Delivery may only collect existing artifacts; it must not repeat their professional work.
         for step in prior:
             start=Path(step['started']).resolve();finish=Path(step['finished']).resolve()
@@ -467,10 +498,9 @@ def professional_exit(state, starts, finishes):
             if any(step.get(k)!=v for k,v in identity.items()):
                 raise PhaseError('Completed manuscript receipt identity is missing or changed')
             begun=json.loads(begun_bytes);context=begun.get('phase',{})
-            if not context_matches(state,context,False) or context.get('stage')!='manuscript':
+            if context.get('stage')!='manuscript':
                 raise PhaseError('Completed manuscript belongs to another phase or instruction')
-            if not F.presentation_current(state,begun):
-                raise PhaseError('Revise the manuscript affected by presentation steering; original data and experiments remain valid')
+            require_professional_current(state,begun)
             result=F.check(index,begun,json.loads(complete_bytes))
             if step!={**result,'stage':'manuscript','started':str(start),'finished':str(finish),**identity}:
                 raise PhaseError('Completed manuscript record changed')
@@ -481,10 +511,7 @@ def professional_exit(state, starts, finishes):
         begun_bytes=start.read_bytes();complete_bytes=finish.read_bytes()
         begun=json.loads(begun_bytes);complete=json.loads(complete_bytes);r=F.check(index,begun,complete)
         context=begun.get('phase')
-        if not context_matches(state,context):
-            raise PhaseError('Professional step is not bound to this phase and latest instruction')
-        if not F.presentation_current(state,begun):
-            raise PhaseError('A text step predates the current presentation request; revise only that affected step')
+        require_professional_current(state,begun,stage=True)
         if r['step_id'] in previous:raise PhaseError('A prior stage receipt cannot complete a new stage')
         previous.add(r['step_id'])
         # Supporting work (e.g. exploratory figures in research, reading during
@@ -495,7 +522,7 @@ def professional_exit(state, starts, finishes):
         checked.append({**r,'stage':state['stage'],'started':str(start),'finished':str(finish),
             'started_sha256':hashlib.sha256(begun_bytes).hexdigest(),'finished_sha256':hashlib.sha256(complete_bytes).hexdigest()})
     if 'professional_pending' in state:
-        pending={x['step_id'] for x in state['professional_pending'] if x['stage']==state['stage'] and x['status']!='cancelled'}
+        pending={x['step_id'] for x in current_pending if x['stage']==state['stage']}
         if {x['step_id'] for x in checked}!=pending:
             raise PhaseError('Stage exit omits a registered professional step or includes an unregistered step')
     return checked
@@ -505,11 +532,12 @@ def consume_professional(state, steps):
     state.setdefault('professional_steps',[]).extend(steps)
     state['professional_pending']=[x for x in state.get('professional_pending',[]) if x['step_id'] not in ids]
 
-def run(state_path, command, log_path, claim, decision, estimate=0, rollout=None):
+def run(state_path, command, log_path, claim, decision, estimate=0, rollout=None,professional_start=None):
     if not command or not claim.strip() or not decision.strip(): raise PhaseError('Command requires its supported claim and decision consequence')
     token=uuid.uuid4().hex
     with locked(state_path):
         state=load(state_path)
+        if professional_start is not None:require_professional_current(state,professional_start,stage=True)
         if rollout: meter_rollout(state,rollout)
         if state['owned_processes']: raise PhaseError('Another phase-owned runner exists; inspect it, do not restart')
         result=enforce(state,estimated_seconds=estimate,storage=True);save(state_path,state)
@@ -600,7 +628,7 @@ def main(argv=None):
                 import local_data as D
                 D.gate(state,started['capability'],refresh=started['capability']=='analysis-execution',purpose=started.get('purpose','formal'),inputs=started['inputs'])
             cmd=args.command[1:] if args.command[:1]==['--'] else args.command
-            result=run(args.state,cmd,args.log,args.claim,args.decision,args.estimated_seconds,args.rollout)
+            result=run(args.state,cmd,args.log,args.claim,args.decision,args.estimated_seconds,args.rollout,started if state['scope']!='maintenance' else None)
             print(json.dumps(result,ensure_ascii=False));return 0 if not result['stop_reasons'] and result['returncode']==0 else 2
         with locked(args.state):
             if args.op=='init':
@@ -654,7 +682,7 @@ def main(argv=None):
                 elif args.op=='reassess':
                     reassess(state,args.evidence,args.root,args.next_action,blocker=args.blocker,minutes=args.minutes,stage=args.stage,authority=args.authority,reserve_seconds=args.reserve_seconds,token_reserve=args.token_reserve)
                 elif args.op=='close':
-                    if args.status=='route_closed' and state.get('workflow_version') in {'3.5.3','3.5.4','3.5.5'} and state['scope']!='maintenance':
+                    if args.status=='route_closed' and state.get('workflow_version') in {'3.5.3','3.5.4','3.5.5','3.5.6'} and state['scope']!='maintenance':
                         import work_units as W
                         W.validate_route_exit(state)
                     if state['owned_processes'] and args.status=='completed':raise PhaseError('Cannot complete with owned work still running')

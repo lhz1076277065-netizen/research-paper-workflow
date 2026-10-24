@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.5.6 — current research context and precise recovery, 2026-10-24
+
+Reject superseded manuscript reviews and deliveries after presentation changes, prevent old scientific work/routes from steering a revised target, and reject superseded methods at process launch and completion. Add repeatable professional-step experiment IDs for precise invalidation while preserving unchanged results and data preparation. Share one verified agreement and experiment index per recovery call. Regenerate nineteen standalone skills; retain existing source gates, budget/capacity accounting, old-record compatibility and reversible installation. See docs/RELEASE-v3.5.6.zh-CN.md.
+
 ## 3.5.5 — fixed research questions and coherent evidence-led manuscripts, 2026-10-18
 
 Bind immutable scientific commitments and stable question IDs while allowing autonomous method and presentation revisions. Separate successful execution, valid answers and inconclusive work; preserve all core questions in recovery and distinguish operational steering from scientific changes. Require actual primary-result coverage and source-guided semantic review of manuscript sections, with incremental polishing. Permit bounded partial-data diagnostic work without counting it as formal evidence. Remove publication-height and positive-result prerequisites; preserve fourteen-source invocation, autonomous repair and 200 GB accounting. See the release validation report for observed behavior and limitations.

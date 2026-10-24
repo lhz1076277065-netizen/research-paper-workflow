@@ -20,9 +20,24 @@ import artifact_io as A
 
 class FlowError(ValueError): pass
 
+TEXT_CAPABILITIES={'manuscript-writing','manuscript-review','final-expression','submission-packaging','citation-audit'}
+
 def presentation_current(state, start):
     version=(start.get('phase') or {}).get('presentation_version')
+    if version is None and start.get('capability') in TEXT_CAPABILITIES:version=0
     return version is None or version==state.get('presentation_version',0)
+
+def require_current(state,start,stage=False,experiment_ids=None):
+    """Current admission is separate from immutable historical receipt checks."""
+    import phase_control as P
+    import research_commitment as R
+    ctx=start.get('phase') or {}
+    if not P.context_matches(state,ctx,stage):raise FlowError('Phase or scientific commitment changed; preserve the old receipt and continue the current task')
+    if not presentation_current(state,start):raise FlowError('Presentation requirements changed; revise the affected text while preserving scientific work')
+    binding=R.check_context(state)
+    if not R.step_current(binding,start,experiment_ids):raise FlowError('Experimental design changed; reassess the affected experiment rather than complete or reuse its old step')
+    if any(x['step_id']==start.get('id') and x['status']=='cancelled' for x in state.get('professional_pending',[])):
+        raise FlowError('Professional step was cancelled; preserve it without completing it')
 
 def ref(path):
     p=Path(path).resolve()
@@ -49,10 +64,7 @@ def persist(receipt, output, started=None):
     with P.locked(context['path']):
         state=P.load(context['path'])
         # Recheck after source preparation; a pause or steering may arrive during it.
-        if not P.context_matches(state,context):
-            raise FlowError('Phase changed before receipt could be saved')
-        if not presentation_current(state,receipt if started is None else started):
-            raise FlowError('Presentation steering arrived before saving the affected text step; preserve scientific work and revise that text')
+        require_current(state,receipt if started is None else started,stage=True)
         if state['status']!='active':raise FlowError('Phase stopped before receipt could be saved')
         if started is None:P.register_professional(state,receipt,output)
         else:P.register_completion(state,started,output)
@@ -61,9 +73,10 @@ def persist(receipt, output, started=None):
 
 def routes(index): return index['professional_routes']
 
-def begin(index, capability, task, inputs, cache, selected=None, allow_network=False, phase=None, profile=None,purpose='formal',question_ids=None,work_kind='primary'):
+def begin(index, capability, task, inputs, cache, selected=None, allow_network=False, phase=None, profile=None,purpose='formal',question_ids=None,work_kind='primary',experiment_ids=None):
     if purpose not in {'formal','diagnostic'}:raise FlowError('Select formal or diagnostic work explicitly')
     if work_kind not in {'primary','supporting','exploration'}:raise FlowError('Unknown scientific work kind')
+    if experiment_ids is not None and not phase:raise FlowError('Experiment IDs need a phase-bound research commitment')
     route=routes(index).get(capability)
     if not route: raise FlowError('No verified professional route; stop this step: '+capability)
     context=None
@@ -72,7 +85,7 @@ def begin(index, capability, task, inputs, cache, selected=None, allow_network=F
         state=P.load(phase)
         if state['scope']=='maintenance' or not P.guard(state)['allowed']:raise FlowError('Research source step is not permitted in this phase')
         context={'path':str(Path(phase).resolve()),'id':state['id'],'stage':state['stage'],'latest_instruction':state['latest_instruction']}
-        if capability in {'manuscript-writing','manuscript-review','final-expression','submission-packaging'}:
+        if capability in TEXT_CAPABILITIES:
             context['presentation_version']=state.get('presentation_version',0)
         if state.get('workflow')=='local-data' and state.get('local_data'):
             context['local_data_id']=state['local_data']['id']
@@ -88,15 +101,19 @@ def begin(index, capability, task, inputs, cache, selected=None, allow_network=F
     if phase:
         import local_data as D
         import research_commitment as R
-        context.update(R.validate_step(state,capability,input_refs,question_ids,purpose,kind=work_kind))
+        context.update(R.validate_step(state,capability,input_refs,question_ids,purpose,kind=work_kind,experiment_ids=experiment_ids))
         D.gate(state,capability,purpose=purpose,inputs=input_refs)
         D.input_lineage(state,capability,input_refs,purpose=purpose)
     if phase:
         cutoff=state['deadline'] if state.get('budget_authority')=='agent' else min(state['deadline'],state['project_deadline']-state['reserve_seconds'])
         def still_current():
             current=P.load(phase)
-            return P.guard(current)['allowed'] and P.context_matches(current,context)
+            if not P.guard(current)['allowed']:return False
+            try:require_current(current,{'phase':context,'capability':capability},stage=True)
+            except ValueError:return False
+            return True
         prepared=C.prepare(cap,cache,allow_network,deadline=cutoff,guard=still_current)
+        if not still_current():raise FlowError('The research context changed during source preparation; preserve it and begin the current step')
     else:prepared=C.prepare(cap,cache,allow_network)
     guide=Path(prepared['entry']).read_text(encoding='utf-8')
     return {'schema_version':'professional-step-1','id':uuid.uuid4().hex,
@@ -128,16 +145,13 @@ def validate_start(index, start, current_phase=True):
     if start.get('phase'):
         context=start['phase'];state=C.load(context['path'])
         import phase_control as P
-        if (current_phase and not P.context_matches(state,context)) or (not current_phase and state['id']!=context['id']):
+        if not current_phase and state['id']!=context['id']:
             raise FlowError('Phase or latest instruction changed; do not reuse an unrelated step')
-        if current_phase and not presentation_current(state,start):
-            raise FlowError('Presentation requirements changed; revise only the affected manuscript step, preserving scientific work')
+        if current_phase:require_current(state,start,stage=True)
         if current_phase and context.get('local_data_id') and context['local_data_id']!=state.get('local_data',{}).get('id'):
             import local_data as D
             if not D.planned_by(state,start):raise FlowError('Required dataset version changed; preserve this receipt and execute the affected step against the revised inputs')
         if current_phase and state.get('status')!='active':raise FlowError('No new professional completion in a stopped phase')
-        if current_phase and any(x['step_id']==start['id'] and x['status']=='cancelled' for x in state.get('professional_pending',[])):
-            raise FlowError('Professional step was cancelled; preserve it without completing it')
     return cap
 
 def finish(index, start, outputs, report, mode, current_phase=True):
@@ -211,6 +225,7 @@ def main(argv=None):
     a.add_argument('--input',action='append',required=True);a.add_argument('--source');a.add_argument('--allow-network',action='store_true')
     a.add_argument('--cache',default=str(Path.home()/'.codex/academic-research-source-cache'));a.add_argument('--phase');a.add_argument('--profile',choices=['focused','full']);a.add_argument('--compact',action='store_true');a.add_argument('--full',action='store_true',help='Include the guide in stdout; complete receipts are always saved');a.add_argument('--out',required=True)
     a.add_argument('--purpose',choices=['formal','diagnostic'],default='formal');a.add_argument('--question-id',action='append');a.add_argument('--work-kind',choices=['primary','supporting','exploration'],default='primary')
+    a.add_argument('--experiment-id',action='append',help='Bind to these primary experiments; repeat for multiple tests of the selected questions')
     a=sub.add_parser('finish');a.add_argument('--started',required=True);a.add_argument('--output',action='append',required=True)
     a.add_argument('--work-report',required=True);a.add_argument('--mode',choices=['adapted_in_host','native_in_host'],default='adapted_in_host');a.add_argument('--out',required=True)
     a=sub.add_parser('check');a.add_argument('--started',required=True);a.add_argument('--finished',required=True)
@@ -218,7 +233,7 @@ def main(argv=None):
     try:
         idx=C.load(a.index)
         if getattr(a,'out',None) and Path(a.out).exists(): raise FlowError('Receipt exists; check/resume it instead of overwriting')
-        if a.op=='begin': r=begin(idx,a.capability,a.task,a.input,a.cache,a.source,a.allow_network,a.phase,a.profile,a.purpose,a.question_id,a.work_kind)
+        if a.op=='begin': r=begin(idx,a.capability,a.task,a.input,a.cache,a.source,a.allow_network,a.phase,a.profile,a.purpose,a.question_id,a.work_kind,a.experiment_id)
         elif a.op=='finish':
             started=C.load(a.started);r=finish(idx,started,a.output,a.work_report,a.mode)
         else:r=check(idx,C.load(a.started),C.load(a.finished))

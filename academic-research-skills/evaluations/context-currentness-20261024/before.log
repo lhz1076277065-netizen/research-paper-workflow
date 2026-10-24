@@ -1,0 +1,155 @@
+test_cli_accepts_repeated_experiment_ids (test_context_currentness.Currentness) ... ERROR
+test_cli_rejects_old_delivery_without_writing_state (test_context_currentness.Currentness) ... FAIL
+test_explicit_experiment_scope_preserves_unaffected_running_step (test_context_currentness.Currentness) ... ERROR
+test_failed_old_routes_cannot_close_new_science (test_context_currentness.Currentness) ... FAIL
+test_legacy_step_uses_question_scope_conservatively (test_context_currentness.Currentness) ... FAIL
+test_method_change_blocks_stage_exit_with_old_step (test_context_currentness.Currentness) ... FAIL
+test_method_change_prevents_cli_process_launch (test_context_currentness.Currentness) ... FAIL
+test_method_change_rejects_finish_and_persist (test_context_currentness.Currentness) ... FAIL
+test_new_language_invalidates_cached_review (test_context_currentness.Currentness) ... FAIL
+test_new_language_invalidates_direct_closure_and_delivery (test_context_currentness.Currentness) ... FAIL
+test_progress_request_preserves_review_and_delivery (test_context_currentness.Currentness) ... ok
+test_read_only_recovery_filters_preexisting_stale_pointers (test_context_currentness.Currentness) ... FAIL
+test_science_revision_removes_old_work_from_recovery_and_preserves_limits (test_context_currentness.Currentness) ... FAIL
+test_snapshot_hashes_each_commitment_file_once_independent_of_experiment_count (test_context_currentness.Currentness) ... FAIL
+test_unknown_or_unrelated_experiment_ids_are_rejected (test_context_currentness.Currentness) ... 
+======================================================================
+ERROR: test_cli_accepts_repeated_experiment_ids (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 147, in test_cli_accepts_repeated_experiment_ids
+    code, _, error = self.cli(F, ['--index', t.index, 'begin', '--capability', 'analysis-execution',
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 27, in cli
+    code = module.main([str(x) for x in args])
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/src/common/scripts/professional_flow.py", line 217, in main
+    a=p.parse_args(argv)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/argparse.py", line 1821, in parse_args
+    self.error(msg % ' '.join(argv))
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/argparse.py", line 2575, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/argparse.py", line 2562, in exit
+    _sys.exit(status)
+SystemExit: 2
+
+======================================================================
+ERROR: test_explicit_experiment_scope_preserves_unaffected_running_step (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 132, in test_explicit_experiment_scope_preserves_unaffected_running_step
+    begun, _ = self.start(experiment_ids=['E1']); self.method_revision('E2')
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 56, in start
+    begun = F.begin(t.idx, 'analysis-execution', t.request, [t.brief], t.cache,
+TypeError: begin() got an unexpected keyword argument 'experiment_ids'
+
+======================================================================
+ERROR: test_unknown_or_unrelated_experiment_ids_are_rejected (test_context_currentness.Currentness) (ids=['unknown'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 156, in test_unknown_or_unrelated_experiment_ids_are_rejected
+    with self.subTest(ids=ids), self.assertRaises(ValueError): self.start(experiment_ids=ids)
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 56, in start
+    begun = F.begin(t.idx, 'analysis-execution', t.request, [t.brief], t.cache,
+TypeError: begin() got an unexpected keyword argument 'experiment_ids'
+
+======================================================================
+ERROR: test_unknown_or_unrelated_experiment_ids_are_rejected (test_context_currentness.Currentness) (ids=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 156, in test_unknown_or_unrelated_experiment_ids_are_rejected
+    with self.subTest(ids=ids), self.assertRaises(ValueError): self.start(experiment_ids=ids)
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 56, in start
+    begun = F.begin(t.idx, 'analysis-execution', t.request, [t.brief], t.cache,
+TypeError: begin() got an unexpected keyword argument 'experiment_ids'
+
+======================================================================
+FAIL: test_cli_rejects_old_delivery_without_writing_state (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 89, in test_cli_rejects_old_delivery_without_writing_state
+    self.assertEqual(code, 2, error); self.assertEqual(t.phase.read_bytes(), before)
+AssertionError: 0 != 2 : 
+
+======================================================================
+FAIL: test_failed_old_routes_cannot_close_new_science (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 184, in test_failed_old_routes_cannot_close_new_science
+    with self.assertRaises(P.PhaseError): W.validate_route_exit(t.state)
+AssertionError: PhaseError not raised
+
+======================================================================
+FAIL: test_legacy_step_uses_question_scope_conservatively (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 143, in test_legacy_step_uses_question_scope_conservatively
+    with self.assertRaises(ValueError): F.finish(t.idx, begun, [output], report, 'adapted_in_host')
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_method_change_blocks_stage_exit_with_old_step (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 128, in test_method_change_blocks_stage_exit_with_old_step
+    P.professional_exit(t.state, [x['started'] for x in rows], [x['finished'] for x in rows])
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_method_change_prevents_cli_process_launch (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 122, in test_method_change_prevents_cli_process_launch
+    self.assertEqual(code, 2, error); self.assertFalse(marker.exists())
+AssertionError: 0 != 2 : 
+
+======================================================================
+FAIL: test_method_change_rejects_finish_and_persist (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 111, in test_method_change_rejects_finish_and_persist
+    with self.assertRaises(ValueError): F.finish(t.idx, begun, [output], report, 'adapted_in_host')
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_language_invalidates_cached_review (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 95, in test_new_language_invalidates_cached_review
+    self.assertFalse(W.review_status(t.state, 'paper', [parts[0]], t.root)['reusable'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_language_invalidates_direct_closure_and_delivery (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 79, in test_new_language_invalidates_direct_closure_and_delivery
+    with self.assertRaises(ValueError): R.closure(t.state)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_read_only_recovery_filters_preexisting_stale_pointers (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 198, in test_read_only_recovery_filters_preexisting_stale_pointers
+    self.assertIsNone(snap['current_work']); self.assertEqual(snap['ready_routes'], [])
+AssertionError: {'key': 'old-test', 'claim': 'Old relationship', 'stage': 'feasibility', 'instruction': '8b5a2ddc62d1483ea8a44e33ddb6bd9f', 'outcome': 'working', 'evidence': [{'path': 'brief.md', 'sha256': '89d9dc0fd0a4c629937795d18a60a4611af571250bef8483a433c54a1c2760be'}], 'next_action': 'Old action', 'at': '2026-10-24T14:53:42.210570+00:00', 'commitment_id': '8b5a2ddc62d1483ea8a44e33ddb6bd9f', 'question_ids': ['Q1'], 'kind': 'primary', 'purpose': 'formal', 'execution_state': 'working', 'answer_state': 'unanswered', 'validity': 'unknown', 'result_refs': [], 'experiment_id': 'E1', 'experiment_fingerprint': '254c1d260cf7b3f1c4b0fb58373a9c22da4211ac393d28b8e1fd4d6a280fd492', 'result_observations': []} is not None
+
+======================================================================
+FAIL: test_science_revision_removes_old_work_from_recovery_and_preserves_limits (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 167, in test_science_revision_removes_old_work_from_recovery_and_preserves_limits
+    self.assertIsNone(snapshot['current_work']); self.assertEqual(snapshot['ready_routes'], [])
+AssertionError: {'key': 'old-test', 'claim': 'Estimate observational association', 'stage': 'feasibility', 'instruction': 'f981f9ccec534a0a877a0ace2d526edd', 'outcome': 'working', 'evidence': [{'path': 'brief.md', 'sha256': '89d9dc0fd0a4c629937795d18a60a4611af571250bef8483a433c54a1c2760be'}], 'next_action': 'Run old fit', 'at': '2026-10-24T14:53:42.215782+00:00', 'commitment_id': 'f981f9ccec534a0a877a0ace2d526edd', 'question_ids': ['Q1'], 'kind': 'primary', 'purpose': 'formal', 'execution_state': 'working', 'answer_state': 'unanswered', 'validity': 'unknown', 'result_refs': [], 'experiment_id': 'E1', 'experiment_fingerprint': '254c1d260cf7b3f1c4b0fb58373a9c22da4211ac393d28b8e1fd4d6a280fd492', 'result_observations': []} is not None
+
+======================================================================
+FAIL: test_snapshot_hashes_each_commitment_file_once_independent_of_experiment_count (test_context_currentness.Currentness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/luca/Documents/ChatGPT/学术skill/iteration-v340-20261004/repository/academic-research-skills/tests/test_context_currentness.py", line 213, in test_snapshot_hashes_each_commitment_file_once_independent_of_experiment_count
+    self.assertTrue(all(count == 1 for count in per_file.values()), per_file)
+AssertionError: False is not true : Counter({'/private/var/folders/_k/kxp7dffs2fdc_rx5l11m75_80000gn/T/tmp561lfdel/scaling-1.json': 4, '/private/var/folders/_k/kxp7dffs2fdc_rx5l11m75_80000gn/T/tmp561lfdel/.research-commitments/v1-9d8f8a56ce534a5cb70b27ebda7c2b31.json': 2, '/private/var/folders/_k/kxp7dffs2fdc_rx5l11m75_80000gn/T/tmp561lfdel/request.md': 2, '/private/var/folders/_k/kxp7dffs2fdc_rx5l11m75_80000gn/T/tmp561lfdel/brief.md': 2})
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.526s
+
+FAILED (failures=11, errors=4)

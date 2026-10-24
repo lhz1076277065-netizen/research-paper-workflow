@@ -2,7 +2,7 @@
 name: citation-audit
 description: "核对稿件引用、原始来源、书目与主张支持关系。"
 metadata:
-  version: "3.5.5"
+  version: "3.5.6"
 ---
 
 # 引用真实性与论断支持核验

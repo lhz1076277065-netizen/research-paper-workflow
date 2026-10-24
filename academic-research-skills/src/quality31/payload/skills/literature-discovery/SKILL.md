@@ -2,7 +2,7 @@
 name: literature-discovery
 description: "检索并筛选论文，建立可追溯的覆盖、近邻和反证。"
 metadata:
-  version: "3.5.5"
+  version: "3.5.6"
 ---
 
 # 检索、筛选与证据地图

@@ -2,7 +2,7 @@
 name: paper-deep-reading
 description: "精读论文的论证、公式和实际图表，核证据与边界。"
 metadata:
-  version: "3.5.5"
+  version: "3.5.6"
 ---
 
 # 顶刊问题、模型和图表精读

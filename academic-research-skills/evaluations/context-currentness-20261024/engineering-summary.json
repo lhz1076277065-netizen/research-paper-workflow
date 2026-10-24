@@ -1,0 +1,38 @@
+{
+  "baseline_commit": "8d191f0eeb0e508e2591fa88d194fd27060d9e31",
+  "branch": "codex/fix-research-context",
+  "version": "3.5.5",
+  "regression": {
+    "tests_run": 887,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "python": "3.12.14"
+  },
+  "new_regression_cases": 23,
+  "new_regression_cases_passed": true,
+  "compatibility": {
+    "tests_run": 30,
+    "passed": true
+  },
+  "skill_structure": {
+    "skills_checked": 19,
+    "passed": true
+  },
+  "generation": {
+    "files_checked": 1324,
+    "file_drift": [],
+    "manifest_drift": []
+  },
+  "tracked_files_changed": 169,
+  "scope": {
+    "local_patch_only": true,
+    "source_cache_or_upstream_changes": false,
+    "published": false,
+    "pushed": false,
+    "installed": false,
+    "original_research_resumed": false,
+    "version_bumped": false
+  }
+}
